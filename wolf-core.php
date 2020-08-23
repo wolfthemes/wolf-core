@@ -59,7 +59,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 *
 		 * @var string Minimum WPBakery Page Builder version required to run the plugin.
 		 */
-		const MINIMUM_WPBPB_VERSION = '6.5';
+		const MINIMUM_WPB_VC_VERSION = '6.2';
 
 		/**
 		 * Minimum PHP Version
@@ -165,7 +165,38 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			
 			register_activation_hook( __FILE__, [ $this, 'activate' ] );
 			
-			include_once( 'inc/admin/auth.php' );
+			/* Check if Elementor or WPBakery Page Builder is activated */
+			if ( ! did_action( 'elementor/loaded' ) && ! defined( 'WPB_VC_VERSION' ) ) {
+				add_action( 'admin_notices', [ $this, 'admin_notice_missing_page_builder_plugin' ] );
+				return;
+			}
+
+			/* Check if both plugin are installed */
+			if ( did_action( 'elementor/loaded' ) && defined( 'WPB_VC_VERSION' ) ) {
+				add_action( 'admin_notices', [ $this, 'admin_notice_both_page_builder_plugins' ] );
+				return;
+			}
+
+			/* Check for required Elementor version */
+			if ( defined( 'ELEMENTOR_VERSION' ) && ! version_compare( ELEMENTOR_VERSION, self::MINIMUM_ELEMENTOR_VERSION, '>=' ) ) {
+				add_action( 'admin_notices', [ $this, 'admin_notice_minimum_elementor_version' ] );
+				return;
+			}
+
+			/* Check for required WPBakery Page Builder version */
+			if ( defined( 'WPB_VC_VERSION' ) && ! version_compare( WPB_VC_VERSION, self::MINIMUM_WPB_VC_VERSION, '>=' ) ) {
+				add_action( 'admin_notices', [ $this, 'admin_notice_minimum_wpb_vc_version' ] );
+				return;
+			}
+
+			/* Check for required PHP version */
+			if ( version_compare( PHP_VERSION, self::MINIMUM_PHP_VERSION, '<' ) ) {
+				add_action( 'admin_notices', [ $this, 'admin_notice_minimum_php_version' ] );
+				return;
+			}
+
+			/* License activation notices */
+			require_once( 'inc/admin/auth.php' );
 
 			if ( wolf_core_wrong_theme() ) {
 				add_action( 'admin_notices', 'wolf_core_show_wrong_theme_notice' );
@@ -175,7 +206,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			if ( ! wolf_core_is_activated() ) {
 				add_action( 'admin_notices', 'wolf_core_activation_notice' );
 				if ( $this->is_request( 'admin' ) ) {
-					include_once( 'inc/admin/admin-theme-activation.php' );
+					require_once( 'inc/admin/admin-theme-activation.php' );
 				}
 				return;
 			}
@@ -189,14 +220,129 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		}
 
 		/**
-		 * Define constant if not already set
-		 * @param  string $name
-		 * @param  string|bool $value
+		 * Admin notice
+		 *
+		 * Warning when the site doesn't have Elementor or WPBakery Page Builder installed or activated.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @access public
 		 */
-		private function define( $name, $value ) {
-			if ( ! defined( $name ) ) {
-				define( $name, $value );
-			}
+		public function admin_notice_missing_page_builder_plugin() {
+
+			if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+
+			$message = sprintf(
+
+				wp_kses_post( __( '"%1$s" requires "<a href="%2$s" target="_blank">%3$s</a>" or "<a href="%4$s" target="_blank">%5$s</a>" to be installed and activated.', '%TEXTDOMAIN%' ) ),
+				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
+				'https://wlfthm.es/elementor',
+				'<strong>' . esc_html__( 'Elementor', '%TEXTDOMAIN%' ) . '</strong>',
+				'https://wlfthm.es/wpbpb',
+				'<strong>' . esc_html__( 'WPBakery Page Builder', '%TEXTDOMAIN%' ) . '</strong>'
+			);
+
+			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+		}
+
+		/**
+		 * Admin notice
+		 *
+		 * Warning when the site has both Elementor and WPBakery Page Builder installed and activated.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @access public
+		 */
+		public function admin_notice_both_page_builder_plugins() {
+
+			if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+
+			$message = sprintf(
+
+				wp_kses_post( __( '"%1$s" requires to choose between "<a href="%2$s" target="_blank">%3$s</a>" or "<a href="%4$s" target="_blank">%5$s</a>" to be activated. You can not use both at the same time.', '%TEXTDOMAIN%' ) ),
+				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
+				'https://wlfthm.es/elementor',
+				'<strong>' . esc_html__( 'Elementor', '%TEXTDOMAIN%' ) . '</strong>',
+				'https://wlfthm.es/wpbpb',
+				'<strong>' . esc_html__( 'WPBakery Page Builder', '%TEXTDOMAIN%' ) . '</strong>'
+			);
+
+			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+		}
+
+		/**
+		 * Admin notice
+		 *
+		 * Warning when the site doesn't have a minimum required Elementor version.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @access public
+		 */
+		public function admin_notice_minimum_elementor_version() {
+
+			if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+
+			$message = sprintf(
+				/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '%TEXTDOMAIN%' ),
+				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', '%TEXTDOMAIN%' ) . '</strong>',
+				 self::MINIMUM_ELEMENTOR_VERSION
+			);
+
+			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+
+		}
+
+		/**
+		 * Admin notice
+		 *
+		 * Warning when the site doesn't have a minimum required Elementor version.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @access public
+		 */
+		public function admin_notice_minimum_wpb_vc_version() {
+
+			if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+
+			$message = sprintf(
+				/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '%TEXTDOMAIN%' ),
+				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
+				'<strong>' . esc_html__( 'WPBakery Page Builder', '%TEXTDOMAIN%' ) . '</strong>',
+				 self::MINIMUM_WPB_VC_VERSION
+			);
+
+			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+
+		}
+
+		/**
+		 * Admin notice
+		 *
+		 * Warning when the site doesn't have a minimum required PHP version.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @access public
+		 */
+		public function admin_notice_minimum_php_version() {
+
+			if ( isset( $_GET['activate'] ) ) unset( $_GET['activate'] );
+
+			$message = sprintf(
+				/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '%TEXTDOMAIN%' ),
+				'<strong>' . esc_html__( 'Wolf Elementor Extension', '%TEXTDOMAIN%' ) . '</strong>',
+				'<strong>' . esc_html__( 'PHP', '%TEXTDOMAIN%' ) . '</strong>',
+				 self::MINIMUM_PHP_VERSION
+			);
+
+			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
 		}
 
 		/**
@@ -210,6 +356,17 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			update_option( 'wpb_js_gutenberg_disable', true );
+		}
+
+		/**
+		 * Define constant if not already set
+		 * @param  string $name
+		 * @param  string|bool $value
+		 */
+		private function define( $name, $value ) {
+			if ( ! defined( $name ) ) {
+				define( $name, $value );
+			}
 		}
 
 		/**
@@ -266,9 +423,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function includes() {
 
-			include_once( 'inc/core-functions.php' );
-			include_once( 'inc/utility-functions.php' );
- 			include_once( 'inc/conditional-functions.php' );
+			require_once( 'inc/core-functions.php' );
+			require_once( 'inc/utility-functions.php' );
+ 			require_once( 'inc/conditional-functions.php' );
 			
 			if ( $this->is_request( 'admin' ) ) {
 
@@ -277,11 +434,20 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 					update_option( 'wolf_core_activation_notice_set', true );
 				}
 
-				include_once( 'inc/admin/admin-theme-activation.php' );
+				require_once( 'inc/admin/admin-theme-activation.php' );
+				require_once( 'inc/admin/classes/class-admin.php' );
+				require_once( 'inc/admin/classes/class-video-thumbnail-generator.php' );
+				require_once( 'inc/admin/classes/class-metaboxes.php' );
+			}
+
+			if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 				
-				include_once( 'inc/admin/classes/class-admin.php' );
-				include_once( 'inc/admin/classes/class-video-thumbnail-generator.php' );
-				include_once( 'inc/admin/classes/class-metaboxes.php' );
+				require_once( 'plugins/elementor/elementor.php' );
+			}
+
+			if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+
+				require_once( 'plugins/wpbakery-page-builder/wpbakery-page-builder.php' );
 			}
 
 			if ( $this->is_request( 'ajax' ) ) {
@@ -304,6 +470,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * Include required frontend files.
 		 */
 		public function frontend_includes() {
+
 		}
 
 		/**

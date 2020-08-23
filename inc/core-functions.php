@@ -13,6 +13,23 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Check which page builder plugin is used
+ *
+ * @return string plugin slug
+ */
+function wolf_core_get_plugin_in_use () {
+
+	if ( did_action( 'elementor/loaded' ) ) {
+		
+		return 'elementor';
+	
+	} elseif ( defined( 'WPB_VC_VERSION' ) ) {
+
+		return 'wbp-vc';
+	}
+}
+
+/**
  * Get element list in array to allow filtering by theme and stuff
  *
  * @return array
@@ -334,22 +351,4 @@ function wolf_core_get_team_member_socials() {
 	//sort( $wolf_core_team_member_socials );
 
 	return $wolf_core_team_member_socials;
-}
-
-
-if ( ! function_exists( 'debug' ) ) {
-	function debug( $var ) {
-		echo '<br><pre class="wee-debug">';
-		print_r( $var );
-		echo '</pre>';
-	}
-}
-
-if ( ! function_exists( 'dd' ) ) {
-	function dd( $var ) {
-		echo '<br><pre class="wee-debug">';
-		print_r( $var );
-		echo '</pre>';
-		die();
-	}
 }

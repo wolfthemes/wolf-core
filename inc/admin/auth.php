@@ -195,7 +195,44 @@ function wolf_core_is_activated() {
  */
 function wolf_core_wrong_theme() {
 	
-	$ok = array( 'wolf-2020', 'wavify' );
+	$ok = [
+		'wolf-2018',
+		'protheme',
+		'andre',
+		'iyo',
+		'loud',
+		'tune',
+		'retine',
+		'racks',
+		'andre',
+		'hares',
+		'glytch',
+		'superflick',
+		'phase',
+		'zample',
+		'prequelle',
+		'slikk',
+		'vonzot',
+		'deadlift',
+		'hyperbent',
+		'kayo',
+		'reinar',
+		'snakepit',
+		'alceste',
+		'fradence',
+		'firemaster',
+		'decibel',
+		'tattoopress',
+		'tattoopro',
+		'milu',
+		'beatit',
+		'daeron',
+		'herion',
+		'oglin',
+		'staaw',
+		'bronze',
+		'wavify'
+	];
 
 	return ( ! in_array( esc_attr( sanitize_title_with_dashes( get_template() ) ), $ok ) );
 }

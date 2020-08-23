@@ -179,22 +179,22 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				// editor
 					if ( 'editor' == $type ) {
 						wp_editor( $meta, $field_id, $options = array() );
-						echo '<br><span class="description">' . wp_kses_post( $desc ) . '</span>';
+						echo '<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 					// text
 					} elseif ( 'text' == $type || 'int' == $type ) {
 
 						echo '<input placeholder="' . esc_attr( $placeholder ) . '" type="text" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( $meta ) . '" size="30" />
-						<br><span class="description">' . wp_kses_post( $desc ) . '</span>';
+						<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 					// textarea
 					} elseif ( 'textarea' == $type ) {
-						echo '<textarea name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" cols="60" rows="4">' . wp_kses_post( $meta ) . '</textarea>
-						<br><span class="description">' . wp_kses_post( $desc ) . '</span>';
+						echo '<textarea name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" cols="60" rows="4">' . wolf_core_kses( $meta ) . '</textarea>
+						<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 					// checkbox
 					} elseif ( 'checkbox' == $type ) {
 						echo '<input type="checkbox" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" ', ( $meta ) ? ' checked="checked"' : '','/>
-						<span class="description">' . wp_kses_post( $desc ) . '</span>';
+						<span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 					// select
 					} elseif ( 'select' == $type ) {
@@ -228,7 +228,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						<a href="#" class="button wolf-core-metabox-set-file"><?php esc_html_e( 'Choose a file', '%TEXTDOMAIN%' ); ?></a>
 
 						<?php if ( $desc ) : ?>
-							<br><span class="description"><?php echo wp_kses_post( $desc ); ?></span>
+							<br><span class="description"><?php echo wolf_core_kses( $desc ); ?></span>
 						<?php endif; ?>
 					</div>
 					<div style="clear:both"></div>
@@ -248,7 +248,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 					<div class="clear"></div>
 					<?php
-					echo '<br><span class="description">' . wp_kses_post( $desc ) . '</span>';
+					echo '<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 					/*  Background
 					-------------------------------------------*/

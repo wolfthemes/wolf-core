@@ -12,22 +12,22 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Wolf_core_Admin class.
+ * Wolf_Core_Admin class.
  */
-class Wolf_core_Admin {
+class Wolf_Core_Admin {
 	/**
 	 * Constructor
 	 */
 	public function __construct() {
 
 		// Update
-		add_action( 'admin_init', array( $this, 'update' ), 0 );
+		add_action( 'admin_init', [ $this, 'update' ], 0 );
 
 		// Includes necessary files
-		add_action( 'init', array( $this, 'includes' ), 0 );
+		add_action( 'init', [ $this, 'includes' ], 0 );
 
 		// Plugin update notifications
-		add_action( 'admin_init', array( $this, 'plugin_update' ) );
+		add_action( 'admin_init', [ $this, 'plugin_update' ] );
 	}
 
 	/**
