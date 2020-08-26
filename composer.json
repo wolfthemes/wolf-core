@@ -1,0 +1,16 @@
+{
+	"name": "wolfthemes/wolf-core",
+	"description": "Core functions for Wolf Themes.",
+	"type": "wordpress-plugin",
+	"homepage": "https://github.com/wolfthemes/wolf-core",
+	"authors": [
+		{
+			"name": "WolfThemes",
+			"email": "contact@wolfthemes.com",
+			"homepage": "https://wolfthemes.com"
+		}
+	],
+	"require": {
+		"php": ">=5.6"
+	}
+}

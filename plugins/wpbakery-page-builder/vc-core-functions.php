@@ -4,7 +4,7 @@
  *
  * General core functions available on admin and frontend for WPB VC
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Core
  * @version %VERSION%

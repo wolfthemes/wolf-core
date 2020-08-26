@@ -4,7 +4,7 @@
  *
  * Admin functions specific to WPB VC
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Admin
  * @version %VERSION%

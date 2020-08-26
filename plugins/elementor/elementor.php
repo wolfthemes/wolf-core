@@ -2,7 +2,7 @@
 /**
  * %NAME% Elementor Extension Class
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Core
  * @version %VERSION%

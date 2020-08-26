@@ -4,7 +4,7 @@
  *
  * Set default setttings values for in-built elements
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Core
  * @version %VERSION%

@@ -1,23 +1,24 @@
 <?php
 /**
  * Plugin Name: Wolf Core
- * Plugin URI: %LINK%
+ * Plugin URI: https://wlfthm.es/wolf-core
  * Description: %DESCRIPTION%
  * Version: %VERSION%
- * Author: %AUTHOR%
- * Author URI: %AUTHORURI%
- * Requires at least: %REQUIRES%
- * Tested up to: %TESTED%
+ * Author: WolfThemes
+ * Author URI: https://wolfthemes.com
+ * Requires at least: 5.0
+ * Tested up to: 5.5
  *
  * Text Domain: %TEXTDOMAIN%
  * Domain Path: /languages/
  *
  * @package %PACKAGENAME%
  * @category Core
- * @author %AUTHOR%
+ * @author WolfThemes
  *
- * Help:
- * https://wlfthm.es/help
+ * Verified customers who have purchased a premium theme at https://wlfthm.es/tf/
+ * will have access to support for this plugin in the forums
+ * https://wlfthm.es/help/
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -162,9 +163,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * @access public
 		 */
 		public function init() {
-			
+
 			register_activation_hook( __FILE__, [ $this, 'activate' ] );
-			
+
 			/* Check if Elementor or WPBakery Page Builder is activated */
 			if ( ! did_action( 'elementor/loaded' ) && ! defined( 'WPB_VC_VERSION' ) ) {
 				add_action( 'admin_notices', [ $this, 'admin_notice_missing_page_builder_plugin' ] );
@@ -217,6 +218,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			if ( get_transient( 'wolf_core_activation_notice' ) ) {
 				add_action( 'admin_notices', 'wolf_core_show_activation_notice' );
 			}
+
+			// Plugin update notifications
+			add_action( 'admin_init', array( $this, 'plugin_update' ) );
 		}
 
 		/**
@@ -426,7 +430,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			require_once( 'inc/core-functions.php' );
 			require_once( 'inc/utility-functions.php' );
  			require_once( 'inc/conditional-functions.php' );
-			
+
 			if ( $this->is_request( 'admin' ) ) {
 
 				if ( ! get_transient( 'wolf_core_activation_notice' ) && ! get_option( 'wolf_core_activation_notice_set' ) ) {
@@ -441,7 +445,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
-				
+
 				require_once( 'plugins/elementor/elementor.php' );
 			}
 
@@ -495,6 +499,34 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function ajax_url() {
 			return admin_url( 'admin-ajax.php', 'relative' );
+		}
+
+		/**
+		 * Plugin update
+		 */
+		public function plugin_update() {
+
+			if ( ! class_exists( 'WP_GitHub_Updater' ) ) {
+				include_once 'inc/admin/updater.php';
+			}
+
+			$repo = 'wolfthemes/wolf-analytics';
+
+			$config = array(
+				'slug' => plugin_basename( __FILE__ ),
+				'proper_folder_name' => 'wolf-analytics',
+				'api_url' => 'https://api.github.com/repos/' . $repo . '',
+				'raw_url' => 'https://raw.github.com/' . $repo . '/master/',
+				'github_url' => 'https://github.com/' . $repo . '',
+				'zip_url' => 'https://github.com/' . $repo . '/archive/master.zip',
+				'sslverify' => true,
+				'requires' => '5.0',
+				'tested' => '5.5',
+				'readme' => 'README.md',
+				'access_token' => '',
+			);
+
+			new WP_GitHub_Updater( $config );
 		}
 	}
 

@@ -2,7 +2,7 @@
 /**
  * %NAME% WPBakery Page Builder Extension Class
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Core
  * @version %VERSION%

@@ -4,7 +4,7 @@
  *
  * General core functions available on admin and frontend for Elementor
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Core
  * @version %VERSION%

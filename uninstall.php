@@ -1,13 +1,13 @@
 <?php
 /**
- * %NAME% Uninstall
+ * Wolf Core Uninstall
  *
- * Uninstalling %NAME%
+ * Uninstalling Wolf Core
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Uninstaller
- * @version %VERSION%
+ * @version 1.0.0
  */
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;

@@ -2,7 +2,7 @@
 /**
  * %NAME% utility functions
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Frontend
  * @version %VERSION%

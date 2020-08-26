@@ -4,7 +4,7 @@
  *
  * Custom theme style button
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
  * @package %PACKAGENAME%/Elements
  * @version %VERSION%
