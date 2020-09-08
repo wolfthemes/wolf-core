@@ -110,7 +110,7 @@ function wolf_core_show_wrong_theme_notice() {
 }
 
 /**
- * Is the plugin activated? 
+ * Is the plugin activated?
  *
  * @return bool
  */
@@ -153,7 +153,7 @@ function wolf_core_is_activated() {
 
 	// Recheck
 	if ( ! get_option( 'wolf_core_activated' ) && ! get_transient( 'wolf_core_activation_notice' ) && get_option( 'wolf_core_code' ) && get_option( 'wolf_core_key' ) ) {
-		
+
 		$remote_url = 'https://api.wolfthemes.com/envato/';
 		$response = wp_remote_post( $remote_url, array(
 			'method' => 'POST',
@@ -194,9 +194,9 @@ function wolf_core_is_activated() {
  * @return bool
  */
 function wolf_core_wrong_theme() {
-	
+
 	$ok = [
-		'wolf-2018',
+		'wolf-supertheme',
 		'protheme',
 		'andre',
 		'iyo',
@@ -231,7 +231,7 @@ function wolf_core_wrong_theme() {
 		'oglin',
 		'staaw',
 		'bronze',
-		'wavify'
+		'bash',
 	];
 
 	return ( ! in_array( esc_attr( sanitize_title_with_dashes( get_template() ) ), $ok ) );

@@ -26,8 +26,6 @@ class Wolf_Core_Admin {
 		// Includes necessary files
 		add_action( 'init', [ $this, 'includes' ], 0 );
 
-		// Plugin update notifications
-		add_action( 'admin_init', [ $this, 'plugin_update' ] );
 	}
 
 	/**
@@ -54,19 +52,21 @@ class Wolf_Core_Admin {
 	 */
 	public function includes() {
 
-	}
+		$admin_files = [
+			'admin-scripts',
+		];
 
-	/**
-	 * Plugin update
-	 */
-	public function plugin_update() {
-		$plugin_slug = WOLF_CORE_SLUG;
-		$plugin_path = WOLF_CORE_PATH;
-		$remote_path = WOLF_CORE_UPDATE_URL . '/' . $plugin_slug;
-		$plugin_data = get_plugin_data( WOLF_CORE_DIR . '/' . WOLF_CORE_SLUG . '.php' );
-		$current_version = $plugin_data['Version'];
-		include_once( 'class-update.php');
-		new Wolf_Core_Update( $current_version, $remote_path, $plugin_path );
+		/* Includes files from theme inc/admin dir in backend */
+		foreach( $admin_files as $file ) {
+
+			if ( ! include_once( WOLF_CORE_DIR . '/inc/admin/' . $file . '.php' ) ) {
+				wp_die(
+					sprintf( wp_kses( __('Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ), [
+						'code' => [],
+					] ), $file )
+				);
+			}
+		}
 	}
 }
 

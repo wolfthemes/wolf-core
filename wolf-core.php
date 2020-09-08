@@ -76,10 +76,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public $version = '%VERSION%';
 
-		/**
-		 * @var string
-		 */
-		private $update_url = 'https://plugins.wolfthemes.com/update';
+
 
 		/**
 		 * @var the support forum URL
@@ -389,7 +386,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'WOLF_CORE_SLUG' => plugin_basename( dirname( __FILE__ ) ),
 				'WOLF_CORE_PATH' => plugin_basename( __FILE__ ),
 				'WOLF_CORE_VERSION' => $this->version,
-				'WOLF_CORE_UPDATE_URL' => $this->update_url,
 				'WOLF_CORE_SUPPORT_URL' => $this->support_url,
 				'WOLF_CORE_DOC_URI' => 'https://docs.wolfthemes.com/documentation/plugins/' . plugin_basename( dirname( __FILE__ ) ),
 				'WOLF_CORE_WOLF_DOMAIN' => 'wolfthemes.com',
@@ -427,9 +423,23 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function includes() {
 
-			require_once( 'inc/core-functions.php' );
-			require_once( 'inc/utility-functions.php' );
- 			require_once( 'inc/conditional-functions.php' );
+			$core_files = [
+				'core-functions',
+				'utility-functions',
+				'conditional-functions'
+			];
+
+			/* Includes core files from theme inc dir in both frontend and backend */
+			foreach( $core_files as $file ) {
+
+				if ( ! require_once( WOLF_CORE_DIR . '/inc/' . $file . '.php' ) ) {
+					wp_die(
+						sprintf( wp_kses( __('Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ), [
+							'code' => [],
+						] ), $file )
+					);
+				}
+			}
 
 			if ( $this->is_request( 'admin' ) ) {
 
@@ -438,12 +448,49 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 					update_option( 'wolf_core_activation_notice_set', true );
 				}
 
-				require_once( 'inc/admin/admin-theme-activation.php' );
-				require_once( 'inc/admin/classes/class-admin.php' );
-				require_once( 'inc/admin/classes/class-video-thumbnail-generator.php' );
-				require_once( 'inc/admin/classes/class-metaboxes.php' );
+				$this->admin_includes();
 			}
 
+			$this->plugins_includes();
+
+			if ( $this->is_request( 'ajax' ) ) {
+				$this->ajax_includes();
+			}
+
+			if ( $this->is_request( 'frontend' ) ) {
+				$this->frontend_includes();
+			}
+		}
+
+		/**
+		 * Include required admin files.
+		 */
+		public function admin_includes() {
+
+			$admin_files = [
+				'core-functions',
+				'classes/class-admin',
+				'classes/class-video-thumbnail-generator',
+				'classes/class-metaboxes',
+			];
+
+			/* Includes core files from theme inc dir in both frontend and backend */
+			foreach( $admin_files as $file ) {
+
+				if ( ! require_once( WOLF_CORE_DIR . '/inc/admin/' . $file . '.php' ) ) {
+					wp_die(
+						sprintf( wp_kses( __('Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ), [
+							'code' => [],
+						] ), $file )
+					);
+				}
+			}
+		}
+
+		/**
+		 * Include required files for page builder plugins functions.
+		 */
+		public function plugins_includes() {
 			if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 
 				require_once( 'plugins/elementor/elementor.php' );
@@ -452,14 +499,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
 
 				require_once( 'plugins/wpbakery-page-builder/wpbakery-page-builder.php' );
-			}
-
-			if ( $this->is_request( 'ajax' ) ) {
-				//$this->ajax_includes();
-			}
-
-			if ( $this->is_request( 'frontend' ) ) {
-				//$this->frontend_includes();
 			}
 		}
 
@@ -510,11 +549,11 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				include_once 'inc/admin/updater.php';
 			}
 
-			$repo = 'wolfthemes/wolf-analytics';
+			$repo = 'wolfthemes/wolf-core';
 
 			$config = array(
 				'slug' => plugin_basename( __FILE__ ),
-				'proper_folder_name' => 'wolf-analytics',
+				'proper_folder_name' => 'wolf-core',
 				'api_url' => 'https://api.github.com/repos/' . $repo . '',
 				'raw_url' => 'https://raw.github.com/' . $repo . '/master/',
 				'github_url' => 'https://github.com/' . $repo . '',

@@ -1,4 +1,5 @@
 # Changelog
-#### 1st September 2020 - Version 1.0.0
 
-* Initial release
+#### 1st October 2020 - Version 1.0.0
+
+-   Initial release
