@@ -881,7 +881,7 @@ function wolf_core_get_post_title() {
  */
 function wolf_core_get_post_subheading( $post_id = null ) {
 	if ( ! $post_id ) {
-		$post_id = wolf_core_get_the_ID();
+		$post_id = wolf_core_get_the_id();
 	}
 
 	if ( wolf_core_is_woocommerce_page() ) {

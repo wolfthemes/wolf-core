@@ -468,7 +468,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		public function admin_includes() {
 
 			$admin_files = [
-				'core-functions',
+				'admin-theme-activation',
 				'classes/class-admin',
 				'classes/class-video-thumbnail-generator',
 				'classes/class-metaboxes',

@@ -16,7 +16,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 * @var string
 	 */
 	private $elements = [];
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -38,9 +38,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 */
 	public function init() {
 
-		require_once( 'vc-core-functions.php' );
-		require_once( 'vc-custom-fields.php' );
-
+		$this->includes();
 		$this->include_raw_params();
 		$this->init_shortcodes();
 	}
@@ -49,11 +47,35 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 * Include all raw element params
 	 */
 	public function include_raw_params() {
-		
+
 		foreach ( $this->elements as $e ) {
 
 			if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
 				include_once( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' );
+			}
+		}
+	}
+
+	/**
+	 * Include core files fro WPBAkery Page Builder
+	 */
+	public function includes() {
+
+		$files = [
+			'vc-core-functions',
+			'vc-custom-fields',
+
+			'icon-styles',
+			'icon-libraries',
+		];
+
+		foreach( $files as $file ) {
+			if ( ! include_once( WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/' . $file . '.php' ) ) {
+				wp_die(
+					sprintf( wp_kses( __('Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ), [
+						'code' => [],
+					] ), $file )
+				);
 			}
 		}
 	}

@@ -17,12 +17,12 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return string plugin slug
  */
-function wolf_core_get_plugin_in_use () {
+function wolf_core_get_plugin_in_use() {
 
 	if ( did_action( 'elementor/loaded' ) ) {
-		
+
 		return 'elementor';
-	
+
 	} elseif ( defined( 'WPB_VC_VERSION' ) ) {
 
 		return 'wbp-vc';
@@ -42,17 +42,17 @@ function wolf_core_get_element_list() {
 		'admin-helper-text',
 		'advanced-slider',
 		'advanced-slide',
-		//'albums',
-		//'album-disc',
-		//'album-tracklist',
-		//'album-tracklist-item',
+		// 'albums',
+		// 'album-disc',
+		// 'album-tracklist',
+		// 'album-tracklist-item',
 		'anchor',
-		//'anything-slider',
-		//'anything-slide',
+		// 'anything-slider',
+		// 'anything-slide',
 		'audio',
 		'audio-embed',
 		'bandsintown-events',
-		//'bandsintown-tracking-button',
+		// 'bandsintown-tracking-button',
 		'banner-gallery',
 		'banner-product',
 		'banner',
@@ -60,7 +60,7 @@ function wolf_core_get_element_list() {
 		'bit-artist',
 		'breadcrumb',
 		'button',
-		//'cards-gallery',
+		// 'cards-gallery',
 		'cta',
 		'column',
 		'column-inner',
@@ -72,11 +72,11 @@ function wolf_core_get_element_list() {
 		'counter',
 		'current-year',
 		'custom-heading',
-		//'discography',
+		// 'discography',
 		'dropcap',
 		'embed-video',
 		'empty-space',
-		//'events',
+		// 'events',
 		'facebook-page-box',
 		'gallery',
 		'gmaps',
@@ -86,7 +86,7 @@ function wolf_core_get_element_list() {
 		'hoverbox',
 		'icon',
 		'iframe-opener',
-		//'image-link',
+		// 'image-link',
 		'image-device-slider',
 		'info-table',
 		'instagram-gallery',
@@ -94,10 +94,10 @@ function wolf_core_get_element_list() {
 		'instagram',
 		'interactive-links',
 		'interactive-link-item',
-		//'interactive-overlays',
-		//'interactive-overlay-item',
+		// 'interactive-overlays',
+		// 'interactive-overlay-item',
 		'item-price',
-		//'last-posts',
+		// 'last-posts',
 		'post-slider',
 		'list',
 		'mailchimp',
@@ -105,11 +105,11 @@ function wolf_core_get_element_list() {
 		'music-network',
 		'next-month',
 		'oembed-gist',
-		//'old-instagram',
+		// 'old-instagram',
 		'parallax-holder',
 		'pie',
 		'playlist',
-		//'portfolio',
+		// 'portfolio',
 		'pricing-table',
 		'process-container',
 		'process-item',
@@ -117,7 +117,7 @@ function wolf_core_get_element_list() {
 		'rev-slider-vc',
 		'row',
 		'row-inner',
-		//'section',
+		// 'section',
 		'sb-instagram-feed',
 		'separator',
 		'service-table',
@@ -140,18 +140,18 @@ function wolf_core_get_element_list() {
 		'video',
 		'video-opener',
 		'video-self-hosted',
-		//'videos-carousel', //  last videos from plugin carousel
-		//'videos',
-		//'waveform-player',
+		// 'videos-carousel', //  last videos from plugin carousel
+		// 'videos',
+		// 'waveform-player',
 		'wc-categories',
 		'youtube',
 		'zigzag',
 	);
 
-	// apply filters
+	// apply filters.
 	$wolf_core_elements = apply_filters( 'wolf_core_element_list', $wolf_core_elements );
 
-	// sort by alphabetical order
+	// sort by alphabetical order.
 	sort( $wolf_core_elements );
 
 	return $wolf_core_elements;
@@ -167,7 +167,7 @@ function wolf_core_get_element_list() {
  *
  * @return int
  */
-function wolf_core_get_the_ID() {
+function wolf_core_get_the_id() {
 	global $wp_query;
 
 	$post_id = null;
@@ -176,15 +176,15 @@ function wolf_core_get_the_ID() {
 
 		$post_id = get_option( 'woocommerce_shop_page_id' );
 
-	// Get post ID outside the loop
+		// Get post ID outside the loop
 	} elseif ( is_object( $wp_query ) && isset( $wp_query->queried_object ) && isset( $wp_query->queried_object->ID ) ) {
-		
+
 		$post_id = $wp_query->queried_object->ID;
-	
+
 	} else {
 		$post_id = get_the_ID();
 	}
-	
+
 	return $post_id;
 }
 
@@ -204,14 +204,14 @@ function wolf_core_get_theme_slug() {
  * @return array $mimes
  */
 function wolf_core_mime_types( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
+	$mimes['svg']  = 'image/svg+xml';
 	$mimes['svgz'] = 'image/svg+xml';
 	$mimes['webp'] = 'image/webp';
-	$mimes['csv'] = 'text/csv';
+	$mimes['csv']  = 'text/csv';
 
 	if ( class_exists( 'PixProofPlugin' ) ) {
 		$mimes['zip'] = 'application/zip';
-		$mimes['gz'] = 'application/x-gzip';
+		$mimes['gz']  = 'application/x-gzip';
 	}
 
 	return $mimes;
@@ -230,19 +230,19 @@ function wolf_core_get_socials() {
 		'8tracks',
 		'airbnb',
 		'amazon',
-		//'amplement',
-		'apple', // iTunes
+		// 'amplement',
+		'apple', // iTunes.
 		'bandcamp',
 		'bandsintown',
 		'behance',
-		//'bitbucket',
+		// 'bitbucket',
 		'codepen',
 		'dailymotion',
 		'deviantart',
 		'digg',
 		'dribbble',
-		//'dropbox',
-		//'email',
+		// 'dropbox',
+		// 'email',
 		'envato',
 		'etsy',
 		'facebook',
@@ -263,9 +263,9 @@ function wolf_core_get_socials() {
 		'mixcloud',
 		'imdb',
 		'lastfm',
-		//'path',
+		// 'path',
 		'pinterest',
-		//'jsfiddle',
+		// 'jsfiddle',
 		'tumblr',
 		'tripadvisor',
 		'skype',
@@ -273,12 +273,12 @@ function wolf_core_get_socials() {
 		'itunes',
 		'delicious',
 		'stumbleupon',
-		//'forrst',
-		//'evernote',
-		//'rss',
+		// 'forrst',
+		// 'evernote',
+		// 'rss',
 		'reddit',
-		//'stack-exchange',
-		//'stack-overflow',
+		// 'stack-exchange',
+		// 'stack-overflow',
 		'residentadvisor',
 		'reverbnation',
 		'snapchat',
@@ -290,16 +290,16 @@ function wolf_core_get_socials() {
 		'vine',
 		'tiktok',
 		'twitch',
-		//'qq',
-		//'wechat',
-		//'weibo',
-		//'weixin',
-		//'whatsapp',
-		//'windows',
+		// 'qq',
+		// 'wechat',
+		// 'weibo',
+		// 'weixin',
+		// 'whatsapp',
+		// 'windows',
 		'wordpress',
-		//'renren',
-		//'tencent-weibo',
-		//'xing',
+		// 'renren',
+		// 'tencent-weibo',
+		// 'xing',
 		'yelp',
 		'zomato',
 		'zerply',
@@ -309,15 +309,15 @@ function wolf_core_get_socials() {
 
 	sort( $wolf_core_socials );
 
-	// Insert most used at the beggining
+	// Insert most used at the beggining.
 	array_unshift( $wolf_core_socials, 'facebook', 'twitter', 'instagram', 'messenger', 'flickr', 'behance', 'dribbble', 'linkedin', 'youtube', 'vimeo', 'bandcamp', 'spotify', 'soundcloud', 'bandsintown' );
 
-	$wolf_core_socials[] = 'rss'; // push rss at the end
-	$wolf_core_socials[] = 'email'; // push email at the end
+	$wolf_core_socials[] = 'rss'; // push rss at the end.
+	$wolf_core_socials[] = 'email'; // push email at the end.
 
-	$wolf_core_socials = array_unique( $wolf_core_socials ); // remove duplicates
+	$wolf_core_socials = array_unique( $wolf_core_socials ); // remove duplicates.
 
-	//var_dump( $wolf_core_socials );
+	// var_dump( $wolf_core_socials );
 
 	return $wolf_core_socials;
 }
@@ -348,7 +348,7 @@ function wolf_core_get_team_member_socials() {
 	$wolf_core_team_member_socials = apply_filters( 'wolf_core_team_member_socials', $wolf_core_team_member_socials );
 
 	array_unique( $wolf_core_team_member_socials );
-	//sort( $wolf_core_team_member_socials );
+	// sort( $wolf_core_team_member_socials );
 
 	return $wolf_core_team_member_socials;
 }
