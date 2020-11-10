@@ -437,6 +437,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'core-functions',
 				'utility-functions',
 				'conditional-functions',
+				'google-fonts',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */
@@ -451,7 +452,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 									'code' => array(),
 								)
 							),
-							$file
+							esc_attr( $file )
 						)
 					);
 				}
@@ -487,6 +488,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$admin_files = array(
 				'admin-theme-activation',
+				'classes/class-options',
 				'classes/class-admin',
 				'classes/class-video-thumbnail-generator',
 				'classes/class-metaboxes',

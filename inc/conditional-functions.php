@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
  * @return string plugin slug
  */
 function wolf_core_is_wpb_vc_frontend() {
-    return function_exists( 'vc_is_inline' ) && vc_is_inline() ? true : false;
+	return function_exists( 'vc_is_inline' ) && vc_is_inline() ? true : false;
 }
 
 /**

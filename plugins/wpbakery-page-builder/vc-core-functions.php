@@ -75,7 +75,7 @@ function wolf_core_convert_params_to_vc( $params ) {
 		} elseif ( 'font_family' === $type ) {
 
 			$vc_params['params'][ $i ]['type']  = 'dropdown';
-			$vc_params['params'][ $i ]['value'] = array_flip( array( 'font' => 'Font name' ) );
+			$vc_params['params'][ $i ]['value'] = array_flip( wolf_core_get_google_fonts_options() );
 
 		} elseif ( 'link' === $type ) {
 			$vc_params['params'][ $i ]['type'] = 'vc_link';

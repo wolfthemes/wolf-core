@@ -56,7 +56,7 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 		} elseif ( 'font_family' === $type ) {
 
 			$field_params['type']    = \Elementor\Controls_Manager::SELECT;
-			$field_params['options'] = array( 'font' => 'Font name' );
+			$field_params['options'] = wolf_core_get_google_fonts_options();
 
 		} elseif ( 'link' === $type ) {
 

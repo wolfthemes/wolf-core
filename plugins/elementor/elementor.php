@@ -15,14 +15,14 @@ class Wolf_Core_Elementor_Extension {
 	/**
 	 * @var string
 	 */
-	private $elements = [];
+	private $elements = array();
 
 	/**
 	 * Constructor.
 	 */
 	public function __construct() {
 
-		add_action( 'init', [ $this, 'init' ] );
+		add_action( 'init', array( $this, 'init' ) );
 
 		$this->elements = wolf_core_get_element_list();
 	}
@@ -38,23 +38,23 @@ class Wolf_Core_Elementor_Extension {
 	 */
 	public function init() {
 
-		require_once( 'elementor-core-functions.php' );
+		require_once 'elementor-core-functions.php';
 
 		$this->include_raw_params();
 
-		add_action( 'elementor/widgets/widgets_registered', [ $this, 'init_widgets' ] );
-		add_action( 'elementor/controls/controls_registered', [ $this, 'init_controls' ] );
+		add_action( 'elementor/widgets/widgets_registered', array( $this, 'init_widgets' ) );
+		add_action( 'elementor/controls/controls_registered', array( $this, 'init_controls' ) );
 	}
 
 	/**
 	 * Include all raw element params
 	 */
 	public function include_raw_params() {
-		
+
 		foreach ( $this->elements as $e ) {
 
 			if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
-				include_once( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' );
+				include_once WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php';
 			}
 		}
 	}
@@ -73,7 +73,7 @@ class Wolf_Core_Elementor_Extension {
 		foreach ( $this->elements as $widget ) {
 
 			if ( is_file( WOLF_CORE_DIR . '/plugins/elementor/widgets/' . sanitize_title_with_dashes( $widget ) . '.php' ) ) {
-				require_once( WOLF_CORE_DIR . '/plugins/elementor/widgets/' .  sanitize_title_with_dashes( $widget ) . '.php' );
+				require_once WOLF_CORE_DIR . '/plugins/elementor/widgets/' . sanitize_title_with_dashes( $widget ) . '.php';
 			}
 		}
 	}
@@ -90,11 +90,10 @@ class Wolf_Core_Elementor_Extension {
 	public function init_controls() {
 
 		// Include Control files
-		//require_once( WOLF_CORE_DIR . '/controls/test-control.php' );
+		// require_once( WOLF_CORE_DIR . '/controls/test-control.php' );
 
 		// Register control
-		//\Elementor\Plugin::$instance->controls_manager->register_control( 'control-type-', new \Test_Control() );
-
+		// \Elementor\Plugin::$instance->controls_manager->register_control( 'control-type-', new \Test_Control() );
 	}
 }
 

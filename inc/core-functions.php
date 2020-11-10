@@ -200,7 +200,7 @@ function wolf_core_get_theme_slug() {
 /**
  * Allow SVG files
  *
- * @param array $mimes
+ * @param array $mimes The allowed mime types.
  * @return array $mimes
  */
 function wolf_core_mime_types( $mimes ) {
@@ -390,4 +390,55 @@ function wolf_core_get_aos_animations() {
 		'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-visual-composer' ),
 		'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-visual-composer' ),
 	);
+}
+
+/**
+ * Retrieve an option value from the plugin settings
+ *
+ * @param string $index
+ * @param [type] $name
+ * @param [type] $default
+ * @return void
+ */
+function wolf_core_get_option( $index = 'settings', $name, $default = null ) {
+
+	global $options;
+
+	$wolf_core_settings = ( get_option( 'wolf_core_settings' ) && is_array( get_option( 'wolf_core_settings' ) ) ) ? get_option( 'wolf_core_settings' ) : array();
+
+	if ( isset( $wolf_core_settings[ $index ] ) && is_array( $wolf_core_settings[ $index ] ) ) {
+
+		if ( isset( $wolf_core_settings[ $index ][ $name ] ) && '' !== $wolf_core_settings[ $index ][ $name ] ) {
+
+			return $wolf_core_settings[ $index ][ $name ];
+
+		} elseif ( $default ) {
+
+			return $default;
+		}
+	} elseif ( $default ) {
+
+		return $default;
+	}
+}
+
+/**
+ * Update an option value from the plugin settings
+ *
+ * @param string $index
+ * @param [type] $key
+ * @param [type] $value
+ * @return void
+ */
+function wolf_core_update_option( $index = 'settings', $key, $value ) {
+
+	$wolf_core_settings = ( get_option( 'wolf_core_settings' ) && is_array( get_option( 'wolf_core_settings' ) ) ) ? get_option( 'wolf_core_settings' ) : array();
+
+	if ( ! isset( $wolf_core_settings[ $index ] ) ) {
+		$wolf_core_settings[ $index ] = array();
+	}
+
+	$wolf_core_settings[ $index ][ $key ] = $value;
+
+	update_option( 'wolf_core_settings', $wolf_core_settings );
 }

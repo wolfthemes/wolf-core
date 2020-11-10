@@ -20,11 +20,11 @@ class Wolf_Core_Admin {
 	 */
 	public function __construct() {
 
-		// Update
-		add_action( 'admin_init', [ $this, 'update' ], 0 );
+		// Update.
+		add_action( 'admin_init', array( $this, 'update' ), 0 );
 
-		// Includes necessary files
-		add_action( 'init', [ $this, 'includes' ], 0 );
+		// Includes necessary files.
+		add_action( 'init', array( $this, 'includes' ), 0 );
 
 	}
 
@@ -35,14 +35,14 @@ class Wolf_Core_Admin {
 
 		if ( ! defined( 'IFRAME_REQUEST' ) && ! defined( 'DOING_AJAX' ) && ( get_option( 'wolf_core_version' ) != WOLF_CORE_VERSION ) ) {
 
-			// Update hook
+			// Update hook.
 			do_action( 'wolf_core_do_update' );
 
-			// Update version
+			// Update version.
 			delete_option( 'wolf_core_version' );
 			add_option( 'wolf_core_version', WOLF_CORE_VERSION );
 
-			// After update hook
+			// After update hook.
 			do_action( 'wolf_core_updated' );
 		}
 	}
@@ -52,18 +52,26 @@ class Wolf_Core_Admin {
 	 */
 	public function includes() {
 
-		$admin_files = [
+		$admin_files = array(
 			'admin-scripts',
-		];
+			'admin-options',
+		);
 
 		/* Includes files from theme inc/admin dir in backend */
-		foreach( $admin_files as $file ) {
+		foreach ( $admin_files as $file ) {
 
-			if ( ! include_once( WOLF_CORE_DIR . '/inc/admin/' . $file . '.php' ) ) {
+			if ( ! include_once WOLF_CORE_DIR . '/inc/admin/' . $file . '.php' ) {
 				wp_die(
-					sprintf( wp_kses( __('Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ), [
-						'code' => [],
-					] ), $file )
+					sprintf(
+						wp_kses(
+							/* translators: the code to output */
+							__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+							array(
+								'code' => array(),
+							)
+						),
+						esc_attr( $file )
+					)
 				);
 			}
 		}
