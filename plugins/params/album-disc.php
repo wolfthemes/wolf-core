@@ -17,7 +17,8 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_album_disc_params() {
 
-    return apply_filters( 'wolf_core_album_disc_params', [
-
-    ] );
+	return apply_filters(
+		'wolf_core_album_disc_params',
+		array()
+	);
 }

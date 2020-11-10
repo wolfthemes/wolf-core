@@ -30,6 +30,37 @@ function wolf_core_get_plugin_in_use() {
 }
 
 /**
+ * Gets the ID of the post, even if it's not inside the loop.
+ *
+ * @uses WP_Query
+ * @uses get_queried_object()
+ * @extends get_the_ID()
+ * @see get_the_ID()
+ *
+ * @return int
+ */
+function wolf_core_get_the_id() {
+	global $wp_query;
+
+	$post_id = null;
+
+	if ( function_exists( 'is_shop' ) && is_shop() ) {
+
+		$post_id = get_option( 'woocommerce_shop_page_id' );
+
+		// Get post ID outside the loop
+	} elseif ( is_object( $wp_query ) && isset( $wp_query->queried_object ) && isset( $wp_query->queried_object->ID ) ) {
+
+		$post_id = $wp_query->queried_object->ID;
+
+	} else {
+		$post_id = get_the_ID();
+	}
+
+	return $post_id;
+}
+
+/**
  * Get element list in array to allow filtering by theme and stuff
  *
  * @return array
@@ -155,37 +186,6 @@ function wolf_core_get_element_list() {
 	sort( $wolf_core_elements );
 
 	return $wolf_core_elements;
-}
-
-/**
- * Gets the ID of the post, even if it's not inside the loop.
- *
- * @uses WP_Query
- * @uses get_queried_object()
- * @extends get_the_ID()
- * @see get_the_ID()
- *
- * @return int
- */
-function wolf_core_get_the_id() {
-	global $wp_query;
-
-	$post_id = null;
-
-	if ( function_exists( 'is_shop' ) && is_shop() ) {
-
-		$post_id = get_option( 'woocommerce_shop_page_id' );
-
-		// Get post ID outside the loop
-	} elseif ( is_object( $wp_query ) && isset( $wp_query->queried_object ) && isset( $wp_query->queried_object->ID ) ) {
-
-		$post_id = $wp_query->queried_object->ID;
-
-	} else {
-		$post_id = get_the_ID();
-	}
-
-	return $post_id;
 }
 
 /**
@@ -351,4 +351,43 @@ function wolf_core_get_team_member_socials() {
 	// sort( $wolf_core_team_member_socials );
 
 	return $wolf_core_team_member_socials;
+}
+
+
+/**
+ * New animations
+ */
+function wolf_core_get_aos_animations() {
+	return array(
+		'fade'            => esc_html__( 'Fade', 'wolf-visual-composer' ),
+		'fade-up'         => esc_html__( 'Fade Up', 'wolf-visual-composer' ),
+		'fade-down'       => esc_html__( 'Fade Down', 'wolf-visual-composer' ),
+		'fade-left'       => esc_html__( 'Fade Left', 'wolf-visual-composer' ),
+		'fade-right'      => esc_html__( 'Fade Right', 'wolf-visual-composer' ),
+		'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-visual-composer' ),
+		'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-visual-composer' ),
+		'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-visual-composer' ),
+		'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-visual-composer' ),
+
+		'flip-up'         => esc_html__( 'Flip Up', 'wolf-visual-composer' ),
+		'flip-down'       => esc_html__( 'Flip Down', 'wolf-visual-composer' ),
+		'flip-left'       => esc_html__( 'Flip Left', 'wolf-visual-composer' ),
+		'flip-right'      => esc_html__( 'Flip Right', 'wolf-visual-composer' ),
+
+		'slide-up'        => esc_html__( 'Slide Up', 'wolf-visual-composer' ),
+		'slide-down'      => esc_html__( 'Slide Down', 'wolf-visual-composer' ),
+		'slide-left'      => esc_html__( 'Slide Left', 'wolf-visual-composer' ),
+		'slide-right'     => esc_html__( 'Slide Right', 'wolf-visual-composer' ),
+
+		'zoom-in'         => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
+		'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-visual-composer' ),
+		'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-visual-composer' ),
+		'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-visual-composer' ),
+		'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-visual-composer' ),
+		'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
+		'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-visual-composer' ),
+		'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-visual-composer' ),
+		'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-visual-composer' ),
+		'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-visual-composer' ),
+	);
 }

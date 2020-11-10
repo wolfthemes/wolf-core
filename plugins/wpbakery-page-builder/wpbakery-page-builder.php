@@ -10,19 +10,24 @@
 
 defined( 'ABSPATH' ) || exit;
 
+/**
+ * The main WPBakery_Page_Builder_Extension class
+ */
 class Wolf_Core_WPBakery_Page_Builder_Extension {
 
 	/**
-	 * @var string
+	 * The available elements
+	 *
+	 * @var array
 	 */
-	private $elements = [];
+	private $elements = array();
 
 	/**
 	 * Constructor.
 	 */
 	public function __construct() {
 
-		add_action( 'init', [ $this, 'init' ] );
+		add_action( 'init', array( $this, 'init' ) );
 
 		$this->elements = wolf_core_get_element_list();
 	}
@@ -51,7 +56,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		foreach ( $this->elements as $e ) {
 
 			if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
-				include_once( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' );
+				include_once WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php';
 			}
 		}
 	}
@@ -61,20 +66,27 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 */
 	public function includes() {
 
-		$files = [
+		$files = array(
 			'vc-core-functions',
 			'vc-custom-fields',
 
 			'icon-styles',
 			'icon-libraries',
-		];
+		);
 
-		foreach( $files as $file ) {
-			if ( ! include_once( WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/' . $file . '.php' ) ) {
+		foreach ( $files as $file ) {
+			if ( ! include_once WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/' . $file . '.php' ) {
 				wp_die(
-					sprintf( wp_kses( __('Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ), [
-						'code' => [],
-					] ), $file )
+					sprintf(
+						wp_kses(
+							/* translators: %s: the code to display */
+							__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+							array(
+								'code' => array(),
+							)
+						),
+						esc_attr( $file )
+					)
 				);
 			}
 		}
@@ -95,7 +107,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 
 			if ( is_file( WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/vc-params/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
 
-				include_once( WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/vc-params/' .  sanitize_title_with_dashes( $e ) . '.php' );
+				include_once WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/vc-params/' . sanitize_title_with_dashes( $e ) . '.php';
 			}
 		}
 	}

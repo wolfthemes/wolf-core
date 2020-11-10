@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * We use it to add inline style to row
  *
  * @param $param_value
- * @param string $prefix
+ * @param string      $prefix
  *
  * @return string
  */
@@ -45,7 +45,7 @@ function wolf_core_vc_purchase_url() {
  * @return bool
  */
 function wolf_core_shortcode_bool( $var ) {
-	$falsey = [ 'false', '0', 'no', 'n', '', ' ' ];
+	$falsey = array( 'false', '0', 'no', 'n', '', ' ' );
 	return ( ! $var || in_array( strtolower( $var ), $falsey, true ) ) ? false : true;
 }
 
@@ -64,9 +64,9 @@ function wolf_core_sanitize_css_value( $value, $default_unit = 'px', $default_va
 	$pattern = '/^(\d*(?:\.\d+)?)\s*(px|\%|in|cm|mm|em|rem|ex|pt|pc|vw|vh|vmin|vmax)?$/';
 	// allowed metrics: http://www.w3schools.com/cssref/css_units.asp
 	$regexr = preg_match( $pattern, $value, $matches );
-	$value = isset( $matches[1] ) ? absint( $matches[1] ) : $default_value;
-	$unit = isset( $matches[2] ) ? esc_attr( $matches[2] ) : $default_unit;
-	$value = $value . $unit;
+	$value  = isset( $matches[1] ) ? absint( $matches[1] ) : $default_value;
+	$unit   = isset( $matches[2] ) ? esc_attr( $matches[2] ) : $default_unit;
+	$value  = $value . $unit;
 
 	return $value;
 }
@@ -79,21 +79,20 @@ function wolf_core_sanitize_css_value( $value, $default_unit = 'px', $default_va
  *
  * @uses sanitize_html_class
  * @param (mixed: string/array) $class   "blue hedgehog goes shopping" or array("blue", "hedgehog", "goes", "shopping")
- * @param (mixed) $fallback Anything you want returned in case of a failure
+ * @param (mixed)               $fallback Anything you want returned in case of a failure
  * @return (mixed: string / $fallback )
  */
 function wolf_core_sanitize_html_classes( $class, $fallback = null ) {
 
 	// Explode it, if it's a string
 	if ( is_string( $class ) ) {
-		$class = explode( ' ', $class);
+		$class = explode( ' ', $class );
 	}
 
 	if ( is_array( $class ) && count( $class ) > 0 ) {
 		$class = array_unique( array_map( 'sanitize_html_class', $class ) );
 		return trim( implode( ' ', $class ) );
-	}
-	else {
+	} else {
 		return trim( sanitize_html_class( $class, $fallback ) );
 	}
 }
@@ -151,7 +150,7 @@ function wolf_core_sanitize_css_field( $style ) {
 		return;
 	}
 
-	if ( ';' !== substr( $style, -1) ) {
+	if ( ';' !== substr( $style, -1 ) ) {
 		$style = $style . ';'; // add end semicolon if missing
 	}
 
@@ -173,7 +172,7 @@ function wolf_core_esc_style_attr( $style ) {
 		return;
 	}
 
-	if ( ';' !== substr( $style, -1) ) {
+	if ( ';' !== substr( $style, -1 ) ) {
 		$style = $style . ';'; // add end semicolon if missing
 	}
 
@@ -195,23 +194,23 @@ function wolf_core_convert_color_class_to_hex_value( $color, $custom_color ) {
 	$hex_color = '';
 
 	$colors = array(
-		'blue' => '#5472d2',
-		'turquoise' => '#00c1cf',
-		'pink' => '#fe6c61',
-		'violet' => '#8d6dc4',
-		'peacoc' => '#4cadc9',
-		'chino' => '#cec2ab',
+		'blue'        => '#5472d2',
+		'turquoise'   => '#00c1cf',
+		'pink'        => '#fe6c61',
+		'violet'      => '#8d6dc4',
+		'peacoc'      => '#4cadc9',
+		'chino'       => '#cec2ab',
 		'mulled-wine' => '#50485b',
-		'vista-blue' => '#75d69c',
-		'orange' => '#f7be68',
-		'sky' => '#5aa1e3',
-		'green' => '#6dab3c',
-		'juicy-pink' => '#f4524d',
+		'vista-blue'  => '#75d69c',
+		'orange'      => '#f7be68',
+		'sky'         => '#5aa1e3',
+		'green'       => '#6dab3c',
+		'juicy-pink'  => '#f4524d',
 		'sandy-brown' => '#f79468',
-		'purple' => '#b97ebb',
-		'black' => '#2a2a2a',
-		'grey' => '#ebebeb',
-		'white' => '#ffffff',
+		'purple'      => '#b97ebb',
+		'black'       => '#2a2a2a',
+		'grey'        => '#ebebeb',
+		'white'       => '#ffffff',
 	);
 
 	$colors = wolf_core_get_shared_colors_hex();
@@ -316,7 +315,7 @@ function wolf_core_array_to_list( $array, $separator = ',' ) {
  * Remove HTML and shortcode, sanitize and shorten a string
  *
  * @param string $text
- * @param int $num_words
+ * @param int    $num_words
  * @param string $more
  * @return string
  */
@@ -407,8 +406,8 @@ function wolf_core_get_image_dominant_color( $attachment_id ) {
 	}
 
 	$upload_dir = wp_upload_dir();
-	$filename = $upload_dir['basedir'] . '/' . $metadata['file'];
-	$ext = strtolower( pathinfo( $filename, PATHINFO_EXTENSION ) );
+	$filename   = $upload_dir['basedir'] . '/' . $metadata['file'];
+	$ext        = strtolower( pathinfo( $filename, PATHINFO_EXTENSION ) );
 
 	if ( 'jpg' == $ext || 'jpeg' == $ext ) {
 
@@ -426,7 +425,7 @@ function wolf_core_get_image_dominant_color( $attachment_id ) {
 		return 'transparent';
 	}
 
-	$thumb = imagecreatetruecolor( 1,1 );
+	$thumb = imagecreatetruecolor( 1, 1 );
 	imagecopyresampled( $thumb, $image, 0, 0, 0, 0, 1, 1, imagesx( $image ), imagesy( $image ) );
 	$main_color = dechex( imagecolorat( $thumb, 0, 0 ) );
 
@@ -487,7 +486,6 @@ function wolf_core_get_first_category_url( $post_id = null ) {
 		if ( $category ) {
 			return get_category_link( $category[0]->term_ID );
 		}
-
 	} elseif ( 'work' && taxonomy_exists( 'work_type' ) ) {
 
 		$terms = get_the_terms( $post_id, 'work_type' );
@@ -497,7 +495,6 @@ function wolf_core_get_first_category_url( $post_id = null ) {
 
 			return get_term_link( $term );
 		}
-
 	} elseif ( 'gallery' && taxonomy_exists( 'gallery_type' ) ) {
 
 		$terms = get_the_terms( $post_id, 'gallery_type' );
@@ -518,7 +515,7 @@ function wolf_core_element_aos_animation_data_attr( $atts ) {
 
 	if ( isset( $atts['css_animation'] ) && 'none' !== $atts['css_animation'] ) {
 
-		$css_animation = esc_attr( $atts['css_animation'] );
+		$css_animation       = esc_attr( $atts['css_animation'] );
 		$css_animation_delay = ( isset( $atts['css_animation_delay'] ) ) ? absint( $atts['css_animation_delay'] ) : '';
 
 		if ( wolf_core_is_new_animation( $css_animation ) ) {
@@ -578,7 +575,7 @@ function wolf_core_get_css_animation_delay( $css_animation_delay ) {
  * Brightness color function simiar to sass lighten and darken
  *
  * @param string $hex
- * @param int $percent
+ * @param int    $percent
  * @return string
  */
 function wolf_core_color_brightness( $hex, $percent ) {
@@ -591,7 +588,7 @@ function wolf_core_color_brightness( $hex, $percent ) {
 	// Format the hex color string
 	$hex = str_replace( '#', '', $hex );
 	if ( strlen( $hex ) == 3 ) {
-		$hex = str_repeat( substr( $hex,0,1 ), 2 ).str_repeat( substr( $hex,1,1 ), 2 ).str_repeat( substr( $hex, 2, 1 ), 2 );
+		$hex = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
 	}
 
 	// Get decimal values
@@ -623,7 +620,7 @@ function wolf_core_sanitize_heading( $string ) {
 
 	$post_title = wolf_core_get_post_title();
 	$site_title = get_bloginfo( 'name' );
-	//$post_title = get_the_title();
+	// $post_title = get_the_title();
 
 	$short_tags = array(
 		'{{post_title}}' => $post_title,
@@ -649,7 +646,7 @@ function wolf_core_sanitize_heading( $string ) {
 function wolf_core_sanitize_text_block( $string ) {
 
 	$subheading = wolf_core_get_post_subheading();
-	//$post_title = get_the_title();
+	// $post_title = get_the_title();
 
 	$short_tags = array(
 		'{{post_subheading}}' => $subheading,
@@ -663,10 +660,13 @@ function wolf_core_sanitize_text_block( $string ) {
 }
 
 /* Add text-transform to allow wp_kses style attr */
-add_filter( 'safe_style_css', function( $styles ) {
-	$styles[] = 'text-transform';
-	return $styles;
-} );
+add_filter(
+	'safe_style_css',
+	function( $styles ) {
+		$styles[] = 'text-transform';
+		return $styles;
+	}
+);
 
 /**
  * Sanitize string with wp_kses
@@ -676,120 +676,121 @@ add_filter( 'safe_style_css', function( $styles ) {
  */
 function wolf_core_kses( $output ) {
 
-	return wp_kses( $output,
+	return wp_kses(
+		$output,
 		array(
-			'div' => array(
-				'class' => array(),
-				'id' => array(),
+			'div'        => array(
+				'class'     => array(),
+				'id'        => array(),
 				'itemscope' => array(),
-				'itemtype' => array(),
+				'itemtype'  => array(),
 			),
-			'p' => array(
+			'p'          => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'ul' => array(
+			'ul'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 				'style' => array(),
 			),
-			'ol' => array(
+			'ol'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 				'style' => array(),
 			),
-			'li' => array(
+			'li'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'span' => array(
-				'class' => array(),
-				'id' => array(),
+			'span'       => array(
+				'class'        => array(),
+				'id'           => array(),
 				'data-post-id' => array(),
-				'itemprop' => array(),
+				'itemprop'     => array(),
 
 			),
-			'i' => array(
-				'class' => array(),
-				'id' => array(),
+			'i'          => array(
+				'class'       => array(),
+				'id'          => array(),
 				'aria-hidden' => array(),
 			),
-			'time' => array(
-				'class' => array(),
+			'time'       => array(
+				'class'    => array(),
 				'datetime' => array(),
 				'itemprop' => array(),
 			),
 			'blockquote' => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'hr' => array(
+			'hr'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'strong' => array(
+			'strong'     => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'br' => array(),
-			'img' => array(
-				'src' => array(),
-				'srcset' => array(),
-				'class' => array(),
-				'id' => array(),
-				'width' => array(),
-				'height' => array(),
-				'sizes' => array(),
-				'alt' => array(),
-				'title' => array(),
+			'br'         => array(),
+			'img'        => array(
+				'src'      => array(),
+				'srcset'   => array(),
+				'class'    => array(),
+				'id'       => array(),
+				'width'    => array(),
+				'height'   => array(),
+				'sizes'    => array(),
+				'alt'      => array(),
+				'title'    => array(),
 				'data-src' => array(),
 			),
-			'a' => array(
-				'class' => array(),
-				'id' => array(),
-				'href' => array(),
-				'data-fancybox' => array(),
-				'rel' => array(),
-				'title' => array(),
-				'target' => array(),
+			'a'          => array(
+				'class'                  => array(),
+				'id'                     => array(),
+				'href'                   => array(),
+				'data-fancybox'          => array(),
+				'rel'                    => array(),
+				'title'                  => array(),
+				'target'                 => array(),
 				'data-mega-menu-tagline' => array(),
-				'itemprop' => array(),
+				'itemprop'               => array(),
 			),
-			'h1' => array(
+			'h1'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'h2' => array(
+			'h2'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'h3' => array(
+			'h3'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'h4' => array(
+			'h4'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'h5' => array(
+			'h5'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'h6' => array(
+			'h6'         => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'ins' => array(
+			'ins'        => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'del' => array(
+			'del'        => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
-			'svg' => array(
+			'svg'        => array(
 				'class' => array(),
-				'id' => array(),
+				'id'    => array(),
 			),
 		)
 	);
@@ -811,7 +812,7 @@ function wolf_core_get_post_title() {
 	/* Main condition not 404 and not woocommerce page */
 	if ( ! is_404() && ! wolf_core_is_woocommerce_page() ) {
 
-	 	if ( wolf_core_is_blog() ) {
+		if ( wolf_core_is_blog() ) {
 
 			if ( is_category() ) {
 
@@ -819,7 +820,7 @@ function wolf_core_get_post_title() {
 
 			} elseif ( is_tag() ) {
 
-				$title   = single_tag_title( '', false );
+				$title = single_tag_title( '', false );
 
 			} elseif ( is_author() ) {
 
@@ -837,12 +838,11 @@ function wolf_core_get_post_title() {
 
 				$title = get_the_date( 'Y' );
 
-			/* is blog index */
+				/* is blog index */
 			} elseif ( wolf_core_is_blog_index() && ! wolf_core_is_home_as_blog() ) {
 
 				$title = get_the_title( get_option( 'page_for_posts' ) );
 			}
-
 		} elseif ( is_tax() ) {
 
 			$queried_object = get_queried_object();
@@ -850,12 +850,10 @@ function wolf_core_get_post_title() {
 			if ( is_object( $queried_object ) && isset( $queried_object->name ) ) {
 				$title = $queried_object->name;
 			}
-
 		} elseif ( is_single() ) {
 
 			$title = get_the_title();
 		}
-
 	} elseif ( wolf_core_is_woocommerce_page() ) { // shop title
 
 		if ( is_shop() || is_product_taxonomy() ) {
@@ -921,9 +919,9 @@ function wolf_core_get_color_tone( $hex, $index = 215 ) {
 
 	$hex = str_replace( '#', '', sanitize_hex_color( $hex ) ); // remove #
 
-	$c_r = hexdec( substr( $hex, 0, 2 ) );
-	$c_g = hexdec( substr( $hex, 2, 2 ) );
-	$c_b = hexdec( substr( $hex, 4, 2 ) );
+	$c_r        = hexdec( substr( $hex, 0, 2 ) );
+	$c_g        = hexdec( substr( $hex, 2, 2 ) );
+	$c_b        = hexdec( substr( $hex, 4, 2 ) );
 	$brightness = ( ( $c_r * 299 ) + ( $c_g * 587 ) + ( $c_b * 114 ) ) / 1000;
 
 	if ( $index < $brightness ) {
@@ -938,20 +936,20 @@ function wolf_core_get_color_tone( $hex, $index = 215 ) {
  *
  * @param int $minutes
  * @return string
-  */
+ */
 function wolf_core_format_minutes_to_iso( $minutes ) {
 
-	$seconds = $minutes * 60;
+	$seconds        = $minutes * 60;
 	$formatted_time = 'PT';
-	$units = array(
+	$units          = array(
 		'H' => 3600,
-		'M' => 60
+		'M' => 60,
 	);
 
 	foreach ( $units as $key => $unit ) {
 		if ( $seconds >= $unit ) {
-			$value = floor( $seconds / $unit );
-			$seconds -= $value * $unit;
+			$value           = floor( $seconds / $unit );
+			$seconds        -= $value * $unit;
 			$formatted_time .= $value . $key;
 		}
 	}
@@ -964,11 +962,11 @@ function wolf_core_format_minutes_to_iso( $minutes ) {
  *
  * @param int $minutes
  * @return string
-  */
+ */
 function wolf_core_format_minutes_to_text( $minutes ) {
 
 	$seconds = $minutes * 60;
-	$hours = floor( $seconds / 3600 );
+	$hours   = floor( $seconds / 3600 );
 	$minutes = floor( ( $seconds / 60 ) % 60 );
 	$seconds = $seconds % 60;
 	return ( $hours > 0 ) ? sprintf( esc_html( '%d h %d mins', '%TEXTDOMAIN%' ), $hours, $minutes ) : sprintf( esc_html( '%d mins', '%TEXTDOMAIN%' ), $minutes );
@@ -985,9 +983,9 @@ if ( ! function_exists( 'wolf_core_get_user_country_code' ) ) {
 		}
 
 		// Geolocation must be enabled @ Woo Settings
-	 	$country_code = null;
-		$location = WC_Geolocation::geolocate_ip();
-		$country = $location['country'];
+		$country_code = null;
+		$location     = WC_Geolocation::geolocate_ip();
+		$country      = $location['country'];
 
 		return $country;
 	}
@@ -1028,7 +1026,7 @@ if ( ! function_exists( 'wolf_core_user_country_code_is_in_eu' ) ) {
 			'PT',
 			'RO',
 			'SE',
-			'SI' ,
+			'SI',
 			'SK',
 		);
 

@@ -19,44 +19,44 @@ defined( 'ABSPATH' ) || exit;
  * @return array
  */
 function wolf_core_convert_params_to_elementor( $widget ) {
-	
+
 	$i = 0;
 
 	$params = $widget->params['params'];
 
 	foreach ( $params as $p ) {
 
-		$field_params = [];
+		$field_params = array();
 
-		$type = $p['type'];
+		$type                  = $p['type'];
 		$field_params['label'] = $p['label'];
-		
+
 		if ( 'text' === $type ) {
 
-			$field_params['type'] = \Elementor\Controls_Manager::TEXT;
+			$field_params['type']        = \Elementor\Controls_Manager::TEXT;
 			$field_params['placeholder'] = $p['placeholder'];
 
-		} elseif ( 'textarea' === $type  ) {
-			
-			$field_params['type'] = \Elementor\Controls_Manager::TEXTAREA;
+		} elseif ( 'textarea' === $type ) {
+
+			$field_params['type']        = \Elementor\Controls_Manager::TEXTAREA;
 			$field_params['placeholder'] = $p['placeholder'];
 
-		} elseif ( 'select' === $type  ) {
+		} elseif ( 'select' === $type ) {
 
-			$field_params['type'] = \Elementor\Controls_Manager::SELECT;
+			$field_params['type']    = \Elementor\Controls_Manager::SELECT;
 			$field_params['options'] = $p['options'];
 
-		} elseif ( 'checkbox' === $type  ) {
+		} elseif ( 'checkbox' === $type ) {
 
-			$field_params['type'] = \Elementor\Controls_Manager::SWITCHER;
-			$field_params['label_on'] = $p['label_on'];
-			$field_params['label_off'] = $p['label_off'];
+			$field_params['type']         = \Elementor\Controls_Manager::SWITCHER;
+			$field_params['label_on']     = $p['label_on'];
+			$field_params['label_off']    = $p['label_off'];
 			$field_params['return_value'] = $p['return_value'];
 
 		} elseif ( 'font_family' === $type ) {
 
-			$field_params['type'] = \Elementor\Controls_Manager::SELECT;
-			$field_params['options'] = ['font' => 'Font name'];
+			$field_params['type']    = \Elementor\Controls_Manager::SELECT;
+			$field_params['options'] = array( 'font' => 'Font name' );
 
 		} elseif ( 'link' === $type ) {
 
@@ -74,7 +74,7 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 			$field_params['description'] = $p['description'];
 		}
 
-		//debug( $field_params );
+		// debug( $field_params );
 
 		$widget->add_control(
 			$p['param_name'],
@@ -90,18 +90,18 @@ function wolf_core_add_elementor_widget_categories( $elements_manager ) {
 
 	$elements_manager->add_category(
 		'music',
-		[
+		array(
 			'title' => esc_html__( 'Music', '%TEXTDOMAIN%' ),
-			'icon' => 'fa fa-music',
-		]
+			'icon'  => 'fa fa-music',
+		)
 	);
 
 	$elements_manager->add_category(
 		'extension',
-		[
+		array(
 			'title' => esc_html__( 'Extension', '%TEXTDOMAIN%' ),
-			'icon' => 'fa fa-extension',
-		]
+			'icon'  => 'fa fa-extension',
+		)
 	);
 
 }
