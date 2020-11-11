@@ -73,6 +73,11 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 
 			'icon-styles',
 			'icon-libraries',
+
+			// 'row',
+			// 'row-inner',
+			// 'column-text',
+			// 'column-inner',
 		);
 
 		foreach ( $files as $file ) {

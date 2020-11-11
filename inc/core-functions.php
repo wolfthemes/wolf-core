@@ -93,8 +93,8 @@ function wolf_core_get_element_list() {
 		'button',
 		// 'cards-gallery',
 		'cta',
-		'column',
-		'column-inner',
+		//'column',
+		//'column-inner',
 		'column-text',
 		'comparison_slider',
 		'content-block',
@@ -146,8 +146,8 @@ function wolf_core_get_element_list() {
 		'process-item',
 		'progress-bar',
 		'rev-slider-vc',
-		'row',
-		'row-inner',
+		//'row',
+		//'row-inner',
 		// 'section',
 		'sb-instagram-feed',
 		'separator',
@@ -178,6 +178,13 @@ function wolf_core_get_element_list() {
 		'youtube',
 		'zigzag',
 	);
+
+	if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+		$wolf_core_elements[] = 'row';
+		$wolf_core_elements[] = 'row-inner';
+		$wolf_core_elements[] = 'column';
+		$wolf_core_elements[] = 'column-inner';
+	}
 
 	// apply filters.
 	$wolf_core_elements = apply_filters( 'wolf_core_element_list', $wolf_core_elements );
@@ -441,4 +448,59 @@ function wolf_core_update_option( $index = 'settings', $key, $value ) {
 	$wolf_core_settings[ $index ][ $key ] = $value;
 
 	update_option( 'wolf_core_settings', $wolf_core_settings );
+}
+
+/**
+ * Get the URL of an attachment from its id
+ *
+ * @param int    $id
+ * @param string $size
+ * @return string $url
+ */
+function wolf_core_get_url_from_attachment_id( $id, $size = 'thumbnail', $fallback = true ) {
+	if ( is_numeric( $id ) ) {
+		$src = wp_get_attachment_image_src( absint( $id ), $size );
+
+		if ( isset( $src[0] ) ) {
+
+			return esc_url( $src[0] );
+		} else {
+			return wolf_core_placeholder_img_url( $size );
+		}
+	}
+}
+
+/**
+ * Get placeholder image URL
+ */
+function wolf_core_placeholder_img_url( $img_size ) {
+
+	if ( in_array( $img_size, array( 'thumbnail', 'medium', 'large', 'wolf-core-XL', 'wolf-core-photo', 'full' ) ) ) {
+
+		switch ( $img_size ) {
+			case 'wolf-core-XL':
+				$img_size = '2000x1500';
+				break;
+			case 'wolf-core-photo':
+				$img_size = '500x500';
+				break;
+			case 'full':
+				$img_size = '2000x1500';
+				break;
+			case 'thumbnail':
+				$img_size = get_option( 'thumbnail_size_w' ) . 'x' . get_option( 'thumbnail_size_h' );
+				break;
+			case 'medium':
+				$img_size = get_option( 'medium_size_w' ) . 'x' . get_option( 'medium_size_h' );
+				break;
+			case 'large':
+				$img_size = get_option( 'large_size_w' ) . 'x' . get_option( 'large_size_h' );
+				break;
+		}
+	}
+
+	if ( $img_size ) {
+		$formatted_size = str_replace( 'x', '/', $img_size );
+		return 'https://unsplash.it/' . $formatted_size . '/?image=' . rand( 1, 1084 );
+	}
 }

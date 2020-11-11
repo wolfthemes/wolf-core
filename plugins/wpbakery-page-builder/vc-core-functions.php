@@ -192,3 +192,114 @@ function wolf_core_locate_shortcode_template( $filename ) {
 	// Return what we found.
 	return apply_filters( 'wolf_core_locate_shortcode_template', $file );
 }
+
+/**
+ * Get shared color list in array to allow filtering by theme and stuff
+ *
+ * @return array
+ */
+function wolf_core_get_shared_colors() {
+
+	$wolf_core_shared_colors = array(
+		esc_html__( 'Black', '%TEXTDOMAIN%' )      => 'black',
+		esc_html__( 'Light Grey', '%TEXTDOMAIN%' ) => 'lightergrey',
+		esc_html__( 'Dark Grey', '%TEXTDOMAIN%' )  => 'darkgrey',
+		esc_html__( 'White', '%TEXTDOMAIN%' )      => 'white',
+		esc_html__( 'Orange', '%TEXTDOMAIN%' )     => 'orange',
+		esc_html__( 'Green', '%TEXTDOMAIN%' )      => 'green',
+		esc_html__( 'Turquoise', '%TEXTDOMAIN%' )  => 'turquoise',
+		esc_html__( 'Violet', '%TEXTDOMAIN%' )     => 'violet',
+		esc_html__( 'Pink', '%TEXTDOMAIN%' )       => 'pink',
+		esc_html__( 'Grey blue', '%TEXTDOMAIN%' )  => 'greyblue',
+		esc_html__( 'Red', '%TEXTDOMAIN%' )        => 'red',
+		esc_html__( 'Yellow', '%TEXTDOMAIN%' )     => 'yellow',
+		esc_html__( 'Blue', '%TEXTDOMAIN%' )       => 'blue',
+		esc_html__( 'Peacoc', 'js_composer' )              => 'peacoc',
+		esc_html__( 'Chino', 'js_composer' )               => 'chino',
+		esc_html__( 'Mulled Wine', 'js_composer' )         => 'mulled-wine',
+		esc_html__( 'Vista Blue', 'js_composer' )          => 'vista-blue',
+		esc_html__( 'Grey', 'js_composer' )                => 'grey',
+		esc_html__( 'Sky', 'js_composer' )                 => 'sky',
+		esc_html__( 'Juicy pink', 'js_composer' )          => 'juicy-pink',
+		esc_html__( 'Sandy brown', 'js_composer' )         => 'sandy-brown',
+		esc_html__( 'Purple', 'js_composer' )              => 'purple',
+	);
+
+	$wolf_core_shared_colors = apply_filters( 'wolf_core_shared_colors', $wolf_core_shared_colors );
+
+	return $wolf_core_shared_colors;
+}
+
+/**
+ * Get shared color hex value
+ */
+function wolf_core_get_shared_colors_hex() {
+
+	$wolf_core_shared_colors_hex = array(
+		'black'       => '#000000',
+		'lightergrey' => '#f7f7f7',
+		'darkgrey'    => '#444444',
+		'white'       => '#ffffff',
+		'orange'      => '#F7BE68',
+		'green'       => '#6DAB3C',
+		'turquoise'   => '#49afcd',
+		'violet'      => '#8D6DC4',
+		'pink'        => '#FE6C61',
+		'greyblue'    => '#49535a',
+		'red'         => '#da4f49',
+		'yellow'      => '#e6ae48',
+		'blue'        => '#75D69C',
+		'peacoc'      => '#4CADC9',
+		'chino'       => '#CEC2AB',
+		'mulled-wine' => '#50485B',
+		'vista-blue'  => '#75D69C',
+		'grey'        => '#EBEBEB',
+		'sky'         => '#5AA1E3',
+		'juicy-pink'  => '#F4524D',
+		'sandy-brown' => '#F79468',
+		'purple'      => '#B97EBB',
+		'accent'      => apply_filters( 'wolf_core_theme_accent_color', '#0073AA' ),
+	);
+
+	$wolf_core_shared_colors_hex = apply_filters( 'wolf_core_shared_colors_hex', $wolf_core_shared_colors_hex );
+
+	return $wolf_core_shared_colors_hex;
+}
+
+/**
+ * Get shared gradient color list in array to allow filtering by theme and stuff
+ *
+ * @return array
+ */
+function wolf_core_get_shared_gradient_colors() {
+
+	$wolf_core_shared_gradient_colors = array(
+		esc_html__( 'Gradient Red', '%TEXTDOMAIN%' ) => 'gradient-color-3452ff', // red salient
+		esc_html__( 'Gradient Red 2', '%TEXTDOMAIN%' ) => 'gradient-color-588694', // red uncode
+		esc_html__( 'Gradient Green', '%TEXTDOMAIN%' ) => 'gradient-color-105898',
+		esc_html__( 'Gradient Green Circle', '%TEXTDOMAIN%' ) => 'gradient-color-111420',
+		esc_html__( 'Gradient Orange', '%TEXTDOMAIN%' ) => 'gradient-color-470604',
+		esc_html__( 'Gradient Violet', '%TEXTDOMAIN%' ) => 'gradient-color-b900b4',
+	);
+
+	$wolf_core_shared_gradient_colors = apply_filters( 'wolf_core_shared_gradient_colors', $wolf_core_shared_gradient_colors );
+
+	return $wolf_core_shared_gradient_colors;
+}
+
+/**
+ * Get shape divider options
+ */
+function wolf_core_get_shape_divider_options() {
+	$options = array(
+		'tilt'           => esc_html__( 'Angle', 'wolf-visual-composer' ),
+		// 'tilt_opacity' => esc_html__( 'Angle Opacity', 'wolf-visual-composer' ),
+		'curve'          => esc_html__( 'Curve', 'wolf-visual-composer' ),
+		// 'curve_opacity' => esc_html__( 'Curve Opacity', 'wolf-visual-composer' ),
+		'grunge_border1' => esc_html__( 'Grunge Border', 'wolf-visual-composer' ),
+	);
+
+	$options = array_flip( apply_filters( 'wolf_core_shape_divider_options', $options ) );
+
+	return $options;
+}
