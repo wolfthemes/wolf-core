@@ -25,7 +25,7 @@ function wolf_core_enqueue_admin_scripts() {
 	// wp_enqueue_style( 'wp-color-picker' );
 
 	if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
-		wp_enqueue_style( 'wolf-core-wvc-admin', WOLF_CORE_CSS . '/admin/wvc-admin' . $suffix . '.css', array(), $version, 'all' );
+		wp_enqueue_style( 'wolf-core-admin', WOLF_CORE_CSS . '/admin/admin' . $suffix . '.css', array(), $version, 'all' );
 	}
 
 	// /* Scripts */

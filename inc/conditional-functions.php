@@ -28,6 +28,11 @@ function wolf_core_is_wpb_vc_frontend() {
  * @return bool
  */
 function wolf_core_is_new_animation( $animation_name ) {
+
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+		return;
+	}
+
 	$new_animations = wolf_core_get_aos_animations();
 
 	if ( isset( $new_animations[ $animation_name ] ) ) {

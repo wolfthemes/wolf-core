@@ -419,7 +419,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 					return defined( 'DOING_AJAX' );
 				case 'cron':
 					return defined( 'DOING_CRON' );
-				case 'frontend' || wvc_is_vc_frontend():
+				case 'frontend' || wolf_core_is_vc_frontend():
 					return ( ! is_admin() || defined( 'DOING_AJAX' ) ) && ! defined( 'DOING_CRON' );
 			}
 		}
@@ -435,9 +435,12 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$core_files = array(
 				'core-functions',
+				'background-functions',
+				'filters',
 				'utility-functions',
 				'conditional-functions',
 				'google-fonts',
+				'styles',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */
@@ -554,7 +557,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			/* Includes core files from theme inc dir in both frontend and backend */
 			foreach ( $element_files as $file ) {
 
-				if ( ! require_once WOLF_CORE_DIR . '/inc/elements/' . $file . '.php' ) {
+				if ( ! require_once WOLF_CORE_DIR . '/plugins/elements/' . $file . '.php' ) {
 					wp_die(
 						sprintf(
 							wp_kses(

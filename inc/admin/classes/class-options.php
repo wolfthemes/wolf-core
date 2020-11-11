@@ -54,10 +54,10 @@ class Wolf_Core_Options {
 	}
 
 	/**
-  	 * Enqueue scripts
+	 * Enqueue scripts
 	 */
 	public function scripts() {
-		wp_enqueue_script( 'wp-color-picker' ); // colorpicker
+		wp_enqueue_script( 'wp-color-picker' ); // colorpicker.
 	}
 
 	/**
@@ -67,8 +67,19 @@ class Wolf_Core_Options {
 
 		foreach ( $this->settings as $section ) {
 			$this->settings_id = $section['settings_id'];
-			$parent_slug = ( isset( $section['parent_slug'] ) ) ? $section['parent_slug'] : VC_PAGE_MAIN_SLUG;
-			//$parent_slug = 'options-general.php';
+
+			$parent_slug = null;
+
+			if ( isset( $section['parent_slug'] ) ) {
+
+				$parent_slug = $section['parent_slug'];
+
+			} elseif ( defined( 'VC_PAGE_MAIN_SLUG' ) ) {
+				$parent_slug = VC_PAGE_MAIN_SLUG;
+			} elseif ( 1 === 1 ) { // ELEMENTOR
+
+			}
+
 			add_submenu_page( $parent_slug, $section['title'], $section['title'], 'activate_plugins', $section['settings_id'], array( $this, 'settings_form' ) );
 		}
 	}
@@ -80,19 +91,19 @@ class Wolf_Core_Options {
 
 		foreach ( $this->settings as $setting ) {
 
-			$this->settings_id = $setting['settings_id'];
+			$this->settings_id   = $setting['settings_id'];
 			$this->settings_slug = $setting['settings_slug'];
 
 			register_setting( $this->settings_id, $this->settings_slug, array( $this, 'settings_validate' ) );
 			add_settings_section( $this->settings_id, '', array( $this, 'section_intro' ), $this->settings_id );
 
 			foreach ( $setting['fields'] as $key => $field ) {
-				$type = ( isset( $field['type'] ) ) ? $field['type'] : 'text';
-				$label = ( isset( $field['label'] ) ) ? $field['label'] : '';
+				$type        = ( isset( $field['type'] ) ) ? $field['type'] : 'text';
+				$label       = ( isset( $field['label'] ) ) ? $field['label'] : '';
 				$description = ( isset( $field['description'] ) ) ? $field['description'] : '';
 				$placeholder = ( isset( $field['placeholder'] ) ) ? $field['placeholder'] : '';
-				$value = ( isset( $field['value'] ) ) ? $field['value'] : '';
-				$choices = ( isset( $field['choices'] ) && 'select' == $type  ) ? $field['choices'] : array();
+				$value       = ( isset( $field['value'] ) ) ? $field['value'] : '';
+				$choices     = ( isset( $field['choices'] ) && 'select' == $type ) ? $field['choices'] : array();
 				add_settings_field(
 					$field['field_id'],
 					$label,
@@ -100,13 +111,13 @@ class Wolf_Core_Options {
 					$this->settings_id,
 					$this->settings_id,
 					array(
-						'field_id' => $field['field_id'],
-						'type' => $type,
+						'field_id'      => $field['field_id'],
+						'type'          => $type,
 						'settings_slug' => $this->settings_slug,
-						'description' => $description,
-						'placeholder' => $placeholder,
-						'value' => $value,
-						'choices' => $choices,
+						'description'   => $description,
+						'placeholder'   => $placeholder,
+						'value'         => $value,
+						'choices'       => $choices,
 					)
 				);
 			}
@@ -132,7 +143,7 @@ class Wolf_Core_Options {
 
 		if ( isset( $_POST['wolf_core_settings_nonce'] ) && wp_verify_nonce( $_POST['wolf_core_settings_nonce'], 'wolf_core_save_settings_nonce' ) ) {
 
-			// process form data
+			// process form data.
 			do_action( 'wolf_core_before_options_save', $input );
 
 			$setting_index = esc_attr( $input['settings_slug'] );
@@ -148,8 +159,8 @@ class Wolf_Core_Options {
 	 * Intro section
 	 */
 	public function section_intro() {
-		//var_dump( get_option( 'wolf_core_settings' ) );
-		//var_dump( wolf_core_get_option( 'mailchimp', 'mailchimp_api_key' ) );
+		// var_dump( get_option( 'wolf_core_settings' ) );
+		// var_dump( wolf_core_get_option( 'mailchimp', 'mailchimp_api_key' ) );
 		// add instructions
 	}
 
@@ -160,13 +171,13 @@ class Wolf_Core_Options {
 	 * @return string
 	 */
 	public function setting_field( $args ) {
-		$type = $args['type'];
-		$field_id = $args['field_id'];
+		$type          = $args['type'];
+		$field_id      = $args['field_id'];
 		$settings_slug = $args['settings_slug'];
-		$placeholder = $args['placeholder'];
-		$value = ( wolf_core_get_option( $settings_slug, $field_id ) ) ? wolf_core_get_option( $settings_slug, $field_id ) : $args['value'];
-		$choices = $args['choices'];
-		$description = $args['description'];
+		$placeholder   = $args['placeholder'];
+		$value         = ( wolf_core_get_option( $settings_slug, $field_id ) ) ? wolf_core_get_option( $settings_slug, $field_id ) : $args['value'];
+		$choices       = $args['choices'];
+		$description   = $args['description'];
 
 		if ( 'text' == $type || 'url' == $type ) {
 			?>
@@ -177,7 +188,7 @@ class Wolf_Core_Options {
 			<textarea class="large-text" name="<?php echo esc_attr( $settings_slug . '[' . $field_id . ']' ); ?>" rows="5"><?php echo sanitize_text_field( wolf_core_get_option( $settings_slug, $field_id ) ); ?></textarea>
 			<?php
 		} elseif ( 'editor' === $type ) {
-			$content = ( wolf_core_get_option( $settings_slug, $field_id ) ) ? stripslashes( wolf_core_get_option( $settings_slug, $field_id ) ) : '';
+			$content   = ( wolf_core_get_option( $settings_slug, $field_id ) ) ? stripslashes( wolf_core_get_option( $settings_slug, $field_id ) ) : '';
 			$editor_id = esc_attr( $settings_slug . '[' . $field_id . ']' );
 			wp_editor( $content, $field_id, $settings = array() );
 		} elseif ( 'checkbox' == $type ) {
@@ -202,7 +213,7 @@ class Wolf_Core_Options {
 			?>
 			<select name="<?php echo esc_attr( $settings_slug . '[' . $field_id . ']' ); ?>">
 				<?php if ( array_keys( $choices ) != array_keys( array_keys( $choices ) ) ) : ?>
-					<?php foreach ( $choices as $key => $name) : ?>
+					<?php foreach ( $choices as $key => $name ) : ?>
 						<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $value, $key ); ?>><?php echo sanitize_text_field( $name ); ?></option>
 					<?php endforeach; ?>
 				<?php else : ?>
@@ -217,17 +228,22 @@ class Wolf_Core_Options {
 			 * Bg image
 			 */
 			wp_enqueue_media();
-			$image_id = absint( $value );
+			$image_id  = absint( $value );
 			$image_url = wolf_core_get_url_from_attachment_id( $image_id );
 			?>
-			<input type="hidden" name="<?php echo esc_attr( $settings_slug . '[' . $field_id . ']' ); ?>" value="<?php echo esc_attr( $image_id); ?>">
-			<img style="max-width:150px;<?php if ( ! $image_id ) echo 'display:none;'; ?>" class="wolf-core-img-preview" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $field_id ); ?>">
+			<input type="hidden" name="<?php echo esc_attr( $settings_slug . '[' . $field_id . ']' ); ?>" value="<?php echo esc_attr( $image_id ); ?>">
+			<img style="max-width:150px;
+			<?php
+			if ( ! $image_id ) {
+				echo 'display:none;';}
+			?>
+			" class="wolf-core-img-preview" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $field_id ); ?>">
 			<br>
 			<a href="#" class="button wolf-core-reset-img"><?php esc_html_e( 'Clear', 'wolf-visual-composer' ); ?></a>
 			<a href="#" class="button wolf-core-set-img"><?php esc_html_e( 'Choose an image', 'wolf-visual-composer' ); ?></a>
 			<?php
 		} elseif ( 'background' == $type ) {
-			$bg_meta = wolf_core_get_bg_meta( $settings_slug, $field_id  );
+			$bg_meta = wolf_core_get_bg_meta( $settings_slug, $field_id );
 			extract( $bg_meta );
 			$image_url = wolf_core_get_url_from_attachment_id( $image_id );
 			/**
@@ -250,8 +266,13 @@ class Wolf_Core_Options {
 				<label for="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][image_id]' ); ?>">
 					<?php esc_html_e( 'Image', 'wolf-visual-composer' ); ?>
 				</label><br>
-				<input type="hidden" name="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][image_id]' ); ?>" value="<?php echo esc_attr( $image_id); ?>">
-				<img style="max-width:150px;<?php if ( ! $image_id ) echo 'display:none;'; ?>" class="wolf-core-img-preview" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $field_id ); ?>">
+				<input type="hidden" name="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][image_id]' ); ?>" value="<?php echo esc_attr( $image_id ); ?>">
+				<img style="max-width:150px;
+				<?php
+				if ( ! $image_id ) {
+					echo 'display:none;';}
+				?>
+				" class="wolf-core-img-preview" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $field_id ); ?>">
 				<br>
 				<a href="#" class="button wolf-core-reset-img"><?php esc_html_e( 'Clear', 'wolf-visual-composer' ); ?></a>
 				<a href="#" class="button wolf-core-set-img"><?php esc_html_e( 'Choose an image', 'wolf-visual-composer' ); ?></a>
@@ -280,36 +301,36 @@ class Wolf_Core_Options {
 			$options = array(
 				'center center',
 				'center top',
-				'left top' ,
-				'right top' ,
+				'left top',
+				'right top',
 				'center bottom',
-				'left bottom' ,
-				'right bottom' ,
-				'left center' ,
+				'left bottom',
+				'right bottom',
+				'left center',
 				'right center',
 			);
-			 ?>
+			?>
 			 <p>
 				 <label for="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][position]' ); ?>">
 					<?php esc_html_e( 'Position', 'wolf-visual-composer' ); ?>
 				</label><br>
 				 <select name="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][position]' ); ?>">
-				 	<?php foreach ( $options as $option ) : ?>
+					<?php foreach ( $options as $option ) : ?>
 						<option <?php selected( $position, $option ); ?>><?php echo sanitize_text_field( $option ); ?></option>
 					<?php endforeach; ?>
 				 </select>
 			</p>
 			 <?php
 
-			/**
-			 * Bg size
-			 */
-			$options = array(
-				'cover' => esc_html__( 'cover (resize)', 'wolf-visual-composer' ),
-				'normal' => esc_html__( 'normal', 'wolf-visual-composer' ),
-				'resize' => esc_html__( 'responsive (hard resize)', 'wolf-visual-composer' ),
-			);
-			?>
+				/**
+				 * Bg size
+				 */
+				$options = array(
+					'cover'  => esc_html__( 'cover (resize)', 'wolf-visual-composer' ),
+					'normal' => esc_html__( 'normal', 'wolf-visual-composer' ),
+					'resize' => esc_html__( 'responsive (hard resize)', 'wolf-visual-composer' ),
+				);
+				?>
 			<p>
 				<label for="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][size]' ); ?>">
 					<?php esc_html_e( 'Size', 'wolf-visual-composer' ); ?>
@@ -357,7 +378,7 @@ class Wolf_Core_Options {
 		$this->settings_id = ( isset( $_GET['page'] ) ) ? esc_attr( $_GET['page'] ) : '';
 		?>
 		<div class="wrap">
-			<h2><?php esc_html_e( 'Page Builder Settings', 'wolf-visual-composer' ) ?></h2>
+			<h2><?php esc_html_e( 'Page Builder Settings', 'wolf-visual-composer' ); ?></h2>
 			<?php if ( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] ) { ?>
 				<div id="setting-error-settings_updated" class="updated settings-error">
 					<p><strong><?php esc_html_e( 'Settings saved.', 'wolf-visual-composer' ); ?></strong></p>
@@ -380,33 +401,34 @@ class Wolf_Core_Options {
 
 		global $options;
 
-		//delete_option( 'wolf_core_settings' );
+		// delete_option( 'wolf_core_settings' );
 
-		if ( ! get_option( 'wolf_core_settings' )  ) {
+		if ( ! get_option( 'wolf_core_settings' ) ) {
 
-			$default_twitter_url = ( get_user_meta( get_current_user_id(), 'twitter', true ) ) ? 'https://twitter.com/' . esc_attr( get_user_meta( get_current_user_id(), 'twitter', true ) ) : '#';
+			$default_twitter_url  = ( get_user_meta( get_current_user_id(), 'twitter', true ) ) ? 'https://twitter.com/' . esc_attr( get_user_meta( get_current_user_id(), 'twitter', true ) ) : '#';
 			$default_facebook_url = ( get_user_meta( get_current_user_id(), 'facebook', true ) ) ? get_user_meta( get_current_user_id(), 'facebook', true ) : '#';
 
-			$default = apply_filters( 'wolf_core_default_settings',
+			$default = apply_filters(
+				'wolf_core_default_settings',
 				array(
 
-					'settings' => array(
+					'settings'               => array(
 						'lightbox' => 'swipebox',
 						'lazyload' => true,
-						'css_min' => true,
-						'js_min' => true,
+						'css_min'  => true,
+						'js_min'   => true,
 					),
-					'mailchimp' => array(
-						'label' => esc_html__( 'Subscribe to our newsletter', 'wolf-visual-composer' ),
-						'subscribe_text' => esc_html__( 'Subscribe', 'wolf-visual-composer' ),
+					'mailchimp'              => array(
+						'label'              => esc_html__( 'Subscribe to our newsletter', 'wolf-visual-composer' ),
+						'subscribe_text'     => esc_html__( 'Subscribe', 'wolf-visual-composer' ),
 						'placeholder_f_name' => esc_html__( 'Your first name', 'wolf-visual-composer' ),
 						'placeholder_l_name' => esc_html__( 'Your last name', 'wolf-visual-composer' ),
-						'placeholder' => esc_html__( 'Your email', 'wolf-visual-composer' ),
+						'placeholder'        => esc_html__( 'Your email', 'wolf-visual-composer' ),
 					),
-					'fonts' => array(),
+					'fonts'                  => array(),
 
-					'socials' => array(
-						'twitter' => $default_twitter_url,
+					'socials'                => array(
+						'twitter'  => $default_twitter_url,
 						'facebook' => $default_facebook_url,
 					),
 					'privacy_policy_message' => array(
@@ -418,6 +440,6 @@ class Wolf_Core_Options {
 			add_option( 'wolf_core_settings', $default );
 		}
 
-		//var_dump( get_option( 'wolf_core_settings' ) );
+		// var_dump( get_option( 'wolf_core_settings' ) );
 	}
 } // end class

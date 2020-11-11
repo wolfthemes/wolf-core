@@ -30,16 +30,15 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 
 		$type                  = $p['type'];
 		$field_params['label'] = $p['label'];
+		$field_params['placeholder'] = isset( $p['placeholder'] ) ? $p['placeholder'] : '';
 
 		if ( 'text' === $type ) {
 
 			$field_params['type']        = \Elementor\Controls_Manager::TEXT;
-			$field_params['placeholder'] = $p['placeholder'];
 
 		} elseif ( 'textarea' === $type ) {
 
 			$field_params['type']        = \Elementor\Controls_Manager::TEXTAREA;
-			$field_params['placeholder'] = $p['placeholder'];
 
 		} elseif ( 'select' === $type ) {
 
@@ -59,7 +58,7 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 			$field_params['options'] = wolf_core_get_google_fonts_options();
 
 		} elseif ( 'link' === $type ) {
-
+			$field_params['type']    = \Elementor\Controls_Manager::URL;
 		}
 
 		if ( isset( $p['default'] ) ) {

@@ -58,9 +58,9 @@ function wolf_core_heading( $atts ) {
 	wp_enqueue_script( 'fittext' );
 	wp_enqueue_script( 'wolf-core-fittext' );
 
-	$output = '';
+	$output               = '';
 	$text_container_class = '';
-	$text_style = '';
+	$text_style           = '';
 
 	$class         = $el_class;
 	$inline_style  = wolf_core_sanitize_css_field( $inline_style );
@@ -68,16 +68,25 @@ function wolf_core_heading( $atts ) {
 
 	$has_line_break = ( preg_match( '/(<br>|<br\/>|<br \/>)/', $text ) );
 
-	/*Animate */
-	// if ( ! wolf_core_is_new_animation( $css_animation ) && ! $has_line_break ) {
-	// 	$class      .= wolf_core_get_css_animation( $css_animation );
-	// 	$text_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
-	// }
+	/*
+	Animate */
+	if ( ! wolf_core_is_new_animation( $css_animation ) && ! $has_line_break ) {
+		$class      .= wolf_core_get_css_animation( $css_animation );
+		$text_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
+	}
 
-	$link        = vc_build_link( $link );
-	$link_url    = esc_url( $link['url'] );
-	$link_target = esc_attr( $link['target'] );
-	$link_title  = esc_attr( $link['title'] );
+	if ( function_exists( 'vc_build_link' ) ) {
+		$link        = vc_build_link( $link );
+		$link_url    = esc_url( $link['url'] );
+		$link_target = esc_attr( $link['target'] );
+		$link_title  = esc_attr( $link['title'] );
+	} else {
+		//debug( $link );
+		// $link        = array();
+		$link_url    = esc_url( $link['url'] );
+		$link_target = ( 'on' === $link['is_external'] ) ? '_blank' : '_parent';
+		$link_title  = '';
+	}
 
 	$text_transform = esc_attr( $text_transform );
 	$font_weight    = ( $font_weight ) ? absint( $font_weight ) : '';
@@ -195,10 +204,10 @@ function wolf_core_heading( $atts ) {
 				$line_container_class .= ' wolf-core-overflow-hidden';
 			}
 
-			// if ( ! wolf_core_is_new_animation( $css_animation ) ) {
-			// 	$line_container_class .= ' ' . wolf_core_get_css_animation( $css_animation );
-			// 	$line_container_style  = wolf_core_get_css_animation_delay( $css_animation_delay );
-			// }
+			if ( ! wolf_core_is_new_animation( $css_animation ) ) {
+				$line_container_class .= ' ' . wolf_core_get_css_animation( $css_animation );
+				$line_container_style  = wolf_core_get_css_animation_delay( $css_animation_delay );
+			}
 
 			$text .= '<span class="' . esc_attr( $line_container_class ) . '" style="' . esc_attr( $line_container_style ) . '"';
 

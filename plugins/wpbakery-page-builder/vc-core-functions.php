@@ -88,10 +88,22 @@ function wolf_core_convert_params_to_vc( $params ) {
 			}
 		}
 
+		if ( isset( $p['group'] ) ) {
+			$vc_params['params'][ $i ]['group'] = $p['group'];
+		}
+
+		if ( isset( $p['weight'] ) ) {
+			$vc_params['params'][ $i ]['weight'] = $p['weight'];
+		}
+
+		if ( isset( $p['admin_label'] ) ) {
+			$vc_params['params'][ $i ]['admin_label'] = $p['admin_label'];
+		}
+
 		$i++;
 	}
 
-	// die( debug( $vc_params ) );
+	//die( debug( $vc_params ) );
 
 	return $vc_params;
 }

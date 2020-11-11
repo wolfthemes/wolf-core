@@ -1,0 +1,271 @@
+/**
+ * @# Helpers
+ **/
+
+/* Disable lightbox when draggin carousel */
+.wolf-core-disabled {
+	pointer-events: none !important;
+}
+
+.flickity-viewport.is-pointer-down {
+	.wolf-core-lightbox {
+		//pointer-events: none!important;
+	}
+}
+
+/* Hide element */
+.wolf-core-hide {
+	display: none !important;
+}
+
+.wolf-core-hidden,
+.wolf-core-display-print {
+	display: none;
+	height: 0;
+	visibility: hidden;
+}
+
+.wolf-core-mobile-show {
+	display: none;
+}
+
+.wolf-core-is-mobile .wolf-core-mobile-show {
+	display: block;
+}
+
+.wolf-core-is-mobile .wolf-core-mobile-hide {
+	display: none;
+}
+
+/* Table style element */
+.wolf-core-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.wolf-core-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Text alignement */
+.wolf-core-text-left {
+	text-align: left !important;
+}
+
+.wolf-core-text-center {
+	text-align: center !important;
+}
+
+.wolf-core-text-right {
+	text-align: right !important;
+}
+
+@media screen and (max-width: 800px) {
+	.wolf-core-mobile-text-center,
+	.wolf-core-mobile-text-align-center {
+		text-align: center !important;
+
+		* {
+			text-align: center !important;
+		}
+	}
+
+	.wolf-core-mobile-center,
+	.wolf-core-mobile-align-center {
+		margin: 0 auto !important;
+	}
+}
+
+/* Content alignement */
+.wolf-core-align-left {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.wolf-core-align-right {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.wolf-core-align-center {
+	margin: 0 auto;
+}
+
+/* Font */
+.wolf-core-font-bold {
+	font-weight: bold !important;
+	font-weight: 700 !important;
+}
+
+/* Overflow */
+.wolf-core-overflow-hidden {
+	overflow: hidden;
+}
+
+/* Simple button */
+.wolf-core-simple-button {
+	@include simplebutton();
+}
+
+/* Backgrounds */
+.wolf-core-img-bg {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.wolf-core-img-bg-color {
+	display: inline-block;
+}
+
+.wolf-core-img-bg-overlay {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wolf-core-img-cover {
+	object-fit: cover;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100% !important;
+	z-index: 0;
+	font-family: 'object-fit: cover;'; // polyfill
+}
+
+.wolf-core-compat-cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	.wolf-core-img-cover {
+		opacity: 0;
+	}
+}
+
+.wolf-core-img-contain {
+	object-fit: contain;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100% !important;
+	z-index: 0;
+	font-family: 'object-fit: contain;'; // polyfill
+}
+
+.wolf-core-compat-contain {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	.wolf-core-img-contain {
+		opacity: 0;
+	}
+}
+
+/* Cover sizes */
+.wolf-core-cover-landscape,
+.wolf-core-cover-square,
+.wolf-core-cover-portrait {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	&:before {
+		content: ' ';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		pointer-events: none;
+	}
+}
+
+.wolf-core-cover-landscape {
+	padding-bottom: 50%;
+}
+
+.wolf-core-cover-square {
+	padding-bottom: 100%;
+}
+
+.wolf-core-cover-portrait {
+	padding-bottom: 150%;
+}
+
+/* Contain floats */
+.wolf-core-clearfix,
+.wolf-core-clear {
+	zoom: 1;
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.wolf-core-big-text {
+	font-size: 1.5em;
+}
+
+/* Overlay */
+.wolf-core-bg-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.wolf-core-video-parallax {
+	display: block;
+	z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+
+	img:not(.wolf-core-img-cover) {
+		display: none !important;
+	}
+
+	.wolf-core-img-cover {
+		z-index: -101;
+	}
+}
+
+.wolf-core-parallax {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.padding-bottom-50 {
+	padding-bottom: 50px;
+}
+
+.wolf-core-modal-window-open {
+	cursor: pointer;
+}

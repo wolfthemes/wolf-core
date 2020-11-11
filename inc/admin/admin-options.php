@@ -193,7 +193,7 @@ $wolf_core_options = array(
 		),
 	),
 
-	// Social profiles
+	// Social profiles.
 	array(
 		'title'         => esc_html__( 'Social Profiles', 'wolf-visual-composer' ),
 		'settings_id'   => 'wolf-core-socials',

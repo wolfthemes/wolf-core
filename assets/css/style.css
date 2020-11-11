@@ -1,0 +1,17 @@
+/**
+ * @# Heading
+ **/
+.wolf-core-custom-heading h1,
+.wolf-core-custom-heading h2,
+.wolf-core-custom-heading h3,
+.wolf-core-custom-heading h4,
+.wolf-core-custom-heading h5,
+.wolf-core-custom-heading h6,
+.wolf-core-custom-heading p,
+.wolf-core-custom-heading span {
+  margin-bottom: 0;
+}
+
+.wolf-core-custom-heading-line {
+  display: block;
+}

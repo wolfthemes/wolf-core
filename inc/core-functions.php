@@ -287,7 +287,7 @@ function wolf_core_get_socials() {
 		'triplej',
 		'viadeo',
 		'vk',
-		'vine',
+		'telegram',
 		'tiktok',
 		'twitch',
 		// 'qq',

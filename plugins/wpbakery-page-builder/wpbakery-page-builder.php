@@ -69,6 +69,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		$files = array(
 			'vc-core-functions',
 			'vc-custom-fields',
+			'vc-additional-params',
 
 			'icon-styles',
 			'icon-libraries',
