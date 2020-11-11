@@ -127,7 +127,7 @@ function wolf_core_custom_heading_params() {
 				array(
 					'type'        => 'text',
 					'label'       => esc_html__( 'Line Height', '%TEXTDOMAIN%' ),
-					'param_name'  => 'letter_height',
+					'param_name'  => 'line_height',
 					'placeholder' => '1',
 				),
 				array(

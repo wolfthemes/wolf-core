@@ -68,8 +68,7 @@ function wolf_core_heading( $atts ) {
 
 	$has_line_break = ( preg_match( '/(<br>|<br\/>|<br \/>)/', $text ) );
 
-	/*
-	Animate */
+	/* Animate */
 	if ( ! wolf_core_is_new_animation( $css_animation ) && ! $has_line_break ) {
 		$class      .= wolf_core_get_css_animation( $css_animation );
 		$text_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
@@ -94,7 +93,7 @@ function wolf_core_heading( $atts ) {
 	// $letter_spacing = ( $letter_spacing ) ? wolf_core_sanitize_css_value( $letter_spacing ) : '';
 
 	$url     = esc_attr( $link_url );
-	$do_link = ( 'http://' != $url && $url );
+	$do_link = ( 'http://' !== $url && $url );
 
 	$class .= ' wolf-core-mobile-text-align-' . $text_align_mobile;
 

@@ -629,17 +629,16 @@ function wolf_core_add_background_option( $atts ) {
 				'return_value' => 'true',
 			),
 
-			// array(
-			// 'type'       => 'attach_image',
-			// 'label'      => esc_html__( 'Background Image', '%TEXTDOMAIN%' ),
-			// 'param_name' => 'background_img',
-			// 'value'      => '',
-			// 'condition'  => array(
-			// 'add_background' => array( 'true' ),
-			// ),
-			// 'group'      => esc_html__( 'Background', '%TEXTDOMAIN%' ),
-			// 'weight'     => 0,
-			// ),
+			array(
+				'type'       => 'image',
+				'label'      => esc_html__( 'Background Image', '%TEXTDOMAIN%' ),
+				'param_name' => 'background_img',
+				'condition'  => array(
+					'add_background' => array( 'true' ),
+				),
+				'group'      => esc_html__( 'Background', '%TEXTDOMAIN%' ),
+				'weight'     => 0,
+			),
 
 			array(
 				'type'       => 'select',

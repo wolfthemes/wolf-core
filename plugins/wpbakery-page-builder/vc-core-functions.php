@@ -79,6 +79,10 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 		} elseif ( 'link' === $type ) {
 			$vc_params['params'][ $i ]['type'] = 'vc_link';
+
+		} elseif ( 'image' === $type ) {
+			$vc_params['params'][ $i ]['type'] = 'attach_image';
+
 		}
 
 		if ( isset( $p['condition'] ) ) {
@@ -103,7 +107,7 @@ function wolf_core_convert_params_to_vc( $params ) {
 		$i++;
 	}
 
-	//die( debug( $vc_params ) );
+	// die( debug( $vc_params ) );
 
 	return $vc_params;
 }

@@ -59,6 +59,10 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 
 		} elseif ( 'link' === $type ) {
 			$field_params['type']    = \Elementor\Controls_Manager::URL;
+
+		} elseif ( 'image' === $type ) {
+			$field_params['type']    = \Elementor\Controls_Manager::IMAGE;
+
 		}
 
 		if ( isset( $p['default'] ) ) {
