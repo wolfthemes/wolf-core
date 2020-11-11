@@ -40,12 +40,15 @@ function wolf_core_enqueue_styles() {
 	wp_register_style( 'aos', WOLF_CORE_CSS . '/lib/aos.css', array(), '2.3.0' );
 
 	if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+
 		// Font awesome back compat.
 		wp_enqueue_style( 'font-awesome', WOLF_CORE_CSS . '/lib/fontawesome/fontawesome.css', array(), '4.7.0' );
 
 		if ( apply_filters( 'wolf_core_force_enqueue_scripts', false ) ) {
 			wp_enqueue_style( 'animate-css' );
 		}
+
+		wp_enqueue_style( 'wolf-core-wpbpb', WOLF_CORE_CSS . '/wpbpb' . $suffix . '.css', array(), $version );
 	}
 
 	// Libraries.

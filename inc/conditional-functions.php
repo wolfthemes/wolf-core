@@ -104,3 +104,54 @@ function wolf_core_is_blog() {
 	$is_blog = ( wolf_core_is_home_as_blog() || wolf_core_is_blog_index() || is_search() || is_archive() ) && ! wolf_core_is_woocommerce_page() && 'post' == get_post_type();
 	return ( true === $is_blog );
 }
+
+/**
+ * Check if the browser is edge
+ *
+ * @return bool
+ */
+function wolf_core_is_edge() {
+	global $is_edge;
+
+	return $is_edge;
+}
+
+/**
+ * Check if the browser is firefox
+ *
+ * @return bool
+ */
+function wolf_core_is_firefox() {
+	global $is_gecko;
+
+	return $is_gecko;
+}
+
+/**
+ * Check if the browser is iOS
+ *
+ * @return bool
+ */
+function wolf_core_is_iphone() {
+	global $is_iphone;
+
+	return $is_iphone;
+}
+
+/**
+ * Check if Bandwintown plugin is active
+ */
+function wolf_core_is_bandsintown() {
+	return class_exists( 'Bandsintown_JS_Plugin' );
+}
+
+/**
+ * Do fullPage
+ */
+function wolf_core_do_fullpage() {
+	if ( is_page() || is_single() ) {
+		if ( get_post_meta( wolf_core_get_the_id(), '_post_fullpage', true ) && 'no' !== get_post_meta( wolf_core_get_the_id(), '_post_fullpage', true ) ) {
+			return apply_filters( 'wolf_core_do_fullpage', true );
+		}
+	}
+}

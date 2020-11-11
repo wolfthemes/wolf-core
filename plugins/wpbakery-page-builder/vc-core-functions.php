@@ -214,15 +214,15 @@ function wolf_core_get_shared_colors() {
 		esc_html__( 'Red', '%TEXTDOMAIN%' )        => 'red',
 		esc_html__( 'Yellow', '%TEXTDOMAIN%' )     => 'yellow',
 		esc_html__( 'Blue', '%TEXTDOMAIN%' )       => 'blue',
-		esc_html__( 'Peacoc', 'js_composer' )              => 'peacoc',
-		esc_html__( 'Chino', 'js_composer' )               => 'chino',
-		esc_html__( 'Mulled Wine', 'js_composer' )         => 'mulled-wine',
-		esc_html__( 'Vista Blue', 'js_composer' )          => 'vista-blue',
-		esc_html__( 'Grey', 'js_composer' )                => 'grey',
-		esc_html__( 'Sky', 'js_composer' )                 => 'sky',
-		esc_html__( 'Juicy pink', 'js_composer' )          => 'juicy-pink',
-		esc_html__( 'Sandy brown', 'js_composer' )         => 'sandy-brown',
-		esc_html__( 'Purple', 'js_composer' )              => 'purple',
+		esc_html__( 'Peacoc', 'js_composer' )      => 'peacoc',
+		esc_html__( 'Chino', 'js_composer' )       => 'chino',
+		esc_html__( 'Mulled Wine', 'js_composer' ) => 'mulled-wine',
+		esc_html__( 'Vista Blue', 'js_composer' )  => 'vista-blue',
+		esc_html__( 'Grey', 'js_composer' )        => 'grey',
+		esc_html__( 'Sky', 'js_composer' )         => 'sky',
+		esc_html__( 'Juicy pink', 'js_composer' )  => 'juicy-pink',
+		esc_html__( 'Sandy brown', 'js_composer' ) => 'sandy-brown',
+		esc_html__( 'Purple', 'js_composer' )      => 'purple',
 	);
 
 	$wolf_core_shared_colors = apply_filters( 'wolf_core_shared_colors', $wolf_core_shared_colors );
@@ -274,9 +274,9 @@ function wolf_core_get_shared_colors_hex() {
 function wolf_core_get_shared_gradient_colors() {
 
 	$wolf_core_shared_gradient_colors = array(
-		esc_html__( 'Gradient Red', '%TEXTDOMAIN%' ) => 'gradient-color-3452ff', // red salient
-		esc_html__( 'Gradient Red 2', '%TEXTDOMAIN%' ) => 'gradient-color-588694', // red uncode
-		esc_html__( 'Gradient Green', '%TEXTDOMAIN%' ) => 'gradient-color-105898',
+		esc_html__( 'Gradient Red', '%TEXTDOMAIN%' )    => 'gradient-color-3452ff', // red salient
+		esc_html__( 'Gradient Red 2', '%TEXTDOMAIN%' )  => 'gradient-color-588694', // red uncode
+		esc_html__( 'Gradient Green', '%TEXTDOMAIN%' )  => 'gradient-color-105898',
 		esc_html__( 'Gradient Green Circle', '%TEXTDOMAIN%' ) => 'gradient-color-111420',
 		esc_html__( 'Gradient Orange', '%TEXTDOMAIN%' ) => 'gradient-color-470604',
 		esc_html__( 'Gradient Violet', '%TEXTDOMAIN%' ) => 'gradient-color-b900b4',
@@ -292,11 +292,11 @@ function wolf_core_get_shared_gradient_colors() {
  */
 function wolf_core_get_shape_divider_options() {
 	$options = array(
-		'tilt'           => esc_html__( 'Angle', 'wolf-visual-composer' ),
-		// 'tilt_opacity' => esc_html__( 'Angle Opacity', 'wolf-visual-composer' ),
-		'curve'          => esc_html__( 'Curve', 'wolf-visual-composer' ),
-		// 'curve_opacity' => esc_html__( 'Curve Opacity', 'wolf-visual-composer' ),
-		'grunge_border1' => esc_html__( 'Grunge Border', 'wolf-visual-composer' ),
+		'tilt'           => esc_html__( 'Angle', '%TEXTDOMAIN%' ),
+		// 'tilt_opacity' => esc_html__( 'Angle Opacity', '%TEXTDOMAIN%' ),
+		'curve'          => esc_html__( 'Curve', '%TEXTDOMAIN%' ),
+		// 'curve_opacity' => esc_html__( 'Curve Opacity', '%TEXTDOMAIN%' ),
+		'grunge_border1' => esc_html__( 'Grunge Border', '%TEXTDOMAIN%' ),
 	);
 
 	$options = array_flip( apply_filters( 'wolf_core_shape_divider_options', $options ) );

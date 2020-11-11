@@ -544,6 +544,30 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function frontend_includes() {
 
+			$frontend_files = array(
+				'template-functions',
+				'template-hooks',
+				'frontend-functions',
+			);
+
+			/* Includes core files from theme inc dir in both frontend and backend */
+			foreach ( $frontend_files as $file ) {
+
+				if ( ! require_once WOLF_CORE_DIR . '/inc/frontend/' . $file . '.php' ) {
+					wp_die(
+						sprintf(
+							wp_kses(
+								/* translators: the code to output */
+								__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+								array(
+									'code' => array(),
+								)
+							),
+							esc_attr( $file )
+						)
+					);
+				}
+			}
 		}
 
 		/**
