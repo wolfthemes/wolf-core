@@ -5,9 +5,8 @@
  * General core functions available on admin and frontend for Elementor
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Core
- * @version %VERSION%
+ * @package %PACKAGENAME%/Elementor/Core
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -3,9 +3,8 @@
  * Inner Column
  *
  * @author WolfThemes
- * @category Core
- * @package %TEXTDOMAIN%/Elements
- * @since 1.0.0
+ * @package %PACKAGENAME%/Params
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

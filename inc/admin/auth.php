@@ -5,9 +5,8 @@
  * Functions related to theme activation
  *
  * @author WolfThemes
- * @category Core
  * @package %PACKAGENAME%/Admin
- * @version %VERSION%
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

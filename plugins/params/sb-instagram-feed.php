@@ -5,9 +5,8 @@
  * Smash Balloon Social Feed Plugins
  *
  * @author WolfThemes
- * @category Core
  * @package %PACKAGENAME%/Elements
- * @version %VERSION%
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -5,9 +5,9 @@
  * Action/filter hooks used for Wolf Core Extension functions/templates
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Templates
- * @since 1.0.0
+ * @category Frontend
+ * @package %PACKAGENAME%/Frontend
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

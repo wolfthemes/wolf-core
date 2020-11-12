@@ -3,8 +3,7 @@
  * Column
  *
  * @author WolfThemes
- * @category Core
- * @package WolfWPBakeryPageBuilderExtension/Elements
+ * @package %PACKAGENAME%/Params
  * @version 3.2.8
  */
 

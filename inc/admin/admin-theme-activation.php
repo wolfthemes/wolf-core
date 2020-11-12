@@ -5,9 +5,9 @@
  * Functions related to theme activation notice
  *
  * @author WolfThemes
- * @category Core
+ * @category Admin
  * @package %PACKAGENAME%/Admin
- * @version %VERSION%
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -150,7 +150,7 @@ function wolf_core_activate_theme() {
 	$error_message = esc_html__( 'Something went wrong. It way be due to a temporary Envato API outage. Please try again in a few minutes.', '%TEXTDOMAIN%' );
 
 	if ( ! $activated && isset( $_POST['theme_purchase_code'] ) ) {
-		
+
 		/* Verifiy purchase */
 		if ( isset( $_POST['theme_purchase_code'] ) && ! empty( $_POST['theme_purchase_code'] ) ) {
 
@@ -171,9 +171,9 @@ function wolf_core_activate_theme() {
 
 			// get result if no error
 			if ( ! is_wp_error( $response ) && is_array( $response ) ) {
-				
+
 				$body = wp_remote_retrieve_body( $response ); // use the content
-				
+
 				if ( $body ) {
 
 					$data = json_decode( $body );

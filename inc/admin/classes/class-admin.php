@@ -5,8 +5,8 @@
  * @class Wolf_core_Admin
  * @author WolfThemes
  * @category Admin
- * @package %PACKAGENAME%/Admin
- * @version %VERSION%
+ * @package %PACKAGENAME%/Admin/Classes
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,10 +2,8 @@
 /**
  * Custom Heading
  *
- * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Elements
- * @version %VERSION%
+ * @author WolfThemes * @package %PACKAGENAME%/Elementor/Widgets
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -29,7 +27,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 *
 	 * Retrieve oEmbed widget name.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget name.
@@ -46,7 +44,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 *
 	 * Retrieve Pie Chart widget title.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget title.
@@ -60,7 +58,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 *
 	 * Retrieve Pie Chart widget icon.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 * @access public
 	 *
 	 * @return string Widget icon.
@@ -74,7 +72,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 *
 	 * Retrieve the list of categories the Pie Chart widget belongs to.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 * @access public
 	 *
 	 * @return array Widget categories.
@@ -88,7 +86,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 * @access protected
 	 */
 	protected function _register_controls() {
@@ -111,7 +109,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 *
 	 * Written in PHP and used to generate the final HTML.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 * @access protected
 	 */
 	protected function render() {

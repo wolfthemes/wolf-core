@@ -3,8 +3,7 @@
  * WPBakery Page Builder Extension Element Additional Settings
  *
  * @author WolfThemes
- * @category Core
- * @package WolfWPBakeryPageBuilderExtension/Admin
+ * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
  * @version 3.2.8
  */
 

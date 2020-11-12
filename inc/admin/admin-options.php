@@ -3,9 +3,9 @@
  * WPBakery Page Builder Extension Plugin Settings
  *
  * @author WolfThemes
- * @category Core
- * @package WolfWPBakeryPageBuilderExtension/Admin
- * @version 3.2.8
+ * @category Admin
+ * @package %PACKAGENAME%/Admin
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

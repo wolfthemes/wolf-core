@@ -4,8 +4,8 @@
  *
  * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/Frontend
- * @version %VERSION%
+ * @package %PACKAGENAME%/Core
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * We use it to add inline style to row
  *
  * @param $param_value
- * @param string      $prefix
+ * @param string $prefix
  *
  * @return string
  */

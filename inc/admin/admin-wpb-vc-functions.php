@@ -5,9 +5,9 @@
  * Admin functions specific to WPB VC
  *
  * @author WolfThemes
- * @category Core
+ * @category Admin
  * @package %PACKAGENAME%/Admin
- * @version %VERSION%
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

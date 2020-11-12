@@ -5,9 +5,8 @@
  * Set default setttings values for in-built elements
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Core
- * @version %VERSION%
+ * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

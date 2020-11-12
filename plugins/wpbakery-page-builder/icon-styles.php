@@ -5,8 +5,7 @@
  * Enqueue icon styles in both frontend and admin
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Core
+ * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
  * @version 1.0.0
  */
 

@@ -6,8 +6,8 @@
  *
  * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/Frontend
- * @version 3.2.8
+ * @package %PACKAGENAME%/Core
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

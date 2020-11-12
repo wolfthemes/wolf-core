@@ -6,7 +6,7 @@
  *
  * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/Frontend
+ * @package %PACKAGENAME%/Core
  * @version 1.0.0
  */
 
@@ -240,8 +240,6 @@ add_action( 'wp_enqueue_scripts', 'wolf_core_register_scripts' );
  */
 function wolf_core_enqueue_common_scripts() {
 
-	// Moderniszr
-	// wp_enqueue_script( 'wolf-core-modernizr' );
 
 	if ( apply_filters( 'wolf_core_force_enqueue_scripts', false ) ) {
 		return;

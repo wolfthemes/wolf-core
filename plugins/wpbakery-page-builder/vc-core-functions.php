@@ -5,9 +5,8 @@
  * General core functions available on admin and frontend for WPB VC
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Core
- * @version %VERSION%
+ * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

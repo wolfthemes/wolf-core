@@ -2,11 +2,10 @@
 /**
  * WPBakery Page Builder Extension Settings.
  *
- * @class Wolf_core_Admin
  * @author WolfThemes
  * @category Admin
- * @package WolfWPBakeryPageBuilderExtension/Admin
- * @version 3.2.8
+ * @package %PACKAGENAME%/Admin/Classes
+ * @version 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

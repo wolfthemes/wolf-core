@@ -3,9 +3,8 @@
  * Album Disc
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Elements
- * @version %VERSION%
+ * @package %PACKAGENAME%/Params
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

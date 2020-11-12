@@ -3,7 +3,6 @@
  * WPBakery Page Builder Extension heading
  *
  * @author WolfThemes
- * @category Core
  * @package %PACKAGENAME%/Elements
  * @version 3.2.8
  */

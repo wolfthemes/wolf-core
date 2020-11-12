@@ -3,9 +3,8 @@
  * %NAME% Elementor Extension Class
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Core
- * @version %VERSION%
+ * @package %PACKAGENAME%/Elementor/Core
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -32,7 +31,7 @@ class Wolf_Core_Elementor_Extension {
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 *
 	 * @access public
 	 */
@@ -64,7 +63,7 @@ class Wolf_Core_Elementor_Extension {
 	 *
 	 * Include widgets files and register them
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 *
 	 * @access public
 	 */
@@ -83,7 +82,7 @@ class Wolf_Core_Elementor_Extension {
 	 *
 	 * Include controls files and register them
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 *
 	 * @access public
 	 */

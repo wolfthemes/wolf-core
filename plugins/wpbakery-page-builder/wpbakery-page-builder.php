@@ -3,9 +3,8 @@
  * %NAME% WPBakery Page Builder Extension Class
  *
  * @author WolfThemes
- * @category Core
- * @package %PACKAGENAME%/Core
- * @version %VERSION%
+ * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -37,7 +36,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 *
 	 * @access public
 	 */
@@ -103,7 +102,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 *
 	 * Include widgets files and register them
 	 *
-	 * @since 1.0.0
+	 * @version 1.0.0
 	 *
 	 * @access public
 	 */

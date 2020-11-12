@@ -3,9 +3,8 @@
  * Row shortcode template
  *
  * @author WolfThemes
- * @category Core
- * @package WolfWPBakeryPageBuilderExtension/Templates
- * @version 3.2.8
+ * @package %PACKAGENAME%/WPBakeryPageBuilder/Templates
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,8 +2,9 @@
 /**
  * %NAME% metaboxes helper
  *
- * @package WordPress
- * @subpackage %NAME %
+ * @author WolfThemes
+ * @category Admin
+ * @package %PACKAGENAME%/Admin/Classes
  * @version 1.0.0
  */
 
@@ -18,7 +19,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 	 *
 	 * @package WordPress
 	 * @subpackage %NAME%
-	 * @version %VERSION%
+	 * @version 1.0.0
 	 */
 	class Wolf_Metaboxes {
 
