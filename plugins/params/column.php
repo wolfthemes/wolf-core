@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 vc_map(
 	array(
-		'name'            => esc_html__( 'Column', 'wolf-visual-composer' ),
+		'name'            => esc_html__( 'Column', '%TEXTDOMAIN%' ),
 		'base'            => 'vc_column',
 		'is_container'    => true,
 		'content_element' => false,
@@ -20,14 +20,14 @@ vc_map(
 			array(
 				array(
 					'type'       => 'dropdown',
-					'heading'    => esc_html__( 'Skin Tone', 'wolf-visual-composer' ),
+					'heading'    => esc_html__( 'Skin Tone', '%TEXTDOMAIN%' ),
 					'param_name' => 'font_color',
 					'value'      => array(
-						esc_html__( 'Inherit', 'wolf-visual-composer' ) => 'inherit',
-						esc_html__( 'Light', 'wolf-visual-composer' ) => 'dark',
-						esc_html__( 'Dark', 'wolf-visual-composer' ) => 'light',
+						esc_html__( 'Inherit', '%TEXTDOMAIN%' ) => 'inherit',
+						esc_html__( 'Light', '%TEXTDOMAIN%' ) => 'dark',
+						esc_html__( 'Dark', '%TEXTDOMAIN%' ) => 'light',
 					),
-					'group'      => esc_html__( 'Style', 'wolf-visual-composer' ),
+					'group'      => esc_html__( 'Style', '%TEXTDOMAIN%' ),
 					'weight'     => 0,
 				),
 			),
@@ -35,83 +35,83 @@ vc_map(
 			array(
 				array(
 					'type'               => 'dropdown',
-					'heading'            => esc_html__( 'Border Color', 'wolf-visual-composer' ),
+					'heading'            => esc_html__( 'Border Color', '%TEXTDOMAIN%' ),
 					'param_name'         => 'border_color',
 					'value'              => array_merge(
-						array( esc_html__( 'None', 'wolf-visual-composer' ) => 'none' ),
+						array( esc_html__( 'None', '%TEXTDOMAIN%' ) => 'none' ),
 						wolf_core_get_shared_gradient_colors(),
 						wolf_core_get_shared_colors(),
-						array( esc_html__( 'Transparent', 'wolf-visual-composer' ) => 'transparent' ),
-						array( esc_html__( 'Custom color', 'wolf-visual-composer' ) => 'custom' )
+						array( esc_html__( 'Transparent', '%TEXTDOMAIN%' ) => 'transparent' ),
+						array( esc_html__( 'Custom color', '%TEXTDOMAIN%' ) => 'custom' )
 					),
 					'param_holder_class' => 'wolf_core_colored-dropdown',
-					'group'              => esc_html__( 'Custom', 'wolf-visual-composer' ),
+					'group'              => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
 					'weight'             => -100,
 				),
 
 				array(
 					'type'       => 'colorpicker',
-					'heading'    => esc_html__( 'Border Custom Color', 'wolf-visual-composer' ),
+					'heading'    => esc_html__( 'Border Custom Color', '%TEXTDOMAIN%' ),
 					'param_name' => 'border_custom_color',
 					'dependency' => array(
 						'element' => 'border_color',
 						'value'   => 'custom',
 					),
-					'group'      => esc_html__( 'Custom', 'wolf-visual-composer' ),
+					'group'      => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
 					'weight'     => -100,
 				),
 
 				array(
 					'type'       => 'dropdown',
-					'heading'    => esc_html__( 'Border Style', 'wolf-visual-composer' ),
+					'heading'    => esc_html__( 'Border Style', '%TEXTDOMAIN%' ),
 					'param_name' => 'border_style',
 					'value'      => array(
-						esc_html__( 'None', 'wolf-visual-composer' ) => 'none',
-						esc_html__( 'Solid', 'wolf-visual-composer' ) => 'solid',
-						esc_html__( 'Dotted', 'wolf-visual-composer' ) => 'dotted',
-						esc_html__( 'Dashed', 'wolf-visual-composer' ) => 'dashed',
-						esc_html__( 'Double', 'wolf-visual-composer' ) => 'double',
-						esc_html__( 'Groove', 'wolf-visual-composer' ) => 'groove',
-						esc_html__( 'Ridge', 'wolf-visual-composer' ) => 'ridge',
-						esc_html__( 'Inset', 'wolf-visual-composer' ) => 'inset',
-						esc_html__( 'Outset', 'wolf-visual-composer' ) => 'outset',
+						esc_html__( 'None', '%TEXTDOMAIN%' ) => 'none',
+						esc_html__( 'Solid', '%TEXTDOMAIN%' ) => 'solid',
+						esc_html__( 'Dotted', '%TEXTDOMAIN%' ) => 'dotted',
+						esc_html__( 'Dashed', '%TEXTDOMAIN%' ) => 'dashed',
+						esc_html__( 'Double', '%TEXTDOMAIN%' ) => 'double',
+						esc_html__( 'Groove', '%TEXTDOMAIN%' ) => 'groove',
+						esc_html__( 'Ridge', '%TEXTDOMAIN%' ) => 'ridge',
+						esc_html__( 'Inset', '%TEXTDOMAIN%' ) => 'inset',
+						esc_html__( 'Outset', '%TEXTDOMAIN%' ) => 'outset',
 					),
-					'group'      => esc_html__( 'Custom', 'wolf-visual-composer' ),
+					'group'      => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
 					'weight'     => -100,
 				),
 
 				array(
 					'type'        => 'wolf_core_textfield',
-					'heading'     => esc_html__( 'Inline Style', 'wolf-visual-composer' ),
+					'heading'     => esc_html__( 'Inline Style', '%TEXTDOMAIN%' ),
 					'param_name'  => 'inline_style',
-					'group'       => esc_html__( 'Custom', 'wolf-visual-composer' ),
-					'description' => sprintf( esc_html__( 'Additional inline CSS that will be applied to the element. (e.g: %s)', 'wolf-visual-composer' ), 'color:red;' ),
+					'group'       => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
+					'description' => sprintf( esc_html__( 'Additional inline CSS that will be applied to the element. (e.g: %s)', '%TEXTDOMAIN%' ), 'color:red;' ),
 					'weight'      => -100,
 				),
 			),
 			array(
 				array(
 					'type'       => 'vc_link',
-					'heading'    => esc_html__( 'Custom Link', 'wolf-visual-composer' ),
+					'heading'    => esc_html__( 'Custom Link', '%TEXTDOMAIN%' ),
 					'param_name' => 'link',
-					'group'      => esc_html__( 'Extra', 'wolf-visual-composer' ),
+					'group'      => esc_html__( 'Extra', '%TEXTDOMAIN%' ),
 					'weight'     => -100,
 				),
 
 				array(
 					'type'       => 'wolf_core_textfield',
-					'heading'    => esc_html__( 'Link Extra Class', 'wolf-visual-composer' ),
+					'heading'    => esc_html__( 'Link Extra Class', '%TEXTDOMAIN%' ),
 					'param_name' => 'link_extra_class',
-					'group'      => esc_html__( 'Extra', 'wolf-visual-composer' ),
+					'group'      => esc_html__( 'Extra', '%TEXTDOMAIN%' ),
 					'weight'     => -100,
 				),
 
 				array(
 					'type'        => 'checkbox',
-					'heading'     => esc_html__( 'Sticky', 'wolf-visual-composer' ),
+					'heading'     => esc_html__( 'Sticky', '%TEXTDOMAIN%' ),
 					'param_name'  => 'sticky',
-					'description' => esc_html__( 'Check this option to stick the element at the top when scrolling. Note that this feature doesn\'t work if your row is set to "equal height" columns.', 'wolf-visual-composer' ),
-					'group'       => esc_html__( 'Extra', 'wolf-visual-composer' ),
+					'description' => esc_html__( 'Check this option to stick the element at the top when scrolling. Note that this feature doesn\'t work if your row is set to "equal height" columns.', '%TEXTDOMAIN%' ),
+					'group'       => esc_html__( 'Extra', '%TEXTDOMAIN%' ),
 					'weight'      => -100,
 				),
 			)

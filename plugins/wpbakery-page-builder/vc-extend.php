@@ -16,27 +16,27 @@ defined( 'ABSPATH' ) || exit;
  * @param string $tag The shortcode tag.
  * @return string
  */
-function wvc_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
+function wolf_core_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
 
 	if ( $tag === 'vc_row' || $tag === 'vc_row_inner' ) {
-		//$class_string = str_replace( 'vc_row-fluid', 'row', $class_string );
+		// $class_string = str_replace( 'vc_row-fluid', 'row', $class_string );
 	}
 
-	if ( $tag === 'vc_column' || $tag === 'vc_column_inner') {
-		$class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'wvc-col-$1', $class_string );
+	if ( $tag === 'vc_column' || $tag === 'vc_column_inner' ) {
+		$class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'wolf-core-col-$1', $class_string );
 	}
 
 	return $class_string;
 }
-add_filter( 'vc_shortcodes_css_class', 'wvc_custom_css_classes_for_vc_row_and_vc_column', 10, 2 );
+add_filter( 'vc_shortcodes_css_class', 'wolf_core_custom_css_classes_for_vc_row_and_vc_column', 10, 2 );
 
 /**
  * Disabled duplicated VC element
  */
-function wvc_disable_elements() {
+function wolf_core_disable_elements() {
 
 	$disabled_elements = apply_filters(
-		'wvc_disabled_elements',
+		'wolf_core_disabled_elements',
 		array(
 			'vc_section',
 			'vc_tour', // deprecated
@@ -72,7 +72,20 @@ function wvc_disable_elements() {
 		vc_remove_element( $element );
 	}
 }
-add_action( 'vc_after_init', 'wvc_disable_elements' );
+add_action( 'vc_after_init', 'wolf_core_disable_elements' );
+
+/**
+ * Enqueue editor scripts
+ *
+ * Script available only for VC editor
+ */
+function wolf_core_enqueue_vc_editor_scripts() {
+
+	$version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WOLF_CORE_VERSION;
+
+	wp_enqueue_script( 'wolf-core-vc-editor', WOLF_CORE_JS . '/admin/vc-editor.js', array(), $version, true );
+}
+add_action( 'vc_backend_editor_render', 'wolf_core_enqueue_vc_editor_scripts' );
 
 /*
 To re-add elements from theme:
@@ -86,5 +99,5 @@ function readd_el( $disabled_elements ) {
 
 	return $disabled_elements;
 }
-add_filter( 'wvc_disabled_elements', 'readd_el' );
+add_filter( 'wolf_core_disabled_elements', 'readd_el' );
 */
