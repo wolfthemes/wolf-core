@@ -441,6 +441,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'conditional-functions',
 				'google-fonts',
 				'styles',
+				'scripts',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */

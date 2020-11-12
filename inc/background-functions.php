@@ -209,7 +209,7 @@ function wolf_core_background_img( $args = array() ) {
 
 			$style .= 'background-image:url(' . esc_url( $src ) . ');';
 
-			// Image infos to increase parallax performances
+			// Image infos to increase parallax performances.
 			$bg_meta = wp_get_attachment_metadata( $background_img );
 
 			if ( is_array( $bg_meta ) && isset( $bg_meta['width'] ) ) {

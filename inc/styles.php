@@ -6,7 +6,7 @@
  *
  * @author WolfThemes
  * @category Core
- * @package %TEXTDOMAIN%/Frontend
+ * @package %PACKAGENAME%/Frontend
  * @version 1.0.0
  */
 
