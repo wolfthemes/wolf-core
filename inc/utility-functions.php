@@ -17,7 +17,6 @@ defined( 'ABSPATH' ) || exit;
  *
  * @param $param_value
  * @param string $prefix
- *
  * @return string
  */
 function wolf_core_shortcode_custom_style( $param_value ) {

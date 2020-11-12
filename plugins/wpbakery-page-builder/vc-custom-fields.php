@@ -38,7 +38,7 @@ function wolf_core_numeric_slider_settings_field( $settings, $value ) {
 vc_add_shortcode_param(
 	'wolf_core_numeric_slider',
 	'wolf_core_numeric_slider_settings_field',
-	WOLF_CORE_URI . '/assets/js/admin/numeric-slider.js'
+	WOLF_CORE_JS . '/admin/numeric-slider.js'
 );
 
 /**
