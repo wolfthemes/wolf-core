@@ -31,18 +31,26 @@ function wolf_core_generator_tag( $gen, $type ) {
 /**
  * Add body classes for WPB pages
  *
- * @param  array $classes
+ * @param  array $classes The body classes array.
  * @return array
  */
 function wolf_core_body_class( $classes ) {
 
 	$classes = (array) $classes;
 
-	// if ( wolf_core_is_vc() ) {
-	if ( 1 === 1 ) {
+	if ( wolf_core_is_vc()  ) {
 		$classes[] = 'wolf-core';
+
+		if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+			$classes[] = 'wolf-core-vc';
+		}
+
+		if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+			$classes[] = 'wolf-core-el';
+		}
+
 		$classes[] = 'wolf-core-' . str_replace( '.', '-', WOLF_CORE_VERSION );
-		$classes[] = sanitize_title_with_dashes( get_template() ); // theme slug
+		$classes[] = sanitize_title_with_dashes( get_template() ); // theme slug.
 
 		if ( get_post_meta( get_the_ID(), '_post_scroller', true ) ) {
 			$classes[] = 'wolf-core-one-pager';

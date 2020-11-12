@@ -216,7 +216,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				add_action( 'admin_notices', 'wolf_core_show_activation_notice' );
 			}
 
-			// Plugin update notifications
+			// Plugin update notifications.
 			add_action( 'admin_init', array( $this, 'plugin_update' ) );
 		}
 
@@ -370,8 +370,8 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		/**
 		 * Define constant if not already set
 		 *
-		 * @param  string      $name
-		 * @param  string|bool $value
+		 * @param  string      $name The constant to define.
+		 * @param  string|bool $value The constant value.
 		 */
 		private function define( $name, $value ) {
 			if ( ! defined( $name ) ) {
@@ -450,6 +450,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 					wp_die(
 						sprintf(
 							wp_kses(
+								/* translators: the code to output */
 								__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
 								array(
 									'code' => array(),

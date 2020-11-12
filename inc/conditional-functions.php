@@ -22,6 +22,34 @@ function wolf_core_is_wpb_vc_frontend() {
 }
 
 /**
+ * Check if VC is used on this page
+ *
+ * @return bool
+ */
+function wolf_core_is_vc() {
+
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+		return false;
+	}
+
+	global $post;
+
+	$is_page            = is_page() && 'default' === get_post_meta( get_the_ID(), '_wp_page_template', true );
+	$is_valid_post_type = in_array( get_post_type(), apply_filters( 'wolf_core_default_post_types', vc_editor_post_types() ), true );
+
+	if ( is_page() || ( is_single() && $is_valid_post_type ) ) {
+		if ( is_object( $post ) ) {
+			$pattern = get_shortcode_regex();
+			if ( preg_match( "/$pattern/s", $post->post_content, $match ) ) {
+				if ( 'vc_row' === $match[2] || 'vc_section' === $match[2] ) {
+					return apply_filters( 'wolf_core_is_vc', true );
+				}
+			}
+		}
+	}
+}
+
+/**
  * Check is if new animation engine (AOS)
  *
  * @param string $animation_name Tha animation name.
