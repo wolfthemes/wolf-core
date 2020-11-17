@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% WPBakery Page Builder Core functions
+ * Wolf Core WPBakery Page Builder Core functions
  *
  * General core functions available on admin and frontend for WPB VC
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @package WolfCore/WPBakeryPageBuilder/Core
  * @version 1.0.0
  */
 
@@ -29,7 +29,11 @@ function wolf_core_convert_params_to_vc( $params ) {
 	$vc_params['base']        = $properties['vc_base'];
 	$vc_params['category']    = $properties['vc_category'];
 	$vc_params['icon']        = $properties['icon'];
-	$vc_params['params']      = array();
+
+	$vc_params['params'] = array();
+
+	/* Other */
+	$vc_params['js_view'] = $params['js_view'];
 
 	$i = 0;
 
@@ -200,19 +204,19 @@ function wolf_core_locate_shortcode_template( $filename ) {
 function wolf_core_get_shared_colors() {
 
 	$wolf_core_shared_colors = array(
-		esc_html__( 'Black', '%TEXTDOMAIN%' )      => 'black',
-		esc_html__( 'Light Grey', '%TEXTDOMAIN%' ) => 'lightergrey',
-		esc_html__( 'Dark Grey', '%TEXTDOMAIN%' )  => 'darkgrey',
-		esc_html__( 'White', '%TEXTDOMAIN%' )      => 'white',
-		esc_html__( 'Orange', '%TEXTDOMAIN%' )     => 'orange',
-		esc_html__( 'Green', '%TEXTDOMAIN%' )      => 'green',
-		esc_html__( 'Turquoise', '%TEXTDOMAIN%' )  => 'turquoise',
-		esc_html__( 'Violet', '%TEXTDOMAIN%' )     => 'violet',
-		esc_html__( 'Pink', '%TEXTDOMAIN%' )       => 'pink',
-		esc_html__( 'Grey blue', '%TEXTDOMAIN%' )  => 'greyblue',
-		esc_html__( 'Red', '%TEXTDOMAIN%' )        => 'red',
-		esc_html__( 'Yellow', '%TEXTDOMAIN%' )     => 'yellow',
-		esc_html__( 'Blue', '%TEXTDOMAIN%' )       => 'blue',
+		esc_html__( 'Black', 'wolf-core' )      => 'black',
+		esc_html__( 'Light Grey', 'wolf-core' ) => 'lightergrey',
+		esc_html__( 'Dark Grey', 'wolf-core' )  => 'darkgrey',
+		esc_html__( 'White', 'wolf-core' )      => 'white',
+		esc_html__( 'Orange', 'wolf-core' )     => 'orange',
+		esc_html__( 'Green', 'wolf-core' )      => 'green',
+		esc_html__( 'Turquoise', 'wolf-core' )  => 'turquoise',
+		esc_html__( 'Violet', 'wolf-core' )     => 'violet',
+		esc_html__( 'Pink', 'wolf-core' )       => 'pink',
+		esc_html__( 'Grey blue', 'wolf-core' )  => 'greyblue',
+		esc_html__( 'Red', 'wolf-core' )        => 'red',
+		esc_html__( 'Yellow', 'wolf-core' )     => 'yellow',
+		esc_html__( 'Blue', 'wolf-core' )       => 'blue',
 		esc_html__( 'Peacoc', 'js_composer' )      => 'peacoc',
 		esc_html__( 'Chino', 'js_composer' )       => 'chino',
 		esc_html__( 'Mulled Wine', 'js_composer' ) => 'mulled-wine',
@@ -273,12 +277,12 @@ function wolf_core_get_shared_colors_hex() {
 function wolf_core_get_shared_gradient_colors() {
 
 	$wolf_core_shared_gradient_colors = array(
-		esc_html__( 'Gradient Red', '%TEXTDOMAIN%' )    => 'gradient-color-3452ff', // red salient
-		esc_html__( 'Gradient Red 2', '%TEXTDOMAIN%' )  => 'gradient-color-588694', // red uncode
-		esc_html__( 'Gradient Green', '%TEXTDOMAIN%' )  => 'gradient-color-105898',
-		esc_html__( 'Gradient Green Circle', '%TEXTDOMAIN%' ) => 'gradient-color-111420',
-		esc_html__( 'Gradient Orange', '%TEXTDOMAIN%' ) => 'gradient-color-470604',
-		esc_html__( 'Gradient Violet', '%TEXTDOMAIN%' ) => 'gradient-color-b900b4',
+		esc_html__( 'Gradient Red', 'wolf-core' )    => 'gradient-color-3452ff', // red salient
+		esc_html__( 'Gradient Red 2', 'wolf-core' )  => 'gradient-color-588694', // red uncode
+		esc_html__( 'Gradient Green', 'wolf-core' )  => 'gradient-color-105898',
+		esc_html__( 'Gradient Green Circle', 'wolf-core' ) => 'gradient-color-111420',
+		esc_html__( 'Gradient Orange', 'wolf-core' ) => 'gradient-color-470604',
+		esc_html__( 'Gradient Violet', 'wolf-core' ) => 'gradient-color-b900b4',
 	);
 
 	$wolf_core_shared_gradient_colors = apply_filters( 'wolf_core_shared_gradient_colors', $wolf_core_shared_gradient_colors );
@@ -291,11 +295,11 @@ function wolf_core_get_shared_gradient_colors() {
  */
 function wolf_core_get_shape_divider_options() {
 	$options = array(
-		'tilt'           => esc_html__( 'Angle', '%TEXTDOMAIN%' ),
-		// 'tilt_opacity' => esc_html__( 'Angle Opacity', '%TEXTDOMAIN%' ),
-		'curve'          => esc_html__( 'Curve', '%TEXTDOMAIN%' ),
-		// 'curve_opacity' => esc_html__( 'Curve Opacity', '%TEXTDOMAIN%' ),
-		'grunge_border1' => esc_html__( 'Grunge Border', '%TEXTDOMAIN%' ),
+		'tilt'           => esc_html__( 'Angle', 'wolf-core' ),
+		// 'tilt_opacity' => esc_html__( 'Angle Opacity', 'wolf-core' ),
+		'curve'          => esc_html__( 'Curve', 'wolf-core' ),
+		// 'curve_opacity' => esc_html__( 'Curve Opacity', 'wolf-core' ),
+		'grunge_border1' => esc_html__( 'Grunge Border', 'wolf-core' ),
 	);
 
 	$options = array_flip( apply_filters( 'wolf_core_shape_divider_options', $options ) );

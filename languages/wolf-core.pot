@@ -1,0 +1,2492 @@
+# Copyright (C) 2020 WolfThemes
+# This file is distributed under the same license as the Wolf Core package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wolf Core 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
+"POT-Creation-Date: 2020-11-17 14:36:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/basic-theme/exclude/file.php:3
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/plugin-include/plugin-include.php:6
+msgid "Exclude"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/plugin-include/include/file.php:2
+msgid "Include"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/add-domain.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:3
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:4
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:3
+msgid "String"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:9
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:10
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:11
+msgid "1 Star"
+msgid_plural "%s Stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:7
+#. translators: A single line translators comment.
+msgid "A"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:15
+#. translators: A multiline translators comment.
+msgid "B"
+msgstr ""
+
+#: inc/admin/admin-options.php:42
+msgid "Need more social services? Send us an email! %s"
+msgstr ""
+
+#: inc/admin/admin-options.php:83
+msgid "Google Maps"
+msgstr ""
+
+#: inc/admin/admin-options.php:90
+msgid "Google Maps API key"
+msgstr ""
+
+#: inc/admin/admin-options.php:92
+msgid "You can get a Google Maps API key <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: inc/admin/admin-options.php:101
+msgid "MailChimp"
+msgstr ""
+
+#: inc/admin/admin-options.php:108
+msgid "MailChimp API key"
+msgstr ""
+
+#: inc/admin/admin-options.php:110
+msgid "You can get a MailChimp API key <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: inc/admin/admin-options.php:119
+msgid "Default MailChimp list ID"
+msgstr ""
+
+#: inc/admin/admin-options.php:121
+msgid "<a href=\"%s\" target=\"_blank\">Find Your List ID</a>."
+msgstr ""
+
+#: inc/admin/admin-options.php:130
+msgid "Newsletter form title"
+msgstr ""
+
+#: inc/admin/admin-options.php:131 inc/admin/classes/class-options.php:421
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: inc/admin/admin-options.php:137
+msgid "\"Subscribe\" button text"
+msgstr ""
+
+#: inc/admin/admin-options.php:138 inc/admin/classes/class-options.php:422
+msgid "Subscribe"
+msgstr ""
+
+#: inc/admin/admin-options.php:144
+msgid "Form first name input placeholder"
+msgstr ""
+
+#: inc/admin/admin-options.php:145 inc/admin/classes/class-options.php:423
+msgid "Your first name"
+msgstr ""
+
+#: inc/admin/admin-options.php:151
+msgid "Form last name input placeholder"
+msgstr ""
+
+#: inc/admin/admin-options.php:152 inc/admin/classes/class-options.php:424
+msgid "Your last name"
+msgstr ""
+
+#: inc/admin/admin-options.php:158
+msgid "Form email input placeholder"
+msgstr ""
+
+#: inc/admin/admin-options.php:159 inc/admin/classes/class-options.php:425
+msgid "Your email"
+msgstr ""
+
+#: inc/admin/admin-options.php:165
+msgid "Thank you message"
+msgstr ""
+
+#: inc/admin/admin-options.php:166
+msgid "Thanks for subscribing"
+msgstr ""
+
+#: inc/admin/admin-options.php:172 inc/admin/classes/class-metaboxes.php:294
+msgid "Background image"
+msgstr ""
+
+#: inc/admin/admin-options.php:179
+msgid "Fonts Loader"
+msgstr ""
+
+#: inc/admin/admin-options.php:186
+msgid "Google fonts"
+msgstr ""
+
+#: inc/admin/admin-options.php:189
+msgid ""
+"You can get your fonts on the <a href=\"%s\" target=\"_blank\">Google "
+"Fonts</a> website."
+msgstr ""
+
+#: inc/admin/admin-options.php:198
+msgid "Social Profiles"
+msgstr ""
+
+#: inc/admin/admin-options.php:210 inc/admin/admin-options.php:342
+#: inc/admin/admin-options.php:366
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1691
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1882
+msgid "Disabled"
+msgstr ""
+
+#: inc/admin/admin-options.php:217
+msgid "No Content Block Yet"
+msgstr ""
+
+#: inc/admin/admin-options.php:221
+msgid "Modal Window"
+msgstr ""
+
+#: inc/admin/admin-options.php:229
+msgid "Modal Window Content"
+msgstr ""
+
+#: inc/admin/admin-options.php:232
+msgid ""
+"Choose a <a href=\"%s\" target=\"_blank\">content block</a> to display in "
+"your modal window."
+msgstr ""
+
+#: inc/admin/admin-options.php:240
+msgid "Modal Window Type"
+msgstr ""
+
+#: inc/admin/admin-options.php:242
+msgid "Standard"
+msgstr ""
+
+#: inc/admin/admin-options.php:243
+msgid "Non-Intrusive (bottom right corner)"
+msgstr ""
+
+#: inc/admin/admin-options.php:250
+msgid "Exclude MailChimp subscribers"
+msgstr ""
+
+#: inc/admin/admin-options.php:256
+msgid "Pop-up Delay"
+msgstr ""
+
+#: inc/admin/admin-options.php:258
+msgid ""
+"The time before the modal window pops up in seconds.<br>You can set a very "
+"high number to prevent the window to pop-up automatically if you want it to "
+"be open via a link (see the \"info\" section at the bottom of this page)."
+msgstr ""
+
+#: inc/admin/admin-options.php:264
+msgid "Show Only Once"
+msgstr ""
+
+#: inc/admin/admin-options.php:265
+msgid ""
+"Don't show the pop-up again once it is closed. If this option is not "
+"checked, an opt-out link will be displayed below the window."
+msgstr ""
+
+#: inc/admin/admin-options.php:271
+msgid "Show When Navigates Away"
+msgstr ""
+
+#: inc/admin/admin-options.php:272
+msgid ""
+"The window will pop up only when the mouse leave the main window. The "
+"pop-up delay will still be applied."
+msgstr ""
+
+#: inc/admin/admin-options.php:278
+msgid "Cookie Persistency"
+msgstr ""
+
+#: inc/admin/admin-options.php:280
+msgid "How long the browser will remember the user opt-out action (in days)."
+msgstr ""
+
+#: inc/admin/admin-options.php:286
+msgid "Modal Window Width"
+msgstr ""
+
+#: inc/admin/admin-options.php:293
+msgid "Exclude Post Types"
+msgstr ""
+
+#: inc/admin/admin-options.php:295
+msgid ""
+"The modal window will NOT popup in these specific post types. Separate each "
+"post type by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:301
+msgid "Include Post Types"
+msgstr ""
+
+#: inc/admin/admin-options.php:303
+msgid ""
+"The modal window will popup ONLY in these specific post types. Separate "
+"each post type by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:309
+msgid "Exclude Post IDs"
+msgstr ""
+
+#: inc/admin/admin-options.php:311
+msgid ""
+"The modal window will NOT popup in these specific posts. Separate each ID "
+"by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:317
+msgid "Include Post IDs"
+msgstr ""
+
+#: inc/admin/admin-options.php:319
+msgid ""
+"The modal window will popup ONLY in these specific posts. Separate each ID "
+"by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:325
+msgid "Close Button Color"
+msgstr ""
+
+#: inc/admin/admin-options.php:331
+msgid "Info"
+msgstr ""
+
+#: inc/admin/admin-options.php:333
+msgid ""
+"You can add the <strong>\"%1$s\"</strong> class to any link to use it as "
+"pop-up window \"close\" button.<br>Also add the <strong>\"%2$s\"</strong> "
+"class to use it as opt-out button. (\"Don't show this message again\" "
+"link)<br>Additionally, if you need a link that open the modal window, you "
+"can use the <strong>\"%3$s\"</strong> class."
+msgstr ""
+
+#: inc/admin/admin-options.php:355 inc/admin/admin-options.php:376
+msgid "Privacy Policy Message"
+msgstr ""
+
+#: inc/admin/admin-options.php:364
+msgid "Status"
+msgstr ""
+
+#: inc/admin/admin-options.php:367
+msgid "Enabled"
+msgstr ""
+
+#: inc/admin/admin-options.php:368
+msgid "Enabled for EU users only"
+msgstr ""
+
+#: inc/admin/admin-options.php:370
+msgid ""
+"If the \"Enabled for EU users only\" is selected, %1$s must be activated "
+"and a %2$s License key must be set to enable localisation."
+msgstr ""
+
+#: inc/admin/admin-options.php:382
+msgid "Privacy Policy Page"
+msgstr ""
+
+#: inc/admin/admin-options.php:384
+msgid "If a page is set, a link to the Privacy Policy Page will be displayed."
+msgstr ""
+
+#: inc/admin/admin-options.php:390
+msgid "Link Text"
+msgstr ""
+
+#: inc/admin/admin-options.php:391
+msgid "Read more"
+msgstr ""
+
+#: inc/admin/admin-options.php:397
+#: plugins/wpbakery-page-builder/vc-additional-params.php:879
+#: plugins/wpbakery-page-builder/vc-additional-params.php:899
+msgid "Background Color"
+msgstr ""
+
+#: inc/admin/admin-options.php:403 plugins/params/row-inner.php:36
+msgid "Font Color"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:40
+msgid "License"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:69
+msgid "%s theme works with <strong>%s</strong> plugin to offer all its features."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:79
+msgid ""
+"It extends of <a href=\"%s\" target=\"_blank\">%s</a> and <a href=\"%s\" "
+"target=\"_blank\">%s</a> plugin."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:88
+msgid "It includes plugin territory features that boost the theme functionalities."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:93
+msgid ""
+"This extension is available only to users who purchased their theme from <a "
+"href=\"%s\" target=\"_blank\">%s</a>."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:113
+msgid ""
+"Please enter your <strong>theme purchase code</strong> below to activate "
+"your theme license and be able to use all features."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:119
+msgid "Activate"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:122
+msgid "How to find your purchase code"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:127
+msgid "The %s is activated."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:131
+msgid "Reset purchase code"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:150
+msgid ""
+"Something went wrong. It way be due to a temporary Envato API outage. "
+"Please try again in a few minutes."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:192
+msgid "Extension activated"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:212
+msgid "Purchase code can not be empty"
+msgstr ""
+
+#: inc/admin/auth.php:42
+msgid ""
+"Hey there, thanks a lot for using our awesome <strong>%s</strong> theme! To "
+"ensure that it will work for verified customers only, you just need to "
+"enter your <a href=\"%s\" target=\"_blank\" title=\"Find your purchase "
+"code\">theme purchase code</a> within the next <strong>%d days</strong>. "
+"You won't have to activate anything else after that."
+msgstr ""
+
+#: inc/admin/auth.php:61
+#. translators: 1: Plugin name 2: Elementor
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#: inc/admin/auth.php:62
+msgid "Elementor Test Extension"
+msgstr ""
+
+#: inc/admin/auth.php:63 wolf-core.php:244 wolf-core.php:271 wolf-core.php:298
+msgid "Elementor"
+msgstr ""
+
+#: inc/admin/auth.php:83
+msgid ""
+"<strong>%s</strong> only works for verified customers who purchased a theme "
+"from the <a href=\"%s\" target=\"_blank\">%s</a> team. Please enter your "
+"theme <a href=\"%s\" target=\"_blank\" title=\"Find your purchase "
+"code\">purchase code</a> in the plugin settings to unlock all features."
+msgstr ""
+
+#: inc/admin/auth.php:101
+msgid ""
+"Sorry, but <strong>%s</strong> only works with compatible <a "
+"target=\"_blank\" href=\"%s\">%s themes</a>.<br><strong>Be sure that you "
+"didn't change the theme's name in the %s file or the theme's folder "
+"name</strong>.<br>If you want to customize the theme's name, you can use a "
+"<a target=\"_blank\" href=\"%s\">child theme</a>."
+msgstr ""
+
+#: inc/admin/classes/class-admin.php:68
+#: plugins/wpbakery-page-builder/wpbakery-page-builder.php:88 wolf-core.php:480
+#: wolf-core.php:535 wolf-core.php:590 wolf-core.php:619
+#. translators: the code to output
+#. translators: %s: the code to display
+#. translators: the code to output
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:61
+msgid "%s Options"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:145
+msgid "Label"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:228
+#: inc/admin/classes/class-metaboxes.php:251
+#: inc/admin/classes/class-metaboxes.php:303
+#: inc/admin/classes/class-metaboxes.php:455
+#: inc/admin/classes/class-options.php:241
+#: inc/admin/classes/class-options.php:276
+msgid "Clear"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:229
+#: inc/admin/classes/class-metaboxes.php:456
+msgid "Choose a file"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:252
+#: inc/admin/classes/class-metaboxes.php:304
+#: inc/admin/classes/class-options.php:242
+#: inc/admin/classes/class-options.php:277
+msgid "Choose an image"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:286
+msgid "Background color"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:316
+#: plugins/wpbakery-page-builder/vc-additional-params.php:666
+#: plugins/wpbakery-page-builder/vc-additional-params.php:952
+msgid "Background repeat"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:345
+#: plugins/wpbakery-page-builder/vc-additional-params.php:644
+#: plugins/wpbakery-page-builder/vc-additional-params.php:928
+msgid "Background position"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:364
+#: inc/admin/classes/class-options.php:328
+msgid "cover (resize)"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:365
+#: inc/admin/classes/class-options.php:329
+msgid "normal"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:366
+#: inc/admin/classes/class-options.php:330
+msgid "responsive (hard resize)"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:371
+#: plugins/wpbakery-page-builder/vc-additional-params.php:683
+msgid "Background size"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:387
+#: plugins/wpbakery-page-builder/vc-additional-params.php:994
+msgid "Parallax"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:410
+msgid "Are you sure to want to reset all images ?"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:440
+msgid "Clear All"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:441
+msgid "Select Images"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:474
+#: plugins/params/custom-heading.php:104 plugins/params/custom-heading.php:115
+#: plugins/params/twitter.php:54
+#: plugins/wpbakery-page-builder/vc-additional-params.php:729
+#: plugins/wpbakery-page-builder/vc-additional-params.php:754
+#: plugins/wpbakery-page-builder/vc-additional-params.php:864
+#: plugins/wpbakery-page-builder/vc-additional-params.php:882
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1294
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1319
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1469
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1488
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1692
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1780
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1883
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1971
+#: plugins/wpbakery-page-builder/vc-custom-fields.php:61
+msgid "Default"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:716
+msgid "Select an image"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:717
+msgid "Select a set of images"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:718
+msgid "Select a file"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:719
+msgid "This will remove the entire image set"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:254
+msgid "Color"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:266
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1719
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1897
+msgid "Image"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:288
+msgid "Repeat"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:314
+msgid "Position"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:335
+msgid "Size"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:355
+msgid "Attachment"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:380
+msgid "Page Builder Settings"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:383
+msgid "Settings saved."
+msgstr ""
+
+#: inc/admin/classes/class-options.php:390
+msgid "Save Changes"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:97
+msgid ""
+"Error retrieving video information from the URL <a href=\"%1$s\">%1$s</a>. "
+"If opening that URL in your web browser returns anything else than an error "
+"page, the problem may be related to your web server and might be something "
+"your host administrator can solve."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:441
+#: inc/admin/classes/class-video-thumbnail-generator.php:600
+msgid "Reset"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:442
+#: inc/admin/classes/class-video-thumbnail-generator.php:601
+msgid "Delete"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:467
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:478
+msgid "Working..."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:523
+msgid "Set featured image"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:596
+msgid "No video URL in the post."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:597
+msgid ""
+"A video has been attached to this post. Click on \"Generate\" to create a "
+"thumbnail from this video"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:598
+msgid ""
+"You will be able to generate a video thumbnail and use it as featured image "
+"for this post when it is published."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:599
+msgid "Generate"
+msgstr ""
+
+#: inc/admin/updater.php:434
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please "
+"reactivate it manually."
+msgstr ""
+
+#: inc/admin/updater.php:435
+msgid "Plugin reactivated successfully."
+msgstr ""
+
+#: inc/core-functions.php:369
+#: plugins/wpbakery-page-builder/vc-additional-params.php:180
+msgid "Fade"
+msgstr ""
+
+#: inc/core-functions.php:370
+msgid "Fade Up"
+msgstr ""
+
+#: inc/core-functions.php:371
+msgid "Fade Down"
+msgstr ""
+
+#: inc/core-functions.php:372
+msgid "Fade Left"
+msgstr ""
+
+#: inc/core-functions.php:373
+msgid "Fade Right"
+msgstr ""
+
+#: inc/core-functions.php:374
+msgid "Fade Up Right"
+msgstr ""
+
+#: inc/core-functions.php:375
+msgid "Fade Up Left"
+msgstr ""
+
+#: inc/core-functions.php:376
+msgid "Fade Down Right"
+msgstr ""
+
+#: inc/core-functions.php:377
+msgid "Fade Down Left"
+msgstr ""
+
+#: inc/core-functions.php:379
+msgid "Flip Up"
+msgstr ""
+
+#: inc/core-functions.php:380
+msgid "Flip Down"
+msgstr ""
+
+#: inc/core-functions.php:381
+msgid "Flip Left"
+msgstr ""
+
+#: inc/core-functions.php:382
+msgid "Flip Right"
+msgstr ""
+
+#: inc/core-functions.php:384
+msgid "Slide Up"
+msgstr ""
+
+#: inc/core-functions.php:385
+msgid "Slide Down"
+msgstr ""
+
+#: inc/core-functions.php:386
+msgid "Slide Left"
+msgstr ""
+
+#: inc/core-functions.php:387
+msgid "Slide Right"
+msgstr ""
+
+#: inc/core-functions.php:389
+msgid "Zoom In"
+msgstr ""
+
+#: inc/core-functions.php:390
+msgid "Zoom In Up"
+msgstr ""
+
+#: inc/core-functions.php:391
+msgid "Zoom In Down"
+msgstr ""
+
+#: inc/core-functions.php:392
+msgid "Zoom In Left"
+msgstr ""
+
+#: inc/core-functions.php:393
+msgid "Zoom In Right"
+msgstr ""
+
+#: inc/core-functions.php:394
+msgid "Zoom Out"
+msgstr ""
+
+#: inc/core-functions.php:395
+msgid "Zoom Out Up"
+msgstr ""
+
+#: inc/core-functions.php:396
+msgid "Zoom Out Down"
+msgstr ""
+
+#: inc/core-functions.php:397
+msgid "Zoom Out Left"
+msgstr ""
+
+#: inc/core-functions.php:398
+msgid "Zoom Out Right"
+msgstr ""
+
+#: inc/scripts.php:41
+msgid "Play"
+msgstr ""
+
+#: inc/scripts.php:42
+msgid "Pause"
+msgstr ""
+
+#: inc/scripts.php:49
+msgid "Please fill all fields."
+msgstr ""
+
+#: inc/scripts.php:50
+msgid "Something went wrong while submuitting the form, please try again later."
+msgstr ""
+
+#: inc/scripts.php:51
+msgid "Loading"
+msgstr ""
+
+#: inc/scripts.php:52
+msgid "Calculating"
+msgstr ""
+
+#: inc/scripts.php:347
+msgid "An unknown error occured."
+msgstr ""
+
+#: inc/utility-functions.php:868
+msgid "Search results for %s"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:15
+msgid "Content Blocks"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:16
+#: plugins/content-blocks/register-post-type.php:27
+#: plugins/params/content-block.php:34 plugins/params/content-block.php:44
+msgid "Content Block"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:17
+msgid "Add New"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:18
+msgid "Add New Content Block"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:19
+msgid "All Content Blocks"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:20
+msgid "Edit Content Block"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:21
+msgid "New Content Block"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:22
+msgid "View Content Block"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:23
+msgid "Search Content Blocks"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:24
+msgid "No content block found"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:25
+msgid "No content block found in Trash"
+msgstr ""
+
+#: plugins/content-blocks/register-post-type.php:45
+msgid "Re-usable content for page builder"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:15
+msgid "Content Block Categories"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:16
+msgid "Content Block Category"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:17
+msgid "Search Content Block Categories"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:18
+msgid "Popular Content Block Categories"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:19
+msgid "All Content Block Categories"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:20
+msgid "Parent Content Block Category"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:21
+msgid "Parent Content Block Category:"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:22
+msgid "Edit Content Block Category"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:23
+msgid "Update Content Block Category"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:24
+msgid "Add New Content Block Category"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:25
+msgid "New Content Block Category"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:26
+msgid "Separate content block categories with commas"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:27
+msgid "Add or remove content block categories"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:28
+msgid "Choose from the most used content block categories"
+msgstr ""
+
+#: plugins/content-blocks/register-taxonomy.php:29
+msgid "Categories"
+msgstr ""
+
+#: plugins/elementor/controls/section.php:16
+msgid "Menu Item Color"
+msgstr ""
+
+#: plugins/elementor/elementor-core-functions.php:96
+msgid "Music"
+msgstr ""
+
+#: plugins/elementor/elementor-core-functions.php:104
+msgid "Extension"
+msgstr ""
+
+#: plugins/elementor/widgets/content-block.php:100
+#: plugins/elementor/widgets/custom-heading.php:96
+#: plugins/params/content-block.php:37
+msgid "Content"
+msgstr ""
+
+#: plugins/params/bigtext.php:23 plugins/params/row.php:137
+#: plugins/params/row.php:148
+msgid "Big Text"
+msgstr ""
+
+#: plugins/params/bigtext.php:24
+msgid "A big line of text that will take the full width of its container"
+msgstr ""
+
+#: plugins/params/bigtext.php:26 plugins/params/custom-heading.php:26
+msgid "Typography"
+msgstr ""
+
+#: plugins/params/column-inner.php:14
+msgid "Inner Column"
+msgstr ""
+
+#: plugins/params/column-inner.php:23 plugins/params/column.php:23
+#: plugins/params/row.php:81
+msgid "Skin Tone"
+msgstr ""
+
+#: plugins/params/column-inner.php:26 plugins/params/column.php:26
+#: plugins/params/row-inner.php:39
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2095
+msgid "Inherit"
+msgstr ""
+
+#: plugins/params/column-inner.php:27 plugins/params/column.php:27
+#: plugins/params/row-inner.php:41 plugins/params/row.php:84
+#: plugins/params/row.php:262
+#: plugins/wpbakery-page-builder/vc-additional-params.php:217
+msgid "Light"
+msgstr ""
+
+#: plugins/params/column-inner.php:28 plugins/params/column.php:28
+#: plugins/params/row-inner.php:40 plugins/params/row.php:85
+#: plugins/params/row.php:261
+#: plugins/wpbakery-page-builder/vc-additional-params.php:218
+msgid "Dark"
+msgstr ""
+
+#: plugins/params/column-inner.php:30 plugins/params/column.php:30
+#: plugins/params/row-inner.php:43 plugins/params/row.php:88
+#: plugins/params/row.php:104 plugins/params/row.php:115
+#: plugins/params/row.php:123
+#: plugins/wpbakery-page-builder/vc-additional-params.php:873
+#: plugins/wpbakery-page-builder/vc-additional-params.php:889
+#: plugins/wpbakery-page-builder/vc-additional-params.php:905
+#: plugins/wpbakery-page-builder/vc-additional-params.php:922
+#: plugins/wpbakery-page-builder/vc-additional-params.php:945
+#: plugins/wpbakery-page-builder/vc-additional-params.php:964
+#: plugins/wpbakery-page-builder/vc-additional-params.php:982
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1005
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1023
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1037
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1052
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1066
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1080
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1093
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1109
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1124
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1138
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1151
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1167
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1180
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1195
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1209
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1230
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1241
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1253
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1266
+msgid "Style"
+msgstr ""
+
+#: plugins/params/column-inner.php:38 plugins/params/column.php:38
+#: plugins/params/row-inner.php:52 plugins/params/row.php:171
+msgid "Border Color"
+msgstr ""
+
+#: plugins/params/column-inner.php:41 plugins/params/column-inner.php:68
+#: plugins/params/column.php:41 plugins/params/column.php:69
+#: plugins/params/custom-heading.php:105 plugins/params/row-inner.php:55
+#: plugins/params/row-inner.php:82 plugins/params/row.php:174
+#: plugins/params/row.php:201 plugins/params/row.php:234
+#: plugins/wpbakery-page-builder/vc-additional-params.php:781
+#: plugins/wpbakery-page-builder/vc-additional-params.php:993
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1346
+msgid "None"
+msgstr ""
+
+#: plugins/params/column-inner.php:44 plugins/params/column.php:45
+#: plugins/params/row-inner.php:58 plugins/params/row.php:177
+#: plugins/wpbakery-page-builder/vc-additional-params.php:884
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1191
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1782
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1973
+msgid "Custom color"
+msgstr ""
+
+#: plugins/params/column-inner.php:47 plugins/params/column-inner.php:59
+#: plugins/params/column-inner.php:78 plugins/params/column-inner.php:86
+#: plugins/params/column.php:48 plugins/params/column.php:60
+#: plugins/params/column.php:79 plugins/params/column.php:87
+#: plugins/params/row-inner.php:61 plugins/params/row-inner.php:73
+#: plugins/params/row-inner.php:92 plugins/params/row-inner.php:100
+#: plugins/params/row.php:180 plugins/params/row.php:192
+#: plugins/params/row.php:211 plugins/params/row.php:219
+#: plugins/wpbakery-page-builder/vc-additional-params.php:412
+#: plugins/wpbakery-page-builder/vc-additional-params.php:419
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1658
+msgid "Custom"
+msgstr ""
+
+#: plugins/params/column-inner.php:53 plugins/params/column.php:54
+#: plugins/params/row-inner.php:67 plugins/params/row.php:186
+msgid "Border Custom Color"
+msgstr ""
+
+#: plugins/params/column-inner.php:65 plugins/params/column.php:66
+#: plugins/params/row-inner.php:79 plugins/params/row.php:198
+msgid "Border Style"
+msgstr ""
+
+#: plugins/params/column-inner.php:69 plugins/params/column.php:70
+#: plugins/params/row-inner.php:83 plugins/params/row.php:202
+msgid "Solid"
+msgstr ""
+
+#: plugins/params/column-inner.php:70 plugins/params/column.php:71
+#: plugins/params/row-inner.php:84 plugins/params/row.php:203
+msgid "Dotted"
+msgstr ""
+
+#: plugins/params/column-inner.php:71 plugins/params/column.php:72
+#: plugins/params/row-inner.php:85 plugins/params/row.php:204
+msgid "Dashed"
+msgstr ""
+
+#: plugins/params/column-inner.php:72 plugins/params/column.php:73
+#: plugins/params/row-inner.php:86 plugins/params/row.php:205
+msgid "Double"
+msgstr ""
+
+#: plugins/params/column-inner.php:73 plugins/params/column.php:74
+#: plugins/params/row-inner.php:87 plugins/params/row.php:206
+msgid "Groove"
+msgstr ""
+
+#: plugins/params/column-inner.php:74 plugins/params/column.php:75
+#: plugins/params/row-inner.php:88 plugins/params/row.php:207
+msgid "Ridge"
+msgstr ""
+
+#: plugins/params/column-inner.php:75 plugins/params/column.php:76
+#: plugins/params/row-inner.php:89 plugins/params/row.php:208
+msgid "Inset"
+msgstr ""
+
+#: plugins/params/column-inner.php:76 plugins/params/column.php:77
+#: plugins/params/row-inner.php:90 plugins/params/row.php:209
+msgid "Outset"
+msgstr ""
+
+#: plugins/params/column-inner.php:84 plugins/params/column.php:85
+#: plugins/params/row-inner.php:98 plugins/params/row.php:217
+#: plugins/wpbakery-page-builder/vc-additional-params.php:417
+msgid "Inline Style"
+msgstr ""
+
+#: plugins/params/column-inner.php:87 plugins/params/column.php:88
+#: plugins/params/row-inner.php:101 plugins/params/row.php:220
+#: plugins/wpbakery-page-builder/vc-additional-params.php:420
+msgid "Additional inline CSS that will be applied to the element. (e.g: %s)"
+msgstr ""
+
+#: plugins/params/column-inner.php:94 plugins/params/column.php:95
+msgid "Custom Link"
+msgstr ""
+
+#: plugins/params/column-inner.php:96 plugins/params/column.php:97
+#: plugins/params/column.php:105 plugins/params/column.php:114
+#: plugins/wpbakery-page-builder/vc-additional-params.php:131
+#: plugins/wpbakery-page-builder/vc-additional-params.php:526
+msgid "Extra"
+msgstr ""
+
+#: plugins/params/column.php:14
+msgid "Column"
+msgstr ""
+
+#: plugins/params/column.php:44
+#: plugins/wpbakery-page-builder/vc-additional-params.php:885
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1783
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1974
+msgid "Transparent"
+msgstr ""
+
+#: plugins/params/column.php:103
+msgid "Link Extra Class"
+msgstr ""
+
+#: plugins/params/column.php:111
+msgid "Sticky"
+msgstr ""
+
+#: plugins/params/column.php:113
+msgid ""
+"Check this option to stick the element at the top when scrolling. Note that "
+"this feature doesn't work if your row is set to \"equal height\" columns."
+msgstr ""
+
+#: plugins/params/content-block.php:27
+msgid "No Content Block yet"
+msgstr ""
+
+#: plugins/params/content-block.php:35
+msgid "A block of content from the Content Block post type"
+msgstr ""
+
+#: plugins/params/custom-heading.php:23
+msgid "Heading"
+msgstr ""
+
+#: plugins/params/custom-heading.php:24
+msgid "A big title with flexible font size"
+msgstr ""
+
+#: plugins/params/custom-heading.php:33
+msgid "Text"
+msgstr ""
+
+#: plugins/params/custom-heading.php:35
+msgid "My Headline"
+msgstr ""
+
+#: plugins/params/custom-heading.php:36
+msgid "You can use the %s short tag to display the current page title."
+msgstr ""
+
+#: plugins/params/custom-heading.php:41
+msgid "Font Size"
+msgstr ""
+
+#: plugins/params/custom-heading.php:47
+msgid "Behavior"
+msgstr ""
+
+#: plugins/params/custom-heading.php:50
+msgid "Static"
+msgstr ""
+
+#: plugins/params/custom-heading.php:51
+msgid "Responsive"
+msgstr ""
+
+#: plugins/params/custom-heading.php:57
+msgid "Minimum Font Size"
+msgstr ""
+
+#: plugins/params/custom-heading.php:66
+msgid "Font"
+msgstr ""
+
+#: plugins/params/custom-heading.php:73 plugins/params/twitter.php:51
+msgid "Text Alignment"
+msgstr ""
+
+#: plugins/params/custom-heading.php:76 plugins/params/twitter.php:55
+#: plugins/wpbakery-page-builder/vc-additional-params.php:742
+#: plugins/wpbakery-page-builder/vc-additional-params.php:756
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1307
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1321
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1539
+msgid "Center"
+msgstr ""
+
+#: plugins/params/custom-heading.php:77 plugins/params/twitter.php:56
+#: plugins/wpbakery-page-builder/vc-additional-params.php:743
+#: plugins/wpbakery-page-builder/vc-additional-params.php:755
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1308
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1320
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1540
+msgid "Left"
+msgstr ""
+
+#: plugins/params/custom-heading.php:78 plugins/params/twitter.php:57
+#: plugins/wpbakery-page-builder/vc-additional-params.php:744
+#: plugins/wpbakery-page-builder/vc-additional-params.php:757
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1309
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1322
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1541
+msgid "Right"
+msgstr ""
+
+#: plugins/params/custom-heading.php:84
+msgid "Center Aligned on Mobile"
+msgstr ""
+
+#: plugins/params/custom-heading.php:86
+#: plugins/wpbakery-page-builder/vc-additional-params.php:158
+#: plugins/wpbakery-page-builder/vc-additional-params.php:168
+#: plugins/wpbakery-page-builder/vc-additional-params.php:196
+#: plugins/wpbakery-page-builder/vc-additional-params.php:206
+#: plugins/wpbakery-page-builder/vc-additional-params.php:447
+#: plugins/wpbakery-page-builder/vc-additional-params.php:458
+#: plugins/wpbakery-page-builder/vc-additional-params.php:476
+#: plugins/wpbakery-page-builder/vc-additional-params.php:487
+#: plugins/wpbakery-page-builder/vc-additional-params.php:544
+#: plugins/wpbakery-page-builder/vc-additional-params.php:570
+#: plugins/wpbakery-page-builder/vc-additional-params.php:596
+#: plugins/wpbakery-page-builder/vc-additional-params.php:626
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1031
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1102
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1178
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1239
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1251
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1264
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1459
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1555
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1584
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1735
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1751
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1830
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1926
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1942
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2021
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2204
+msgid "Yes"
+msgstr ""
+
+#: plugins/params/custom-heading.php:87
+#: plugins/wpbakery-page-builder/vc-additional-params.php:159
+#: plugins/wpbakery-page-builder/vc-additional-params.php:169
+#: plugins/wpbakery-page-builder/vc-additional-params.php:197
+#: plugins/wpbakery-page-builder/vc-additional-params.php:207
+#: plugins/wpbakery-page-builder/vc-additional-params.php:448
+#: plugins/wpbakery-page-builder/vc-additional-params.php:459
+#: plugins/wpbakery-page-builder/vc-additional-params.php:477
+#: plugins/wpbakery-page-builder/vc-additional-params.php:488
+#: plugins/wpbakery-page-builder/vc-additional-params.php:545
+#: plugins/wpbakery-page-builder/vc-additional-params.php:571
+#: plugins/wpbakery-page-builder/vc-additional-params.php:597
+#: plugins/wpbakery-page-builder/vc-additional-params.php:627
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1103
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1177
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1238
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1250
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1263
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1734
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1750
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1831
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1925
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1941
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2022
+msgid "No"
+msgstr ""
+
+#: plugins/params/custom-heading.php:93
+msgid "Font Weight"
+msgstr ""
+
+#: plugins/params/custom-heading.php:101
+msgid "Text Transform"
+msgstr ""
+
+#: plugins/params/custom-heading.php:106
+msgid "Uppercase"
+msgstr ""
+
+#: plugins/params/custom-heading.php:107
+msgid "Lowercase"
+msgstr ""
+
+#: plugins/params/custom-heading.php:112
+msgid "Font Style"
+msgstr ""
+
+#: plugins/params/custom-heading.php:116
+msgid "Italic"
+msgstr ""
+
+#: plugins/params/custom-heading.php:121
+msgid "Letter Spacing"
+msgstr ""
+
+#: plugins/params/custom-heading.php:128
+msgid "Line Height"
+msgstr ""
+
+#: plugins/params/custom-heading.php:134
+msgid "HTML Tag"
+msgstr ""
+
+#: plugins/params/custom-heading.php:148
+msgid "Link"
+msgstr ""
+
+#: plugins/params/row-inner.php:108
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1629
+msgid "Custom Column Gap"
+msgstr ""
+
+#: plugins/params/row-inner.php:110
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1631
+msgid "The space gap between columns."
+msgstr ""
+
+#: plugins/params/row-inner.php:113
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1634
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1644
+msgid "Advanced"
+msgstr ""
+
+#: plugins/params/row.php:97
+msgid "Video mute button (beta)"
+msgstr ""
+
+#: plugins/params/row.php:103
+msgid "Only if parallax is not enabled."
+msgstr ""
+
+#: plugins/params/row.php:109
+msgid "Unmute video by default"
+msgstr ""
+
+#: plugins/params/row.php:121
+msgid "Add Big Text Background"
+msgstr ""
+
+#: plugins/params/row.php:130
+msgid "Big Text Vertical Position"
+msgstr ""
+
+#: plugins/params/row.php:133
+#: plugins/wpbakery-page-builder/vc-additional-params.php:731
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1296
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1470
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1490
+msgid "Middle"
+msgstr ""
+
+#: plugins/params/row.php:134
+#: plugins/wpbakery-page-builder/vc-additional-params.php:730
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1295
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1471
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1489
+msgid "Top"
+msgstr ""
+
+#: plugins/params/row.php:135
+#: plugins/wpbakery-page-builder/vc-additional-params.php:732
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1297
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1472
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1491
+msgid "Bottom"
+msgstr ""
+
+#: plugins/params/row.php:145
+msgid "Big Text Maximum Width"
+msgstr ""
+
+#: plugins/params/row.php:240
+msgid "No Playlist Yet"
+msgstr ""
+
+#: plugins/params/row.php:249
+msgid "Playlist"
+msgstr ""
+
+#: plugins/params/row.php:252 plugins/params/row.php:266
+msgid "Player Bar"
+msgstr ""
+
+#: plugins/params/row.php:258
+msgid "Playlist Skin"
+msgstr ""
+
+#: plugins/params/row.php:263
+msgid "Transparent Light"
+msgstr ""
+
+#: plugins/params/row.php:264
+msgid "Transparent Dark"
+msgstr ""
+
+#: plugins/params/twitter.php:23
+msgid "Twitter Feed"
+msgstr ""
+
+#: plugins/params/twitter.php:24
+msgid "Your last tweets"
+msgstr ""
+
+#: plugins/params/twitter.php:26
+msgid "Socials"
+msgstr ""
+
+#: plugins/params/twitter.php:33
+msgid "Username"
+msgstr ""
+
+#: plugins/params/twitter.php:41
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1688
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1879
+msgid "Type"
+msgstr ""
+
+#: plugins/params/twitter.php:44
+msgid "Single"
+msgstr ""
+
+#: plugins/params/twitter.php:45
+msgid "List"
+msgstr ""
+
+#: plugins/params/twitter.php:66
+msgid "Count"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:127
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1615
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2193
+msgid "Extra class name"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:129
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1617
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2195
+msgid ""
+"Style particular content element differently - add a class name and refer "
+"to it in custom CSS."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:155
+#: plugins/wpbakery-page-builder/vc-additional-params.php:444
+msgid "Autoplay"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:161
+#: plugins/wpbakery-page-builder/vc-additional-params.php:171
+#: plugins/wpbakery-page-builder/vc-additional-params.php:182
+#: plugins/wpbakery-page-builder/vc-additional-params.php:189
+#: plugins/wpbakery-page-builder/vc-additional-params.php:199
+#: plugins/wpbakery-page-builder/vc-additional-params.php:209
+#: plugins/wpbakery-page-builder/vc-additional-params.php:220
+msgid "Slider Settings"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:165
+#: plugins/wpbakery-page-builder/vc-additional-params.php:455
+msgid "Pause on Hover (if autoplay)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:175
+msgid "Transition"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:178
+msgid "Auto (fade by default and slide on touchable devices)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:179
+msgid "Slide"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:186
+#: plugins/wpbakery-page-builder/vc-additional-params.php:465
+msgid "Slideshow Speed in ms"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:193
+#: plugins/wpbakery-page-builder/vc-additional-params.php:473
+msgid "Show Navigation Bullets"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:203
+#: plugins/wpbakery-page-builder/vc-additional-params.php:484
+msgid "Show Navigation Arrows"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:214
+msgid "Navigation Tone"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:306
+#: plugins/wpbakery-page-builder/vc-additional-params.php:308
+#: plugins/wpbakery-page-builder/vc-additional-params.php:317
+#: plugins/wpbakery-page-builder/vc-additional-params.php:553
+#: plugins/wpbakery-page-builder/vc-additional-params.php:579
+#: plugins/wpbakery-page-builder/vc-additional-params.php:605
+msgid "Animation"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:314
+msgid "Animation Delay (in ms)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:410
+msgid "Css"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:450
+#: plugins/wpbakery-page-builder/vc-additional-params.php:461
+#: plugins/wpbakery-page-builder/vc-additional-params.php:468
+#: plugins/wpbakery-page-builder/vc-additional-params.php:479
+#: plugins/wpbakery-page-builder/vc-additional-params.php:490
+msgid "Carousel Settings"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:516
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1566
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2178
+msgid "Visibility"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:519
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1569
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2181
+msgid "Always visible"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:520
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1570
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2182
+msgid "Hide on tablet and mobile"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:521
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1571
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2183
+msgid "Hide on mobile"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:522
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1572
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2184
+msgid "Show on tablet and mobile only"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:523
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1573
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2185
+msgid "Show on mobile only"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:524
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1574
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2186
+msgid "Always hidden"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:541
+#: plugins/wpbakery-page-builder/vc-additional-params.php:567
+#: plugins/wpbakery-page-builder/vc-additional-params.php:593
+msgid "Padding"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:624
+msgid "Add Image Background?"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:633
+#: plugins/wpbakery-page-builder/vc-additional-params.php:915
+msgid "Background Image"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:638
+#: plugins/wpbakery-page-builder/vc-additional-params.php:660
+#: plugins/wpbakery-page-builder/vc-additional-params.php:677
+#: plugins/wpbakery-page-builder/vc-additional-params.php:694
+msgid "Background"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:647
+#: plugins/wpbakery-page-builder/vc-additional-params.php:931
+msgid "center center"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:648
+#: plugins/wpbakery-page-builder/vc-additional-params.php:932
+msgid "center top"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:649
+#: plugins/wpbakery-page-builder/vc-additional-params.php:933
+msgid "left top"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:650
+#: plugins/wpbakery-page-builder/vc-additional-params.php:934
+msgid "right top"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:651
+#: plugins/wpbakery-page-builder/vc-additional-params.php:935
+msgid "center bottom"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:652
+#: plugins/wpbakery-page-builder/vc-additional-params.php:936
+msgid "left bottom"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:653
+#: plugins/wpbakery-page-builder/vc-additional-params.php:937
+msgid "right bottom"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:654
+#: plugins/wpbakery-page-builder/vc-additional-params.php:938
+msgid "left center"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:655
+#: plugins/wpbakery-page-builder/vc-additional-params.php:939
+msgid "right center"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:669
+#: plugins/wpbakery-page-builder/vc-additional-params.php:955
+msgid "no repeat"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:670
+#: plugins/wpbakery-page-builder/vc-additional-params.php:956
+msgid "repeat"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:671
+#: plugins/wpbakery-page-builder/vc-additional-params.php:957
+msgid "repeat-x"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:672
+#: plugins/wpbakery-page-builder/vc-additional-params.php:958
+msgid "repeat-y"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:686
+#: plugins/wpbakery-page-builder/vc-additional-params.php:975
+msgid "default"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:687
+#: plugins/wpbakery-page-builder/vc-additional-params.php:974
+msgid "cover"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:688
+#: plugins/wpbakery-page-builder/vc-additional-params.php:976
+msgid "contain"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:714
+msgid "Content type"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:717
+msgid "Text (padding)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:719
+msgid "Media (no padding)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:721
+msgid "Select type of content you will insert."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:726
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1291
+msgid "Vertical Position"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:734
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1299
+msgid "Select the vertical position of the content."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:739
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1304
+msgid "Horizontal Position"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:746
+#: plugins/wpbakery-page-builder/vc-additional-params.php:785
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1311
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1350
+msgid "Select the horizontal position of the content."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:751
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1316
+msgid "Default Text Alignment"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:759
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1324
+msgid ""
+"Specify the text alignment inside the column. It can be overwritten in some "
+"elements."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:764
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1329
+msgid "Content Min Height"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:771
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1336
+msgid "Content Max Width"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:778
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1343
+msgid "Column Style"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:782
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1347
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1418
+msgid "Box Shadow"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:783
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1348
+msgid "Boxed with Hover Effect"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:790
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1355
+msgid "Width"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:794
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1359
+msgid "1 column - 1/12"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:795
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1360
+msgid "2 columns - 1/6"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:796
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1361
+msgid "3 columns - 1/4"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:797
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1362
+msgid "4 columns - 1/3"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:798
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1363
+msgid "5 columns - 5/12"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:799
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1364
+msgid "6 columns - 1/2"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:800
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1365
+msgid "7 columns - 7/12"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:801
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1366
+msgid "8 columns - 2/3"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:802
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1367
+msgid "9 columns - 3/4"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:803
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1368
+msgid "10 columns - 5/6"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:804
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1369
+msgid "11 columns - 11/12"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:805
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1370
+msgid "12 columns - 1/1"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:808
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1373
+msgid "Select column width."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:815
+msgid "Shift X-Axis"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:828
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1590
+msgid "Shift Y-Axis"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:840
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1602
+msgid "Custom Z-Index"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:861
+msgid "Background type"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:865
+msgid "Image and Color"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:866
+msgid "Slideshow"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:867
+msgid "Video"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:868
+msgid "No Background"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:869
+msgid "Post Featured Image"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:870
+msgid "Default WordPress Header"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:888
+msgid "Select a background color."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:971
+msgid "Background Size"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:988
+msgid "Background Effect"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:995
+msgid "Zoom"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:996
+msgid "Fixed"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:997
+msgid "Marquee"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:998
+msgid "Blur"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1011
+msgid "Marquee Image Position"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1014
+msgid "stretch"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1015
+msgid "top"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1016
+msgid "middle"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1017
+msgid "bottom"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1029
+msgid "LazyLoad"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1044
+msgid "Video URL"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1047
+msgid "A YouTube, Vimeo, or mp4 URL."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1058
+msgid "Video Start Time"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1061
+msgid "Set at which second the video will start (beta)."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1072
+msgid "Video End Time"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1075
+msgid "Set at which second the video will end (beta)."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1086
+msgid "Video Parallax"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1099
+msgid "Loop video."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1111
+msgid ""
+"Beta: If set to \"No\", the video will stop at the end only for YouTube "
+"video when parallax is not enabled."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1116
+msgid "Video Image Fallback"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1119
+msgid "An image to display when the video is loading."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1130
+msgid "Video Image Mobile Fallback"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1133
+msgid ""
+"An image to display when the video can't be played. The image above will be "
+"used if empty."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1145
+msgid "Slideshow Images"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1158
+msgid "Slideshow Speed"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1160
+msgid "In milliseconds."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1174
+msgid "Add Overlay"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1185
+msgid "Overlay Color"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1188
+msgid "Auto"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1194
+msgid "Select an overlay color."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1206
+msgid "Overlay Custom Color"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1219
+msgid "Overlay Opacity in Percent"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1235
+msgid "Add Top Shape Divider"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1247
+msgid "Add Bottom Shape Divider"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1260
+msgid "Add Particles"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1387
+msgid "Column Type"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1390
+msgid "Columns"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1391
+msgid "Blocks"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1394
+msgid "This will set a default style for your columns."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1400
+msgid "Container Width"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1403
+msgid "Wide"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1404
+msgid "Boxed"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1405
+msgid "Small Boxed"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1406
+msgid "Large Boxed"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1429
+msgid "Content Width"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1432
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2096
+msgid "Standard width (%s centered)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1433
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2097
+msgid "Small width (%s centered)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1434
+msgid "Large width (%s centered)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1435
+msgid "Full width (%s)"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1447
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2104
+msgid "Min Height"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1450
+msgid "Insert the row minimum height."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1456
+msgid "Full height row?"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1458
+msgid "If checked row will be set to full height."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1466
+msgid "Columns Position"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1473
+msgid "Stretch"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1475
+msgid "Select columns position within row."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1485
+msgid "Content Position"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1493
+msgid "Select content position within columns."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1502
+msgid "Add pointing down arrow"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1503
+msgid "Allow user to scroll to the next section when clicking on the arrow"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1524
+msgid "Arrow Caption"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1526
+msgid "Continue"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1536
+msgid "Arrow Alignement"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1552
+msgid "Equal height"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1554
+msgid "If checked columns will be set to equal height."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1580
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2200
+msgid "Disable row"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1583
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2203
+msgid ""
+"If checked the row won't be visible on the public side of your website. You "
+"can switch it back any time."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1640
+msgid "Section name"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1642
+msgid "Required for the onepage scroll, this gives the name to the section."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1656
+msgid "CSS box"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1693
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1884
+msgid "Custom Image"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1697
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1710
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1722
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1738
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1754
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1768
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1787
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1804
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1814
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1835
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1848
+msgid "Divider Top"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1706
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1909
+msgid "Shape"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1731
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1922
+msgid "Shape Inverted"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1747
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1938
+msgid "Shape Flip"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1763
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1954
+msgid "Shape Height"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1765
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1956
+msgid "Enter a value in % or px."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1777
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1968
+msgid "Shape Color"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1786
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1977
+msgid "Select a color."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1798
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1989
+msgid "Shape Custom Color"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1810
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2001
+msgid "Shape Opacity"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1827
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2018
+msgid "Shape Ratio"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1844
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2035
+msgid "Shape Z-Index"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1888
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1900
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1913
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1929
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1945
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1959
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1978
+#: plugins/wpbakery-page-builder/vc-additional-params.php:1995
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2005
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2026
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2039
+msgid "Divider Bottom"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2092
+msgid "Row Width"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-additional-params.php:2107
+msgid "Insert the row minimum height in pixel."
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:207
+msgid "Black"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:208
+msgid "Light Grey"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:209
+msgid "Dark Grey"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:210
+msgid "White"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:211
+msgid "Orange"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:212
+msgid "Green"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:213
+msgid "Turquoise"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:214
+msgid "Violet"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:215
+msgid "Pink"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:216
+msgid "Grey blue"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:217
+msgid "Red"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:218
+msgid "Yellow"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:219
+msgid "Blue"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:220
+msgid "Peacoc"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:221
+msgid "Chino"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:222
+msgid "Mulled Wine"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:223
+msgid "Vista Blue"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:224
+msgid "Grey"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:225
+msgid "Sky"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:226
+msgid "Juicy pink"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:227
+msgid "Sandy brown"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:228
+msgid "Purple"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:280
+msgid "Gradient Red"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:281
+msgid "Gradient Red 2"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:282
+msgid "Gradient Green"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:283
+msgid "Gradient Green Circle"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:284
+msgid "Gradient Orange"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:285
+msgid "Gradient Violet"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:298
+msgid "Angle"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:300
+msgid "Curve"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-core-functions.php:302
+msgid "Grunge Border"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-custom-fields.php:175
+#: plugins/wpbakery-page-builder/vc-custom-fields.php:192
+msgid "Media Library"
+msgstr ""
+
+#: wolf-core.php:241
+msgid ""
+"\"%1$s\" requires \"<a href=\"%2$s\" target=\"_blank\">%3$s</a>\" or \"<a "
+"href=\"%4$s\" target=\"_blank\">%5$s</a>\" to be installed and activated."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Wolf Core"
+msgstr ""
+
+#: wolf-core.php:246 wolf-core.php:273 wolf-core.php:325
+msgid "WPBakery Page Builder"
+msgstr ""
+
+#: wolf-core.php:268
+msgid ""
+"\"%1$s\" requires to choose between \"<a href=\"%2$s\" "
+"target=\"_blank\">%3$s</a>\" or \"<a href=\"%4$s\" "
+"target=\"_blank\">%5$s</a>\" to be activated. You can not use both at the "
+"same time."
+msgstr ""
+
+#: wolf-core.php:296 wolf-core.php:323 wolf-core.php:350
+#. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
+#. translators: 1: Plugin name 2: PHP 3: Required PHP version
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: wolf-core.php:351
+msgid "Wolf Elementor Extension"
+msgstr ""
+
+#: wolf-core.php:352
+msgid "PHP"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wlfthm.es/wolf-core"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Core functions for Wolf Themes."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WolfThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wolfthemes.com"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:6
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:7
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:8
+msgctxt "a string"
+msgid "String"
+msgstr ""
+
+#: inc/google-fonts.php:65
+#. Translators: To add an additional character subset specific to your
+#. language, translate this to 'greek', 'cyrillic', 'devanagari' or
+#. 'vietnamese'. Do not translate into your own language.
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: plugins/wpbakery-page-builder/vc-custom-fields.php:66
+msgctxt "placeholder text"
+msgid ""
+"And there was silence over the oceans. When a voice came thundering from "
+"above."
+msgstr ""

@@ -3,14 +3,14 @@
  * Row shortcode template
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Templates
+ * @package WolfCore/WPBakeryPageBuilder/Templates
  * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 // If it's a content block, we just stop here and output the content block shortcode.
-if ( class_exists( 'Wolf_Vc_Content_Block' ) && preg_match( '/\[wolf_core_content_block [a-zA-Z0-9-_=" ]+\]/', $content, $match ) ) {
+if ( class_exists( 'Wolf_Vc_Content_Block' ) && preg_match( '/\[wolf_content_block [a-zA-Z0-9-_=" ]+\]/', $content, $match ) ) {
 	if ( isset( $match[0] ) ) {
 		echo wpb_js_remove_wpautop( $match[0] );
 	}

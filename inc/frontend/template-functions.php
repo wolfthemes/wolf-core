@@ -6,7 +6,7 @@
  *
  * @author WolfThemes
  * @category Frontend
- * @package %PACKAGENAME%/Frontend
+ * @package WolfCore/Frontend
  * @version 1.0.0
  */
 
@@ -18,10 +18,10 @@ defined( 'ABSPATH' ) || exit;
 function wolf_core_generator_tag( $gen, $type ) {
 	switch ( $type ) {
 		case 'html':
-			$gen .= "\n" . '<meta name="generator" content="%PACKAGENAME% ' . esc_attr( WOLF_CORE_VERSION ) . '">';
+			$gen .= "\n" . '<meta name="generator" content="WolfCore ' . esc_attr( WOLF_CORE_VERSION ) . '">';
 			break;
 		case 'xhtml':
-			$gen .= "\n" . '<meta name="generator" content="%PACKAGENAME% ' . esc_attr( WOLF_CORE_VERSION ) . '" />';
+			$gen .= "\n" . '<meta name="generator" content="WolfCore ' . esc_attr( WOLF_CORE_VERSION ) . '" />';
 			break;
 	}
 	return $gen;

@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% Admin.
+ * Wolf Core Admin.
  *
  * @class Wolf_core_Admin
  * @author WolfThemes
  * @category Admin
- * @package %PACKAGENAME%/Admin/Classes
+ * @package WolfCore/Admin/Classes
  * @version 1.0.0
  */
 
@@ -65,7 +65,7 @@ class Wolf_Core_Admin {
 					sprintf(
 						wp_kses(
 							/* translators: the code to output */
-							__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+							__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
 							array(
 								'code' => array(),
 							)

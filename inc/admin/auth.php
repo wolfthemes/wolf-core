@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% auth
+ * Wolf Core auth
  *
  * Functions related to theme activation
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Admin
+ * @package WolfCore/Admin
  * @version 1.0.0
  */
 
@@ -39,15 +39,15 @@ function wolf_core_show_activation_notice() {
 
 	echo '<div class="notice notice-info">
 		<p>' . sprintf(
-			wp_kses_post( __( 'Hey there, thanks a lot for using our awesome <strong>%s</strong> theme! To ensure that it will work for verified customers only, you just need to enter your <a href="%s" target="_blank" title="Find your purchase code">theme purchase code</a> within the next <strong>%d days</strong>. You won\'t have to activate anything else after that.', '%TEXTDOMAIN%' ) ),
+			wp_kses_post( __( 'Hey there, thanks a lot for using our awesome <strong>%s</strong> theme! To ensure that it will work for verified customers only, you just need to enter your <a href="%s" target="_blank" title="Find your purchase code">theme purchase code</a> within the next <strong>%d days</strong>. You won\'t have to activate anything else after that.', 'wolf-core' ) ),
 				$theme_name,
 				'https://help.market.envato.com/hc/en-us/articles/202822600-Where-Can-I-Find-my-Purchase-Code-',
 				$timeout
 			) . '</p>
 			<p>
-			<a class="button button-primary" href="' . esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about#license' ) ) . '">' . esc_html( 'Activate', '%TEXTDOMAIN%' ) . '</a>
+			<a class="button button-primary" href="' . esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about#license' ) ) . '">' . esc_html( 'Activate', 'wolf-core' ) . '</a>
 
-			<a class="button button-secondary" target="_blank" href="https://wolfthemes.ticksy.com/article/13268/">' . esc_html( 'More infos', '%TEXTDOMAIN%' ) . '</a>
+			<a class="button button-secondary" target="_blank" href="https://wolfthemes.ticksy.com/article/13268/">' . esc_html( 'More infos', 'wolf-core' ) . '</a>
 		</p>
 	</div>';
 }
@@ -58,9 +58,9 @@ function wolf_core_admin_notice_missing_main_plugin() {
 
 	$message = sprintf(
 		/* translators: 1: Plugin name 2: Elementor */
-		esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', '%TEXTDOMAIN%' ),
-		'<strong>' . esc_html__( 'Elementor Test Extension', '%TEXTDOMAIN%' ) . '</strong>',
-		'<strong>' . esc_html__( 'Elementor', '%TEXTDOMAIN%' ) . '</strong>'
+		esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'wolf-core' ),
+		'<strong>' . esc_html__( 'Elementor Test Extension', 'wolf-core' ) . '</strong>',
+		'<strong>' . esc_html__( 'Elementor', 'wolf-core' ) . '</strong>'
 	);
 
 	printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -80,14 +80,14 @@ function wolf_core_activation_notice() {
 	//$plugin_data = get_plugin_data( __FILE__ );
 	echo '<div class="notice notice-warning">
 		<p>' . sprintf(
-			wp_kses_post( __( '<strong>%s</strong> only works for verified customers who purchased a theme from the <a href="%s" target="_blank">%s</a> team. Please enter your theme <a href="%s" target="_blank" title="Find your purchase code">purchase code</a> in the plugin settings to unlock all features.', '%TEXTDOMAIN%' ) ),
+			wp_kses_post( __( '<strong>%s</strong> only works for verified customers who purchased a theme from the <a href="%s" target="_blank">%s</a> team. Please enter your theme <a href="%s" target="_blank" title="Find your purchase code">purchase code</a> in the plugin settings to unlock all features.', 'wolf-core' ) ),
 				'Wolf Elementor',
 				'https://wlfthm.es/tf',
 				'WolfThemes',
 				'https://help.market.envato.com/hc/en-us/articles/202822600-Where-Can-I-Find-my-Purchase-Code-'
 			) . '</p>
 		<p>
-			<a class="button button-primary" href="' . esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about#license' ) ) . '">' . esc_html( 'Activate', '%TEXTDOMAIN%' ) . '</a>
+			<a class="button button-primary" href="' . esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about#license' ) ) . '">' . esc_html( 'Activate', 'wolf-core' ) . '</a>
 		</p>
 		</div>';
 }
@@ -98,7 +98,7 @@ function wolf_core_activation_notice() {
 function wolf_core_show_wrong_theme_notice() {
 	echo '<div class="notice notice-warning">
 		<p>' . sprintf(
-			wp_kses_post( __( 'Sorry, but <strong>%s</strong> only works with compatible <a target="_blank" href="%s">%s themes</a>.<br><strong>Be sure that you didn\'t change the theme\'s name in the %s file or the theme\'s folder name</strong>.<br>If you want to customize the theme\'s name, you can use a <a target="_blank" href="%s">child theme</a>.', '%TEXTDOMAIN%' ) ),
+			wp_kses_post( __( 'Sorry, but <strong>%s</strong> only works with compatible <a target="_blank" href="%s">%s themes</a>.<br><strong>Be sure that you didn\'t change the theme\'s name in the %s file or the theme\'s folder name</strong>.<br>If you want to customize the theme\'s name, you can use a <a target="_blank" href="%s">child theme</a>.', 'wolf-core' ) ),
 				'Wolf Core',
 				'https://wlfthm.es/tf',
 				'WolfThemes',

@@ -5,7 +5,7 @@
  * Wolf Playlist Manager Plugin
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elements
+ * @package WolfCore/Elements
  * @version 1.0.0
  */
 

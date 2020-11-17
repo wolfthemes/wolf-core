@@ -6,7 +6,7 @@
  *
  * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/Uninstaller
+ * @package WolfCore/Uninstaller
  * @version 1.0.0
  */
 

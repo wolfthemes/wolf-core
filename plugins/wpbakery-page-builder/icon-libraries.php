@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% Add cutom icon libraries
+ * Wolf Core Add cutom icon libraries
  *
  * Set default setttings values for in-built elements
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @package WolfCore/WPBakeryPageBuilder/Core
  * @version 1.0.0
  */
 

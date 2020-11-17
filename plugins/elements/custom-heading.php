@@ -1,10 +1,10 @@
 <?php
 /**
- * WPBakery Page Builder Extension heading
+ * Custom Heading
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elements
- * @version 3.2.8
+ * @package WolfCore/Elements
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -1,12 +1,12 @@
 <?php
 /**
- * %NAME% core functions
+ * Wolf Core core functions
  *
  * General core functions available on admin and frontend
  *
  * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/Core
+ * @package WolfCore/Core
  * @version 1.0.0
  */
 

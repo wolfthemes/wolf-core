@@ -1,9 +1,9 @@
 <?php
 /**
- * %NAME% WPBakery Page Builder Extend functions
+ * Wolf Core WPBakery Page Builder Extend functions
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @package WolfCore/WPBakeryPageBuilder/Core
  * @version 1.0.0
  */
 

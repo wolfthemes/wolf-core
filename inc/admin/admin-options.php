@@ -4,7 +4,7 @@
  *
  * @author WolfThemes
  * @category Admin
- * @package %PACKAGENAME%/Admin
+ * @package WolfCore/Admin
  * @version 1.0.0
  */
 

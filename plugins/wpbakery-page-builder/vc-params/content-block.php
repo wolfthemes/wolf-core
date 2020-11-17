@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Heading
+ * Content Block
  *
  * @author WolfThemes
  * @package WolfCore/WPBakeryPageBuilder/Params
@@ -9,4 +9,4 @@
 
 defined( 'ABSPATH' ) || exit;
 
-vc_map( wolf_core_convert_params_to_vc( wolf_core_custom_heading_params() ) );
+vc_map( wolf_core_convert_params_to_vc( wolf_core_content_block_params() ) );

@@ -6,7 +6,7 @@
  *
  * @author WolfThemes
  * @category Frontend
- * @package %PACKAGENAME%/Frontend
+ * @package WolfCore/Frontend
  * @version 1.0.0
  */
 

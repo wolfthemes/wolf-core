@@ -3,7 +3,7 @@
  * Inner Row
  *
  * @author WolfThemes
- * @package %TEXTDOMAIN%/Elements
+ * @package wolf-core/Elements
  * @version 1.0.0
  */
 

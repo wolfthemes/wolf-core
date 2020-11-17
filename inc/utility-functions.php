@@ -1,10 +1,10 @@
 <?php
 /**
- * %NAME% utility functions
+ * Wolf Core utility functions
  *
  * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/Core
+ * @package WolfCore/Core
  * @version 1.0.0
  */
 
@@ -865,7 +865,7 @@ function wolf_core_get_post_title() {
 	}
 
 	if ( is_search() ) {
-		$title = sprintf( esc_html__( 'Search results for %s', '%TEXTDOMAIN%' ), '<span class="search-query-text">&quot;' . esc_html( get_search_query() ) . '&quot;</span>' );
+		$title = sprintf( esc_html__( 'Search results for %s', 'wolf-core' ), '<span class="search-query-text">&quot;' . esc_html( get_search_query() ) . '&quot;</span>' );
 	}
 
 	return $title;
@@ -968,7 +968,7 @@ function wolf_core_format_minutes_to_text( $minutes ) {
 	$hours   = floor( $seconds / 3600 );
 	$minutes = floor( ( $seconds / 60 ) % 60 );
 	$seconds = $seconds % 60;
-	return ( $hours > 0 ) ? sprintf( esc_html( '%d h %d mins', '%TEXTDOMAIN%' ), $hours, $minutes ) : sprintf( esc_html( '%d mins', '%TEXTDOMAIN%' ), $minutes );
+	return ( $hours > 0 ) ? sprintf( esc_html( '%d h %d mins', 'wolf-core' ), $hours, $minutes ) : sprintf( esc_html( '%d mins', 'wolf-core' ), $minutes );
 }
 
 if ( ! function_exists( 'wolf_core_get_user_country_code' ) ) {
@@ -1035,6 +1035,22 @@ if ( ! function_exists( 'wolf_core_user_country_code_is_in_eu' ) ) {
 			return false;
 		}
 	}
+}
+
+/**
+ * Straight from VC
+ *
+ * @param $content
+ * @param bool $autop
+ * @return string
+ */
+function wolf_core_js_remove_wpautop( $content, $autop = false ) {
+
+	if ( $autop ) { // Possible to use !preg_match('('.WPBMap::getTagsRegexp().')', $content)
+		$content = wpautop( preg_replace( '/<\/?p\>/', "\n", $content ) . "\n" );
+	}
+
+	return do_shortcode( shortcode_unautop( $content ) );
 }
 
 if ( ! function_exists( 'debug' ) ) {

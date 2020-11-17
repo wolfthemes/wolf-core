@@ -3,7 +3,7 @@
  * Fittext shortcode template
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Templates
+ * @package WolfCore/WPBakeryPageBuilder/Templates
  * @version 1.0.0
  */
 

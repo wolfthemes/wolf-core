@@ -3,7 +3,7 @@
  * WPBakery Page Builder Extension Element Additional Settings
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @package WolfCore/WPBakeryPageBuilder/Core
  * @version 3.2.8
  */
 
@@ -124,11 +124,11 @@ foreach ( $extra_class_elements as $extra_class_element ) {
 		$extra_class_element,
 		array(
 			'type'        => 'textfield',
-			'heading'     => esc_html__( 'Extra class name', '%TEXTDOMAIN%' ),
+			'heading'     => esc_html__( 'Extra class name', 'wolf-core' ),
 			'param_name'  => 'el_class',
-			'description' => esc_html__( 'Style particular content element differently - add a class name and refer to it in custom CSS.', '%TEXTDOMAIN%' ),
+			'description' => esc_html__( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'wolf-core' ),
 			'weight'      => -1000,
-			'group'       => esc_html__( 'Extra', '%TEXTDOMAIN%' ),
+			'group'       => esc_html__( 'Extra', 'wolf-core' ),
 		)
 	);
 }
@@ -152,72 +152,72 @@ foreach ( $slider_elements as $slider_element ) {
 		array(
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Autoplay', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Autoplay', 'wolf-core' ),
 				'param_name' => 'autoplay',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Slider Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Slider Settings', 'wolf-core' ),
 			),
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Pause on Hover (if autoplay)', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Pause on Hover (if autoplay)', 'wolf-core' ),
 				'param_name' => 'pause_on_hover',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Slider Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Slider Settings', 'wolf-core' ),
 			),
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Transition', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Transition', 'wolf-core' ),
 				'param_name' => 'transition',
 				'value'      => array(
-					esc_html__( 'Auto (fade by default and slide on touchable devices)', '%TEXTDOMAIN%' ) => 'auto',
-					esc_html__( 'Slide', '%TEXTDOMAIN%' ) => 'slide',
-					esc_html__( 'Fade', '%TEXTDOMAIN%' )  => 'fade',
+					esc_html__( 'Auto (fade by default and slide on touchable devices)', 'wolf-core' ) => 'auto',
+					esc_html__( 'Slide', 'wolf-core' ) => 'slide',
+					esc_html__( 'Fade', 'wolf-core' )  => 'fade',
 				),
-				'group'      => esc_html__( 'Slider Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Slider Settings', 'wolf-core' ),
 			),
 			array(
 				'type'       => 'wolf_core_textfield',
-				'heading'    => esc_html__( 'Slideshow Speed in ms', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Slideshow Speed in ms', 'wolf-core' ),
 				'param_name' => 'slideshow_speed',
 				'value'      => 6000,
-				'group'      => esc_html__( 'Slider Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Slider Settings', 'wolf-core' ),
 			),
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Show Navigation Bullets', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Show Navigation Bullets', 'wolf-core' ),
 				'param_name' => 'nav_bullets',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Slider Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Slider Settings', 'wolf-core' ),
 			),
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Show Navigation Arrows', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Show Navigation Arrows', 'wolf-core' ),
 				'param_name' => 'nav_arrows',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Slider Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Slider Settings', 'wolf-core' ),
 			),
 
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Navigation Tone', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Navigation Tone', 'wolf-core' ),
 				'param_name' => 'nav_tone',
 				'value'      => array(
-					esc_html__( 'Light', '%TEXTDOMAIN%' ) => 'light',
-					esc_html__( 'Dark', '%TEXTDOMAIN%' )  => 'dark',
+					esc_html__( 'Light', 'wolf-core' ) => 'light',
+					esc_html__( 'Dark', 'wolf-core' )  => 'dark',
 				),
-				'group'      => esc_html__( 'Slider Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Slider Settings', 'wolf-core' ),
 			),
 		)
 	);
@@ -303,18 +303,18 @@ foreach ( $animated_elements as $animated_element ) {
 		array(
 			array(
 				'type'       => 'animation_style',
-				'heading'    => esc_html__( 'Animation', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Animation', 'wolf-core' ),
 				'param_name' => 'css_animation',
-				'group'      => esc_html__( 'Animation', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Animation', 'wolf-core' ),
 				'weight'     => -1,
 			),
 
 			array(
 				'type'        => 'wolf_core_textfield',
-				'heading'     => esc_html__( 'Animation Delay (in ms)', '%TEXTDOMAIN%' ),
+				'heading'     => esc_html__( 'Animation Delay (in ms)', 'wolf-core' ),
 				'param_name'  => 'css_animation_delay',
 				'placeholder' => 0,
-				'group'       => esc_html__( 'Animation', '%TEXTDOMAIN%' ),
+				'group'       => esc_html__( 'Animation', 'wolf-core' ),
 				'weight'      => -1,
 			),
 		)
@@ -407,17 +407,17 @@ foreach ( $stylable_elements as $stylable_element ) {
 		array(
 			array(
 				'type'       => 'css_editor',
-				'heading'    => esc_html__( 'Css', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Css', 'wolf-core' ),
 				'param_name' => 'css',
-				'group'      => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Custom', 'wolf-core' ),
 				'weight'     => -10,
 			),
 			array(
 				'type'        => 'wolf_core_textfield',
-				'heading'     => esc_html__( 'Inline Style', '%TEXTDOMAIN%' ),
+				'heading'     => esc_html__( 'Inline Style', 'wolf-core' ),
 				'param_name'  => 'inline_style',
-				'group'       => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
-				'description' => sprintf( esc_html__( 'Additional inline CSS that will be applied to the element. (e.g: %s)', '%TEXTDOMAIN%' ), 'color:red;' ),
+				'group'       => esc_html__( 'Custom', 'wolf-core' ),
+				'description' => sprintf( esc_html__( 'Additional inline CSS that will be applied to the element. (e.g: %s)', 'wolf-core' ), 'color:red;' ),
 				'weight'      => -100, // be sure it's at the end of the form.
 			),
 		)
@@ -441,53 +441,53 @@ foreach ( $carousel_elements as $carousel_element ) {
 		array(
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Autoplay', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Autoplay', 'wolf-core' ),
 				'param_name' => 'autoplay',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Carousel Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Carousel Settings', 'wolf-core' ),
 			),
 
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Pause on Hover (if autoplay)', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Pause on Hover (if autoplay)', 'wolf-core' ),
 				'param_name' => 'pause_on_hover',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Carousel Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Carousel Settings', 'wolf-core' ),
 			),
 			array(
 				'type'       => 'wolf_core_textfield',
-				'heading'    => esc_html__( 'Slideshow Speed in ms', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Slideshow Speed in ms', 'wolf-core' ),
 				'param_name' => 'slideshow_speed',
 				'value'      => 6000,
-				'group'      => esc_html__( 'Carousel Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Carousel Settings', 'wolf-core' ),
 			),
 
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Show Navigation Bullets', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Show Navigation Bullets', 'wolf-core' ),
 				'param_name' => 'nav_bullets',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Carousel Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Carousel Settings', 'wolf-core' ),
 			),
 
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Show Navigation Arrows', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Show Navigation Arrows', 'wolf-core' ),
 				'param_name' => 'nav_arrows',
 				'value'      => array(
-					esc_html__( 'Yes', '%TEXTDOMAIN%' ) => 'true',
-					esc_html__( 'No', '%TEXTDOMAIN%' )  => 'false',
+					esc_html__( 'Yes', 'wolf-core' ) => 'true',
+					esc_html__( 'No', 'wolf-core' )  => 'false',
 				),
-				'group'      => esc_html__( 'Carousel Settings', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Carousel Settings', 'wolf-core' ),
 			),
 		)
 	);
@@ -513,17 +513,17 @@ foreach ( $visibility_elements as $visibility_element ) {
 		array(
 			array(
 				'type'       => 'dropdown',
-				'heading'    => esc_html__( 'Visibility', '%TEXTDOMAIN%' ),
+				'heading'    => esc_html__( 'Visibility', 'wolf-core' ),
 				'param_name' => 'hide_class',
 				'value'      => array(
-					esc_html__( 'Always visible', '%TEXTDOMAIN%' ) => '',
-					esc_html__( 'Hide on tablet and mobile', '%TEXTDOMAIN%' ) => 'wvc-hide-tablet',
-					esc_html__( 'Hide on mobile', '%TEXTDOMAIN%' ) => 'wvc-hide-mobile',
-					esc_html__( 'Show on tablet and mobile only', '%TEXTDOMAIN%' ) => 'wvc-show-tablet',
-					esc_html__( 'Show on mobile only', '%TEXTDOMAIN%' ) => 'wvc-show-mobile',
-					esc_html__( 'Always hidden', '%TEXTDOMAIN%' ) => 'wvc-hide',
+					esc_html__( 'Always visible', 'wolf-core' ) => '',
+					esc_html__( 'Hide on tablet and mobile', 'wolf-core' ) => 'wvc-hide-tablet',
+					esc_html__( 'Hide on mobile', 'wolf-core' ) => 'wvc-hide-mobile',
+					esc_html__( 'Show on tablet and mobile only', 'wolf-core' ) => 'wvc-show-tablet',
+					esc_html__( 'Show on mobile only', 'wolf-core' ) => 'wvc-show-mobile',
+					esc_html__( 'Always hidden', 'wolf-core' ) => 'wvc-hide',
 				),
-				'group'      => esc_html__( 'Extra', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Extra', 'wolf-core' ),
 				'weight'     => -1000, // be sure it's at the end of the form
 			),
 		)
@@ -538,11 +538,11 @@ if ( class_exists( 'Wolf_Videos' ) ) {
 		'wolf_last_videos',
 		array(
 			'type'       => 'dropdown',
-			'heading'    => esc_html__( 'Padding', '%TEXTDOMAIN%' ),
+			'heading'    => esc_html__( 'Padding', 'wolf-core' ),
 			'param_name' => 'padding',
 			'value'      => array(
-				'yes' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
-				'no'  => esc_html__( 'No', '%TEXTDOMAIN%' ),
+				'yes' => esc_html__( 'Yes', 'wolf-core' ),
+				'no'  => esc_html__( 'No', 'wolf-core' ),
 			),
 		)
 	);
@@ -550,7 +550,7 @@ if ( class_exists( 'Wolf_Videos' ) ) {
 		'wolf_last_videos',
 		array(
 			'type'       => 'animation_style',
-			'heading'    => esc_html__( 'Animation', '%TEXTDOMAIN%' ),
+			'heading'    => esc_html__( 'Animation', 'wolf-core' ),
 			'param_name' => 'css_animation',
 		)
 	);
@@ -564,11 +564,11 @@ if ( class_exists( 'Wolf_Albums' ) ) {
 		'wolf_last_albums',
 		array(
 			'type'       => 'dropdown',
-			'heading'    => esc_html__( 'Padding', '%TEXTDOMAIN%' ),
+			'heading'    => esc_html__( 'Padding', 'wolf-core' ),
 			'param_name' => 'padding',
 			'value'      => array(
-				'yes' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
-				'no'  => esc_html__( 'No', '%TEXTDOMAIN%' ),
+				'yes' => esc_html__( 'Yes', 'wolf-core' ),
+				'no'  => esc_html__( 'No', 'wolf-core' ),
 			),
 		)
 	);
@@ -576,7 +576,7 @@ if ( class_exists( 'Wolf_Albums' ) ) {
 		'wolf_last_albums',
 		array(
 			'type'       => 'animation_style',
-			'heading'    => esc_html__( 'Animation', '%TEXTDOMAIN%' ),
+			'heading'    => esc_html__( 'Animation', 'wolf-core' ),
 			'param_name' => 'css_animation',
 		)
 	);
@@ -590,11 +590,11 @@ if ( class_exists( 'Wolf_Discography' ) ) {
 		'wolf_last_releases',
 		array(
 			'type'       => 'dropdown',
-			'heading'    => esc_html__( 'Padding', '%TEXTDOMAIN%' ),
+			'heading'    => esc_html__( 'Padding', 'wolf-core' ),
 			'param_name' => 'padding',
 			'value'      => array(
-				'yes' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
-				'no'  => esc_html__( 'No', '%TEXTDOMAIN%' ),
+				'yes' => esc_html__( 'Yes', 'wolf-core' ),
+				'no'  => esc_html__( 'No', 'wolf-core' ),
 			),
 		)
 	);
@@ -602,7 +602,7 @@ if ( class_exists( 'Wolf_Discography' ) ) {
 		'wolf_last_releases',
 		array(
 			'type'       => 'animation_style',
-			'heading'    => esc_html__( 'Animation', '%TEXTDOMAIN%' ),
+			'heading'    => esc_html__( 'Animation', 'wolf-core' ),
 			'param_name' => 'css_animation',
 		)
 	);
@@ -621,77 +621,77 @@ function wolf_core_add_background_option( $atts ) {
 		$bg_params = array(
 			array(
 				'type'         => 'checkbox',
-				'label'        => esc_html__( 'Add Image Background?', '%TEXTDOMAIN%' ),
+				'label'        => esc_html__( 'Add Image Background?', 'wolf-core' ),
 				'param_name'   => 'add_background',
-				'label_on'     => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
-				'label_off'    => esc_html__( 'No', '%TEXTDOMAIN%' ),
+				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
+				'label_off'    => esc_html__( 'No', 'wolf-core' ),
 				'return_value' => 'true',
 			),
 
 			array(
 				'type'       => 'image',
-				'label'      => esc_html__( 'Background Image', '%TEXTDOMAIN%' ),
+				'label'      => esc_html__( 'Background Image', 'wolf-core' ),
 				'param_name' => 'background_img',
 				'condition'  => array(
 					'add_background' => array( 'true' ),
 				),
-				'group'      => esc_html__( 'Background', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Background', 'wolf-core' ),
 				'weight'     => 0,
 			),
 
 			array(
 				'type'       => 'select',
-				'label'      => esc_html__( 'Background position', '%TEXTDOMAIN%' ),
+				'label'      => esc_html__( 'Background position', 'wolf-core' ),
 				'param_name' => 'background_position',
 				'options'    => array(
-					'center center' => esc_html__( 'center center', '%TEXTDOMAIN%' ),
-					'center top'    => esc_html__( 'center top', '%TEXTDOMAIN%' ),
-					'left top'      => esc_html__( 'left top', '%TEXTDOMAIN%' ),
-					'right top'     => esc_html__( 'right top', '%TEXTDOMAIN%' ),
-					'center bottom' => esc_html__( 'center bottom', '%TEXTDOMAIN%' ),
-					'left bottom'   => esc_html__( 'left bottom', '%TEXTDOMAIN%' ),
-					'right bottom'  => esc_html__( 'right bottom', '%TEXTDOMAIN%' ),
-					'left center'   => esc_html__( 'left center', '%TEXTDOMAIN%' ),
-					'right center'  => esc_html__( 'right center', '%TEXTDOMAIN%' ),
+					'center center' => esc_html__( 'center center', 'wolf-core' ),
+					'center top'    => esc_html__( 'center top', 'wolf-core' ),
+					'left top'      => esc_html__( 'left top', 'wolf-core' ),
+					'right top'     => esc_html__( 'right top', 'wolf-core' ),
+					'center bottom' => esc_html__( 'center bottom', 'wolf-core' ),
+					'left bottom'   => esc_html__( 'left bottom', 'wolf-core' ),
+					'right bottom'  => esc_html__( 'right bottom', 'wolf-core' ),
+					'left center'   => esc_html__( 'left center', 'wolf-core' ),
+					'right center'  => esc_html__( 'right center', 'wolf-core' ),
 				),
 				'condition'  => array(
 					'add_background' => array( 'true' ),
 				),
-				'group'      => esc_html__( 'Background', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Background', 'wolf-core' ),
 				'weight'     => 0,
 			),
 
 			array(
 				'type'       => 'select',
-				'label'      => esc_html__( 'Background repeat', '%TEXTDOMAIN%' ),
+				'label'      => esc_html__( 'Background repeat', 'wolf-core' ),
 				'param_name' => 'background_repeat',
 				'options'    => array(
-					'no-repeat' => esc_html__( 'no repeat', '%TEXTDOMAIN%' ),
-					'repeat'    => esc_html__( 'repeat', '%TEXTDOMAIN%' ),
-					'repeat-x'  => esc_html__( 'repeat-x', '%TEXTDOMAIN%' ),
-					'repeat-y'  => esc_html__( 'repeat-y', '%TEXTDOMAIN%' ),
+					'no-repeat' => esc_html__( 'no repeat', 'wolf-core' ),
+					'repeat'    => esc_html__( 'repeat', 'wolf-core' ),
+					'repeat-x'  => esc_html__( 'repeat-x', 'wolf-core' ),
+					'repeat-y'  => esc_html__( 'repeat-y', 'wolf-core' ),
 				),
 				'condition'  => array(
 					'add_background' => array( 'true' ),
 				),
-				'group'      => esc_html__( 'Background', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Background', 'wolf-core' ),
 				'weight'     => 0,
 			),
 
 			array(
 				'type'       => 'select',
-				'label'      => esc_html__( 'Background size', '%TEXTDOMAIN%' ),
+				'label'      => esc_html__( 'Background size', 'wolf-core' ),
 				'param_name' => 'background_size',
 				'options'    => array(
-					'inherit' => esc_html__( 'default', '%TEXTDOMAIN%' ),
-					'cover'   => esc_html__( 'cover', '%TEXTDOMAIN%' ),
-					'contain' => esc_html__( 'contain', '%TEXTDOMAIN%' ),
+					'inherit' => esc_html__( 'default', 'wolf-core' ),
+					'cover'   => esc_html__( 'cover', 'wolf-core' ),
+					'contain' => esc_html__( 'contain', 'wolf-core' ),
 				),
 				'dependency' => array(
 					'element' => 'add_background',
 					'value'   => array( 'true' ),
 				),
-				'group'      => esc_html__( 'Background', '%TEXTDOMAIN%' ),
+				'group'      => esc_html__( 'Background', 'wolf-core' ),
 				'weight'     => 0,
 			),
 		);
@@ -710,141 +710,141 @@ add_filter( 'wolf_core_custom_heading_params', 'wolf_core_add_background_option'
 function wolf_core_column_general_params() {
 	return array(
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Content type', '%TEXTDOMAIN%' ),
-			'param_name' => 'content_type',
-			'value' => array(
-				esc_html__( 'Text (padding)', '%TEXTDOMAIN%' ) => 'default',
-				//esc_html__( 'Block with text content', '%TEXTDOMAIN%' ) => 'block-text',
-				esc_html__( 'Media (no padding)', '%TEXTDOMAIN%' ) => 'block-media',
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Content type', 'wolf-core' ),
+			'param_name'  => 'content_type',
+			'value'       => array(
+				esc_html__( 'Text (padding)', 'wolf-core' ) => 'default',
+				// esc_html__( 'Block with text content', 'wolf-core' ) => 'block-text',
+				esc_html__( 'Media (no padding)', 'wolf-core' ) => 'block-media',
 			),
-			'description' => esc_html__( 'Select type of content you will insert.', '%TEXTDOMAIN%' ),
+			'description' => esc_html__( 'Select type of content you will insert.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Vertical Position', '%TEXTDOMAIN%' ),
-			'param_name' => 'content_placement',
-			'value' => array(
-				esc_html__( 'Default', '%TEXTDOMAIN%' ) => 'default',
-				esc_html__( 'Top', '%TEXTDOMAIN%' ) => 'top',
-				esc_html__( 'Middle', '%TEXTDOMAIN%' ) => 'middle',
-				esc_html__( 'Bottom', '%TEXTDOMAIN%' ) => 'bottom',
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Vertical Position', 'wolf-core' ),
+			'param_name'  => 'content_placement',
+			'value'       => array(
+				esc_html__( 'Default', 'wolf-core' ) => 'default',
+				esc_html__( 'Top', 'wolf-core' )     => 'top',
+				esc_html__( 'Middle', 'wolf-core' )  => 'middle',
+				esc_html__( 'Bottom', 'wolf-core' )  => 'bottom',
 			),
-			'description' => esc_html__( 'Select the vertical position of the content.', '%TEXTDOMAIN%' ),
+			'description' => esc_html__( 'Select the vertical position of the content.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Horizontal Position', '%TEXTDOMAIN%' ),
-			'param_name' => 'content_alignment',
-			'value' => array(
-				esc_html__( 'Center', '%TEXTDOMAIN%' ) => 'center',
-				esc_html__( 'Left', '%TEXTDOMAIN%' ) => 'left',
-				esc_html__( 'Right', '%TEXTDOMAIN%' ) => 'right',
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Horizontal Position', 'wolf-core' ),
+			'param_name'  => 'content_alignment',
+			'value'       => array(
+				esc_html__( 'Center', 'wolf-core' ) => 'center',
+				esc_html__( 'Left', 'wolf-core' )   => 'left',
+				esc_html__( 'Right', 'wolf-core' )  => 'right',
 			),
-			'description' => esc_html__( 'Select the horizontal position of the content.', '%TEXTDOMAIN%' ),
+			'description' => esc_html__( 'Select the horizontal position of the content.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Default Text Alignment', '%TEXTDOMAIN%' ),
-			'param_name' => 'text_alignment',
-			'value' => array(
-				esc_html__( 'Default', '%TEXTDOMAIN%' ) => 'default',
-				esc_html__( 'Left', '%TEXTDOMAIN%' ) => 'left',
-				esc_html__( 'Center', '%TEXTDOMAIN%' ) => 'center',
-				esc_html__( 'Right', '%TEXTDOMAIN%' ) => 'right',
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Default Text Alignment', 'wolf-core' ),
+			'param_name'  => 'text_alignment',
+			'value'       => array(
+				esc_html__( 'Default', 'wolf-core' ) => 'default',
+				esc_html__( 'Left', 'wolf-core' )    => 'left',
+				esc_html__( 'Center', 'wolf-core' )  => 'center',
+				esc_html__( 'Right', 'wolf-core' )   => 'right',
 			),
-			'description' => esc_html__( 'Specify the text alignment inside the column. It can be overwritten in some elements.', '%TEXTDOMAIN%' ),
+			'description' => esc_html__( 'Specify the text alignment inside the column. It can be overwritten in some elements.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Content Min Height', '%TEXTDOMAIN%' ),
-			'param_name' => 'min_height',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Content Min Height', 'wolf-core' ),
+			'param_name'  => 'min_height',
 			'placeholder' => 'auto',
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Content Max Width', '%TEXTDOMAIN%' ),
-			'param_name' => 'max_width',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Content Max Width', 'wolf-core' ),
+			'param_name'  => 'max_width',
 			'placeholder' => 'auto',
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Column Style', '%TEXTDOMAIN%' ),
-			'param_name' => 'column_style',
-			'value' => array(
-				esc_html__( 'None', '%TEXTDOMAIN%' ) => 'none',
-				esc_html__( 'Box Shadow', '%TEXTDOMAIN%' ) => 'box-shadow',
-				esc_html__( 'Boxed with Hover Effect', '%TEXTDOMAIN%' ) => 'boxed',
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Column Style', 'wolf-core' ),
+			'param_name'  => 'column_style',
+			'value'       => array(
+				esc_html__( 'None', 'wolf-core' )       => 'none',
+				esc_html__( 'Box Shadow', 'wolf-core' ) => 'box-shadow',
+				esc_html__( 'Boxed with Hover Effect', 'wolf-core' ) => 'boxed',
 			),
-			'description' => esc_html__( 'Select the horizontal position of the content.', '%TEXTDOMAIN%' ),
+			'description' => esc_html__( 'Select the horizontal position of the content.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => __( 'Width', '%TEXTDOMAIN%' ),
+			'type'             => 'dropdown',
+			'heading'          => __( 'Width', 'wolf-core' ),
 			'edit_field_class' => 'wolf-core-hidden',
-			'param_name' => 'width',
-			'value' => array(
-				esc_html__( '1 column - 1/12', '%TEXTDOMAIN%' ) => '1/12',
-				esc_html__( '2 columns - 1/6', '%TEXTDOMAIN%' ) => '1/6',
-				esc_html__( '3 columns - 1/4', '%TEXTDOMAIN%' ) => '1/4',
-				esc_html__( '4 columns - 1/3', '%TEXTDOMAIN%' ) => '1/3',
-				esc_html__( '5 columns - 5/12', '%TEXTDOMAIN%' ) => '5/12',
-				esc_html__( '6 columns - 1/2', '%TEXTDOMAIN%' ) => '1/2',
-				esc_html__( '7 columns - 7/12', '%TEXTDOMAIN%' ) => '7/12',
-				esc_html__( '8 columns - 2/3', '%TEXTDOMAIN%' ) => '2/3',
-				esc_html__( '9 columns - 3/4', '%TEXTDOMAIN%' ) => '3/4',
-				esc_html__( '10 columns - 5/6', '%TEXTDOMAIN%' ) => '5/6',
-				esc_html__( '11 columns - 11/12', '%TEXTDOMAIN%' ) => '11/12',
-				esc_html__( '12 columns - 1/1', '%TEXTDOMAIN%' ) => '1/1',
+			'param_name'       => 'width',
+			'value'            => array(
+				esc_html__( '1 column - 1/12', 'wolf-core' ) => '1/12',
+				esc_html__( '2 columns - 1/6', 'wolf-core' ) => '1/6',
+				esc_html__( '3 columns - 1/4', 'wolf-core' ) => '1/4',
+				esc_html__( '4 columns - 1/3', 'wolf-core' ) => '1/3',
+				esc_html__( '5 columns - 5/12', 'wolf-core' ) => '5/12',
+				esc_html__( '6 columns - 1/2', 'wolf-core' ) => '1/2',
+				esc_html__( '7 columns - 7/12', 'wolf-core' ) => '7/12',
+				esc_html__( '8 columns - 2/3', 'wolf-core' ) => '2/3',
+				esc_html__( '9 columns - 3/4', 'wolf-core' ) => '3/4',
+				esc_html__( '10 columns - 5/6', 'wolf-core' ) => '5/6',
+				esc_html__( '11 columns - 11/12', 'wolf-core' ) => '11/12',
+				esc_html__( '12 columns - 1/1', 'wolf-core' ) => '1/1',
 			),
-			//'group' => __( 'Responsive Options', '%TEXTDOMAIN%' ),
-			'description' => __( 'Select column width.', '%TEXTDOMAIN%' ),
-			'std' => '1/1',
+			// 'group' => __( 'Responsive Options', 'wolf-core' ),
+			'description'      => __( 'Select column width.', 'wolf-core' ),
+			'std'              => '1/1',
 		),
 
 		// Shift X-Axis
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Shift X-Axis', '%TEXTDOMAIN%' ),
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Shift X-Axis', 'wolf-core' ),
 			'param_name' => 'shift_x',
-			'min' => -1000,
-			'max' => 1000,
-			'step' => 10,
-			'std' => 0,
-			'group' => esc_html( 'Off-Grid', '%TEXTDOMAIN%' ),
-			'weight' => -100,
+			'min'        => -1000,
+			'max'        => 1000,
+			'step'       => 10,
+			'std'        => 0,
+			'group'      => esc_html( 'Off-Grid', 'wolf-core' ),
+			'weight'     => -100,
 		),
 
 		// Shift Y-Axis
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Shift Y-Axis', '%TEXTDOMAIN%' ),
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Shift Y-Axis', 'wolf-core' ),
 			'param_name' => 'shift_y',
-			'min' => -1000,
-			'max' => 1000,
-			'step' => 10,
-			'std' => 0,
-			'group' => esc_html( 'Off-Grid', '%TEXTDOMAIN%' ),
-			'weight' => -100,
+			'min'        => -1000,
+			'max'        => 1000,
+			'step'       => 10,
+			'std'        => 0,
+			'group'      => esc_html( 'Off-Grid', 'wolf-core' ),
+			'weight'     => -100,
 		),
 
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Custom Z-Index', '%TEXTDOMAIN%' ),
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Custom Z-Index', 'wolf-core' ),
 			'param_name' => 'z_index',
-			'min' => 0,
-			'max' => 100,
-			'step' => 1,
-			'std' => 0,
-			'group' => esc_html( 'Off-Grid', '%TEXTDOMAIN%' ),
-			'weight' => -100,
+			'min'        => 0,
+			'max'        => 100,
+			'step'       => 1,
+			'std'        => 0,
+			'group'      => esc_html( 'Off-Grid', 'wolf-core' ),
+			'weight'     => -100,
 		),
 	);
 }
@@ -857,368 +857,425 @@ function wolf_core_background_params() {
 	return array(
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Background type', '%TEXTDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Background type', 'wolf-core' ),
 			'param_name' => 'background_type',
-			'value' => array(
-				esc_html__( 'Default', '%TEXTDOMAIN%' ) => 'default',
-				esc_html__( 'Image and Color', '%TEXTDOMAIN%' ) => 'image',
-				esc_html__( 'Slideshow', '%TEXTDOMAIN%' ) => 'slideshow',
-				esc_html__( 'Video', '%TEXTDOMAIN%' ) => 'video',
-				esc_html__( 'No Background', '%TEXTDOMAIN%' ) => 'transparent',
-				esc_html__( 'Post Featured Image', '%TEXTDOMAIN%' ) => 'featured_image',
-				esc_html__( 'Default WordPress Header', '%TEXTDOMAIN%' ) => 'default_header',
+			'value'      => array(
+				esc_html__( 'Default', 'wolf-core' )   => 'default',
+				esc_html__( 'Image and Color', 'wolf-core' ) => 'image',
+				esc_html__( 'Slideshow', 'wolf-core' ) => 'slideshow',
+				esc_html__( 'Video', 'wolf-core' )     => 'video',
+				esc_html__( 'No Background', 'wolf-core' ) => 'transparent',
+				esc_html__( 'Post Featured Image', 'wolf-core' ) => 'featured_image',
+				esc_html__( 'Default WordPress Header', 'wolf-core' ) => 'default_header',
 			),
-			'std' => apply_filters( 'wolf_core_default_background_type', 'default' ),
-			'group' => esc_html__( 'Style', '%TEXTDOMAIN%' ),
-			'weight' => 0,
+			'std'        => apply_filters( 'wolf_core_default_background_type', 'default' ),
+			'group'      => esc_html__( 'Style', 'wolf-core' ),
+			'weight'     => 0,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Background Color', '%TEXTDOMAIN%' ),
-			'param_name' => 'background_color',
-			'value' => array_merge(
-				array( esc_html__( 'Default', '%TEXTDOMAIN%' ) => 'default', ),
+			'type'               => 'dropdown',
+			'heading'            => esc_html__( 'Background Color', 'wolf-core' ),
+			'param_name'         => 'background_color',
+			'value'              => array_merge(
+				array( esc_html__( 'Default', 'wolf-core' ) => 'default' ),
 				wolf_core_get_shared_colors(),
-				array( esc_html__( 'Custom color', '%TEXTDOMAIN%' ) => 'custom', ),
-				array( esc_html__( 'Transparent', '%TEXTDOMAIN%' ) => 'transparent', )
+				array( esc_html__( 'Custom color', 'wolf-core' ) => 'custom' ),
+				array( esc_html__( 'Transparent', 'wolf-core' ) => 'transparent' )
 			),
-			'std' => 'default',
-			'description' => esc_html__( 'Select a background color.', '%TEXTDOMAIN%' ),
-			'group' => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+			'std'                => 'default',
+			'description'        => esc_html__( 'Select a background color.', 'wolf-core' ),
+			'group'              => esc_html__( 'Style', 'wolf-core' ),
 			'param_holder_class' => 'wolf_core_colored-dropdown',
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image' ) ),
+			'dependency'         => array(
+				'element' => 'background_type',
+				'value'   => array( 'image' ),
+			),
 		),
 
 		array(
-			'type' => 'colorpicker',
-			'heading' => esc_html__( 'Background Color', '%TEXTDOMAIN%' ),
+			'type'       => 'colorpicker',
+			'heading'    => esc_html__( 'Background Color', 'wolf-core' ),
 			'param_name' => 'background_custom_color',
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image' ) ),
-			'group' => esc_html__( 'Style', '%TEXTDOMAIN%' ),
-			'weight' => 0,
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'image' ),
+			),
+			'group'      => esc_html__( 'Style', 'wolf-core' ),
+			'weight'     => 0,
 			'dependency' => array(
 				'element' => 'background_color',
-				'value' => 'custom',
+				'value'   => 'custom',
 			),
 		),
 
 		array(
-			'type' => 'attach_image',
-			'heading' => esc_html__( 'Background Image', '%TEXTDOMAIN%' ),
+			'type'       => 'attach_image',
+			'heading'    => esc_html__( 'Background Image', 'wolf-core' ),
 			'param_name' => 'background_img',
-			'value' => '',
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image' ) ),
-			'group' => esc_html__( 'Style', '%TEXTDOMAIN%' ),
-			'weight' => 0,
+			'value'      => '',
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'image' ),
+			),
+			'group'      => esc_html__( 'Style', 'wolf-core' ),
+			'weight'     => 0,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Background position', '%TEXTDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Background position', 'wolf-core' ),
 			'param_name' => 'background_position',
-			'value' => array(
-				esc_html__( 'center center', '%TEXTDOMAIN%' ) => 'center center',
-				esc_html__( 'center top', '%TEXTDOMAIN%' )  => 'center top',
-				esc_html__( 'left top', '%TEXTDOMAIN%' ) => 'left top',
-				esc_html__( 'right top', '%TEXTDOMAIN%' )  => 'right top',
-				esc_html__( 'center bottom', '%TEXTDOMAIN%' )  => 'center bottom',
-				esc_html__( 'left bottom', '%TEXTDOMAIN%' )  => 'left bottom',
-				esc_html__( 'right bottom', '%TEXTDOMAIN%' ) => 'right bottom',
-				esc_html__( 'left center', '%TEXTDOMAIN%' ) => 'left center',
-				esc_html__( 'right center', '%TEXTDOMAIN%' ) => 'right center',
+			'value'      => array(
+				esc_html__( 'center center', 'wolf-core' ) => 'center center',
+				esc_html__( 'center top', 'wolf-core' ) => 'center top',
+				esc_html__( 'left top', 'wolf-core' )   => 'left top',
+				esc_html__( 'right top', 'wolf-core' )  => 'right top',
+				esc_html__( 'center bottom', 'wolf-core' ) => 'center bottom',
+				esc_html__( 'left bottom', 'wolf-core' ) => 'left bottom',
+				esc_html__( 'right bottom', 'wolf-core' ) => 'right bottom',
+				esc_html__( 'left center', 'wolf-core' ) => 'left center',
+				esc_html__( 'right center', 'wolf-core' ) => 'right center',
 			),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image' ) ),
-			'group' => esc_html__( 'Style', '%TEXTDOMAIN%' ),
-			'weight' => 0,
-			//'edit_field_class' => 'wvc-half-start',
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'image' ),
+			),
+			'group'      => esc_html__( 'Style', 'wolf-core' ),
+			'weight'     => 0,
+			// 'edit_field_class' => 'wvc-half-start',
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Background repeat', '%TEXTDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Background repeat', 'wolf-core' ),
 			'param_name' => 'background_repeat',
-			'value' => array(
-				esc_html__( 'no repeat', '%TEXTDOMAIN%' ) => 'no-repeat',
-				esc_html__( 'repeat', '%TEXTDOMAIN%' ) => 'repeat',
-				esc_html__( 'repeat-x', '%TEXTDOMAIN%' ) => 'repeat-x',
-				esc_html__( 'repeat-y', '%TEXTDOMAIN%' ) => 'repeat-y',
+			'value'      => array(
+				esc_html__( 'no repeat', 'wolf-core' ) => 'no-repeat',
+				esc_html__( 'repeat', 'wolf-core' )    => 'repeat',
+				esc_html__( 'repeat-x', 'wolf-core' )  => 'repeat-x',
+				esc_html__( 'repeat-y', 'wolf-core' )  => 'repeat-y',
 			),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
-			//'edit_field_class' => 'wvc-half-end',
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'image' ),
+			),
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
+			// 'edit_field_class' => 'wvc-half-end',
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Background Size', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Background Size', '%TEXDOMAIN%' ),
 			'param_name' => 'background_size',
-			'value' => array(
-				esc_html__( 'cover', '%TEXDOMAIN%' ) => 'cover',
+			'value'      => array(
+				esc_html__( 'cover', '%TEXDOMAIN%' )   => 'cover',
 				esc_html__( 'default', '%TEXDOMAIN%' ) => 'default',
 				esc_html__( 'contain', '%TEXDOMAIN%' ) => 'contain',
 			),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
-		),
-
-		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Background Effect', '%TEXDOMAIN%' ),
-			'param_name' => 'background_effect',
-			'value' => apply_filters( 'wolf_core_background_effects', array(
-				esc_html__( 'None', '%TEXDOMAIN%' ) => 'none',
-				esc_html__( 'Parallax', '%TEXDOMAIN%' ) => 'parallax',
-				esc_html__( 'Zoom', '%TEXDOMAIN%' ) => 'zoomin',
-				esc_html__( 'Fixed', '%TEXDOMAIN%' ) => 'fixed',
-				esc_html__( 'Marquee', '%TEXDOMAIN%' ) => 'marquee',
-				esc_html__( 'Blur', '%TEXDOMAIN%' ) => 'blur',
-			) ),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image', 'default_header', 'featured_image' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
-		),
-
-		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Marquee Image Position', '%TEXDOMAIN%' ),
-			'param_name' => 'background_marquee_position',
-			'value' => array(
-				esc_html__( 'stretch', '%TEXDOMAIN%' ) => 'stretch',
-				esc_html__( 'top', '%TEXDOMAIN%' ) => 'top',
-				esc_html__( 'middle', '%TEXDOMAIN%' ) => 'middle',
-				esc_html__( 'bottom', '%TEXDOMAIN%' ) => 'bottom',
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'image' ),
 			),
-			'dependency' => array( 'element' => 'background_effect', 'value' => array( 'marquee' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'LazyLoad', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Background Effect', '%TEXDOMAIN%' ),
+			'param_name' => 'background_effect',
+			'value'      => apply_filters(
+				'wolf_core_background_effects',
+				array(
+					esc_html__( 'None', '%TEXDOMAIN%' )    => 'none',
+					esc_html__( 'Parallax', '%TEXDOMAIN%' ) => 'parallax',
+					esc_html__( 'Zoom', '%TEXDOMAIN%' )    => 'zoomin',
+					esc_html__( 'Fixed', '%TEXDOMAIN%' )   => 'fixed',
+					esc_html__( 'Marquee', '%TEXDOMAIN%' ) => 'marquee',
+					esc_html__( 'Blur', '%TEXDOMAIN%' )    => 'blur',
+				)
+			),
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'image', 'default_header', 'featured_image' ),
+			),
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
+		),
+
+		array(
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Marquee Image Position', '%TEXDOMAIN%' ),
+			'param_name' => 'background_marquee_position',
+			'value'      => array(
+				esc_html__( 'stretch', '%TEXDOMAIN%' ) => 'stretch',
+				esc_html__( 'top', '%TEXDOMAIN%' )     => 'top',
+				esc_html__( 'middle', '%TEXDOMAIN%' )  => 'middle',
+				esc_html__( 'bottom', '%TEXDOMAIN%' )  => 'bottom',
+			),
+			'dependency' => array(
+				'element' => 'background_effect',
+				'value'   => array( 'marquee' ),
+			),
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
+		),
+
+		array(
+			'type'       => 'checkbox',
+			'heading'    => esc_html__( 'LazyLoad', '%TEXDOMAIN%' ),
 			'param_name' => 'background_img_lazyload',
-			'value' => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => true ),
-			'std' => true,
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'image', 'default_header', 'featured_image' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'value'      => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => true ),
+			'std'        => true,
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'image', 'default_header', 'featured_image' ),
+			),
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
 		),
 
 		// Video URL
 		array(
-			'type' => 'wolf_core_video_url',
-			'heading' => esc_html__( 'Video URL', '%TEXDOMAIN%' ),
-			'param_name' => 'video_bg_url',
-			'value' => '',
+			'type'        => 'wolf_core_video_url',
+			'heading'     => esc_html__( 'Video URL', '%TEXDOMAIN%' ),
+			'param_name'  => 'video_bg_url',
+			'value'       => '',
 			'description' => esc_html__( 'A YouTube, Vimeo, or mp4 URL.', '%TEXDOMAIN%' ),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'video' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'dependency'  => array(
+				'element' => 'background_type',
+				'value'   => array( 'video' ),
+			),
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'      => 0,
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Video Start Time', '%TEXDOMAIN%' ),
-			'param_name' => 'video_bg_start_time',
-			'value' => '',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Video Start Time', '%TEXDOMAIN%' ),
+			'param_name'  => 'video_bg_start_time',
+			'value'       => '',
 			'description' => esc_html__( 'Set at which second the video will start (beta).', '%TEXDOMAIN%' ),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'video' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'dependency'  => array(
+				'element' => 'background_type',
+				'value'   => array( 'video' ),
+			),
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'      => 0,
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Video End Time', '%TEXDOMAIN%' ),
-			'param_name' => 'video_bg_end_time',
-			'value' => '',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Video End Time', '%TEXDOMAIN%' ),
+			'param_name'  => 'video_bg_end_time',
+			'value'       => '',
 			'description' => esc_html__( 'Set at which second the video will end (beta).', '%TEXDOMAIN%' ),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'video' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'dependency'  => array(
+				'element' => 'background_type',
+				'value'   => array( 'video' ),
+			),
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'      => 0,
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'Video Parallax', '%TEXDOMAIN%' ),
+			'type'       => 'checkbox',
+			'heading'    => esc_html__( 'Video Parallax', '%TEXDOMAIN%' ),
 			'param_name' => 'video_bg_parallax',
-			'value' => '',
+			'value'      => '',
 			'dependency' => array(
 				'element' => 'background_type',
-				'value' => array( 'video' )
+				'value'   => array( 'video' ),
 			),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Loop video.', '%TEXDOMAIN%' ),
-			'param_name' => 'video_bg_loop',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Loop video.', '%TEXDOMAIN%' ),
+			'param_name'  => 'video_bg_loop',
+			'value'       => array(
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
-				esc_html__( 'No', '%TEXDOMAIN%' ) => 'no',
+				esc_html__( 'No', '%TEXDOMAIN%' )  => 'no',
 			),
-			'dependency' => array(
+			'dependency'  => array(
 				'element' => 'background_type',
-				'value' => array( 'video' )
+				'value'   => array( 'video' ),
 			),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'      => 0,
 			'description' => esc_html__( 'Beta: If set to "No", the video will stop at the end only for YouTube video when parallax is not enabled.', '%TEXDOMAIN%' ),
 		),
 
 		array(
-			'type' => 'attach_image',
-			'heading' => esc_html__( 'Video Image Fallback', '%TEXDOMAIN%' ),
-			'param_name' => 'video_bg_img',
-			'value' => '',
+			'type'        => 'attach_image',
+			'heading'     => esc_html__( 'Video Image Fallback', '%TEXDOMAIN%' ),
+			'param_name'  => 'video_bg_img',
+			'value'       => '',
 			'description' => esc_html__( 'An image to display when the video is loading.', '%TEXDOMAIN%' ),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'video' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'dependency'  => array(
+				'element' => 'background_type',
+				'value'   => array( 'video' ),
+			),
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'      => 0,
 		),
 
 		array(
-			'type' => 'attach_image',
-			'heading' => esc_html__( 'Video Image Mobile Fallback', '%TEXDOMAIN%' ),
-			'param_name' => 'video_bg_img_mobile',
-			'value' => '',
+			'type'        => 'attach_image',
+			'heading'     => esc_html__( 'Video Image Mobile Fallback', '%TEXDOMAIN%' ),
+			'param_name'  => 'video_bg_img_mobile',
+			'value'       => '',
 			'description' => esc_html__( 'An image to display when the video can\'t be played. The image above will be used if empty.', '%TEXDOMAIN%' ),
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'video' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'dependency'  => array(
+				'element' => 'background_type',
+				'value'   => array( 'video' ),
+			),
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'      => 0,
 		),
 
 		// Slideshow images
 		array(
-			'type' => 'attach_images',
-			'heading' => esc_html__( 'Slideshow Images', '%TEXDOMAIN%' ),
+			'type'       => 'attach_images',
+			'heading'    => esc_html__( 'Slideshow Images', '%TEXDOMAIN%' ),
 			'param_name' => 'slideshow_img_ids',
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'slideshow' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'dependency' => array(
+				'element' => 'background_type',
+				'value'   => array( 'slideshow' ),
+			),
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
 		),
 
 		// Slideshow speed
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Slideshow Speed', '%TEXDOMAIN%' ),
-			'param_name' => 'slideshow_speed',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Slideshow Speed', '%TEXDOMAIN%' ),
+			'param_name'  => 'slideshow_speed',
 			'description' => esc_html__( 'In milliseconds.', '%TEXDOMAIN%' ),
 			'placeholder' => 5000,
-			'std' => '5000',
-			'dependency' => array( 'element' => 'background_type', 'value' => array( 'slideshow' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'std'         => '5000',
+			'dependency'  => array(
+				'element' => 'background_type',
+				'value'   => array( 'slideshow' ),
+			),
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'      => 0,
 		),
 
 		// Overlay
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Add Overlay', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Add Overlay', '%TEXDOMAIN%' ),
 			'param_name' => 'add_overlay',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
 			),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Overlay Color', '%TEXDOMAIN%' ),
-			'param_name' => 'overlay_color',
-			'value' => array_merge(
-				array( esc_html__( 'Auto', '%TEXDOMAIN%' ) => 'auto', ),
+			'type'               => 'dropdown',
+			'heading'            => esc_html__( 'Overlay Color', '%TEXDOMAIN%' ),
+			'param_name'         => 'overlay_color',
+			'value'              => array_merge(
+				array( esc_html__( 'Auto', '%TEXDOMAIN%' ) => 'auto' ),
 				wolf_core_get_shared_gradient_colors(),
 				wolf_core_get_shared_colors(),
-				array( esc_html__( 'Custom color', '%TEXDOMAIN%' ) => 'custom', )
+				array( esc_html__( 'Custom color', '%TEXDOMAIN%' ) => 'custom' )
 			),
-			'std' => 'black',
-			'description' => esc_html__( 'Select an overlay color.', '%TEXDOMAIN%' ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'std'                => 'black',
+			'description'        => esc_html__( 'Select an overlay color.', '%TEXDOMAIN%' ),
+			'group'              => esc_html__( 'Style', '%TEXDOMAIN%' ),
 			'param_holder_class' => 'wolf_core_colored-dropdown',
-			'dependency' => array( 'element' => 'add_overlay', 'value' => array( 'yes' ) ),
+			'dependency'         => array(
+				'element' => 'add_overlay',
+				'value'   => array( 'yes' ),
+			),
 		),
 
 		// Overlay color
 		array(
-			'type' => 'colorpicker',
-			'heading' => esc_html__( 'Overlay Custom Color', '%TEXDOMAIN%' ),
+			'type'       => 'colorpicker',
+			'heading'    => esc_html__( 'Overlay Custom Color', '%TEXDOMAIN%' ),
 			'param_name' => 'overlay_custom_color',
-			//'value' => '#000000',
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			// 'value' => '#000000',
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
 			'dependency' => array(
 				'element' => 'overlay_color',
-				'value' => 'custom',
+				'value'   => 'custom',
 			),
 		),
 
 		// Overlay opacity
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Overlay Opacity in Percent', '%TEXDOMAIN%' ),
-			'param_name' => 'overlay_opacity',
+			'type'        => 'wolf_core_numeric_slider',
+			'heading'     => esc_html__( 'Overlay Opacity in Percent', '%TEXDOMAIN%' ),
+			'param_name'  => 'overlay_opacity',
 			'description' => '',
-			'value' => 60,
-			'min' => 0,
-			'max' => 100,
-			'step' => 1,
-			'dependency' => array( 'element' => 'add_overlay', 'value' => array( 'yes' ) ),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'value'       => 60,
+			'min'         => 0,
+			'max'         => 100,
+			'step'        => 1,
+			'dependency'  => array(
+				'element' => 'add_overlay',
+				'value'   => array( 'yes' ),
+			),
+			'group'       => esc_html__( 'Style', '%TEXDOMAIN%' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Add Top Shape Divider', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Add Top Shape Divider', '%TEXDOMAIN%' ),
 			'param_name' => 'add_top_shape_divider',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
 			),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Add Bottom Shape Divider', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Add Bottom Shape Divider', '%TEXDOMAIN%' ),
 			'param_name' => 'add_bottom_shape_divider',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
 			),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
-			'weight' => 0,
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'weight'     => 0,
 		),
 
 		// Particles
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Add Particles', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Add Particles', '%TEXDOMAIN%' ),
 			'param_name' => 'add_particles',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
 			),
-			'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
+			'group'      => esc_html__( 'Style', '%TEXDOMAIN%' ),
 		),
 
 		// array(
-		// 	'type' => 'dropdown',
-		// 	'heading' => esc_html__( 'Particles Type', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'particles_type',
-		// 	'value' => array(
-		// 		esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
-		// 		esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
-		// 	),
-		// 	'dependency' => array( 'element' => 'add_particles', 'value' => array( 'yes' ) ),
-		// 	'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
+		// 'type' => 'dropdown',
+		// 'heading' => esc_html__( 'Particles Type', '%TEXDOMAIN%' ),
+		// 'param_name' => 'particles_type',
+		// 'value' => array(
+		// esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
+		// esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
+		// ),
+		// 'dependency' => array( 'element' => 'add_particles', 'value' => array( 'yes' ) ),
+		// 'group' => esc_html__( 'Style', '%TEXDOMAIN%' ),
 		// ),
 	);
 }
@@ -1230,63 +1287,63 @@ function wolf_core_column_inner_general_params() {
 	return array(
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Vertical Position', '%TEXDOMAIN%' ),
-			'param_name' => 'content_placement',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Vertical Position', '%TEXDOMAIN%' ),
+			'param_name'  => 'content_placement',
+			'value'       => array(
 				esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
-				esc_html__( 'Top', '%TEXDOMAIN%' ) => 'top',
-				esc_html__( 'Middle', '%TEXDOMAIN%' ) => 'middle',
-				esc_html__( 'Bottom', '%TEXDOMAIN%' ) => 'bottom',
+				esc_html__( 'Top', '%TEXDOMAIN%' )     => 'top',
+				esc_html__( 'Middle', '%TEXDOMAIN%' )  => 'middle',
+				esc_html__( 'Bottom', '%TEXDOMAIN%' )  => 'bottom',
 			),
 			'description' => esc_html__( 'Select the vertical position of the content.', '%TEXDOMAIN%' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Horizontal Position', '%TEXDOMAIN%' ),
-			'param_name' => 'content_placement',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Horizontal Position', '%TEXDOMAIN%' ),
+			'param_name'  => 'content_placement',
+			'value'       => array(
 				esc_html__( 'Center', '%TEXDOMAIN%' ) => 'center',
-				esc_html__( 'Left', '%TEXDOMAIN%' ) => 'left',
-				esc_html__( 'Right', '%TEXDOMAIN%' ) => 'right',
+				esc_html__( 'Left', '%TEXDOMAIN%' )   => 'left',
+				esc_html__( 'Right', '%TEXDOMAIN%' )  => 'right',
 			),
 			'description' => esc_html__( 'Select the horizontal position of the content.', '%TEXDOMAIN%' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Default Text Alignment', '%TEXDOMAIN%' ),
-			'param_name' => 'text_alignment',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Default Text Alignment', '%TEXDOMAIN%' ),
+			'param_name'  => 'text_alignment',
+			'value'       => array(
 				esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
-				esc_html__( 'Left', '%TEXDOMAIN%' ) => 'left',
-				esc_html__( 'Center', '%TEXDOMAIN%' ) => 'center',
-				esc_html__( 'Right', '%TEXDOMAIN%' ) => 'right',
+				esc_html__( 'Left', '%TEXDOMAIN%' )    => 'left',
+				esc_html__( 'Center', '%TEXDOMAIN%' )  => 'center',
+				esc_html__( 'Right', '%TEXDOMAIN%' )   => 'right',
 			),
 			'description' => esc_html__( 'Specify the text alignment inside the column. It can be overwritten in some elements.', '%TEXDOMAIN%' ),
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Content Min Height', '%TEXDOMAIN%' ),
-			'param_name' => 'min_height',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Content Min Height', '%TEXDOMAIN%' ),
+			'param_name'  => 'min_height',
 			'placeholder' => 'auto',
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Content Max Width', '%TEXDOMAIN%' ),
-			'param_name' => 'max_width',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Content Max Width', '%TEXDOMAIN%' ),
+			'param_name'  => 'max_width',
 			'placeholder' => 'auto',
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Column Style', '%TEXDOMAIN%' ),
-			'param_name' => 'column_style',
-			'value' => array(
-				esc_html__( 'None', '%TEXDOMAIN%' ) => 'none',
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Column Style', '%TEXDOMAIN%' ),
+			'param_name'  => 'column_style',
+			'value'       => array(
+				esc_html__( 'None', '%TEXDOMAIN%' )       => 'none',
 				esc_html__( 'Box Shadow', '%TEXDOMAIN%' ) => 'box-shadow',
 				esc_html__( 'Boxed with Hover Effect', '%TEXDOMAIN%' ) => 'boxed',
 			),
@@ -1294,11 +1351,11 @@ function wolf_core_column_inner_general_params() {
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => __( 'Width', '%TEXDOMAIN%' ),
+			'type'             => 'dropdown',
+			'heading'          => __( 'Width', '%TEXDOMAIN%' ),
 			'edit_field_class' => 'wvc-hidden',
-			'param_name' => 'width',
-			'value' => array(
+			'param_name'       => 'width',
+			'value'            => array(
 				esc_html__( '1 column - 1/12', '%TEXDOMAIN%' ) => '1/12',
 				esc_html__( '2 columns - 1/6', '%TEXDOMAIN%' ) => '1/6',
 				esc_html__( '3 columns - 1/4', '%TEXDOMAIN%' ) => '1/4',
@@ -1312,9 +1369,9 @@ function wolf_core_column_inner_general_params() {
 				esc_html__( '11 columns - 11/12', '%TEXDOMAIN%' ) => '11/12',
 				esc_html__( '12 columns - 1/1', '%TEXDOMAIN%' ) => '1/1',
 			),
-			//'group' => __( 'Responsive Options', '%TEXDOMAIN%' ),
-			'description' => __( 'Select column width.', '%TEXDOMAIN%' ),
-			'std' => '1/1',
+			// 'group' => __( 'Responsive Options', '%TEXDOMAIN%' ),
+			'description'      => __( 'Select column width.', '%TEXDOMAIN%' ),
+			'std'              => '1/1',
 		),
 	);
 }
@@ -1326,121 +1383,134 @@ function wolf_core_row_general_params() {
 	return array(
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Column Type', '%TEXDOMAIN%' ),
-			'param_name' => 'column_type',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Column Type', '%TEXDOMAIN%' ),
+			'param_name'  => 'column_type',
+			'value'       => array(
 				esc_html__( 'Columns', '%TEXDOMAIN%' ) => 'column',
-				esc_html__( 'Blocks', '%TEXDOMAIN%' ) => 'block',
+				esc_html__( 'Blocks', '%TEXDOMAIN%' )  => 'block',
 			),
-			'std' => 'column',
+			'std'         => 'column',
 			'description' => esc_html__( 'This will set a default style for your columns.', '%TEXDOMAIN%' ),
-			'weight' => 1,
+			'weight'      => 1,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Container Width', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Container Width', '%TEXDOMAIN%' ),
 			'param_name' => 'container_width',
-			'value' => array(
-				esc_html__( 'Wide', '%TEXDOMAIN%' ) => 'wide',
-				esc_html__( 'Boxed', '%TEXDOMAIN%' ) => 'boxed',
+			'value'      => array(
+				esc_html__( 'Wide', '%TEXDOMAIN%' )        => 'wide',
+				esc_html__( 'Boxed', '%TEXDOMAIN%' )       => 'boxed',
 				esc_html__( 'Small Boxed', '%TEXDOMAIN%' ) => 'boxed-small',
 				esc_html__( 'Large Boxed', '%TEXDOMAIN%' ) => 'boxed-large',
 			),
-			'std' => 'wide',
-			'dependency' => array( 'element' => 'column_type', 'value' => array( 'column' ), ),
-			'weight' => 1,
+			'std'        => 'wide',
+			'dependency' => array(
+				'element' => 'column_type',
+				'value'   => array( 'column' ),
+			),
+			'weight'     => 1,
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'Box Shadow', '%TEXDOMAIN%' ),
+			'type'       => 'checkbox',
+			'heading'    => esc_html__( 'Box Shadow', '%TEXDOMAIN%' ),
 			'param_name' => 'box_shadow',
 			'dependency' => array(
-				'element' => 'container_width',
+				'element'            => 'container_width',
 				'value_not_equal_to' => array( 'wide' ),
 			),
-			'weight' => 1,
+			'weight'     => 1,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Content Width', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Content Width', '%TEXDOMAIN%' ),
 			'param_name' => 'content_width',
-			'value' => array(
+			'value'      => array(
 				sprintf( esc_html__( 'Standard width (%s centered)', '%TEXDOMAIN%' ), apply_filters( 'wolf_core_row_standard_width', '1140px' ) ) => 'standard',
 				sprintf( esc_html__( 'Small width (%s centered)', '%TEXDOMAIN%' ), apply_filters( 'wolf_core_row_small_width', '750px' ) ) => 'small',
 				sprintf( esc_html__( 'Large width (%s centered)', '%TEXDOMAIN%' ), '98%' ) => 'large',
 				sprintf( esc_html__( 'Full width (%s)', '%TEXDOMAIN%' ), '100%' ) => 'full',
 			),
-			'std' => apply_filters( 'wolf_core_default_row_content_width', 'standard' ),
-			'dependency' => array( 'element' => 'container_width', 'value' => array( 'wide' ), ),
-			'weight' => 1,
+			'std'        => apply_filters( 'wolf_core_default_row_content_width', 'standard' ),
+			'dependency' => array(
+				'element' => 'container_width',
+				'value'   => array( 'wide' ),
+			),
+			'weight'     => 1,
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Min Height', '%TEXDOMAIN%' ),
-			'param_name' => 'min_height',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Min Height', '%TEXDOMAIN%' ),
+			'param_name'  => 'min_height',
 			'placeholder' => 'auto',
 			'description' => esc_html__( 'Insert the row minimum height.', '%TEXDOMAIN%' ),
-			'weight' => 1,
+			'weight'      => 1,
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'Full height row?', '%TEXDOMAIN%' ),
-			'param_name' => 'full_height',
+			'type'        => 'checkbox',
+			'heading'     => esc_html__( 'Full height row?', '%TEXDOMAIN%' ),
+			'param_name'  => 'full_height',
 			'description' => esc_html__( 'If checked row will be set to full height.', '%TEXDOMAIN%' ),
-			'value' => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
-			'weight' => 1,
-			//'dependency' => array( 'element' => 'column_type', 'value' => array( 'column' ), ),
+			'value'       => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
+			'weight'      => 1,
+			// 'dependency' => array( 'element' => 'column_type', 'value' => array( 'column' ), ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Columns Position', '%TEXDOMAIN%' ),
-			'param_name' => 'columns_placement',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Columns Position', '%TEXDOMAIN%' ),
+			'param_name'  => 'columns_placement',
+			'value'       => array(
 				esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
-				esc_html__( 'Middle', '%TEXDOMAIN%' ) => 'middle',
-				esc_html__( 'Top', '%TEXDOMAIN%' ) => 'top',
-				esc_html__( 'Bottom', '%TEXDOMAIN%' ) => 'bottom',
+				esc_html__( 'Middle', '%TEXDOMAIN%' )  => 'middle',
+				esc_html__( 'Top', '%TEXDOMAIN%' )     => 'top',
+				esc_html__( 'Bottom', '%TEXDOMAIN%' )  => 'bottom',
 				esc_html__( 'Stretch', '%TEXDOMAIN%' ) => 'stretch',
 			),
 			'description' => esc_html__( 'Select columns position within row.', '%TEXDOMAIN%' ),
 			// 'dependency' => array(
-			// 	'element' => 'full_height',
-			// 	'not_empty' => true,
+			// 'element' => 'full_height',
+			// 'not_empty' => true,
 			// ),
-			'weight' => 1,
+			'weight'      => 1,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Content Position', '%TEXDOMAIN%' ),
-			'param_name' => 'content_placement',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Content Position', '%TEXDOMAIN%' ),
+			'param_name'  => 'content_placement',
+			'value'       => array(
 				esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
-				esc_html__( 'Top', '%TEXDOMAIN%' ) => 'top',
-				esc_html__( 'Middle', '%TEXDOMAIN%' ) => 'middle',
-				esc_html__( 'Bottom', '%TEXDOMAIN%' ) => 'bottom',
+				esc_html__( 'Top', '%TEXDOMAIN%' )     => 'top',
+				esc_html__( 'Middle', '%TEXDOMAIN%' )  => 'middle',
+				esc_html__( 'Bottom', '%TEXDOMAIN%' )  => 'bottom',
 			),
 			'description' => esc_html__( 'Select content position within columns.', '%TEXDOMAIN%' ),
-			'dependency' => array( 'element' => 'column_type', 'value' => array( 'column' ) ),
+			'dependency'  => array(
+				'element' => 'column_type',
+				'value'   => array( 'column' ),
+			),
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'Add pointing down arrow', '%TEXDOMAIN%' ),
+			'type'        => 'checkbox',
+			'heading'     => esc_html__( 'Add pointing down arrow', '%TEXDOMAIN%' ),
 			'description' => esc_html__( 'Allow user to scroll to the next section when clicking on the arrow', '%TEXDOMAIN%' ),
-			'param_name' => 'arrow_down',
-			'dependency' => array( 'element' => 'column_type', 'value' => array( 'column' ), ),
-			'weight' => 1,
+			'param_name'  => 'arrow_down',
+			'dependency'  => array(
+				'element' => 'column_type',
+				'value'   => array( 'column' ),
+			),
+			'weight'      => 1,
 		),
 
-		/*array(
+		/*
+		array(
 			'type' => 'checkbox',
 			'heading' => esc_html__( 'Mousewheel Scroll Down (beta)', '%TEXDOMAIN%' ),
 			'description' => esc_html__( 'Scroll to the next section automatically when scrolling down', '%TEXDOMAIN%' ),
@@ -1450,49 +1520,52 @@ function wolf_core_row_general_params() {
 		),*/
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Arrow Caption', '%TEXDOMAIN%' ),
-			'param_name' => 'arrow_down_text',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Arrow Caption', '%TEXDOMAIN%' ),
+			'param_name'  => 'arrow_down_text',
 			'placeholder' => esc_html__( 'Continue', '%TEXDOMAIN%' ),
-			'dependency' => array(
-				'element' => 'arrow_down',
+			'dependency'  => array(
+				'element'   => 'arrow_down',
 				'not_empty' => true,
 			),
-			'weight' => 1,
+			'weight'      => 1,
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Arrow Alignement', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Arrow Alignement', '%TEXDOMAIN%' ),
 			'param_name' => 'arrow_down_alignement',
-			'value' => array(
+			'value'      => array(
 				esc_html__( 'Center', '%TEXDOMAIN%' ) => 'center',
-				esc_html__( 'Left', '%TEXDOMAIN%' ) => 'left',
-				esc_html__( 'Right', '%TEXDOMAIN%' ) => 'right',
+				esc_html__( 'Left', '%TEXDOMAIN%' )   => 'left',
+				esc_html__( 'Right', '%TEXDOMAIN%' )  => 'right',
 			),
 			'dependency' => array(
-				'element' => 'arrow_down',
+				'element'   => 'arrow_down',
 				'not_empty' => true,
 			),
-			'weight' => 1,
+			'weight'     => 1,
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'Equal height', '%TEXDOMAIN%' ),
-			'param_name' => 'equal_height',
+			'type'        => 'checkbox',
+			'heading'     => esc_html__( 'Equal height', '%TEXDOMAIN%' ),
+			'param_name'  => 'equal_height',
 			'description' => esc_html__( 'If checked columns will be set to equal height.', '%TEXDOMAIN%' ),
-			'value' => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
-			'std' => 'no',
-			'dependency' => array( 'element' => 'column_type', 'value' => array( 'column' ), ),
+			'value'       => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
+			'std'         => 'no',
+			'dependency'  => array(
+				'element' => 'column_type',
+				'value'   => array( 'column' ),
+			),
 		),
 
 		// Visibility
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Visibility', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Visibility', '%TEXDOMAIN%' ),
 			'param_name' => 'hide_class',
-			'value' => array(
+			'value'      => array(
 				esc_html__( 'Always visible', '%TEXDOMAIN%' ) => '',
 				esc_html__( 'Hide on tablet and mobile', '%TEXDOMAIN%' ) => 'wvc-hide-tablet',
 				esc_html__( 'Hide on mobile', '%TEXDOMAIN%' ) => 'wvc-hide-mobile',
@@ -1503,44 +1576,44 @@ function wolf_core_row_general_params() {
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'Disable row', '%TEXDOMAIN%' ),
-			'param_name' => 'disable_element',
+			'type'        => 'checkbox',
+			'heading'     => esc_html__( 'Disable row', '%TEXDOMAIN%' ),
+			'param_name'  => 'disable_element',
 			// Inner param name.
 			'description' => esc_html__( 'If checked the row won\'t be visible on the public side of your website. You can switch it back any time.', '%TEXDOMAIN%' ),
-			'value' => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
+			'value'       => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
 		),
 
 		// Shift Y-Axis
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Shift Y-Axis', '%TEXDOMAIN%' ),
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Shift Y-Axis', '%TEXDOMAIN%' ),
 			'param_name' => 'shift_y',
-			'min' => -1000,
-			'max' => 1000,
-			'step' => 10,
-			'std' => 0,
-			'group' => esc_html( 'Off-Grid', '%TEXDOMAIN%' ),
-			'weight' => -100,
+			'min'        => -1000,
+			'max'        => 1000,
+			'step'       => 10,
+			'std'        => 0,
+			'group'      => esc_html( 'Off-Grid', '%TEXDOMAIN%' ),
+			'weight'     => -100,
 		),
 
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Custom Z-Index', '%TEXDOMAIN%' ),
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Custom Z-Index', '%TEXDOMAIN%' ),
 			'param_name' => 'z_index',
-			'min' => 0,
-			'max' => 100,
-			'step' => 1,
-			'std' => 0,
-			'group' => esc_html( 'Off-Grid', '%TEXDOMAIN%' ),
-			'weight' => -100,
+			'min'        => 0,
+			'max'        => 100,
+			'step'       => 1,
+			'std'        => 0,
+			'group'      => esc_html( 'Off-Grid', '%TEXDOMAIN%' ),
+			'weight'     => -100,
 		),
 
 		// Extra class
 		array(
-			'type' => 'textfield',
-			'heading' => esc_html__( 'Extra class name', '%TEXDOMAIN%' ),
-			'param_name' => 'el_class',
+			'type'        => 'textfield',
+			'heading'     => esc_html__( 'Extra class name', '%TEXDOMAIN%' ),
+			'param_name'  => 'el_class',
 			'description' => esc_html__( 'Style particular content element differently - add a class name and refer to it in custom CSS.', '%TEXDOMAIN%' ),
 		),
 	);
@@ -1552,23 +1625,23 @@ function wolf_core_row_general_params() {
 function wolf_core_row_extra_params() {
 	return array(
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Custom Column Gap', '%TEXTDOMAIN%' ),
-			'param_name' => 'gap',
-			'description' => esc_html__( 'The space gap between columns.', '%TEXTDOMAIN%' ),
-			'weight' => -5,
-			'std' => '',
-			'group' => esc_html__( 'Advanced', '%TEXTDOMAIN%' ),
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Custom Column Gap', 'wolf-core' ),
+			'param_name'  => 'gap',
+			'description' => esc_html__( 'The space gap between columns.', 'wolf-core' ),
+			'weight'      => -5,
+			'std'         => '',
+			'group'       => esc_html__( 'Advanced', 'wolf-core' ),
 		),
 
 		// Row name
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Section name', '%TEXTDOMAIN%' ),
-			'param_name' => 'row_name',
-			'description' => esc_html__( 'Required for the onepage scroll, this gives the name to the section.', '%TEXTDOMAIN%' ),
-			'weight' => -5,
-			'group' => esc_html__( 'Advanced', '%TEXTDOMAIN%' ),
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Section name', 'wolf-core' ),
+			'param_name'  => 'row_name',
+			'description' => esc_html__( 'Required for the onepage scroll, this gives the name to the section.', 'wolf-core' ),
+			'weight'      => -5,
+			'group'       => esc_html__( 'Advanced', 'wolf-core' ),
 		),
 	);
 }
@@ -1579,27 +1652,27 @@ function wolf_core_row_extra_params() {
 function wolf_core_style_params() {
 	return array(
 		array(
-			'type' => 'css_editor',
-			'heading' => esc_html__( 'CSS box', '%TEXTDOMAIN%' ),
+			'type'       => 'css_editor',
+			'heading'    => esc_html__( 'CSS box', 'wolf-core' ),
 			'param_name' => 'css',
-			'group' => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
-			'weight' => -1,
+			'group'      => esc_html__( 'Custom', 'wolf-core' ),
+			'weight'     => -1,
 		),
 
 		// array(
-		// 	'type' => 'textfield',
-		// 	'heading' => esc_html__( 'Border Color', '%TEXTDOMAIN%' ),
-		// 	'param_name' => 'border_color',
-		// 	'group' => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
-		// 	'weight' => -1,
+		// 'type' => 'textfield',
+		// 'heading' => esc_html__( 'Border Color', 'wolf-core' ),
+		// 'param_name' => 'border_color',
+		// 'group' => esc_html__( 'Custom', 'wolf-core' ),
+		// 'weight' => -1,
 		// ),
 
 		// array(
-		// 	'type' => 'textfield',
-		// 	'heading' => esc_html__( 'Border Style', '%TEXTDOMAIN%' ),
-		// 	'param_name' => 'border_style',
-		// 	'group' => esc_html__( 'Custom', '%TEXTDOMAIN%' ),
-		// 	'weight' => -1,
+		// 'type' => 'textfield',
+		// 'heading' => esc_html__( 'Border Style', 'wolf-core' ),
+		// 'param_name' => 'border_style',
+		// 'group' => esc_html__( 'Custom', 'wolf-core' ),
+		// 'weight' => -1,
 		// ),
 	);
 }
@@ -1611,390 +1684,389 @@ function wolf_core_row_shape_dividers_params() {
 
 	$sd_top = array(
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Type', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Type', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_top_type',
-			'value' => array(
+			'value'      => array(
 				esc_html__( 'Disabled', '%TEXDOMAIN%' ) => 'disabled',
-				esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
+				esc_html__( 'Default', '%TEXDOMAIN%' )  => 'default',
 				esc_html__( 'Custom Image', '%TEXDOMAIN%' ) => 'image',
-				//esc_html__( 'Custom SVG', '%TEXDOMAIN%' ) => 'custom_svg',
+				// esc_html__( 'Custom SVG', '%TEXDOMAIN%' ) => 'custom_svg',
 			),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
 			'dependency' => array(
 				'element' => 'add_top_shape_divider',
-				'value' => array( 'yes' )
+				'value'   => array( 'yes' ),
 			),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_top_shape',
-			'value' => wolf_core_get_shape_divider_options(),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'value'      => wolf_core_get_shape_divider_options(),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
 			'dependency' => array(
 				'element' => 'sd_top_type',
-				'value' => array( 'default' ),
+				'value'   => array( 'default' ),
 			),
 		),
 
 		array(
-			'type' => 'attach_image',
-			'heading' => esc_html__( 'Image', '%TEXDOMAIN%' ),
+			'type'       => 'attach_image',
+			'heading'    => esc_html__( 'Image', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_top_img',
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
 			'dependency' => array(
 				'element' => 'sd_top_type',
-				'value' => array( 'image' ),
+				'value'   => array( 'image' ),
 			),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Inverted', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape Inverted', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_top_inverted',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
 			),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
 			'dependency' => array(
-				'element' => 'sd_top_type',
-				'value_not_equal_to' => array( 'disabled' )
-			),
-		),
-
-		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Flip', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_top_flip',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
-				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
-			),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-			'dependency' => array(
-				'element' => 'sd_top_type',
-				'value_not_equal_to' => array( 'disabled' )
-			),
-		),
-
-
-		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Shape Height', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_top_height',
-			'description' => esc_html__( 'Enter a value in % or px.', '%TEXDOMAIN%' ),
-			'weight' => -5,
-			'placeholder' => '25%',
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-			'dependency' => array(
-				'element' => 'sd_top_type',
-				'value_not_equal_to' => array( 'disabled' )
-			),
-		),
-
-		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Color', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_top_color',
-			'value' => array_merge(
-				array( esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default', ),
-				wolf_core_get_shared_colors(),
-				array( esc_html__( 'Custom color', '%TEXDOMAIN%' ) => 'custom', ),
-				array( esc_html__( 'Transparent', '%TEXDOMAIN%' ) => 'transparent', )
-			),
-			'std' => 'default',
-			'description' => esc_html__( 'Select a color.', '%TEXDOMAIN%' ),
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-			'param_holder_class' => 'wolf_core_colored-dropdown',
-			'weight' => -5,
-			'dependency' => array(
-				'element' => 'sd_top_type',
-				'value' => array( 'default' ),
-			),
-		),
-
-		array(
-			'type' => 'colorpicker',
-			'heading' => esc_html__( 'Shape Custom Color', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_top_custom_color',
-			'dependency' => array(
-				'element' => 'sd_top_color',
-				'value' => 'custom',
-			),
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-			'weight' => -5,
-		),
-
-		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Shape Opacity', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_top_opacity',
-			'weight' => -5,
-			'std' => '',
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-			'min' => 0,
-			'max' => 100,
-			'step' => 1,
-			'std' => 100,
-			'dependency' => array(
-				'element' => 'sd_top_type',
-				'value_not_equal_to' => array( 'disabled' )
-			),
-		),
-
-		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Ratio', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_top_ratio',
-			'value' => array(
-				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
-				esc_html__( 'No', '%TEXDOMAIN%' ) => 'no',
-			),
-			'weight' => -5,
-			'std' => 'yes',
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-			'dependency' => array(
-				'element' => 'sd_top_type',
+				'element'            => 'sd_top_type',
 				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Shape Z-Index', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_top_zindex',
-			'weight' => -5,
-			'std' => '',
-			'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-			'min' => 0,
-			'max' => 10,
-			'step' => 1,
-			'std' => 0,
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape Flip', '%TEXDOMAIN%' ),
+			'param_name' => 'sd_top_flip',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
+				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
+			),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
 			'dependency' => array(
+				'element'            => 'sd_top_type',
+				'value_not_equal_to' => array( 'disabled' ),
+			),
+		),
+
+		array(
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Shape Height', '%TEXDOMAIN%' ),
+			'param_name'  => 'sd_top_height',
+			'description' => esc_html__( 'Enter a value in % or px.', '%TEXDOMAIN%' ),
+			'weight'      => -5,
+			'placeholder' => '25%',
+			'group'       => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'dependency'  => array(
+				'element'            => 'sd_top_type',
+				'value_not_equal_to' => array( 'disabled' ),
+			),
+		),
+
+		array(
+			'type'               => 'dropdown',
+			'heading'            => esc_html__( 'Shape Color', '%TEXDOMAIN%' ),
+			'param_name'         => 'sd_top_color',
+			'value'              => array_merge(
+				array( esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default' ),
+				wolf_core_get_shared_colors(),
+				array( esc_html__( 'Custom color', '%TEXDOMAIN%' ) => 'custom' ),
+				array( esc_html__( 'Transparent', '%TEXDOMAIN%' ) => 'transparent' )
+			),
+			'std'                => 'default',
+			'description'        => esc_html__( 'Select a color.', '%TEXDOMAIN%' ),
+			'group'              => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'param_holder_class' => 'wolf_core_colored-dropdown',
+			'weight'             => -5,
+			'dependency'         => array(
 				'element' => 'sd_top_type',
-				'value_not_equal_to' => array( 'disabled' )
+				'value'   => array( 'default' ),
+			),
+		),
+
+		array(
+			'type'       => 'colorpicker',
+			'heading'    => esc_html__( 'Shape Custom Color', '%TEXDOMAIN%' ),
+			'param_name' => 'sd_top_custom_color',
+			'dependency' => array(
+				'element' => 'sd_top_color',
+				'value'   => 'custom',
+			),
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+		),
+
+		array(
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Shape Opacity', '%TEXDOMAIN%' ),
+			'param_name' => 'sd_top_opacity',
+			'weight'     => -5,
+			'std'        => '',
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'min'        => 0,
+			'max'        => 100,
+			'step'       => 1,
+			'std'        => 100,
+			'dependency' => array(
+				'element'            => 'sd_top_type',
+				'value_not_equal_to' => array( 'disabled' ),
+			),
+		),
+
+		array(
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape Ratio', '%TEXDOMAIN%' ),
+			'param_name' => 'sd_top_ratio',
+			'value'      => array(
+				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
+				esc_html__( 'No', '%TEXDOMAIN%' )  => 'no',
+			),
+			'weight'     => -5,
+			'std'        => 'yes',
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'dependency' => array(
+				'element'            => 'sd_top_type',
+				'value_not_equal_to' => array( 'disabled' ),
+			),
+		),
+
+		array(
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Shape Z-Index', '%TEXDOMAIN%' ),
+			'param_name' => 'sd_top_zindex',
+			'weight'     => -5,
+			'std'        => '',
+			'group'      => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+			'min'        => 0,
+			'max'        => 10,
+			'step'       => 1,
+			'std'        => 0,
+			'dependency' => array(
+				'element'            => 'sd_top_type',
+				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
 		// array(
-		// 	'type' => 'dropdown',
-		// 	'heading' => esc_html__( 'Shape Responsive', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'sd_top_responsive',
-		// 	'value' => array(
-		// 		esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
-		// 		esc_html__( 'No', '%TEXDOMAIN%' ) => '',
-		// 	),
-		// 	'weight' => -5,
-		// 	'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
-		// 	'dependency' => array(
-		// 		'element' => 'sd_top_type',
-		// 		'value_not_equal_to' => array( 'disabled' )
-		// 	),
+		// 'type' => 'dropdown',
+		// 'heading' => esc_html__( 'Shape Responsive', '%TEXDOMAIN%' ),
+		// 'param_name' => 'sd_top_responsive',
+		// 'value' => array(
+		// esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
+		// esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+		// ),
+		// 'weight' => -5,
+		// 'group' => esc_html__( 'Divider Top', '%TEXDOMAIN%' ),
+		// 'dependency' => array(
+		// 'element' => 'sd_top_type',
+		// 'value_not_equal_to' => array( 'disabled' )
+		// ),
 		// )
 	);
 
 	$sd_bottom = array(
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Type', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Type', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_type',
-			'value' => array(
+			'value'      => array(
 				esc_html__( 'Disabled', '%TEXDOMAIN%' ) => 'disabled',
-				esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
+				esc_html__( 'Default', '%TEXDOMAIN%' )  => 'default',
 				esc_html__( 'Custom Image', '%TEXDOMAIN%' ) => 'image',
-				//esc_html__( 'Custom SVG', '%TEXDOMAIN%' ) => 'custom_svg',
+				// esc_html__( 'Custom SVG', '%TEXDOMAIN%' ) => 'custom_svg',
 			),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
 			'dependency' => array(
 				'element' => 'add_bottom_shape_divider',
-				'value' => array( 'yes' )
+				'value'   => array( 'yes' ),
 			),
 		),
 
 		array(
-			'type' => 'attach_image',
-			'heading' => esc_html__( 'Image', '%TEXDOMAIN%' ),
+			'type'       => 'attach_image',
+			'heading'    => esc_html__( 'Image', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_img',
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
 			'dependency' => array(
 				'element' => 'sd_bottom_type',
-				'value' => array( 'image' ),
+				'value'   => array( 'image' ),
 			),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_shape',
-			'value' => wolf_core_get_shape_divider_options(),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'value'      => wolf_core_get_shape_divider_options(),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
 			'dependency' => array(
 				'element' => 'sd_bottom_type',
-				'value' => array( 'default' ),
+				'value'   => array( 'default' ),
 			),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Inverted', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape Inverted', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_inverted',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
 			),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
 			'dependency' => array(
-				'element' => 'sd_bottom_type',
-				'value_not_equal_to' => array( 'disabled' )
+				'element'            => 'sd_bottom_type',
+				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Flip', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape Flip', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_flip',
-			'value' => array(
-				esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+			'value'      => array(
+				esc_html__( 'No', '%TEXDOMAIN%' )  => '',
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
 			),
-			'weight' => -5,
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
 			'dependency' => array(
-				'element' => 'sd_bottom_type',
-				'value_not_equal_to' => array( 'disabled' )
+				'element'            => 'sd_bottom_type',
+				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
-
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Shape Height', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_bottom_height',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Shape Height', '%TEXDOMAIN%' ),
+			'param_name'  => 'sd_bottom_height',
 			'description' => esc_html__( 'Enter a value in % or px.', '%TEXDOMAIN%' ),
-			'weight' => -5,
+			'weight'      => -5,
 			'placeholder' => '25%',
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
-			'dependency' => array(
-				'element' => 'sd_bottom_type',
-				'value_not_equal_to' => array( 'disabled' )
+			'group'       => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'dependency'  => array(
+				'element'            => 'sd_bottom_type',
+				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Color', '%TEXDOMAIN%' ),
-			'param_name' => 'sd_bottom_color',
-			'value' => array_merge(
-				array( esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default', ),
+			'type'               => 'dropdown',
+			'heading'            => esc_html__( 'Shape Color', '%TEXDOMAIN%' ),
+			'param_name'         => 'sd_bottom_color',
+			'value'              => array_merge(
+				array( esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default' ),
 				wolf_core_get_shared_colors(),
-				array( esc_html__( 'Custom color', '%TEXDOMAIN%' ) => 'custom', ),
-				array( esc_html__( 'Transparent', '%TEXDOMAIN%' ) => 'transparent', )
+				array( esc_html__( 'Custom color', '%TEXDOMAIN%' ) => 'custom' ),
+				array( esc_html__( 'Transparent', '%TEXDOMAIN%' ) => 'transparent' )
 			),
-			'std' => 'default',
-			'description' => esc_html__( 'Select a color.', '%TEXDOMAIN%' ),
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'std'                => 'default',
+			'description'        => esc_html__( 'Select a color.', '%TEXDOMAIN%' ),
+			'group'              => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
 			'param_holder_class' => 'wolf_core_colored-dropdown',
-			'weight' => -5,
-			'dependency' => array(
+			'weight'             => -5,
+			'dependency'         => array(
 				'element' => 'sd_bottom_type',
-				'value' => array( 'default' ),
+				'value'   => array( 'default' ),
 			),
 		),
 
 		array(
-			'type' => 'colorpicker',
-			'heading' => esc_html__( 'Shape Custom Color', '%TEXDOMAIN%' ),
+			'type'       => 'colorpicker',
+			'heading'    => esc_html__( 'Shape Custom Color', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_custom_color',
 			'dependency' => array(
 				'element' => 'sd_bottom_color',
-				'value' => 'custom',
+				'value'   => 'custom',
 			),
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
-			'weight' => -5,
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'weight'     => -5,
 		),
 
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Shape Opacity', '%TEXDOMAIN%' ),
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Shape Opacity', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_opacity',
-			'weight' => -5,
-			'std' => '',
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
-			'min' => 0,
-			'max' => 100,
-			'step' => 1,
-			'std' => 100,
+			'weight'     => -5,
+			'std'        => '',
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'min'        => 0,
+			'max'        => 100,
+			'step'       => 1,
+			'std'        => 100,
 			'dependency' => array(
-				'element' => 'sd_bottom_type',
-				'value_not_equal_to' => array( 'disabled' )
+				'element'            => 'sd_bottom_type',
+				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Shape Ratio', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Shape Ratio', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_ratio',
-			'value' => array(
+			'value'      => array(
 				esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
-				esc_html__( 'No', '%TEXDOMAIN%' ) => 'no',
+				esc_html__( 'No', '%TEXDOMAIN%' )  => 'no',
 			),
-			'weight' => -5,
-			'std' => 'yes',
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'weight'     => -5,
+			'std'        => 'yes',
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
 			'dependency' => array(
-				'element' => 'sd_bottom_type',
-				'value_not_equal_to' => array( 'disabled' )
+				'element'            => 'sd_bottom_type',
+				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
 		array(
-			'type' => 'wolf_core_numeric_slider',
-			'heading' => esc_html__( 'Shape Z-Index', '%TEXDOMAIN%' ),
+			'type'       => 'wolf_core_numeric_slider',
+			'heading'    => esc_html__( 'Shape Z-Index', '%TEXDOMAIN%' ),
 			'param_name' => 'sd_bottom_zindex',
-			'weight' => -5,
-			'std' => '',
-			'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
-			'min' => 0,
-			'max' => 10,
-			'step' => 1,
-			'std' => 0,
+			'weight'     => -5,
+			'std'        => '',
+			'group'      => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+			'min'        => 0,
+			'max'        => 10,
+			'step'       => 1,
+			'std'        => 0,
 			'dependency' => array(
-				'element' => 'sd_bottom_type',
-				'value_not_equal_to' => array( 'disabled' )
+				'element'            => 'sd_bottom_type',
+				'value_not_equal_to' => array( 'disabled' ),
 			),
 		),
 
 		// array(
-		// 	'type' => 'dropdown',
-		// 	'heading' => esc_html__( 'Shape Responsive', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'sd_bottom_responsive',
-		// 	'value' => array(
-		// 		esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
-		// 		esc_html__( 'No', '%TEXDOMAIN%' ) => '',
-		// 	),
-		// 	'weight' => -5,
-		// 	'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
-		// 	'dependency' => array(
-		// 		'element' => 'sd_bottom_type',
-		// 		'value_not_equal_to' => array( 'disabled' )
-		// 	),
+		// 'type' => 'dropdown',
+		// 'heading' => esc_html__( 'Shape Responsive', '%TEXDOMAIN%' ),
+		// 'param_name' => 'sd_bottom_responsive',
+		// 'value' => array(
+		// esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes',
+		// esc_html__( 'No', '%TEXDOMAIN%' ) => '',
+		// ),
+		// 'weight' => -5,
+		// 'group' => esc_html__( 'Divider Bottom', '%TEXDOMAIN%' ),
+		// 'dependency' => array(
+		// 'element' => 'sd_bottom_type',
+		// 'value_not_equal_to' => array( 'disabled' )
+		// ),
 		// )
 	);
 
 	return array_merge(
-		$sd_top, $sd_bottom
+		$sd_top,
+		$sd_bottom
 	);
 }
 
@@ -2004,108 +2076,108 @@ function wolf_core_row_shape_dividers_params() {
 function wolf_core_row_inner_general_params() {
 	return array(
 		// array(
-		// 	'type' => 'dropdown',
-		// 	'heading' => esc_html__( 'Column Type', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'column_type',
-		// 	'value' => array(
-		// 		esc_html__( 'Columns', '%TEXDOMAIN%' ) => 'column',
-		// 		esc_html__( 'Block', '%TEXDOMAIN%' ) => 'block',
-		// 	),
-		// 	'std' => 'column',
-		// 	'description' => esc_html__( 'This will set a default style for your columns.', '%TEXDOMAIN%' ),
-		// 	'weight' => 1,
+		// 'type' => 'dropdown',
+		// 'heading' => esc_html__( 'Column Type', '%TEXDOMAIN%' ),
+		// 'param_name' => 'column_type',
+		// 'value' => array(
+		// esc_html__( 'Columns', '%TEXDOMAIN%' ) => 'column',
+		// esc_html__( 'Block', '%TEXDOMAIN%' ) => 'block',
+		// ),
+		// 'std' => 'column',
+		// 'description' => esc_html__( 'This will set a default style for your columns.', '%TEXDOMAIN%' ),
+		// 'weight' => 1,
 		// ),
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Row Width', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Row Width', '%TEXDOMAIN%' ),
 			'param_name' => 'container_width',
-			'value' => array(
+			'value'      => array(
 				sprintf( esc_html__( 'Inherit', '%TEXDOMAIN%' ), apply_filters( 'wolf_core_row_standard_width', '1140px' ) ) => 'inherit',
 				sprintf( esc_html__( 'Standard width (%s centered)', '%TEXDOMAIN%' ), apply_filters( 'wolf_core_row_standard_width', '1140px' ) ) => 'standard',
 				sprintf( esc_html__( 'Small width (%s centered)', '%TEXDOMAIN%' ), apply_filters( 'wolf_core_row_small_width', '750px' ) ) => 'small',
 			),
-			'weight' => 1,
+			'weight'     => 1,
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Min Height', '%TEXDOMAIN%' ),
-			'param_name' => 'min_height',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Min Height', '%TEXDOMAIN%' ),
+			'param_name'  => 'min_height',
 			'placeholder' => 'auto',
 			'description' => esc_html__( 'Insert the row minimum height in pixel.', '%TEXDOMAIN%' ),
-			'weight' => 1,
+			'weight'      => 1,
 		),
 
 		// array(
-		// 	'type' => 'dropdown',
-		// 	'heading' => esc_html__( 'Content position', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'content_placement',
-		// 	'value' => array(
-		// 		esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
-		// 		esc_html__( 'Top', '%TEXDOMAIN%' ) => 'top',
-		// 		esc_html__( 'Middle', '%TEXDOMAIN%' ) => 'middle',
-		// 		esc_html__( 'Bottom', '%TEXDOMAIN%' ) => 'bottom',
-		// 	),
-		// 	'description' => esc_html__( 'Select content position within columns.', '%TEXDOMAIN%' ),
-		// 	'dependency' => array( 'element' => 'content_layout', 'value' => array( 'column' ) ),
+		// 'type' => 'dropdown',
+		// 'heading' => esc_html__( 'Content position', '%TEXDOMAIN%' ),
+		// 'param_name' => 'content_placement',
+		// 'value' => array(
+		// esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
+		// esc_html__( 'Top', '%TEXDOMAIN%' ) => 'top',
+		// esc_html__( 'Middle', '%TEXDOMAIN%' ) => 'middle',
+		// esc_html__( 'Bottom', '%TEXDOMAIN%' ) => 'bottom',
+		// ),
+		// 'description' => esc_html__( 'Select content position within columns.', '%TEXDOMAIN%' ),
+		// 'dependency' => array( 'element' => 'content_layout', 'value' => array( 'column' ) ),
 		// ),
 
 		// array(
-		// 	'type' => 'dropdown',
-		// 	'heading' => esc_html__( 'Columns position', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'columns_placement',
-		// 	'value' => array(
-		// 		esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
-		// 		esc_html__( 'Middle', '%TEXDOMAIN%' ) => 'middle',
-		// 		esc_html__( 'Top', '%TEXDOMAIN%' ) => 'top',
-		// 		esc_html__( 'Bottom', '%TEXDOMAIN%' ) => 'bottom',
-		// 		esc_html__( 'Stretch', '%TEXDOMAIN%' ) => 'stretch',
-		// 	),
-		// 	'description' => esc_html__( 'Select columns position within row.', '%TEXDOMAIN%' ),
-		// 	'dependency' => array(
-		// 		'element' => 'full_height',
-		// 		'not_empty' => true,
-		// 	),
-		// 	'weight' => 1,
+		// 'type' => 'dropdown',
+		// 'heading' => esc_html__( 'Columns position', '%TEXDOMAIN%' ),
+		// 'param_name' => 'columns_placement',
+		// 'value' => array(
+		// esc_html__( 'Default', '%TEXDOMAIN%' ) => 'default',
+		// esc_html__( 'Middle', '%TEXDOMAIN%' ) => 'middle',
+		// esc_html__( 'Top', '%TEXDOMAIN%' ) => 'top',
+		// esc_html__( 'Bottom', '%TEXDOMAIN%' ) => 'bottom',
+		// esc_html__( 'Stretch', '%TEXDOMAIN%' ) => 'stretch',
+		// ),
+		// 'description' => esc_html__( 'Select columns position within row.', '%TEXDOMAIN%' ),
+		// 'dependency' => array(
+		// 'element' => 'full_height',
+		// 'not_empty' => true,
+		// ),
+		// 'weight' => 1,
 		// ),
 
 		// array(
-		// 	'type' => 'checkbox',
-		// 	'heading' => esc_html__( 'Equal height', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'equal_height',
-		// 	'description' => esc_html__( 'If checked columns will be set to equal height.', '%TEXDOMAIN%' ),
-		// 	'value' => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
-		// 	'dependency' => array( 'element' => 'content_layout', 'value' => array( 'column' ) ),
+		// 'type' => 'checkbox',
+		// 'heading' => esc_html__( 'Equal height', '%TEXDOMAIN%' ),
+		// 'param_name' => 'equal_height',
+		// 'description' => esc_html__( 'If checked columns will be set to equal height.', '%TEXDOMAIN%' ),
+		// 'value' => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
+		// 'dependency' => array( 'element' => 'content_layout', 'value' => array( 'column' ) ),
 		// ),
 
 		// array(
-		// 	'type' => 'dropdown',
-		// 	'heading' => esc_html__( 'Columns gap', '%TEXDOMAIN%' ),
-		// 	'param_name' => 'gap',
-		// 	'value' => array(
-		// 		'0px' => '0',
-		// 		'1px' => '1',
-		// 		'2px' => '2',
-		// 		'3px' => '3',
-		// 		'4px' => '4',
-		// 		'5px' => '5',
-		// 		'10px' => '10',
-		// 		'15px' => '15',
-		// 		'20px' => '20',
-		// 		'25px' => '25',
-		// 		'30px' => '30',
-		// 		'35px' => '35',
-		// 	),
-		// 	'std' => '0',
-		// 	'description' => esc_html__( 'Select gap between columns in row.', '%TEXDOMAIN%' ),
+		// 'type' => 'dropdown',
+		// 'heading' => esc_html__( 'Columns gap', '%TEXDOMAIN%' ),
+		// 'param_name' => 'gap',
+		// 'value' => array(
+		// '0px' => '0',
+		// '1px' => '1',
+		// '2px' => '2',
+		// '3px' => '3',
+		// '4px' => '4',
+		// '5px' => '5',
+		// '10px' => '10',
+		// '15px' => '15',
+		// '20px' => '20',
+		// '25px' => '25',
+		// '30px' => '30',
+		// '35px' => '35',
+		// ),
+		// 'std' => '0',
+		// 'description' => esc_html__( 'Select gap between columns in row.', '%TEXDOMAIN%' ),
 		// ),
 
 		// Visibility
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Visibility', '%TEXDOMAIN%' ),
+			'type'       => 'dropdown',
+			'heading'    => esc_html__( 'Visibility', '%TEXDOMAIN%' ),
 			'param_name' => 'hide_class',
-			'value' => array(
+			'value'      => array(
 				esc_html__( 'Always visible', '%TEXDOMAIN%' ) => '',
 				esc_html__( 'Hide on tablet and mobile', '%TEXDOMAIN%' ) => 'wvc-hide-tablet',
 				esc_html__( 'Hide on mobile', '%TEXDOMAIN%' ) => 'wvc-hide-mobile',
@@ -2117,19 +2189,19 @@ function wolf_core_row_inner_general_params() {
 
 		// Extra class
 		array(
-			'type' => 'textfield',
-			'heading' => esc_html__( 'Extra class name', '%TEXDOMAIN%' ),
-			'param_name' => 'el_class',
+			'type'        => 'textfield',
+			'heading'     => esc_html__( 'Extra class name', '%TEXDOMAIN%' ),
+			'param_name'  => 'el_class',
 			'description' => esc_html__( 'Style particular content element differently - add a class name and refer to it in custom CSS.', '%TEXDOMAIN%' ),
 		),
 
 		array(
-			'type' => 'checkbox',
-			'heading' => esc_html__( 'Disable row', '%TEXDOMAIN%' ),
-			'param_name' => 'disable_element',
+			'type'        => 'checkbox',
+			'heading'     => esc_html__( 'Disable row', '%TEXDOMAIN%' ),
+			'param_name'  => 'disable_element',
 			// Inner param name.
 			'description' => esc_html__( 'If checked the row won\'t be visible on the public side of your website. You can switch it back any time.', '%TEXDOMAIN%' ),
-			'value' => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
+			'value'       => array( esc_html__( 'Yes', '%TEXDOMAIN%' ) => 'yes' ),
 		),
 	);
 }

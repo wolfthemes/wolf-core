@@ -5,7 +5,7 @@
  * Smash Balloon Social Feed Plugins
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elements
+ * @package WolfCore/Elements
  * @version 1.0.0
  */
 

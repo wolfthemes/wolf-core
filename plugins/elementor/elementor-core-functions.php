@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% Elementor Core functions
+ * Wolf Core Elementor Core functions
  *
  * General core functions available on admin and frontend for Elementor
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elementor/Core
+ * @package WolfCore/Elementor/Core
  * @version 1.0.0
  */
 
@@ -93,7 +93,7 @@ function wolf_core_add_elementor_widget_categories( $elements_manager ) {
 	$elements_manager->add_category(
 		'music',
 		array(
-			'title' => esc_html__( 'Music', '%TEXTDOMAIN%' ),
+			'title' => esc_html__( 'Music', 'wolf-core' ),
 			'icon'  => 'fa fa-music',
 		)
 	);
@@ -101,7 +101,7 @@ function wolf_core_add_elementor_widget_categories( $elements_manager ) {
 	$elements_manager->add_category(
 		'extension',
 		array(
-			'title' => esc_html__( 'Extension', '%TEXTDOMAIN%' ),
+			'title' => esc_html__( 'Extension', 'wolf-core' ),
 			'icon'  => 'fa fa-extension',
 		)
 	);

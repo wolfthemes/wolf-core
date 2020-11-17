@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Heading
+ * Content Block
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
+class Elementor_Content_Block_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -20,11 +20,11 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_custom_heading_params();
+		$this->params = wolf_core_content_block_params();
 	}
 
 	/**
-	 * Get widget name
+	 * Get widget name.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -90,6 +90,10 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 */
 	protected function _register_controls() {
 
+		if ( 'wolf_content_block' === get_post_type() ) {
+			return;
+		}
+
 		$this->start_controls_section(
 			'content_section',
 			array(
@@ -116,37 +120,12 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'font_size'           => '',
-				'min_font_size'       => '',
-				'responsive'          => true,
-				'font_family'         => '',
-				'letter_spacing'      => 0,
-				'font_weight'         => '',
-				'line_height'         => '',
-				'text_transform'      => '',
-				'font_style'          => '',
-				'text_align'          => '',
-				'color'               => '',
-				'custom_color'        => '',
-				'text'                => '',
-				'tag'                 => 'h2',
-				'link'                => '',
-				'background_img'      => '',
-				'background_position' => 'center center',
-				'background_repeat'   => 'no-repeat',
-				'background_size'     => 'cover',
-				'css_animation'       => '',
-				'css_animation_delay' => '',
-				'el_class'            => '',
-				'css'                 => '',
-				'inline_style'        => '',
-				'hide_class'          => '',
-				'container'           => true,
+				'id' => '',
 			)
 		);
 
 		echo wolf_core_heading( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Custom_Heading_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Content_Block_Widget() );
 

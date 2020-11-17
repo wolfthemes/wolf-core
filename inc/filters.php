@@ -1,10 +1,10 @@
 <?php
 /**
- * %NAME% filter functions
+ * Wolf Core filter functions
  *
  * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/Core
+ * @package WolfCore/Core
  * @version 1.0.0
  */
 

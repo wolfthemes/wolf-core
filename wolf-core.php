@@ -2,17 +2,17 @@
 /**
  * Plugin Name: Wolf Core
  * Plugin URI: https://wlfthm.es/wolf-core
- * Description: %DESCRIPTION%
- * Version: %VERSION%
+ * Description: Core functions for Wolf Themes.
+ * Version: 1.0.0
  * Author: WolfThemes
  * Author URI: https://wolfthemes.com
  * Requires at least: 5.0
  * Tested up to: 5.5
  *
- * Text Domain: %TEXTDOMAIN%
+ * Text Domain: wolf-core
  * Domain Path: /languages/
  *
- * @package %PACKAGENAME%
+ * @package WolfCore
  * @category Core
  * @author WolfThemes
  *
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 	 * Contains the main functions for Wolf_Core
 	 *
 	 * @class Wolf_Core
-	 * @version %VERSION%
+	 * @version 1.0.0
 	 * @since 1.0.0
 	 */
 	final class Wolf_Core {
@@ -42,7 +42,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 *
 		 * @var string The plugin version.
 		 */
-		const VERSION = '%VERSION%';
+		const VERSION = '1.0.0';
 
 		/**
 		 * Minimum Elementor Version
@@ -74,7 +74,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		/**
 		 * @var string
 		 */
-		public $version = '%VERSION%';
+		public $version = '1.0.0';
 
 
 
@@ -140,8 +140,8 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function i18n() {
 
-			$domain = '%TEXTDOMAIN%';
-			$locale = apply_filters( '%TEXTDOMAIN%', get_locale(), $domain );
+			$domain = 'wolf-core';
+			$locale = apply_filters( 'wolf-core', get_locale(), $domain );
 			load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
 			load_plugin_textdomain( $domain, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		}
@@ -211,6 +211,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$this->define_constants();
 			$this->includes();
+			$this->flush_rewrite_rules();
 
 			if ( get_transient( 'wolf_core_activation_notice' ) ) {
 				add_action( 'admin_notices', 'wolf_core_show_activation_notice' );
@@ -218,6 +219,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			// Plugin update notifications.
 			add_action( 'admin_init', array( $this, 'plugin_update' ) );
+
 		}
 
 		/**
@@ -236,12 +238,12 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			$message = sprintf(
-				wp_kses_post( __( '"%1$s" requires "<a href="%2$s" target="_blank">%3$s</a>" or "<a href="%4$s" target="_blank">%5$s</a>" to be installed and activated.', '%TEXTDOMAIN%' ) ),
-				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
+				wp_kses_post( __( '"%1$s" requires "<a href="%2$s" target="_blank">%3$s</a>" or "<a href="%4$s" target="_blank">%5$s</a>" to be installed and activated.', 'wolf-core' ) ),
+				'<strong>' . esc_html__( 'Wolf Core', 'wolf-core' ) . '</strong>',
 				'https://wlfthm.es/elementor',
-				'<strong>' . esc_html__( 'Elementor', '%TEXTDOMAIN%' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'wolf-core' ) . '</strong>',
 				'https://wlfthm.es/wpbpb',
-				'<strong>' . esc_html__( 'WPBakery Page Builder', '%TEXTDOMAIN%' ) . '</strong>'
+				'<strong>' . esc_html__( 'WPBakery Page Builder', 'wolf-core' ) . '</strong>'
 			);
 
 			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -263,12 +265,12 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			$message = sprintf(
-				wp_kses_post( __( '"%1$s" requires to choose between "<a href="%2$s" target="_blank">%3$s</a>" or "<a href="%4$s" target="_blank">%5$s</a>" to be activated. You can not use both at the same time.', '%TEXTDOMAIN%' ) ),
-				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
+				wp_kses_post( __( '"%1$s" requires to choose between "<a href="%2$s" target="_blank">%3$s</a>" or "<a href="%4$s" target="_blank">%5$s</a>" to be activated. You can not use both at the same time.', 'wolf-core' ) ),
+				'<strong>' . esc_html__( 'Wolf Core', 'wolf-core' ) . '</strong>',
 				'https://wlfthm.es/elementor',
-				'<strong>' . esc_html__( 'Elementor', '%TEXTDOMAIN%' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'wolf-core' ) . '</strong>',
 				'https://wlfthm.es/wpbpb',
-				'<strong>' . esc_html__( 'WPBakery Page Builder', '%TEXTDOMAIN%' ) . '</strong>'
+				'<strong>' . esc_html__( 'WPBakery Page Builder', 'wolf-core' ) . '</strong>'
 			);
 
 			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -291,9 +293,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$message = sprintf(
 				/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '%TEXTDOMAIN%' ),
-				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
-				'<strong>' . esc_html__( 'Elementor', '%TEXTDOMAIN%' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'wolf-core' ),
+				'<strong>' . esc_html__( 'Wolf Core', 'wolf-core' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'wolf-core' ) . '</strong>',
 				self::MINIMUM_ELEMENTOR_VERSION
 			);
 
@@ -318,9 +320,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$message = sprintf(
 				/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '%TEXTDOMAIN%' ),
-				'<strong>' . esc_html__( 'Wolf Core', '%TEXTDOMAIN%' ) . '</strong>',
-				'<strong>' . esc_html__( 'WPBakery Page Builder', '%TEXTDOMAIN%' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'wolf-core' ),
+				'<strong>' . esc_html__( 'Wolf Core', 'wolf-core' ) . '</strong>',
+				'<strong>' . esc_html__( 'WPBakery Page Builder', 'wolf-core' ) . '</strong>',
 				self::MINIMUM_WPB_VC_VERSION
 			);
 
@@ -345,9 +347,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$message = sprintf(
 				/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', '%TEXTDOMAIN%' ),
-				'<strong>' . esc_html__( 'Wolf Elementor Extension', '%TEXTDOMAIN%' ) . '</strong>',
-				'<strong>' . esc_html__( 'PHP', '%TEXTDOMAIN%' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'wolf-core' ),
+				'<strong>' . esc_html__( 'Wolf Elementor Extension', 'wolf-core' ) . '</strong>',
+				'<strong>' . esc_html__( 'PHP', 'wolf-core' ) . '</strong>',
 				self::MINIMUM_PHP_VERSION
 			);
 
@@ -364,7 +366,30 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				update_option( 'wolf_core_activation_notice_set', true );
 			}
 
+			if ( ! get_option( '_wolf_core_flush_rewrite_rules_flag' ) ) {
+				add_option( '_wolf_core_flush_rewrite_rules_flag', true );
+			}
+
 			update_option( 'wpb_js_gutenberg_disable', true );
+
+			$cpt_support = get_option( 'elementor_cpt_support' );
+
+			// if it DOES exist, but portfolio is NOT defined
+			if ( ! in_array( 'wolf_content_block', $cpt_support ) ) {
+				$cpt_support[] = 'wolf_content_block'; // append to array.
+				update_option( 'elementor_cpt_support', $cpt_support ); // update database.
+			}
+		}
+
+		/**
+		 * Flush rewrite rules on plugin activation to avoid 404 error on oist type single ^page
+		 */
+		public function flush_rewrite_rules() {
+
+			if ( get_option( '_wolf_core_flush_rewrite_rules_flag' ) ) {
+				flush_rewrite_rules();
+				delete_option( '_wolf_core_flush_rewrite_rules_flag' );
+			}
 		}
 
 		/**
@@ -452,7 +477,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 						sprintf(
 							wp_kses(
 								/* translators: the code to output */
-								__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
 								array(
 									'code' => array(),
 								)
@@ -507,7 +532,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 						sprintf(
 							wp_kses(
 								/* translators: the code to output */
-								__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
 								array(
 									'code' => array(),
 								)
@@ -532,6 +557,8 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 				require_once 'plugins/wpbakery-page-builder/wpbakery-page-builder.php';
 			}
+
+			require_once 'plugins/content-blocks/content-blocks.php';
 		}
 
 		/**
@@ -560,7 +587,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 						sprintf(
 							wp_kses(
 								/* translators: the code to output */
-								__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
 								array(
 									'code' => array(),
 								)
@@ -577,7 +604,8 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function element_includes() {
 			$element_files = array(
-				'heading',
+				'custom-heading',
+				'content-block',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */
@@ -588,7 +616,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 						sprintf(
 							wp_kses(
 								/* translators: the code to output */
-								__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
 								array(
 									'code' => array(),
 								)

@@ -5,7 +5,7 @@
  * Wolf Twitter Plugin
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elements
+ * @package WolfCore/Elements
  * @version 1.0.0
  */
 
@@ -20,17 +20,17 @@ function wolf_core_twitter_params() {
 
 	return apply_filters( 'wolf_core_twitter_params', [
 		'properties' => [
-			'name' => esc_html__( 'Twitter Feed', '%TEXTDOMAIN%' ),
-			'description' => esc_html__( 'Your last tweets', '%TEXTDOMAIN%' ),
+			'name' => esc_html__( 'Twitter Feed', 'wolf-core' ),
+			'description' => esc_html__( 'Your last tweets', 'wolf-core' ),
 			'vc_base' => '_twitter',
-			'vc_category' => esc_html__( 'Socials' , '%TEXTDOMAIN%' ),
+			'vc_category' => esc_html__( 'Socials' , 'wolf-core' ),
 			'el_base' => 'twitter',
             'icon' => 'fa fa-twitter',
 		],
 		'params' => [
 			[
 				'type' => 'textfield',
-				'label' => esc_html__( 'Username', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Username', 'wolf-core' ),
 				'param_name' => 'username',
 				'default' => wolf_core_get_twitter_usename(),
 				'admin_label' => true,
@@ -38,23 +38,23 @@ function wolf_core_twitter_params() {
 
 			[
 				'type' => 'dropdown',
-				'label' => esc_html__( 'Type', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Type', 'wolf-core' ),
 				'param_name' => 'type',
 				'default' => [
-					'single' => esc_html__( 'Single', '%TEXTDOMAIN%' ),
-					'list' => esc_html__( 'List', '%TEXTDOMAIN%' ),
+					'single' => esc_html__( 'Single', 'wolf-core' ),
+					'list' => esc_html__( 'List', 'wolf-core' ),
                 ],
             ],
 
 			[
 				'type' => 'dropdown',
-				'label' => esc_html__( 'Text Alignment', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Text Alignment', 'wolf-core' ),
 				'param_name' => 'text_align',
 				'default' => [
-					'default' => esc_html__( 'Default', '%TEXTDOMAIN%' ),
-					'center' => esc_html__( 'Center', '%TEXTDOMAIN%' ),
-					'left' => esc_html__( 'Left', '%TEXTDOMAIN%' ),
-					'right' => esc_html__( 'Right', '%TEXTDOMAIN%' ),
+					'default' => esc_html__( 'Default', 'wolf-core' ),
+					'center' => esc_html__( 'Center', 'wolf-core' ),
+					'left' => esc_html__( 'Left', 'wolf-core' ),
+					'right' => esc_html__( 'Right', 'wolf-core' ),
                 ],
                 'condition' => [
 					'type' => 'single',
@@ -63,7 +63,7 @@ function wolf_core_twitter_params() {
 
 			[
 				'type' => 'textfield',
-				'label' => esc_html__( 'Count', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Count', 'wolf-core' ),
 				'param_name' => 'count',
 				'default' => 3,
                 'condition' => [

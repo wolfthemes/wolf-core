@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% icon styles functions
+ * Wolf Core icon styles functions
  *
  * Enqueue icon styles in both frontend and admin
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @package WolfCore/WPBakeryPageBuilder/Core
  * @version 1.0.0
  */
 

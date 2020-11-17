@@ -3,7 +3,7 @@
  * Big Text
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elements
+ * @package WolfCore/Elements
  * @version 1.0.0
  */
 
@@ -20,10 +20,10 @@ function wolf_core_bigtext_params() {
 		'wolf_core_bigtext_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Big Text', '%TEXTDOMAIN%' ),
-				'description' =>  esc_html__( 'A big line of text that will take the full width of its container', '%TEXTDOMAIN%' ),
+				'name'        => esc_html__( 'Big Text', 'wolf-core' ),
+				'description' =>  esc_html__( 'A big line of text that will take the full width of its container', 'wolf-core' ),
 				'vc_base'     => 'wolf_core_bigtext',
-				'vc_category' => esc_html__( 'Typography', '%TEXTDOMAIN%' ),
+				'vc_category' => esc_html__( 'Typography', 'wolf-core' ),
 				'el_base'     => 'bigtext',
 				'icon' => 'fa fa-text-width',
 			),

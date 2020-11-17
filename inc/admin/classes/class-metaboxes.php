@@ -1,10 +1,10 @@
 <?php
 /**
- * %NAME% metaboxes helper
+ * Wolf Core metaboxes helper
  *
  * @author WolfThemes
  * @category Admin
- * @package %PACKAGENAME%/Admin/Classes
+ * @package WolfCore/Admin/Classes
  * @version 1.0.0
  */
 
@@ -18,7 +18,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 	 * Combine all metaboxes sections into tabs panel
 	 *
 	 * @package WordPress
-	 * @subpackage %NAME%
+	 * @subpackage Wolf Core
 	 * @version 1.0.0
 	 */
 	class Wolf_Metaboxes {
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 			add_meta_box(
 				'_wolf_metaboxes',
-				sprintf( esc_html__( '%s Options', '%TEXTDOMAIN%' ), $this->get_post_type_name() ),
+				sprintf( esc_html__( '%s Options', 'wolf-core' ), $this->get_post_type_name() ),
 				array( $this, 'render' ),
 				$this->post_types,
 				$this->context,
@@ -142,7 +142,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 			$field_id      = sanitize_title( $field['id'] );
 			$type          = ( isset( $field['type'] ) ) ? $field['type'] : 'text';
-			$label         = ( isset( $field['label'] ) ) ? $field['label'] : esc_html__( 'Label', '%TEXTDOMAIN%' );
+			$label         = ( isset( $field['label'] ) ) ? $field['label'] : esc_html__( 'Label', 'wolf-core' );
 			$desc          = ( isset( $field['desc'] ) ) ? $field['desc'] : '';
 			$placeholder   = ( isset( $field['placeholder'] ) ) ? $field['placeholder'] : '';
 			$default_value = ( isset( $field['value'] ) ) ? $field['value'] : '';
@@ -225,8 +225,8 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				?>
 					<div>
 						<input type="text"  name="<?php echo esc_attr( $field_id ); ?>" id="<?php echo esc_attr( $field_id ); ?>" value="<?php echo esc_url( $meta_img ); ?>">
-						<br><a href="#" class="button wolf-core-metabox-reset-file"><?php esc_html_e( 'Clear', '%TEXTDOMAIN%' ); ?></a>
-						<a href="#" class="button wolf-core-metabox-set-file"><?php esc_html_e( 'Choose a file', '%TEXTDOMAIN%' ); ?></a>
+						<br><a href="#" class="button wolf-core-metabox-reset-file"><?php esc_html_e( 'Clear', 'wolf-core' ); ?></a>
+						<a href="#" class="button wolf-core-metabox-set-file"><?php esc_html_e( 'Choose a file', 'wolf-core' ); ?></a>
 
 				<?php if ( $desc ) : ?>
 							<br><span class="description"><?php echo wolf_core_kses( $desc ); ?></span>
@@ -248,8 +248,8 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 							echo ' display:none;';}
 						?>
 						" class="wolf-core-metabox-img-preview" src="<?php echo esc_url( $meta_img_url ); ?>" alt="<?php echo esc_attr( $field_id ); ?>">
-						<br><a href="#" class="button wolf-core-metabox-reset-img"><?php esc_html_e( 'Clear', '%TEXTDOMAIN%' ); ?></a>
-						<a href="#" class="button wolf-core-metabox-set-img"><?php esc_html_e( 'Choose an image', '%TEXTDOMAIN%' ); ?></a>
+						<br><a href="#" class="button wolf-core-metabox-reset-img"><?php esc_html_e( 'Clear', 'wolf-core' ); ?></a>
+						<a href="#" class="button wolf-core-metabox-set-img"><?php esc_html_e( 'Choose an image', 'wolf-core' ); ?></a>
 					</div>
 
 					<div class="clear"></div>
@@ -283,7 +283,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				/* Bg Image */
 				if ( ! in_array( 'color', $exclude_params ) ) {
 					?>
-						<p><?php esc_html_e( 'Background color', '%TEXTDOMAIN%' ); ?></p>
+						<p><?php esc_html_e( 'Background color', 'wolf-core' ); ?></p>
 						<input name="<?php echo esc_attr( $field_id . '_color' ); ?>" name="<?php echo esc_attr( $field_id . '_color' ); ?>" class="wolf-core-metabox-colorpicker" type="text" value="<?php echo esc_attr( $bg_meta_color ); ?>">
 						<br><br>
 						<?php
@@ -291,7 +291,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				if ( ! in_array( 'image', $exclude_params ) ) {
 
 					?>
-						<p><?php esc_html_e( 'Background image', '%TEXTDOMAIN%' ); ?></p>
+						<p><?php esc_html_e( 'Background image', 'wolf-core' ); ?></p>
 						<div>
 							<input type="hidden" name="<?php echo esc_attr( $field_id ); ?>_img" id="<?php echo esc_attr( $field_id ); ?>_img" value="<?php echo esc_attr( $img ); ?>">
 							<img style="max-width:250px;
@@ -300,8 +300,8 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 								echo ' display:none;';}
 							?>
 							" class="wolf-core-metabox-img-preview" src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $field_id ); ?>">
-							<br><a href="#" class="button wolf-core-metabox-reset-bg"><?php esc_html_e( 'Clear', '%TEXTDOMAIN%' ); ?></a>
-							<a href="#" class="button wolf-core-metabox-set-bg"><?php esc_html_e( 'Choose an image', '%TEXTDOMAIN%' ); ?></a>
+							<br><a href="#" class="button wolf-core-metabox-reset-bg"><?php esc_html_e( 'Clear', 'wolf-core' ); ?></a>
+							<a href="#" class="button wolf-core-metabox-set-bg"><?php esc_html_e( 'Choose an image', 'wolf-core' ); ?></a>
 						</div>
 						<br><br>
 						<?php
@@ -313,7 +313,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 					?>
 						<br>
-						<p><?php esc_html_e( 'Background repeat', '%TEXTDOMAIN%' ); ?></p>
+						<p><?php esc_html_e( 'Background repeat', 'wolf-core' ); ?></p>
 						<select name="<?php echo esc_attr( $field_id ) . '_repeat'; ?>" id="<?php echo esc_attr( $field_id ) . '_repeat'; ?>">
 					<?php foreach ( $options as $o ) : ?>
 								<option value="<?php echo esc_attr( $o ); ?>"
@@ -342,7 +342,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 					?>
 						<br><br>
-						<p><?php esc_html_e( 'Background position', '%TEXTDOMAIN%' ); ?></p>
+						<p><?php esc_html_e( 'Background position', 'wolf-core' ); ?></p>
 						<select name="<?php echo esc_attr( $field_id ) . '_position'; ?>" id="<?php echo esc_attr( $field_id ) . '_position'; ?>">
 					<?php foreach ( $options as $o ) : ?>
 								<option value="<?php echo esc_attr( $o ); ?>"
@@ -361,14 +361,14 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 					size
 					--------------------*/
 					$options = array(
-						'cover'  => esc_html__( 'cover (resize)', '%TEXTDOMAIN%' ),
-						'normal' => esc_html__( 'normal', '%TEXTDOMAIN%' ),
-						'resize' => esc_html__( 'responsive (hard resize)', '%TEXTDOMAIN%' ),
+						'cover'  => esc_html__( 'cover (resize)', 'wolf-core' ),
+						'normal' => esc_html__( 'normal', 'wolf-core' ),
+						'resize' => esc_html__( 'responsive (hard resize)', 'wolf-core' ),
 					);
 
 					?>
 						<br><br>
-						<p><?php esc_html_e( 'Background size', '%TEXTDOMAIN%' ); ?></p>
+						<p><?php esc_html_e( 'Background size', 'wolf-core' ); ?></p>
 						<select name="<?php echo esc_attr( $field_id ) . '_size'; ?>" id="<?php echo esc_attr( $field_id ) . '_size'; ?>">
 					<?php foreach ( $options as $k => $v ) : ?>
 								<option value="<?php echo esc_attr( $k ); ?>"
@@ -384,7 +384,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				if ( $parallax ) {
 					?>
 							<br><br>
-							<p><strong><?php esc_html_e( 'Parallax', '%TEXTDOMAIN%' ); ?></strong></p>
+							<p><strong><?php esc_html_e( 'Parallax', 'wolf-core' ); ?></strong></p>
 							<input
 							<?php
 							if ( $bg_meta_parallax ) {
@@ -407,7 +407,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 					} else {
 						$attachments = explode( ',', $meta );
 					}
-							$reset_multiple_image_confirm = esc_html__( 'Are you sure to want to reset all images ?', '%TEXTDOMAIN%' );
+							$reset_multiple_image_confirm = esc_html__( 'Are you sure to want to reset all images ?', 'wolf-core' );
 					?>
 						<div class="wolf-core-metabox-images-set clearfix">
 							<?php
@@ -437,8 +437,8 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						<div class="clear"></div>
 						<br>
 						<input type="hidden" name="<?php echo esc_attr( $field_id ); ?>" value="<?php echo esc_attr( $meta ); ?>">
-						<a href="#" class="button wolf-core-metabox-param-reset-all-img"><?php esc_html_e( 'Clear All', '%TEXTDOMAIN%' ); ?></a>
-						<a href="#" class="button wolf-core-metabox-param-set-multiple-img"><?php esc_html_e( 'Select Images', '%TEXTDOMAIN%' ); ?></a>
+						<a href="#" class="button wolf-core-metabox-param-reset-all-img"><?php esc_html_e( 'Clear All', 'wolf-core' ); ?></a>
+						<a href="#" class="button wolf-core-metabox-param-set-multiple-img"><?php esc_html_e( 'Select Images', 'wolf-core' ); ?></a>
 					</div>
 
 					<div class="clear"></div>
@@ -452,8 +452,8 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				?>
 						<div class="wolf-core-metabox-video-bg-field">
 							<input type="text"  name="<?php echo esc_attr( $field_id ); ?>" id="<?php echo esc_attr( $field_id ); ?>" size="30" value="<?php echo esc_url( $meta_url ); ?>">
-							<br><a href="#" class="button wolf-core-metabox-reset-file"><?php esc_html_e( 'Clear', '%TEXTDOMAIN%' ); ?></a>
-							<a href="#" class="button wolf-core-metabox-set-video-file"><?php esc_html_e( 'Choose a file', '%TEXTDOMAIN%' ); ?></a>
+							<br><a href="#" class="button wolf-core-metabox-reset-file"><?php esc_html_e( 'Clear', 'wolf-core' ); ?></a>
+							<a href="#" class="button wolf-core-metabox-set-video-file"><?php esc_html_e( 'Choose a file', 'wolf-core' ); ?></a>
 							<br>
 					<?php if ( $desc ) : ?>
 								<span class="description"><?php echo sanitize_text_field( $desc ); ?></span>
@@ -471,7 +471,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				$google_fonts = ( function_exists( 'wolf_core_get_google_fonts_options' ) ) ? wolf_core_get_google_fonts_options() : array();
 
 				$font_choices = array(
-					'' => '&mdash; ' . esc_html__( 'Default', '%TEXTDOMAIN%' ) . ' &mdash;',
+					'' => '&mdash; ' . esc_html__( 'Default', 'wolf-core' ) . ' &mdash;',
 				);
 
 				foreach ( $google_fonts as $key => $value ) {
@@ -713,10 +713,10 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				'wolf-core-metaboxes',
 				'WolfMetaboxesAdminParams',
 				array(
-					'chooseImage'            => esc_html__( 'Select an image', '%TEXTDOMAIN%' ),
-					'chooseMultipleImage'    => esc_html__( 'Select a set of images', '%TEXTDOMAIN%' ),
-					'chooseFile'             => esc_html__( 'Select a file', '%TEXTDOMAIN%' ),
-					'confirmRemoveAllImages' => esc_html__( 'This will remove the entire image set', '%TEXTDOMAIN%' ),
+					'chooseImage'            => esc_html__( 'Select an image', 'wolf-core' ),
+					'chooseMultipleImage'    => esc_html__( 'Select a set of images', 'wolf-core' ),
+					'chooseFile'             => esc_html__( 'Select a file', 'wolf-core' ),
+					'confirmRemoveAllImages' => esc_html__( 'This will remove the entire image set', 'wolf-core' ),
 				)
 			);
 

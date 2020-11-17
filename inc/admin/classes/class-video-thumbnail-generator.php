@@ -1,12 +1,12 @@
 <?php
 /**
- * %NAME% Video thumbnail generator
+ * Wolf Core Video thumbnail generator
  *
  * Supports vimeo and youtube
  *
  * @author WolfThemes
  * @category Admin
- * @package %PACKAGENAME%/Admin/Classes
+ * @package WolfCore/Admin/Classes
  * @version 1.0.0
  */
 
@@ -96,7 +96,7 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 				$output = sprintf(
 					wp_kses( __(
 						'Error retrieving video information from the URL <a href="%1$s">%1$s</a>. If opening that URL in your web browser returns anything else than an error page, the problem may be related to your web server and might be something your host administrator can solve.',
-						'%TEXTDOMAIN%'
+						'wolf-core'
 						),
 						array( 'a' => array( 'href' => array() ) )
 					)
@@ -438,8 +438,8 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 				if ( isset( $video_thumbnail ) && $video_thumbnail != '' ) {
 
 					echo '<p id="video-thumbnail-action">';
-					echo '<a href="#" id="video-thumbnail-reset" onClick="video_thumbnail_reset(\'' . $post_id . '\' );return false;">' . esc_html__( 'Reset', '%TEXTDOMAIN%' ) . '</a>';
-					echo '<a href="#" id="video-thumbnail-delete" onClick="video_thumbnail_delete(\'' . $post_id . '\' );return false;">' . esc_html__( 'Delete', '%TEXTDOMAIN%' ) . '</a>';
+					echo '<a href="#" id="video-thumbnail-reset" onClick="video_thumbnail_reset(\'' . $post_id . '\' );return false;">' . esc_html__( 'Reset', 'wolf-core' ) . '</a>';
+					echo '<a href="#" id="video-thumbnail-delete" onClick="video_thumbnail_delete(\'' . $post_id . '\' );return false;">' . esc_html__( 'Delete', 'wolf-core' ) . '</a>';
 					echo '</p>';
 
 				} else {
@@ -464,7 +464,7 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 			<script type="text/javascript">
 			function video_thumbnail_reset( id ) {
 
-				var removeFeaturedImg = '<p id="video-custom-remove" class="hide-if-no-js"><a href="#" id="remove-post-thumbnail" onclick="wolf_thumbnail_delete( ' + id + ' );return false;"><?php esc_html_e( 'Remove featured image', '%TEXTDOMAIN%' ); ?></a></p>';
+				var removeFeaturedImg = '<p id="video-custom-remove" class="hide-if-no-js"><a href="#" id="remove-post-thumbnail" onclick="wolf_thumbnail_delete( ' + id + ' );return false;"><?php esc_html_e( 'Remove featured image', 'wolf-core' ); ?></a></p>';
 					var resetText = '<?php echo esc_js( $this->get_text( 'reset' ) ); ?>';
 					var deleteText = '<?php echo esc_js( $this->get_text( 'delete' ) ); ?>';
 					var deleteLink = "<a href='#' id='video-thumbnail-delete' onClick='video_thumbnail_delete( " + id + " );return false;'>" + deleteText + "</a>";
@@ -475,7 +475,7 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 					post_id: id
 				};
 
-				document.getElementById( 'video-thumbnail-preview' ).innerHTML= '<?php esc_html_e( 'Working...', '%TEXTDOMAIN%' ); ?>... <img src="<?php echo admin_url( 'images/loading.gif' ); ?>"/>';
+				document.getElementById( 'video-thumbnail-preview' ).innerHTML= '<?php esc_html_e( 'Working...', 'wolf-core' ); ?>... <img src="<?php echo admin_url( 'images/loading.gif' ); ?>"/>';
 
 				// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
 				jQuery.post( ajaxurl, data, function( response ) {
@@ -520,7 +520,7 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 				};
 
 				jQuery.post( ajaxurl, data, function( response ) {
-					//jQuery( '#postimagediv .inside #set-post-thumbnail' ).empty().html( '<?php esc_html_e( 'Set featured image', '%TEXTDOMAIN%' ); ?>' );
+					//jQuery( '#postimagediv .inside #set-post-thumbnail' ).empty().html( '<?php esc_html_e( 'Set featured image', 'wolf-core' ); ?>' );
 					//jQuery( '#remove-post-thumbnail' ).remove();
 				} );
 			}
@@ -593,12 +593,12 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 
 			// Translatable string
 			$text = array(
-				'no_video' => esc_html__( 'No video URL in the post.', '%TEXTDOMAIN%' ),
-				'has_video' => esc_html__( 'A video has been attached to this post. Click on "Generate" to create a thumbnail from this video', '%TEXTDOMAIN%' ),
-				'not_published' => esc_html__( 'You will be able to generate a video thumbnail and use it as featured image for this post when it is published.', '%TEXTDOMAIN%' ),
-				'generate' => esc_html__( 'Generate', '%TEXTDOMAIN%' ),
-				'reset' => esc_html__( 'Reset', '%TEXTDOMAIN%' ),
-				'delete' => esc_html__( 'Delete', '%TEXTDOMAIN%' ),
+				'no_video' => esc_html__( 'No video URL in the post.', 'wolf-core' ),
+				'has_video' => esc_html__( 'A video has been attached to this post. Click on "Generate" to create a thumbnail from this video', 'wolf-core' ),
+				'not_published' => esc_html__( 'You will be able to generate a video thumbnail and use it as featured image for this post when it is published.', 'wolf-core' ),
+				'generate' => esc_html__( 'Generate', 'wolf-core' ),
+				'reset' => esc_html__( 'Reset', 'wolf-core' ),
+				'delete' => esc_html__( 'Delete', 'wolf-core' ),
 			);
 
 			return $text[ $string ];

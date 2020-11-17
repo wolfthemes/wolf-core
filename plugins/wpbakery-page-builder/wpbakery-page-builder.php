@@ -1,9 +1,9 @@
 <?php
 /**
- * %NAME% WPBakery Page Builder Extension Class
+ * Wolf Core WPBakery Page Builder Extension Class
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @package WolfCore/WPBakeryPageBuilder/Core
  * @version 1.0.0
  */
 
@@ -85,7 +85,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 					sprintf(
 						wp_kses(
 							/* translators: %s: the code to display */
-							__( 'Error locating <code>%s</code> for inclusion.', '%TEXTDOMAIN%' ),
+							__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
 							array(
 								'code' => array(),
 							)

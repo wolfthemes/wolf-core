@@ -1,10 +1,10 @@
 <?php
 /**
- * %NAME% frontend functions
+ * Wolf Core frontend functions
  *
  * @author WolfThemes
  * @category Frontend
- * @package %PACKAGENAME%/Frontend
+ * @package WolfCore/Frontend
  * @version 1.0.0
  */
 

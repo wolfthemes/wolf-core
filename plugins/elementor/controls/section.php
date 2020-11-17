@@ -3,7 +3,7 @@
  * Section settings
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elementor/Controls
+ * @package WolfCore/Elementor/Controls
  * @version 1.0.0
  */
 

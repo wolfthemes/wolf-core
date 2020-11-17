@@ -1,10 +1,10 @@
 <?php
 /**
- * %NAME% Admin scripts
+ * Wolf Core Admin scripts
  *
  * @author WolfThemes
  * @category Admin
- * @package %PACKAGENAME%/Admin
+ * @package WolfCore/Admin
  * @version 1.0.0
  */
 
@@ -40,10 +40,10 @@ function wolf_core_enqueue_admin_scripts() {
 
 	// wp_localize_script( 'wolf-core-admin', 'WVCAdminParams', array(
 	// 'ajaxUrl' => esc_url( admin_url( 'admin-ajax.php' ) ),
-	// 'chooseImage' => esc_html__( 'Select an image', '%TEXTDOMAIN%' ),
-	// 'chooseMultipleImage' => esc_html__( 'Select a set of images', '%TEXTDOMAIN%' ),
-	// 'chooseFile' => esc_html__( 'Select a file', '%TEXTDOMAIN%' ),
-	// 'confirmRemoveAllImages' => esc_html__( 'This will remove the entire image set', '%TEXTDOMAIN%' ),
+	// 'chooseImage' => esc_html__( 'Select an image', 'wolf-core' ),
+	// 'chooseMultipleImage' => esc_html__( 'Select a set of images', 'wolf-core' ),
+	// 'chooseFile' => esc_html__( 'Select a file', 'wolf-core' ),
+	// 'confirmRemoveAllImages' => esc_html__( 'This will remove the entire image set', 'wolf-core' ),
 	// 'VCPurchaseUrl' => wolf_core_vc_purchase_url(),
 	// ) );
 }

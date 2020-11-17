@@ -3,7 +3,7 @@
  * Album Disc
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Params
+ * @package WolfCore/Params
  * @version 1.0.0
  */
 

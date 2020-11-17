@@ -1,9 +1,9 @@
 <?php
 /**
- * %NAME% Elementor Extension Class
+ * Wolf Core Elementor Extension Class
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/Elementor/Core
+ * @package WolfCore/Elementor/Core
  * @version 1.0.0
  */
 

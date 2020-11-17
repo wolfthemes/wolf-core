@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% VC custom fields functions
+ * Wolf Core VC custom fields functions
  *
  * Set default setttings values for in-built elements
  *
  * @author WolfThemes
- * @package %PACKAGENAME%/WPBakeryPageBuilder/Core
+ * @package WolfCore/WPBakeryPageBuilder/Core
  * @version 1.0.0
  */
 
@@ -58,12 +58,12 @@ function wolf_core_font_family_settings_field( $settings, $value ) {
 	?>
 	<div class="wolf_core_font_family">
 		<select class="wvc-font-family-select wpb_vc_param_value wpb-input wpb-select <?php echo esc_attr( $type ); ?>_field" name="<?php echo esc_attr( $name ); ?>">
-			<option value=""><?php esc_html_e( 'Default', '%TEXTDOMAIN%' ); ?></option>
+			<option value=""><?php esc_html_e( 'Default', 'wolf-core' ); ?></option>
 			<?php foreach ( $fonts as $name => $font ) : ?>
 				<option value="<?php echo esc_attr( $name ); ?>" <?php echo selected( $name, $value ); ?>><?php echo sanitize_text_field( $name ); ?></option>
 			<?php endforeach; ?>
 		</select>
-		<div class="wvc-font-family-preview" style="<?php echo wolf_core_esc_style_attr( $default_style ); ?>"><?php echo esc_html_x( 'And there was silence over the oceans. When a voice came thundering from above.', 'placeholder text', '%TEXTDOMAIN%' ); ?></div>
+		<div class="wvc-font-family-preview" style="<?php echo wolf_core_esc_style_attr( $default_style ); ?>"><?php echo esc_html_x( 'And there was silence over the oceans. When a voice came thundering from above.', 'placeholder text', 'wolf-core' ); ?></div>
 	</div>
 	<?php
 	return ob_get_clean();
@@ -172,7 +172,7 @@ function wolf_core_video_url_textfield_settings_field( $settings, $value ) {
 		. '<input name="' . esc_attr( $settings['param_name'] ) . '" class="wpb_vc_param_value wpb-textinput ' .
 		esc_attr( $settings['param_name'] ) . ' ' .
 		esc_attr( $settings['type'] ) . '_field" type="text" value="' . esc_attr( $value ) . '" />' .
-		'<a href="#" style="display:inline-block;margin-top:4px;" class="wvc-set-video-file">' . esc_html__( 'Media Library', '%TEXTDOMAIN%' ) . '</a></div>'; // This is html markup that will be outputted in content elements edit form
+		'<a href="#" style="display:inline-block;margin-top:4px;" class="wvc-set-video-file">' . esc_html__( 'Media Library', 'wolf-core' ) . '</a></div>'; // This is html markup that will be outputted in content elements edit form
 }
 vc_add_shortcode_param( 'wolf_core_video_url', 'wolf_core_video_url_textfield_settings_field' );
 
@@ -189,7 +189,7 @@ function wolf_core_audio_url_textfield_settings_field( $settings, $value ) {
 		. '<input name="' . esc_attr( $settings['param_name'] ) . '" class="wpb_vc_param_value wpb-textinput ' .
 		esc_attr( $settings['param_name'] ) . ' ' .
 		esc_attr( $settings['type'] ) . '_field" type="text" value="' . esc_attr( $value ) . '" />' .
-		'<a href="#" style="display:inline-block;margin-top:4px;" class="wvc-set-audio-file">' . esc_html__( 'Media Library', '%TEXTDOMAIN%' ) . '</a></div>';
+		'<a href="#" style="display:inline-block;margin-top:4px;" class="wvc-set-audio-file">' . esc_html__( 'Media Library', 'wolf-core' ) . '</a></div>';
 }
 vc_add_shortcode_param( 'wolf_core_audio_url', 'wolf_core_audio_url_textfield_settings_field' );
 
@@ -204,7 +204,7 @@ function wolf_core_dropdown_multi_settings_field( $param, $value ) {
 		if ( is_numeric( $text_val ) && ( is_string( $val ) || is_numeric( $val ) ) ) {
 			$text_val = $val;
 		}
-			$text_val = esc_html__( $text_val, '%TEXTDOMAIN%' );
+			$text_val = esc_html__( $text_val, 'wolf-core' );
 			$selected = '';
 
 		if ( ! is_array( $value ) ) {
