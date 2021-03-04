@@ -20,7 +20,7 @@ function wolf_core_content_block( $post_id ) {
 
 	$content_block_post_slug = ( class_exists( 'Wolf_Core' ) ) ? 'wolf_content_block' : 'wvc_content_block';
 
-	if ( get_post_status( $post_id ) && get_the_ID() !== $post_id  && $content_block_post_slug === get_post_type( $post_id ) ) {
+	if ( get_post_status( $post_id ) && get_the_ID() !== $post_id && get_post_type( $post_id ) === $content_block_post_slug ) {
 
 		$content = '';
 

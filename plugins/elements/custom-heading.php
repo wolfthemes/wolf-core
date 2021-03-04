@@ -216,7 +216,7 @@ function wolf_core_heading( $atts ) {
 
 	$output .= do_shortcode( wolf_core_sanitize_heading( $text ) );
 
-	if ( $do_link ) {
+	if ( is_array( $link ) ) {
 		$output .= '</a>';
 	}
 
