@@ -840,7 +840,6 @@
 }
 
 .wolf-core-font-dark {
-  background-color: #f7f7f7;
   color: #676767;
 }
 .wolf-core-font-dark h1:not(.wolf-core-service-title),
@@ -893,7 +892,6 @@
 }
 
 .wolf-core-font-light {
-  background-color: #1d1d1d;
   color: #f7f7f7;
 }
 .wolf-core-font-light h1:not(.wolf-core-service-title),

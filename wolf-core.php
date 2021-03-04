@@ -461,6 +461,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			$core_files = array(
 				'core-functions',
 				'background-functions',
+				'image-functions',
 				'filters',
 				'utility-functions',
 				'conditional-functions',
@@ -603,7 +604,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * Include required elements files.
 		 */
 		public function element_includes() {
+
 			$element_files = array(
+				'album-disc',
 				'custom-heading',
 				'content-block',
 			);

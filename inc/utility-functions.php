@@ -1029,7 +1029,7 @@ if ( ! function_exists( 'wolf_core_user_country_code_is_in_eu' ) ) {
 			'SK',
 		);
 
-		if ( in_array( $country_code, $eu_countries ) ) {
+		if ( in_array( $country_code, $eu_countries, true ) ) {
 			return true;
 		} else {
 			return false;
@@ -1040,17 +1040,52 @@ if ( ! function_exists( 'wolf_core_user_country_code_is_in_eu' ) ) {
 /**
  * Straight from VC
  *
- * @param $content
- * @param bool $autop
+ * @param $content The output content.
+ * @param bool $autop Whether to strip p tag or not
  * @return string
  */
 function wolf_core_js_remove_wpautop( $content, $autop = false ) {
 
-	if ( $autop ) { // Possible to use !preg_match('('.WPBMap::getTagsRegexp().')', $content)
+	if ( $autop ) { // Possible to use !preg_match('('.WPBMap::getTagsRegexp().')', $content).
 		$content = wpautop( preg_replace( '/<\/?p\>/', "\n", $content ) . "\n" );
 	}
 
 	return do_shortcode( shortcode_unautop( $content ) );
+}
+
+/**
+ * Process link attribute to retrieve a standard array for both page builder
+ *
+ * @param array $atts The link attributes.
+ * @return array|void
+ */
+function wolf_core_process_link_atts( $link_atts ) {
+
+	$link = array(
+		'url' => '',
+		'target' => '',
+		'rel' => '',
+		'title' => '',
+	);
+
+	if ( function_exists( 'vc_build_link' ) ) {
+
+		$vc_link        = vc_build_link( $link_atts );
+		$link['url']    = esc_url( $vc_link['url'] );
+		$link['target'] = esc_attr( $vc_link['target'] );
+		$link['rel']  = esc_attr( $vc_link['rel'] );
+		$link['title']  = esc_attr( $vc_link['title'] );
+
+	} else {
+		$link['url']    = esc_url( $link_atts['url'] );
+		$link['target'] = ( isset( $link_atts['is_external'] ) && 'on' === $link_atts['is_external'] ) ? '_blank' : '_parent';
+		$link['rel']  = ( isset( $link_atts['nofollow'] ) && 'on' === $link_atts['nofollow'] ) ? 'nofollow' : '';
+		$link['title']  = '';
+	}
+
+	if ( ! empty( $link['url'] ) ) {
+		return $link;
+	}
 }
 
 if ( ! function_exists( 'debug' ) ) {

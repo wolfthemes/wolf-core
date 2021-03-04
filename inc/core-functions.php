@@ -74,7 +74,7 @@ function wolf_core_get_element_list() {
 		'advanced-slider',
 		'advanced-slide',
 		// 'albums',
-		// 'album-disc',
+		'album-disc',
 		// 'album-tracklist',
 		// 'album-tracklist-item',
 		'anchor',
@@ -191,6 +191,8 @@ function wolf_core_get_element_list() {
 
 	// sort by alphabetical order.
 	sort( $wolf_core_elements );
+
+	//debug( $wolf_core_elements );
 
 	return $wolf_core_elements;
 }
@@ -475,7 +477,7 @@ function wolf_core_get_url_from_attachment_id( $id, $size = 'thumbnail', $fallba
  */
 function wolf_core_placeholder_img_url( $img_size ) {
 
-	if ( in_array( $img_size, array( 'thumbnail', 'medium', 'large', 'wolf-core-XL', 'wolf-core-photo', 'full' ) ) ) {
+	if ( in_array( $img_size, array( 'thumbnail', 'medium', 'large', 'wolf-core-XL', 'wolf-core-photo', 'full' ), true ) ) {
 
 		switch ( $img_size ) {
 			case 'wolf-core-XL':
@@ -502,5 +504,15 @@ function wolf_core_placeholder_img_url( $img_size ) {
 	if ( $img_size ) {
 		$formatted_size = str_replace( 'x', '/', $img_size );
 		return 'https://unsplash.it/' . $formatted_size . '/?image=' . rand( 1, 1084 );
+	}
+}
+
+/**
+ * Returns fallback from placeholder if image is missing
+ */
+function wolf_core_placeholder_img( $img_size, $class = '' ) {
+
+	if ( wolf_core_placeholder_img_url( $img_size ) ) {
+		return '<img class="' . wolf_core_sanitize_html_classes( $class ) . '" src="' . wolf_core_placeholder_img_url( $img_size ) . '" alt="placeholder" title="' . esc_html__( 'Image is missing', 'wolf-visual-composer' ) . '">';
 	}
 }

@@ -33,7 +33,7 @@ function wolf_core_convert_params_to_vc( $params ) {
 	$vc_params['params'] = array();
 
 	/* Other */
-	$vc_params['js_view'] = $params['js_view'];
+	$vc_params['js_view'] = ( isset( $params['js_view'] ) ) ? $params['js_view'] : '';
 
 	$i = 0;
 

@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
+class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -20,7 +20,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_custom_heading_params();
+		$this->params = wolf_core_album_disc_params();
 	}
 
 	/**
@@ -41,7 +41,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Custom Heading widget title.
+	 * Retrieve Album Disc widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -55,7 +55,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Custom Heading widget icon.
+	 * Retrieve Album Disc widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -69,7 +69,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Custom Heading widget belongs to.
+	 * Retrieve the list of categories the Album Disc widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -77,11 +77,11 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'extension' );
+		return array( 'music' );
 	}
 
 	/**
-	 * Register Custom Heading widget controls.
+	 * Register Album Disc widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -93,7 +93,7 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			array(
-				'label' => esc_html__( 'Content', 'wolf-core' ),
+				'label' => esc_html__( 'Content', '%TEXTDOMAIN%' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -116,37 +116,19 @@ class Elementor_Custom_Heading_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'font_size'           => '',
-				'min_font_size'       => '',
-				'responsive'          => true,
-				'font_family'         => '',
-				'letter_spacing'      => 0,
-				'font_weight'         => '',
-				'line_height'         => '',
-				'text_transform'      => '',
-				'font_style'          => '',
-				'text_align'          => '',
-				'color'               => '',
-				'custom_color'        => '',
-				'text'                => '',
-				'tag'                 => 'h2',
-				'link'                => '',
-				'background_img'      => '',
-				'background_position' => 'center center',
-				'background_repeat'   => 'no-repeat',
-				'background_size'     => 'cover',
-				'css_animation'       => '',
-				'css_animation_delay' => '',
-				'el_class'            => '',
-				'css'                 => '',
-				'inline_style'        => '',
-				'hide_class'          => '',
-				'container'           => true,
-			)
+				'type'                => 'cd', // CD or vinyl.
+				'alignment'           => '',
+				'worn_border'         => 'yes',
+				'rotate'              => '',
+				'rotation_speed'      => '',
+				'cover_image'         => '',
+				'disc_image'          => '',
+				'img_size'            => '375x375',
+				)
 		);
 
-		echo wolf_core_heading( $atts ); // WCS XSS ok.
+		echo wolf_core_album_disc( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Custom_Heading_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Album_Disc_Widget() );
 

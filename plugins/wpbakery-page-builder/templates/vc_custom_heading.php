@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Fittext shortcode template
  *
@@ -45,4 +45,4 @@ extract( // phpcs:ignore
 	)
 );
 
-echo wolf_core_heading( $atts ); // WCS XSS ok.
+echo wolf_core_heading( $atts ); // phpcs:ignore

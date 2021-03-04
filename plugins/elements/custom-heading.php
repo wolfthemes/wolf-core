@@ -73,26 +73,13 @@ function wolf_core_heading( $atts ) {
 		$text_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
 	}
 
-	if ( function_exists( 'vc_build_link' ) ) {
-		$link        = vc_build_link( $link );
-		$link_url    = esc_url( $link['url'] );
-		$link_target = esc_attr( $link['target'] );
-		$link_title  = esc_attr( $link['title'] );
-	} else {
-		//debug( $link );
-		// $link        = array();
-		$link_url    = esc_url( $link['url'] );
-		$link_target = ( 'on' === $link['is_external'] ) ? '_blank' : '_parent';
-		$link_title  = '';
-	}
+	/* Link */
+	$link = wolf_core_process_link_atts( $link );
 
 	$text_transform = esc_attr( $text_transform );
 	$font_weight    = ( $font_weight ) ? absint( $font_weight ) : '';
 	// $letter_spacing = preg_replace( '/[^0-9-.,]/', '', $letter_spacing );
 	// $letter_spacing = ( $letter_spacing ) ? wolf_core_sanitize_css_value( $letter_spacing ) : '';
-
-	$url     = esc_attr( $link_url );
-	$do_link = ( 'http://' !== $url && $url );
 
 	$class .= ' wolf-core-mobile-text-align-' . $text_align_mobile;
 
@@ -182,9 +169,9 @@ function wolf_core_heading( $atts ) {
 		data-max-font-size="' . absint( $font_size ) . '"
 		data-min-font-size="' . absint( $min_font_size ) . '">';
 
-	if ( $do_link ) {
-		$link_target = ( $link_target ) ? '_blank' : '_parent';
-		$output     .= '<a style="' . wolf_core_esc_style_attr( $inline_style ) . '" class="wolf-core-fittext-link" href="' . esc_url( $url ) . '" target="' . esc_attr( $link_target ) . '">';
+	if ( is_array( $link ) ) {
+		$output     .= '<a style="' . wolf_core_esc_style_attr( $inline_style ) . '" class="wolf-core-fittext-link" href="' . esc_url( $link['url'] ) . '"
+		target="' . esc_attr( $link['target'] ) . '" title="' . esc_attr( $link['title'] ) . '" rel="' . esc_attr( $link['rel'] ) . '">';
 	}
 
 	if ( $has_line_break ) {

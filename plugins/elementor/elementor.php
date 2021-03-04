@@ -93,6 +93,17 @@ class Wolf_Core_Elementor_Extension {
 
 		// Register control
 		// \Elementor\Plugin::$instance->controls_manager->register_control( 'control-type-', new \Test_Control() );
+
+		$controls_files = array(
+			'section',
+		);
+
+		foreach ( $controls_files as $controls_file ) {
+
+			if ( is_file( WOLF_CORE_DIR . '/plugins/elementor/controls/' . sanitize_title_with_dashes( $controls_file ) . '.php' ) ) {
+				require_once WOLF_CORE_DIR . '/plugins/elementor/controls/' . sanitize_title_with_dashes( $controls_file ) . '.php';
+			}
+		}
 	}
 }
 
