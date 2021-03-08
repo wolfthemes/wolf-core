@@ -607,6 +607,8 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$element_files = array(
 				'album-disc',
+				'bandsintown-events',
+				'playlist',
 				'custom-heading',
 				'content-block',
 			);

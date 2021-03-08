@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Heading
+ * Playlist
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
+class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -20,7 +20,7 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_bandsinwtown_events_params();
+		$this->params = wolf_core_playlist_params();
 	}
 
 	/**
@@ -41,7 +41,7 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Bandsintown Events widget title.
+	 * Retrieve Playlist widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -55,7 +55,7 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Bandsintown Events widget icon.
+	 * Retrieve Playlist widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -69,7 +69,7 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Bandsintown Events widget belongs to.
+	 * Retrieve the list of categories the Playlist widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -81,7 +81,7 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
-	 * Register Bandsintown Events widget controls.
+	 * Register Playlist widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -116,10 +116,9 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'artist'              => '',
-				'local_dates'         => 'true',
-				'past_dates'          => 'true',
-				'display_limit'       => '',
+				'id'                  => '',
+				'show_tracklist'      => '',
+				'theme'               => '',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
 				'el_class'            => '',
@@ -128,8 +127,8 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 			)
 		);
 
-		echo wolf_core_bandsinwtown_events( $atts ); // WCS XSS ok.
+		echo wolf_core_playlist( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Bandsintown_Events_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Playlist_Widget() );
 

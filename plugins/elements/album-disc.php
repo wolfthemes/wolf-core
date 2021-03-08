@@ -69,8 +69,6 @@ function wolf_core_album_disc( $atts ) {
 	/* Link */
 	$link = wolf_core_process_link_atts( $link );
 
-	debug( $link );
-
 	if ( is_array( $link ) ) {
 		$class .= ' wolf-core-ad-has-link';
 	}
