@@ -9,7 +9,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-
 /**
  * Add default typography color option
  */
@@ -72,7 +71,7 @@ add_action(
 				'label_on'     => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
 				'label_off'    => esc_html__( 'No', '%TEXTDOMAIN%' ),
 				'condition'    => array(
-					'background' => array( 'classic', 'video' ),
+					'background_background' => array( 'classic', 'video' ),
 				),
 			)
 		);
