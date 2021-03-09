@@ -39,6 +39,10 @@ class Wolf_Core_Elementor_Extension {
 
 		require_once 'elementor-core-functions.php';
 
+		if ( is_admin() ) {
+			require_once WOLF_CORE_DIR . '/inc/admin/admin-elementor-functions.php';
+		}
+
 		$this->include_raw_params();
 
 		add_action( 'elementor/widgets/widgets_registered', array( $this, 'init_widgets' ) );

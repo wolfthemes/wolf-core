@@ -370,15 +370,32 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				add_option( '_wolf_core_flush_rewrite_rules_flag', true );
 			}
 
+			/* WPBakery activation hooks */
 			update_option( 'wpb_js_gutenberg_disable', true );
 
+
+			/* Elementor activation hooks */
+
+			// Supported CPT.
 			$cpt_support = get_option( 'elementor_cpt_support' );
 
-			// if it DOES exist, but portfolio is NOT defined
-			if ( ! in_array( 'wolf_content_block', $cpt_support ) ) {
-				$cpt_support[] = 'wolf_content_block'; // append to array.
-				update_option( 'elementor_cpt_support', $cpt_support ); // update database.
+			$supported_post_types = array(
+				'wolf_content_block',
+				'work',
+			);
+
+			foreach( $supported_post_types as $cpt ) {
+				if ( ! in_array( $cpt, $cpt_support ) ) {
+					$cpt_support[] = $cpt;
+
+				}
 			}
+
+			update_option( 'elementor_cpt_support', $cpt_support ); // update database.
+
+			// Disable Elementor Default Colors and fonts to inherit everything from the theme.
+			update_option( 'elementor_disable_color_schemes', 'yes' );
+			update_option( 'elementor_disable_typography_schemes', 'yes' );
 		}
 
 		/**
@@ -608,9 +625,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			$element_files = array(
 				'album-disc',
 				'bandsintown-events',
-				'playlist',
-				'custom-heading',
 				'content-block',
+				'custom-heading',
+				'playlist',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */

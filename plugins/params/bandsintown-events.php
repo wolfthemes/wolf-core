@@ -48,9 +48,9 @@ function wolf_core_bandsintown_events_params() {
 					'type'       => 'select',
 					'label'      => esc_html__( 'Display Local Dates', '%TEXTDOMAIN%' ),
 					'param_name' => 'local_dates',
-					'options'      => array(
+					'options'    => array(
 						'false' => esc_html__( 'No', '%TEXTDOMAIN%' ),
-						'true' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
+						'true'  => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
 					),
 				),
 
@@ -58,8 +58,8 @@ function wolf_core_bandsintown_events_params() {
 					'type'       => 'select',
 					'label'      => esc_html__( 'Display Past Dates', '%TEXTDOMAIN%' ),
 					'param_name' => 'past_dates',
-					'options'      => array(
-						'true' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
+					'options'    => array(
+						'true'  => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
 						'false' => esc_html__( 'No', '%TEXTDOMAIN%' ),
 					),
 				),

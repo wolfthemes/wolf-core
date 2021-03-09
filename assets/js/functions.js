@@ -767,18 +767,17 @@ var WolfCore = (function ($) {
 
 			if (!smallScreen) {
 				$(".wolf-core-parallax").jarallax();
+				$( '.wolf-core-video-parallax' ).jarallax();
 
-				//$( '.wolf-core-video-parallax' ).jarallax();
+				// $(".wolf-core-video-parallax").each(function () {
+				// 	var videoStartTime = $(this).data("video-start-time") || 0,
+				// 		videoEndTime = $(this).data("video-end-time") || 0;
 
-				$(".wolf-core-video-parallax").each(function () {
-					var videoStartTime = $(this).data("video-start-time") || 0,
-						videoEndTime = $(this).data("video-end-time") || 0;
-
-					$(this).jarallax({
-						videoStartTime: videoStartTime,
-						videoEndTime: videoEndTime,
-					});
-				});
+				// 	$(this).find( '.elementor-background-video-container' ).jarallax({
+				// 		videoStartTime: videoStartTime,
+				// 		videoEndTime: videoEndTime,
+				// 	});
+				// });
 			}
 		},
 
