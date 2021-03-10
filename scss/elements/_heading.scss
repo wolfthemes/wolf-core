@@ -1,0 +1,32 @@
+/**
+ * @# Heading
+ **/
+.wolf-core-heading {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	span {
+		margin-bottom: 0;
+	}
+
+	&.wolf-core-heading-custom-font-size {
+		.elementor-heading-title {
+			font-size: inherit !important;
+		}
+	}
+
+	.elementor-heading-title {
+		font-family: inherit !important;
+		font-weight: inherit !important;
+		letter-spacing: inherit !important;
+		line-height: inherit !important;
+		text-transform: inherit !important;
+	}
+}
+
+.wolf-core-custom-heading-line {
+}

@@ -627,6 +627,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'bandsintown-events',
 				'content-block',
 				'custom-heading',
+				'heading',
 				'playlist',
 			);
 

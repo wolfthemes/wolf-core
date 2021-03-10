@@ -20,7 +20,7 @@ function wolf_core_bandsintown_events_params() {
 		'wolf_core_bandsintown_events_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Audio Button', '%TEXTDOMAIN%' ),
+				'name'        => esc_html__( 'Bandsintown Events', '%TEXTDOMAIN%' ),
 				'description' => esc_html__( 'A stylish presentation for your release', '%TEXTDOMAIN%' ),
 				'vc_base'     => 'wolf_core_bandsintown_events',
 				'el_base'     => 'bandsintown-events',

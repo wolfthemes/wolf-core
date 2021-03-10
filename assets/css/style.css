@@ -582,7 +582,7 @@
 }
 
 /**
- * @# Heading
+ * @# Custom Heading
  **/
 .wolf-core-custom-heading h1,
 .wolf-core-custom-heading h2,
@@ -597,4 +597,28 @@
 
 .wolf-core-custom-heading-line {
   display: block;
+}
+
+/**
+ * @# Heading
+ **/
+.wolf-core-heading h1,
+.wolf-core-heading h2,
+.wolf-core-heading h3,
+.wolf-core-heading h4,
+.wolf-core-heading h5,
+.wolf-core-heading h6,
+.wolf-core-heading p,
+.wolf-core-heading span {
+  margin-bottom: 0;
+}
+.wolf-core-heading.wolf-core-heading-custom-font-size .elementor-heading-title {
+  font-size: inherit !important;
+}
+.wolf-core-heading .elementor-heading-title {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+  text-transform: inherit !important;
 }

@@ -31,6 +31,11 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 		$field_params['label']       = $p['label'];
 		$field_params['placeholder'] = isset( $p['placeholder'] ) ? $p['placeholder'] : '';
 
+		// Check if params is exluded for elementor
+		if ( isset( $p['exclude_from'] ) && 'elementor' === $p['exclude_from'] ) {
+			continue;
+		}
+
 		if ( 'text' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::TEXT;

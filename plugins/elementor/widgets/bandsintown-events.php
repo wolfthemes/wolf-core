@@ -120,15 +120,10 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 				'local_dates'         => 'true',
 				'past_dates'          => 'true',
 				'display_limit'       => '',
-				'css_animation'       => '',
-				'css_animation_delay' => '',
-				'el_class'            => '',
-				'css'                 => '',
-				'inline_style'        => '',
 			)
 		);
 
-		echo wolf_core_bandsinwtown_events( $atts ); // WCS XSS ok.
+		echo wolf_core_bandsintown_events( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Bandsintown_Events_Widget() );

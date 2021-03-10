@@ -100,6 +100,7 @@ class Wolf_Core_Elementor_Extension {
 
 		$controls_files = array(
 			'section',
+			'heading',
 		);
 
 		foreach ( $controls_files as $controls_file ) {

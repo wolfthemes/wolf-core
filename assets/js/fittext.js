@@ -21,7 +21,7 @@ var WolfCoreFitText = function( $ ) {
 					compression = $( this ).data( 'font-compression' ) || 1.2;
 
 
-				$( this ).fitText( compression, { minFontSize: minFontSize + 'px', maxFontSize: maxFontSize + 'px' } );
+				$( this ).find( '.elementor-heading-title' ).fitText( compression, { minFontSize: minFontSize + 'px', maxFontSize: maxFontSize + 'px' } );
 			} );
 		}
 	};

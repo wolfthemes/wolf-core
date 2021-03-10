@@ -116,15 +116,15 @@ class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'type'                => 'cd', // CD or vinyl.
-				'alignment'           => '',
-				'worn_border'         => 'yes',
-				'rotate'              => '',
-				'rotation_speed'      => '',
-				'cover_image'         => '',
-				'disc_image'          => '',
-				'img_size'            => '375x375',
-				)
+				'type'           => 'cd', // CD or vinyl.
+				'alignment'      => '',
+				'worn_border'    => 'yes',
+				'rotate'         => '',
+				'rotation_speed' => '',
+				'cover_image'    => '',
+				'disc_image'     => '',
+				'img_size'       => '375x375',
+			)
 		);
 
 		echo wolf_core_album_disc( $atts ); // WCS XSS ok.
