@@ -17,6 +17,15 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return string plugin slug
  */
+function wolf_core_is_page_builder_page() {
+	return true;
+}
+
+/**
+ * Check if we are on the WPB VC Frontend Editor
+ *
+ * @return string plugin slug
+ */
 function wolf_core_is_wpb_vc_frontend() {
 	return function_exists( 'vc_is_inline' ) && vc_is_inline() ? true : false;
 }

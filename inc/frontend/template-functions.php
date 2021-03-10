@@ -38,7 +38,7 @@ function wolf_core_body_class( $classes ) {
 
 	$classes = (array) $classes;
 
-	if ( wolf_core_is_vc()  ) {
+	if ( wolf_core_is_page_builder_page() ) {
 		$classes[] = 'wolf-core';
 
 		if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
@@ -46,7 +46,7 @@ function wolf_core_body_class( $classes ) {
 		}
 
 		if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
-			$classes[] = 'wolf-core-el';
+			$classes[] = 'wolf-core-elementor';
 		}
 
 		$classes[] = 'wolf-core-' . str_replace( '.', '-', WOLF_CORE_VERSION );
