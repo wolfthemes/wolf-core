@@ -363,6 +363,45 @@ function wolf_core_get_team_member_socials() {
 	return $wolf_core_team_member_socials;
 }
 
+/**
+ *  Output animated SVG image
+ *
+ * @param string $file The file URL.
+ * @param array $args The passed arguments.
+ * @return string
+ */
+function wolf_core_animated_svg( $file, $args = array() ) {
+
+	$args = wp_parse_args(
+		$args,
+		array(
+			'class'              => '',
+			'animation_duration' => '',
+		)
+	);
+
+	wp_enqueue_script( 'vivus' );
+	wp_enqueue_script( 'wolf-core-vivus' );
+
+	extract( $args );
+
+	$class .= ' wolf-core-vivus wolf-core-svg-icon';
+
+	$rand = 'wolf-core-svg-' . wp_rand( 0, 999999 ); // unique ID.
+
+	$output = '';
+
+	$output .= '<span id="' . esc_attr( $rand ) . '" class="' . wolf_core_sanitize_html_classes( $class ) . '"
+	data-file="' . esc_url( $file ) . '"';
+
+	if ( $animation_duration ) {
+		$output .= ' data-animation-duration="' . absint( $animation_duration ) . '"';
+	}
+
+	$output .= '></span>';
+
+	return $output;
+}
 
 /**
  * New animations

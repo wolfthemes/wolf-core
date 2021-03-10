@@ -49,6 +49,11 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 			$field_params['type']    = \Elementor\Controls_Manager::SELECT;
 			$field_params['options'] = $p['options'];
 
+		} elseif ( 'choose' === $type ) {
+
+			$field_params['type']    = \Elementor\Controls_Manager::CHOOSE;
+			$field_params['options'] = $p['options'];
+
 		} elseif ( 'checkbox' === $type ) {
 
 			$field_params['type']         = \Elementor\Controls_Manager::SWITCHER;

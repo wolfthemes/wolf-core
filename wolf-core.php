@@ -629,6 +629,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'custom-heading',
 				'heading',
 				'playlist',
+				'video-opener',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */
