@@ -116,7 +116,14 @@ class Elementor_Video_Opener_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-
+				'custom_play_button'  => '',
+				'button_image'        => '',
+				'alignment'           => 'center',
+				'video_url'           => '',
+				'attention_seeker'    => '',
+				'caption_position'    => '',
+				'caption'             => '',
+				'duration'            => '',
 			)
 		);
 

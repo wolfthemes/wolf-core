@@ -33,7 +33,7 @@ function wolf_core_video_opener_params() {
 					'type'       => 'select',
 					'label'      => esc_html__( 'Custom Play Button', '%TEXTDOMAIN%' ),
 					'param_name' => 'custom_play_button',
-					'options'      => array(
+					'options'    => array(
 						''    => esc_html__( 'No', '%TEXTDOMAIN%' ),
 						'yes' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
 					),
@@ -49,69 +49,69 @@ function wolf_core_video_opener_params() {
 				),
 
 				array(
-					'label'     => esc_html__( 'Alignment', '%TEXTDOMAIN%' ),
-					'param_name' => 'alignment',
-					'type'      => 'choose',
-					'options'   => array(
-						'left'    => array(
+					'label'        => esc_html__( 'Alignment', '%TEXTDOMAIN%' ),
+					'param_name'   => 'alignment',
+					'type'         => 'choose',
+					'options'      => array(
+						'left'   => array(
 							'title' => esc_html__( 'Left', '%TEXTDOMAIN%' ),
 							'icon'  => 'eicon-text-align-left',
 						),
-						'center'  => array(
+						'center' => array(
 							'title' => esc_html__( 'Center', '%TEXTDOMAIN%' ),
 							'icon'  => 'eicon-text-align-center',
 						),
-						'right'   => array(
+						'right'  => array(
 							'title' => esc_html__( 'Right', '%TEXTDOMAIN%' ),
 							'icon'  => 'eicon-text-align-right',
 						),
-						'justify' => array(
-							'title' => esc_html__( 'Justified', '%TEXTDOMAIN%' ),
-							'icon'  => 'eicon-text-align-justify',
-						),
 					),
-					'selectors' => array(
+					'selectors'    => array(
 						'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 					),
+					'page_builder' => 'elementor',
 				),
 
-				// array(
-				// 'type'       => 'select',
-				// 'label'      => esc_html__( 'Alignment', '%TEXTDOMAIN%' ),
-				// 'param_name' => 'alignment',
-				// 'value'      => array(
-				// ''esc_html__( 'center', '%TEXTDOMAIN%' ) => 'center',
-				// ''esc_html__( 'left', '%TEXTDOMAIN%' ) => 'left',
-				// ''esc_html__( 'right', '%TEXTDOMAIN%' ) => 'right',
-				// ),
-				// ),
-
-				// array(
-				// 'type' => 'text',
-				// 'label' => esc_html__( 'Video URL', '%TEXTDOMAIN%' ),
-				// 'param_name' => 'video_url',
-				// 'placeholder' => 'https://vimeo.com/124894010',
-				// 'description' => sprintf(
-				// esc_html__( 'Support %1$s and %2$s', '%TEXTDOMAIN%' ),
-				// 'YouTube',
-				// 'Vimeo'
-				// ),
-				// 'admin_label' => true,
-				// ),
+				array(
+					'type'         => 'select',
+					'label'        => esc_html__( 'Alignment', '%TEXTDOMAIN%' ),
+					'param_name'   => 'alignment',
+					'options'        => array(
+						'center' => esc_html__( 'center', '%TEXTDOMAIN%' ),
+						'left'   => esc_html__( 'left', '%TEXTDOMAIN%' ),
+						'right'  => esc_html__( 'right', '%TEXTDOMAIN%' ),
+					),
+					'page_builder' => 'wpbakerypagebuilder',
+				),
 
 				array(
-					'type'        => 'url',
-					'label'       => esc_html__( 'Video URL', '%TEXTDOMAIN%' ),
-					'param_name'  => 'video_url',
-					'description' => esc_html__( 'A YouTube, Vimeo, or mp4 URL.', '%TEXTDOMAIN%' ),
-					'admin_label' => true,
+					'type'         => 'wolf_core_video_url',
+					'label'        => esc_html__( 'Video URL', '%TEXTDOMAIN%' ),
+					'param_name'   => 'video_url',
+					'placeholder'  => 'https://vimeo.com/124894010',
+					'description'  => sprintf(
+						esc_html__( 'Support %1$s and %2$s', '%TEXTDOMAIN%' ),
+						'YouTube',
+						'Vimeo'
+					),
+					'admin_label'  => true,
+					'page_builder' => 'wpbakerypagebuilder',
+				),
+
+				array(
+					'type'         => 'url',
+					'label'        => esc_html__( 'Video URL', '%TEXTDOMAIN%' ),
+					'param_name'   => 'video_url',
+					'description'  => esc_html__( 'A YouTube, Vimeo, or mp4 URL.', '%TEXTDOMAIN%' ),
+					'admin_label'  => true,
+					'page_builder' => 'elementor',
 				),
 
 				array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Caption Position', '%TEXTDOMAIN%' ),
 					'param_name' => 'caption_position',
-					'options'      => array(
+					'options'    => array(
 						'none'   => esc_html__( 'None', '%TEXTDOMAIN%' ),
 						'bottom' => esc_html__( 'Bottom', '%TEXTDOMAIN%' ),
 						'right'  => esc_html__( 'Right', '%TEXTDOMAIN%' ),

@@ -39,7 +39,7 @@ function wolf_core_enqueue_styles() {
 	 */
 	wp_register_style( 'aos', WOLF_CORE_CSS . '/lib/aos.css', array(), '2.3.0' );
 
-	if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+	if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
 
 		// Font awesome back compat.
 		wp_enqueue_style( 'font-awesome', WOLF_CORE_CSS . '/lib/fontawesome/fontawesome.css', array(), '4.7.0' );

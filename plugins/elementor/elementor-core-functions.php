@@ -25,16 +25,15 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 
 	foreach ( $params as $p ) {
 
+		if ( isset( $p['page_builder'] ) && 'wpbakerypagebuilder' === $p['page_builder'] ) {
+			continue;
+		}
+
 		$field_params = array();
 
 		$type                        = $p['type'];
 		$field_params['label']       = $p['label'];
 		$field_params['placeholder'] = isset( $p['placeholder'] ) ? $p['placeholder'] : '';
-
-		// Check if params is exluded for elementor
-		if ( isset( $p['exclude_from'] ) && 'elementor' === $p['exclude_from'] ) {
-			continue;
-		}
 
 		if ( 'text' === $type ) {
 
@@ -54,6 +53,10 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 			$field_params['type']    = \Elementor\Controls_Manager::CHOOSE;
 			$field_params['options'] = $p['options'];
 
+			if ( isset( $p['selectors'] ) ) {
+				$field_params['selectors'] = $p['selectors'];
+			}
+
 		} elseif ( 'checkbox' === $type ) {
 
 			$field_params['type']         = \Elementor\Controls_Manager::SWITCHER;
@@ -67,9 +70,11 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 			$field_params['options'] = wolf_core_get_google_fonts_options();
 
 		} elseif ( 'link' === $type ) {
+
 			$field_params['type'] = \Elementor\Controls_Manager::URL;
 
 		} elseif ( 'image' === $type ) {
+
 			$field_params['type'] = \Elementor\Controls_Manager::MEDIA;
 
 		}

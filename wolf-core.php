@@ -571,7 +571,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				require_once 'plugins/elementor/elementor.php';
 			}
 
-			if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+			if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
 
 				require_once 'plugins/wpbakery-page-builder/wpbakery-page-builder.php';
 			}

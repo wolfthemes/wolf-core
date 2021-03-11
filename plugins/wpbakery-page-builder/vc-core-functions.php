@@ -39,6 +39,10 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 	foreach ( $params as $p ) {
 
+		if ( isset( $p['page_builder'] ) && 'elementor' === $p['page_builder'] ) {
+			continue;
+		}
+
 		$type = $p['type'];
 
 		$vc_params['params'][ $i ]['type'] = $type;

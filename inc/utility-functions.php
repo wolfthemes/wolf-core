@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * We use it to add inline style to row
  *
  * @param $param_value
- * @param string $prefix
+ * @param string      $prefix
  * @return string
  */
 function wolf_core_shortcode_custom_style( $param_value ) {
@@ -1041,7 +1041,7 @@ if ( ! function_exists( 'wolf_core_user_country_code_is_in_eu' ) ) {
  * Straight from VC
  *
  * @param $content The output content.
- * @param bool $autop Whether to strip p tag or not
+ * @param bool                       $autop Whether to strip p tag or not
  * @return string
  */
 function wolf_core_js_remove_wpautop( $content, $autop = false ) {
@@ -1062,10 +1062,10 @@ function wolf_core_js_remove_wpautop( $content, $autop = false ) {
 function wolf_core_process_link_atts( $link_atts ) {
 
 	$link = array(
-		'url' => '',
+		'url'    => '',
 		'target' => '',
-		'rel' => '',
-		'title' => '',
+		'rel'    => '',
+		'title'  => '',
 	);
 
 	if ( function_exists( 'vc_build_link' ) ) {
@@ -1073,13 +1073,13 @@ function wolf_core_process_link_atts( $link_atts ) {
 		$vc_link        = vc_build_link( $link_atts );
 		$link['url']    = esc_url( $vc_link['url'] );
 		$link['target'] = esc_attr( $vc_link['target'] );
-		$link['rel']  = esc_attr( $vc_link['rel'] );
+		$link['rel']    = esc_attr( $vc_link['rel'] );
 		$link['title']  = esc_attr( $vc_link['title'] );
 
 	} else {
 		$link['url']    = esc_url( $link_atts['url'] );
 		$link['target'] = ( isset( $link_atts['is_external'] ) && 'on' === $link_atts['is_external'] ) ? '_blank' : '_parent';
-		$link['rel']  = ( isset( $link_atts['nofollow'] ) && 'on' === $link_atts['nofollow'] ) ? 'nofollow' : '';
+		$link['rel']    = ( isset( $link_atts['nofollow'] ) && 'on' === $link_atts['nofollow'] ) ? 'nofollow' : '';
 		$link['title']  = '';
 	}
 

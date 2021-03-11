@@ -41,7 +41,7 @@ function wolf_core_body_class( $classes ) {
 	if ( wolf_core_is_page_builder_page() ) {
 		$classes[] = 'wolf-core';
 
-		if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+		if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
 			$classes[] = 'wolf-core-vc';
 		}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Bandsintown Events
+ * Video Opener
  *
  * @author WolfThemes
  * @package WolfCore/WPBakeryPageBuilder/Params
@@ -9,4 +9,4 @@
 
 defined( 'ABSPATH' ) || exit;
 
-vc_map( wolf_core_convert_params_to_vc( wolf_core_bandsintown_params() ) );
+vc_map( wolf_core_convert_params_to_vc( wolf_core_video_opener_params() ) );

@@ -57,8 +57,11 @@ function wolf_core_get_img_by_size( $params = array() ) {
 
 	if ( is_string( $thumb_size ) && ( ( ! empty( $_wp_additional_image_sizes[ $thumb_size ] ) && is_array( $_wp_additional_image_sizes[ $thumb_size ] ) ) || in_array( $thumb_size, $sizes, true ) ) ) {
 		$attributes = array( 'class' => $thumb_class . 'attachment-' . $thumb_size );
-		$thumbnail  = wp_get_attachment_image( $attach_id, $thumb_size, false, $attributes );
+
+		$thumbnail = wp_get_attachment_image( $attach_id, $thumb_size, false, $attributes );
+
 	} elseif ( $attach_id ) {
+
 		if ( is_string( $thumb_size ) ) {
 			preg_match_all( '/\d+/', $thumb_size, $thumb_matches );
 			if ( isset( $thumb_matches[0] ) ) {
@@ -75,7 +78,9 @@ function wolf_core_get_img_by_size( $params = array() ) {
 				}
 			}
 		}
+
 		if ( is_array( $thumb_size ) ) {
+
 			// Resize image to custom size.
 			$p_img      = wolf_core_resize_image( $attach_id, null, $thumb_size[0], $thumb_size[1], true );
 			$alt        = trim( wp_strip_all_tags( get_post_meta( $attach_id, '_wp_attachment_image_alt', true ) ) );

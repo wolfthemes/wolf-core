@@ -24,7 +24,7 @@ function wolf_core_enqueue_admin_scripts() {
 	 Styles */
 	// wp_enqueue_style( 'wp-color-picker' );
 
-	if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+	if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
 		wp_enqueue_style( 'wolf-core-admin', WOLF_CORE_CSS . '/admin/admin' . $suffix . '.css', array(), $version, 'all' );
 	}
 

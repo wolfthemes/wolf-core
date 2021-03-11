@@ -110,7 +110,7 @@ function wolf_core_video_opener( $atts ) {
 	if ( $custom_play_button && $button_image ) {
 
 		$img_class = 'wolf-core-vo-custom-button-img';
-		$img_size  = 'full';
+		$img_size  = 'thumbnail';
 
 		if ( wp_attachment_is_image( $button_image ) ) {
 
@@ -123,6 +123,7 @@ function wolf_core_video_opener( $atts ) {
 			);
 
 			$output .= $img['thumbnail'];
+
 		} else {
 			$output .= wolf_core_placeholder_img( $img_size, $img_class );
 		}

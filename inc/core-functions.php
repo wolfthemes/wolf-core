@@ -25,7 +25,7 @@ function wolf_core_get_plugin_in_use() {
 
 	} elseif ( defined( 'WPB_VC_VERSION' ) ) {
 
-		return 'wbp-vc';
+		return 'wpbakerypagebuilder';
 	}
 }
 
@@ -180,7 +180,7 @@ function wolf_core_get_element_list() {
 		'zigzag',
 	);
 
-	if ( 'wbp-vc' === wolf_core_get_plugin_in_use() ) {
+	if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
 		$wolf_core_elements[] = 'row';
 		$wolf_core_elements[] = 'row-inner';
 		$wolf_core_elements[] = 'column';

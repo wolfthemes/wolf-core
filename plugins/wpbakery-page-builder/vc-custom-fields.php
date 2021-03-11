@@ -129,11 +129,14 @@ function wolf_core_textarea_html_settings_field( $settings, $value ) {
 	$editor_id = 'editorcontent'; // must the same ID as the param name.
 
 	ob_start();
-	add_filter( 'wp_default_editor', create_function( '', 'return "tinymce";' ) );
+
+	// add_filter( 'wp_default_editor', function() {
+	// 	return 'tinymce';
+	// } );
 
 	wp_editor( $value, $editor_id, $settings );
 	?>
-	<script>tinymce.execCommand( 'mceAddEditor', true, <?php echo $editor_id; ?> );</script>
+	<script>tinymce.execCommand( 'mceAddEditor', true, <?php echo esc_attr( $editor_id ); ?> );</script>
 	<?php
 
 	return ob_get_clean();

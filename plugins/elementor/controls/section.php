@@ -73,7 +73,7 @@ add_action(
 
 		$settings = $widget->get_active_settings();
 
-		if ( isset( $settings['parallax'] ) ) {
+		if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
 
 			//debug( $settings );
 
