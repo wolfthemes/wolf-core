@@ -582,6 +582,20 @@
 }
 
 /**
+ * @# Bandsintown Events
+ **/
+.wolf-core-bandwintown-events .bit-widget {
+  font-size: inherit;
+  color: inherit;
+}
+.wolf-core-bandwintown-events .bit-widget .bit-event {
+  color: inherit;
+}
+
+/**
+ * @# Bandsintown Button
+ **/
+/**
  * @# Custom Heading
  **/
 .wolf-core-custom-heading h1,

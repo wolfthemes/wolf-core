@@ -629,6 +629,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'custom-heading',
 				'heading',
 				'playlist',
+				'spotify-player',
 				'video-opener',
 			);
 

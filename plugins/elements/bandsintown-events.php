@@ -49,7 +49,7 @@ function wolf_core_bandsintown_events( $atts ) {
 		$inline_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
 	}
 
-	$class .= ' wvc-bandwintown-events wvc-element';
+	$class .= ' wolf-core-bandwintown-events wolf-core-element';
 
 	$artist      = wp_strip_all_tags( do_shortcode( $artist ) );
 	$artist_slug = sanitize_title( $artist );
@@ -67,7 +67,7 @@ function wolf_core_bandsintown_events( $atts ) {
 
 	if ( $artist ) {
 
-		$output .= '<div id="wvc-bandwintown-tour-dates-' . $artist_slug . '" class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+		$output .= '<div id="wolf-core-bandwintown-events-' . $artist_slug . '" class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 		$output .= wolf_core_element_aos_animation_data_attr( $atts );
 		$output .= '>';
@@ -85,7 +85,7 @@ function wolf_core_bandsintown_events( $atts ) {
 		. 'data-auto-style="false"';
 		$output .= '></a>';
 
-		$output .= '</div><!-- .wvc-bandwintown -->';
+		$output .= '</div><!-- .wolf-core-bandwintown -->';
 
 	} else {
 		if ( is_user_logged_in() ) {

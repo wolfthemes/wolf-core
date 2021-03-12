@@ -36,6 +36,8 @@ add_action(
 			return;
 		}
 
+
+
 		$settings = $widget->get_active_settings();
 
 		//debug( $settings );
@@ -51,12 +53,13 @@ add_action(
 			$class .= ' wolf-core-mobile-text-align-center';
 		}
 
-		if ( $font_size && 'yes' === $responsive ) {
-
+		if ( 'yes' === $responsive ) {
+			wp_enqueue_script( 'fittext' ); // enqueue fittext parallax scripts.
+			wp_enqueue_script( 'wolf-core-fittext' );
 			$class .= ' wolf-core-fittext';
+		}
 
-		} elseif ( $font_size && 'yes' !== $responsive ) {
-
+		if ( $font_size ) {
 			$class .= ' wolf-core-heading-custom-font-size';
 			$style .= 'font-size:' . absint( $font_size ) . 'px;';
 		}

@@ -1,11 +1,11 @@
 <?php
 /**
- * %NAME% image functions
+ * Wolf Core image functions
  *
- * @author %AUTHOR%
+ * @author WolfThemes
  * @category Core
- * @package %PACKAGENAME%/FRontend
- * @version %VERSION%
+ * @package WolfCore/FRontend
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

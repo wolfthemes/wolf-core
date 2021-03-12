@@ -20,85 +20,110 @@ function wolf_core_album_disc_params() {
 		'wolf_core_album_disc_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Album Disc', '%TEXTDOMAIN%' ),
-				'description' => esc_html__( 'A stylish presentation for your release', '%TEXTDOMAIN%' ),
+				'name'        => esc_html__( 'Album Disc', 'wolf-core' ),
+				'description' => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
 				'vc_base'     => 'wolf_core_album_disc',
 				'el_base'     => 'album-disc',
-				'vc_category' => esc_html__( 'Music', '%TEXTDOMAIN%' ),
+				'vc_category' => esc_html__( 'Music', 'wolf-core' ),
 				'icon'        => 'dashicons-before dashicons-album',
 			),
 
 			'params'     => array(
+
 				array(
-					'type'       => 'select',
-					'label'      => esc_html__( 'Alignment', '%TEXTDOMAIN%' ),
-					'param_name' => 'alignment',
-					'default'    => 'left',
+					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
+					'param_name'   => 'alignment',
+					'type'         => 'choose',
 					'options'      => array(
-						'left'   => esc_html__( 'Left', '%TEXTDOMAIN%' ),
-						'center' => esc_html__( 'Center', '%TEXTDOMAIN%' ),
-						'right'  => esc_html__( 'Right', '%TEXTDOMAIN%' ),
+						'left'   => array(
+							'title' => esc_html__( 'Left', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-left',
+						),
+						'center' => array(
+							'title' => esc_html__( 'Center', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-center',
+						),
+						'right'  => array(
+							'title' => esc_html__( 'Right', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-right',
+						),
 					),
+					'selectors'    => array(
+						'{{WRAPPER}}' => 'text-align: {{VALUE}};',
+					),
+					'page_builder' => 'elementor',
+				),
+
+				array(
+					'type'         => 'select',
+					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
+					'param_name'   => 'alignment',
+					'options'        => array(
+						'center' => esc_html__( 'center', 'wolf-core' ),
+						'left'   => esc_html__( 'left', 'wolf-core' ),
+						'right'  => esc_html__( 'right', 'wolf-core' ),
+					),
+					'page_builder' => 'wpbakerypagebuilder',
 				),
 
 				array(
 					'type'       => 'select',
-					'label'      => esc_html__( 'Type', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Type', 'wolf-core' ),
 					'param_name' => 'type',
 					'options'      => array(
-						'cd'    => esc_html__( 'CD', '%TEXTDOMAIN%' ),
-						'vinyl' => esc_html__( 'Vinyl', '%TEXTDOMAIN%' ),
+						'cd'    => esc_html__( 'CD', 'wolf-core' ),
+						'vinyl' => esc_html__( 'Vinyl', 'wolf-core' ),
 					),
 				),
 
 				array(
 					'type'        => 'image',
-					'label'       => esc_html__( 'Cover Image', '%TEXTDOMAIN%' ),
+					'label'       => esc_html__( 'Cover Image', 'wolf-core' ),
 					'param_name'  => 'cover_image',
-					'description' => esc_html__( 'Select image from media library.', '%TEXTDOMAIN%' ),
+					'description' => esc_html__( 'Select image from media library.', 'wolf-core' ),
 					'admin_label' => true,
 				),
 
 				array(
 					'type'        => 'image',
-					'label'       => esc_html__( 'Disc Image', '%TEXTDOMAIN%' ),
+					'label'       => esc_html__( 'Disc Image', 'wolf-core' ),
 					'param_name'  => 'disc_image',
-					'description' => esc_html__( 'A secondary image that will be used for the CD or vinyl artwork.', '%TEXTDOMAIN%' ),
+					'description' => esc_html__( 'A secondary image that will be used for the CD or vinyl artwork.', 'wolf-core' ),
 					'admin_label' => true,
 				),
 
 				array(
 					'type'       => 'link',
-					'label'      => esc_html__( 'Link', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Link', 'wolf-core' ),
 					'param_name' => 'link',
 				),
 
 				array(
 					'type'       => 'select',
-					'label'      => esc_html__( 'Worn Border Effect', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Worn Border Effect', 'wolf-core' ),
 					'param_name' => 'worn_border',
 					'options'      => array(
-						'yes' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
-						'no'  => esc_html__( 'No', '%TEXTDOMAIN%' ),
+						'yes' => esc_html__( 'Yes', 'wolf-core' ),
+						'no'  => esc_html__( 'No', 'wolf-core' ),
 					),
 				),
 
 				array(
 					'type'       => 'select',
-					'label'      => esc_html__( 'Disc Rotate Effect', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Disc Rotate Effect', 'wolf-core' ),
 					'param_name' => 'rotate',
 					'default'    => 'hover',
 					'options'      => array(
-						'hover'      => esc_html__( 'On Hover', '%TEXTDOMAIN%' ),
-						'hover-stop' => esc_html__( 'Stop On Hover', '%TEXTDOMAIN%' ),
-						'always'     => esc_html__( 'Always', '%TEXTDOMAIN%' ),
-						'none'       => esc_html__( 'None', '%TEXTDOMAIN%' ),
+						'hover'      => esc_html__( 'On Hover', 'wolf-core' ),
+						'hover-stop' => esc_html__( 'Stop On Hover', 'wolf-core' ),
+						'always'     => esc_html__( 'Always', 'wolf-core' ),
+						'none'       => esc_html__( 'None', 'wolf-core' ),
 					),
 				),
 
 				array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Image Size', '%TEXTDOMAIN%' ),
+					'label'       => esc_html__( 'Image Size', 'wolf-core' ),
 					'param_name'  => 'img_size',
 					'placeholder' => apply_filters( 'wolf_core_default_album_disc_img_size', '375x375' ),
 					'default'     => apply_filters( 'wolf_core_default_album_disc_img_size', '375x375' ),
@@ -106,7 +131,7 @@ function wolf_core_album_disc_params() {
 
 				array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Disc Rotation Speed (in ms)', '%TEXTDOMAIN%' ),
+					'label'       => esc_html__( 'Disc Rotation Speed (in ms)', 'wolf-core' ),
 					'param_name'  => 'rotation_speed',
 					'placeholder' => apply_filters( 'wolf_core_default_album_disc_rotation_speed', 3500 ),
 					'default'     => apply_filters( 'wolf_core_default_album_disc_rotation_speed', 3500 ),

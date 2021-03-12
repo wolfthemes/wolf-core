@@ -1,6 +1,6 @@
 <?php
 /**
- * Wolf Core Add cutom icon libraries
+ * Wolf Core Add custom icon libraries
  *
  * Set default setttings values for in-built elements
  *

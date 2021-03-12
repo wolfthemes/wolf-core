@@ -93,7 +93,7 @@ class Elementor_Video_Opener_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			array(
-				'label' => esc_html__( 'Content', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Content', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);

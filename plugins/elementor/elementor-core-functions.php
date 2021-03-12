@@ -53,10 +53,6 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 			$field_params['type']    = \Elementor\Controls_Manager::CHOOSE;
 			$field_params['options'] = $p['options'];
 
-			if ( isset( $p['selectors'] ) ) {
-				$field_params['selectors'] = $p['selectors'];
-			}
-
 		} elseif ( 'checkbox' === $type ) {
 
 			$field_params['type']         = \Elementor\Controls_Manager::SWITCHER;
@@ -67,7 +63,7 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 		} elseif ( 'font_family' === $type ) {
 
 			$field_params['type']    = \Elementor\Controls_Manager::SELECT;
-			$field_params['options'] = wolf_core_get_google_fonts_options();
+			$field_params['options'] = array_merge( array( '' => esc_html__( 'Default' ) ), wolf_core_get_google_fonts_options() );
 
 		} elseif ( 'link' === $type ) {
 
@@ -89,6 +85,11 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 
 		if ( isset( $p['description'] ) ) {
 			$field_params['description'] = $p['description'];
+		}
+
+		/* Preview render */
+		if ( isset( $p['selectors'] ) ) {
+			$field_params['selectors'] = $p['selectors'];
 		}
 
 		//debug( $field_params );

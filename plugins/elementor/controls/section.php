@@ -18,14 +18,14 @@ add_action(
 		$element->add_control(
 			'font_color',
 			array(
-				'label'        => esc_html__( 'Default Font Color', '%TEXTDOMAIN%' ),
+				'label'        => esc_html__( 'Default Font Color', 'wolf-core' ),
 				'type'         => \Elementor\Controls_Manager::SELECT,
 				'default'      => 'dark',
 				'prefix_class' => 'wolf-core-font-',
 				// 'render_type' => 'template',
 				'options'      => array(
-					'dark'  => esc_html__( 'Dark', '%TEXTDOMAIN%' ),
-					'light' => esc_html__( 'Light', '%TEXTDOMAIN%' ),
+					'dark'  => esc_html__( 'Dark', 'wolf-core' ),
+					'light' => esc_html__( 'Light', 'wolf-core' ),
 				),
 			)
 		);
@@ -43,12 +43,12 @@ add_action(
 		$section->add_control(
 			'parallax',
 			array(
-				'label'        => esc_html__( 'Parallax', '%TEXTDOMAIN%' ),
+				'label'        => esc_html__( 'Parallax', 'wolf-core' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'default'      => 'no',
 				'prefix_class' => '',
-				'label_on'     => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
-				'label_off'    => esc_html__( 'No', '%TEXTDOMAIN%' ),
+				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
+				'label_off'    => esc_html__( 'No', 'wolf-core' ),
 				'condition'    => array(
 					'background_background' => array( 'classic', 'video' ),
 				),

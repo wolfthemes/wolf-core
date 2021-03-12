@@ -20,47 +20,47 @@ function wolf_core_bandsintown_events_params() {
 		'wolf_core_bandsintown_events_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Bandsintown Events', '%TEXTDOMAIN%' ),
-				'description' => esc_html__( 'A stylish presentation for your release', '%TEXTDOMAIN%' ),
+				'name'        => esc_html__( 'Bandsintown Events', 'wolf-core' ),
+				'description' => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
 				'vc_base'     => 'wolf_core_bandsintown_events',
 				'el_base'     => 'bandsintown-events',
-				'vc_category' => esc_html__( 'Music', '%TEXTDOMAIN%' ),
+				'vc_category' => esc_html__( 'Music', 'wolf-core' ),
 				'icon'        => 'fa wolficon-bandsintown',
 			),
 
 			'params'     => array(
 				array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Artist Name', '%TEXTDOMAIN%' ),
+					'label'       => esc_html__( 'Artist Name', 'wolf-core' ),
 					'param_name'  => 'artist',
 					'admin_label' => true,
 				),
 
 				array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Display Limit', '%TEXTDOMAIN%' ),
+					'label'       => esc_html__( 'Display Limit', 'wolf-core' ),
 					'param_name'  => 'display_limit',
 					'admin_label' => true,
-					'description' => esc_html__( 'Leave empty to display all shows', '%TEXTDOMAIN%' ),
+					'description' => esc_html__( 'Leave empty to display all shows', 'wolf-core' ),
 				),
 
 				array(
 					'type'       => 'select',
-					'label'      => esc_html__( 'Display Local Dates', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Display Local Dates', 'wolf-core' ),
 					'param_name' => 'local_dates',
 					'options'    => array(
-						'false' => esc_html__( 'No', '%TEXTDOMAIN%' ),
-						'true'  => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
+						'false' => esc_html__( 'No', 'wolf-core' ),
+						'true'  => esc_html__( 'Yes', 'wolf-core' ),
 					),
 				),
 
 				array(
 					'type'       => 'select',
-					'label'      => esc_html__( 'Display Past Dates', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Display Past Dates', 'wolf-core' ),
 					'param_name' => 'past_dates',
 					'options'    => array(
-						'true'  => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
-						'false' => esc_html__( 'No', '%TEXTDOMAIN%' ),
+						'true'  => esc_html__( 'Yes', 'wolf-core' ),
+						'false' => esc_html__( 'No', 'wolf-core' ),
 					),
 				),
 			),

@@ -45,11 +45,11 @@ function wolf_core_playlist_params() {
 		'wolf_core_playlist_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Playlist', '%TEXTDOMAIN%' ),
-				'description' => esc_html__( 'Display one of your playlist', '%TEXTDOMAIN%' ),
+				'name'        => esc_html__( 'Playlist', 'wolf-core' ),
+				'description' => esc_html__( 'Display one of your playlist', 'wolf-core' ),
 				'vc_base'     => 'wolf_core_playlist',
 				'el_base'     => 'playlist',
-				'vc_category' => esc_html__( 'Music', '%TEXTDOMAIN%' ),
+				'vc_category' => esc_html__( 'Music', 'wolf-core' ),
 				'icon'        => 'dashicons-before dashicons-playlist-audio',
 			),
 

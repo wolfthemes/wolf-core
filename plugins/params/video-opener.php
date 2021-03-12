@@ -20,28 +20,28 @@ function wolf_core_video_opener_params() {
 		'wolf_core_video_opener_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Lightbox Video Play Button', '%TEXTDOMAIN%' ),
-				'description' => esc_html__( 'A stylish presentation for your release', '%TEXTDOMAIN%' ),
+				'name'        => esc_html__( 'Video Opener', 'wolf-core' ),
+				'description' => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
 				'vc_base'     => 'wolf_core_video_opener',
 				'el_base'     => 'video-opener',
-				'vc_category' => esc_html__( 'Music', '%TEXTDOMAIN%' ),
+				'vc_category' => esc_html__( 'Music', 'wolf-core' ),
 				'icon'        => 'dashicons-before dashicons-video',
 			),
 
 			'params'     => array(
 				array(
 					'type'       => 'select',
-					'label'      => esc_html__( 'Custom Play Button', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Custom Play Button', 'wolf-core' ),
 					'param_name' => 'custom_play_button',
 					'options'    => array(
-						''    => esc_html__( 'No', '%TEXTDOMAIN%' ),
-						'yes' => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
+						''    => esc_html__( 'No', 'wolf-core' ),
+						'yes' => esc_html__( 'Yes', 'wolf-core' ),
 					),
 				),
 
 				array(
 					'type'       => 'image',
-					'label'      => esc_html__( 'Button Image', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Button Image', 'wolf-core' ),
 					'param_name' => 'button_image',
 					'condition'  => array(
 						'custom_play_button' => array( 'yes' ),
@@ -49,20 +49,20 @@ function wolf_core_video_opener_params() {
 				),
 
 				array(
-					'label'        => esc_html__( 'Alignment', '%TEXTDOMAIN%' ),
+					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'   => 'alignment',
 					'type'         => 'choose',
 					'options'      => array(
 						'left'   => array(
-							'title' => esc_html__( 'Left', '%TEXTDOMAIN%' ),
+							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
 						),
 						'center' => array(
-							'title' => esc_html__( 'Center', '%TEXTDOMAIN%' ),
+							'title' => esc_html__( 'Center', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-center',
 						),
 						'right'  => array(
-							'title' => esc_html__( 'Right', '%TEXTDOMAIN%' ),
+							'title' => esc_html__( 'Right', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-right',
 						),
 					),
@@ -74,23 +74,23 @@ function wolf_core_video_opener_params() {
 
 				array(
 					'type'         => 'select',
-					'label'        => esc_html__( 'Alignment', '%TEXTDOMAIN%' ),
+					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'   => 'alignment',
 					'options'        => array(
-						'center' => esc_html__( 'center', '%TEXTDOMAIN%' ),
-						'left'   => esc_html__( 'left', '%TEXTDOMAIN%' ),
-						'right'  => esc_html__( 'right', '%TEXTDOMAIN%' ),
+						'center' => esc_html__( 'center', 'wolf-core' ),
+						'left'   => esc_html__( 'left', 'wolf-core' ),
+						'right'  => esc_html__( 'right', 'wolf-core' ),
 					),
 					'page_builder' => 'wpbakerypagebuilder',
 				),
 
 				array(
 					'type'         => 'wolf_core_video_url',
-					'label'        => esc_html__( 'Video URL', '%TEXTDOMAIN%' ),
+					'label'        => esc_html__( 'Video URL', 'wolf-core' ),
 					'param_name'   => 'video_url',
 					'placeholder'  => 'https://vimeo.com/124894010',
 					'description'  => sprintf(
-						esc_html__( 'Support %1$s and %2$s', '%TEXTDOMAIN%' ),
+						esc_html__( 'Support %1$s and %2$s', 'wolf-core' ),
 						'YouTube',
 						'Vimeo'
 					),
@@ -100,31 +100,31 @@ function wolf_core_video_opener_params() {
 
 				array(
 					'type'         => 'url',
-					'label'        => esc_html__( 'Video URL', '%TEXTDOMAIN%' ),
+					'label'        => esc_html__( 'Video URL', 'wolf-core' ),
 					'param_name'   => 'video_url',
-					'description'  => esc_html__( 'A YouTube, Vimeo, or mp4 URL.', '%TEXTDOMAIN%' ),
+					'description'  => esc_html__( 'A YouTube, Vimeo, or mp4 URL.', 'wolf-core' ),
 					'admin_label'  => true,
 					'page_builder' => 'elementor',
 				),
 
 				array(
 					'type'       => 'select',
-					'label'      => esc_html__( 'Caption Position', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Caption Position', 'wolf-core' ),
 					'param_name' => 'caption_position',
 					'options'    => array(
-						'none'   => esc_html__( 'None', '%TEXTDOMAIN%' ),
-						'bottom' => esc_html__( 'Bottom', '%TEXTDOMAIN%' ),
-						'right'  => esc_html__( 'Right', '%TEXTDOMAIN%' ),
-						'left'   => esc_html__( 'Left', '%TEXTDOMAIN%' ),
-						'top'    => esc_html__( 'Top', '%TEXTDOMAIN%' ),
+						'none'   => esc_html__( 'None', 'wolf-core' ),
+						'bottom' => esc_html__( 'Bottom', 'wolf-core' ),
+						'right'  => esc_html__( 'Right', 'wolf-core' ),
+						'left'   => esc_html__( 'Left', 'wolf-core' ),
+						'top'    => esc_html__( 'Top', 'wolf-core' ),
 					),
 				),
 
 				array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Caption', '%TEXTDOMAIN%' ),
+					'label'       => esc_html__( 'Caption', 'wolf-core' ),
 					'param_name'  => 'caption',
-					'placeholder' => esc_html__( 'Watch "My Video Title"', '%TEXTDOMAIN%' ),
+					'placeholder' => esc_html__( 'Watch "My Video Title"', 'wolf-core' ),
 					// 'condition'  => array(
 					// 'caption_position' => array( '' ),
 					// ),
@@ -132,7 +132,7 @@ function wolf_core_video_opener_params() {
 
 				array(
 					'type'       => 'text',
-					'label'      => esc_html__( 'Duration', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Duration', 'wolf-core' ),
 					'param_name' => 'duration',
 					// 'condition' => array(
 					// 'caption_position' => array( 'none' ),
