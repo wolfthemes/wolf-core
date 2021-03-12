@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Playlist shortcode template
+ * Spotify Player shortcode template
  *
  * @author WolfThemes
  * @package WolfCore/WPBakeryPageBuilder/Templates
@@ -14,9 +14,10 @@ $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( // phpcs:ignore
 	shortcode_atts(
 		array(
-			'id'                  => '',
-			'show_tracklist'      => '',
-			'theme'               => '',
+			'url'                 => '',
+			'type'                => '',
+			'width'               => '',
+			'height'              => '',
 			'css_animation'       => '',
 			'css_animation_delay' => '',
 			'el_class'            => '',
@@ -27,4 +28,4 @@ extract( // phpcs:ignore
 	)
 );
 
-echo wolf_core_playlist( $atts ); // phpcs:ignore
+echo wolf_core_spotify_player( $atts ); // phpcs:ignore
