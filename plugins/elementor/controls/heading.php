@@ -78,7 +78,7 @@ add_action(
 			$style .= 'line-height:1.5;';
 		}
 
-		if ( isset( $settings['font_family'] ) && 'default' !== $settings['font_family'] ) {
+		if ( isset( $settings['font_family'] ) ) {
 			$style .= 'font-family:' . esc_attr( $settings['font_family'] ) . ';';
 		}
 

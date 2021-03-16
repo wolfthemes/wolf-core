@@ -382,6 +382,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			$supported_post_types = array(
 				'wolf_content_block',
 				'work',
+				'page',
+				'video',
+				'product',
 			);
 
 			foreach( $supported_post_types as $cpt ) {
@@ -625,6 +628,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			$element_files = array(
 				'album-disc',
 				'bandsintown-events',
+				'bigtext',
 				'content-block',
 				'custom-heading',
 				'heading',

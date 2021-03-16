@@ -20,12 +20,13 @@ function wolf_core_video_opener_params() {
 		'wolf_core_video_opener_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Video Opener', 'wolf-core' ),
-				'description' => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
-				'vc_base'     => 'wolf_core_video_opener',
-				'el_base'     => 'video-opener',
-				'vc_category' => esc_html__( 'Music', 'wolf-core' ),
-				'icon'        => 'dashicons-before dashicons-video',
+				'name'          => esc_html__( 'Video Opener', 'wolf-core' ),
+				'description'   => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
+				'vc_base'       => 'wolf_core_video_opener',
+				'el_base'       => 'video-opener',
+				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
+				'el_categories' => array( 'music' ),
+				'icon'          => 'dashicons-before dashicons-video',
 			),
 
 			'params'     => array(
@@ -76,7 +77,7 @@ function wolf_core_video_opener_params() {
 					'type'         => 'select',
 					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'   => 'alignment',
-					'options'        => array(
+					'options'      => array(
 						'center' => esc_html__( 'center', 'wolf-core' ),
 						'left'   => esc_html__( 'left', 'wolf-core' ),
 						'right'  => esc_html__( 'right', 'wolf-core' ),

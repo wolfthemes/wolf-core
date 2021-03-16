@@ -77,7 +77,7 @@ class Elementor_Spotify_Player_Widget extends \Elementor\Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'music' );
+		return $this->params['properties']['el_categories'];
 	}
 
 	/**

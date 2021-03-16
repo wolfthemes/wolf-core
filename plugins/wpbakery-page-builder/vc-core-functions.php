@@ -92,7 +92,12 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 		}
 
-		if ( isset( $p['condition'] ) ) {
+		if ( isset( $p['vc_dependency'] ) ) {
+			foreach ( $p['vc_dependency'] as $k => $v ) {
+				$vc_params['params'][ $i ]['dependency']['element'] = $k;
+				$vc_params['params'][ $i ]['dependency']['value']   = $v;
+			}
+		} elseif ( isset( $p['condition'] ) ) {
 			foreach ( $p['condition'] as $k => $v ) {
 				$vc_params['params'][ $i ]['dependency']['element'] = $k;
 				$vc_params['params'][ $i ]['dependency']['value']   = $v;
@@ -105,6 +110,10 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 		if ( isset( $p['weight'] ) ) {
 			$vc_params['params'][ $i ]['weight'] = $p['weight'];
+		}
+
+		if ( isset( $p['save_always'] ) ) {
+			$vc_params['params'][ $i ]['save_always'] = $p['save_always'];
 		}
 
 		if ( isset( $p['admin_label'] ) ) {

@@ -20,12 +20,13 @@ function wolf_core_album_disc_params() {
 		'wolf_core_album_disc_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Album Disc', 'wolf-core' ),
-				'description' => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
-				'vc_base'     => 'wolf_core_album_disc',
-				'el_base'     => 'album-disc',
-				'vc_category' => esc_html__( 'Music', 'wolf-core' ),
-				'icon'        => 'dashicons-before dashicons-album',
+				'name'          => esc_html__( 'Album Disc', 'wolf-core' ),
+				'description'   => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
+				'vc_base'       => 'wolf_core_album_disc',
+				'el_base'       => 'album-disc',
+				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
+				'el_categories' => array( 'music' ),
+				'icon'          => 'dashicons-before dashicons-album',
 			),
 
 			'params'     => array(
@@ -49,7 +50,7 @@ function wolf_core_album_disc_params() {
 						),
 					),
 					'selectors'    => array(
-						'{{WRAPPER}}' => 'text-align: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-album-disc' => 'margin-{{VALUE}}: 0;',
 					),
 					'page_builder' => 'elementor',
 				),
@@ -58,7 +59,7 @@ function wolf_core_album_disc_params() {
 					'type'         => 'select',
 					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'   => 'alignment',
-					'options'        => array(
+					'options'      => array(
 						'center' => esc_html__( 'center', 'wolf-core' ),
 						'left'   => esc_html__( 'left', 'wolf-core' ),
 						'right'  => esc_html__( 'right', 'wolf-core' ),
@@ -70,7 +71,7 @@ function wolf_core_album_disc_params() {
 					'type'       => 'select',
 					'label'      => esc_html__( 'Type', 'wolf-core' ),
 					'param_name' => 'type',
-					'options'      => array(
+					'options'    => array(
 						'cd'    => esc_html__( 'CD', 'wolf-core' ),
 						'vinyl' => esc_html__( 'Vinyl', 'wolf-core' ),
 					),
@@ -102,7 +103,8 @@ function wolf_core_album_disc_params() {
 					'type'       => 'select',
 					'label'      => esc_html__( 'Worn Border Effect', 'wolf-core' ),
 					'param_name' => 'worn_border',
-					'options'      => array(
+					'default'    => 'no',
+					'options'    => array(
 						'yes' => esc_html__( 'Yes', 'wolf-core' ),
 						'no'  => esc_html__( 'No', 'wolf-core' ),
 					),
@@ -113,7 +115,7 @@ function wolf_core_album_disc_params() {
 					'label'      => esc_html__( 'Disc Rotate Effect', 'wolf-core' ),
 					'param_name' => 'rotate',
 					'default'    => 'hover',
-					'options'      => array(
+					'options'    => array(
 						'hover'      => esc_html__( 'On Hover', 'wolf-core' ),
 						'hover-stop' => esc_html__( 'Stop On Hover', 'wolf-core' ),
 						'always'     => esc_html__( 'Always', 'wolf-core' ),

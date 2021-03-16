@@ -77,7 +77,7 @@ class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'music' );
+		return $this->params['properties']['el_categories'];
 	}
 
 	/**

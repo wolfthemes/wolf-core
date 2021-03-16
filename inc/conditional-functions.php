@@ -18,13 +18,53 @@ defined( 'ABSPATH' ) || exit;
  * @return string plugin slug
  */
 function wolf_core_is_page_builder_page() {
-	return true;
+
+	$bool = false;
+
+	if ( wolf_core_is_blog() || is_search() && ! is_single() ) {
+		$bool = false;
+	}
+
+	$is_videos_page      = function_exists( 'wolf_videos_get_page_id' ) && is_page( wolf_videos_get_page_id() );
+	$is_discography_page = function_exists( 'wolf_discography_get_page_id' ) && is_page( wolf_discography_get_page_id() );
+	$is_albums_page      = function_exists( 'wolf_albums_get_page_id' ) && is_page( wolf_albums_get_page_id() );
+	$is_events_page      = function_exists( 'wolf_events_get_page_id' ) && is_page( wolf_events_get_page_id() );
+	$is_portfolio_page   = function_exists( 'wolf_portfolio_get_page_id' ) && is_page( wolf_portfolio_get_page_id() );
+
+	if ( $is_videos_page || $is_discography_page || $is_albums_page || $is_events_page ) {
+		$bool = false;
+	}
+
+	if ( wolf_core_is_elementor_page() ) {
+		$bool = true;
+	}
+
+	if ( wolf_core_is_wpb_vc_frontend() ) {
+		$bool = true;
+	}
+
+	return $bool;
 }
 
 /**
  * Check if we are on the WPB VC Frontend Editor
  *
- * @return string plugin slug
+ * @return bool
+ */
+function wolf_core_is_elementor_page() {
+	if ( defined( 'ELEMENTOR_VERSION' ) ) {
+		global $post;
+
+		if ( is_object( $post ) ) {
+			return \Elementor\Plugin::$instance->db->is_built_with_elementor( $post->ID );
+		}
+	}
+}
+
+/**
+ * Check if we are on the WPB VC Frontend Editor
+ *
+ * @return bool
  */
 function wolf_core_is_wpb_vc_frontend() {
 	return function_exists( 'vc_is_inline' ) && vc_is_inline() ? true : false;

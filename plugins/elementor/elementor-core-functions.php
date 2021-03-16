@@ -12,16 +12,51 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Add widget categories
+ *
+ * @param object $elements_manager Theme Elementor manager object.
+ */
+function wolf_core_add_elementor_widget_categories( $elements_manager ) {
+
+	$elements_manager->add_category(
+		'music',
+		array(
+			'title' => esc_html__( 'Music', 'wolf-core' ),
+			'icon'  => 'fa fa-music',
+		)
+	);
+
+	$elements_manager->add_category(
+		'extension',
+		array(
+			'title' => esc_html__( 'Extension', 'wolf-core' ),
+			'icon'  => 'fa fa-extension',
+		)
+	);
+
+	$elements_manager->add_category(
+		'post-modules',
+		array(
+			'title' => esc_html__( 'Post Modules', 'wolf-core' ),
+			'icon'  => 'fa fa-th',
+		)
+	);
+
+}
+add_action( 'elementor/elements/categories_registered', 'wolf_core_add_elementor_widget_categories' );
+
+/**
  * Covert raw params to Elementor format params
  *
- * @param array
- * @return array
+ * @param object $widget The widget object.
+ * @param array  $params The parameters to pass.
+ * @return void
  */
-function wolf_core_convert_params_to_elementor( $widget ) {
+function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
-	$i = 0;
-
-	$params = $widget->params['params'];
+	if ( array() === $params ) {
+		$params = $widget->params['params'];
+	}
 
 	foreach ( $params as $p ) {
 
@@ -92,8 +127,6 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 			$field_params['selectors'] = $p['selectors'];
 		}
 
-		//debug( $field_params );
-
 		$widget->add_control(
 			$p['param_name'],
 			$field_params
@@ -102,25 +135,117 @@ function wolf_core_convert_params_to_elementor( $widget ) {
 }
 
 /**
- * Add widget categories
+ * Register Elementor controls.
+ *
+ * Register control sections of a widget from its params array.
+ *
+ * @return void
  */
-function wolf_core_add_elementor_widget_categories( $elements_manager ) {
+function wolf_core_register_elementor_controls( $widget ) {
+	/* Reorder params by group */
+	$content_group_params  = array();
+	$query_group_params    = array();
+	$style_group_params    = array();
+	$custom_group_params   = array();
+	$extra_group_params    = array();
+	$advanced_group_params = array();
 
-	$elements_manager->add_category(
-		'music',
+	foreach ( $widget->params['params'] as $param ) {
+
+		if ( ! isset( $param['group'] ) ) {
+			$content_group_params[] = $param;
+		} elseif ( 'Query' === $param['group'] ) {
+			$query_group_params[] = $param;
+		} elseif ( 'Style' === $param['group'] ) {
+			$style_group_params[] = $param;
+		} elseif ( 'Custom' === $param['group'] ) {
+			$custom_group_params[] = $param;
+		} elseif ( 'Extra' === $param['group'] ) {
+			$extra_group_params[] = $param;
+		} elseif ( 'Advanced' === $param['group'] ) {
+			$advanced_group_params[] = $param;
+		}
+	}
+
+	$widget->start_controls_section(
+		'content_section',
 		array(
-			'title' => esc_html__( 'Music', 'wolf-core' ),
-			'icon'  => 'fa fa-music',
+			'label' => esc_html__( 'Content', '%TEXTDOMAIN%' ),
+			'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 		)
 	);
 
-	$elements_manager->add_category(
-		'extension',
-		array(
-			'title' => esc_html__( 'Extension', 'wolf-core' ),
-			'icon'  => 'fa fa-extension',
-		)
-	);
+	wolf_core_convert_params_to_elementor( $widget, $content_group_params );
 
+	$widget->end_controls_section();
+
+	if ( array() !== $query_group_params ) {
+		$widget->start_controls_section(
+			'query_section',
+			array(
+				'label' => esc_html__( 'Query', '%TEXTDOMAIN%' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $query_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $style_group_params ) {
+		$widget->start_controls_section(
+			'style_section',
+			array(
+				'label' => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $style_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $custom_group_params ) {
+		$widget->start_controls_section(
+			'custom_section',
+			array(
+				'label' => esc_html__( 'custom', '%TEXTDOMAIN%' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $custom_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $extra_group_params ) {
+		$widget->start_controls_section(
+			'extra_section',
+			array(
+				'label' => esc_html__( 'Extra', '%TEXTDOMAIN%' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $extra_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $advanced_group_params ) {
+		$widget->start_controls_section(
+			'advanced_section',
+			array(
+				'label' => esc_html__( 'Advanced', '%TEXTDOMAIN%' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $style_group_params );
+
+		$widget->end_controls_section();
+	}
 }
-add_action( 'elementor/elements/categories_registered', 'wolf_core_add_elementor_widget_categories' );

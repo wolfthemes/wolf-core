@@ -20,11 +20,12 @@ function wolf_core_spotify_player_params() {
 		'wolf_core_spotify_player_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Spotify Player', 'wolf-core' ),
-				'vc_base'     => 'wolf_core_spotify_player',
-				'el_base'     => 'album-disc',
-				'vc_category' => esc_html__( 'Music', 'wolf-core' ),
-				'icon'        => 'dashicons-before dashicons-album',
+				'name'          => esc_html__( 'Spotify Player', 'wolf-core' ),
+				'vc_base'       => 'wolf_core_spotify_player',
+				'el_base'       => 'spotify-player',
+				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
+				'el_categories' => array( 'music' ),
+				'icon'          => 'dashicons-before dashicons-album',
 			),
 
 			'params'     => array(
@@ -41,7 +42,7 @@ function wolf_core_spotify_player_params() {
 					'type'        => 'select',
 					'label'       => esc_html__( 'Type', 'wolf-core' ),
 					'param_name'  => 'type',
-					'options'       => array(
+					'options'     => array(
 						'large'   => esc_html__( 'Large', 'wolf-core' ),
 						'compact' => esc_html__( 'Compact', 'wolf-core' ),
 					),
@@ -52,7 +53,7 @@ function wolf_core_spotify_player_params() {
 					'type'        => 'text',
 					'label'       => esc_html__( 'Width', 'wolf-core' ),
 					'param_name'  => 'width',
-					'default'       => 300,
+					'default'     => 300,
 					'placeholder' => '300',
 					'admin_label' => true,
 				),
@@ -61,10 +62,10 @@ function wolf_core_spotify_player_params() {
 					'type'        => 'text',
 					'label'       => esc_html__( 'Height', 'wolf-core' ),
 					'param_name'  => 'height',
-					'default'       => 380,
+					'default'     => 380,
 					'placeholder' => '380',
 					'admin_label' => true,
-					'condition'  => array(
+					'condition'   => array(
 						'type' => 'large',
 					),
 				),

@@ -74,7 +74,7 @@ function wolf_core_heading_params() {
 					'admin_label' => true,
 					'default'     => apply_filters( 'wolf_core_default_heading_font_family', '' ),
 					'selectors'    => array(
-						'{{WRAPPER}}' => 'font-family: {{VALUE}};',
+						'{{WRAPPER}} .elementor-heading-title' => 'font-family: {{VALUE}};',
 					),
 				),
 
@@ -121,12 +121,18 @@ function wolf_core_heading_params() {
 					'param_name'  => 'letter_spacing',
 					'placeholder' => '0',
 					'default'     => apply_filters( 'wolf_core_default_heading_letter_spacing', '' ),
+					'selectors'    => array(
+						'{{WRAPPER}} .elementor-heading-title' => 'letter-spacing: {{VALUE}};',
+					),
 				),
 				array(
 					'type'        => 'text',
 					'label'       => esc_html__( 'Line Height', 'wolf-core' ),
 					'param_name'  => 'line_height',
 					'placeholder' => '1',
+					'selectors'    => array(
+						'{{WRAPPER}} .elementor-heading-title' => 'line-height: {{VALUE}};px',
+					),
 				),
 			),
 		)

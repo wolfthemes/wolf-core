@@ -1,6 +1,6 @@
 <?php
 /**
- * Playlist
+ * Big Text
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
+class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -19,8 +19,14 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	public function __construct( $data = array(), $args = null ) {
 
 		parent::__construct( $data, $args );
+		wp_enqueue_script( 'bigtext' );
+		wp_enqueue_script( 'wolf-core-bigtext' );
 
-		$this->params = wolf_core_playlist_params();
+		$this->params = wolf_core_bigtext_params();
+	}
+
+	public function get_script_depends() {
+		return array( 'jquery', 'bigtext', 'wolf-core-bigtext' );
 	}
 
 	/**
@@ -41,7 +47,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Playlist widget title.
+	 * Retrieve Big Text widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -55,7 +61,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Playlist widget icon.
+	 * Retrieve Big Text widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -69,7 +75,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Playlist widget belongs to.
+	 * Retrieve the list of categories the Big Text widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -81,7 +87,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
-	 * Register Playlist widget controls.
+	 * Register Big Text widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -116,19 +122,23 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'id'                  => '',
-				'show_tracklist'      => '',
-				'theme'               => '',
+				'font_family'         => '',
+				'letter_spacing'      => 0,
+				'font_weight'         => 700,
+				'text_transform'      => 'none',
+				'font_style'          => '',
+				'color'               => '',
+				'custom_color'        => '',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
-				'el_class'            => '',
-				'css'                 => '',
-				'inline_style'        => '',
+				'text'                => '',
+				'link'                => '',
+				'title_tag'           => 'h4',
 			)
 		);
 
-		echo wolf_core_playlist( $atts ); // WCS XSS ok.
+		echo wolf_core_bigtext( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Playlist_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Bigtext_Widget() );
 

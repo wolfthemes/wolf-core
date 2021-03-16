@@ -77,7 +77,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'extension' );
+		return $this->params['properties']['el_categories'];
 	}
 
 	/**

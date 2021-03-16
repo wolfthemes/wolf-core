@@ -581,6 +581,11 @@
   transform: translate3d(40%, 0, 0) rotate(-42deg);
 }
 
+.elementor-editor-active .wolf-core-ad-disc-container {
+  visibility: visible;
+  transform: translate3d(40%, 0, 0) rotate(-42deg);
+}
+
 /**
  * @# Bandsintown Events
  **/
@@ -637,6 +642,9 @@
   text-transform: inherit !important;
 }
 
+/**
+ * @# Spotify Player
+ **/
 /**
  * @# Video Opener
  **/
