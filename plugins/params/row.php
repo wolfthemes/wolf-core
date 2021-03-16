@@ -9,6 +9,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+return;
+
 /* Removing parameters */
 vc_remove_param( 'vc_row', 'el_id' );
 vc_remove_param( 'vc_row', 'gap' );
@@ -37,7 +39,7 @@ vc_map_update(
 
 // inspired by js_composer/conifg/buttons/shortcode-vc-button.php
 $bigtext_params = vc_map_integrate_shortcode(
-	wolf_core_bigtext_params(),
+	wolf_core_convert_params_to_vc( wolf_core_bigtext_params() ),
 	'bt_', // bt stands for big text
 	esc_html( 'Big Text', 'wolf-core' ),
 	array(
@@ -70,7 +72,9 @@ if ( is_array( $bigtext_params ) && ! empty( $bigtext_params ) ) {
 	}
 }
 
-// Row params
+/**
+ * Row params
+ */
 vc_add_params(
 	'vc_row',
 	array_merge(

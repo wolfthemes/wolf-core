@@ -70,10 +70,10 @@ function wolf_core_album_disc( $atts ) {
 	$link = wolf_core_process_link_atts( $link );
 
 	if ( is_array( $link ) ) {
-		$class .= ' wolf-core-ad-has-link';
+		$class .= ' wolf-core-album-disc-has-link';
 	}
 
-	$class .= " wolf-core-album-disc wolf-core-ad-align-$alignment wolf-core-ad-$type wolf-core-ad-worn-border-$worn_border wolf-core-ad-rotate-$rotate wolf-core-element";
+	$class .= " wolf-core-album-disc wolf-core-album-disc-align-$alignment wolf-core-album-disc-$type wolf-core-album-disc-worn-border-$worn_border wolf-core-album-disc-rotate-$rotate wolf-core-element";
 
 	$output = '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
@@ -81,12 +81,12 @@ function wolf_core_album_disc( $atts ) {
 	$output .= '>';
 
 	if ( is_array( $link ) ) {
-		$output .= '<a rel="' . esc_attr( $link['rel'] ) . '" class="wolf-core-ad-link-mask"';
+		$output .= '<a rel="' . esc_attr( $link['rel'] ) . '" class="wolf-core-album-disc-link-mask"';
 		$output .= ' target="' . esc_attr( $link['target'] ) . '"';
 		$output .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '"></a>';
 	}
 
-	$output .= '<div class="wolf-core-ad-cover-container">';
+	$output .= '<div class="wolf-core-album-disc-cover-container">';
 
 	if ( ! $disc_image ) {
 		$disc_image = $cover_image;
@@ -96,7 +96,7 @@ function wolf_core_album_disc( $atts ) {
 
 		$disc_animation_delay = ( absint( $css_animation_delay ) + 400 ) / 1000 . 's';
 
-		$output .= '<div class="wolf-core-ad-disc-container wow wolf-core-ad-reveal" style="' . wolf_core_esc_style_attr( 'transition-delay:' . $disc_animation_delay ) . ';">';
+		$output .= '<div class="wolf-core-album-disc-disc-container wow wolf-core-album-disc-reveal" style="' . wolf_core_esc_style_attr( 'transition-delay:' . $disc_animation_delay ) . ';">';
 
 		$inner_style = '';
 		if ( $rotation_speed ) {
@@ -104,7 +104,7 @@ function wolf_core_album_disc( $atts ) {
 			$inner_style    = ' style="animation-duration:' . esc_attr( $rotation_speed ) . ';"';
 		}
 
-		$output .= '<div class="wolf-core-ad-disc-inner" ' . $inner_style . '>';
+		$output .= '<div class="wolf-core-album-disc-disc-inner" ' . $inner_style . '>';
 
 		if ( wp_attachment_is_image( $disc_image ) ) {
 
@@ -112,18 +112,18 @@ function wolf_core_album_disc( $atts ) {
 				array(
 					'attach_id'  => $disc_image,
 					'thumb_size' => $img_size,
-					'class'      => 'wolf-core-ad-disc-img',
+					'class'      => 'wolf-core-album-disc-disc-img',
 				)
 			);
 
 			$output .= $img['thumbnail'];
 		} else {
-			$output .= wolf_core_placeholder_img( $img_size, 'wolf-core-ad-disc-img' );
+			$output .= wolf_core_placeholder_img( $img_size, 'wolf-core-album-disc-disc-img' );
 		}
 
 		if ( 'cd' === $type ) {
-			$output .= '<div class="wolf-core-ad-disc-text"></div>';
-			$output .= '<div class="wolf-core-ad-disc-hole"></div>';
+			$output .= '<div class="wolf-core-album-disc-disc-text"></div>';
+			$output .= '<div class="wolf-core-album-disc-disc-hole"></div>';
 		}
 
 		if ( 'vinyl' === $type ) {
@@ -137,7 +137,7 @@ function wolf_core_album_disc( $atts ) {
 
 	if ( $cover_image ) {
 
-		$output .= '<div class="wolf-core-ad-cover-inner">';
+		$output .= '<div class="wolf-core-album-disc-cover-inner">';
 
 		if ( wp_attachment_is_image( $cover_image ) ) {
 
@@ -145,21 +145,21 @@ function wolf_core_album_disc( $atts ) {
 				array(
 					'attach_id'  => $cover_image,
 					'thumb_size' => $img_size,
-					'class'      => 'wolf-core-ad-cover-img',
+					'class'      => 'wolf-core-album-disc-cover-img',
 				)
 			);
 
 			$output .= $img['thumbnail'];
 
 		} else {
-			$output .= wolf_core_placeholder_img( $img_size, 'wolf-core-ad-cover-img' );
+			$output .= wolf_core_placeholder_img( $img_size, 'wolf-core-album-disc-cover-img' );
 		}
 
-		$output .= '<div class="wolf-core-ad-cover-border"></div>';
-		$output .= '</div><!-- .wolf-core-ad-cover-inner -->';
+		$output .= '<div class="wolf-core-album-disc-cover-border"></div>';
+		$output .= '</div><!-- .wolf-core-album-disc-cover-inner -->';
 	}
 
-	$output .= '</div><!-- .wolf-core-ad-cover-container -->';
+	$output .= '</div><!-- .wolf-core-album-disc-cover-container -->';
 
 	$output .= '</div><!-- .wolf-core-album-disc -->';
 

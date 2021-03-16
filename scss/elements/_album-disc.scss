@@ -8,25 +8,25 @@
 	max-width: 750px;
 }
 
-.wolf-core-ad-cover-img {
+.wolf-core-album-disc-cover-img {
 	width: 100%;
 }
 
-.wolf-core-ad-align-left {
+.wolf-core-album-disc-align-left {
 	margin-left: 0;
 }
 
-.wolf-core-ad-align-right {
+.wolf-core-album-disc-align-right {
 	margin-right: 0;
 }
 
-.wolf-core-ad-cover-container {
+.wolf-core-album-disc-cover-container {
 	margin: 0 32% 10px 0;
 	position: relative;
 	z-index: 1;
 }
 
-.wolf-core-ad-link-mask {
+.wolf-core-album-disc-link-mask {
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -36,7 +36,7 @@
 	z-index: 14;
 }
 
-.wolf-core-ad-cover-inner {
+.wolf-core-album-disc-cover-inner {
 	position: relative;
 	z-index: 0;
 	box-shadow: 0px 10px 3px -9px rgba(0, 0, 0, 0.77); // small black
@@ -45,14 +45,14 @@
 	overflow: hidden;
 }
 
-.wolf-core-ad-disc-inner {
+.wolf-core-album-disc-disc-inner {
 	//position: relative;
 	//z-index: 0;
 	width: 100%;
 	height: 100%;
 }
 
-.wolf-core-ad-cover-img {
+.wolf-core-album-disc-cover-img {
 	//padding: 2px;
 	border-radius: 2px;
 	position: relative;
@@ -61,7 +61,7 @@
 	backface-visibility: hidden;
 }
 
-.wolf-core-ad-cover-border {
+.wolf-core-album-disc-cover-border {
 	z-index: 1;
 	position: absolute;
 	width: 100%;
@@ -76,13 +76,13 @@
 	opacity: 0.88;
 }
 
-.wolf-core-ad-worn-border-no {
-	.wolf-core-ad-cover-border {
+.wolf-core-album-disc-worn-border-no {
+	.wolf-core-album-disc-cover-border {
 		background: none;
 	}
 }
 
-.wolf-core-ad-disc-container {
+.wolf-core-album-disc-disc-container {
 	position: absolute;
 	transition: all 0.7s cubic-bezier(0, 0.45, 0.54, 0.99);
 	transform: translate3d(0, 0, 0) rotate(0);
@@ -91,8 +91,8 @@
 }
 
 // CD
-.wolf-core-ad-cd {
-	.wolf-core-ad-disc-container {
+.wolf-core-album-disc-cd {
+	.wolf-core-album-disc-disc-container {
 		top: 14px;
 		left: 14px;
 		width: calc(100% - 28px);
@@ -103,7 +103,7 @@
 	}
 }
 
-.wolf-core-ad-disc-text {
+.wolf-core-album-disc-disc-text {
 	z-index: 5;
 	position: absolute;
 	width: calc(100% - 5px);
@@ -118,7 +118,7 @@
 	margin: -2px;
 }
 
-.wolf-core-ad-disc-hole {
+.wolf-core-album-disc-disc-hole {
 	z-index: 5;
 	position: absolute;
 	top: 50%;
@@ -146,22 +146,22 @@
 	background-size: cover;
 }
 
-.wolf-core-ad-disc-img {
+.wolf-core-album-disc-disc-img {
 	backface-visibility: hidden;
 	width: 100%;
 	width: 100%;
 	vertical-align: middle;
 }
 
-.wolf-core-ad-vinyl {
-	.wolf-core-ad-disc-container {
+.wolf-core-album-disc-vinyl {
+	.wolf-core-album-disc-disc-container {
 		top: 1%;
 		left: 1%;
 		width: 98%;
 		height: 98%;
 	}
 
-	.wolf-core-ad-disc-img {
+	.wolf-core-album-disc-disc-img {
 		width: 40%;
 		height: 40%;
 		position: absolute;
@@ -172,37 +172,37 @@
 	}
 }
 
-.animated.wolf-core-ad-reveal {
+.animated.wolf-core-album-disc-reveal {
 	transform: translate3d(40%, 0, 0) rotate(-42deg);
 }
 
-.wolf-core-ad-has-link:hover {
-	.wolf-core-ad-disc-inner {
+.wolf-core-album-disc-has-link:hover {
+	.wolf-core-album-disc-disc-inner {
 		//margin-left: 15px;
 	}
 }
 
-.wolf-core-ad-cover-inner {
+.wolf-core-album-disc-cover-inner {
 	//opacity: .2; // debug
 }
 
 // Album disc rotate effect
-.wolf-core-ad-rotate-always,
-.wolf-core-ad-rotate-hover,
-.wolf-core-ad-rotate-hover-stop {
-	.wolf-core-ad-disc-inner {
+.wolf-core-album-disc-rotate-always,
+.wolf-core-album-disc-rotate-hover,
+.wolf-core-album-disc-rotate-hover-stop {
+	.wolf-core-album-disc-disc-inner {
 		animation: disc_spin 3.5s linear infinite;
 	}
 }
 
-.wolf-core-ad-rotate-hover {
-	&:not(:hover) .wolf-core-ad-disc-inner {
+.wolf-core-album-disc-rotate-hover {
+	&:not(:hover) .wolf-core-album-disc-disc-inner {
 		animation-play-state: paused;
 	}
 }
 
-.wolf-core-ad-rotate-hover-stop {
-	&:hover .wolf-core-ad-disc-inner {
+.wolf-core-album-disc-rotate-hover-stop {
+	&:hover .wolf-core-album-disc-disc-inner {
 		animation-play-state: paused;
 	}
 }
@@ -214,13 +214,13 @@
 }
 
 .wolf-core-no-animations {
-	.wolf-core-ad-reveal {
+	.wolf-core-album-disc-reveal {
 		transform: translate3d(40%, 0, 0) rotate(-42deg);
 	}
 }
 
 .elementor-editor-active {
-	.wolf-core-ad-disc-container {
+	.wolf-core-album-disc-disc-container {
 		visibility: visible;
 		transform: translate3d(40%, 0, 0) rotate(-42deg);
 	}

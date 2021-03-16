@@ -42,6 +42,14 @@ function wolf_core_add_elementor_widget_categories( $elements_manager ) {
 		)
 	);
 
+	$elements_manager->add_category(
+		'social',
+		array(
+			'title' => esc_html__( 'Social', 'wolf-core' ),
+			'icon'  => 'fa fa-th',
+		)
+	);
+
 }
 add_action( 'elementor/elements/categories_registered', 'wolf_core_add_elementor_widget_categories' );
 
