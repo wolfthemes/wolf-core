@@ -616,7 +616,7 @@ if ( class_exists( 'Wolf_Discography' ) ) {
  */
 function wolf_core_add_background_option( $atts ) {
 
-	if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
+	if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
 		$bg_params = array(
 			array(

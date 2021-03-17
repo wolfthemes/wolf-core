@@ -82,7 +82,7 @@ function wolf_core_video_opener_params() {
 						'left'   => esc_html__( 'left', 'wolf-core' ),
 						'right'  => esc_html__( 'right', 'wolf-core' ),
 					),
-					'page_builder' => 'wpbakerypagebuilder',
+					'page_builder' => 'vc',
 				),
 
 				array(
@@ -96,7 +96,7 @@ function wolf_core_video_opener_params() {
 						'Vimeo'
 					),
 					'admin_label'  => true,
-					'page_builder' => 'wpbakerypagebuilder',
+					'page_builder' => 'vc',
 				),
 
 				array(

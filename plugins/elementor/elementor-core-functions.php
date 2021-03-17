@@ -68,7 +68,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 	foreach ( $params as $p ) {
 
-		if ( isset( $p['page_builder'] ) && 'wpbakerypagebuilder' === $p['page_builder'] ) {
+		if ( isset( $p['page_builder'] ) && 'vc' === $p['page_builder'] ) {
 			continue;
 		}
 
@@ -111,6 +111,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		} elseif ( 'link' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::URL;
+
+		} elseif ( 'colorpicker' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::COLOR;
 
 		} elseif ( 'image' === $type ) {
 

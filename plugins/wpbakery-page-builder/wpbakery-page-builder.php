@@ -43,7 +43,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	public function init() {
 
 		$this->includes();
-		$this->include_raw_params();
+		//$this->include_raw_params();
 		$this->init_shortcodes();
 	}
 

@@ -25,7 +25,7 @@ function wolf_core_get_plugin_in_use() {
 
 	} elseif ( defined( 'WPB_VC_VERSION' ) ) {
 
-		return 'wpbakerypagebuilder';
+		return 'vc';
 	}
 }
 
@@ -73,17 +73,17 @@ function wolf_core_get_element_list() {
 		//'admin-helper-text',
 		//'advanced-slider',
 		//'advanced-slide',
-		// 'albums',
+		//'albums',
 		'album-disc',
-		// 'album-tracklist',
-		// 'album-tracklist-item',
+		//'album-tracklist',
+		//'album-tracklist-item',
 		//'anchor',
-		// 'anything-slider',
-		// 'anything-slide',
+		//'anything-slider',
+		//'anything-slide',
 		//'audio',
 		//'audio-embed',
 		'bandsintown-events',
-		// 'bandsintown-tracking-button',
+		//'bandsintown-tracking-button',
 		//'banner-gallery',
 		//'banner-product',
 		//'banner',
@@ -103,22 +103,22 @@ function wolf_core_get_element_list() {
 		//'counter',
 		//'current-year',
 		//'custom-heading',
-		// 'discography',
+		//'discography',
 		//'dropcap',
 		//'embed-video',
 		//'empty-space',
-		// 'events',
+		//'events',
 		//'facebook-page-box',
 		//'gallery',
 		//'gmaps',
 		//'google-maps',
-		//'heading',
+		'heading',
 		//'highlight',
 		//'hours',
 		//'hoverbox',
 		//'icon',
 		//'iframe-opener',
-		// 'image-link',
+		//'image-link',
 		//'image-device-slider',
 		//'info-table',
 		//'instagram-gallery',
@@ -126,10 +126,10 @@ function wolf_core_get_element_list() {
 		//'instagram',
 		//'interactive-links',
 		//'interactive-link-item',
-		// 'interactive-overlays',
-		// 'interactive-overlay-item',
+		//'interactive-overlays',
+		//'interactive-overlay-item',
 		//'item-price',
-		// 'last-posts',
+		//'last-posts',
 		//'post-slider',
 		//'list',
 		//'mailchimp',
@@ -137,11 +137,11 @@ function wolf_core_get_element_list() {
 		//'music-network',
 		//'next-month',
 		//'oembed-gist',
-		// 'old-instagram',
+		//'old-instagram',
 		//'parallax-holder',
 		//'pie',
 		'playlist',
-		// 'portfolio',
+		//'portfolio',
 		//'pricing-table',
 		//'process-container',
 		//'process-item',
@@ -149,7 +149,7 @@ function wolf_core_get_element_list() {
 		//'rev-slider-vc',
 		//'row',
 		//'row-inner',
-		// 'section',
+		//'section',
 		//'sb-instagram-feed',
 		//'separator',
 		//'service-table',
@@ -172,15 +172,15 @@ function wolf_core_get_element_list() {
 		//'video',
 		'video-opener',
 		//'video-self-hosted',
-		// 'videos-carousel', //  last videos from plugin carousel
-		// 'videos',
-		// 'waveform-player',
+		//'videos-carousel', //  last videos from plugin carousel
+		//'videos',
+		//'waveform-player',
 		//'wc-categories',
 		//'youtube',
 		//'zigzag',
 	);
 
-	if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
+	if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 		$wolf_core_elements[] = 'row';
 		$wolf_core_elements[] = 'row-inner';
 		$wolf_core_elements[] = 'column';

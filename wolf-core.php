@@ -574,7 +574,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				require_once 'plugins/elementor/elementor.php';
 			}
 
-			if ( 'wpbakerypagebuilder' === wolf_core_get_plugin_in_use() ) {
+			if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
 				require_once 'plugins/wpbakery-page-builder/wpbakery-page-builder.php';
 			}
@@ -621,38 +621,23 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		}
 
 		/**
-		 * Include required elements files.
+		 * Include elements files.
+		 *
+		 * Look if the files exist and include the parameters and output functions for each element
 		 */
 		public function element_includes() {
 
-			$element_files = array(
-				'album-disc',
-				'bandsintown-events',
-				'bigtext',
-				'content-block',
-				'custom-heading',
-				'heading',
-				'playlist',
-				'spotify-player',
-				'video-opener',
-			);
+			$element_files = wolf_core_get_element_list();
 
 			/* Includes core files from theme inc dir in both frontend and backend */
-			foreach ( $element_files as $file ) {
+			foreach ( $element_files as $element ) {
 
-				if ( ! require_once WOLF_CORE_DIR . '/plugins/elements/' . $file . '.php' ) {
-					wp_die(
-						sprintf(
-							wp_kses(
-								/* translators: the code to output */
-								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
-								array(
-									'code' => array(),
-								)
-							),
-							esc_attr( $file )
-						)
-					);
+				if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $element ) . '.php' ) ) {
+					include_once WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $element ) . '.php';
+				}
+
+				if ( is_file( WOLF_CORE_DIR . '/plugins/elements/' . sanitize_title_with_dashes( $element ) . '.php' ) ) {
+					require_once WOLF_CORE_DIR . '/plugins/elements/' . sanitize_title_with_dashes( $element ) . '.php';
 				}
 			}
 		}

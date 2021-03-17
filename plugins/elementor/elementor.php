@@ -43,7 +43,7 @@ class Wolf_Core_Elementor_Extension {
 			require_once WOLF_CORE_DIR . '/inc/admin/admin-elementor-functions.php';
 		}
 
-		$this->include_raw_params();
+		//$this->include_raw_params();
 
 		add_action( 'elementor/widgets/widgets_registered', array( $this, 'init_widgets' ) );
 		add_action( 'elementor/controls/controls_registered', array( $this, 'init_controls' ) );
@@ -56,9 +56,9 @@ class Wolf_Core_Elementor_Extension {
 
 		foreach ( $this->elements as $e ) {
 
-			if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
-				include_once WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php';
-			}
+			// if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
+			// 	include_once WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php';
+			// }
 		}
 	}
 
