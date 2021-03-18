@@ -4,7 +4,7 @@
  *
  * @author WolfThemes
  * @package WolfCore/Params
- * @version 3.2.8
+ * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

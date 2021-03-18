@@ -373,7 +373,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			/* WPBakery activation hooks */
 			update_option( 'wpb_js_gutenberg_disable', true );
 
-
 			/* Elementor activation hooks */
 
 			// Supported CPT.
@@ -387,7 +386,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'product',
 			);
 
-			foreach( $supported_post_types as $cpt ) {
+			foreach ( $supported_post_types as $cpt ) {
 				if ( ! in_array( $cpt, $cpt_support ) ) {
 					$cpt_support[] = $cpt;
 
@@ -569,6 +568,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * Include required files for page builder plugins functions.
 		 */
 		public function plugins_includes() {
+
 			if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 
 				require_once 'plugins/elementor/elementor.php';
@@ -576,7 +576,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
-				require_once 'plugins/wpbakery-page-builder/wpbakery-page-builder.php';
+				require_once 'plugins/wpbakery-page-builder/vc.php';
 			}
 
 			require_once 'plugins/content-blocks/content-blocks.php';

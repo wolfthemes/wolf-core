@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function wolf_core_heading_params() {
+function wolf_core_custom_heading_params() {
 	return apply_filters(
 		'wolf_core_custom_heading_params',
 		array(
@@ -76,7 +76,7 @@ function wolf_core_heading_params() {
 					'param_name' => 'text_align',
 					'value'      => array(
 						esc_html__( 'Center', 'wolf-core' ) => 'center',
-						esc_html__( 'Left', 'wolf-core' ) => 'left',
+						esc_html__( 'Left', 'wolf-core' )  => 'left',
 						esc_html__( 'Right', 'wolf-core' ) => 'right',
 					),
 				),

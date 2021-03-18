@@ -16,63 +16,63 @@ function wolf_core_column_inner_general_params() {
 	return array(
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Vertical Position', 'wolf-core' ),
-			'param_name' => 'content_placement',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Vertical Position', 'wolf-core' ),
+			'param_name'  => 'content_placement',
+			'value'       => array(
 				esc_html__( 'Default', 'wolf-core' ) => 'default',
-				esc_html__( 'Top', 'wolf-core' ) => 'top',
-				esc_html__( 'Middle', 'wolf-core' ) => 'middle',
-				esc_html__( 'Bottom', 'wolf-core' ) => 'bottom',
+				esc_html__( 'Top', 'wolf-core' )     => 'top',
+				esc_html__( 'Middle', 'wolf-core' )  => 'middle',
+				esc_html__( 'Bottom', 'wolf-core' )  => 'bottom',
 			),
 			'description' => esc_html__( 'Select the vertical position of the content.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Horizontal Position', 'wolf-core' ),
-			'param_name' => 'content_placement',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Horizontal Position', 'wolf-core' ),
+			'param_name'  => 'content_placement',
+			'value'       => array(
 				esc_html__( 'Center', 'wolf-core' ) => 'center',
-				esc_html__( 'Left', 'wolf-core' ) => 'left',
-				esc_html__( 'Right', 'wolf-core' ) => 'right',
+				esc_html__( 'Left', 'wolf-core' )   => 'left',
+				esc_html__( 'Right', 'wolf-core' )  => 'right',
 			),
 			'description' => esc_html__( 'Select the horizontal position of the content.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Default Text Alignment', 'wolf-core' ),
-			'param_name' => 'text_alignment',
-			'value' => array(
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Default Text Alignment', 'wolf-core' ),
+			'param_name'  => 'text_alignment',
+			'value'       => array(
 				esc_html__( 'Default', 'wolf-core' ) => 'default',
-				esc_html__( 'Left', 'wolf-core' ) => 'left',
-				esc_html__( 'Center', 'wolf-core' ) => 'center',
-				esc_html__( 'Right', 'wolf-core' ) => 'right',
+				esc_html__( 'Left', 'wolf-core' )    => 'left',
+				esc_html__( 'Center', 'wolf-core' )  => 'center',
+				esc_html__( 'Right', 'wolf-core' )   => 'right',
 			),
 			'description' => esc_html__( 'Specify the text alignment inside the column. It can be overwritten in some elements.', 'wolf-core' ),
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Content Min Height', 'wolf-core' ),
-			'param_name' => 'min_height',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Content Min Height', 'wolf-core' ),
+			'param_name'  => 'min_height',
 			'placeholder' => 'auto',
 		),
 
 		array(
-			'type' => 'wolf_core_textfield',
-			'heading' => esc_html__( 'Content Max Width', 'wolf-core' ),
-			'param_name' => 'max_width',
+			'type'        => 'wolf_core_textfield',
+			'heading'     => esc_html__( 'Content Max Width', 'wolf-core' ),
+			'param_name'  => 'max_width',
 			'placeholder' => 'auto',
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => esc_html__( 'Column Style', 'wolf-core' ),
-			'param_name' => 'column_style',
-			'value' => array(
-				esc_html__( 'None', 'wolf-core' ) => 'none',
+			'type'        => 'dropdown',
+			'heading'     => esc_html__( 'Column Style', 'wolf-core' ),
+			'param_name'  => 'column_style',
+			'value'       => array(
+				esc_html__( 'None', 'wolf-core' )       => 'none',
 				esc_html__( 'Box Shadow', 'wolf-core' ) => 'box-shadow',
 				esc_html__( 'Boxed with Hover Effect', 'wolf-core' ) => 'boxed',
 			),
@@ -80,11 +80,11 @@ function wolf_core_column_inner_general_params() {
 		),
 
 		array(
-			'type' => 'dropdown',
-			'heading' => __( 'Width', 'wolf-core' ),
+			'type'             => 'dropdown',
+			'heading'          => __( 'Width', 'wolf-core' ),
 			'edit_field_class' => 'wvc-hidden',
-			'param_name' => 'width',
-			'value' => array(
+			'param_name'       => 'width',
+			'value'            => array(
 				esc_html__( '1 column - 1/12', 'wolf-core' ) => '1/12',
 				esc_html__( '2 columns - 1/6', 'wolf-core' ) => '1/6',
 				esc_html__( '3 columns - 1/4', 'wolf-core' ) => '1/4',
@@ -98,9 +98,9 @@ function wolf_core_column_inner_general_params() {
 				esc_html__( '11 columns - 11/12', 'wolf-core' ) => '11/12',
 				esc_html__( '12 columns - 1/1', 'wolf-core' ) => '1/1',
 			),
-			//'group' => __( 'Responsive Options', 'wolf-core' ),
-			'description' => __( 'Select column width.', 'wolf-core' ),
-			'std' => '1/1',
+			// 'group' => __( 'Responsive Options', 'wolf-core' ),
+			'description'      => __( 'Select column width.', 'wolf-core' ),
+			'std'              => '1/1',
 		),
 	);
 }

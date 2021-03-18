@@ -180,12 +180,13 @@ function wolf_core_get_element_list() {
 		//'zigzag',
 	);
 
-	if ( 'vc' === wolf_core_get_plugin_in_use() ) {
-		$wolf_core_elements[] = 'row';
-		$wolf_core_elements[] = 'row-inner';
-		$wolf_core_elements[] = 'column';
-		$wolf_core_elements[] = 'column-inner';
-	}
+	// if ( 'vc' === wolf_core_get_plugin_in_use() ) {
+	// 	$wolf_core_elements[] = 'row';
+	// 	$wolf_core_elements[] = 'row-inner';
+	// 	$wolf_core_elements[] = 'column';
+	// 	$wolf_core_elements[] = 'column-inner';
+	// 	$wolf_core_elements[] = 'custom-heading';
+	// }
 
 	// apply filters.
 	$wolf_core_elements = apply_filters( 'wolf_core_element_list', $wolf_core_elements );

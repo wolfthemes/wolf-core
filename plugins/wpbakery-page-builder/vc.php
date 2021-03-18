@@ -43,7 +43,10 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	public function init() {
 
 		$this->includes();
+
+		$this->include_vc_params();
 		$this->init_shortcodes();
+
 	}
 
 	/**
@@ -54,15 +57,9 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		$files = array(
 			'vc-core-functions',
 			'vc-custom-fields',
-			'vc-additional-params',
 
 			'icon-styles',
 			'icon-libraries',
-
-			// 'row',
-			// 'row-inner',
-			// 'column-text',
-			// 'column-inner',
 		);
 
 		foreach ( $files as $file ) {
@@ -92,7 +89,6 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 			'style-params',
 			'section-params',
 			'heading-params',
-			'bigtext-params',
 			'row-params',
 			'row-inner-params',
 			'column-params',
