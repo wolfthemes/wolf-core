@@ -3,7 +3,7 @@
  * Bandsintown Events
  *
  * @author WolfThemes
- * @package WolfCore/WPBakeryPageBuilder/Params
+ * @package WolfCore/WPBakeryPageBuilder/Map
  * @version 1.0.0
  */
 
