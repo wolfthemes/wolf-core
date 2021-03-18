@@ -631,10 +631,9 @@
 .wolf-core-heading span {
   margin-bottom: 0;
 }
-.wolf-core-heading.wolf-core-heading-custom-font-size .elementor-heading-title {
+
+.elementor-heading-title {
   font-size: inherit !important;
-}
-.wolf-core-heading .elementor-heading-title {
   font-family: inherit !important;
   font-weight: inherit !important;
   letter-spacing: inherit !important;

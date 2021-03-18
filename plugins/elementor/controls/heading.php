@@ -36,11 +36,9 @@ add_action(
 			return;
 		}
 
-
-
 		$settings = $widget->get_active_settings();
 
-		//debug( $settings );
+		// debug( $settings );
 
 		$style = '';
 		$class = 'wolf-core-heading';
@@ -103,5 +101,34 @@ add_action(
 				$widget->add_render_attribute( '_wrapper', 'data-min-font-size', absint( $settings['min_font_size'] ) );
 			}
 		}
+	}
+);
+
+/**
+ *  * Replace custom tags
+ *
+ * The only solution was to filter the whole content as there is no way to filter the default elementor settings output.
+ *
+ * @param string $content The frontend content.
+ * @return string
+ */
+add_action(
+	'elementor/frontend/the_content',
+	function( $content ) {
+		$post_title = wolf_core_get_post_title();
+		$site_title = get_bloginfo( 'name' );
+		// $post_title = get_the_title();
+
+		$short_tags = array(
+			'{{post_title}}' => $post_title,
+			'{{page_title}}' => $post_title,
+			'{{site_title}}' => $site_title,
+		);
+
+		foreach ( $short_tags as $key => $value ) {
+			$content = preg_replace( "/$key/", $value, $content );
+		}
+
+		return $content;
 	}
 );

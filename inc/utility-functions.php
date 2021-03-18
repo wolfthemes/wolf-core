@@ -639,7 +639,7 @@ function wolf_core_sanitize_heading( $string ) {
  *
  * This function is mainy used for text_block. It allows users to use a short tag {{post_text_block}} to display the curent page/page text_block
  *
- * @param string $string
+ * @param string $string The string to sanitize.
  * @return string $string
  */
 function wolf_core_sanitize_text_block( $string ) {
@@ -670,7 +670,7 @@ add_filter(
 /**
  * Sanitize string with wp_kses
  *
- * @param string $output
+ * @param string $output The string to sanitize.
  * @return sring $output
  */
 function wolf_core_kses( $output ) {
