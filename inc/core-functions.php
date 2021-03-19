@@ -73,8 +73,7 @@ function wolf_core_get_element_list() {
 		//'admin-helper-text',
 		//'advanced-slider',
 		//'advanced-slide',
-		//'albums',
-		'album-disc',
+		//'album-disc',
 		//'album-tracklist',
 		//'album-tracklist-item',
 		//'anchor',
@@ -82,8 +81,8 @@ function wolf_core_get_element_list() {
 		//'anything-slide',
 		//'audio',
 		//'audio-embed',
-		'bandsintown-events',
-		//'bandsintown-tracking-button',
+		//'bandsintown-events', // added in themes
+		//'bandsintown-tracking-button', // added in themes
 		//'banner-gallery',
 		//'banner-product',
 		//'banner',
@@ -91,11 +90,8 @@ function wolf_core_get_element_list() {
 		//'bit-artist',
 		//'breadcrumb',
 		//'button',
-		// 'cards-gallery',
+		//'cards-gallery',
 		//'cta',
-		//'column',
-		//'column-inner',
-		//'column-text',
 		//'comparison_slider',
 		//'content-block',
 		//'content-slider',
@@ -112,7 +108,6 @@ function wolf_core_get_element_list() {
 		//'gallery',
 		//'gmaps',
 		//'google-maps',
-		'heading',
 		//'highlight',
 		//'hours',
 		//'hoverbox',
@@ -141,14 +136,10 @@ function wolf_core_get_element_list() {
 		//'parallax-holder',
 		//'pie',
 		'playlist',
-		//'portfolio',
 		//'pricing-table',
 		//'process-container',
 		//'process-item',
 		//'progress-bar',
-		//'rev-slider-vc',
-		//'row',
-		//'row-inner',
 		//'section',
 		//'sb-instagram-feed',
 		//'separator',
@@ -180,13 +171,18 @@ function wolf_core_get_element_list() {
 		//'zigzag',
 	);
 
-	// if ( 'vc' === wolf_core_get_plugin_in_use() ) {
-	// 	$wolf_core_elements[] = 'row';
-	// 	$wolf_core_elements[] = 'row-inner';
-	// 	$wolf_core_elements[] = 'column';
-	// 	$wolf_core_elements[] = 'column-inner';
-	// 	$wolf_core_elements[] = 'custom-heading';
-	// }
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+		$wolf_core_elements[] = 'heading';
+	}
+
+	if ( 'vc' === wolf_core_get_plugin_in_use() ) {
+		$wolf_core_elements[] = 'column';
+		$wolf_core_elements[] = 'column-inner';
+		$wolf_core_elements[] = 'column-text';
+		$wolf_core_elements[] = 'custom-heading';
+		$wolf_core_elements[] = 'row';
+		$wolf_core_elements[] = 'row-inner';
+	}
 
 	// apply filters.
 	$wolf_core_elements = apply_filters( 'wolf_core_element_list', $wolf_core_elements );

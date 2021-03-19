@@ -131,7 +131,7 @@ function wolf_core_textarea_html_settings_field( $settings, $value ) {
 	ob_start();
 
 	// add_filter( 'wp_default_editor', function() {
-	// 	return 'tinymce';
+	// return 'tinymce';
 	// } );
 
 	wp_editor( $value, $editor_id, $settings );

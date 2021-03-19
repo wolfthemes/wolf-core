@@ -73,13 +73,13 @@
 	<rule ref="WordPress.Security.EscapeOutput">
 	<properties>
 			<property name="customAutoEscapedFunctions" type="array">
-				<element value="wvc_kses"/>
-				<element value="wvc_sanitize_html_classes"/>
-				<element value="wvc_esc_style_attr"/>
-				<element value="wvc_sample"/>
-				<element value="wvc_background_img"/>
-				<element value="wvc_post_thumbnail"/>
-				<element value="wvc_sanitize_style_attr"/>
+				<element value="wolf_core_kses"/>
+				<element value="wolf_core_sanitize_html_classes"/>
+				<element value="wolf_core_esc_style_attr"/>
+				<element value="wolf_core_sample"/>
+				<element value="wolf_core_background_img"/>
+				<element value="wolf_core_post_thumbnail"/>
+				<element value="wolf_core_sanitize_style_attr"/>
 			</property>
 		</properties>
 	</rule>

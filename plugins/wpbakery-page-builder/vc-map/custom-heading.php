@@ -9,4 +9,4 @@
 
 defined( 'ABSPATH' ) || exit;
 
-vc_map( wolf_core_convert_params_to_vc( wolf_core_custom_heading_params() ) );
+vc_map( wolf_core_custom_heading_params() );

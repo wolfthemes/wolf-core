@@ -39,7 +39,7 @@ function wolf_core_is_page_builder_page() {
 		$bool = true;
 	}
 
-	if ( wolf_core_is_wpb_vc_frontend() ) {
+	if ( wolf_core_is_vc_page() ) {
 		$bool = true;
 	}
 
@@ -75,7 +75,7 @@ function wolf_core_is_wpb_vc_frontend() {
  *
  * @return bool
  */
-function wolf_core_is_vc() {
+function wolf_core_is_vc_page() {
 
 	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 		return false;

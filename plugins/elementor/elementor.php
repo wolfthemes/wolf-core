@@ -21,9 +21,13 @@ class Wolf_Core_Elementor_Extension {
 	 */
 	public function __construct() {
 
-		add_action( 'init', array( $this, 'init' ) );
+		require_once 'elementor-core-functions.php';
 
-		$this->elements = wolf_core_get_element_list();
+		if ( is_admin() ) {
+			require_once WOLF_CORE_DIR . '/inc/admin/admin-elementor-functions.php';
+		}
+
+		add_action( 'init', array( $this, 'init_hooks' ) );
 	}
 
 	/**
@@ -35,31 +39,12 @@ class Wolf_Core_Elementor_Extension {
 	 *
 	 * @access public
 	 */
-	public function init() {
+	public function init_hooks() {
 
-		require_once 'elementor-core-functions.php';
-
-		if ( is_admin() ) {
-			require_once WOLF_CORE_DIR . '/inc/admin/admin-elementor-functions.php';
-		}
-
-		//$this->include_raw_params();
+		$this->elements = wolf_core_get_element_list();
 
 		add_action( 'elementor/widgets/widgets_registered', array( $this, 'init_widgets' ) );
 		add_action( 'elementor/controls/controls_registered', array( $this, 'init_controls' ) );
-	}
-
-	/**
-	 * Include all raw element params
-	 */
-	public function include_raw_params() {
-
-		foreach ( $this->elements as $e ) {
-
-			// if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
-			// 	include_once WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $e ) . '.php';
-			// }
-		}
 	}
 
 	/**

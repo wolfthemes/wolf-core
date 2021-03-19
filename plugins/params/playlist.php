@@ -17,11 +17,10 @@ defined( 'ABSPATH' ) || exit;
  * @return array
  */
 function wolf_core_playlist_params() {
+
 	if ( ! class_exists( 'Wolf_Playlist_Manager' ) ) {
 		return;
 	}
-
-	// Playlist Shortcode
 
 	$choices = array();
 
@@ -30,7 +29,7 @@ function wolf_core_playlist_params() {
 			'post_type'      => 'wpm_playlist',
 			'posts_per_page' => -1,
 		)
-	); // get all playlist
+	); // get all playlist.
 
 	foreach ( $playlists as $playlist ) {
 		$choices[ $playlist->ID ] = $playlist->post_title;

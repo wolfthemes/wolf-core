@@ -60,9 +60,9 @@ function wolf_core_album_disc_params() {
 					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'   => 'alignment',
 					'options'      => array(
-						'center' => esc_html__( 'center', 'wolf-core' ),
-						'left'   => esc_html__( 'left', 'wolf-core' ),
-						'right'  => esc_html__( 'right', 'wolf-core' ),
+						'center' => esc_html__( 'Center', 'wolf-core' ),
+						'left'   => esc_html__( 'Left', 'wolf-core' ),
+						'right'  => esc_html__( 'Right', 'wolf-core' ),
 					),
 					'page_builder' => 'vc',
 				),

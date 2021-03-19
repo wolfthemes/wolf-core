@@ -26,9 +26,9 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 */
 	public function __construct() {
 
-		add_action( 'init', array( $this, 'init' ) );
+		$this->includes();
 
-		$this->elements = wolf_core_get_element_list();
+		add_action( 'init', array( $this, 'init_hooks' ), 0 );
 	}
 
 	/**
@@ -40,13 +40,11 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 *
 	 * @access public
 	 */
-	public function init() {
+	public function init_hooks() {
+		$this->elements = wolf_core_get_element_list();
 
-		$this->includes();
-
-		$this->include_vc_params();
-		$this->init_shortcodes();
-
+		add_action( 'init', array( $this, 'include_vc_params' ) );
+		add_action( 'init', array( $this, 'include_shortcode_maps' ) );
 	}
 
 	/**
@@ -57,7 +55,6 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		$files = array(
 			'vc-core-functions',
 			'vc-custom-fields',
-
 			'icon-styles',
 			'icon-libraries',
 		);
@@ -87,8 +84,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		$files = array(
 			'background-params',
 			'style-params',
-			'section-params',
-			'heading-params',
+			'custom-heading-params',
 			'row-params',
 			'row-inner-params',
 			'column-params',
@@ -123,7 +119,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 *
 	 * @access public
 	 */
-	public function init_shortcodes() {
+	public function include_shortcode_maps() {
 
 		foreach ( $this->elements as $e ) {
 

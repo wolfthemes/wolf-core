@@ -1,6 +1,6 @@
 <?php
 /**
- * Playlist
+ * Breadcrumb
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
+class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -20,7 +20,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_playlist_params();
+		$this->params = wolf_core_breadcrumb_params();
 	}
 
 	/**
@@ -41,7 +41,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Playlist widget title.
+	 * Retrieve Breacrumb widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -55,7 +55,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Playlist widget icon.
+	 * Retrieve Breacrumb widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -69,7 +69,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Playlist widget belongs to.
+	 * Retrieve the list of categories the Breacrumb widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -81,7 +81,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
-	 * Register Playlist widget controls.
+	 * Register Breacrumb widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -116,15 +116,16 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'id'                  => '',
-				'show_tracklist'      => '',
-				'theme'               => '',
-				'inline_style'        => '',
+				'align'               => '',
+				'text_align_mobile'   => '',
+				'font_size'           => '',
+				'font_weight'         => '',
+				'text_transform'      => '',
 			)
 		);
 
-		echo wolf_core_playlist( $atts ); // WCS XSS ok.
+		echo wolf_core_breacrumb( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Playlist_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Breadcrumb_Widget() );
 

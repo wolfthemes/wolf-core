@@ -9,8 +9,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-return;
-
 /* Removing parameters */
 vc_remove_param( 'vc_row', 'el_id' );
 vc_remove_param( 'vc_row', 'gap' );

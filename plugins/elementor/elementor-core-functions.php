@@ -182,7 +182,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 	$widget->start_controls_section(
 		'content_section',
 		array(
-			'label' => esc_html__( 'Content', '%TEXTDOMAIN%' ),
+			'label' => esc_html__( 'Content', 'wolf-core' ),
 			'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 		)
 	);
@@ -195,7 +195,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->start_controls_section(
 			'query_section',
 			array(
-				'label' => esc_html__( 'Query', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Query', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -209,7 +209,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->start_controls_section(
 			'style_section',
 			array(
-				'label' => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Style', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -223,7 +223,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->start_controls_section(
 			'custom_section',
 			array(
-				'label' => esc_html__( 'custom', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'custom', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -237,7 +237,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->start_controls_section(
 			'extra_section',
 			array(
-				'label' => esc_html__( 'Extra', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Extra', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -251,7 +251,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->start_controls_section(
 			'advanced_section',
 			array(
-				'label' => esc_html__( 'Advanced', '%TEXTDOMAIN%' ),
+				'label' => esc_html__( 'Advanced', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);

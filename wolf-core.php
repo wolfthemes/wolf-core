@@ -122,46 +122,29 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * @access public
 		 */
 		public function __construct() {
+			/**
+			 * Auth and verification
+			 */
 
-			add_action( 'init', array( $this, 'i18n' ) );
-			add_action( 'plugins_loaded', array( $this, 'init' ) );
-		}
+			if ( ! $this->verifications() ) {
+				return;
+			}
 
-		/**
-		 * Load Textdomain
-		 *
-		 * Load plugin localization files.
-		 *
-		 * Fired by `init` action hook.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @access public
-		 */
-		public function i18n() {
+			$this->define_constants();
+			$this->includes();
+			$this->init_hooks();
 
-			$domain = 'wolf-core';
-			$locale = apply_filters( 'wolf-core', get_locale(), $domain );
-			load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
-			load_plugin_textdomain( $domain, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+			if ( get_transient( 'wolf_core_activation_notice' ) ) {
+				add_action( 'admin_notices', 'wolf_core_show_activation_notice' );
+			}
+
+			do_action( 'wolf_core_loaded' );
 		}
 
 		/**
 		 * Initialize the plugin
-		 *
-		 * Load the plugin only after Elementor (and other plugins) are loaded.
-		 * Checks for basic plugin requirements, if one check fail don't continue,
-		 * if all check have passed load the files required to run the plugin.
-		 *
-		 * Fired by `plugins_loaded` action hook.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @access public
 		 */
-		public function init() {
-
-			register_activation_hook( __FILE__, array( $this, 'activate' ) );
+		public function verifications() {
 
 			/* Check if Elementor or WPBakery Page Builder is activated */
 			if ( ! did_action( 'elementor/loaded' ) && ! defined( 'WPB_VC_VERSION' ) ) {
@@ -209,17 +192,34 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				return;
 			}
 
-			$this->define_constants();
-			$this->includes();
-			$this->flush_rewrite_rules();
+			return true;
+		}
 
-			if ( get_transient( 'wolf_core_activation_notice' ) ) {
-				add_action( 'admin_notices', 'wolf_core_show_activation_notice' );
-			}
+		/**
+		 * Hook into actions and filters
+		 */
+		private function init_hooks() {
+
+			register_activation_hook( __FILE__, array( $this, 'activate' ) );
+
+			add_action( 'init', array( $this, 'init' ), 0 );
+
+			// Includes element after init hook to allow filtering by theme.
+			add_action( 'init', array( $this, 'include_elements' ) );
 
 			// Plugin update notifications.
 			add_action( 'admin_init', array( $this, 'plugin_update' ) );
 
+		}
+
+		/**
+		 * Initialize the plugin
+		 */
+		public function init() {
+
+			$this->load_plugin_textdomain();
+
+			do_action( 'wolf_core_init' );
 		}
 
 		/**
@@ -238,7 +238,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			$message = sprintf(
-				wp_kses_post( __( '"%1$s" requires "<a href="%2$s" target="_blank">%3$s</a>" or "<a href="%4$s" target="_blank">%5$s</a>" to be installed and activated.', 'wolf-core' ) ),
+				wp_kses_post( __( '"%1$s" requires <a href="%2$s" target="_blank">%3$s</a> or <a href="%4$s" target="_blank">%5$s</a> to be installed and activated.', 'wolf-core' ) ),
 				'<strong>' . esc_html__( 'Wolf Core', 'wolf-core' ) . '</strong>',
 				'https://wlfthm.es/elementor',
 				'<strong>' . esc_html__( 'Elementor', 'wolf-core' ) . '</strong>',
@@ -387,7 +387,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			);
 
 			foreach ( $supported_post_types as $cpt ) {
-				if ( ! in_array( $cpt, $cpt_support ) ) {
+				if ( ! in_array( $cpt, $cpt_support, true ) ) {
 					$cpt_support[] = $cpt;
 
 				}
@@ -527,8 +527,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			if ( $this->is_request( 'frontend' ) ) {
 				$this->frontend_includes();
 			}
-
-			$this->element_includes();
 		}
 
 		/**
@@ -565,7 +563,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		}
 
 		/**
-		 * Include required files for page builder plugins functions.
+		 * Include required files for plugin extension functions.
 		 */
 		public function plugins_includes() {
 
@@ -625,7 +623,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 *
 		 * Look if the files exist and include the parameters and output functions for each element
 		 */
-		public function element_includes() {
+		public function include_elements() {
 
 			$element_files = wolf_core_get_element_list();
 
@@ -676,6 +674,25 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function ajax_url() {
 			return admin_url( 'admin-ajax.php', 'relative' );
+		}
+
+		/**
+		 * Load Textdomain
+		 *
+		 * Load plugin localization files.
+		 *
+		 * Fired by `init` action hook.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @access public
+		 */
+		public function load_plugin_textdomain() {
+
+			$domain = 'wolf-core';
+			$locale = apply_filters( 'wolf-core', get_locale(), $domain );
+			load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
+			load_plugin_textdomain( $domain, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		}
 
 		/**

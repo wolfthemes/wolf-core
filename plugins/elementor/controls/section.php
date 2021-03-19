@@ -20,10 +20,11 @@ add_action(
 			array(
 				'label'        => esc_html__( 'Default Font Color', 'wolf-core' ),
 				'type'         => \Elementor\Controls_Manager::SELECT,
-				'default'      => 'dark',
+				'default'      => '',
 				'prefix_class' => 'wolf-core-font-',
 				// 'render_type' => 'template',
 				'options'      => array(
+					''      => esc_html__( 'Default', 'wolf-core' ),
 					'dark'  => esc_html__( 'Dark', 'wolf-core' ),
 					'light' => esc_html__( 'Light', 'wolf-core' ),
 				),
@@ -75,7 +76,7 @@ add_action(
 
 		if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
 
-			//debug( $settings );
+			// debug( $settings );
 
 			if ( 'video' === $settings['background_background'] && isset( $settings['background_video_link'] ) ) {
 
