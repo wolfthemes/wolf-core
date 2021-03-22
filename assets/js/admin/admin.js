@@ -1,4 +1,4 @@
-/* global WVCAdminParams */
+/* global WolfCoreAdminParams */
 ;( function( $ ) {
-	$( '#vc_logo' ).attr( 'href', WVCAdminParams.VCPurchaseUrl );
+	//$( '#vc_logo' ).attr( 'href', WolfCoreAdminParams.VCPurchaseUrl );
 } )( jQuery );

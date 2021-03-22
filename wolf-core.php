@@ -525,7 +525,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			if ( $this->is_request( 'frontend' ) ) {
-				$this->frontend_includes();
+				//$this->frontend_includes();
 			}
 		}
 
@@ -538,7 +538,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'admin-theme-activation',
 				'classes/class-options',
 				'classes/class-admin',
-				'classes/class-video-thumbnail-generator',
+				//'classes/class-video-thumbnail-generator',
 				'classes/class-metaboxes',
 			);
 
@@ -645,8 +645,8 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 *
 		 * @return string
 		 */
-		public function wpbpb_shortcode_template_path() {
-			return apply_filters( 'wolf_core_wpbpb_shortcode_template_path', 'plugins/wpbakery-page-builder/templates/' );
+		public function vc_shortcode_template_path() {
+			return apply_filters( 'wolf_core_vc_shortcode_template_path', 'plugins/wpbakery-page-builder/templates/' );
 		}
 
 		/**

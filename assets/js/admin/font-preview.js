@@ -6,9 +6,9 @@
 	/**
  	 * make sure the previews are sortable
  	 */
- 	$( document ).on( 'change', '.wvc-font-family-select', function() {
+ 	$( document ).on( 'change', '.wolf-core-font-family-select', function() {
  		var val = $( this ).val(),
- 			$container = $( this ).next( '.wvc-font-family-preview' );
+ 			$container = $( this ).next( '.wolf-core-font-family-preview' );
 
  		if ( 'default' === val ) {
  			$container.removeAttr( 'style' );

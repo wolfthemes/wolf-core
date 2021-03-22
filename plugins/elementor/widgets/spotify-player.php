@@ -90,17 +90,7 @@ class Elementor_Spotify_Player_Widget extends \Elementor\Widget_Base {
 	 */
 	protected function _register_controls() {
 
-		$this->start_controls_section(
-			'content_section',
-			array(
-				'label' => esc_html__( 'Content', 'wolf-core' ),
-				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
-			)
-		);
-
-		wolf_core_convert_params_to_elementor( $this );
-
-		$this->end_controls_section();
+		wolf_core_register_elementor_controls( $this );
 	}
 
 	/**

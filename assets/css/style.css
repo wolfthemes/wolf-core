@@ -600,6 +600,20 @@
 /**
  * @# Bandsintown Button
  **/
+.wolf-core-breadcrumb-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.wolf-core-breadcrumb-list li {
+  display: inline;
+}
+
+.wolf-core-breadcrumb-delimiter {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 /**
  * @# Custom Heading
  **/
