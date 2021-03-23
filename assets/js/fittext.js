@@ -5,7 +5,7 @@
 
 var WolfCoreFitText = function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	return {
 
@@ -13,13 +13,13 @@ var WolfCoreFitText = function( $ ) {
 		 * Init UI
 		 */
 		init : function () {
-			$( '.wolf-core-fittext' ).each( function() {
-				var maxFontSize = $( this ).data( 'max-font-size' ) || 60,
-					minFontSize = $( this ).data( 'min-font-size' ) || 18,
-					compression = $( this ).data( 'font-compression' ) || 1.2;
+			$( ".wolf-core-fittext" ).each( function() {
+				var maxFontSize = $( this ).data( "max-font-size" ) || 60,
+					minFontSize = $( this ).data( "min-font-size" ) || 18,
+					compression = $( this ).data( "font-compression" ) || 1.2;
 
 
-				$( this ).find( '.elementor-heading-title' ).fitText( compression, { minFontSize: minFontSize + 'px', maxFontSize: maxFontSize + 'px' } );
+				$( this ).find( ".elementor-heading-title" ).fitText( compression, { minFontSize: minFontSize + "px", maxFontSize: maxFontSize + "px" } );
 			} );
 		}
 	};
@@ -28,7 +28,7 @@ var WolfCoreFitText = function( $ ) {
 
 ( function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	$( document ).ready( function() {
 		WolfCoreFitText.init();

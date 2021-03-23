@@ -1,6 +1,6 @@
 <?php
 /**
- * Bandsintown Events
+ * Smash Balloons Instagram Feed
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
+class Elementor_Sb_Instagram_Feed_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -20,7 +20,7 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_bandsintown_events_params();
+		$this->params = wolf_core_sb_instagram_feed_params();
 	}
 
 	/**
@@ -106,15 +106,27 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'artist'              => '',
-				'local_dates'         => 'true',
-				'past_dates'          => 'true',
-				'display_limit'       => '',
+				'num'                   => 18,
+				'cols'                  => 6,
+				'username'              => '',
+				'accesstoken'           => '',
+				'imagepadding'          => '',
+				'showheader'            => 'false',
+				'showbio'               => 'false',
+				'showbutton'            => 'false',
+				'showfollow'            => 'false',
+
+				'follow_button'         => '',
+				'button_text'           => '',
+
+				'disable_default_hover' => '',
+
+				'el_class'              => '',
+				'inline_style'          => '',
 			)
 		);
 
-		echo wolf_core_bandsintown_events( $atts ); // WCS XSS ok.
+		echo wolf_core_sb_instagram_feed( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Bandsintown_Events_Widget() );
-
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Sb_Instagram_Feed_Widget() );

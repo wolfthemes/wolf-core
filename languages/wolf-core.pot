@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-03-23 14:50:56+00:00\n"
+"POT-Creation-Date: 2021-03-23 16:46:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -550,9 +550,9 @@ msgid "Elementor Test Extension"
 msgstr ""
 
 #: inc/admin/auth.php:65 pack/wolf-core/inc/admin/auth.php:65
-#: pack/wolf-core/wolf-core.php:244 pack/wolf-core/wolf-core.php:271
-#: pack/wolf-core/wolf-core.php:298 wolf-core.php:248 wolf-core.php:275
-#: wolf-core.php:302
+#: pack/wolf-core/wolf-core.php:251 pack/wolf-core/wolf-core.php:278
+#: pack/wolf-core/wolf-core.php:305 wolf-core.php:251 wolf-core.php:278
+#: wolf-core.php:305
 msgid "Elementor"
 msgstr ""
 
@@ -578,9 +578,9 @@ msgstr ""
 #: pack/wolf-core/inc/admin/classes/class-admin.php:68
 #: pack/wolf-core/plugins/wpbakery-page-builder/vc.php:68
 #: pack/wolf-core/plugins/wpbakery-page-builder/vc.php:101
-#: pack/wolf-core/wolf-core.php:500 pack/wolf-core/wolf-core.php:553
-#: pack/wolf-core/wolf-core.php:609 plugins/wpbakery-page-builder/vc.php:68
-#: plugins/wpbakery-page-builder/vc.php:101 wolf-core.php:504 wolf-core.php:557
+#: pack/wolf-core/wolf-core.php:507 pack/wolf-core/wolf-core.php:556
+#: pack/wolf-core/wolf-core.php:612 plugins/wpbakery-page-builder/vc.php:68
+#: plugins/wpbakery-page-builder/vc.php:101 wolf-core.php:507 wolf-core.php:556
 #: wolf-core.php:612
 #. translators: the code to output
 #. translators: the code to output
@@ -806,7 +806,7 @@ msgstr ""
 msgid "Size"
 msgstr ""
 
-#: inc/admin/classes/class-options.php:355 inc/core-functions.php:763
+#: inc/admin/classes/class-options.php:355 inc/core-functions.php:766
 #: pack/wolf-core/inc/admin/classes/class-options.php:355
 #: pack/wolf-core/inc/core-functions.php:763
 msgid "Attachment"
@@ -899,135 +899,135 @@ msgstr ""
 msgid "Plugin reactivated successfully."
 msgstr ""
 
-#: inc/core-functions.php:409 pack/wolf-core/inc/core-functions.php:409
+#: inc/core-functions.php:412 pack/wolf-core/inc/core-functions.php:409
 msgid "Fade"
 msgstr ""
 
-#: inc/core-functions.php:410 pack/wolf-core/inc/core-functions.php:410
+#: inc/core-functions.php:413 pack/wolf-core/inc/core-functions.php:410
 msgid "Fade Up"
 msgstr ""
 
-#: inc/core-functions.php:411 pack/wolf-core/inc/core-functions.php:411
+#: inc/core-functions.php:414 pack/wolf-core/inc/core-functions.php:411
 msgid "Fade Down"
 msgstr ""
 
-#: inc/core-functions.php:412 pack/wolf-core/inc/core-functions.php:412
+#: inc/core-functions.php:415 pack/wolf-core/inc/core-functions.php:412
 msgid "Fade Left"
 msgstr ""
 
-#: inc/core-functions.php:413 pack/wolf-core/inc/core-functions.php:413
+#: inc/core-functions.php:416 pack/wolf-core/inc/core-functions.php:413
 msgid "Fade Right"
 msgstr ""
 
-#: inc/core-functions.php:414 pack/wolf-core/inc/core-functions.php:414
+#: inc/core-functions.php:417 pack/wolf-core/inc/core-functions.php:414
 msgid "Fade Up Right"
 msgstr ""
 
-#: inc/core-functions.php:415 pack/wolf-core/inc/core-functions.php:415
+#: inc/core-functions.php:418 pack/wolf-core/inc/core-functions.php:415
 msgid "Fade Up Left"
 msgstr ""
 
-#: inc/core-functions.php:416 pack/wolf-core/inc/core-functions.php:416
+#: inc/core-functions.php:419 pack/wolf-core/inc/core-functions.php:416
 msgid "Fade Down Right"
 msgstr ""
 
-#: inc/core-functions.php:417 pack/wolf-core/inc/core-functions.php:417
+#: inc/core-functions.php:420 pack/wolf-core/inc/core-functions.php:417
 msgid "Fade Down Left"
 msgstr ""
 
-#: inc/core-functions.php:419 pack/wolf-core/inc/core-functions.php:419
+#: inc/core-functions.php:422 pack/wolf-core/inc/core-functions.php:419
 msgid "Flip Up"
 msgstr ""
 
-#: inc/core-functions.php:420 pack/wolf-core/inc/core-functions.php:420
+#: inc/core-functions.php:423 pack/wolf-core/inc/core-functions.php:420
 msgid "Flip Down"
 msgstr ""
 
-#: inc/core-functions.php:421 pack/wolf-core/inc/core-functions.php:421
+#: inc/core-functions.php:424 pack/wolf-core/inc/core-functions.php:421
 msgid "Flip Left"
 msgstr ""
 
-#: inc/core-functions.php:422 pack/wolf-core/inc/core-functions.php:422
+#: inc/core-functions.php:425 pack/wolf-core/inc/core-functions.php:422
 msgid "Flip Right"
 msgstr ""
 
-#: inc/core-functions.php:424 pack/wolf-core/inc/core-functions.php:424
+#: inc/core-functions.php:427 pack/wolf-core/inc/core-functions.php:424
 msgid "Slide Up"
 msgstr ""
 
-#: inc/core-functions.php:425 pack/wolf-core/inc/core-functions.php:425
+#: inc/core-functions.php:428 pack/wolf-core/inc/core-functions.php:425
 msgid "Slide Down"
 msgstr ""
 
-#: inc/core-functions.php:426 pack/wolf-core/inc/core-functions.php:426
+#: inc/core-functions.php:429 pack/wolf-core/inc/core-functions.php:426
 msgid "Slide Left"
 msgstr ""
 
-#: inc/core-functions.php:427 pack/wolf-core/inc/core-functions.php:427
+#: inc/core-functions.php:430 pack/wolf-core/inc/core-functions.php:427
 msgid "Slide Right"
 msgstr ""
 
-#: inc/core-functions.php:429 pack/wolf-core/inc/core-functions.php:429
+#: inc/core-functions.php:432 pack/wolf-core/inc/core-functions.php:429
 msgid "Zoom In"
 msgstr ""
 
-#: inc/core-functions.php:430 pack/wolf-core/inc/core-functions.php:430
+#: inc/core-functions.php:433 pack/wolf-core/inc/core-functions.php:430
 msgid "Zoom In Up"
 msgstr ""
 
-#: inc/core-functions.php:431 pack/wolf-core/inc/core-functions.php:431
+#: inc/core-functions.php:434 pack/wolf-core/inc/core-functions.php:431
 msgid "Zoom In Down"
 msgstr ""
 
-#: inc/core-functions.php:432 pack/wolf-core/inc/core-functions.php:432
+#: inc/core-functions.php:435 pack/wolf-core/inc/core-functions.php:432
 msgid "Zoom In Left"
 msgstr ""
 
-#: inc/core-functions.php:433 pack/wolf-core/inc/core-functions.php:433
+#: inc/core-functions.php:436 pack/wolf-core/inc/core-functions.php:433
 msgid "Zoom In Right"
 msgstr ""
 
-#: inc/core-functions.php:434 pack/wolf-core/inc/core-functions.php:434
+#: inc/core-functions.php:437 pack/wolf-core/inc/core-functions.php:434
 msgid "Zoom Out"
 msgstr ""
 
-#: inc/core-functions.php:435 pack/wolf-core/inc/core-functions.php:435
+#: inc/core-functions.php:438 pack/wolf-core/inc/core-functions.php:435
 msgid "Zoom Out Up"
 msgstr ""
 
-#: inc/core-functions.php:436 pack/wolf-core/inc/core-functions.php:436
+#: inc/core-functions.php:439 pack/wolf-core/inc/core-functions.php:436
 msgid "Zoom Out Down"
 msgstr ""
 
-#: inc/core-functions.php:437 pack/wolf-core/inc/core-functions.php:437
+#: inc/core-functions.php:440 pack/wolf-core/inc/core-functions.php:437
 msgid "Zoom Out Left"
 msgstr ""
 
-#: inc/core-functions.php:438 pack/wolf-core/inc/core-functions.php:438
+#: inc/core-functions.php:441 pack/wolf-core/inc/core-functions.php:438
 msgid "Zoom Out Right"
 msgstr ""
 
-#: inc/core-functions.php:554 pack/wolf-core/inc/core-functions.php:554
+#: inc/core-functions.php:557 pack/wolf-core/inc/core-functions.php:554
 msgid "Image is missing"
 msgstr ""
 
-#: inc/core-functions.php:585 pack/wolf-core/inc/core-functions.php:585
+#: inc/core-functions.php:588 pack/wolf-core/inc/core-functions.php:585
 msgid "Home"
 msgstr ""
 
-#: inc/core-functions.php:632 pack/wolf-core/inc/core-functions.php:632
+#: inc/core-functions.php:635 pack/wolf-core/inc/core-functions.php:632
 msgid "Products tagged &ldquo;"
 msgstr ""
 
-#: inc/core-functions.php:758 pack/wolf-core/inc/core-functions.php:758
+#: inc/core-functions.php:761 pack/wolf-core/inc/core-functions.php:758
 msgid "Search"
 msgstr ""
 
-#: inc/core-functions.php:786 pack/wolf-core/inc/core-functions.php:786
+#: inc/core-functions.php:789 pack/wolf-core/inc/core-functions.php:786
 msgid "Search results"
 msgstr ""
 
-#: inc/core-functions.php:915 pack/wolf-core/inc/core-functions.php:915
+#: inc/core-functions.php:918 pack/wolf-core/inc/core-functions.php:915
 #: pack/wolf-core/plugins/content-blocks/register-post-type.php:16
 #: pack/wolf-core/plugins/content-blocks/register-post-type.php:27
 #: pack/wolf-core/plugins/params/content-block.php:34
@@ -1038,7 +1038,7 @@ msgstr ""
 msgid "Content Block"
 msgstr ""
 
-#: inc/core-functions.php:922 pack/wolf-core/inc/core-functions.php:922
+#: inc/core-functions.php:925 pack/wolf-core/inc/core-functions.php:922
 msgid "Playlists"
 msgstr ""
 
@@ -1244,7 +1244,7 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/controls/section.php:51
 #: pack/wolf-core/plugins/params/album-disc.php:108
 #: pack/wolf-core/plugins/params/bandsintown-events.php:54
-#: pack/wolf-core/plugins/params/bandsintown-events.php:63
+#: pack/wolf-core/plugins/params/bandsintown-events.php:64
 #: pack/wolf-core/plugins/params/breadcrumb.php:74
 #: pack/wolf-core/plugins/params/heading.php:34
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:68
@@ -1268,7 +1268,12 @@ msgstr ""
 #: plugins/elementor/controls/section.php:51 plugins/params/album-disc.php:108
 #: plugins/params/bandsintown-events.php:54
 #: plugins/params/bandsintown-events.php:64 plugins/params/breadcrumb.php:74
-#: plugins/params/heading.php:34 plugins/params/spotify-follow-button.php:68
+#: plugins/params/heading.php:34 plugins/params/sb-instagram-feed.php:78
+#: plugins/params/sb-instagram-feed.php:103
+#: plugins/params/sb-instagram-feed.php:112
+#: plugins/params/sb-instagram-feed.php:121
+#: plugins/params/sb-instagram-feed.php:131
+#: plugins/params/spotify-follow-button.php:68
 #: plugins/params/video-opener.php:39
 #: plugins/wpbakery-page-builder/vc-params/background-params.php:190
 #: plugins/wpbakery-page-builder/vc-params/background-params.php:261
@@ -1292,7 +1297,7 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/controls/section.php:52
 #: pack/wolf-core/plugins/params/album-disc.php:109
 #: pack/wolf-core/plugins/params/bandsintown-events.php:53
-#: pack/wolf-core/plugins/params/bandsintown-events.php:64
+#: pack/wolf-core/plugins/params/bandsintown-events.php:65
 #: pack/wolf-core/plugins/params/breadcrumb.php:75
 #: pack/wolf-core/plugins/params/heading.php:35
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:69
@@ -1311,7 +1316,12 @@ msgstr ""
 #: plugins/elementor/controls/section.php:52 plugins/params/album-disc.php:109
 #: plugins/params/bandsintown-events.php:53
 #: plugins/params/bandsintown-events.php:65 plugins/params/breadcrumb.php:75
-#: plugins/params/heading.php:35 plugins/params/spotify-follow-button.php:69
+#: plugins/params/heading.php:35 plugins/params/sb-instagram-feed.php:79
+#: plugins/params/sb-instagram-feed.php:104
+#: plugins/params/sb-instagram-feed.php:113
+#: plugins/params/sb-instagram-feed.php:122
+#: plugins/params/sb-instagram-feed.php:132
+#: plugins/params/spotify-follow-button.php:69
 #: plugins/params/video-opener.php:38
 #: plugins/wpbakery-page-builder/vc-params/background-params.php:262
 #: plugins/wpbakery-page-builder/vc-params/background-params.php:336
@@ -1348,7 +1358,7 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:32
 #: pack/wolf-core/plugins/params/breadcrumb.php:27
 #: plugins/elementor/elementor-core-functions.php:32
-#: plugins/params/breadcrumb.php:27
+#: plugins/params/breadcrumb.php:27 plugins/params/sb-instagram-feed.php:29
 msgid "Extension"
 msgstr ""
 
@@ -1499,7 +1509,7 @@ msgstr ""
 msgid "Watch %s"
 msgstr ""
 
-#: pack/wolf-core/plugins/elements/video-preview.php:107
+#: pack/wolf-core/plugins/elements/video-preview.php:108
 #: plugins/elements/video-preview.php:108
 msgid "Play Video"
 msgstr ""
@@ -1815,7 +1825,7 @@ msgstr ""
 msgid "Display Local Dates"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/bandsintown-events.php:60
+#: pack/wolf-core/plugins/params/bandsintown-events.php:61
 #: plugins/params/bandsintown-events.php:61
 msgid "Display Past Dates"
 msgstr ""
@@ -2367,7 +2377,8 @@ msgid "Caption"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/video-opener.php:128
-msgid "Watch \"My Video Title\""
+#: plugins/params/video-opener.php:128
+msgid "My Video Title"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/video-opener.php:136
@@ -2376,11 +2387,13 @@ msgid "Duration"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/video-preview.php:24
-msgid "Custom Embed Video"
+#: plugins/params/video-preview.php:24
+msgid "Video Preview"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/video-preview.php:25
-msgid "A Vimeo or YouTube video with preview"
+#: plugins/params/video-preview.php:25
+msgid "An embed video with preview"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/video-preview.php:44
@@ -4125,6 +4138,7 @@ msgid "Column Type"
 msgstr ""
 
 #: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:23
+#: plugins/params/sb-instagram-feed.php:46
 #: plugins/wpbakery-page-builder/vc-params/row-params.php:23
 msgid "Columns"
 msgstr ""
@@ -4396,7 +4410,7 @@ msgstr ""
 msgid "CSS box"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:241 wolf-core.php:245
+#: pack/wolf-core/wolf-core.php:248 wolf-core.php:248
 msgid ""
 "\"%1$s\" requires <a href=\"%2$s\" target=\"_blank\">%3$s</a> or <a "
 "href=\"%4$s\" target=\"_blank\">%5$s</a> to be installed and activated."
@@ -4406,13 +4420,13 @@ msgstr ""
 msgid "Wolf Core"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:246 pack/wolf-core/wolf-core.php:273
-#: pack/wolf-core/wolf-core.php:325 wolf-core.php:250 wolf-core.php:277
-#: wolf-core.php:329
+#: pack/wolf-core/wolf-core.php:253 pack/wolf-core/wolf-core.php:280
+#: pack/wolf-core/wolf-core.php:332 wolf-core.php:253 wolf-core.php:280
+#: wolf-core.php:332
 msgid "WPBakery Page Builder"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:268 wolf-core.php:272
+#: pack/wolf-core/wolf-core.php:275 wolf-core.php:275
 msgid ""
 "\"%1$s\" requires to choose between \"<a href=\"%2$s\" "
 "target=\"_blank\">%3$s</a>\" or \"<a href=\"%4$s\" "
@@ -4420,32 +4434,96 @@ msgid ""
 "same time."
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:296 pack/wolf-core/wolf-core.php:323
-#: pack/wolf-core/wolf-core.php:350 wolf-core.php:300 wolf-core.php:327
-#: wolf-core.php:354
+#: pack/wolf-core/wolf-core.php:303 pack/wolf-core/wolf-core.php:330
+#: pack/wolf-core/wolf-core.php:357 wolf-core.php:303 wolf-core.php:330
+#: wolf-core.php:357
 #. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:351 wolf-core.php:355
+#: pack/wolf-core/wolf-core.php:358 wolf-core.php:358
 msgid "Wolf Elementor Extension"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:352 wolf-core.php:356
+#: pack/wolf-core/wolf-core.php:359 wolf-core.php:359
 msgid "PHP"
 msgstr ""
 
-#: plugins/params/video-opener.php:128
-msgid "My Video Title"
+#: plugins/elements/sb-instagram-feed.php:61
+msgid "Instagram @%s"
 msgstr ""
 
-#: plugins/params/video-preview.php:24
-msgid "Video Preview"
+#: plugins/params/sb-instagram-feed.php:25
+msgid "Instagram Feed (Smash Balloon)"
 msgstr ""
 
-#: plugins/params/video-preview.php:25
-msgid "An embed video with preview"
+#: plugins/params/sb-instagram-feed.php:26
+msgid "Your last instagram photos"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:37
+msgid "Image Count"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:38
+msgid "Note that the instagram API may limit the number of image to display."
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:60
+msgid "User"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:61
+msgid ""
+"Your Instagram User Name. This must be from a connected account on the "
+"\"Configure\" tab."
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:68
+msgid "API key (optional)"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:69
+msgid "Leave empty to use the default API key set in the plugin settings."
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:76
+msgid "Display follow button (theme style)"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:85
+msgid "Button Text (theme style)"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:94
+msgid "Padding"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:100
+msgid "Show Header"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:102
+msgid "Whether to show the feed Header."
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:110
+msgid "Show \"Follow\" button"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:119
+msgid "Show \"Load More\" button"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:128
+msgid "Disable Default Hover Effect"
+msgstr ""
+
+#: plugins/params/sb-instagram-feed.php:129
+msgid ""
+"Check this option to set your own hover effect if you have the pro version "
+"of the Instagram Feed plugin."
 msgstr ""
 
 #. Plugin URI of the plugin/theme

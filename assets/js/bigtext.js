@@ -5,7 +5,7 @@
 
 var WolfCoreBigText = function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	return {
 
@@ -18,13 +18,13 @@ var WolfCoreBigText = function( $ ) {
 
 			_this.bigText();
 
-			$( window ).on( 'wolf_core_resized', function () {
+			$( window ).on( "wolf_core_resized", function () {
 				_this.bigText();
 			} );
 		},
 
 		bigText : function() {
-			$( '.wolf-core-bigtext' ).each( function() {
+			$( ".wolf-core-bigtext" ).each( function() {
 				$( this ).bigtext();
 			} );
 		}
@@ -34,16 +34,16 @@ var WolfCoreBigText = function( $ ) {
 
 ( function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	$( document ).ready( function() {
 		WolfCoreBigText.init();
-		window.dispatchEvent( new Event( 'resize' ) );
+		window.dispatchEvent( new Event( "resize" ) );
 	} );
 
-	$( window ).on( 'elementor/frontend/init', function () {
+	$( window ).on( "elementor/frontend/init", function () {
 		//WolfCoreBigText.init();
-        elementorFrontend.hooks.addAction('frontend/element_ready/bigtext.default', WolfCoreBigText.init() );
+        elementorFrontend.hooks.addAction("frontend/element_ready/bigtext.default", WolfCoreBigText.init() );
     })
 
 } )( jQuery );

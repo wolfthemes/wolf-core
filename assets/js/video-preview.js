@@ -7,7 +7,7 @@
 
 var WolfCoreVideoPreview = function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	return {
 
@@ -16,24 +16,24 @@ var WolfCoreVideoPreview = function( $ ) {
 		 */
 		init : function () {
 
-			$( document ).on( 'click', '.wolf-core-youtube-play-button', function() {
+			$( document ).on( "click", ".wolf-core-youtube-play-button", function() {
  				var $this = $( this ),
  					$container = $this.parent().parent(),
-					$iframe = $container.find( 'iframe' );
+					$iframe = $container.find( "iframe" );
 
-				$iframe[0].src += '&autoplay=1';
-				$container.find( '.wolf-core-youtube-cover' ).delay( 500 ).fadeOut();
-				$container.addClass( 'wolf-core-youtube-playing' );
+				$iframe[0].src += "&autoplay=1";
+				$container.find( ".wolf-core-youtube-cover" ).delay( 500 ).fadeOut();
+				$container.addClass( "wolf-core-youtube-playing" );
 			} );
 
-			$( document ).on( 'click', '.wolf-core-embed-video-play-button', function() {
+			$( document ).on( "click", ".wolf-core-embed-video-play-button", function() {
  				var $this = $( this ),
  					$container = $this.parent().parent(),
-					$iframe = $container.find( 'iframe' );
+					$iframe = $container.find( "iframe" );
 
-				$iframe[0].src += '&autoplay=1';
-				$container.find( '.wolf-core-embed-video-cover' ).delay( 500 ).fadeOut();
-				$container.addClass( 'wolf-core-embed-video-playing' );
+				$iframe[0].src += "&autoplay=1";
+				$container.find( ".wolf-core-embed-video-cover" ).delay( 500 ).fadeOut();
+				$container.addClass( "wolf-core-embed-video-playing" );
 			} );
 		}
 	};
@@ -42,7 +42,7 @@ var WolfCoreVideoPreview = function( $ ) {
 
 ( function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	$( document ).ready( function() {
 		WolfCoreVideoPreview.init();

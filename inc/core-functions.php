@@ -141,7 +141,6 @@ function wolf_core_get_element_list() {
 		//'process-item',
 		//'progress-bar',
 		//'section',
-		//'sb-instagram-feed',
 		//'separator',
 		//'service-table',
 		//'social-icons',
@@ -183,6 +182,10 @@ function wolf_core_get_element_list() {
 		$wolf_core_elements[] = 'custom-heading';
 		$wolf_core_elements[] = 'row';
 		$wolf_core_elements[] = 'row-inner';
+	}
+
+	if ( function_exists( 'sb_instagram_feed_init' ) ) {
+		$wolf_core_elements[] = 'sb-instagram-feed';
 	}
 
 	// apply filters.
