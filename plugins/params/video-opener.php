@@ -26,7 +26,7 @@ function wolf_core_video_opener_params() {
 				'el_base'       => 'video-opener',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
 				'el_categories' => array( 'music' ),
-				'icon'          => 'dashicons-before dashicons-video',
+				'icon'          => 'fa fa-play-circle-o',
 			),
 
 			'params'     => array(
@@ -68,7 +68,7 @@ function wolf_core_video_opener_params() {
 						),
 					),
 					'selectors'    => array(
-						'{{WRAPPER}}' => 'text-align: {{VALUE}};',
+						'{{WRAPPER}}' => 'margin-{{VALUE}}:0;',
 					),
 					'page_builder' => 'elementor',
 				),
@@ -125,7 +125,7 @@ function wolf_core_video_opener_params() {
 					'type'        => 'text',
 					'label'       => esc_html__( 'Caption', 'wolf-core' ),
 					'param_name'  => 'caption',
-					'placeholder' => esc_html__( 'Watch "My Video Title"', 'wolf-core' ),
+					'placeholder' => esc_html__( 'My Video Title', 'wolf-core' ),
 					// 'condition'  => array(
 					// 'caption_position' => array( '' ),
 					// ),

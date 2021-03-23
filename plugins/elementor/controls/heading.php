@@ -16,6 +16,8 @@ add_action(
 	'elementor/element/heading/section_title/before_section_end',
 	function( $element, $args ) {
 
+		$element->remove_control( 'size' );
+
 		$element->params = wolf_core_heading_params();
 
 		wolf_core_convert_params_to_elementor( $element );
@@ -43,6 +45,7 @@ add_action(
 		$style = '';
 		$class = 'wolf-core-heading';
 
+		$size        = ( isset( $settings['size'] ) ) ? $settings['size'] : '';
 		$font_size   = ( isset( $settings['font_size'] ) ) ? $settings['font_size'] : '';
 		$responsive  = ( isset( $settings['responsive'] ) ) ? $settings['responsive'] : '';
 		$font_weight = ( isset( $settings['font_weight'] ) ) ? absint( $settings['font_weight'] ) : '';
@@ -57,7 +60,7 @@ add_action(
 			$class .= ' wolf-core-fittext';
 		}
 
-		if ( $font_size ) {
+		if ( 'custom' === $size && $font_size ) {
 			$class .= ' wolf-core-heading-custom-font-size';
 			$style .= 'font-size:' . absint( $font_size ) . 'px;';
 		}
@@ -117,7 +120,6 @@ add_action(
 	function( $content ) {
 		$post_title = wolf_core_get_post_title();
 		$site_title = get_bloginfo( 'name' );
-		// $post_title = get_the_title();
 
 		$short_tags = array(
 			'{{post_title}}' => $post_title,

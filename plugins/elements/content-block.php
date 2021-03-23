@@ -12,11 +12,11 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Returns a heading
  *
- * @param array $atts The heading attributes.
+ * @param int $post_id The content block post ID.
  */
 function wolf_core_content_block( $post_id ) {
 
-	$post_id = absint( apply_filters( 'wpml_object_id', $post_id, 'post' ) ); // WPML compatibility
+	$post_id = absint( apply_filters( 'wpml_object_id', $post_id, 'post' ) ); // WPML compatibility.
 
 	$content_block_post_slug = ( class_exists( 'Wolf_Core' ) ) ? 'wolf_content_block' : 'wvc_content_block';
 

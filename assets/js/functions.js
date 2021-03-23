@@ -184,11 +184,11 @@ var WolfCore = (function ($) {
 				$("html").addClass("wolf-core-no-touch");
 			}
 
-			if (this.isMobile) {
-				this.body.addClass("wolf-core-is-mobile");
-			} else {
-				this.body.addClass("wolf-core-is-desktop");
-			}
+			// if (this.isMobile) {
+			// 	this.body.addClass("wolf-core-is-mobile");
+			// } else {
+			// 	this.body.addClass("wolf-core-is-desktop");
+			// }
 
 			if (
 				(this.isMobile || 800 > $(window).width()) &&

@@ -19,7 +19,7 @@ function wolf_core_heading_params() {
 	return apply_filters(
 		'wolf_core_heading_params',
 		array(
-			// Not used as we will add our params to the existing heading widget
+			// Not used as we will add our params to the existing heading widget.
 			'properties' => array(
 				'name'        => esc_html__( 'Heading', 'wolf-core' ),
 				'description' => esc_html__( 'A big title with flexible font size', 'wolf-core' ),
@@ -38,13 +38,32 @@ function wolf_core_heading_params() {
 				),
 
 				array(
+					'type'       => 'select',
+					'label'      => esc_html__( 'Size', 'wolf-core' ),
+					'param_name' => 'size',
+					'options'    => array(
+						'default' => esc_html__( 'Default', 'wolf-core' ),
+						'small'   => esc_html__( 'Small', 'wolf-core' ),
+						'medium'  => esc_html__( 'Medium', 'wolf-core' ),
+						'large'   => esc_html__( 'Large', 'wolf-core' ),
+						'xl'      => esc_html__( 'XL', 'wolf-core' ),
+						'xxl'     => esc_html__( 'XXL', 'wolf-core' ),
+						'custom'  => esc_html__( 'Custom', 'wolf-core' ),
+					),
+					'default'    => 'default',
+				),
+
+				array(
 					'type'        => 'text',
 					'label'       => esc_html__( 'Custom Font Size', 'wolf-core' ),
 					'description' => esc_html__( 'It will overwrite the size setting above.', 'wolf-core' ),
 					'param_name'  => 'font_size',
 					'default'     => apply_filters( 'wolf_core_default_heading_font_size', 48 ),
-					'selectors'    => array(
+					'selectors'   => array(
 						'{{WRAPPER}}' => 'font-size: {{VALUE}}px;',
+					),
+					'condition'   => array(
+						'size' => 'custom',
 					),
 				),
 
@@ -73,7 +92,7 @@ function wolf_core_heading_params() {
 					'param_name'  => 'font_family',
 					'admin_label' => true,
 					'default'     => apply_filters( 'wolf_core_default_heading_font_family', '' ),
-					'selectors'    => array(
+					'selectors'   => array(
 						'{{WRAPPER}} .elementor-heading-title' => 'font-family: {{VALUE}};',
 					),
 				),
@@ -85,7 +104,7 @@ function wolf_core_heading_params() {
 					'admin_label' => true,
 					'default'     => apply_filters( 'wolf_core_default_heading_font_weight', '' ),
 					'placeholder' => apply_filters( 'wolf_core_default_heading_font_weight', '700' ),
-					'selectors'    => array(
+					'selectors'   => array(
 						'{{WRAPPER}}' => 'font-weight: {{VALUE}};',
 					),
 				),
@@ -99,7 +118,7 @@ function wolf_core_heading_params() {
 						'uppercase' => esc_html__( 'Uppercase', 'wolf-core' ),
 						'lowercase' => esc_html__( 'Lowercase', 'wolf-core' ),
 					),
-					'selectors'    => array(
+					'selectors'  => array(
 						'{{WRAPPER}}' => 'text-transform: {{VALUE}};',
 					),
 				),
@@ -111,7 +130,7 @@ function wolf_core_heading_params() {
 						''       => esc_html__( 'Default', 'wolf-core' ),
 						'italic' => esc_html__( 'Italic', 'wolf-core' ),
 					),
-					'selectors'    => array(
+					'selectors'  => array(
 						'{{WRAPPER}}' => 'font-style: {{VALUE}};',
 					),
 				),
@@ -121,7 +140,7 @@ function wolf_core_heading_params() {
 					'param_name'  => 'letter_spacing',
 					'placeholder' => '0',
 					'default'     => apply_filters( 'wolf_core_default_heading_letter_spacing', '' ),
-					'selectors'    => array(
+					'selectors'   => array(
 						'{{WRAPPER}} .elementor-heading-title' => 'letter-spacing: {{VALUE}};',
 					),
 				),
@@ -130,7 +149,7 @@ function wolf_core_heading_params() {
 					'label'       => esc_html__( 'Line Height', 'wolf-core' ),
 					'param_name'  => 'line_height',
 					'placeholder' => '1',
-					'selectors'    => array(
+					'selectors'   => array(
 						'{{WRAPPER}} .elementor-heading-title' => 'line-height: {{VALUE}};px',
 					),
 				),

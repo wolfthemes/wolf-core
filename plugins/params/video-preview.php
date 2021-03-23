@@ -21,8 +21,8 @@ function wolf_core_video_preview_params() {
 		array(
 
 			'properties' => array(
-				'name'          => esc_html__( 'Custom Embed Video', 'wolf-core' ),
-				'description'   => esc_html__( 'A Vimeo or YouTube video with preview', 'wolf-core' ),
+				'name'          => esc_html__( 'Video Preview', 'wolf-core' ),
+				'description'   => esc_html__( 'An embed video with preview', 'wolf-core' ),
 				'vc_base'       => 'wolf_core_video_preview',
 				'el_base'       => 'video-preview',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),

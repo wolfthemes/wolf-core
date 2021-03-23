@@ -93,7 +93,7 @@ function wolf_core_get_element_list() {
 		//'cards-gallery',
 		//'cta',
 		//'comparison_slider',
-		//'content-block',
+		'content-block',
 		//'content-slider',
 		//'countdown',
 		//'counter',

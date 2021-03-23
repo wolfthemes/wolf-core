@@ -13,13 +13,6 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Body class
- *
- * @see  wolf_core_body_class()
- */
-add_filter( 'body_class', 'wolf_core_body_class' );
-
-/**
  * WP Header
  *
  * @see  wolf_core_generator_tag()

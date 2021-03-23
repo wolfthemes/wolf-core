@@ -103,6 +103,7 @@ function wolf_core_video_preview( $atts ) {
 	if ( $title ) {
 
 		$output .= sprintf( apply_filters( 'wolf_core_embed_video_title', esc_html__( 'Watch %s', 'wolf-core' ) ), $title );
+
 	} else {
 		$output .= esc_html__( 'Play Video', 'wolf-core' );
 	}

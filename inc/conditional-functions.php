@@ -21,6 +21,14 @@ function wolf_core_is_page_builder_page() {
 
 	$bool = false;
 
+	if ( wolf_core_is_elementor_page() ) {
+		$bool = true;
+	}
+
+	if ( wolf_core_is_vc_page() ) {
+		$bool = true;
+	}
+
 	if ( wolf_core_is_blog() || is_search() && ! is_single() ) {
 		$bool = false;
 	}
@@ -35,14 +43,6 @@ function wolf_core_is_page_builder_page() {
 		$bool = false;
 	}
 
-	if ( wolf_core_is_elementor_page() ) {
-		$bool = true;
-	}
-
-	if ( wolf_core_is_vc_page() ) {
-		$bool = true;
-	}
-
 	return $bool;
 }
 
@@ -52,12 +52,9 @@ function wolf_core_is_page_builder_page() {
  * @return bool
  */
 function wolf_core_is_elementor_page() {
-	if ( defined( 'ELEMENTOR_VERSION' ) ) {
-		global $post;
 
-		if ( is_object( $post ) ) {
-			return \Elementor\Plugin::$instance->db->is_built_with_elementor( $post->ID );
-		}
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+		return get_post_meta( wolf_core_get_the_id(), '_elementor_edit_mode', true );
 	}
 }
 

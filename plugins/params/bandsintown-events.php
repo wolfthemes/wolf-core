@@ -53,6 +53,7 @@ function wolf_core_bandsintown_events_params() {
 						'false' => esc_html__( 'No', 'wolf-core' ),
 						'true'  => esc_html__( 'Yes', 'wolf-core' ),
 					),
+					'default' => 'true',
 				),
 
 				array(
@@ -63,6 +64,7 @@ function wolf_core_bandsintown_events_params() {
 						'true'  => esc_html__( 'Yes', 'wolf-core' ),
 						'false' => esc_html__( 'No', 'wolf-core' ),
 					),
+					'default' => 'false',
 				),
 			),
 		)

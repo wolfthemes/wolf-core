@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Plugin Name: Wolf Core
  * Plugin URI: https://wlfthm.es/wolf-core
@@ -204,12 +204,8 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			add_action( 'init', array( $this, 'init' ), 0 );
 
-			// Includes element after init hook to allow filtering by theme.
-			add_action( 'init', array( $this, 'include_elements' ) );
-
 			// Plugin update notifications.
 			add_action( 'admin_init', array( $this, 'plugin_update' ) );
-
 		}
 
 		/**
@@ -217,7 +213,18 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function init() {
 
+			// Plugin text domain for translation.
 			$this->load_plugin_textdomain();
+
+			// Includes additional good ol' shortcodes that can be used in elements.
+			$this->include_shortcodes();
+
+			// Includes element after init hook to allow filtering by theme.
+			$this->include_elements();
+
+			if ( $this->is_request( 'frontend' ) ) {
+				$this->frontend_includes();
+			}
 
 			do_action( 'wolf_core_init' );
 		}
@@ -523,10 +530,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			if ( $this->is_request( 'ajax' ) ) {
 				$this->ajax_includes();
 			}
-
-			if ( $this->is_request( 'frontend' ) ) {
-				//$this->frontend_includes();
-			}
 		}
 
 		/**
@@ -538,7 +541,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'admin-theme-activation',
 				'classes/class-options',
 				'classes/class-admin',
-				//'classes/class-video-thumbnail-generator',
+				// 'classes/class-video-thumbnail-generator',
 				'classes/class-metaboxes',
 			);
 
@@ -593,12 +596,12 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		public function frontend_includes() {
 
 			$frontend_files = array(
-				'template-functions',
-				'template-hooks',
-				'frontend-functions',
+				// 'template-functions',
+				// 'template-hooks',
+				'body-classes',
+				// 'frontend-functions',
 			);
 
-			/* Includes core files from theme inc dir in both frontend and backend */
 			foreach ( $frontend_files as $file ) {
 
 				if ( ! require_once WOLF_CORE_DIR . '/inc/frontend/' . $file . '.php' ) {
@@ -627,7 +630,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$element_files = wolf_core_get_element_list();
 
-			/* Includes core files from theme inc dir in both frontend and backend */
 			foreach ( $element_files as $element ) {
 
 				if ( is_file( WOLF_CORE_DIR . '/plugins/params/' . sanitize_title_with_dashes( $element ) . '.php' ) ) {
@@ -636,6 +638,28 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 				if ( is_file( WOLF_CORE_DIR . '/plugins/elements/' . sanitize_title_with_dashes( $element ) . '.php' ) ) {
 					require_once WOLF_CORE_DIR . '/plugins/elements/' . sanitize_title_with_dashes( $element ) . '.php';
+				}
+			}
+		}
+
+		/**
+		 * Include shortcode files.
+		 *
+		 * Look if the files exist and include it.
+		 */
+		public function include_shortcodes() {
+
+			$shortcode_files = array(
+				'bit-artist',
+				'current-year',
+				'next-month',
+				'span',
+			);
+
+			foreach ( $shortcode_files as $shortcode ) {
+
+				if ( is_file( WOLF_CORE_DIR . '/plugins/shortcodes/' . sanitize_title_with_dashes( $shortcode ) . '.php' ) ) {
+					require_once WOLF_CORE_DIR . '/plugins/shortcodes/' . sanitize_title_with_dashes( $shortcode ) . '.php';
 				}
 			}
 		}
