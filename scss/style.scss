@@ -11,6 +11,10 @@
 
 @import 'global/containers';
 
+@import 'global/fluid-video';
+
+@import 'global/video-bg';
+
 @import 'elements/album-disc';
 
 @import 'elements/bit';
@@ -24,3 +28,5 @@
 @import 'elements/spotify';
 
 @import 'elements/video-opener';
+
+@import 'elements/video-preview';

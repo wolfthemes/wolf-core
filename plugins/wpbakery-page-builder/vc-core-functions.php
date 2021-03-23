@@ -85,13 +85,19 @@ function wolf_core_convert_params_to_vc( $params ) {
 			$vc_params['params'][ $i ]['value'] = array_flip( wolf_core_get_google_fonts_options() );
 
 		} elseif ( 'link' === $type ) {
+
 			$vc_params['params'][ $i ]['type'] = 'vc_link';
 
 		} elseif ( 'colorpicker' === $type ) {
 
 			$vc_params['params'][ $i ]['type'] = 'colorpicker';
 
+		} elseif ( 'video' === $type ) {
+
+			$vc_params['params'][ $i ]['type'] = 'wolf_core_video_url';
+
 		} elseif ( 'image' === $type ) {
+
 			$vc_params['params'][ $i ]['type'] = 'attach_image';
 
 		}

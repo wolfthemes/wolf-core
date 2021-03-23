@@ -12,7 +12,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- *  Element Parameters
+ * Element Parameters
  *
  * @return array
  */

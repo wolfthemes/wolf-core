@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- *  Element Parameters
+ * Element Parameters
  *
  * @return array
  */
@@ -25,7 +25,7 @@ function wolf_core_spotify_player_params() {
 				'el_base'       => 'spotify-player',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
 				'el_categories' => array( 'music' ),
-				'icon'          => 'dashicons-before dashicons-album',
+				'icon'          => 'fa fa-spotify',
 			),
 
 			'params'     => array(
@@ -46,6 +46,7 @@ function wolf_core_spotify_player_params() {
 						'large'   => esc_html__( 'Large', 'wolf-core' ),
 						'compact' => esc_html__( 'Compact', 'wolf-core' ),
 					),
+					'default'     => 'large',
 					'admin_label' => true,
 				),
 

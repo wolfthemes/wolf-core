@@ -1,5 +1,11 @@
 /**
  * @# Spotify Player
  **/
-.wolf-core-spotify-player-container iframe {
+.wolf-core-spotify-follow-button-container {
+	width: 210px;
+	width: auto;
+
+	iframe {
+		width: auto !important;
+	}
 }

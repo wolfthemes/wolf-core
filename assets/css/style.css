@@ -401,6 +401,172 @@
 }
 
 /**
+ * @# Fluid Video
+ **/
+.wolf-core-fluid-video {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wolf-core-fluid-video iframe,
+.wolf-core-fluid-video embed,
+.wolf-core-fluid-video object,
+.wolf-core-fluid-video video {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+/* Make video shortcode responsive without JS */
+.wolf-core-video-shortcode-container .wp-video,
+.wolf-core-video-shortcode-container video.wp-video-shortcode,
+.wolf-core-video-shortcode-container .mejs-container,
+.wolf-core-video-shortcode-container .mejs-poster,
+.wolf-core-video-shortcode-container .mejs-overlay.load,
+.wolf-core-vs-big-video-inner .wp-video,
+.wolf-core-vs-big-video-inner video.wp-video-shortcode,
+.wolf-core-vs-big-video-inner .mejs-container,
+.wolf-core-vs-big-video-inner .mejs-poster,
+.wolf-core-vs-big-video-inner .mejs-overlay.load {
+  width: 100% !important;
+}
+.wolf-core-video-shortcode-container .mejs-poster,
+.wolf-core-vs-big-video-inner .mejs-poster {
+  height: 100% !important;
+}
+.wolf-core-video-shortcode-container video.wp-video-shortcode,
+.wolf-core-video-shortcode-container .mejs-layer,
+.wolf-core-vs-big-video-inner video.wp-video-shortcode,
+.wolf-core-vs-big-video-inner .mejs-layer {
+  height: auto;
+}
+.wolf-core-video-shortcode-container .mejs-container,
+.wolf-core-vs-big-video-inner .mejs-container {
+  height: auto !important;
+  padding-top: 56.25%;
+}
+.wolf-core-video-shortcode-container .wp-video,
+.wolf-core-video-shortcode-container video.wp-video-shortcode,
+.wolf-core-vs-big-video-inner .wp-video,
+.wolf-core-vs-big-video-inner video.wp-video-shortcode {
+  max-width: 100% !important;
+}
+.wolf-core-video-shortcode-container video.wp-video-shortcode,
+.wolf-core-vs-big-video-inner video.wp-video-shortcode {
+  position: relative;
+}
+.wolf-core-video-shortcode-container .mejs-mediaelement,
+.wolf-core-vs-big-video-inner .mejs-mediaelement {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.wolf-core-video-shortcode-container .mejs-overlay-play,
+.wolf-core-vs-big-video-inner .mejs-overlay-play {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto !important;
+  height: auto !important;
+}
+.wolf-core-video-shortcode-container .mejs-overlay-loading,
+.wolf-core-vs-big-video-inner .mejs-overlay-loading {
+  display: none;
+}
+
+/**
+ * @# Video Background
+ **/
+.wolf-core-video-bg-container {
+  display: block;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.wolf-core-video-bg-container embed,
+.wolf-core-video-bg-container iframe,
+.wolf-core-video-bg-container object,
+.wolf-core-video-bg-container video {
+  max-width: none !important;
+}
+
+.wolf-core-youtube-bg,
+.wolf-core-video-bg,
+.wolf-core-vimeo-bg {
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wolf-core-video-bg-overlay {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wolf-core-video-bg-fallback {
+  z-index: 0;
+}
+
+.wolf-core-video-bg-container {
+  background: #0d0d0d;
+}
+
+/* Video background control */
+.wolf-core-youtube-player {
+  opacity: 0;
+  transition: opacity ease 2s;
+  transition-delay: 1s;
+}
+.wolf-core-youtube-player.wolf-core-youtube-player-is-loaded {
+  opacity: 1;
+}
+
+.wolf-core-is-mobile .wolf-core-video-bg-container iframe {
+  display: none;
+}
+
+.wolf-core-yt-video-bg-play,
+.wolf-core-yt-video-bg-pause {
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  cursor: pointer;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.wolf-core-yt-video-bg-pause {
+  background: #0d0d0d;
+  right: 55px;
+}
+
+/**
  * @# Album Disc
  **/
 .wolf-core-album-disc {
@@ -658,6 +824,14 @@
 /**
  * @# Spotify Player
  **/
+.wolf-core-spotify-follow-button-container {
+  width: 210px;
+  width: auto;
+}
+.wolf-core-spotify-follow-button-container iframe {
+  width: auto !important;
+}
+
 /**
  * @# Video Opener
  **/
@@ -792,4 +966,76 @@
 
 .wolf-core-video-opener-caption-text {
   font-weight: 700;
+}
+
+/**
+ * @# Video Preview
+ **/
+.wolf-core-embed-video-container {
+  position: relative;
+  overflow: hidden;
+}
+.wolf-core-embed-video-container .wolf-core-fluid-video,
+.wolf-core-embed-video-container .wolf-core-fluid-video-container {
+  margin-bottom: 0 !important;
+}
+.wolf-core-embed-video-container iframe {
+  z-index: 1;
+}
+.wolf-core-embed-video-container.wolf-core-embed-video-playing .wolf-core-embed-video-play {
+  visibility: hidden;
+  z-index: -100;
+}
+
+.wolf-core-embed-video-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.wolf-core-embed-video-cover:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.22);
+  z-index: 1;
+}
+
+.wolf-core-embed-video-cover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center center scroll;
+  background-size: 100%;
+  background-size: cover;
+}
+
+.wolf-core-embed-video-play-button {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transition: all 0.2s ease;
+  transform: translate3d(-50%, -50%, 0);
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.wolf-core-embed-video-play-button .fa {
+  margin-right: 8px;
+}
+.wolf-core-embed-video-play-button:hover {
+  background: #fff;
+  color: #0d0d0d;
 }

@@ -1,0 +1,83 @@
+/**
+ * @# Video Preview
+ **/
+.wolf-core-embed-video-container {
+	position: relative;
+	overflow: hidden;
+
+	//margin-bottom: 30px;
+
+	.wolf-core-fluid-video,
+	.wolf-core-fluid-video-container {
+		margin-bottom: 0 !important;
+	}
+
+	iframe {
+		//position: relative;
+		z-index: 1;
+	}
+
+	&.wolf-core-embed-video-playing {
+		.wolf-core-embed-video-play {
+			visibility: hidden;
+			z-index: -100;
+		}
+	}
+}
+
+.wolf-core-embed-video-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+
+	&:before {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.22);
+		z-index: 1;
+	}
+}
+
+.wolf-core-embed-video-cover-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: no-repeat center center scroll;
+	background-size: 100%;
+	background-size: cover;
+}
+
+.wolf-core-embed-video-play-button {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transition: all 0.2s ease;
+	transform: translate3d(-50%, -50%, 0);
+	cursor: pointer;
+	border: 1px solid #ccc;
+	padding: 10px 30px;
+	//min-width: 350px;
+	color: #fff;
+	text-transform: uppercase;
+
+	.fa {
+		margin-right: 8px;
+	}
+
+	&:hover {
+		background: #fff;
+		color: #0d0d0d;
+	}
+}

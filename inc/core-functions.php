@@ -149,8 +149,8 @@ function wolf_core_get_element_list() {
 		//'single-image',
 		//'soundcloud',
 		//'span',
-		//'spotify-player',
-		//'spotify-follow-button',
+		//'spotify-player', // added in themes
+		//'spotify-follow-button', // added in themes
 		//'tabs',
 		//'tab',
 		//'team-member',
@@ -164,6 +164,7 @@ function wolf_core_get_element_list() {
 		'video-opener',
 		//'video-self-hosted',
 		//'videos-carousel', //  last videos from plugin carousel
+		'video-preview',
 		//'videos',
 		//'waveform-player',
 		//'wc-categories',

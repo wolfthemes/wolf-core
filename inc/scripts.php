@@ -120,13 +120,9 @@ function wolf_core_register_scripts() {
 	// InView.
 	wp_register_script( 'inview', WOLF_CORE_JS . '/lib/jquery.inview.min.js', array( 'jquery' ), '1.1.2', true );
 
-	// Visible.
-	// wp_register_script( 'visible', WOLF_CORE_JS . '/lib/jquery.visible.min.js', array( 'jquery' ), '1.3.0', true );
-
 	/* Full Page */
 	wp_register_script( 'scrolloverflow', WOLF_CORE_JS . '/lib/scrolloverflow.min.js', array(), '0.0.5', true );
 	wp_register_script( 'fullpage', WOLF_CORE_JS . '/lib/jquery.fullpage.min.js', array(), '2.9.6', true );
-	// wp_register_script( 'fullpage-extensions', WOLF_CORE_JS . '/lib/jquery.fullpage.extensions.min.js', array(), '0.1.4', true );
 
 	/* Particles */
 	wp_register_script( 'particles', WOLF_CORE_JS . '/lib/particles.min.js', array(), '0.4.0', false );
@@ -190,7 +186,7 @@ function wolf_core_register_scripts() {
 	wp_register_script( 'wolf-core-tabs', WOLF_CORE_JS . $folder . '/tabs' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-toggles', WOLF_CORE_JS . $folder . '/toggles' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-typed', WOLF_CORE_JS . $folder . '/autotyping' . $suffix . '.js', array( 'jquery' ), $version, true );
-	wp_register_script( 'wolf-core-embed-video', WOLF_CORE_JS . $folder . '/embed-video' . $suffix . '.js', array( 'jquery' ), $version, true );
+	wp_register_script( 'wolf-core-video-preview', WOLF_CORE_JS . $folder . '/video-preview' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-message', WOLF_CORE_JS . $folder . '/message' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-vivus', WOLF_CORE_JS . $folder . '/vivus' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-particles', WOLF_CORE_JS . $folder . '/particles' . $suffix . '.js', array( 'jquery' ), $version, true );
@@ -240,7 +236,6 @@ add_action( 'wp_enqueue_scripts', 'wolf_core_register_scripts' );
  */
 function wolf_core_enqueue_common_scripts() {
 
-
 	if ( apply_filters( 'wolf_core_force_enqueue_scripts', false ) ) {
 		return;
 	}
@@ -250,13 +245,6 @@ function wolf_core_enqueue_common_scripts() {
 	}
 
 	wp_enqueue_script( 'lazyloadxt' );
-
-	// wp_enqueue_script( 'flickity' ); // carousels
-	// wp_enqueue_script( 'wow' );
-	// wp_enqueue_script( 'aos' );
-	// wp_enqueue_script( 'waypoints' ); // from VC
-	// wp_enqueue_script( 'jarallax' );
-	// wp_enqueue_script( 'jarallax-video' );
 
 	if ( wolf_core_is_edge() ) {
 		wp_enqueue_script( 'object-fit-images' );
@@ -294,10 +282,8 @@ function wolf_core_force_enqueue_scripts() {
 		wp_dequeue_script( 'typed' );
 		wp_dequeue_script( 'wow' );
 		wp_dequeue_script( 'aos' );
-		// wp_dequeue_script( 'waypoints' );
 		wp_dequeue_script( 'lity' );
 		wp_dequeue_script( 'vivus' );
-		// wp_dequeue_script( 'particles' );
 
 		// Lazyload.
 		wp_enqueue_script( 'lazyloadxt' );
@@ -319,12 +305,12 @@ function wolf_core_force_enqueue_scripts() {
 		wp_enqueue_script( 'wolf-core-lib-min' ); // all lib files.
 
 		// 3rd party
-		wp_enqueue_script( 'bandsintown', 'https://widget.bandsintown.com/main.min.js', array(), false, true );
+		wp_enqueue_script( 'bandsintown', 'https://widget.bandsintown.com/main.min.js', array(), WOLF_CORE_VERSION, true );
 
 		$google_api_key = apply_filters( 'wolf_core_google_maps_api_key', wolf_vc_get_option( 'google-map', 'google_maps_api_key' ) );
 
 		if ( $google_api_key ) {
-			wp_enqueue_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . $google_api_key, array(), false, true );
+			wp_enqueue_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . $google_api_key, array(), WOLF_CORE_VERSION, true );
 		}
 
 		wp_enqueue_script( 'wolf-facebook-page-box' );
@@ -336,7 +322,7 @@ function wolf_core_force_enqueue_scripts() {
 		wp_localize_script( 'wolf-core-scripts', 'WolfCoreParams', wolf_core_get_js_params() );
 
 		// MailChimp.
-		wp_enqueue_script( 'wolf-core-mailchimp', WOLF_CORE_JS . '/min/mailchimp.min.js', array( 'jquery' ), Wolf_core_VERSION, true );
+		wp_enqueue_script( 'wolf-core-mailchimp', WOLF_CORE_JS . '/min/mailchimp.min.js', array( 'jquery' ), WOLF_CORE_VERSION, true );
 
 		// Add MailChimp JS global variables.
 		wp_localize_script(
