@@ -150,10 +150,10 @@ function wolf_core_sanitize_css_field( $style ) {
 	}
 
 	if ( ';' !== substr( $style, -1 ) ) {
-		$style = $style . ';'; // add end semicolon if missing
+		$style = $style . ';'; // add end semicolon if missing.
 	}
 
-	// remove double semicolon
+	// remove double semicolon.
 	$style = str_replace( array( ';;', '; ;' ), '', $style );
 
 	return esc_attr( trim( wolf_core_clean_spaces( $style ) ) );

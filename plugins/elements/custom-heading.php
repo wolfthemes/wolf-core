@@ -61,20 +61,9 @@ function wolf_core_heading( $atts ) {
 	$text_container_class = '';
 	$text_style           = '';
 
-	$class         = $el_class;
-	$inline_style  = wolf_core_sanitize_css_field( $inline_style );
-	$inline_style .= wolf_core_shortcode_custom_style( $css );
+	$class = $el_class; // init container CSS class.
 
 	$has_line_break = ( preg_match( '/(<br>|<br\/>|<br \/>)/', $text ) );
-
-	/* Animate */
-	if ( ! wolf_core_is_new_animation( $css_animation ) && ! $has_line_break ) {
-		$class      .= wolf_core_get_css_animation( $css_animation );
-		$text_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
-	}
-
-	/* Link */
-	$link = wolf_core_process_link_atts( $link );
 
 	$text_transform = esc_attr( $text_transform );
 	$font_weight    = ( $font_weight ) ? absint( $font_weight ) : '';

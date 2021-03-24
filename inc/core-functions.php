@@ -65,7 +65,7 @@ function wolf_core_get_the_id() {
  *
  * @return array
  */
-function wolf_core_get_element_list() {
+function wolf_core_get_elements() {
 
 	$wolf_core_elements = array(
 		//'accordion',

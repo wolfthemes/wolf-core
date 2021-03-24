@@ -41,7 +41,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 	 * @access public
 	 */
 	public function init_hooks() {
-		$this->elements = wolf_core_get_element_list();
+		$this->elements = wolf_core_get_elements();
 
 		add_action( 'init', array( $this, 'include_vc_params' ) );
 		add_action( 'init', array( $this, 'include_shortcode_maps' ) );

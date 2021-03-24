@@ -37,15 +37,7 @@ function wolf_core_spotify_player( $atts ) {
 
 	$output = '';
 
-	$class         = $el_class;
-	$inline_style  = wolf_core_sanitize_css_field( $inline_style );
-	$inline_style .= wolf_core_shortcode_custom_style( $css );
-
-	/*Animate */
-	if ( ! wolf_core_is_new_animation( $css_animation ) ) {
-		$class        .= wolf_core_get_css_animation( $css_animation );
-		$inline_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
-	}
+	$class = $el_class; // init container CSS class.
 
 	$class .= ' wolf-core-spotify-player-container wolf-core-element';
 

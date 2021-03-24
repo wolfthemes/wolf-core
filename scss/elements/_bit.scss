@@ -15,3 +15,25 @@
 /**
  * @# Bandsintown Button
  **/
+.wolf-core-bandwintown-tracking-button {
+	&.wolf-core-btb-align-center {
+		iframe {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&.wolf-core-btb-align-left {
+		iframe {
+			margin-left: 0;
+			margin-right: auto;
+		}
+	}
+
+	&.wolf-core-btb-align-right {
+		iframe {
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+}

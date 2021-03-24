@@ -48,9 +48,8 @@ function wolf_core_sb_instagram_feed( $atts ) {
 	$output = '';
 
 	$inline_atts   = '';
-	$class         = $el_class;
-	$inline_style  = wolf_core_sanitize_css_field( $inline_style );
-	$inline_style .= wolf_core_shortcode_custom_style( $css );
+
+	$class = $el_class; // init container CSS class.
 
 	$class .= " wolf-core-i-follow_button-$follow_button wolf-core-wolf-gram-shortcode-container wolf-core-sbif-disable-hover-$disable_default_hover wolf-core-element";
 

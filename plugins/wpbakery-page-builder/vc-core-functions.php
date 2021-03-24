@@ -147,7 +147,7 @@ function wolf_core_convert_params_to_vc( $params ) {
 function wolf_core_hook_template_dir() {
 
 	$template_dir   = WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/templates';
-	$elements_slugs = wolf_core_get_element_list();
+	$elements_slugs = wolf_core_get_elements();
 
 	if ( is_dir( $template_dir ) ) {
 

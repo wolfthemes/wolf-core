@@ -41,7 +41,7 @@ class Wolf_Core_Elementor_Extension {
 	 */
 	public function init_hooks() {
 
-		$this->elements = wolf_core_get_element_list();
+		$this->elements = wolf_core_get_elements();
 
 		add_action( 'elementor/widgets/widgets_registered', array( $this, 'init_widgets' ) );
 		add_action( 'elementor/controls/controls_registered', array( $this, 'init_controls' ) );

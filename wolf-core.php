@@ -222,6 +222,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			// Includes element after init hook to allow filtering by theme.
 			$this->include_elements();
 
+			// Includes helpers.
+			$this->include_helpers();
+
 			if ( $this->is_request( 'frontend' ) ) {
 				$this->frontend_includes();
 			}
@@ -628,7 +631,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function include_elements() {
 
-			$element_files = wolf_core_get_element_list();
+			$element_files = wolf_core_get_elements();
 
 			foreach ( $element_files as $element ) {
 
@@ -638,6 +641,34 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 				if ( is_file( WOLF_CORE_DIR . '/plugins/elements/' . sanitize_title_with_dashes( $element ) . '.php' ) ) {
 					require_once WOLF_CORE_DIR . '/plugins/elements/' . sanitize_title_with_dashes( $element ) . '.php';
+				}
+			}
+		}
+
+		/**
+		 * Include required helper files.
+		 */
+		public function include_helpers() {
+
+			$helper_files = array(
+				'helpers',
+			);
+
+			foreach ( $helper_files as $file ) {
+
+				if ( ! require_once WOLF_CORE_DIR . '/plugins/helpers/' . $file . '.php' ) {
+					wp_die(
+						sprintf(
+							wp_kses(
+								/* translators: the code to output */
+								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
+								array(
+									'code' => array(),
+								)
+							),
+							esc_attr( $file )
+						)
+					);
 				}
 			}
 		}
