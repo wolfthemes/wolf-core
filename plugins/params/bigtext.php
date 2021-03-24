@@ -73,7 +73,7 @@ function wolf_core_bigtext_params() {
 					'default'     => apply_filters( 'wolf_core_default_heading_font_weight', '' ),
 					'placeholder' => apply_filters( 'wolf_core_default_heading_font_weight', '700' ),
 					'selectors'   => array(
-						'{{WRAPPER}}' => 'font-weight: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-bigtext' => 'font-weight: {{VALUE}}!important;',
 					),
 				),
 
@@ -88,7 +88,7 @@ function wolf_core_bigtext_params() {
 						'lowercase' => esc_html__( 'Lowercase', 'wolf-core' ),
 					),
 					'selectors'  => array(
-						'{{WRAPPER}}' => 'text-transform: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-bigtext' => 'text-transform: {{VALUE}}!important;',
 					),
 				),
 
@@ -101,7 +101,7 @@ function wolf_core_bigtext_params() {
 						'italic' => esc_html__( 'Italic', 'wolf-core' ),
 					),
 					'selectors'  => array(
-						'{{WRAPPER}}' => 'font-style: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-bigtext' => 'font-style: {{VALUE}};',
 					),
 				),
 
@@ -112,7 +112,7 @@ function wolf_core_bigtext_params() {
 					'admin_label' => true,
 					'default'     => apply_filters( 'wolf_core_default_heading_font_family', '' ),
 					'selectors'   => array(
-						'{{WRAPPER}} .wolf-core-bigtext' => 'font-family: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-bigtext' => 'font-family: {{VALUE}}!important;',
 					),
 				),
 
