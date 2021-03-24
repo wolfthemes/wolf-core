@@ -1,0 +1,4571 @@
+# Copyright (C) 2021 WolfThemes
+# This file is distributed under the same license as the Wolf Core package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wolf Core 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
+"POT-Creation-Date: 2021-03-24 14:09:23+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/basic-theme/exclude/file.php:3
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/plugin-include/plugin-include.php:6
+msgid "Exclude"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/plugin-include/include/file.php:2
+msgid "Include"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/add-domain.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:3
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:4
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:2
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:3
+msgid "String"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:9
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:10
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:11
+msgid "1 Star"
+msgid_plural "%s Stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:7
+#. translators: A single line translators comment.
+msgid "A"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:15
+#. translators: A multiline translators comment.
+msgid "B"
+msgstr ""
+
+#: inc/admin/admin-options.php:42 pack/wolf-core/inc/admin/admin-options.php:42
+msgid "Need more social services? Send us an email! %s"
+msgstr ""
+
+#: inc/admin/admin-options.php:83 pack/wolf-core/inc/admin/admin-options.php:83
+msgid "Google Maps"
+msgstr ""
+
+#: inc/admin/admin-options.php:90 pack/wolf-core/inc/admin/admin-options.php:90
+msgid "Google Maps API key"
+msgstr ""
+
+#: inc/admin/admin-options.php:92 pack/wolf-core/inc/admin/admin-options.php:92
+msgid "You can get a Google Maps API key <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: inc/admin/admin-options.php:101
+#: pack/wolf-core/inc/admin/admin-options.php:101
+msgid "MailChimp"
+msgstr ""
+
+#: inc/admin/admin-options.php:108
+#: pack/wolf-core/inc/admin/admin-options.php:108
+msgid "MailChimp API key"
+msgstr ""
+
+#: inc/admin/admin-options.php:110
+#: pack/wolf-core/inc/admin/admin-options.php:110
+msgid "You can get a MailChimp API key <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: inc/admin/admin-options.php:119
+#: pack/wolf-core/inc/admin/admin-options.php:119
+msgid "Default MailChimp list ID"
+msgstr ""
+
+#: inc/admin/admin-options.php:121
+#: pack/wolf-core/inc/admin/admin-options.php:121
+msgid "<a href=\"%s\" target=\"_blank\">Find Your List ID</a>."
+msgstr ""
+
+#: inc/admin/admin-options.php:130
+#: pack/wolf-core/inc/admin/admin-options.php:130
+msgid "Newsletter form title"
+msgstr ""
+
+#: inc/admin/admin-options.php:131 inc/admin/classes/class-options.php:421
+#: pack/wolf-core/inc/admin/admin-options.php:131
+#: pack/wolf-core/inc/admin/classes/class-options.php:421
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: inc/admin/admin-options.php:137
+#: pack/wolf-core/inc/admin/admin-options.php:137
+msgid "\"Subscribe\" button text"
+msgstr ""
+
+#: inc/admin/admin-options.php:138 inc/admin/classes/class-options.php:422
+#: pack/wolf-core/inc/admin/admin-options.php:138
+#: pack/wolf-core/inc/admin/classes/class-options.php:422
+msgid "Subscribe"
+msgstr ""
+
+#: inc/admin/admin-options.php:144
+#: pack/wolf-core/inc/admin/admin-options.php:144
+msgid "Form first name input placeholder"
+msgstr ""
+
+#: inc/admin/admin-options.php:145 inc/admin/classes/class-options.php:423
+#: pack/wolf-core/inc/admin/admin-options.php:145
+#: pack/wolf-core/inc/admin/classes/class-options.php:423
+msgid "Your first name"
+msgstr ""
+
+#: inc/admin/admin-options.php:151
+#: pack/wolf-core/inc/admin/admin-options.php:151
+msgid "Form last name input placeholder"
+msgstr ""
+
+#: inc/admin/admin-options.php:152 inc/admin/classes/class-options.php:424
+#: pack/wolf-core/inc/admin/admin-options.php:152
+#: pack/wolf-core/inc/admin/classes/class-options.php:424
+msgid "Your last name"
+msgstr ""
+
+#: inc/admin/admin-options.php:158
+#: pack/wolf-core/inc/admin/admin-options.php:158
+msgid "Form email input placeholder"
+msgstr ""
+
+#: inc/admin/admin-options.php:159 inc/admin/classes/class-options.php:425
+#: pack/wolf-core/inc/admin/admin-options.php:159
+#: pack/wolf-core/inc/admin/classes/class-options.php:425
+msgid "Your email"
+msgstr ""
+
+#: inc/admin/admin-options.php:165
+#: pack/wolf-core/inc/admin/admin-options.php:165
+msgid "Thank you message"
+msgstr ""
+
+#: inc/admin/admin-options.php:166
+#: pack/wolf-core/inc/admin/admin-options.php:166
+msgid "Thanks for subscribing"
+msgstr ""
+
+#: inc/admin/admin-options.php:172 inc/admin/classes/class-metaboxes.php:294
+#: pack/wolf-core/inc/admin/admin-options.php:172
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:294
+msgid "Background image"
+msgstr ""
+
+#: inc/admin/admin-options.php:179
+#: pack/wolf-core/inc/admin/admin-options.php:179
+msgid "Fonts Loader"
+msgstr ""
+
+#: inc/admin/admin-options.php:186
+#: pack/wolf-core/inc/admin/admin-options.php:186
+msgid "Google fonts"
+msgstr ""
+
+#: inc/admin/admin-options.php:189
+#: pack/wolf-core/inc/admin/admin-options.php:189
+msgid ""
+"You can get your fonts on the <a href=\"%s\" target=\"_blank\">Google "
+"Fonts</a> website."
+msgstr ""
+
+#: inc/admin/admin-options.php:198
+#: pack/wolf-core/inc/admin/admin-options.php:198
+msgid "Social Profiles"
+msgstr ""
+
+#: inc/admin/admin-options.php:210 inc/admin/admin-options.php:342
+#: inc/admin/admin-options.php:366
+#: pack/wolf-core/inc/admin/admin-options.php:210
+#: pack/wolf-core/inc/admin/admin-options.php:342
+#: pack/wolf-core/inc/admin/admin-options.php:366
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:293
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:484
+#: plugins/vc/vc-params/row-params.php:293
+#: plugins/vc/vc-params/row-params.php:484
+msgid "Disabled"
+msgstr ""
+
+#: inc/admin/admin-options.php:217
+#: pack/wolf-core/inc/admin/admin-options.php:217
+msgid "No Content Block Yet"
+msgstr ""
+
+#: inc/admin/admin-options.php:221
+#: pack/wolf-core/inc/admin/admin-options.php:221
+msgid "Modal Window"
+msgstr ""
+
+#: inc/admin/admin-options.php:229
+#: pack/wolf-core/inc/admin/admin-options.php:229
+msgid "Modal Window Content"
+msgstr ""
+
+#: inc/admin/admin-options.php:232
+#: pack/wolf-core/inc/admin/admin-options.php:232
+msgid ""
+"Choose a <a href=\"%s\" target=\"_blank\">content block</a> to display in "
+"your modal window."
+msgstr ""
+
+#: inc/admin/admin-options.php:240
+#: pack/wolf-core/inc/admin/admin-options.php:240
+msgid "Modal Window Type"
+msgstr ""
+
+#: inc/admin/admin-options.php:242
+#: pack/wolf-core/inc/admin/admin-options.php:242
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:120
+#: plugins/vc/vc-params/button-params.php:120
+msgid "Standard"
+msgstr ""
+
+#: inc/admin/admin-options.php:243
+#: pack/wolf-core/inc/admin/admin-options.php:243
+msgid "Non-Intrusive (bottom right corner)"
+msgstr ""
+
+#: inc/admin/admin-options.php:250
+#: pack/wolf-core/inc/admin/admin-options.php:250
+msgid "Exclude MailChimp subscribers"
+msgstr ""
+
+#: inc/admin/admin-options.php:256
+#: pack/wolf-core/inc/admin/admin-options.php:256
+msgid "Pop-up Delay"
+msgstr ""
+
+#: inc/admin/admin-options.php:258
+#: pack/wolf-core/inc/admin/admin-options.php:258
+msgid ""
+"The time before the modal window pops up in seconds.<br>You can set a very "
+"high number to prevent the window to pop-up automatically if you want it to "
+"be open via a link (see the \"info\" section at the bottom of this page)."
+msgstr ""
+
+#: inc/admin/admin-options.php:264
+#: pack/wolf-core/inc/admin/admin-options.php:264
+msgid "Show Only Once"
+msgstr ""
+
+#: inc/admin/admin-options.php:265
+#: pack/wolf-core/inc/admin/admin-options.php:265
+msgid ""
+"Don't show the pop-up again once it is closed. If this option is not "
+"checked, an opt-out link will be displayed below the window."
+msgstr ""
+
+#: inc/admin/admin-options.php:271
+#: pack/wolf-core/inc/admin/admin-options.php:271
+msgid "Show When Navigates Away"
+msgstr ""
+
+#: inc/admin/admin-options.php:272
+#: pack/wolf-core/inc/admin/admin-options.php:272
+msgid ""
+"The window will pop up only when the mouse leave the main window. The "
+"pop-up delay will still be applied."
+msgstr ""
+
+#: inc/admin/admin-options.php:278
+#: pack/wolf-core/inc/admin/admin-options.php:278
+msgid "Cookie Persistency"
+msgstr ""
+
+#: inc/admin/admin-options.php:280
+#: pack/wolf-core/inc/admin/admin-options.php:280
+msgid "How long the browser will remember the user opt-out action (in days)."
+msgstr ""
+
+#: inc/admin/admin-options.php:286
+#: pack/wolf-core/inc/admin/admin-options.php:286
+msgid "Modal Window Width"
+msgstr ""
+
+#: inc/admin/admin-options.php:293
+#: pack/wolf-core/inc/admin/admin-options.php:293
+msgid "Exclude Post Types"
+msgstr ""
+
+#: inc/admin/admin-options.php:295
+#: pack/wolf-core/inc/admin/admin-options.php:295
+msgid ""
+"The modal window will NOT popup in these specific post types. Separate each "
+"post type by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:301
+#: pack/wolf-core/inc/admin/admin-options.php:301
+msgid "Include Post Types"
+msgstr ""
+
+#: inc/admin/admin-options.php:303
+#: pack/wolf-core/inc/admin/admin-options.php:303
+msgid ""
+"The modal window will popup ONLY in these specific post types. Separate "
+"each post type by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:309
+#: pack/wolf-core/inc/admin/admin-options.php:309
+msgid "Exclude Post IDs"
+msgstr ""
+
+#: inc/admin/admin-options.php:311
+#: pack/wolf-core/inc/admin/admin-options.php:311
+msgid ""
+"The modal window will NOT popup in these specific posts. Separate each ID "
+"by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:317
+#: pack/wolf-core/inc/admin/admin-options.php:317
+msgid "Include Post IDs"
+msgstr ""
+
+#: inc/admin/admin-options.php:319
+#: pack/wolf-core/inc/admin/admin-options.php:319
+msgid ""
+"The modal window will popup ONLY in these specific posts. Separate each ID "
+"by a comma."
+msgstr ""
+
+#: inc/admin/admin-options.php:325
+#: pack/wolf-core/inc/admin/admin-options.php:325
+msgid "Close Button Color"
+msgstr ""
+
+#: inc/admin/admin-options.php:331
+#: pack/wolf-core/inc/admin/admin-options.php:331
+msgid "Info"
+msgstr ""
+
+#: inc/admin/admin-options.php:333
+#: pack/wolf-core/inc/admin/admin-options.php:333
+msgid ""
+"You can add the <strong>\"%1$s\"</strong> class to any link to use it as "
+"pop-up window \"close\" button.<br>Also add the <strong>\"%2$s\"</strong> "
+"class to use it as opt-out button. (\"Don't show this message again\" "
+"link)<br>Additionally, if you need a link that open the modal window, you "
+"can use the <strong>\"%3$s\"</strong> class."
+msgstr ""
+
+#: inc/admin/admin-options.php:355 inc/admin/admin-options.php:376
+#: pack/wolf-core/inc/admin/admin-options.php:355
+#: pack/wolf-core/inc/admin/admin-options.php:376
+msgid "Privacy Policy Message"
+msgstr ""
+
+#: inc/admin/admin-options.php:364
+#: pack/wolf-core/inc/admin/admin-options.php:364
+msgid "Status"
+msgstr ""
+
+#: inc/admin/admin-options.php:367
+#: pack/wolf-core/inc/admin/admin-options.php:367
+msgid "Enabled"
+msgstr ""
+
+#: inc/admin/admin-options.php:368
+#: pack/wolf-core/inc/admin/admin-options.php:368
+msgid "Enabled for EU users only"
+msgstr ""
+
+#: inc/admin/admin-options.php:370
+#: pack/wolf-core/inc/admin/admin-options.php:370
+msgid ""
+"If the \"Enabled for EU users only\" is selected, %1$s must be activated "
+"and a %2$s License key must be set to enable localisation."
+msgstr ""
+
+#: inc/admin/admin-options.php:382
+#: pack/wolf-core/inc/admin/admin-options.php:382
+msgid "Privacy Policy Page"
+msgstr ""
+
+#: inc/admin/admin-options.php:384
+#: pack/wolf-core/inc/admin/admin-options.php:384
+msgid "If a page is set, a link to the Privacy Policy Page will be displayed."
+msgstr ""
+
+#: inc/admin/admin-options.php:390
+#: pack/wolf-core/inc/admin/admin-options.php:390
+msgid "Link Text"
+msgstr ""
+
+#: inc/admin/admin-options.php:391
+#: pack/wolf-core/inc/admin/admin-options.php:391
+msgid "Read more"
+msgstr ""
+
+#: inc/admin/admin-options.php:397
+#: pack/wolf-core/inc/admin/admin-options.php:397
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:38
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:58
+#: plugins/vc/vc-params/background-params.php:38
+#: plugins/vc/vc-params/background-params.php:58
+msgid "Background Color"
+msgstr ""
+
+#: inc/admin/admin-options.php:403
+#: pack/wolf-core/inc/admin/admin-options.php:403
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:36
+#: plugins/vc/vc-map/row-inner.php:36
+msgid "Font Color"
+msgstr ""
+
+#: inc/admin/admin-scripts.php:45 inc/admin/classes/class-metaboxes.php:716
+#: pack/wolf-core/inc/admin/admin-scripts.php:45
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:716
+msgid "Select an image"
+msgstr ""
+
+#: inc/admin/admin-scripts.php:46 inc/admin/classes/class-metaboxes.php:717
+#: pack/wolf-core/inc/admin/admin-scripts.php:46
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:717
+msgid "Select a set of images"
+msgstr ""
+
+#: inc/admin/admin-scripts.php:47 inc/admin/classes/class-metaboxes.php:718
+#: pack/wolf-core/inc/admin/admin-scripts.php:47
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:718
+msgid "Select a file"
+msgstr ""
+
+#: inc/admin/admin-scripts.php:48 inc/admin/classes/class-metaboxes.php:719
+#: pack/wolf-core/inc/admin/admin-scripts.php:48
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:719
+msgid "This will remove the entire image set"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:40
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:40
+msgid "License"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:69
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:69
+msgid "%s theme works with <strong>%s</strong> plugin to offer all its features."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:79
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:79
+msgid ""
+"It extends of <a href=\"%s\" target=\"_blank\">%s</a> and <a href=\"%s\" "
+"target=\"_blank\">%s</a> plugin."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:88
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:88
+msgid "It includes plugin territory features that boost the theme functionalities."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:93
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:93
+msgid ""
+"This extension is available only to users who purchased their theme from <a "
+"href=\"%s\" target=\"_blank\">%s</a>."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:113
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:113
+msgid ""
+"Please enter your <strong>theme purchase code</strong> below to activate "
+"your theme license and be able to use all features."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:119
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:119
+msgid "Activate"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:122
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:122
+msgid "How to find your purchase code"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:127
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:127
+msgid "The %s is activated."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:131
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:131
+msgid "Reset purchase code"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:150
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:150
+msgid ""
+"Something went wrong. It way be due to a temporary Envato API outage. "
+"Please try again in a few minutes."
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:192
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:192
+msgid "Extension activated"
+msgstr ""
+
+#: inc/admin/admin-theme-activation.php:212
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:212
+msgid "Purchase code can not be empty"
+msgstr ""
+
+#: inc/admin/auth.php:42 pack/wolf-core/inc/admin/auth.php:42
+msgid ""
+"Hey there, thanks a lot for using our awesome <strong>%1$s</strong> theme! "
+"To ensure that it will work for verified customers only, you just need to "
+"enter your <a href=\"%2$s\" target=\"_blank\" title=\"Find your purchase "
+"code\">theme purchase code</a> within the next <strong>%3$d days</strong>. "
+"You won't have to activate anything else after that."
+msgstr ""
+
+#: inc/admin/auth.php:63 pack/wolf-core/inc/admin/auth.php:63
+#. translators: 1: Plugin name 2: Elementor
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#: inc/admin/auth.php:64 pack/wolf-core/inc/admin/auth.php:64
+msgid "Elementor Test Extension"
+msgstr ""
+
+#: inc/admin/auth.php:65 pack/wolf-core/inc/admin/auth.php:65
+#: pack/wolf-core/wolf-core.php:251 pack/wolf-core/wolf-core.php:278
+#: pack/wolf-core/wolf-core.php:305 wolf-core.php:254 wolf-core.php:281
+#: wolf-core.php:308
+msgid "Elementor"
+msgstr ""
+
+#: inc/admin/auth.php:85 pack/wolf-core/inc/admin/auth.php:85
+msgid ""
+"<strong>%1$s</strong> only works for verified customers who purchased a "
+"theme from the <a href=\"%2$s\" target=\"_blank\">%3$s</a> team. Please "
+"enter your theme <a href=\"%4$s\" target=\"_blank\" title=\"Find your "
+"purchase code\">purchase code</a> in the plugin settings to unlock all "
+"features."
+msgstr ""
+
+#: inc/admin/auth.php:103 pack/wolf-core/inc/admin/auth.php:103
+msgid ""
+"Sorry, but <strong>%1$s</strong> only works with compatible <a "
+"target=\"_blank\" href=\"%2$s\">%3$s themes</a>.<br><strong>Be sure that "
+"you didn't change the theme's name in the %4$s file or the theme's folder "
+"name</strong>.<br>If you want to customize the theme's name, you can use a "
+"<a target=\"_blank\" href=\"%5$s\">child theme</a>."
+msgstr ""
+
+#: inc/admin/classes/class-admin.php:68
+#: pack/wolf-core/inc/admin/classes/class-admin.php:68
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc.php:68
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc.php:101
+#: pack/wolf-core/wolf-core.php:507 pack/wolf-core/wolf-core.php:556
+#: pack/wolf-core/wolf-core.php:612 plugins/vc/vc.php:68 plugins/vc/vc.php:102
+#: wolf-core.php:510 wolf-core.php:559 wolf-core.php:615 wolf-core.php:664
+#. translators: the code to output
+#. translators: the code to output
+#. translators: %s: the code to display
+#. translators: the code to output
+#. translators: %s: the code to display
+#. translators: the code to output
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:61
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:61
+msgid "%s Options"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:145
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:145
+msgid "Label"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:228
+#: inc/admin/classes/class-metaboxes.php:251
+#: inc/admin/classes/class-metaboxes.php:303
+#: inc/admin/classes/class-metaboxes.php:455
+#: inc/admin/classes/class-options.php:241
+#: inc/admin/classes/class-options.php:276
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:228
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:251
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:303
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:455
+#: pack/wolf-core/inc/admin/classes/class-options.php:241
+#: pack/wolf-core/inc/admin/classes/class-options.php:276
+msgid "Clear"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:229
+#: inc/admin/classes/class-metaboxes.php:456
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:229
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:456
+msgid "Choose a file"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:252
+#: inc/admin/classes/class-metaboxes.php:304
+#: inc/admin/classes/class-options.php:242
+#: inc/admin/classes/class-options.php:277
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:252
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:304
+#: pack/wolf-core/inc/admin/classes/class-options.php:242
+#: pack/wolf-core/inc/admin/classes/class-options.php:277
+msgid "Choose an image"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:286
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:286
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:421
+#: plugins/vc/vc-params/icon-params.php:421
+msgid "Background color"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:316
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:316
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:111
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:230
+#: plugins/vc/vc-params/background-params.php:111
+#: plugins/vc/vc-params/custom-heading-params.php:230
+msgid "Background repeat"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:345
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:345
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:87
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:207
+#: plugins/vc/vc-params/background-params.php:87
+#: plugins/vc/vc-params/custom-heading-params.php:207
+msgid "Background position"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:364
+#: inc/admin/classes/class-options.php:328
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:364
+#: pack/wolf-core/inc/admin/classes/class-options.php:328
+msgid "cover (resize)"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:365
+#: inc/admin/classes/class-options.php:329
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:365
+#: pack/wolf-core/inc/admin/classes/class-options.php:329
+msgid "normal"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:366
+#: inc/admin/classes/class-options.php:330
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:366
+#: pack/wolf-core/inc/admin/classes/class-options.php:330
+msgid "responsive (hard resize)"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:371
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:371
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:248
+#: plugins/vc/vc-params/custom-heading-params.php:248
+msgid "Background size"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:387
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:387
+#: pack/wolf-core/plugins/elementor/controls/section.php:47
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:153
+#: plugins/elementor/controls/section.php:47
+#: plugins/vc/vc-params/background-params.php:153
+msgid "Parallax"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:410
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:410
+msgid "Are you sure to want to reset all images ?"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:440
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:440
+msgid "Clear All"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:441
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:441
+msgid "Select Images"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:474
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:474
+#: pack/wolf-core/plugins/elementor/controls/section.php:27
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:109
+#: pack/wolf-core/plugins/params/bigtext.php:85
+#: pack/wolf-core/plugins/params/bigtext.php:100
+#: pack/wolf-core/plugins/params/breadcrumb.php:108
+#: pack/wolf-core/plugins/params/breadcrumb.php:123
+#: pack/wolf-core/plugins/params/heading.php:45
+#: pack/wolf-core/plugins/params/heading.php:116
+#: pack/wolf-core/plugins/params/heading.php:130
+#: pack/wolf-core/plugins/params/twitter.php:54
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-custom-fields.php:61
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:23
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:41
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:23
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:48
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:34
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:59
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:134
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:146
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:546
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:102
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:121
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:294
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:382
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:485
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:573
+#: plugins/elementor/controls/section.php:27
+#: plugins/elementor/elementor-core-functions.php:109
+#: plugins/params/bigtext.php:85 plugins/params/bigtext.php:100
+#: plugins/params/breadcrumb.php:108 plugins/params/breadcrumb.php:123
+#: plugins/params/heading.php:45 plugins/params/heading.php:116
+#: plugins/params/heading.php:130 plugins/params/twitter.php:54
+#: plugins/vc/vc-custom-fields.php:61
+#: plugins/vc/vc-params/background-params.php:23
+#: plugins/vc/vc-params/background-params.php:41
+#: plugins/vc/vc-params/column-inner-params.php:23
+#: plugins/vc/vc-params/column-inner-params.php:48
+#: plugins/vc/vc-params/column-params.php:34
+#: plugins/vc/vc-params/column-params.php:59
+#: plugins/vc/vc-params/custom-heading-params.php:134
+#: plugins/vc/vc-params/custom-heading-params.php:146
+#: plugins/vc/vc-params/icon-params.php:546
+#: plugins/vc/vc-params/row-params.php:102
+#: plugins/vc/vc-params/row-params.php:121
+#: plugins/vc/vc-params/row-params.php:294
+#: plugins/vc/vc-params/row-params.php:382
+#: plugins/vc/vc-params/row-params.php:485
+#: plugins/vc/vc-params/row-params.php:573
+msgid "Default"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:254
+#: pack/wolf-core/inc/admin/classes/class-options.php:254
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:91
+#: plugins/vc/vc-params/button-params.php:91
+msgid "Color"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:266
+#: pack/wolf-core/inc/admin/classes/class-options.php:266
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:33
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:321
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:499
+#: plugins/vc/vc-params/icon-params.php:33
+#: plugins/vc/vc-params/row-params.php:321
+#: plugins/vc/vc-params/row-params.php:499
+msgid "Image"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:288
+#: pack/wolf-core/inc/admin/classes/class-options.php:288
+msgid "Repeat"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:314
+#: pack/wolf-core/inc/admin/classes/class-options.php:314
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:468
+#: plugins/vc/vc-params/icon-params.php:468
+msgid "Position"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:335
+#: pack/wolf-core/inc/admin/classes/class-options.php:335
+#: pack/wolf-core/plugins/params/heading.php:42
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:42
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:149
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:506
+#: plugins/params/bandsintown-tracking-button.php:42
+#: plugins/params/heading.php:42 plugins/params/spotify-follow-button.php:42
+#: plugins/vc/vc-params/button-params.php:149
+#: plugins/vc/vc-params/icon-params.php:506
+msgid "Size"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:355 inc/core-functions.php:766
+#: pack/wolf-core/inc/admin/classes/class-options.php:355
+#: pack/wolf-core/inc/core-functions.php:766
+msgid "Attachment"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:380
+#: pack/wolf-core/inc/admin/classes/class-options.php:380
+msgid "Page Builder Settings"
+msgstr ""
+
+#: inc/admin/classes/class-options.php:383
+#: pack/wolf-core/inc/admin/classes/class-options.php:383
+msgid "Settings saved."
+msgstr ""
+
+#: inc/admin/classes/class-options.php:390
+#: pack/wolf-core/inc/admin/classes/class-options.php:390
+msgid "Save Changes"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:97
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:97
+msgid ""
+"Error retrieving video information from the URL <a href=\"%1$s\">%1$s</a>. "
+"If opening that URL in your web browser returns anything else than an error "
+"page, the problem may be related to your web server and might be something "
+"your host administrator can solve."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:441
+#: inc/admin/classes/class-video-thumbnail-generator.php:600
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:441
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:600
+msgid "Reset"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:442
+#: inc/admin/classes/class-video-thumbnail-generator.php:601
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:442
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:601
+msgid "Delete"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:467
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:467
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:478
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:478
+msgid "Working..."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:523
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:523
+msgid "Set featured image"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:596
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:596
+msgid "No video URL in the post."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:597
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:597
+msgid ""
+"A video has been attached to this post. Click on \"Generate\" to create a "
+"thumbnail from this video"
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:598
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:598
+msgid ""
+"You will be able to generate a video thumbnail and use it as featured image "
+"for this post when it is published."
+msgstr ""
+
+#: inc/admin/classes/class-video-thumbnail-generator.php:599
+#: pack/wolf-core/inc/admin/classes/class-video-thumbnail-generator.php:599
+msgid "Generate"
+msgstr ""
+
+#: inc/admin/updater.php:434 pack/wolf-core/inc/admin/updater.php:434
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please "
+"reactivate it manually."
+msgstr ""
+
+#: inc/admin/updater.php:435 pack/wolf-core/inc/admin/updater.php:435
+msgid "Plugin reactivated successfully."
+msgstr ""
+
+#: inc/core-functions.php:412 pack/wolf-core/inc/core-functions.php:412
+msgid "Fade"
+msgstr ""
+
+#: inc/core-functions.php:413 pack/wolf-core/inc/core-functions.php:413
+msgid "Fade Up"
+msgstr ""
+
+#: inc/core-functions.php:414 pack/wolf-core/inc/core-functions.php:414
+msgid "Fade Down"
+msgstr ""
+
+#: inc/core-functions.php:415 pack/wolf-core/inc/core-functions.php:415
+msgid "Fade Left"
+msgstr ""
+
+#: inc/core-functions.php:416 pack/wolf-core/inc/core-functions.php:416
+msgid "Fade Right"
+msgstr ""
+
+#: inc/core-functions.php:417 pack/wolf-core/inc/core-functions.php:417
+msgid "Fade Up Right"
+msgstr ""
+
+#: inc/core-functions.php:418 pack/wolf-core/inc/core-functions.php:418
+msgid "Fade Up Left"
+msgstr ""
+
+#: inc/core-functions.php:419 pack/wolf-core/inc/core-functions.php:419
+msgid "Fade Down Right"
+msgstr ""
+
+#: inc/core-functions.php:420 pack/wolf-core/inc/core-functions.php:420
+msgid "Fade Down Left"
+msgstr ""
+
+#: inc/core-functions.php:422 pack/wolf-core/inc/core-functions.php:422
+msgid "Flip Up"
+msgstr ""
+
+#: inc/core-functions.php:423 pack/wolf-core/inc/core-functions.php:423
+msgid "Flip Down"
+msgstr ""
+
+#: inc/core-functions.php:424 pack/wolf-core/inc/core-functions.php:424
+msgid "Flip Left"
+msgstr ""
+
+#: inc/core-functions.php:425 pack/wolf-core/inc/core-functions.php:425
+msgid "Flip Right"
+msgstr ""
+
+#: inc/core-functions.php:427 pack/wolf-core/inc/core-functions.php:427
+msgid "Slide Up"
+msgstr ""
+
+#: inc/core-functions.php:428 pack/wolf-core/inc/core-functions.php:428
+msgid "Slide Down"
+msgstr ""
+
+#: inc/core-functions.php:429 pack/wolf-core/inc/core-functions.php:429
+msgid "Slide Left"
+msgstr ""
+
+#: inc/core-functions.php:430 pack/wolf-core/inc/core-functions.php:430
+msgid "Slide Right"
+msgstr ""
+
+#: inc/core-functions.php:432 pack/wolf-core/inc/core-functions.php:432
+msgid "Zoom In"
+msgstr ""
+
+#: inc/core-functions.php:433 pack/wolf-core/inc/core-functions.php:433
+msgid "Zoom In Up"
+msgstr ""
+
+#: inc/core-functions.php:434 pack/wolf-core/inc/core-functions.php:434
+msgid "Zoom In Down"
+msgstr ""
+
+#: inc/core-functions.php:435 pack/wolf-core/inc/core-functions.php:435
+msgid "Zoom In Left"
+msgstr ""
+
+#: inc/core-functions.php:436 pack/wolf-core/inc/core-functions.php:436
+msgid "Zoom In Right"
+msgstr ""
+
+#: inc/core-functions.php:437 pack/wolf-core/inc/core-functions.php:437
+msgid "Zoom Out"
+msgstr ""
+
+#: inc/core-functions.php:438 pack/wolf-core/inc/core-functions.php:438
+msgid "Zoom Out Up"
+msgstr ""
+
+#: inc/core-functions.php:439 pack/wolf-core/inc/core-functions.php:439
+msgid "Zoom Out Down"
+msgstr ""
+
+#: inc/core-functions.php:440 pack/wolf-core/inc/core-functions.php:440
+msgid "Zoom Out Left"
+msgstr ""
+
+#: inc/core-functions.php:441 pack/wolf-core/inc/core-functions.php:441
+msgid "Zoom Out Right"
+msgstr ""
+
+#: inc/core-functions.php:557 pack/wolf-core/inc/core-functions.php:557
+msgid "Image is missing"
+msgstr ""
+
+#: inc/core-functions.php:588 pack/wolf-core/inc/core-functions.php:588
+msgid "Home"
+msgstr ""
+
+#: inc/core-functions.php:635 pack/wolf-core/inc/core-functions.php:635
+msgid "Products tagged &ldquo;"
+msgstr ""
+
+#: inc/core-functions.php:761 pack/wolf-core/inc/core-functions.php:761
+msgid "Search"
+msgstr ""
+
+#: inc/core-functions.php:789 pack/wolf-core/inc/core-functions.php:789
+msgid "Search results"
+msgstr ""
+
+#: inc/core-functions.php:918 pack/wolf-core/inc/core-functions.php:918
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:16
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:27
+#: pack/wolf-core/plugins/params/content-block.php:34
+#: pack/wolf-core/plugins/params/content-block.php:45
+#: plugins/content-blocks/register-post-type.php:16
+#: plugins/content-blocks/register-post-type.php:27
+#: plugins/params/content-block.php:34 plugins/params/content-block.php:45
+msgid "Content Block"
+msgstr ""
+
+#: inc/core-functions.php:925 pack/wolf-core/inc/core-functions.php:925
+msgid "Playlists"
+msgstr ""
+
+#: inc/scripts.php:41 pack/wolf-core/inc/scripts.php:41
+msgid "Play"
+msgstr ""
+
+#: inc/scripts.php:42 pack/wolf-core/inc/scripts.php:42
+msgid "Pause"
+msgstr ""
+
+#: inc/scripts.php:49 pack/wolf-core/inc/scripts.php:49
+msgid "Please fill all fields."
+msgstr ""
+
+#: inc/scripts.php:50 pack/wolf-core/inc/scripts.php:50
+msgid "Something went wrong while submuitting the form, please try again later."
+msgstr ""
+
+#: inc/scripts.php:51 pack/wolf-core/inc/scripts.php:51
+msgid "Loading"
+msgstr ""
+
+#: inc/scripts.php:52 pack/wolf-core/inc/scripts.php:52
+msgid "Calculating"
+msgstr ""
+
+#: inc/scripts.php:333 pack/wolf-core/inc/scripts.php:333
+msgid "An unknown error occured."
+msgstr ""
+
+#: inc/utility-functions.php:868 pack/wolf-core/inc/utility-functions.php:868
+msgid "Search results for %s"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:15
+#: plugins/content-blocks/register-post-type.php:15
+msgid "Content Blocks"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:17
+#: plugins/content-blocks/register-post-type.php:17
+msgid "Add New"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:18
+#: plugins/content-blocks/register-post-type.php:18
+msgid "Add New Content Block"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:19
+#: plugins/content-blocks/register-post-type.php:19
+msgid "All Content Blocks"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:20
+#: plugins/content-blocks/register-post-type.php:20
+msgid "Edit Content Block"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:21
+#: plugins/content-blocks/register-post-type.php:21
+msgid "New Content Block"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:22
+#: plugins/content-blocks/register-post-type.php:22
+msgid "View Content Block"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:23
+#: plugins/content-blocks/register-post-type.php:23
+msgid "Search Content Blocks"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:24
+#: plugins/content-blocks/register-post-type.php:24
+msgid "No content block found"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:25
+#: plugins/content-blocks/register-post-type.php:25
+msgid "No content block found in Trash"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-post-type.php:45
+#: plugins/content-blocks/register-post-type.php:45
+msgid "Re-usable content for page builder"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:15
+#: plugins/content-blocks/register-taxonomy.php:15
+msgid "Content Block Categories"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:16
+#: plugins/content-blocks/register-taxonomy.php:16
+msgid "Content Block Category"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:17
+#: plugins/content-blocks/register-taxonomy.php:17
+msgid "Search Content Block Categories"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:18
+#: plugins/content-blocks/register-taxonomy.php:18
+msgid "Popular Content Block Categories"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:19
+#: plugins/content-blocks/register-taxonomy.php:19
+msgid "All Content Block Categories"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:20
+#: plugins/content-blocks/register-taxonomy.php:20
+msgid "Parent Content Block Category"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:21
+#: plugins/content-blocks/register-taxonomy.php:21
+msgid "Parent Content Block Category:"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:22
+#: plugins/content-blocks/register-taxonomy.php:22
+msgid "Edit Content Block Category"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:23
+#: plugins/content-blocks/register-taxonomy.php:23
+msgid "Update Content Block Category"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:24
+#: plugins/content-blocks/register-taxonomy.php:24
+msgid "Add New Content Block Category"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:25
+#: plugins/content-blocks/register-taxonomy.php:25
+msgid "New Content Block Category"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:26
+#: plugins/content-blocks/register-taxonomy.php:26
+msgid "Separate content block categories with commas"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:27
+#: plugins/content-blocks/register-taxonomy.php:27
+msgid "Add or remove content block categories"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:28
+#: plugins/content-blocks/register-taxonomy.php:28
+msgid "Choose from the most used content block categories"
+msgstr ""
+
+#: pack/wolf-core/plugins/content-blocks/register-taxonomy.php:29
+#: plugins/content-blocks/register-taxonomy.php:29
+msgid "Categories"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/controls/section.php:21
+#: plugins/elementor/controls/section.php:21
+msgid "Default Font Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/controls/section.php:28
+#: pack/wolf-core/plugins/params/playlist.php:80
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:28
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:28
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:40
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:87
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:263
+#: plugins/elementor/controls/section.php:28 plugins/params/playlist.php:80
+#: plugins/vc/vc-map/column-inner.php:28 plugins/vc/vc-map/column.php:28
+#: plugins/vc/vc-map/row-inner.php:40 plugins/vc/vc-map/row.php:87
+#: plugins/vc/vc-map/row.php:263
+msgid "Dark"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/controls/section.php:29
+#: pack/wolf-core/plugins/params/playlist.php:81
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:27
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:27
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:41
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:86
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:264
+#: plugins/elementor/controls/section.php:29 plugins/params/playlist.php:81
+#: plugins/vc/vc-map/column-inner.php:27 plugins/vc/vc-map/column.php:27
+#: plugins/vc/vc-map/row-inner.php:41 plugins/vc/vc-map/row.php:86
+#: plugins/vc/vc-map/row.php:264
+msgid "Light"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/controls/section.php:51
+#: pack/wolf-core/plugins/params/album-disc.php:108
+#: pack/wolf-core/plugins/params/bandsintown-events.php:54
+#: pack/wolf-core/plugins/params/bandsintown-events.php:64
+#: pack/wolf-core/plugins/params/breadcrumb.php:74
+#: pack/wolf-core/plugins/params/heading.php:34
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:78
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:103
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:112
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:121
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:131
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:68
+#: pack/wolf-core/plugins/params/video-opener.php:39
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:190
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:261
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:337
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:398
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:410
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:423
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:143
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:92
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:188
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:217
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:337
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:353
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:432
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:528
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:544
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:623
+#: plugins/elementor/controls/section.php:51 plugins/params/album-disc.php:108
+#: plugins/params/bandsintown-events.php:54
+#: plugins/params/bandsintown-events.php:64 plugins/params/breadcrumb.php:74
+#: plugins/params/heading.php:34 plugins/params/sb-instagram-feed.php:79
+#: plugins/params/sb-instagram-feed.php:104
+#: plugins/params/sb-instagram-feed.php:113
+#: plugins/params/sb-instagram-feed.php:122
+#: plugins/params/sb-instagram-feed.php:132
+#: plugins/params/spotify-follow-button.php:68
+#: plugins/params/video-opener.php:39
+#: plugins/vc/vc-params/background-params.php:190
+#: plugins/vc/vc-params/background-params.php:261
+#: plugins/vc/vc-params/background-params.php:337
+#: plugins/vc/vc-params/background-params.php:398
+#: plugins/vc/vc-params/background-params.php:410
+#: plugins/vc/vc-params/background-params.php:423
+#: plugins/vc/vc-params/row-inner-params.php:143
+#: plugins/vc/vc-params/row-params.php:92
+#: plugins/vc/vc-params/row-params.php:188
+#: plugins/vc/vc-params/row-params.php:217
+#: plugins/vc/vc-params/row-params.php:337
+#: plugins/vc/vc-params/row-params.php:353
+#: plugins/vc/vc-params/row-params.php:432
+#: plugins/vc/vc-params/row-params.php:528
+#: plugins/vc/vc-params/row-params.php:544
+#: plugins/vc/vc-params/row-params.php:623
+msgid "Yes"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/controls/section.php:52
+#: pack/wolf-core/plugins/params/album-disc.php:109
+#: pack/wolf-core/plugins/params/bandsintown-events.php:53
+#: pack/wolf-core/plugins/params/bandsintown-events.php:65
+#: pack/wolf-core/plugins/params/breadcrumb.php:75
+#: pack/wolf-core/plugins/params/heading.php:35
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:79
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:104
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:113
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:122
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:132
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:69
+#: pack/wolf-core/plugins/params/video-opener.php:38
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:262
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:336
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:397
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:409
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:422
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:336
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:352
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:433
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:527
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:543
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:624
+#: plugins/elementor/controls/section.php:52 plugins/params/album-disc.php:109
+#: plugins/params/bandsintown-events.php:53
+#: plugins/params/bandsintown-events.php:65 plugins/params/breadcrumb.php:75
+#: plugins/params/heading.php:35 plugins/params/sb-instagram-feed.php:80
+#: plugins/params/sb-instagram-feed.php:105
+#: plugins/params/sb-instagram-feed.php:114
+#: plugins/params/sb-instagram-feed.php:123
+#: plugins/params/sb-instagram-feed.php:133
+#: plugins/params/spotify-follow-button.php:69
+#: plugins/params/video-opener.php:38
+#: plugins/vc/vc-params/background-params.php:262
+#: plugins/vc/vc-params/background-params.php:336
+#: plugins/vc/vc-params/background-params.php:397
+#: plugins/vc/vc-params/background-params.php:409
+#: plugins/vc/vc-params/background-params.php:422
+#: plugins/vc/vc-params/row-params.php:336
+#: plugins/vc/vc-params/row-params.php:352
+#: plugins/vc/vc-params/row-params.php:433
+#: plugins/vc/vc-params/row-params.php:527
+#: plugins/vc/vc-params/row-params.php:543
+#: plugins/vc/vc-params/row-params.php:624
+msgid "No"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:24
+#: pack/wolf-core/plugins/params/album-disc.php:27
+#: pack/wolf-core/plugins/params/audio-button.php:27
+#: pack/wolf-core/plugins/params/bandsintown-events.php:27
+#: pack/wolf-core/plugins/params/playlist.php:51
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:26
+#: pack/wolf-core/plugins/params/spotify-player.php:26
+#: pack/wolf-core/plugins/params/video-opener.php:27
+#: pack/wolf-core/plugins/params/video-preview.php:28
+#: plugins/elementor/elementor-core-functions.php:24
+#: plugins/params/album-disc.php:27 plugins/params/audio-button.php:27
+#: plugins/params/bandsintown-events.php:27
+#: plugins/params/bandsintown-tracking-button.php:27
+#: plugins/params/playlist.php:51 plugins/params/spotify-follow-button.php:26
+#: plugins/params/spotify-player.php:26 plugins/params/video-opener.php:27
+#: plugins/params/video-preview.php:28
+msgid "Music"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:32
+#: pack/wolf-core/plugins/params/breadcrumb.php:27
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:29
+#: plugins/elementor/elementor-core-functions.php:32
+#: plugins/params/breadcrumb.php:27 plugins/params/sb-instagram-feed.php:29
+msgid "Extension"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:40
+#: plugins/elementor/elementor-core-functions.php:40
+msgid "Post Modules"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:48
+#: pack/wolf-core/plugins/params/social-icons.php:27
+#: plugins/elementor/elementor-core-functions.php:48
+#: plugins/params/social-icons.php:27
+msgid "Social"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:191
+#: pack/wolf-core/plugins/params/content-block.php:37
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:68
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:24
+#: plugins/elementor/elementor-core-functions.php:191
+#: plugins/params/content-block.php:37
+#: plugins/vc/vc-params/button-params.php:68
+#: plugins/vc/vc-params/icon-params.php:24
+msgid "Content"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:204
+#: plugins/elementor/elementor-core-functions.php:204
+msgid "Query"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:218
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:30
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:30
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:43
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:90
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:106
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:117
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:125
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:32
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:48
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:64
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:81
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:104
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:123
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:141
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:164
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:182
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:196
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:211
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:225
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:239
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:252
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:268
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:283
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:297
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:310
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:326
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:339
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:354
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:368
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:389
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:400
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:412
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:425
+#: plugins/elementor/elementor-core-functions.php:218
+#: plugins/helpers/helpers.php:30 plugins/vc/vc-map/column-inner.php:30
+#: plugins/vc/vc-map/column.php:30 plugins/vc/vc-map/row-inner.php:43
+#: plugins/vc/vc-map/row.php:90 plugins/vc/vc-map/row.php:106
+#: plugins/vc/vc-map/row.php:117 plugins/vc/vc-map/row.php:125
+#: plugins/vc/vc-params/background-params.php:32
+#: plugins/vc/vc-params/background-params.php:48
+#: plugins/vc/vc-params/background-params.php:64
+#: plugins/vc/vc-params/background-params.php:81
+#: plugins/vc/vc-params/background-params.php:104
+#: plugins/vc/vc-params/background-params.php:123
+#: plugins/vc/vc-params/background-params.php:141
+#: plugins/vc/vc-params/background-params.php:164
+#: plugins/vc/vc-params/background-params.php:182
+#: plugins/vc/vc-params/background-params.php:196
+#: plugins/vc/vc-params/background-params.php:211
+#: plugins/vc/vc-params/background-params.php:225
+#: plugins/vc/vc-params/background-params.php:239
+#: plugins/vc/vc-params/background-params.php:252
+#: plugins/vc/vc-params/background-params.php:268
+#: plugins/vc/vc-params/background-params.php:283
+#: plugins/vc/vc-params/background-params.php:297
+#: plugins/vc/vc-params/background-params.php:310
+#: plugins/vc/vc-params/background-params.php:326
+#: plugins/vc/vc-params/background-params.php:339
+#: plugins/vc/vc-params/background-params.php:354
+#: plugins/vc/vc-params/background-params.php:368
+#: plugins/vc/vc-params/background-params.php:389
+#: plugins/vc/vc-params/background-params.php:400
+#: plugins/vc/vc-params/background-params.php:412
+#: plugins/vc/vc-params/background-params.php:425
+msgid "Style"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:232
+#: plugins/elementor/elementor-core-functions.php:232
+msgid "custom"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:246
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:96
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:97
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:105
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:114
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:242
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:251
+#: plugins/elementor/elementor-core-functions.php:246
+#: plugins/vc/vc-map/column-inner.php:96 plugins/vc/vc-map/column.php:97
+#: plugins/vc/vc-map/column.php:105 plugins/vc/vc-map/column.php:114
+#: plugins/vc/vc-params/button-params.php:242
+#: plugins/vc/vc-params/button-params.php:251
+msgid "Extra"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:260
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:113
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:267
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:277
+#: plugins/elementor/elementor-core-functions.php:260
+#: plugins/vc/vc-map/row-inner.php:113 plugins/vc/vc-params/row-params.php:267
+#: plugins/vc/vc-params/row-params.php:277
+msgid "Advanced"
+msgstr ""
+
+#: pack/wolf-core/plugins/elements/bandsintown-events.php:92
+#: plugins/elements/bandsintown-events.php:84
+#: plugins/elements/bandsintown-tracking-button.php:90
+msgid "Please set an artist."
+msgstr ""
+
+#: pack/wolf-core/plugins/elements/bandsintown-events.php:94
+#: plugins/elements/bandsintown-events.php:86
+msgid "No event scheduled."
+msgstr ""
+
+#: pack/wolf-core/plugins/elements/sb-instagram-feed.php:61
+#: plugins/elements/sb-instagram-feed.php:60
+msgid "Instagram @%s"
+msgstr ""
+
+#: pack/wolf-core/plugins/elements/video-preview.php:105
+#: plugins/elements/video-preview.php:97
+msgid "Watch %s"
+msgstr ""
+
+#: pack/wolf-core/plugins/elements/video-preview.php:108
+#: plugins/elements/video-preview.php:100
+msgid "Play Video"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:23
+#: plugins/params/album-disc.php:23
+msgid "Album Disc"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:24
+#: pack/wolf-core/plugins/params/audio-button.php:24
+#: pack/wolf-core/plugins/params/bandsintown-events.php:24
+#: pack/wolf-core/plugins/params/breadcrumb.php:24
+#: pack/wolf-core/plugins/params/video-opener.php:24
+#: plugins/params/album-disc.php:24 plugins/params/audio-button.php:24
+#: plugins/params/bandsintown-events.php:24 plugins/params/breadcrumb.php:24
+#: plugins/params/video-opener.php:24
+msgid "A stylish presentation for your release"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:35
+#: pack/wolf-core/plugins/params/album-disc.php:60
+#: pack/wolf-core/plugins/params/breadcrumb.php:35
+#: pack/wolf-core/plugins/params/breadcrumb.php:60
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:76
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:101
+#: pack/wolf-core/plugins/params/video-opener.php:53
+#: pack/wolf-core/plugins/params/video-opener.php:78
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:164
+#: plugins/params/album-disc.php:35 plugins/params/album-disc.php:60
+#: plugins/params/bandsintown-tracking-button.php:52
+#: plugins/params/bandsintown-tracking-button.php:77
+#: plugins/params/breadcrumb.php:35 plugins/params/breadcrumb.php:60
+#: plugins/params/spotify-follow-button.php:76
+#: plugins/params/spotify-follow-button.php:101
+#: plugins/params/video-opener.php:53 plugins/params/video-opener.php:78
+#: plugins/vc/vc-params/button-params.php:164
+msgid "Alignment"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:40
+#: pack/wolf-core/plugins/params/album-disc.php:64
+#: pack/wolf-core/plugins/params/breadcrumb.php:40
+#: pack/wolf-core/plugins/params/breadcrumb.php:64
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:81
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:105
+#: pack/wolf-core/plugins/params/twitter.php:56
+#: pack/wolf-core/plugins/params/video-opener.php:58
+#: pack/wolf-core/plugins/params/video-opener.php:119
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:170
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:213
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:37
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:49
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:48
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:60
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:79
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:472
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:485
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:498
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:173
+#: plugins/params/album-disc.php:40 plugins/params/album-disc.php:64
+#: plugins/params/bandsintown-tracking-button.php:57
+#: plugins/params/bandsintown-tracking-button.php:81
+#: plugins/params/breadcrumb.php:40 plugins/params/breadcrumb.php:64
+#: plugins/params/spotify-follow-button.php:81
+#: plugins/params/spotify-follow-button.php:105 plugins/params/twitter.php:56
+#: plugins/params/video-opener.php:58 plugins/params/video-opener.php:119
+#: plugins/vc/vc-params/button-params.php:170
+#: plugins/vc/vc-params/button-params.php:213
+#: plugins/vc/vc-params/column-inner-params.php:37
+#: plugins/vc/vc-params/column-inner-params.php:49
+#: plugins/vc/vc-params/column-params.php:48
+#: plugins/vc/vc-params/column-params.php:60
+#: plugins/vc/vc-params/custom-heading-params.php:79
+#: plugins/vc/vc-params/icon-params.php:472
+#: plugins/vc/vc-params/icon-params.php:485
+#: plugins/vc/vc-params/icon-params.php:498
+#: plugins/vc/vc-params/row-params.php:173
+msgid "Left"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:44
+#: pack/wolf-core/plugins/params/album-disc.php:63
+#: pack/wolf-core/plugins/params/breadcrumb.php:44
+#: pack/wolf-core/plugins/params/breadcrumb.php:63
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:85
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:104
+#: pack/wolf-core/plugins/params/twitter.php:55
+#: pack/wolf-core/plugins/params/video-opener.php:62
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:168
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:36
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:50
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:47
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:61
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:78
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:89
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:486
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:497
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:172
+#: plugins/params/album-disc.php:44 plugins/params/album-disc.php:63
+#: plugins/params/bandsintown-tracking-button.php:61
+#: plugins/params/bandsintown-tracking-button.php:80
+#: plugins/params/breadcrumb.php:44 plugins/params/breadcrumb.php:63
+#: plugins/params/spotify-follow-button.php:85
+#: plugins/params/spotify-follow-button.php:104 plugins/params/twitter.php:55
+#: plugins/params/video-opener.php:62
+#: plugins/vc/vc-params/button-params.php:168
+#: plugins/vc/vc-params/column-inner-params.php:36
+#: plugins/vc/vc-params/column-inner-params.php:50
+#: plugins/vc/vc-params/column-params.php:47
+#: plugins/vc/vc-params/column-params.php:61
+#: plugins/vc/vc-params/custom-heading-params.php:78
+#: plugins/vc/vc-params/custom-heading-params.php:89
+#: plugins/vc/vc-params/icon-params.php:486
+#: plugins/vc/vc-params/icon-params.php:497
+#: plugins/vc/vc-params/row-params.php:172
+msgid "Center"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:48
+#: pack/wolf-core/plugins/params/album-disc.php:65
+#: pack/wolf-core/plugins/params/breadcrumb.php:48
+#: pack/wolf-core/plugins/params/breadcrumb.php:65
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:89
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:106
+#: pack/wolf-core/plugins/params/twitter.php:57
+#: pack/wolf-core/plugins/params/video-opener.php:66
+#: pack/wolf-core/plugins/params/video-opener.php:118
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:171
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:214
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:38
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:51
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:49
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:62
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:80
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:474
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:487
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:499
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:174
+#: plugins/params/album-disc.php:48 plugins/params/album-disc.php:65
+#: plugins/params/bandsintown-tracking-button.php:65
+#: plugins/params/bandsintown-tracking-button.php:82
+#: plugins/params/breadcrumb.php:48 plugins/params/breadcrumb.php:65
+#: plugins/params/spotify-follow-button.php:89
+#: plugins/params/spotify-follow-button.php:106 plugins/params/twitter.php:57
+#: plugins/params/video-opener.php:66 plugins/params/video-opener.php:118
+#: plugins/vc/vc-params/button-params.php:171
+#: plugins/vc/vc-params/button-params.php:214
+#: plugins/vc/vc-params/column-inner-params.php:38
+#: plugins/vc/vc-params/column-inner-params.php:51
+#: plugins/vc/vc-params/column-params.php:49
+#: plugins/vc/vc-params/column-params.php:62
+#: plugins/vc/vc-params/custom-heading-params.php:80
+#: plugins/vc/vc-params/icon-params.php:474
+#: plugins/vc/vc-params/icon-params.php:487
+#: plugins/vc/vc-params/icon-params.php:499
+#: plugins/vc/vc-params/row-params.php:174
+msgid "Right"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:72
+#: pack/wolf-core/plugins/params/spotify-player.php:43
+#: pack/wolf-core/plugins/params/twitter.php:41
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:290
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:481
+#: plugins/params/album-disc.php:72 plugins/params/spotify-player.php:43
+#: plugins/params/twitter.php:41 plugins/vc/vc-params/row-params.php:290
+#: plugins/vc/vc-params/row-params.php:481
+msgid "Type"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:75
+#: plugins/params/album-disc.php:75
+msgid "CD"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:76
+#: plugins/params/album-disc.php:76
+msgid "Vinyl"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:82
+#: pack/wolf-core/plugins/params/video-preview.php:52
+#: plugins/params/album-disc.php:82 plugins/params/video-preview.php:52
+msgid "Cover Image"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:84
+#: plugins/params/album-disc.php:84
+msgid "Select image from media library."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:90
+#: plugins/params/album-disc.php:90
+msgid "Disc Image"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:92
+#: plugins/params/album-disc.php:92
+msgid "A secondary image that will be used for the CD or vinyl artwork."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:98
+#: pack/wolf-core/plugins/params/bigtext.php:135
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:181
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:603
+#: plugins/params/album-disc.php:98 plugins/params/bigtext.php:135
+#: plugins/vc/vc-params/custom-heading-params.php:181
+#: plugins/vc/vc-params/icon-params.php:603
+msgid "Link"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:104
+#: plugins/params/album-disc.php:104
+msgid "Worn Border Effect"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:115
+#: plugins/params/album-disc.php:115
+msgid "Disc Rotate Effect"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:119
+#: plugins/params/album-disc.php:119
+msgid "On Hover"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:120
+#: plugins/params/album-disc.php:120
+msgid "Stop On Hover"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:121
+#: plugins/params/album-disc.php:121
+msgid "Always"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:122
+#: pack/wolf-core/plugins/params/bigtext.php:86
+#: pack/wolf-core/plugins/params/breadcrumb.php:109
+#: pack/wolf-core/plugins/params/heading.php:117
+#: pack/wolf-core/plugins/params/video-opener.php:116
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:41
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:68
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:41
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:69
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:55
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:82
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:176
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:203
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:236
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:152
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:191
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:75
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:86
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:135
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:371
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:450
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:547
+#: plugins/params/album-disc.php:122 plugins/params/bigtext.php:86
+#: plugins/params/breadcrumb.php:109 plugins/params/heading.php:117
+#: plugins/params/video-opener.php:116 plugins/vc/vc-core-functions.php:417
+#: plugins/vc/vc-map/column-inner.php:41 plugins/vc/vc-map/column-inner.php:68
+#: plugins/vc/vc-map/column.php:41 plugins/vc/vc-map/column.php:69
+#: plugins/vc/vc-map/row-inner.php:55 plugins/vc/vc-map/row-inner.php:82
+#: plugins/vc/vc-map/row.php:176 plugins/vc/vc-map/row.php:203
+#: plugins/vc/vc-map/row.php:236 plugins/vc/vc-params/background-params.php:152
+#: plugins/vc/vc-params/button-params.php:191
+#: plugins/vc/vc-params/column-inner-params.php:75
+#: plugins/vc/vc-params/column-params.php:86
+#: plugins/vc/vc-params/custom-heading-params.php:135
+#: plugins/vc/vc-params/icon-params.php:371
+#: plugins/vc/vc-params/icon-params.php:450
+#: plugins/vc/vc-params/icon-params.php:547
+msgid "None"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:128
+#: plugins/params/album-disc.php:128
+msgid "Image Size"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/album-disc.php:136
+#: plugins/params/album-disc.php:136
+msgid "Disc Rotation Speed (in ms)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/audio-button.php:23
+#: plugins/params/audio-button.php:23
+msgid "Audio Button"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-events.php:23
+#: plugins/params/bandsintown-events.php:23
+msgid "Bandsintown Events"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-events.php:35
+#: plugins/params/bandsintown-events.php:35
+#: plugins/params/bandsintown-tracking-button.php:35
+msgid "Artist Name"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-events.php:42
+#: plugins/params/bandsintown-events.php:42
+msgid "Display Limit"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-events.php:45
+#: plugins/params/bandsintown-events.php:45
+msgid "Leave empty to display all shows"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-events.php:50
+#: plugins/params/bandsintown-events.php:50
+msgid "Display Local Dates"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-events.php:61
+#: plugins/params/bandsintown-events.php:61
+msgid "Display Past Dates"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:23
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:139
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:150
+#: plugins/params/bigtext.php:23 plugins/vc/vc-map/row.php:139
+#: plugins/vc/vc-map/row.php:150
+msgid "Big Text"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:24 plugins/params/bigtext.php:24
+msgid "A big line of text that will take the full width of its container."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:26
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:24
+#: plugins/params/bigtext.php:26
+#: plugins/vc/vc-params/custom-heading-params.php:24
+msgid "Typography"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:34
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:75
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:30
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:523
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:531
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:538
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:550
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:566
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:573
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:578
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:581
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:605
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:612
+#: plugins/params/bigtext.php:34 plugins/vc/vc-params/button-params.php:75
+#: plugins/vc/vc-params/custom-heading-params.php:30
+#: plugins/vc/vc-params/icon-params.php:523
+#: plugins/vc/vc-params/icon-params.php:531
+#: plugins/vc/vc-params/icon-params.php:538
+#: plugins/vc/vc-params/icon-params.php:550
+#: plugins/vc/vc-params/icon-params.php:566
+#: plugins/vc/vc-params/icon-params.php:573
+#: plugins/vc/vc-params/icon-params.php:578
+#: plugins/vc/vc-params/icon-params.php:581
+#: plugins/vc/vc-params/icon-params.php:605
+#: plugins/vc/vc-params/icon-params.php:612
+msgid "Text"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:36 plugins/params/bigtext.php:36
+msgid "My mega big text"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:38 plugins/params/bigtext.php:38
+msgid "You can add several lines of text."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:39
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:34
+#: plugins/params/bigtext.php:39
+#: plugins/vc/vc-params/custom-heading-params.php:34
+msgid "You can use the %s short tag to display the current page title."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:70
+#: pack/wolf-core/plugins/params/breadcrumb.php:93
+#: pack/wolf-core/plugins/params/heading.php:102
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:237
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:123
+#: plugins/params/bigtext.php:70 plugins/params/breadcrumb.php:93
+#: plugins/params/heading.php:102 plugins/vc/vc-params/button-params.php:237
+#: plugins/vc/vc-params/custom-heading-params.php:123
+msgid "Font Weight"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:82
+#: pack/wolf-core/plugins/params/breadcrumb.php:105
+#: pack/wolf-core/plugins/params/heading.php:113
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:131
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:543
+#: plugins/params/bigtext.php:82 plugins/params/breadcrumb.php:105
+#: plugins/params/heading.php:113
+#: plugins/vc/vc-params/custom-heading-params.php:131
+#: plugins/vc/vc-params/icon-params.php:543
+msgid "Text Transform"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:87
+#: pack/wolf-core/plugins/params/breadcrumb.php:110
+#: pack/wolf-core/plugins/params/heading.php:118
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:136
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:548
+#: plugins/params/bigtext.php:87 plugins/params/breadcrumb.php:110
+#: plugins/params/heading.php:118
+#: plugins/vc/vc-params/custom-heading-params.php:136
+#: plugins/vc/vc-params/icon-params.php:548
+msgid "Uppercase"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:88
+#: pack/wolf-core/plugins/params/breadcrumb.php:111
+#: pack/wolf-core/plugins/params/heading.php:119 plugins/params/bigtext.php:88
+#: plugins/params/breadcrumb.php:111 plugins/params/heading.php:119
+msgid "Lowercase"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:97
+#: pack/wolf-core/plugins/params/breadcrumb.php:120
+#: pack/wolf-core/plugins/params/heading.php:127
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:143
+#: plugins/params/bigtext.php:97 plugins/params/breadcrumb.php:120
+#: plugins/params/heading.php:127
+#: plugins/vc/vc-params/custom-heading-params.php:143
+msgid "Font Style"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:101
+#: pack/wolf-core/plugins/params/breadcrumb.php:124
+#: pack/wolf-core/plugins/params/heading.php:131
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:147
+#: plugins/params/bigtext.php:101 plugins/params/breadcrumb.php:124
+#: plugins/params/heading.php:131
+#: plugins/vc/vc-params/custom-heading-params.php:147
+msgid "Italic"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:110
+#: pack/wolf-core/plugins/params/heading.php:91
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:67
+#: plugins/params/bigtext.php:110 plugins/params/heading.php:91
+#: plugins/vc/vc-params/custom-heading-params.php:67
+msgid "Font"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bigtext.php:121 plugins/params/bigtext.php:121
+msgid "HTML Tag"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/breadcrumb.php:23
+#: plugins/params/breadcrumb.php:23
+msgid "Breadcrumb"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/breadcrumb.php:72
+#: pack/wolf-core/plugins/params/heading.php:32
+#: plugins/params/breadcrumb.php:72 plugins/params/heading.php:32
+msgid "Center Aligned on Mobile"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/breadcrumb.php:82
+#: pack/wolf-core/plugins/params/heading.php:58
+#: plugins/params/breadcrumb.php:82 plugins/params/heading.php:58
+msgid "Custom Font Size"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/breadcrumb.php:83
+#: pack/wolf-core/plugins/params/heading.php:59
+#: plugins/params/breadcrumb.php:83 plugins/params/heading.php:59
+msgid "It will overwrite the size setting above."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/breadcrumb.php:132
+#: pack/wolf-core/plugins/params/heading.php:139
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:153
+#: plugins/params/breadcrumb.php:132 plugins/params/heading.php:139
+#: plugins/vc/vc-params/custom-heading-params.php:153
+msgid "Letter Spacing"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/breadcrumb.php:142
+#: pack/wolf-core/plugins/params/heading.php:149
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:160
+#: plugins/params/breadcrumb.php:142 plugins/params/heading.php:149
+#: plugins/vc/vc-params/custom-heading-params.php:160
+msgid "Line Height"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/content-block.php:27
+#: plugins/params/content-block.php:27
+msgid "No Content Block yet"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/content-block.php:35
+#: plugins/params/content-block.php:35
+msgid "A block of content from the Content Block post type"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:24
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:21
+#: plugins/params/heading.php:24
+#: plugins/vc/vc-params/custom-heading-params.php:21
+msgid "Heading"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:25
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:22
+#: plugins/params/heading.php:25
+#: plugins/vc/vc-params/custom-heading-params.php:22
+msgid "A big title with flexible font size"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:46
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:509
+#: plugins/params/bandsintown-tracking-button.php:46
+#: plugins/params/heading.php:46 plugins/vc/vc-params/icon-params.php:509
+msgid "Small"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:47
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:510
+#: plugins/params/heading.php:47 plugins/vc/vc-params/icon-params.php:510
+msgid "Medium"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:48
+#: pack/wolf-core/plugins/params/spotify-player.php:46
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:511
+#: plugins/params/bandsintown-tracking-button.php:45
+#: plugins/params/heading.php:48 plugins/params/spotify-player.php:46
+#: plugins/vc/vc-params/icon-params.php:511
+msgid "Large"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:49 plugins/params/heading.php:49
+msgid "XL"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:50 plugins/params/heading.php:50
+msgid "XXL"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:51
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:47
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:59
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:78
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:86
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:48
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:60
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:79
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:87
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:61
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:73
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:92
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:100
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:182
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:194
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:213
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:221
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/style-params.php:21
+#: plugins/params/heading.php:51 plugins/vc/vc-map/column-inner.php:47
+#: plugins/vc/vc-map/column-inner.php:59 plugins/vc/vc-map/column-inner.php:78
+#: plugins/vc/vc-map/column-inner.php:86 plugins/vc/vc-map/column.php:48
+#: plugins/vc/vc-map/column.php:60 plugins/vc/vc-map/column.php:79
+#: plugins/vc/vc-map/column.php:87 plugins/vc/vc-map/row-inner.php:61
+#: plugins/vc/vc-map/row-inner.php:73 plugins/vc/vc-map/row-inner.php:92
+#: plugins/vc/vc-map/row-inner.php:100 plugins/vc/vc-map/row.php:182
+#: plugins/vc/vc-map/row.php:194 plugins/vc/vc-map/row.php:213
+#: plugins/vc/vc-map/row.php:221 plugins/vc/vc-params/style-params.php:21
+msgid "Custom"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:72
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:46
+#: plugins/params/heading.php:72
+#: plugins/vc/vc-params/custom-heading-params.php:46
+msgid "Behavior"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:75
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:49
+#: plugins/params/heading.php:75
+#: plugins/vc/vc-params/custom-heading-params.php:49
+msgid "Static"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:76
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:50
+#: plugins/params/heading.php:76
+#: plugins/vc/vc-params/custom-heading-params.php:50
+msgid "Responsive"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/heading.php:82
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:56
+#: plugins/params/heading.php:82
+#: plugins/vc/vc-params/custom-heading-params.php:56
+msgid "Minimum Font Size"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/playlist.php:40 plugins/params/playlist.php:40
+msgid "No playlist created yet"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/playlist.php:47
+#: pack/wolf-core/plugins/params/playlist.php:59
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:251
+#: plugins/params/playlist.php:47 plugins/params/playlist.php:59
+#: plugins/vc/vc-map/row.php:251
+msgid "Playlist"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/playlist.php:48 plugins/params/playlist.php:48
+msgid "Display one of your playlist"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/playlist.php:67 plugins/params/playlist.php:67
+msgid "Tracklist Visibility"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/playlist.php:70 plugins/params/playlist.php:70
+msgid "Show"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/playlist.php:71 plugins/params/playlist.php:71
+msgid "Hide"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/playlist.php:77 plugins/params/playlist.php:77
+msgid "Skin"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:25
+#: plugins/params/sb-instagram-feed.php:25
+msgid "Instagram Feed (Smash Balloon)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:26
+#: plugins/params/sb-instagram-feed.php:26
+msgid "Your last instagram photos"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:37
+#: plugins/params/sb-instagram-feed.php:37
+msgid "Image Count"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:38
+#: plugins/params/sb-instagram-feed.php:38
+msgid "Note that the instagram API may limit the number of image to display."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:46
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:23
+#: plugins/params/sb-instagram-feed.php:46
+#: plugins/vc/vc-params/row-params.php:23
+msgid "Columns"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:60
+#: plugins/params/sb-instagram-feed.php:61
+msgid "User"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:61
+#: plugins/params/sb-instagram-feed.php:62
+msgid ""
+"Your Instagram User Name. This must be from a connected account on the "
+"\"Configure\" tab."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:68
+#: plugins/params/sb-instagram-feed.php:69
+msgid "API key (optional)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:69
+#: plugins/params/sb-instagram-feed.php:70
+msgid "Leave empty to use the default API key set in the plugin settings."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:76
+#: plugins/params/sb-instagram-feed.php:77
+msgid "Display follow button (theme style)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:85
+#: plugins/params/sb-instagram-feed.php:86
+msgid "Button Text (theme style)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:94
+#: plugins/params/sb-instagram-feed.php:95
+msgid "Padding"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:100
+#: plugins/params/sb-instagram-feed.php:101
+msgid "Show Header"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:102
+#: plugins/params/sb-instagram-feed.php:103
+msgid "Whether to show the feed Header."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:110
+#: plugins/params/sb-instagram-feed.php:111
+msgid "Show \"Follow\" button"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:119
+#: plugins/params/sb-instagram-feed.php:120
+msgid "Show \"Load More\" button"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:128
+#: plugins/params/sb-instagram-feed.php:129
+msgid "Disable Default Hover Effect"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:129
+#: plugins/params/sb-instagram-feed.php:130
+msgid ""
+"Check this option to set your own hover effect if you have the pro version "
+"of the Instagram Feed plugin."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/social-icons.php:23
+#: plugins/params/social-icons.php:23
+msgid "Social Icons"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/social-icons.php:24
+#: plugins/params/social-icons.php:24
+msgid "A set of icons linked to your social profiles"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:23
+#: plugins/params/spotify-follow-button.php:23
+msgid "Spotify Follow Button"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:34
+#: plugins/params/spotify-follow-button.php:34
+msgid "Spotify Artist Link"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:45
+#: plugins/params/spotify-follow-button.php:45
+msgid "Detailed"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:46
+#: plugins/params/spotify-follow-button.php:46
+msgid "Basic"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:54
+#: plugins/params/spotify-follow-button.php:54
+msgid "Theme"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:57
+#: plugins/params/spotify-follow-button.php:57
+msgid "For bright backgrounds"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:58
+#: plugins/params/spotify-follow-button.php:58
+msgid "For dark backgrounds"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-follow-button.php:66
+#: plugins/params/spotify-follow-button.php:66
+msgid "Show follower count"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-player.php:23
+#: plugins/params/spotify-player.php:23
+msgid "Spotify Player"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-player.php:34
+#: plugins/params/spotify-player.php:34
+msgid "Spotify Link"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-player.php:37
+#: plugins/params/spotify-player.php:37
+msgid ""
+"A Spotify link URL containing the word \"album\", \"track, \"artist\", or "
+"\"playlist\"."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-player.php:47
+#: plugins/params/spotify-player.php:47
+msgid "Compact"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-player.php:55
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:84
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:95
+#: plugins/params/spotify-player.php:55
+#: plugins/vc/vc-params/column-inner-params.php:84
+#: plugins/vc/vc-params/column-params.php:95
+msgid "Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/spotify-player.php:64
+#: plugins/params/spotify-player.php:64
+msgid "Height"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:23 plugins/params/twitter.php:23
+msgid "Twitter Feed"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:24 plugins/params/twitter.php:24
+msgid "Your last tweets"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:26 plugins/params/twitter.php:26
+msgid "Socials"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:33 plugins/params/twitter.php:33
+msgid "Username"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:44 plugins/params/twitter.php:44
+msgid "Single"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:45 plugins/params/twitter.php:45
+msgid "List"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:51
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:75
+#: plugins/params/twitter.php:51
+#: plugins/vc/vc-params/custom-heading-params.php:75
+msgid "Text Alignment"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/twitter.php:66 plugins/params/twitter.php:66
+msgid "Count"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:23
+#: plugins/params/video-opener.php:23
+msgid "Video Opener"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:35
+#: plugins/params/video-opener.php:35
+msgid "Custom Play Button"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:45
+#: plugins/params/video-opener.php:45
+msgid "Button Image"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:81
+#: plugins/params/video-opener.php:81
+msgid "center"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:82
+#: plugins/params/video-opener.php:82
+msgid "left"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:83
+#: plugins/params/video-opener.php:83
+msgid "right"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:90
+#: pack/wolf-core/plugins/params/video-opener.php:104
+#: pack/wolf-core/plugins/params/video-preview.php:36
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:203
+#: plugins/params/video-opener.php:90 plugins/params/video-opener.php:104
+#: plugins/params/video-preview.php:36
+#: plugins/vc/vc-params/background-params.php:203
+msgid "Video URL"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:94
+#: plugins/params/video-opener.php:94
+msgid "Support %1$s and %2$s"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:106
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:206
+#: plugins/params/video-opener.php:106
+#: plugins/vc/vc-params/background-params.php:206
+msgid "A YouTube, Vimeo, or mp4 URL."
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:113
+#: plugins/params/video-opener.php:113
+msgid "Caption Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:117
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:137
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:26
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:37
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:105
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:124
+#: plugins/params/video-opener.php:117 plugins/vc/vc-map/row.php:137
+#: plugins/vc/vc-params/column-inner-params.php:26
+#: plugins/vc/vc-params/column-params.php:37
+#: plugins/vc/vc-params/row-params.php:105
+#: plugins/vc/vc-params/row-params.php:124
+msgid "Bottom"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:120
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:136
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:24
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:35
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:471
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:104
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:122
+#: plugins/params/video-opener.php:120 plugins/vc/vc-map/row.php:136
+#: plugins/vc/vc-params/column-inner-params.php:24
+#: plugins/vc/vc-params/column-params.php:35
+#: plugins/vc/vc-params/icon-params.php:471
+#: plugins/vc/vc-params/row-params.php:104
+#: plugins/vc/vc-params/row-params.php:122
+msgid "Top"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:126
+#: plugins/params/video-opener.php:126
+msgid "Caption"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:128
+#: plugins/params/video-opener.php:128
+msgid "My Video Title"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-opener.php:136
+#: plugins/params/video-opener.php:136
+msgid "Duration"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-preview.php:24
+#: plugins/params/video-preview.php:24
+msgid "Video Preview"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-preview.php:25
+#: plugins/params/video-preview.php:25
+msgid "An embed video with preview"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-preview.php:44
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:519
+#: plugins/params/video-preview.php:44 plugins/vc/vc-params/icon-params.php:519
+msgid "Title"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-preview.php:46
+#: plugins/params/video-preview.php:46
+msgid "My video title"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-preview.php:59
+#: plugins/params/video-preview.php:59
+msgid "Custom Video Preview (optional)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/video-preview.php:61
+#: plugins/params/video-preview.php:61
+msgid "A short mp4 video file"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:230
+#: plugins/vc/vc-core-functions.php:229
+msgid "Black"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:231
+#: plugins/vc/vc-core-functions.php:230
+msgid "Light Grey"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:232
+#: plugins/vc/vc-core-functions.php:231
+msgid "Dark Grey"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:233
+#: plugins/vc/vc-core-functions.php:232
+msgid "White"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:234
+#: plugins/vc/vc-core-functions.php:233
+msgid "Orange"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:235
+#: plugins/vc/vc-core-functions.php:234
+msgid "Green"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:236
+#: plugins/vc/vc-core-functions.php:235
+msgid "Turquoise"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:237
+#: plugins/vc/vc-core-functions.php:236
+msgid "Violet"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:238
+#: plugins/vc/vc-core-functions.php:237
+msgid "Pink"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:239
+#: plugins/vc/vc-core-functions.php:238
+msgid "Grey blue"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:240
+#: plugins/vc/vc-core-functions.php:239
+msgid "Red"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:241
+#: plugins/vc/vc-core-functions.php:240
+msgid "Yellow"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:242
+#: plugins/vc/vc-core-functions.php:241
+msgid "Blue"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:243
+#: plugins/vc/vc-core-functions.php:242
+msgid "Peacoc"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:244
+#: plugins/vc/vc-core-functions.php:243
+msgid "Chino"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:245
+#: plugins/vc/vc-core-functions.php:244
+msgid "Mulled Wine"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:246
+#: plugins/vc/vc-core-functions.php:245
+msgid "Vista Blue"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:247
+#: plugins/vc/vc-core-functions.php:246
+msgid "Grey"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:248
+#: plugins/vc/vc-core-functions.php:247
+msgid "Sky"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:249
+#: plugins/vc/vc-core-functions.php:248
+msgid "Juicy pink"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:250
+#: plugins/vc/vc-core-functions.php:249
+msgid "Sandy brown"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:251
+#: plugins/vc/vc-core-functions.php:250
+msgid "Purple"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:303
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:101
+#: plugins/vc/vc-core-functions.php:302
+#: plugins/vc/vc-params/custom-heading-params.php:101
+msgid "Gradient Red"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:304
+#: plugins/vc/vc-core-functions.php:303
+msgid "Gradient Red 2"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:305
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:102
+#: plugins/vc/vc-core-functions.php:304
+#: plugins/vc/vc-params/custom-heading-params.php:102
+msgid "Gradient Green"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:306
+#: plugins/vc/vc-core-functions.php:305
+msgid "Gradient Green Circle"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:307
+#: plugins/vc/vc-core-functions.php:306
+msgid "Gradient Orange"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:308
+#: plugins/vc/vc-core-functions.php:307
+msgid "Gradient Violet"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:321
+#: plugins/vc/vc-core-functions.php:320
+msgid "Angle"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:323
+#: plugins/vc/vc-core-functions.php:322
+msgid "Curve"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-core-functions.php:325
+#: plugins/vc/vc-core-functions.php:324
+msgid "Grunge Border"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-custom-fields.php:178
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-custom-fields.php:195
+#: plugins/vc/vc-custom-fields.php:178 plugins/vc/vc-custom-fields.php:195
+msgid "Media Library"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:14
+#: plugins/vc/vc-map/column-inner.php:14
+msgid "Inner Column"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:23
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:23
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:83
+#: plugins/vc/vc-map/column-inner.php:23 plugins/vc/vc-map/column.php:23
+#: plugins/vc/vc-map/row.php:83
+msgid "Skin Tone"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:26
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:26
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:39
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:34
+#: plugins/vc/vc-map/column-inner.php:26 plugins/vc/vc-map/column.php:26
+#: plugins/vc/vc-map/row-inner.php:39
+#: plugins/vc/vc-params/row-inner-params.php:34
+msgid "Inherit"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:38
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:38
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:52
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:173
+#: plugins/vc/vc-map/column-inner.php:38 plugins/vc/vc-map/column.php:38
+#: plugins/vc/vc-map/row-inner.php:52 plugins/vc/vc-map/row.php:173
+msgid "Border Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:44
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:45
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:58
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:179
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:43
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:350
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:96
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:104
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:103
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:344
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:357
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:397
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:410
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:424
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:384
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:575
+#: plugins/vc/vc-map/column-inner.php:44 plugins/vc/vc-map/column.php:45
+#: plugins/vc/vc-map/row-inner.php:58 plugins/vc/vc-map/row.php:179
+#: plugins/vc/vc-params/background-params.php:43
+#: plugins/vc/vc-params/background-params.php:350
+#: plugins/vc/vc-params/button-params.php:96
+#: plugins/vc/vc-params/button-params.php:104
+#: plugins/vc/vc-params/custom-heading-params.php:103
+#: plugins/vc/vc-params/icon-params.php:344
+#: plugins/vc/vc-params/icon-params.php:357
+#: plugins/vc/vc-params/icon-params.php:397
+#: plugins/vc/vc-params/icon-params.php:410
+#: plugins/vc/vc-params/icon-params.php:424
+#: plugins/vc/vc-params/row-params.php:384
+#: plugins/vc/vc-params/row-params.php:575
+msgid "Custom color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:53
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:54
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:67
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:188
+#: plugins/vc/vc-map/column-inner.php:53 plugins/vc/vc-map/column.php:54
+#: plugins/vc/vc-map/row-inner.php:67 plugins/vc/vc-map/row.php:188
+msgid "Border Custom Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:65
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:66
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:79
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:200
+#: plugins/vc/vc-map/column-inner.php:65 plugins/vc/vc-map/column.php:66
+#: plugins/vc/vc-map/row-inner.php:79 plugins/vc/vc-map/row.php:200
+msgid "Border Style"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:69
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:70
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:83
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:204
+#: plugins/vc/vc-map/column-inner.php:69 plugins/vc/vc-map/column.php:70
+#: plugins/vc/vc-map/row-inner.php:83 plugins/vc/vc-map/row.php:204
+msgid "Solid"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:70
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:71
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:84
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:205
+#: plugins/vc/vc-map/column-inner.php:70 plugins/vc/vc-map/column.php:71
+#: plugins/vc/vc-map/row-inner.php:84 plugins/vc/vc-map/row.php:205
+msgid "Dotted"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:71
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:72
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:85
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:206
+#: plugins/vc/vc-map/column-inner.php:71 plugins/vc/vc-map/column.php:72
+#: plugins/vc/vc-map/row-inner.php:85 plugins/vc/vc-map/row.php:206
+msgid "Dashed"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:72
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:73
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:86
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:207
+#: plugins/vc/vc-map/column-inner.php:72 plugins/vc/vc-map/column.php:73
+#: plugins/vc/vc-map/row-inner.php:86 plugins/vc/vc-map/row.php:207
+msgid "Double"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:73
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:74
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:87
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:208
+#: plugins/vc/vc-map/column-inner.php:73 plugins/vc/vc-map/column.php:74
+#: plugins/vc/vc-map/row-inner.php:87 plugins/vc/vc-map/row.php:208
+msgid "Groove"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:74
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:75
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:88
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:209
+#: plugins/vc/vc-map/column-inner.php:74 plugins/vc/vc-map/column.php:75
+#: plugins/vc/vc-map/row-inner.php:88 plugins/vc/vc-map/row.php:209
+msgid "Ridge"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:75
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:76
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:89
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:210
+#: plugins/vc/vc-map/column-inner.php:75 plugins/vc/vc-map/column.php:76
+#: plugins/vc/vc-map/row-inner.php:89 plugins/vc/vc-map/row.php:210
+msgid "Inset"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:76
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:77
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:90
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:211
+#: plugins/vc/vc-map/column-inner.php:76 plugins/vc/vc-map/column.php:77
+#: plugins/vc/vc-map/row-inner.php:90 plugins/vc/vc-map/row.php:211
+msgid "Outset"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:84
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:85
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:98
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:219
+#: plugins/vc/vc-map/column-inner.php:84 plugins/vc/vc-map/column.php:85
+#: plugins/vc/vc-map/row-inner.php:98 plugins/vc/vc-map/row.php:219
+msgid "Inline Style"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:87
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:88
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:101
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:222
+#: plugins/vc/vc-map/column-inner.php:87 plugins/vc/vc-map/column.php:88
+#: plugins/vc/vc-map/row-inner.php:101 plugins/vc/vc-map/row.php:222
+msgid "Additional inline CSS that will be applied to the element. (e.g: %s)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column-inner.php:94
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:95
+#: plugins/vc/vc-map/column-inner.php:94 plugins/vc/vc-map/column.php:95
+msgid "Custom Link"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:14
+#: plugins/vc/vc-map/column.php:14
+msgid "Column"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:44
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:44
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:385
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:576
+#: plugins/vc/vc-map/column.php:44
+#: plugins/vc/vc-params/background-params.php:44
+#: plugins/vc/vc-params/row-params.php:385
+#: plugins/vc/vc-params/row-params.php:576
+msgid "Transparent"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:103
+#: plugins/vc/vc-map/column.php:103
+msgid "Link Extra Class"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:111
+#: plugins/vc/vc-map/column.php:111
+msgid "Sticky"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/column.php:113
+#: plugins/vc/vc-map/column.php:113
+msgid ""
+"Check this option to stick the element at the top when scrolling. Note that "
+"this feature doesn't work if your row is set to \"equal height\" columns."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:108
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:262
+#: plugins/vc/vc-map/row-inner.php:108 plugins/vc/vc-params/row-params.php:262
+msgid "Custom Column Gap"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row-inner.php:110
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:264
+#: plugins/vc/vc-map/row-inner.php:110 plugins/vc/vc-params/row-params.php:264
+msgid "The space gap between columns."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:99
+#: plugins/vc/vc-map/row.php:99
+msgid "Video mute button (beta)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:105
+#: plugins/vc/vc-map/row.php:105
+msgid "Only if parallax is not enabled."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:111
+#: plugins/vc/vc-map/row.php:111
+msgid "Unmute video by default"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:123
+#: plugins/vc/vc-map/row.php:123
+msgid "Add Big Text Background"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:132
+#: plugins/vc/vc-map/row.php:132
+msgid "Big Text Vertical Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:135
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:25
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:36
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:103
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:123
+#: plugins/vc/vc-map/row.php:135
+#: plugins/vc/vc-params/column-inner-params.php:25
+#: plugins/vc/vc-params/column-params.php:36
+#: plugins/vc/vc-params/row-params.php:103
+#: plugins/vc/vc-params/row-params.php:123
+msgid "Middle"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:147
+#: plugins/vc/vc-map/row.php:147
+msgid "Big Text Maximum Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:242
+#: plugins/vc/vc-map/row.php:242
+msgid "No Playlist Yet"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:254
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:268
+#: plugins/vc/vc-map/row.php:254 plugins/vc/vc-map/row.php:268
+msgid "Player Bar"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:260
+#: plugins/vc/vc-map/row.php:260
+msgid "Playlist Skin"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:265
+#: plugins/vc/vc-map/row.php:265
+msgid "Transparent Light"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-map/row.php:266
+#: plugins/vc/vc-map/row.php:266
+msgid "Transparent Dark"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:20
+#: plugins/vc/vc-params/background-params.php:20
+msgid "Background type"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:24
+#: plugins/vc/vc-params/background-params.php:24
+msgid "Image and Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:25
+#: plugins/vc/vc-params/background-params.php:25
+msgid "Slideshow"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:26
+#: plugins/vc/vc-params/background-params.php:26
+msgid "Video"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:27
+#: plugins/vc/vc-params/background-params.php:27
+msgid "No Background"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:28
+#: plugins/vc/vc-params/background-params.php:28
+msgid "Post Featured Image"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:29
+#: plugins/vc/vc-params/background-params.php:29
+msgid "Default WordPress Header"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:47
+#: plugins/vc/vc-params/background-params.php:47
+msgid "Select a background color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:74
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:194
+#: plugins/vc/vc-params/background-params.php:74
+#: plugins/vc/vc-params/custom-heading-params.php:194
+msgid "Background Image"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:90
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:210
+#: plugins/vc/vc-params/background-params.php:90
+#: plugins/vc/vc-params/custom-heading-params.php:210
+msgid "center center"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:91
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:211
+#: plugins/vc/vc-params/background-params.php:91
+#: plugins/vc/vc-params/custom-heading-params.php:211
+msgid "center top"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:92
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:212
+#: plugins/vc/vc-params/background-params.php:92
+#: plugins/vc/vc-params/custom-heading-params.php:212
+msgid "left top"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:93
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:213
+#: plugins/vc/vc-params/background-params.php:93
+#: plugins/vc/vc-params/custom-heading-params.php:213
+msgid "right top"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:94
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:214
+#: plugins/vc/vc-params/background-params.php:94
+#: plugins/vc/vc-params/custom-heading-params.php:214
+msgid "center bottom"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:95
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:215
+#: plugins/vc/vc-params/background-params.php:95
+#: plugins/vc/vc-params/custom-heading-params.php:215
+msgid "left bottom"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:96
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:216
+#: plugins/vc/vc-params/background-params.php:96
+#: plugins/vc/vc-params/custom-heading-params.php:216
+msgid "right bottom"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:97
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:217
+#: plugins/vc/vc-params/background-params.php:97
+#: plugins/vc/vc-params/custom-heading-params.php:217
+msgid "left center"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:98
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:218
+#: plugins/vc/vc-params/background-params.php:98
+#: plugins/vc/vc-params/custom-heading-params.php:218
+msgid "right center"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:114
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:233
+#: plugins/vc/vc-params/background-params.php:114
+#: plugins/vc/vc-params/custom-heading-params.php:233
+msgid "no repeat"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:115
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:234
+#: plugins/vc/vc-params/background-params.php:115
+#: plugins/vc/vc-params/custom-heading-params.php:234
+msgid "repeat"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:116
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:235
+#: plugins/vc/vc-params/background-params.php:116
+#: plugins/vc/vc-params/custom-heading-params.php:235
+msgid "repeat-x"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:117
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:236
+#: plugins/vc/vc-params/background-params.php:117
+#: plugins/vc/vc-params/custom-heading-params.php:236
+msgid "repeat-y"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:130
+#: plugins/vc/vc-params/background-params.php:130
+msgid "Background Size"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:133
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:252
+#: plugins/vc/vc-params/background-params.php:133
+#: plugins/vc/vc-params/custom-heading-params.php:252
+msgid "cover"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:134
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:251
+#: plugins/vc/vc-params/background-params.php:134
+#: plugins/vc/vc-params/custom-heading-params.php:251
+msgid "default"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:135
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:253
+#: plugins/vc/vc-params/background-params.php:135
+#: plugins/vc/vc-params/custom-heading-params.php:253
+msgid "contain"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:147
+#: plugins/vc/vc-params/background-params.php:147
+msgid "Background Effect"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:154
+#: plugins/vc/vc-params/background-params.php:154
+msgid "Zoom"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:155
+#: plugins/vc/vc-params/background-params.php:155
+msgid "Fixed"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:156
+#: plugins/vc/vc-params/background-params.php:156
+msgid "Marquee"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:157
+#: plugins/vc/vc-params/background-params.php:157
+msgid "Blur"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:170
+#: plugins/vc/vc-params/background-params.php:170
+msgid "Marquee Image Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:173
+#: plugins/vc/vc-params/background-params.php:173
+msgid "stretch"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:174
+#: plugins/vc/vc-params/background-params.php:174
+msgid "top"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:175
+#: plugins/vc/vc-params/background-params.php:175
+msgid "middle"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:176
+#: plugins/vc/vc-params/background-params.php:176
+msgid "bottom"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:188
+#: plugins/vc/vc-params/background-params.php:188
+msgid "LazyLoad"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:217
+#: plugins/vc/vc-params/background-params.php:217
+msgid "Video Start Time"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:220
+#: plugins/vc/vc-params/background-params.php:220
+msgid "Set at which second the video will start (beta)."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:231
+#: plugins/vc/vc-params/background-params.php:231
+msgid "Video End Time"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:234
+#: plugins/vc/vc-params/background-params.php:234
+msgid "Set at which second the video will end (beta)."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:245
+#: plugins/vc/vc-params/background-params.php:245
+msgid "Video Parallax"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:258
+#: plugins/vc/vc-params/background-params.php:258
+msgid "Loop video."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:270
+#: plugins/vc/vc-params/background-params.php:270
+msgid ""
+"Beta: If set to \"No\", the video will stop at the end only for YouTube "
+"video when parallax is not enabled."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:275
+#: plugins/vc/vc-params/background-params.php:275
+msgid "Video Image Fallback"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:278
+#: plugins/vc/vc-params/background-params.php:278
+msgid "An image to display when the video is loading."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:289
+#: plugins/vc/vc-params/background-params.php:289
+msgid "Video Image Mobile Fallback"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:292
+#: plugins/vc/vc-params/background-params.php:292
+msgid ""
+"An image to display when the video can't be played. The image above will be "
+"used if empty."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:304
+#: plugins/vc/vc-params/background-params.php:304
+msgid "Slideshow Images"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:317
+#: plugins/vc/vc-params/background-params.php:317
+msgid "Slideshow Speed"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:319
+#: plugins/vc/vc-params/background-params.php:319
+msgid "In milliseconds."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:333
+#: plugins/vc/vc-params/background-params.php:333
+msgid "Add Overlay"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:344
+#: plugins/vc/vc-params/background-params.php:344
+msgid "Overlay Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:347
+#: plugins/vc/vc-params/background-params.php:347
+msgid "Auto"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:353
+#: plugins/vc/vc-params/background-params.php:353
+msgid "Select an overlay color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:365
+#: plugins/vc/vc-params/background-params.php:365
+msgid "Overlay Custom Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:378
+#: plugins/vc/vc-params/background-params.php:378
+msgid "Overlay Opacity in Percent"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:394
+#: plugins/vc/vc-params/background-params.php:394
+msgid "Add Top Shape Divider"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:406
+#: plugins/vc/vc-params/background-params.php:406
+msgid "Add Bottom Shape Divider"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/background-params.php:419
+#: plugins/vc/vc-params/background-params.php:419
+msgid "Add Particles"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:65
+#: plugins/vc/vc-params/button-params.php:65
+msgid "Button"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:66
+#: plugins/vc/vc-params/button-params.php:66
+msgid "Eye catching button"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:77
+#: plugins/vc/vc-params/button-params.php:77
+msgid "My Button"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:83
+#: plugins/vc/vc-params/button-params.php:83
+msgid "URL (Link)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:85
+#: plugins/vc/vc-params/button-params.php:85
+msgid "Add link to button."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:98
+#: plugins/vc/vc-params/button-params.php:98
+msgid "Select button color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:106
+#: plugins/vc/vc-params/button-params.php:106
+msgid "Select custom button color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:115
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:308
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:511
+#: plugins/vc/vc-params/button-params.php:115
+#: plugins/vc/vc-params/row-params.php:308
+#: plugins/vc/vc-params/row-params.php:511
+msgid "Shape"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:116
+#: plugins/vc/vc-params/button-params.php:116
+msgid "Select button shape."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:121
+#: plugins/vc/vc-params/button-params.php:121
+msgid "Round"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:122
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:373
+#: plugins/vc/vc-params/button-params.php:122
+#: plugins/vc/vc-params/icon-params.php:373
+msgid "Square"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:123
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:374
+#: plugins/vc/vc-params/button-params.php:123
+#: plugins/vc/vc-params/icon-params.php:374
+msgid "Rounded"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:124
+#: plugins/vc/vc-params/button-params.php:124
+msgid "Outline Standard"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:125
+#: plugins/vc/vc-params/button-params.php:125
+msgid "Outline Round"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:126
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:376
+#: plugins/vc/vc-params/button-params.php:126
+#: plugins/vc/vc-params/icon-params.php:376
+msgid "Outline Square"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:127
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:377
+#: plugins/vc/vc-params/button-params.php:127
+#: plugins/vc/vc-params/icon-params.php:377
+msgid "Outline Rounded"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:129
+#: plugins/vc/vc-params/button-params.php:129
+msgid "Select background shape and style for button."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:151
+#: plugins/vc/vc-params/button-params.php:151
+msgid "Select button display size."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:166
+#: plugins/vc/vc-params/button-params.php:166
+msgid "Select button alignment."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:169
+#: plugins/vc/vc-params/button-params.php:169
+msgid "Inline"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:178
+#: plugins/vc/vc-params/button-params.php:178
+msgid "Set full width button?"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:188
+#: plugins/vc/vc-params/button-params.php:188
+msgid "Hover effect"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:192
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:451
+#: plugins/vc/vc-params/button-params.php:192
+#: plugins/vc/vc-params/icon-params.php:451
+msgid "Opacity"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:193
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:201
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:224
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:242
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:259
+#: plugins/vc/vc-params/button-params.php:193
+#: plugins/vc/vc-params/custom-heading-params.php:201
+#: plugins/vc/vc-params/custom-heading-params.php:224
+#: plugins/vc/vc-params/custom-heading-params.php:242
+#: plugins/vc/vc-params/custom-heading-params.php:259
+msgid "Background"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:194
+#: plugins/vc/vc-params/button-params.php:194
+msgid "Up"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:195
+#: plugins/vc/vc-params/button-params.php:195
+msgid "Fill Vertical"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:196
+#: plugins/vc/vc-params/button-params.php:196
+msgid "Fill Horizontal"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:203
+#: plugins/vc/vc-params/button-params.php:203
+msgid "Add icon?"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:209
+#: plugins/vc/vc-params/button-params.php:209
+msgid "Icon Alignment"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:210
+#: plugins/vc/vc-params/button-params.php:210
+msgid "Select icon alignment."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:224
+#: plugins/vc/vc-params/button-params.php:224
+msgid "Reveal Icon on Hover"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:225
+#: plugins/vc/vc-params/button-params.php:225
+msgid "The icon will be visible on hover only."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/button-params.php:248
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:610
+#: plugins/vc/vc-params/button-params.php:248
+#: plugins/vc/vc-params/icon-params.php:610
+msgid "Scroll to anchor?"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:20
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:31
+#: plugins/vc/vc-params/column-inner-params.php:20
+#: plugins/vc/vc-params/column-params.php:31
+msgid "Vertical Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:28
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:39
+#: plugins/vc/vc-params/column-inner-params.php:28
+#: plugins/vc/vc-params/column-params.php:39
+msgid "Select the vertical position of the content."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:33
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:44
+#: plugins/vc/vc-params/column-inner-params.php:33
+#: plugins/vc/vc-params/column-params.php:44
+msgid "Horizontal Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:40
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:79
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:51
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:90
+#: plugins/vc/vc-params/column-inner-params.php:40
+#: plugins/vc/vc-params/column-inner-params.php:79
+#: plugins/vc/vc-params/column-params.php:51
+#: plugins/vc/vc-params/column-params.php:90
+msgid "Select the horizontal position of the content."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:45
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:56
+#: plugins/vc/vc-params/column-inner-params.php:45
+#: plugins/vc/vc-params/column-params.php:56
+msgid "Default Text Alignment"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:53
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:64
+#: plugins/vc/vc-params/column-inner-params.php:53
+#: plugins/vc/vc-params/column-params.php:64
+msgid ""
+"Specify the text alignment inside the column. It can be overwritten in some "
+"elements."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:58
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:69
+#: plugins/vc/vc-params/column-inner-params.php:58
+#: plugins/vc/vc-params/column-params.php:69
+msgid "Content Min Height"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:65
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:76
+#: plugins/vc/vc-params/column-inner-params.php:65
+#: plugins/vc/vc-params/column-params.php:76
+msgid "Content Max Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:72
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:83
+#: plugins/vc/vc-params/column-inner-params.php:72
+#: plugins/vc/vc-params/column-params.php:83
+msgid "Column Style"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:76
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:87
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:51
+#: plugins/vc/vc-params/column-inner-params.php:76
+#: plugins/vc/vc-params/column-params.php:87
+#: plugins/vc/vc-params/row-params.php:51
+msgid "Box Shadow"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:77
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:88
+#: plugins/vc/vc-params/column-inner-params.php:77
+#: plugins/vc/vc-params/column-params.php:88
+msgid "Boxed with Hover Effect"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:88
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:99
+#: plugins/vc/vc-params/column-inner-params.php:88
+#: plugins/vc/vc-params/column-params.php:99
+msgid "1 column - 1/12"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:89
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:100
+#: plugins/vc/vc-params/column-inner-params.php:89
+#: plugins/vc/vc-params/column-params.php:100
+msgid "2 columns - 1/6"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:90
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:101
+#: plugins/vc/vc-params/column-inner-params.php:90
+#: plugins/vc/vc-params/column-params.php:101
+msgid "3 columns - 1/4"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:91
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:102
+#: plugins/vc/vc-params/column-inner-params.php:91
+#: plugins/vc/vc-params/column-params.php:102
+msgid "4 columns - 1/3"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:92
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:103
+#: plugins/vc/vc-params/column-inner-params.php:92
+#: plugins/vc/vc-params/column-params.php:103
+msgid "5 columns - 5/12"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:93
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:104
+#: plugins/vc/vc-params/column-inner-params.php:93
+#: plugins/vc/vc-params/column-params.php:104
+msgid "6 columns - 1/2"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:94
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:105
+#: plugins/vc/vc-params/column-inner-params.php:94
+#: plugins/vc/vc-params/column-params.php:105
+msgid "7 columns - 7/12"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:95
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:106
+#: plugins/vc/vc-params/column-inner-params.php:95
+#: plugins/vc/vc-params/column-params.php:106
+msgid "8 columns - 2/3"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:96
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:107
+#: plugins/vc/vc-params/column-inner-params.php:96
+#: plugins/vc/vc-params/column-params.php:107
+msgid "9 columns - 3/4"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:97
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:108
+#: plugins/vc/vc-params/column-inner-params.php:97
+#: plugins/vc/vc-params/column-params.php:108
+msgid "10 columns - 5/6"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:98
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:109
+#: plugins/vc/vc-params/column-inner-params.php:98
+#: plugins/vc/vc-params/column-params.php:109
+msgid "11 columns - 11/12"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:99
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:110
+#: plugins/vc/vc-params/column-inner-params.php:99
+#: plugins/vc/vc-params/column-params.php:110
+msgid "12 columns - 1/1"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-inner-params.php:102
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:113
+#: plugins/vc/vc-params/column-inner-params.php:102
+#: plugins/vc/vc-params/column-params.php:113
+msgid "Select column width."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:19
+#: plugins/vc/vc-params/column-params.php:19
+msgid "Content type"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:22
+#: plugins/vc/vc-params/column-params.php:22
+msgid "Text (padding)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:24
+#: plugins/vc/vc-params/column-params.php:24
+msgid "Media (no padding)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:26
+#: plugins/vc/vc-params/column-params.php:26
+msgid "Select type of content you will insert."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:120
+#: plugins/vc/vc-params/column-params.php:120
+msgid "Shift X-Axis"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:133
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:223
+#: plugins/vc/vc-params/column-params.php:133
+#: plugins/vc/vc-params/row-params.php:223
+msgid "Shift Y-Axis"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/column-params.php:145
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:235
+#: plugins/vc/vc-params/column-params.php:145
+#: plugins/vc/vc-params/row-params.php:235
+msgid "Custom Z-Index"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:32
+#: plugins/vc/vc-params/custom-heading-params.php:32
+msgid "My Headline"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:39
+#: plugins/vc/vc-params/custom-heading-params.php:39
+msgid "Font Size"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:86
+#: plugins/vc/vc-params/custom-heading-params.php:86
+msgid "Center Align on Mobile"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:95
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:113
+#: plugins/vc/vc-params/custom-heading-params.php:95
+#: plugins/vc/vc-params/custom-heading-params.php:113
+msgid "Text Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:100
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:340
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:393
+#: plugins/vc/vc-params/custom-heading-params.php:100
+#: plugins/vc/vc-params/icon-params.php:340
+#: plugins/vc/vc-params/icon-params.php:393
+msgid "Default color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:107
+#: plugins/vc/vc-params/custom-heading-params.php:107
+msgid "Select a text color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:167
+#: plugins/vc/vc-params/custom-heading-params.php:167
+msgid "Tag"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/custom-heading-params.php:188
+#: plugins/vc/vc-params/custom-heading-params.php:188
+msgid "Add Image Background?"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:20
+#: plugins/vc/vc-params/icon-params.php:20
+msgid "Icon Box"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:21
+#: plugins/vc/vc-params/icon-params.php:21
+msgid "Icon box from icon library"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:29
+#: plugins/vc/vc-params/icon-params.php:29
+msgid "Icon Type"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:31
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:70
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:85
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:101
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:117
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:133
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:165
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:181
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:197
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:212
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:228
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:244
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:260
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:276
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:292
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:319
+#: plugins/vc/vc-params/icon-params.php:31
+#: plugins/vc/vc-params/icon-params.php:70
+#: plugins/vc/vc-params/icon-params.php:85
+#: plugins/vc/vc-params/icon-params.php:101
+#: plugins/vc/vc-params/icon-params.php:117
+#: plugins/vc/vc-params/icon-params.php:133
+#: plugins/vc/vc-params/icon-params.php:165
+#: plugins/vc/vc-params/icon-params.php:181
+#: plugins/vc/vc-params/icon-params.php:197
+#: plugins/vc/vc-params/icon-params.php:212
+#: plugins/vc/vc-params/icon-params.php:228
+#: plugins/vc/vc-params/icon-params.php:244
+#: plugins/vc/vc-params/icon-params.php:260
+#: plugins/vc/vc-params/icon-params.php:276
+#: plugins/vc/vc-params/icon-params.php:292
+#: plugins/vc/vc-params/icon-params.php:319
+msgid "Icon"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:32
+#: plugins/vc/vc-params/icon-params.php:32
+msgid "Animated Icon"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:41
+#: plugins/vc/vc-params/icon-params.php:41
+msgid "Icon library"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:43
+#: plugins/vc/vc-params/icon-params.php:43
+msgid "Font Awesome"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:44
+#: plugins/vc/vc-params/icon-params.php:44
+msgid "Linearcons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:45
+#: plugins/vc/vc-params/icon-params.php:45
+msgid "Linea Icons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:46
+#: plugins/vc/vc-params/icon-params.php:46
+msgid "Elegant Icons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:47
+#: plugins/vc/vc-params/icon-params.php:47
+msgid "Ionicons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:48
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:149
+#: plugins/vc/vc-params/icon-params.php:48
+#: plugins/vc/vc-params/icon-params.php:149
+msgid "Dripicons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:49
+#: plugins/vc/vc-params/icon-params.php:49
+msgid "Open Iconic"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:50
+#: plugins/vc/vc-params/icon-params.php:50
+msgid "Typicons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:51
+#: plugins/vc/vc-params/icon-params.php:51
+msgid "Entypo"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:52
+#: plugins/vc/vc-params/icon-params.php:52
+msgid "Linecons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:54
+#: plugins/vc/vc-params/icon-params.php:54
+msgid "Socicon"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:55
+#: plugins/vc/vc-params/icon-params.php:55
+msgid "Material"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:56
+#: plugins/vc/vc-params/icon-params.php:56
+msgid "Iconmonstr Iconic Font"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:57
+#: plugins/vc/vc-params/icon-params.php:57
+msgid "Wolf Rare Icons"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:61
+#: plugins/vc/vc-params/icon-params.php:61
+msgid "Select icon library."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:81
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:97
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:113
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:129
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:145
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:161
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:177
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:193
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:224
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:240
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:256
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:272
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:288
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:304
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:331
+#: plugins/vc/vc-params/icon-params.php:81
+#: plugins/vc/vc-params/icon-params.php:97
+#: plugins/vc/vc-params/icon-params.php:113
+#: plugins/vc/vc-params/icon-params.php:129
+#: plugins/vc/vc-params/icon-params.php:145
+#: plugins/vc/vc-params/icon-params.php:161
+#: plugins/vc/vc-params/icon-params.php:177
+#: plugins/vc/vc-params/icon-params.php:193
+#: plugins/vc/vc-params/icon-params.php:224
+#: plugins/vc/vc-params/icon-params.php:240
+#: plugins/vc/vc-params/icon-params.php:256
+#: plugins/vc/vc-params/icon-params.php:272
+#: plugins/vc/vc-params/icon-params.php:288
+#: plugins/vc/vc-params/icon-params.php:304
+#: plugins/vc/vc-params/icon-params.php:331
+msgid "Select icon from library."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:309
+#: plugins/vc/vc-params/icon-params.php:309
+msgid "Icon Image"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:336
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:389
+#: plugins/vc/vc-params/icon-params.php:336
+#: plugins/vc/vc-params/icon-params.php:389
+msgid "Icon color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:347
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:400
+#: plugins/vc/vc-params/icon-params.php:347
+#: plugins/vc/vc-params/icon-params.php:400
+msgid "Select icon color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:359
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:412
+#: plugins/vc/vc-params/icon-params.php:359
+#: plugins/vc/vc-params/icon-params.php:412
+msgid "Select custom icon color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:368
+#: plugins/vc/vc-params/icon-params.php:368
+msgid "Background shape"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:372
+#: plugins/vc/vc-params/icon-params.php:372
+msgid "Circle"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:375
+#: plugins/vc/vc-params/icon-params.php:375
+msgid "Outline Circle"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:378
+#: plugins/vc/vc-params/icon-params.php:378
+msgid "Ban"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:380
+#: plugins/vc/vc-params/icon-params.php:380
+msgid "Select background shape and style for icon."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:427
+#: plugins/vc/vc-params/icon-params.php:427
+msgid "Select background color for icon."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:436
+#: plugins/vc/vc-params/icon-params.php:436
+msgid "Custom background color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:438
+#: plugins/vc/vc-params/icon-params.php:438
+msgid "Select custom icon background color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:447
+#: plugins/vc/vc-params/icon-params.php:447
+msgid "Hover Transition"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:452
+#: plugins/vc/vc-params/icon-params.php:452
+msgid "Inset border"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:453
+#: plugins/vc/vc-params/icon-params.php:453
+msgid "Sonar"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:454
+#: plugins/vc/vc-params/icon-params.php:454
+msgid "Fill"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:455
+#: plugins/vc/vc-params/icon-params.php:455
+msgid "Pop"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:456
+#: plugins/vc/vc-params/icon-params.php:456
+msgid "Rotate"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:473
+#: plugins/vc/vc-params/icon-params.php:473
+msgid "Left from Title"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:475
+#: plugins/vc/vc-params/icon-params.php:475
+msgid "Right from Title"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:482
+#: plugins/vc/vc-params/icon-params.php:482
+msgid "Container Alignement"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:494
+#: plugins/vc/vc-params/icon-params.php:494
+msgid "Text Alignement"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:512
+#: plugins/vc/vc-params/icon-params.php:512
+msgid "Very Large"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:513
+#: plugins/vc/vc-params/icon-params.php:513
+msgid "Tiny"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:521
+#: plugins/vc/vc-params/icon-params.php:521
+msgid "My title"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:528
+#: plugins/vc/vc-params/icon-params.php:528
+msgid "Title Font Size"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:536
+#: plugins/vc/vc-params/icon-params.php:536
+msgid "Title Font Family"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:555
+#: plugins/vc/vc-params/icon-params.php:555
+msgid "Title Tag"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/icon-params.php:571
+#: plugins/vc/vc-params/icon-params.php:571
+msgid "Title Letter Spacing"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:31
+#: plugins/vc/vc-params/row-inner-params.php:31
+msgid "Row Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:35
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:65
+#: plugins/vc/vc-params/row-inner-params.php:35
+#: plugins/vc/vc-params/row-params.php:65
+msgid "Standard width (%s centered)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:36
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:66
+#: plugins/vc/vc-params/row-inner-params.php:36
+#: plugins/vc/vc-params/row-params.php:66
+msgid "Small width (%s centered)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:43
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:80
+#: plugins/vc/vc-params/row-inner-params.php:43
+#: plugins/vc/vc-params/row-params.php:80
+msgid "Min Height"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:46
+#: plugins/vc/vc-params/row-inner-params.php:46
+msgid "Insert the row minimum height in pixel."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:117
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:199
+#: plugins/vc/vc-params/row-inner-params.php:117
+#: plugins/vc/vc-params/row-params.php:199
+msgid "Visibility"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:120
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:202
+#: plugins/vc/vc-params/row-inner-params.php:120
+#: plugins/vc/vc-params/row-params.php:202
+msgid "Always visible"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:121
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:203
+#: plugins/vc/vc-params/row-inner-params.php:121
+#: plugins/vc/vc-params/row-params.php:203
+msgid "Hide on tablet and mobile"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:122
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:204
+#: plugins/vc/vc-params/row-inner-params.php:122
+#: plugins/vc/vc-params/row-params.php:204
+msgid "Hide on mobile"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:123
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:205
+#: plugins/vc/vc-params/row-inner-params.php:123
+#: plugins/vc/vc-params/row-params.php:205
+msgid "Show on tablet and mobile only"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:124
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:206
+#: plugins/vc/vc-params/row-inner-params.php:124
+#: plugins/vc/vc-params/row-params.php:206
+msgid "Show on mobile only"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:125
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:207
+#: plugins/vc/vc-params/row-inner-params.php:125
+#: plugins/vc/vc-params/row-params.php:207
+msgid "Always hidden"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:132
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:248
+#: plugins/vc/vc-params/row-inner-params.php:132
+#: plugins/vc/vc-params/row-params.php:248
+msgid "Extra class name"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:134
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:250
+#: plugins/vc/vc-params/row-inner-params.php:134
+#: plugins/vc/vc-params/row-params.php:250
+msgid ""
+"Style particular content element differently - add a class name and refer "
+"to it in custom CSS."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:139
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:213
+#: plugins/vc/vc-params/row-inner-params.php:139
+#: plugins/vc/vc-params/row-params.php:213
+msgid "Disable row"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-inner-params.php:142
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:216
+#: plugins/vc/vc-params/row-inner-params.php:142
+#: plugins/vc/vc-params/row-params.php:216
+msgid ""
+"If checked the row won't be visible on the public side of your website. You "
+"can switch it back any time."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:20
+#: plugins/vc/vc-params/row-params.php:20
+msgid "Column Type"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:24
+#: plugins/vc/vc-params/row-params.php:24
+msgid "Blocks"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:27
+#: plugins/vc/vc-params/row-params.php:27
+msgid "This will set a default style for your columns."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:33
+#: plugins/vc/vc-params/row-params.php:33
+msgid "Container Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:36
+#: plugins/vc/vc-params/row-params.php:36
+msgid "Wide"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:37
+#: plugins/vc/vc-params/row-params.php:37
+msgid "Boxed"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:38
+#: plugins/vc/vc-params/row-params.php:38
+msgid "Small Boxed"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:39
+#: plugins/vc/vc-params/row-params.php:39
+msgid "Large Boxed"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:62
+#: plugins/vc/vc-params/row-params.php:62
+msgid "Content Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:67
+#: plugins/vc/vc-params/row-params.php:67
+msgid "Large width (%s centered)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:68
+#: plugins/vc/vc-params/row-params.php:68
+msgid "Full width (%s)"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:83
+#: plugins/vc/vc-params/row-params.php:83
+msgid "Insert the row minimum height."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:89
+#: plugins/vc/vc-params/row-params.php:89
+msgid "Full height row?"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:91
+#: plugins/vc/vc-params/row-params.php:91
+msgid "If checked row will be set to full height."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:99
+#: plugins/vc/vc-params/row-params.php:99
+msgid "Columns Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:106
+#: plugins/vc/vc-params/row-params.php:106
+msgid "Stretch"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:108
+#: plugins/vc/vc-params/row-params.php:108
+msgid "Select columns position within row."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:118
+#: plugins/vc/vc-params/row-params.php:118
+msgid "Content Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:126
+#: plugins/vc/vc-params/row-params.php:126
+msgid "Select content position within columns."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:135
+#: plugins/vc/vc-params/row-params.php:135
+msgid "Add pointing down arrow"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:136
+#: plugins/vc/vc-params/row-params.php:136
+msgid "Allow user to scroll to the next section when clicking on the arrow"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:157
+#: plugins/vc/vc-params/row-params.php:157
+msgid "Arrow Caption"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:159
+#: plugins/vc/vc-params/row-params.php:159
+msgid "Continue"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:169
+#: plugins/vc/vc-params/row-params.php:169
+msgid "Arrow Alignement"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:185
+#: plugins/vc/vc-params/row-params.php:185
+msgid "Equal height"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:187
+#: plugins/vc/vc-params/row-params.php:187
+msgid "If checked columns will be set to equal height."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:273
+#: plugins/vc/vc-params/row-params.php:273
+msgid "Section name"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:275
+#: plugins/vc/vc-params/row-params.php:275
+msgid "Required for the onepage scroll, this gives the name to the section."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:295
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:486
+#: plugins/vc/vc-params/row-params.php:295
+#: plugins/vc/vc-params/row-params.php:486
+msgid "Custom Image"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:299
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:312
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:324
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:340
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:356
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:370
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:389
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:406
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:416
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:437
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:450
+#: plugins/vc/vc-params/row-params.php:299
+#: plugins/vc/vc-params/row-params.php:312
+#: plugins/vc/vc-params/row-params.php:324
+#: plugins/vc/vc-params/row-params.php:340
+#: plugins/vc/vc-params/row-params.php:356
+#: plugins/vc/vc-params/row-params.php:370
+#: plugins/vc/vc-params/row-params.php:389
+#: plugins/vc/vc-params/row-params.php:406
+#: plugins/vc/vc-params/row-params.php:416
+#: plugins/vc/vc-params/row-params.php:437
+#: plugins/vc/vc-params/row-params.php:450
+msgid "Divider Top"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:333
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:524
+#: plugins/vc/vc-params/row-params.php:333
+#: plugins/vc/vc-params/row-params.php:524
+msgid "Shape Inverted"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:349
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:540
+#: plugins/vc/vc-params/row-params.php:349
+#: plugins/vc/vc-params/row-params.php:540
+msgid "Shape Flip"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:365
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:556
+#: plugins/vc/vc-params/row-params.php:365
+#: plugins/vc/vc-params/row-params.php:556
+msgid "Shape Height"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:367
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:558
+#: plugins/vc/vc-params/row-params.php:367
+#: plugins/vc/vc-params/row-params.php:558
+msgid "Enter a value in % or px."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:379
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:570
+#: plugins/vc/vc-params/row-params.php:379
+#: plugins/vc/vc-params/row-params.php:570
+msgid "Shape Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:388
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:579
+#: plugins/vc/vc-params/row-params.php:388
+#: plugins/vc/vc-params/row-params.php:579
+msgid "Select a color."
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:400
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:591
+#: plugins/vc/vc-params/row-params.php:400
+#: plugins/vc/vc-params/row-params.php:591
+msgid "Shape Custom Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:412
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:603
+#: plugins/vc/vc-params/row-params.php:412
+#: plugins/vc/vc-params/row-params.php:603
+msgid "Shape Opacity"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:429
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:620
+#: plugins/vc/vc-params/row-params.php:429
+#: plugins/vc/vc-params/row-params.php:620
+msgid "Shape Ratio"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:446
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:637
+#: plugins/vc/vc-params/row-params.php:446
+#: plugins/vc/vc-params/row-params.php:637
+msgid "Shape Z-Index"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:490
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:502
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:515
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:531
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:547
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:561
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:580
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:597
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:607
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:628
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/row-params.php:641
+#: plugins/vc/vc-params/row-params.php:490
+#: plugins/vc/vc-params/row-params.php:502
+#: plugins/vc/vc-params/row-params.php:515
+#: plugins/vc/vc-params/row-params.php:531
+#: plugins/vc/vc-params/row-params.php:547
+#: plugins/vc/vc-params/row-params.php:561
+#: plugins/vc/vc-params/row-params.php:580
+#: plugins/vc/vc-params/row-params.php:597
+#: plugins/vc/vc-params/row-params.php:607
+#: plugins/vc/vc-params/row-params.php:628
+#: plugins/vc/vc-params/row-params.php:641
+msgid "Divider Bottom"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-params/style-params.php:19
+#: plugins/vc/vc-params/style-params.php:19
+msgid "CSS box"
+msgstr ""
+
+#: pack/wolf-core/wolf-core.php:248 wolf-core.php:251
+msgid ""
+"\"%1$s\" requires <a href=\"%2$s\" target=\"_blank\">%3$s</a> or <a "
+"href=\"%4$s\" target=\"_blank\">%5$s</a> to be installed and activated."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Wolf Core"
+msgstr ""
+
+#: pack/wolf-core/wolf-core.php:253 pack/wolf-core/wolf-core.php:280
+#: pack/wolf-core/wolf-core.php:332 wolf-core.php:256 wolf-core.php:283
+#: wolf-core.php:335
+msgid "WPBakery Page Builder"
+msgstr ""
+
+#: pack/wolf-core/wolf-core.php:275 wolf-core.php:278
+msgid ""
+"\"%1$s\" requires to choose between \"<a href=\"%2$s\" "
+"target=\"_blank\">%3$s</a>\" or \"<a href=\"%4$s\" "
+"target=\"_blank\">%5$s</a>\" to be activated. You can not use both at the "
+"same time."
+msgstr ""
+
+#: pack/wolf-core/wolf-core.php:303 pack/wolf-core/wolf-core.php:330
+#: pack/wolf-core/wolf-core.php:357 wolf-core.php:306 wolf-core.php:333
+#: wolf-core.php:360
+#. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
+#. translators: 1: Plugin name 2: PHP 3: Required PHP version
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: pack/wolf-core/wolf-core.php:358 wolf-core.php:361
+msgid "Wolf Elementor Extension"
+msgstr ""
+
+#: pack/wolf-core/wolf-core.php:359 wolf-core.php:362
+msgid "PHP"
+msgstr ""
+
+#: plugins/helpers/helpers.php:27
+msgid "Additional CSS inline style"
+msgstr ""
+
+#: plugins/params/bandsintown-tracking-button.php:23
+msgid "Bandsintown Tracking Button"
+msgstr ""
+
+#: plugins/params/bandsintown-tracking-button.php:24
+msgid "Display your Bandsintown Tracking Button"
+msgstr ""
+
+#: plugins/vc/vc-core-functions.php:341
+msgid "Custom Animations"
+msgstr ""
+
+#: plugins/vc/vc-core-functions.php:420
+msgid "New Animation Engine (beta)"
+msgstr ""
+
+#: plugins/vc/vc-params/animation-params.php:92
+#: plugins/vc/vc-params/animation-params.php:94
+#: plugins/vc/vc-params/animation-params.php:103
+msgid "Animation"
+msgstr ""
+
+#: plugins/vc/vc-params/animation-params.php:100
+msgid "Animation Delay (in ms)"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wlfthm.es/wolf-core"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Core functions for Wolf Themes."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WolfThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wolfthemes.com"
+msgstr ""
+
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:6
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:7
+#: dev/node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:8
+msgctxt "a string"
+msgid "String"
+msgstr ""
+
+#: inc/google-fonts.php:65 pack/wolf-core/inc/google-fonts.php:65
+#. Translators: To add an additional character subset specific to your
+#. language, translate this to 'greek', 'cyrillic', 'devanagari' or
+#. 'vietnamese'. Do not translate into your own language.
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: pack/wolf-core/plugins/wpbakery-page-builder/vc-custom-fields.php:66
+#: plugins/vc/vc-custom-fields.php:66
+msgctxt "placeholder text"
+msgid ""
+"And there was silence over the oceans. When a voice came thundering from "
+"above."
+msgstr ""

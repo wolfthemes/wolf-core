@@ -68,107 +68,107 @@ function wolf_core_get_the_id() {
 function wolf_core_get_elements() {
 
 	$wolf_core_elements = array(
-		//'accordion',
-		//'accordion-tab',
-		//'admin-helper-text',
-		//'advanced-slider',
-		//'advanced-slide',
-		//'album-disc',
-		//'album-tracklist',
-		//'album-tracklist-item',
-		//'anchor',
-		//'anything-slider',
-		//'anything-slide',
-		//'audio',
-		//'audio-embed',
-		//'bandsintown-events', // added in themes
-		//'bandsintown-tracking-button', // added in themes
-		//'banner-gallery',
-		//'banner-product',
-		//'banner',
+		// 'accordion',
+		// 'accordion-tab',
+		// 'admin-helper-text',
+		// 'advanced-slider',
+		// 'advanced-slide',
+		// 'album-disc',
+		// 'album-tracklist',
+		// 'album-tracklist-item',
+		// 'anchor',
+		// 'anything-slider',
+		// 'anything-slide',
+		// 'audio',
+		// 'audio-embed',
+		// 'bandsintown-events', // added in themes
+		// 'bandsintown-tracking-button', // added in themes
+		// 'banner-gallery',
+		// 'banner-product',
+		'banner',
 		'bigtext',
-		//'bit-artist',
+		// 'bit-artist',
 		'breadcrumb',
-		//'button',
-		//'cards-gallery',
-		//'cta',
-		//'comparison_slider',
+		// 'button',
+		// 'cards-gallery',
+		// 'cta',
+		// 'comparison_slider',
 		'content-block',
-		//'content-slider',
-		//'countdown',
-		//'counter',
-		//'current-year',
-		//'custom-heading',
-		//'discography',
-		//'dropcap',
-		//'embed-video',
-		//'empty-space',
-		//'events',
-		//'facebook-page-box',
-		//'gallery',
-		//'gmaps',
-		//'google-maps',
-		//'highlight',
-		//'hours',
-		//'hoverbox',
-		//'icon',
-		//'iframe-opener',
-		//'image-link',
-		//'image-device-slider',
-		//'info-table',
-		//'instagram-gallery',
-		//'instagram-old',
-		//'instagram',
-		//'interactive-links',
-		//'interactive-link-item',
-		//'interactive-overlays',
-		//'interactive-overlay-item',
-		//'item-price',
-		//'last-posts',
-		//'post-slider',
-		//'list',
-		//'mailchimp',
-		//'message',
-		//'music-network',
-		//'next-month',
-		//'oembed-gist',
-		//'old-instagram',
-		//'parallax-holder',
-		//'pie',
+		// 'content-slider',
+		// 'countdown',
+		// 'counter',
+		// 'current-year',
+		// 'custom-heading',
+		// 'discography',
+		// 'dropcap',
+		// 'embed-video',
+		// 'empty-space',
+		// 'events',
+		// 'facebook-page-box',
+		// 'gallery',
+		// 'gmaps',
+		// 'google-maps',
+		// 'highlight',
+		// 'hours',
+		// 'hoverbox',
+		// 'icon',
+		// 'iframe-opener',
+		// 'image-link',
+		// 'image-device-slider',
+		// 'info-table',
+		// 'instagram-gallery',
+		// 'instagram-old',
+		// 'instagram',
+		// 'interactive-links',
+		// 'interactive-link-item',
+		// 'interactive-overlays',
+		// 'interactive-overlay-item',
+		// 'item-price',
+		// 'last-posts',
+		// 'post-slider',
+		// 'list',
+		// 'mailchimp',
+		// 'message',
+		// 'music-network',
+		// 'next-month',
+		// 'oembed-gist',
+		// 'old-instagram',
+		// 'parallax-holder',
+		// 'pie',
 		'playlist',
-		//'pricing-table',
-		//'process-container',
-		//'process-item',
-		//'progress-bar',
-		//'section',
-		//'separator',
-		//'service-table',
-		//'social-icons',
-		//'social-icons-custom',
-		//'single-image',
-		//'soundcloud',
-		//'span',
-		//'spotify-player', // added in themes
-		//'spotify-follow-button', // added in themes
-		//'tabs',
-		//'tab',
-		//'team-member',
-		//'testimonials',
-		//'testimonial-slider',
-		//'testimonial-slide',
-		//'toggle',
-		//'twitter',
-		//'typed',
-		//'video',
+		// 'pricing-table',
+		// 'process-container',
+		// 'process-item',
+		// 'progress-bar',
+		// 'section',
+		// 'separator',
+		// 'service-table',
+		// 'social-icons',
+		// 'social-icons-custom',
+		// 'single-image',
+		// 'soundcloud',
+		// 'span',
+		// 'spotify-player', // added in themes
+		// 'spotify-follow-button', // added in themes
+		// 'tabs',
+		// 'tab',
+		// 'team-member',
+		// 'testimonials',
+		// 'testimonial-slider',
+		// 'testimonial-slide',
+		// 'toggle',
+		// 'twitter',
+		// 'typed',
+		// 'video',
 		'video-opener',
-		//'video-self-hosted',
-		//'videos-carousel', //  last videos from plugin carousel
+		// 'video-self-hosted',
+		// 'videos-carousel', //  last videos from plugin carousel
 		'video-preview',
-		//'videos',
-		//'waveform-player',
-		//'wc-categories',
-		//'youtube',
-		//'zigzag',
+		// 'videos',
+		// 'waveform-player',
+		// 'wc-categories',
+		// 'youtube',
+		// 'zigzag',
 	);
 
 	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
@@ -194,7 +194,7 @@ function wolf_core_get_elements() {
 	// sort by alphabetical order.
 	sort( $wolf_core_elements );
 
-	//debug( $wolf_core_elements );
+	// debug( $wolf_core_elements );
 
 	return $wolf_core_elements;
 }
@@ -368,7 +368,7 @@ function wolf_core_get_team_member_socials() {
  *  Output animated SVG image
  *
  * @param string $file The file URL.
- * @param array $args The passed arguments.
+ * @param array  $args The passed arguments.
  * @return string
  */
 function wolf_core_animated_svg( $file, $args = array() ) {
@@ -409,36 +409,36 @@ function wolf_core_animated_svg( $file, $args = array() ) {
  */
 function wolf_core_get_aos_animations() {
 	return array(
-		'fade'            => esc_html__( 'Fade', 'wolf-visual-composer' ),
-		'fade-up'         => esc_html__( 'Fade Up', 'wolf-visual-composer' ),
-		'fade-down'       => esc_html__( 'Fade Down', 'wolf-visual-composer' ),
-		'fade-left'       => esc_html__( 'Fade Left', 'wolf-visual-composer' ),
-		'fade-right'      => esc_html__( 'Fade Right', 'wolf-visual-composer' ),
-		'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-visual-composer' ),
-		'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-visual-composer' ),
-		'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-visual-composer' ),
-		'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-visual-composer' ),
+		'fade'            => esc_html__( 'Fade', 'wolf-core' ),
+		'fade-up'         => esc_html__( 'Fade Up', 'wolf-core' ),
+		'fade-down'       => esc_html__( 'Fade Down', 'wolf-core' ),
+		'fade-left'       => esc_html__( 'Fade Left', 'wolf-core' ),
+		'fade-right'      => esc_html__( 'Fade Right', 'wolf-core' ),
+		'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-core' ),
+		'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-core' ),
+		'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-core' ),
+		'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-core' ),
 
-		'flip-up'         => esc_html__( 'Flip Up', 'wolf-visual-composer' ),
-		'flip-down'       => esc_html__( 'Flip Down', 'wolf-visual-composer' ),
-		'flip-left'       => esc_html__( 'Flip Left', 'wolf-visual-composer' ),
-		'flip-right'      => esc_html__( 'Flip Right', 'wolf-visual-composer' ),
+		'flip-up'         => esc_html__( 'Flip Up', 'wolf-core' ),
+		'flip-down'       => esc_html__( 'Flip Down', 'wolf-core' ),
+		'flip-left'       => esc_html__( 'Flip Left', 'wolf-core' ),
+		'flip-right'      => esc_html__( 'Flip Right', 'wolf-core' ),
 
-		'slide-up'        => esc_html__( 'Slide Up', 'wolf-visual-composer' ),
-		'slide-down'      => esc_html__( 'Slide Down', 'wolf-visual-composer' ),
-		'slide-left'      => esc_html__( 'Slide Left', 'wolf-visual-composer' ),
-		'slide-right'     => esc_html__( 'Slide Right', 'wolf-visual-composer' ),
+		'slide-up'        => esc_html__( 'Slide Up', 'wolf-core' ),
+		'slide-down'      => esc_html__( 'Slide Down', 'wolf-core' ),
+		'slide-left'      => esc_html__( 'Slide Left', 'wolf-core' ),
+		'slide-right'     => esc_html__( 'Slide Right', 'wolf-core' ),
 
-		'zoom-in'         => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
-		'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-visual-composer' ),
-		'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-visual-composer' ),
-		'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-visual-composer' ),
-		'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-visual-composer' ),
-		'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
-		'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-visual-composer' ),
-		'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-visual-composer' ),
-		'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-visual-composer' ),
-		'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-visual-composer' ),
+		'zoom-in'         => esc_html__( 'Zoom In', 'wolf-core' ),
+		'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-core' ),
+		'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-core' ),
+		'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-core' ),
+		'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-core' ),
+		'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-core' ),
+		'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-core' ),
+		'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-core' ),
+		'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-core' ),
+		'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-core' ),
 	);
 }
 
@@ -514,7 +514,32 @@ function wolf_core_get_url_from_attachment_id( $id, $size = 'thumbnail', $fallba
 }
 
 /**
+ * Get image sizes in array to allow filtering by theme and stuff
+ *
+ * @return array
+ */
+function wolf_core_get_image_sizes() {
+
+	$wolf_core_image_sizes = array(
+		apply_filters( 'wolf_core_landscape_thumbnail_size', '600x360' ) => esc_html__( 'Landscape', 'wolf-core' ),
+		apply_filters( 'wolf_core_square_thumbnail_size', '600x600' ) => esc_html__( 'Square', 'wolf-core' ),
+		apply_filters( 'wolf_core_portrait_thumbnail_size', '300x537' ) => esc_html__( 'Portrait', 'wolf-core' ),
+		'wolf-core-XL' => esc_html__( 'Extra large', 'wolf-core' ),
+		'large'        => esc_html__( 'Large', 'wolf-core' ),
+		'medium'       => esc_html__( 'Medium', 'wolf-core' ),
+		'thumbnail'    => esc_html__( 'Thumbnail', 'wolf-core' ),
+		'full'         => esc_html__( 'Full', 'wolf-core' ),
+		'custom'       => esc_html__( 'Custom', 'wolf-core' ),
+	);
+
+	return apply_filters( 'wolf_core_image_sizes', $wolf_core_image_sizes );
+}
+
+/**
  * Get placeholder image URL
+ *
+ * @param string $img_size
+ * @return string
  */
 function wolf_core_placeholder_img_url( $img_size ) {
 
@@ -554,7 +579,7 @@ function wolf_core_placeholder_img_url( $img_size ) {
 function wolf_core_placeholder_img( $img_size, $class = '' ) {
 
 	if ( wolf_core_placeholder_img_url( $img_size ) ) {
-		return '<img class="' . wolf_core_sanitize_html_classes( $class ) . '" src="' . wolf_core_placeholder_img_url( $img_size ) . '" alt="placeholder" title="' . esc_html__( 'Image is missing', 'wolf-visual-composer' ) . '">';
+		return '<img class="' . wolf_core_sanitize_html_classes( $class ) . '" src="' . wolf_core_placeholder_img_url( $img_size ) . '" alt="placeholder" title="' . esc_html__( 'Image is missing', 'wolf-core' ) . '">';
 	}
 }
 
@@ -581,11 +606,11 @@ function wolf_core_get_breadcrumb() {
        itemprop="item" href="';
 		$output .= esc_url( home_url( '/' ) );
 		$output .= '"><span itemprop="name">';
-		// $output .= esc_html__( 'Home', 'wolf-visual-composer' );
+		// $output .= esc_html__( 'Home', 'wolf-core' );
 		if ( get_option( 'page_on_front' ) ) {
 			$output .= get_the_title( get_option( 'page_on_front' ) );
 		} else {
-			$output .= esc_html__( 'Home', 'wolf-visual-composer' );
+			$output .= esc_html__( 'Home', 'wolf-core' );
 		}
 		$output .= "</span></a><meta itemprop='position' content='" . $position++ . "' /></li>$delimiter";
 
@@ -632,7 +657,7 @@ function wolf_core_get_breadcrumb() {
 
 			$queried_object = $wp_query->get_queried_object();
 
-			$output .= $before . esc_html__( 'Products tagged &ldquo;', 'wolf-visual-composer' ) . $queried_object->name . '&rdquo;' . $after;
+			$output .= $before . esc_html__( 'Products tagged &ldquo;', 'wolf-core' ) . $queried_object->name . '&rdquo;' . $after;
 
 		} elseif ( wolf_core_is_woocommerce_page() && ! is_singular( 'product' ) && ! is_shop() ) {
 
@@ -758,12 +783,12 @@ function wolf_core_get_breadcrumb() {
 			}
 
 			// $output .= '<a href="' . get_permalink( $post->post_parent ) . '">';
-			$output .= esc_html__( 'Search', 'wolf-visual-composer' );
+			$output .= esc_html__( 'Search', 'wolf-core' );
 		}
 
 		if ( is_attachment() ) {
 
-			esc_html_e( 'Attachment', 'wolf-visual-composer' );
+			esc_html_e( 'Attachment', 'wolf-core' );
 
 			$output .= $delimiter;
 
@@ -786,7 +811,7 @@ function wolf_core_get_breadcrumb() {
 
 			$output .= $delimiter;
 
-			$output .= ( isset( $_GET['s'] ) ) ? esc_attr( $_GET['s'] ) : esc_html__( 'Search results', 'wolf-visual-composer' );
+			$output .= ( isset( $_GET['s'] ) ) ? esc_attr( $_GET['s'] ) : esc_html__( 'Search results', 'wolf-core' );
 		}
 
 		if ( is_single() ) {
@@ -915,14 +940,14 @@ function wolf_core_get_breadcrumb() {
 			} elseif ( is_singular( 'wolf_core_content_block' ) ) {
 
 				$output .= '<li itemprop="itemListElement" itemscope
-      itemtype="https://schema.org/ListItem"><span itemprop="name">' . esc_html__( 'Content Block', 'wolf-visual-composer' ) . '</span>
+      itemtype="https://schema.org/ListItem"><span itemprop="name">' . esc_html__( 'Content Block', 'wolf-core' ) . '</span>
     <meta itemprop="position" content="' . $position++ . '" /></li>';
 
 				$output .= $delimiter;
 
 			} elseif ( is_singular( 'wpm_playlist' ) ) {
 
-				$output .= esc_html__( 'Playlists', 'wolf-visual-composer' );
+				$output .= esc_html__( 'Playlists', 'wolf-core' );
 				$output .= $delimiter;
 
 			} else {
