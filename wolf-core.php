@@ -580,7 +580,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
-				require_once 'plugins/wpbakery-page-builder/vc.php';
+				require_once 'plugins/vc/vc.php';
 			}
 
 			require_once 'plugins/content-blocks/content-blocks.php';
@@ -701,7 +701,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * @return string
 		 */
 		public function vc_shortcode_template_path() {
-			return apply_filters( 'wolf_core_vc_shortcode_template_path', 'plugins/wpbakery-page-builder/templates/' );
+			return apply_filters( 'wolf_core_vc_shortcode_template_path', 'plugins/vc/templates/' );
 		}
 
 		/**

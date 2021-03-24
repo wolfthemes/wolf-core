@@ -1,0 +1,13 @@
+.wolf-core-wow {
+	visibility: hidden;
+}
+
+.wolf-core-no-animations {
+	.wolf-core-wow {
+		visibility: visible;
+	}
+}
+
+.aos-disabled {
+	visibility: hidden;
+}

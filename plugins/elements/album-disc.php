@@ -58,9 +58,6 @@ function wolf_core_album_disc( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	/* Link */
-	$link = wolf_core_process_link_atts( $link );
-
 	if ( is_array( $link ) ) {
 		$class .= ' wolf-core-album-disc-has-link';
 	}

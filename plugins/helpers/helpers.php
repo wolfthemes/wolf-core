@@ -10,9 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Animate Elements
- *
- * Filter element attributes to output animation inline CSS for VC
+ * Add inline style param
  */
 function wolf_core_add_inline_style_param() {
 	$elements = wolf_core_get_elements();
@@ -69,7 +67,7 @@ function wolf_core_animation_markup_filter() {
 				if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
 					if ( isset( $atts['css'] ) ) {
-						$atts['inline_style'] = wolf_core_shortcode_custom_style( $css );
+						$atts['inline_style'] .= wolf_core_shortcode_custom_style( $atts['css'] );
 					}
 
 					if ( isset( $atts['css_animation'] ) ) {

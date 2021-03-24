@@ -2,7 +2,7 @@
 /**
  * Wolf Core WPBakery Page Builder Core functions
  *
- * General core functions available on admin and frontend for WPB VC
+ * General core functions available on admin and frontend for WPBakeryPageBuilder
  *
  * @author WolfThemes
  * @package WolfCore/WPBakeryPageBuilder/Core
@@ -99,7 +99,6 @@ function wolf_core_convert_params_to_vc( $params ) {
 		} elseif ( 'image' === $type ) {
 
 			$vc_params['params'][ $i ]['type'] = 'attach_image';
-
 		}
 
 		if ( isset( $p['vc_dependency'] ) ) {
@@ -146,7 +145,7 @@ function wolf_core_convert_params_to_vc( $params ) {
  */
 function wolf_core_hook_template_dir() {
 
-	$template_dir   = WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/templates';
+	$template_dir   = WOLF_CORE_DIR . '/plugins/vc/templates';
 	$elements_slugs = wolf_core_get_elements();
 
 	if ( is_dir( $template_dir ) ) {
@@ -203,16 +202,16 @@ add_action( 'vc_after_init', 'wolf_core_hook_template_dir' );
  */
 function wolf_core_locate_shortcode_template( $filename ) {
 
-	if ( is_file( get_stylesheet_directory() . '/' . WOLF_CORE()->wpbpb_shortcode_template_path() . '/' . untrailingslashit( $filename ) ) ) {
+	if ( is_file( get_stylesheet_directory() . '/' . WOLF_CORE()->vc_shortcode_template_path() . '/' . untrailingslashit( $filename ) ) ) {
 
-		$file = get_stylesheet_directory() . '/' . WOLF_CORE()->wpbpb_shortcode_template_path() . '/' . untrailingslashit( $filename );
+		$file = get_stylesheet_directory() . '/' . WOLF_CORE()->vc_shortcode_template_path() . '/' . untrailingslashit( $filename );
 
-	} elseif ( is_file( get_template_directory() . '/' . WOLF_CORE()->wpbpb_shortcode_template_path() . '/' . untrailingslashit( $filename ) ) ) {
+	} elseif ( is_file( get_template_directory() . '/' . WOLF_CORE()->vc_shortcode_template_path() . '/' . untrailingslashit( $filename ) ) ) {
 
-		$file = get_template_directory() . '/' . WOLF_CORE()->wpbpb_shortcode_template_path() . '/' . untrailingslashit( $filename );
+		$file = get_template_directory() . '/' . WOLF_CORE()->vc_shortcode_template_path() . '/' . untrailingslashit( $filename );
 
 	} else {
-		$file = WOLF_CORE()->plugin_path() . '/' . WOLF_CORE()->wpbpb_shortcode_template_path() . '/' . untrailingslashit( $filename );
+		$file = WOLF_CORE()->plugin_path() . '/' . WOLF_CORE()->vc_shortcode_template_path() . '/' . untrailingslashit( $filename );
 	}
 
 	// Return what we found.
@@ -329,3 +328,106 @@ function wolf_core_get_shape_divider_options() {
 
 	return $options;
 }
+
+/**
+ * Add animations
+ *
+ * @param array $animations Animation array.
+ * @return array
+ */
+function wolf_core_add_animations( $animations ) {
+
+	$animations[] = array(
+		'label'  => esc_html__( 'Custom Animations', 'wolf-visual-composer' ),
+		'values' => array(
+			'uncoverXLeft'   => array(
+				'value' => 'uncoverXLeft',
+				'type'  => 'new',
+			),
+			'uncoverXRight'  => array(
+				'value' => 'uncoverXRight',
+				'type'  => 'new',
+			),
+
+			'uncoverYTop'    => array(
+				'value' => 'uncoverYTop',
+				'type'  => 'new',
+			),
+
+			'uncoverYBottom' => array(
+				'value' => 'uncoverYBottom',
+				'type'  => 'new',
+			),
+		),
+	);
+
+	return $animations;
+}
+add_filter( 'vc_param_animation_style_list', 'wolf_core_add_animations' );
+
+/**
+ * New animations
+ */
+// function wolf_core_get_aos_animations() {
+// 	return array(
+// 		'fade'            => esc_html__( 'Fade', 'wolf-visual-composer' ),
+// 		'fade-up'         => esc_html__( 'Fade Up', 'wolf-visual-composer' ),
+// 		'fade-down'       => esc_html__( 'Fade Down', 'wolf-visual-composer' ),
+// 		'fade-left'       => esc_html__( 'Fade Left', 'wolf-visual-composer' ),
+// 		'fade-right'      => esc_html__( 'Fade Right', 'wolf-visual-composer' ),
+// 		'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-visual-composer' ),
+// 		'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-visual-composer' ),
+// 		'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-visual-composer' ),
+// 		'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-visual-composer' ),
+
+// 		'flip-up'         => esc_html__( 'Flip Up', 'wolf-visual-composer' ),
+// 		'flip-down'       => esc_html__( 'Flip Down', 'wolf-visual-composer' ),
+// 		'flip-left'       => esc_html__( 'Flip Left', 'wolf-visual-composer' ),
+// 		'flip-right'      => esc_html__( 'Flip Right', 'wolf-visual-composer' ),
+
+// 		'slide-up'        => esc_html__( 'Slide Up', 'wolf-visual-composer' ),
+// 		'slide-down'      => esc_html__( 'Slide Down', 'wolf-visual-composer' ),
+// 		'slide-left'      => esc_html__( 'Slide Left', 'wolf-visual-composer' ),
+// 		'slide-right'     => esc_html__( 'Slide Right', 'wolf-visual-composer' ),
+
+// 		'zoom-in'         => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
+// 		'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-visual-composer' ),
+// 		'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-visual-composer' ),
+// 		'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-visual-composer' ),
+// 		'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-visual-composer' ),
+// 		'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
+// 		'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-visual-composer' ),
+// 		'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-visual-composer' ),
+// 		'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-visual-composer' ),
+// 		'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-visual-composer' ),
+// 	);
+// }
+
+/**
+ * Filter animation style
+ *
+ * @param array $animation_syles WPBPB animations.
+ * @return array
+ */
+function wolf_core_filter_animation_styles( $animation_syles ) {
+
+	$new_animations = array(
+		array(
+			// 'label' => esc_html__( 'New Animations', 'wolf-visual-composer' ),
+			'values' => array_flip( array( 'none' => esc_html__( 'None', 'wolf-visual-composer' ) ) ),
+		),
+		array(
+			'label'  => esc_html__( 'New Animation Engine (beta)', 'wolf-visual-composer' ),
+			'values' => array_flip( wolf_core_get_aos_animations() ),
+		),
+	);
+
+	// $animation_syles[] = $new_animations;
+
+	// debug( $animation_syles );
+
+	$animation_syles = $new_animations + $animation_syles;
+
+	return $animation_syles;
+}
+add_filter( 'vc_param_animation_style_list', 'wolf_core_filter_animation_styles' );

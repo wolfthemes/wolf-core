@@ -37,7 +37,7 @@ function wolf_core_sb_instagram_feed_params() {
 					'label'       => esc_html__( 'Image Count', 'wolf-core' ),
 					'description' => esc_html__( 'Note that the instagram API may limit the number of image to display.', 'wolf-core' ),
 					'param_name'  => 'num',
-					'default'     => 18,
+					'default'     => 12,
 					'admin_label' => true,
 				),
 
@@ -52,6 +52,7 @@ function wolf_core_sb_instagram_feed_params() {
 						3 => '3',
 						2 => '2',
 					),
+					'default' => 4,
 					'admin_label' => true,
 				),
 

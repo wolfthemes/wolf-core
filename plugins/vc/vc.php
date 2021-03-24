@@ -44,7 +44,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		$this->elements = wolf_core_get_elements();
 
 		add_action( 'init', array( $this, 'include_vc_params' ) );
-		add_action( 'init', array( $this, 'include_shortcode_maps' ) );
+		add_action( 'init', array( $this, 'include_shortcode_maps' ), 99 ); // include vc_map late so it is filtered before being initiated.
 	}
 
 	/**
@@ -60,7 +60,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		);
 
 		foreach ( $files as $file ) {
-			if ( ! include_once WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/' . $file . '.php' ) {
+			if ( ! include_once WOLF_CORE_DIR . '/plugins/vc/' . $file . '.php' ) {
 				wp_die(
 					sprintf(
 						wp_kses(
@@ -90,10 +90,11 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 			'column-params',
 			'column-inner-params',
 			'icon-params',
+			'animation-params',
 		);
 
 		foreach ( $files as $file ) {
-			if ( ! include_once WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/vc-params/' . $file . '.php' ) {
+			if ( ! include_once WOLF_CORE_DIR . '/plugins/vc/vc-params/' . $file . '.php' ) {
 				wp_die(
 					sprintf(
 						wp_kses(
@@ -123,9 +124,9 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 
 		foreach ( $this->elements as $e ) {
 
-			if ( is_file( WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/vc-map/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
+			if ( is_file( WOLF_CORE_DIR . '/plugins/vc/vc-map/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
 
-				include_once WOLF_CORE_DIR . '/plugins/wpbakery-page-builder/vc-map/' . sanitize_title_with_dashes( $e ) . '.php';
+				include_once WOLF_CORE_DIR . '/plugins/vc/vc-map/' . sanitize_title_with_dashes( $e ) . '.php';
 			}
 		}
 	}

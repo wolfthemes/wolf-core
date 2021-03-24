@@ -149,12 +149,12 @@ function wolf_core_sanitize_css_field( $style ) {
 		return;
 	}
 
+	// remove double semicolon.
+	$style = str_replace( array( ';;', '; ;' ), '', $style );
+
 	if ( ';' !== substr( $style, -1 ) ) {
 		$style = $style . ';'; // add end semicolon if missing.
 	}
-
-	// remove double semicolon.
-	$style = str_replace( array( ';;', '; ;' ), '', $style );
 
 	return esc_attr( trim( wolf_core_clean_spaces( $style ) ) );
 }
@@ -548,7 +548,7 @@ function wolf_core_get_css_animation( $css_animation ) {
 		wp_enqueue_script( 'wow' );
 		wp_enqueue_script( 'waypoints' );
 		wp_enqueue_style( 'animate-css' );
-		$output = ' wvc-wow ' . $css_animation;
+		$output = ' wolf-core-wow ' . $css_animation;
 	}
 
 	return $output;
@@ -1077,13 +1077,14 @@ function wolf_core_process_link_atts( $link_atts ) {
 		$link['title']  = esc_attr( $vc_link['title'] );
 
 	} else {
+
 		$link['url']    = esc_url( $link_atts['url'] );
 		$link['target'] = ( isset( $link_atts['is_external'] ) && 'on' === $link_atts['is_external'] ) ? '_blank' : '_parent';
 		$link['rel']    = ( isset( $link_atts['nofollow'] ) && 'on' === $link_atts['nofollow'] ) ? 'nofollow' : '';
 		$link['title']  = '';
 	}
 
-	if ( ! empty( $link['url'] ) ) {
+	if ( isset( $link['url'] ) ) {
 		return $link;
 	}
 }
