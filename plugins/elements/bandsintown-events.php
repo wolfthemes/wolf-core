@@ -16,22 +16,23 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_bandsintown_events( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'artist'              => '',
-			'local_dates'         => 'true',
-			'past_dates'          => 'true',
-			'display_limit'       => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_bandsintown_events_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'artist'              => '',
+				'local_dates'         => 'true',
+				'past_dates'          => 'true',
+				'display_limit'       => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_bandsintown_events_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

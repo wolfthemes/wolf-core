@@ -17,37 +17,38 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_sb_instagram_feed( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'num'                   => 18,
-			'cols'                  => 6,
-			'username'              => '',
-			'accesstoken'           => '',
-			'imagepadding'          => '',
-			'showheader'            => 'false',
-			'showbio'               => 'false',
-			'showbutton'            => 'false',
-			'showfollow'            => 'false',
+	$atts = apply_filters(
+		'wolf_core_sb_instagram_feed_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'num'                   => 18,
+				'cols'                  => 6,
+				'username'              => '',
+				'accesstoken'           => '',
+				'imagepadding'          => '',
+				'showheader'            => 'false',
+				'showbio'               => 'false',
+				'showbutton'            => 'false',
+				'showfollow'            => 'false',
 
-			'follow_button'         => '',
-			'button_text'           => '',
+				'follow_button'         => '',
+				'button_text'           => '',
 
-			'disable_default_hover' => '',
+				'disable_default_hover' => '',
 
-			'el_class'              => '',
-			'css'                   => '',
-			'inline_style'          => '',
+				'el_class'              => '',
+				'css'                   => '',
+				'inline_style'          => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_sb_instagram_feed_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 
 	$output = '';
 
-	$inline_atts   = '';
+	$inline_atts = '';
 
 	$class = $el_class; // init container CSS class.
 

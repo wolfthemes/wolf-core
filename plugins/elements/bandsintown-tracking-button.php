@@ -15,25 +15,26 @@ defined( 'ABSPATH' ) || exit;
  * @param array $atts The element attributes.
  */
 function wolf_core_bandsintown_traking_button( $atts ) {
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'artist'                  => '',
-			'size'                    => 'large',
-			'alignment'               => 'center',
-			'background_color'        => '',
-			'background_custom_color' => '',
-			'text_color'              => '',
-			'text_custom_color'       => '',
-			'css_animation'           => '',
-			'css_animation_delay'     => '',
-			'el_class'                => '',
-			'css'                     => '',
-			'inline_style'            => '',
+	$atts = apply_filters(
+		'wolf_core_bandsintown_traking_button_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'artist'                  => '',
+				'size'                    => 'large',
+				'alignment'               => 'center',
+				'background_color'        => '',
+				'background_custom_color' => '',
+				'text_color'              => '',
+				'text_custom_color'       => '',
+				'css_animation'           => '',
+				'css_animation_delay'     => '',
+				'el_class'                => '',
+				'css'                     => '',
+				'inline_style'            => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_bandsintown_traking_button_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

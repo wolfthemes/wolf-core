@@ -16,41 +16,42 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_heading( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'font_size'           => '',
-			'min_font_size'       => '',
-			'responsive'          => 'yes',
-			'font_family'         => '',
-			'letter_spacing'      => 0,
-			'font_weight'         => '',
-			'line_height'         => '',
-			'text_transform'      => '',
-			'font_style'          => '',
-			'text_align'          => '',
-			'text_align_mobile'   => '',
-			'color'               => '',
-			'custom_color'        => '',
-			'text'                => '',
-			'tag'                 => 'h2',
-			'link'                => '',
-			'background_img'      => '',
-			'background_position' => 'center center',
-			'background_repeat'   => 'no-repeat',
-			'background_size'     => 'cover',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'el_id'               => '',
-			'css'                 => '',
-			'inline_style'        => '',
-			'hide_class'          => '',
-			'container'           => true,
+	$atts = apply_filters(
+		'wolf_core_heading_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'font_size'           => '',
+				'min_font_size'       => '',
+				'responsive'          => 'yes',
+				'font_family'         => '',
+				'letter_spacing'      => 0,
+				'font_weight'         => '',
+				'line_height'         => '',
+				'text_transform'      => '',
+				'font_style'          => '',
+				'text_align'          => '',
+				'text_align_mobile'   => '',
+				'color'               => '',
+				'custom_color'        => '',
+				'text'                => '',
+				'tag'                 => 'h2',
+				'link'                => '',
+				'background_img'      => '',
+				'background_position' => 'center center',
+				'background_repeat'   => 'no-repeat',
+				'background_size'     => 'cover',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'el_id'               => '',
+				'css'                 => '',
+				'inline_style'        => '',
+				'hide_class'          => '',
+				'container'           => true,
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_heading_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 
@@ -159,7 +160,7 @@ function wolf_core_heading( $atts ) {
 		data-min-font-size="' . absint( $min_font_size ) . '">';
 
 	if ( is_array( $link ) ) {
-		$output     .= '<a style="' . wolf_core_esc_style_attr( $inline_style ) . '" class="wolf-core-fittext-link" href="' . esc_url( $link['url'] ) . '"
+		$output .= '<a style="' . wolf_core_esc_style_attr( $inline_style ) . '" class="wolf-core-fittext-link" href="' . esc_url( $link['url'] ) . '"
 		target="' . esc_attr( $link['target'] ) . '" title="' . esc_attr( $link['title'] ) . '" rel="' . esc_attr( $link['rel'] ) . '">';
 	}
 

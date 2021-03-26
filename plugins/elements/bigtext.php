@@ -16,33 +16,34 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_bigtext( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'font_family'         => '',
-			'letter_spacing'      => 0,
-			'font_weight'         => 700,
-			'text_transform'      => 'none',
-			'font_style'          => '',
-			'color'               => '',
-			'custom_color'        => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'text'                => '',
-			'link'                => '',
-			'title_tag'           => 'h4',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_bigtext_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'font_family'         => '',
+				'letter_spacing'      => 0,
+				'font_weight'         => 700,
+				'text_transform'      => 'none',
+				'font_style'          => '',
+				'color'               => '',
+				'custom_color'        => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'text'                => '',
+				'link'                => '',
+				'title_tag'           => 'h4',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
 
-	$atts = apply_filters( 'wolf_core_bigtext_atts', $atts );
-
 	extract( $atts ); // phpcs:ignore
 
-	//wp_enqueue_script( 'bigtext' );
-	//wp_enqueue_script( 'wolf-core-bigtext' );
+	// wp_enqueue_script( 'bigtext' );
+	// wp_enqueue_script( 'wolf-core-bigtext' );
 
 	$output               = '';
 	$text_container_class = '';

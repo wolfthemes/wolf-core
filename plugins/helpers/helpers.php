@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Add inline style param
  */
-function wolf_core_add_inline_style_param() {
+function wolf_core_add_extra_params() {
 	$elements = wolf_core_get_elements();
 
 	foreach ( $elements as $e ) {
@@ -24,10 +24,35 @@ function wolf_core_add_inline_style_param() {
 			function( $params ) {
 
 				$params['params'][] = array(
+					'label'      => esc_html__( 'Extra Class Name', 'wolf-core' ),
+					'param_name' => 'el_class',
+					'type'       => 'text',
+					'group'      => esc_html__( 'Extra', 'wolf-core' ),
+				);
+
+				if ( 'vc' === wolf_core_get_plugin_in_use() ) {
+					$params['params'][] = array(
+						'label'      => esc_html__( 'Visibility', 'wolf-core' ),
+						'param_name' => 'hide_class',
+						'type'       => 'select',
+						'options'    => array(
+							''                      => esc_html__( 'Always visible', 'wolf-core' ),
+							'wolf-core-hide-tablet' => esc_html__( 'Hide on tablet and mobile', 'wolf-core' ),
+							'wolf-core-hide-mobile' => esc_html__( 'Hide on mobile', 'wolf-core' ),
+							'wolf-core-show-tablet' => esc_html__( 'Show on tablet and mobile only', 'wolf-core' ),
+							'wolf-core-show-mobile' => esc_html__( 'Show on mobile only', 'wolf-core' ),
+							'wolf-core-hide'        => esc_html__( 'Always hidden', 'wolf-core' ),
+						),
+						'default'    => '',
+						'group'      => esc_html__( 'Extra', 'wolf-core' ),
+					);
+				}
+
+				$params['params'][] = array(
 					'label'      => esc_html__( 'Additional CSS inline style', 'wolf-core' ),
 					'param_name' => 'inline_style',
 					'type'       => 'textarea',
-					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'group'      => esc_html__( 'Extra', 'wolf-core' ),
 				);
 
 				return $params;
@@ -35,7 +60,7 @@ function wolf_core_add_inline_style_param() {
 		);
 	}
 }
-add_action( 'init', 'wolf_core_add_inline_style_param' );
+add_action( 'init', 'wolf_core_add_extra_params' );
 
 /**
  * Animate Elements
@@ -81,7 +106,7 @@ function wolf_core_animation_markup_filter() {
 					}
 				}
 
-				//debug( $atts );
+				// debug( $atts );
 				return $atts;
 			}
 		);

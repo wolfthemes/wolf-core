@@ -15,21 +15,22 @@ defined( 'ABSPATH' ) || exit;
  * @param array $atts The playlist attributes.
  */
 function wolf_core_playlist( $atts ) {
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'id'                  => '',
-			'show_tracklist'      => '',
-			'theme'               => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_playlist_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'id'                  => '',
+				'show_tracklist'      => '',
+				'theme'               => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_playlist_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

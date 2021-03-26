@@ -16,23 +16,24 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_spotify_follow_button( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'url'                 => '',
-			'size'                => 'detail',
-			'show_count'          => true,
-			'theme'               => 'light',
-			'alignment'           => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_spotify_follow_button_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'url'                 => '',
+				'size'                => 'detail',
+				'show_count'          => true,
+				'theme'               => 'light',
+				'alignment'           => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_spotify_follow_button_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

@@ -94,12 +94,6 @@ function wolf_core_album_disc_params() {
 				),
 
 				array(
-					'type'       => 'link',
-					'label'      => esc_html__( 'Link', 'wolf-core' ),
-					'param_name' => 'link',
-				),
-
-				array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Worn Border Effect', 'wolf-core' ),
 					'param_name' => 'worn_border',
@@ -137,6 +131,12 @@ function wolf_core_album_disc_params() {
 					'param_name'  => 'rotation_speed',
 					'placeholder' => apply_filters( 'wolf_core_default_album_disc_rotation_speed', 3500 ),
 					'default'     => apply_filters( 'wolf_core_default_album_disc_rotation_speed', 3500 ),
+				),
+
+				array(
+					'type'       => 'link',
+					'label'      => esc_html__( 'Link', 'wolf-core' ),
+					'param_name' => 'link',
 				),
 			),
 		)

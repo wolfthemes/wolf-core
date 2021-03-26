@@ -16,28 +16,29 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_album_disc( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'type'                => 'cd', // CD or vinyl.
-			'alignment'           => '',
-			'worn_border'         => 'yes',
-			'rotate'              => '',
-			'rotation_speed'      => '',
-			'cover_image'         => '',
-			'disc_image'          => '',
-			'img_size'            => '375x375',
-			'link'                => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'el_id'               => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_album_disc_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'type'                => 'cd', // CD or vinyl.
+				'alignment'           => '',
+				'worn_border'         => 'yes',
+				'rotate'              => '',
+				'rotation_speed'      => '',
+				'cover_image'         => '',
+				'disc_image'          => '',
+				'img_size'            => '375x375',
+				'link'                => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'el_id'               => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_album_disc_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

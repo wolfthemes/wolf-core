@@ -15,23 +15,24 @@ defined( 'ABSPATH' ) || exit;
  * @param array $atts The Breadcrumb attributes.
  */
 function wolf_core_breadcrumb( $atts ) {
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'align'               => '',
-			'text_align_mobile'   => '',
-			'font_size'           => '',
-			'font_weight'         => '',
-			'text_transform'      => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_breadcrumb_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'align'               => '',
+				'text_align_mobile'   => '',
+				'font_size'           => '',
+				'font_weight'         => '',
+				'text_transform'      => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_breadcrumb_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

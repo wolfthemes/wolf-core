@@ -16,22 +16,23 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_spotify_player( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'url'                 => '',
-			'type'                => '',
-			'width'               => '',
-			'height'              => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_spotify_player_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'url'                 => '',
+				'type'                => '',
+				'width'               => '',
+				'height'              => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_spotify_player_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

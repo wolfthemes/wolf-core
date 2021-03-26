@@ -95,7 +95,6 @@ add_action(
 		$widget->add_render_attribute( '_wrapper', 'class', wolf_core_sanitize_html_classes( $class ) );
 
 		if ( 'yes' === $responsive ) {
-
 			if ( isset( $settings['font_size'] ) ) {
 				$widget->add_render_attribute( '_wrapper', 'data-max-font-size', absint( $settings['font_size'] ) );
 			}

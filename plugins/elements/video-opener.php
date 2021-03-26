@@ -16,29 +16,30 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_video_opener( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'custom_play_button'  => '',
-			'button_image'        => '',
-			'alignment'           => 'center',
-			'video_url'           => '',
-			'attention_seeker'    => '',
-			'caption_position'    => '',
-			'caption'             => '',
-			'duration'            => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_video_opener_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'custom_play_button'  => '',
+				'button_image'        => '',
+				'alignment'           => 'center',
+				'video_url'           => '',
+				'attention_seeker'    => '',
+				'caption_position'    => '',
+				'caption'             => '',
+				'duration'            => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
 
 	/* Enqueue video lightbox script */
 	wp_enqueue_script( 'lity' );
-
-	$atts = apply_filters( 'wolf_core_video_opener_atts', $atts );
 
 	extract( $atts ); // phpcs:ignore
 

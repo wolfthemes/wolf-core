@@ -16,22 +16,23 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_video_preview( $atts ) {
 
-	$atts = wp_parse_args(
-		$atts,
-		array(
-			'title'               => '',
-			'url'                 => '',
-			'image'               => '',
-			'video_preview'       => '',
-			'css_animation'       => '',
-			'css_animation_delay' => '',
-			'el_class'            => '',
-			'css'                 => '',
-			'inline_style'        => '',
+	$atts = apply_filters(
+		'wolf_core_video_preview_atts',
+		wp_parse_args(
+			$atts,
+			array(
+				'title'               => '',
+				'url'                 => '',
+				'image'               => '',
+				'video_preview'       => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+			)
 		)
 	);
-
-	$atts = apply_filters( 'wolf_core_video_preview_atts', $atts );
 
 	wp_enqueue_script( 'froogaloop' );
 	wp_enqueue_script( 'wolf-core-video-preview' );
