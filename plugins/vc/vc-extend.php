@@ -18,11 +18,11 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
 
-	if ( $tag === 'vc_row' || $tag === 'vc_row_inner' ) {
+	if ( 'vc_row' === $tag || 'vc_row_inner' === $tag ) {
 		// $class_string = str_replace( 'vc_row-fluid', 'row', $class_string );
 	}
 
-	if ( $tag === 'vc_column' || $tag === 'vc_column_inner' ) {
+	if ( 'vc_column' === $tag || 'vc_column_inner' === $tag ) {
 		$class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'wolf-core-col-$1', $class_string );
 	}
 
@@ -39,8 +39,8 @@ function wolf_core_disable_elements() {
 		'wolf_core_disabled_elements',
 		array(
 			'vc_section',
-			'vc_tour', // deprecated
-			'vc_btn', // deprecated
+			'vc_tour', // deprecated.
+			'vc_btn', // deprecated.
 			'vc_tta_accordion',
 			'vc_tta_tabs',
 			'vc_tta_pageable',

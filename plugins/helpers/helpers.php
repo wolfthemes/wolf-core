@@ -23,14 +23,15 @@ function wolf_core_add_extra_params() {
 			'wolf_core_' . $element_slug . '_params',
 			function( $params ) {
 
-				$params['params'][] = array(
-					'label'      => esc_html__( 'Extra Class Name', 'wolf-core' ),
-					'param_name' => 'el_class',
-					'type'       => 'text',
-					'group'      => esc_html__( 'Extra', 'wolf-core' ),
-				);
-
 				if ( 'vc' === wolf_core_get_plugin_in_use() ) {
+
+					$params['params'][] = array(
+						'label'      => esc_html__( 'Extra Class Name', 'wolf-core' ),
+						'param_name' => 'el_class',
+						'type'       => 'text',
+						'group'      => esc_html__( 'Extra', 'wolf-core' ),
+					);
+
 					$params['params'][] = array(
 						'label'      => esc_html__( 'Visibility', 'wolf-core' ),
 						'param_name' => 'hide_class',
@@ -49,10 +50,11 @@ function wolf_core_add_extra_params() {
 				}
 
 				$params['params'][] = array(
-					'label'      => esc_html__( 'Additional CSS inline style', 'wolf-core' ),
-					'param_name' => 'inline_style',
-					'type'       => 'textarea',
-					'group'      => esc_html__( 'Extra', 'wolf-core' ),
+					'label'       => esc_html__( 'Quick CSS', 'wolf-core' ),
+					'description' => esc_html__( 'CSS inline style', 'wolf-core' ),
+					'param_name'  => 'inline_style',
+					'type'        => 'textarea',
+					'group'       => esc_html__( 'Extra', 'wolf-core' ),
 				);
 
 				return $params;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Big Text
+ * Countdown
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
+class Elementor_Countdown_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -20,10 +20,10 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 
 		parent::__construct( $data, $args );
 
-		wp_enqueue_script( 'bigtext' );
-		wp_enqueue_script( 'wolf-core-bigtext' );
+		wp_enqueue_script( 'countdown' );
+		wp_enqueue_script( 'wolf-core-countdown' );
 
-		$this->params = wolf_core_bigtext_params();
+		$this->params = wolf_core_countdown_params();
 	}
 
 	/**
@@ -51,7 +51,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Big Text widget title.
+	 * Retrieve Breacrumb widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -65,7 +65,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Big Text widget icon.
+	 * Retrieve Breacrumb widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -79,7 +79,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Big Text widget belongs to.
+	 * Retrieve the list of categories the Breacrumb widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -91,7 +91,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
-	 * Register Big Text widget controls.
+	 * Register Breacrumb widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -116,23 +116,28 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'font_family'         => '',
-				'letter_spacing'      => 0,
-				'font_weight'         => 700,
-				'text_transform'      => 'none',
-				'font_style'          => '',
-				'color'               => '',
-				'custom_color'        => '',
-				'css_animation'       => '',
-				'css_animation_delay' => '',
-				'text'                => '',
-				'link'                => '',
-				'title_tag'           => 'h4',
+				'date'                     => '12/24/2020 12:00:00',
+				'format'                   => 'dHMS',
+				'custom_format'            => '',
+				'offset'                   => -5,
+				'message'                  => esc_html__( 'Done!', 'wolf-visual-composer' ),
+				'font_family'              => '',
+				'font_size'                => '',
+				'font_weight'              => '',
+				'number_font_color'        => '',
+				'number_font_custom_color' => '',
+				'text_font_color'          => '',
+				'text_font_custom_color'   => '',
+				'css_animation'            => '',
+				'css_animation_delay'      => '',
+				'el_class'                 => '',
+				'css'                      => '',
+				'inline_style'             => '',
 			)
 		);
 
-		echo wolf_core_bigtext( $atts ); // WCS XSS ok.
+		echo wolf_core_countdown( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Bigtext_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Countdown_Widget() );
 

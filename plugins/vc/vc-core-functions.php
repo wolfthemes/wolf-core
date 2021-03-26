@@ -125,6 +125,10 @@ function wolf_core_convert_params_to_vc( $params ) {
 			$vc_params['params'][ $i ]['save_always'] = $p['save_always'];
 		}
 
+		if ( isset( $p['param_holder_class'] ) ) {
+			$vc_params['params'][ $i ]['param_holder_class'] = $p['param_holder_class'];
+		}
+
 		if ( isset( $p['admin_label'] ) ) {
 			$vc_params['params'][ $i ]['admin_label'] = $p['admin_label'];
 		}
@@ -219,100 +223,6 @@ function wolf_core_locate_shortcode_template( $filename ) {
 }
 
 /**
- * Get shared color list in array to allow filtering by theme and stuff
- *
- * @return array
- */
-function wolf_core_get_shared_colors() {
-
-	$wolf_core_shared_colors = array(
-		esc_html__( 'Black', 'wolf-core' )         => 'black',
-		esc_html__( 'Light Grey', 'wolf-core' )    => 'lightergrey',
-		esc_html__( 'Dark Grey', 'wolf-core' )     => 'darkgrey',
-		esc_html__( 'White', 'wolf-core' )         => 'white',
-		esc_html__( 'Orange', 'wolf-core' )        => 'orange',
-		esc_html__( 'Green', 'wolf-core' )         => 'green',
-		esc_html__( 'Turquoise', 'wolf-core' )     => 'turquoise',
-		esc_html__( 'Violet', 'wolf-core' )        => 'violet',
-		esc_html__( 'Pink', 'wolf-core' )          => 'pink',
-		esc_html__( 'Grey blue', 'wolf-core' )     => 'greyblue',
-		esc_html__( 'Red', 'wolf-core' )           => 'red',
-		esc_html__( 'Yellow', 'wolf-core' )        => 'yellow',
-		esc_html__( 'Blue', 'wolf-core' )          => 'blue',
-		esc_html__( 'Peacoc', 'js_composer' )      => 'peacoc',
-		esc_html__( 'Chino', 'js_composer' )       => 'chino',
-		esc_html__( 'Mulled Wine', 'js_composer' ) => 'mulled-wine',
-		esc_html__( 'Vista Blue', 'js_composer' )  => 'vista-blue',
-		esc_html__( 'Grey', 'js_composer' )        => 'grey',
-		esc_html__( 'Sky', 'js_composer' )         => 'sky',
-		esc_html__( 'Juicy pink', 'js_composer' )  => 'juicy-pink',
-		esc_html__( 'Sandy brown', 'js_composer' ) => 'sandy-brown',
-		esc_html__( 'Purple', 'js_composer' )      => 'purple',
-	);
-
-	$wolf_core_shared_colors = apply_filters( 'wolf_core_shared_colors', $wolf_core_shared_colors );
-
-	return $wolf_core_shared_colors;
-}
-
-/**
- * Get shared color hex value
- */
-function wolf_core_get_shared_colors_hex() {
-
-	$wolf_core_shared_colors_hex = array(
-		'black'       => '#000000',
-		'lightergrey' => '#f7f7f7',
-		'darkgrey'    => '#444444',
-		'white'       => '#ffffff',
-		'orange'      => '#F7BE68',
-		'green'       => '#6DAB3C',
-		'turquoise'   => '#49afcd',
-		'violet'      => '#8D6DC4',
-		'pink'        => '#FE6C61',
-		'greyblue'    => '#49535a',
-		'red'         => '#da4f49',
-		'yellow'      => '#e6ae48',
-		'blue'        => '#75D69C',
-		'peacoc'      => '#4CADC9',
-		'chino'       => '#CEC2AB',
-		'mulled-wine' => '#50485B',
-		'vista-blue'  => '#75D69C',
-		'grey'        => '#EBEBEB',
-		'sky'         => '#5AA1E3',
-		'juicy-pink'  => '#F4524D',
-		'sandy-brown' => '#F79468',
-		'purple'      => '#B97EBB',
-		'accent'      => apply_filters( 'wolf_core_theme_accent_color', '#0073AA' ),
-	);
-
-	$wolf_core_shared_colors_hex = apply_filters( 'wolf_core_shared_colors_hex', $wolf_core_shared_colors_hex );
-
-	return $wolf_core_shared_colors_hex;
-}
-
-/**
- * Get shared gradient color list in array to allow filtering by theme and stuff
- *
- * @return array
- */
-function wolf_core_get_shared_gradient_colors() {
-
-	$wolf_core_shared_gradient_colors = array(
-		esc_html__( 'Gradient Red', 'wolf-core' )          => 'gradient-color-3452ff', // red salient
-		esc_html__( 'Gradient Red 2', 'wolf-core' )        => 'gradient-color-588694', // red uncode
-		esc_html__( 'Gradient Green', 'wolf-core' )        => 'gradient-color-105898',
-		esc_html__( 'Gradient Green Circle', 'wolf-core' ) => 'gradient-color-111420',
-		esc_html__( 'Gradient Orange', 'wolf-core' )       => 'gradient-color-470604',
-		esc_html__( 'Gradient Violet', 'wolf-core' )       => 'gradient-color-b900b4',
-	);
-
-	$wolf_core_shared_gradient_colors = apply_filters( 'wolf_core_shared_gradient_colors', $wolf_core_shared_gradient_colors );
-
-	return $wolf_core_shared_gradient_colors;
-}
-
-/**
  * Get shape divider options
  */
 function wolf_core_get_shape_divider_options() {
@@ -328,6 +238,24 @@ function wolf_core_get_shape_divider_options() {
 
 	return $options;
 }
+
+function wolf_core_add_vc_shared_color( $colors ) {
+
+	$vc_colors = array(
+		'peacoc'      => esc_html__( 'Peacoc', 'js_composer' ),
+		'chino'       => esc_html__( 'Chino', 'js_composer' ),
+		'mulled-wine' => esc_html__( 'Mulled Wine', 'js_composer' ),
+		'vista-blue'  => esc_html__( 'Vista Blue', 'js_composer' ),
+		'grey'        => esc_html__( 'Grey', 'js_composer' ),
+		'sky'         => esc_html__( 'Sky', 'js_composer' ),
+		'juicy-pink'  => esc_html__( 'Juicy pink', 'js_composer' ),
+		'sandy-brown' => esc_html__( 'Sandy brown', 'js_composer' ),
+		'purple'      => esc_html__( 'Purple', 'js_composer' ),
+	);
+
+	return array_merge( $colors, $vc_colors );
+}
+add_filter( 'wolf_core_shared_colors', 'wolf_core_add_vc_shared_color' );
 
 /**
  * Add animations
@@ -369,38 +297,38 @@ add_filter( 'vc_param_animation_style_list', 'wolf_core_add_animations' );
  * New animations
  */
 // function wolf_core_get_aos_animations() {
-// 	return array(
-// 		'fade'            => esc_html__( 'Fade', 'wolf-visual-composer' ),
-// 		'fade-up'         => esc_html__( 'Fade Up', 'wolf-visual-composer' ),
-// 		'fade-down'       => esc_html__( 'Fade Down', 'wolf-visual-composer' ),
-// 		'fade-left'       => esc_html__( 'Fade Left', 'wolf-visual-composer' ),
-// 		'fade-right'      => esc_html__( 'Fade Right', 'wolf-visual-composer' ),
-// 		'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-visual-composer' ),
-// 		'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-visual-composer' ),
-// 		'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-visual-composer' ),
-// 		'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-visual-composer' ),
+// return array(
+// 'fade'            => esc_html__( 'Fade', 'wolf-visual-composer' ),
+// 'fade-up'         => esc_html__( 'Fade Up', 'wolf-visual-composer' ),
+// 'fade-down'       => esc_html__( 'Fade Down', 'wolf-visual-composer' ),
+// 'fade-left'       => esc_html__( 'Fade Left', 'wolf-visual-composer' ),
+// 'fade-right'      => esc_html__( 'Fade Right', 'wolf-visual-composer' ),
+// 'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-visual-composer' ),
+// 'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-visual-composer' ),
+// 'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-visual-composer' ),
+// 'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-visual-composer' ),
 
-// 		'flip-up'         => esc_html__( 'Flip Up', 'wolf-visual-composer' ),
-// 		'flip-down'       => esc_html__( 'Flip Down', 'wolf-visual-composer' ),
-// 		'flip-left'       => esc_html__( 'Flip Left', 'wolf-visual-composer' ),
-// 		'flip-right'      => esc_html__( 'Flip Right', 'wolf-visual-composer' ),
+// 'flip-up'         => esc_html__( 'Flip Up', 'wolf-visual-composer' ),
+// 'flip-down'       => esc_html__( 'Flip Down', 'wolf-visual-composer' ),
+// 'flip-left'       => esc_html__( 'Flip Left', 'wolf-visual-composer' ),
+// 'flip-right'      => esc_html__( 'Flip Right', 'wolf-visual-composer' ),
 
-// 		'slide-up'        => esc_html__( 'Slide Up', 'wolf-visual-composer' ),
-// 		'slide-down'      => esc_html__( 'Slide Down', 'wolf-visual-composer' ),
-// 		'slide-left'      => esc_html__( 'Slide Left', 'wolf-visual-composer' ),
-// 		'slide-right'     => esc_html__( 'Slide Right', 'wolf-visual-composer' ),
+// 'slide-up'        => esc_html__( 'Slide Up', 'wolf-visual-composer' ),
+// 'slide-down'      => esc_html__( 'Slide Down', 'wolf-visual-composer' ),
+// 'slide-left'      => esc_html__( 'Slide Left', 'wolf-visual-composer' ),
+// 'slide-right'     => esc_html__( 'Slide Right', 'wolf-visual-composer' ),
 
-// 		'zoom-in'         => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
-// 		'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-visual-composer' ),
-// 		'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-visual-composer' ),
-// 		'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-visual-composer' ),
-// 		'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-visual-composer' ),
-// 		'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
-// 		'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-visual-composer' ),
-// 		'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-visual-composer' ),
-// 		'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-visual-composer' ),
-// 		'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-visual-composer' ),
-// 	);
+// 'zoom-in'         => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
+// 'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-visual-composer' ),
+// 'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-visual-composer' ),
+// 'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-visual-composer' ),
+// 'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-visual-composer' ),
+// 'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
+// 'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-visual-composer' ),
+// 'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-visual-composer' ),
+// 'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-visual-composer' ),
+// 'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-visual-composer' ),
+// );
 // }
 
 /**

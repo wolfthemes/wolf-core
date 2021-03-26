@@ -220,17 +220,17 @@
 }
 
 /* Contain floats */
-.wolf-core-clearfix,
+.wolf-core-clearfix, .wolf-core-countdown,
 .wolf-core-clear {
   zoom: 1;
 }
-.wolf-core-clearfix:before, .wolf-core-clearfix:after,
+.wolf-core-clearfix:before, .wolf-core-countdown:before, .wolf-core-clearfix:after, .wolf-core-countdown:after,
 .wolf-core-clear:before,
 .wolf-core-clear:after {
   content: '';
   display: table;
 }
-.wolf-core-clearfix:after,
+.wolf-core-clearfix:after, .wolf-core-countdown:after,
 .wolf-core-clear:after {
   clear: both;
 }
@@ -806,6 +806,59 @@
 .wolf-core-breadcrumb-delimiter {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+/**
+ * @# Countdown
+ **/
+.wolf-core-countdown-container {
+  transition: opacity 0.5s linear 0.3s;
+  opacity: 0;
+  font-size: 28px;
+}
+.wolf-core-countdown-container.wolf-core-countdown-has-color .wolf-core-countdown {
+  color: inherit;
+}
+.wolf-core-countdown-container .wolf-core-countdown-text-has-color .countdown-period {
+  color: inherit;
+}
+.wolf-core-countdown-container .countdown-rtl {
+  direction: rtl;
+}
+.wolf-core-countdown-container .countdown-row {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.wolf-core-countdown-container .countdown-section {
+  list-style-type: none;
+  flex: 1;
+}
+.wolf-core-countdown-container .countdown-amount {
+  position: relative;
+}
+.wolf-core-countdown-container .countdown-period {
+  display: block;
+  font-size: 15px !important;
+}
+.wolf-core-countdown-container .countdown-descr {
+  display: block;
+  width: 100%;
+}
+
+.wolf-core-countdown {
+  margin-bottom: 28px;
+}
+
+.wolf-core-loaded .wolf-core-countdown-container {
+  opacity: 1;
+}
+
+.wolf-core-countdown-container-loaded {
+  opacity: 1;
 }
 
 /**

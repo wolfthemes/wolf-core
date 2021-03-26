@@ -116,6 +116,12 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::COLOR;
 
+		} elseif ( 'scheme' === $type ) {
+
+			$field_params['type']  = \Elementor\Controls_Manager::COLOR;
+			$field_params['type']  = \Elementor\Scheme_Color::get_type();
+			$field_params['value'] = \Elementor\Scheme_Color::COLOR_1;
+
 		} elseif ( 'video' === $type ) {
 
 			$field_params['type']       = \Elementor\Controls_Manager::MEDIA;

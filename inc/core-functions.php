@@ -180,6 +180,10 @@ function wolf_core_get_elements() {
 		$wolf_core_elements[] = 'row-inner';
 	}
 
+	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { //  and not Elementor Pro
+		$wolf_core_elements[] = 'countdown';
+	}
+
 	if ( function_exists( 'sb_instagram_feed_init' ) ) {
 		$wolf_core_elements[] = 'sb-instagram-feed';
 	}
@@ -577,6 +581,91 @@ function wolf_core_placeholder_img( $img_size, $class = '' ) {
 	if ( wolf_core_placeholder_img_url( $img_size ) ) {
 		return '<img class="' . wolf_core_sanitize_html_classes( $class ) . '" src="' . wolf_core_placeholder_img_url( $img_size ) . '" alt="placeholder" title="' . esc_html__( 'Image is missing', 'wolf-core' ) . '">';
 	}
+}
+
+/**
+ * Get shared color list in array to allow filtering by theme and stuff
+ *
+ * @return array
+ */
+function wolf_core_get_shared_colors() {
+
+	$wolf_core_shared_colors = array(
+		'black'       => esc_html__( 'Black', 'wolf-core' ),
+		'lightergrey' => esc_html__( 'Light Grey', 'wolf-core' ),
+		'darkgrey'    => esc_html__( 'Dark Grey', 'wolf-core' ),
+		'white'       => esc_html__( 'White', 'wolf-core' ),
+		'orange'      => esc_html__( 'Orange', 'wolf-core' ),
+		'green'       => esc_html__( 'Green', 'wolf-core' ),
+		'turquoise'   => esc_html__( 'Turquoise', 'wolf-core' ),
+		'violet'      => esc_html__( 'Violet', 'wolf-core' ),
+		'pink'        => esc_html__( 'Pink', 'wolf-core' ),
+		'greyblue'    => esc_html__( 'Grey blue', 'wolf-core' ),
+		'red'         => esc_html__( 'Red', 'wolf-core' ),
+		'yellow'      => esc_html__( 'Yellow', 'wolf-core' ),
+		'blue'        => esc_html__( 'Blue', 'wolf-core' ),
+	);
+
+	$wolf_core_shared_colors = apply_filters( 'wolf_core_shared_colors', $wolf_core_shared_colors );
+
+	return $wolf_core_shared_colors;
+}
+
+/**
+ * Get shared color hex value
+ */
+function wolf_core_get_shared_colors_hex() {
+
+	$wolf_core_shared_colors_hex = array(
+		'black'       => '#000000',
+		'lightergrey' => '#f7f7f7',
+		'darkgrey'    => '#444444',
+		'white'       => '#ffffff',
+		'orange'      => '#F7BE68',
+		'green'       => '#6DAB3C',
+		'turquoise'   => '#49afcd',
+		'violet'      => '#8D6DC4',
+		'pink'        => '#FE6C61',
+		'greyblue'    => '#49535a',
+		'red'         => '#da4f49',
+		'yellow'      => '#e6ae48',
+		'blue'        => '#75D69C',
+		'peacoc'      => '#4CADC9',
+		'chino'       => '#CEC2AB',
+		'mulled-wine' => '#50485B',
+		'vista-blue'  => '#75D69C',
+		'grey'        => '#EBEBEB',
+		'sky'         => '#5AA1E3',
+		'juicy-pink'  => '#F4524D',
+		'sandy-brown' => '#F79468',
+		'purple'      => '#B97EBB',
+		'accent'      => apply_filters( 'wolf_core_theme_accent_color', '#0073AA' ),
+	);
+
+	$wolf_core_shared_colors_hex = apply_filters( 'wolf_core_shared_colors_hex', $wolf_core_shared_colors_hex );
+
+	return $wolf_core_shared_colors_hex;
+}
+
+/**
+ * Get shared gradient color list in array to allow filtering by theme and stuff
+ *
+ * @return array
+ */
+function wolf_core_get_shared_gradient_colors() {
+
+	$wolf_core_shared_gradient_colors = array(
+		'gradient-color-3452ff' => esc_html__( 'Gradient Red', 'wolf-core' ),
+		'gradient-color-588694' => esc_html__( 'Gradient Red 2', 'wolf-core' ),
+		'gradient-color-105898' => esc_html__( 'Gradient Green', 'wolf-core' ),
+		'gradient-color-111420' => esc_html__( 'Gradient Green Circle', 'wolf-core' ),
+		'gradient-color-470604' => esc_html__( 'Gradient Orange', 'wolf-core' ),
+		'gradient-color-b900b4' => esc_html__( 'Gradient Violet', 'wolf-core' ),
+	);
+
+	$wolf_core_shared_gradient_colors = apply_filters( 'wolf_core_shared_gradient_colors', $wolf_core_shared_gradient_colors );
+
+	return $wolf_core_shared_gradient_colors;
 }
 
 /**

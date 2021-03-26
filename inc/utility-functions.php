@@ -172,10 +172,10 @@ function wolf_core_esc_style_attr( $style ) {
 	}
 
 	if ( ';' !== substr( $style, -1 ) ) {
-		$style = $style . ';'; // add end semicolon if missing
+		$style = $style . ';'; // add end semicolon if missing.
 	}
 
-	// remove double semicolon
+	// remove double semicolon.
 	$style = str_replace( array( ';;', '; ;' ), '', $style );
 
 	return esc_attr( trim( wolf_core_clean_spaces( $style ) ) );
@@ -184,8 +184,8 @@ function wolf_core_esc_style_attr( $style ) {
 /**
  * Convert color class to hex value
  *
- * @param sting
- * @param string type text|html
+ * @param sting  $color The color name to convert.
+ * @param string $custom_color The custom color.
  * @return array
  */
 function wolf_core_convert_color_class_to_hex_value( $color, $custom_color ) {
@@ -243,7 +243,7 @@ function wolf_core_texarea_lines_to_array( $text, $type = 'text' ) {
 
 	if ( is_array( $lines ) ) {
 		foreach ( $lines as $line ) {
-			 $array[] = ( 'text' === $type ) ? sanitize_text_field( $line ) : $line;
+			$array[] = ( 'text' === $type ) ? sanitize_text_field( $line ) : $line;
 		}
 	}
 

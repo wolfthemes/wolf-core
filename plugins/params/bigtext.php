@@ -39,31 +39,32 @@ function wolf_core_bigtext_params() {
 	' . sprintf( esc_html__( 'You can use the %s short tag to display the current page title.', 'wolf-core' ), '{{post_title}}' ),
 				),
 
-				// array(
-				// 'type' => 'select',
-				// 'label' => esc_html__( 'Text Color', 'wolf-core' ),
-				// 'param_name' => 'color',
-				// 'value' => array_merge( wolf_core_get_shared_colors(), array(
-				// esc_html__( 'Default color', 'wolf-core' ) => 'default',
-				// esc_html__( 'Gradient Red', 'wolf-core' ) => 'gradient-red',
-				// esc_html__( 'Gradient Green', 'wolf-core' ) => 'gradient-green',
-				// esc_html__( 'Custom color', 'wolf-core' ) => 'custom',
-				// )
-				// ),
-				// 'default' => 'default',
-				// 'description' => esc_html__( 'Select a text color.', 'wolf-core' ),
-				// 'param_holder_class' => 'wolf_core_colored-select',
-				// ),
+				/*array(
+					'type'               => 'select',
+					'label'              => esc_html__( 'Text Color', 'wolf-core' ),
+					'param_name'         => 'color',
+					'options'            => array_merge(
+						wolf_core_get_shared_colors(),
+						array(
+							'default'        => esc_html__( 'Default color', 'wolf-core' ),
+							'gradient-red'   => esc_html__( 'Gradient Red', 'wolf-core' ),
+							'gradient-green' => esc_html__( 'Gradient Green', 'wolf-core' ),
+							'custom'         => esc_html__( 'Custom color', 'wolf-core' ),
+						)
+					),
+					'default'            => 'default',
+					'description'        => esc_html__( 'Select a text color.', 'wolf-core' ),
+					'param_holder_class' => 'wolf_core_colored-select',
+				),
 
-				// array(
-				// 'type' => 'colorpicker',
-				// 'label' => esc_html__( 'Text Color', 'wolf-core' ),
-				// 'param_name' => 'custom_color',
-				// 'dependency' => array(
-				// 'element' => 'color',
-				// 'value' => 'custom',
-				// ),
-				// ),
+				array(
+					'type'       => 'colorpicker',
+					'label'      => esc_html__( 'Text Color', 'wolf-core' ),
+					'param_name' => 'custom_color',
+					'condition' => array(
+						'color' > 'custom',
+					),
+				),*/
 
 				array(
 					'type'        => 'font_weight',

@@ -52,8 +52,12 @@ var WolfCoreBigText = function( $ ) {
 		window.dispatchEvent( new Event( "resize" ) );
 	} );
 
-	$( window ).on( "elementor/frontend/init", function () {
-        window.dispatchEvent( new Event( "resize" ) );
-    });
+	$( document ).ready( function() {
+		if ( window.elementorFrontend ) {
+			elementorFrontend.hooks.addAction( 'frontend/element_ready/bigtext.default', function( $scope ) {
+				window.dispatchEvent( new Event( "resize" ) );
+			} );
+		}
+	} );
 
 } )( jQuery );

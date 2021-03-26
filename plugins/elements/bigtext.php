@@ -42,8 +42,8 @@ function wolf_core_bigtext( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	// wp_enqueue_script( 'bigtext' );
-	// wp_enqueue_script( 'wolf-core-bigtext' );
+	wp_enqueue_script( 'bigtext' );
+	wp_enqueue_script( 'wolf-core-bigtext' );
 
 	$output               = '';
 	$text_container_class = '';
