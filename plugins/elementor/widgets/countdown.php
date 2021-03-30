@@ -156,8 +156,6 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base {
 				'number_font_custom_color' => '',
 				'text_font_color'          => '',
 				'text_font_custom_color'   => '',
-				'css_animation'            => '',
-				'css_animation_delay'      => '',
 				'el_class'                 => '',
 				'css'                      => '',
 				'inline_style'             => '',

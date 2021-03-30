@@ -901,12 +901,6 @@
   opacity: 0;
   font-size: 28px;
 }
-.wolf-core-countdown-container.wolf-core-countdown-has-color .wolf-core-countdown {
-  color: inherit;
-}
-.wolf-core-countdown-container .wolf-core-countdown-text-has-color .countdown-period {
-  color: inherit;
-}
 .wolf-core-countdown-container .countdown-rtl {
   direction: rtl;
 }
@@ -927,7 +921,6 @@
 }
 .wolf-core-countdown-container .countdown-period {
   display: block;
-  font-size: 15px !important;
 }
 .wolf-core-countdown-container .countdown-descr {
   display: block;

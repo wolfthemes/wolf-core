@@ -85,9 +85,6 @@ function wolf_core_bigtext_params() {
 					'type'         => 'colorpicker',
 					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
 					'param_name'   => 'custom_color',
-					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-bigtext' => 'font-weight: {{VALUE}}!important;',
-					),
 					'page_builder' => 'elementor',
 					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-bigtext' => 'color: {{VALUE}}!important;',

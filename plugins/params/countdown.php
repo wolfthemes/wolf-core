@@ -73,75 +73,142 @@ function wolf_core_countdown_params() {
 					),
 				),
 
+				/* Typography Group controls for Elementor */
 				array(
-					'type'        => 'font_family',
-					'label'       => esc_html__( 'Font', 'wolf-core' ),
-					'param_name'  => 'font_family',
-					'admin_label' => true,
-					'group'       => esc_html__( 'Number Font', 'wolf-core' ),
+					'type'         => 'typography',
+					'label'        => esc_html__( 'Amount Typography', 'wolf-core' ),
+					'param_name'   => 'typography',
+					'selector'     => '{{WRAPPER}} .wolf-core-countdown .countdown-amount',
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
 
 				array(
-					'type'       => 'text',
-					'label'      => esc_html__( 'Font Size', 'wolf-core' ),
-					'param_name' => 'font_size',
+					'type'         => 'typography',
+					'label'        => esc_html__( 'Period Typography', 'wolf-core' ),
+					'param_name'   => 'typography_period',
+					'selector'     => '{{WRAPPER}} .wolf-core-countdown .countdown-period',
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				/* Typography Settings for VC */
+				array(
+					'type'         => 'font_family',
+					'label'        => esc_html__( 'Font', 'wolf-core' ),
+					'param_name'   => 'font_family',
+					'admin_label'  => true,
+					'group'        => esc_html__( 'Amount Font', 'wolf-core' ),
+					'page_builder' => 'vc',
+				),
+
+				array(
+					'type'         => 'text',
+					'label'        => esc_html__( 'Font Size', 'wolf-core' ),
+					'param_name'   => 'font_size',
 					// 'default' => 72,
-					'group'      => esc_html__( 'Number Font', 'wolf-core' ),
+					'group'        => esc_html__( 'Amount Font', 'wolf-core' ),
+					'page_builder' => 'vc',
 				),
 
 				array(
-					'type'        => 'text',
-					'label'       => esc_html__( 'Font Weight', 'wolf-core' ),
-					'param_name'  => 'font_weight',
-					'placeholder' => 700,
-					'group'       => esc_html__( 'Number Font', 'wolf-core' ),
-					'default'     => apply_filters( 'wolf_core_default_countdown_font_weight', 700 ),
+					'type'         => 'text',
+					'label'        => esc_html__( 'Font Weight', 'wolf-core' ),
+					'param_name'   => 'font_weight',
+					'placeholder'  => 700,
+					'group'        => esc_html__( 'Amount Font', 'wolf-core' ),
+					'default'      => apply_filters( 'wolf_core_default_countdown_font_weight', 700 ),
+					'page_builder' => 'vc',
 				),
 
+				/* Text Color for VC */
 				array(
-					'type'       => 'dropdown',
-					'label'      => esc_html__( 'Number Font Color', 'wolf-core' ),
-					'param_name' => 'number_font_color',
-					'options'    => array_merge(
+					'type'         => 'dropdown',
+					'label'        => esc_html__( 'Amount Font Color', 'wolf-core' ),
+					'param_name'   => 'number_font_color',
+					'options'      => array_merge(
 						array( 'default' => esc_html__( 'Default color', 'wolf-core' ) ),
 						wolf_core_get_shared_colors(),
 						array( 'custom' => esc_html__( 'Custom color', 'wolf-core' ) )
 					),
-					'group'      => esc_html__( 'Colors', 'wolf-core' ),
+					'group'        => esc_html__( 'Colors', 'wolf-core' ),
+					'page_builder' => 'vc',
 				),
 
 				array(
-					'type'        => 'colorpicker',
-					'label'       => esc_html__( 'Number Font Custom Color', 'wolf-core' ),
-					'param_name'  => 'number_font_custom_color',
-					'description' => esc_html__( 'Select custom single pie chart track color.', 'wolf-core' ),
-					'condition'   => array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Amount Font Custom Color', 'wolf-core' ),
+					'param_name'   => 'number_font_custom_color',
+					'description'  => esc_html__( 'Select custom single pie chart track color.', 'wolf-core' ),
+					'condition'    => array(
 						'number_font_color' => 'custom',
 					),
-					'group'       => esc_html__( 'Colors', 'wolf-core' ),
+					'group'        => esc_html__( 'Colors', 'wolf-core' ),
+					'page_builder' => 'vc',
 				),
 
 				array(
-					'type'       => 'dropdown',
-					'label'      => esc_html__( 'Text Font Color', 'wolf-core' ),
-					'param_name' => 'text_font_color',
-					'options'    => array_merge(
+					'type'         => 'dropdown',
+					'label'        => esc_html__( 'Text Font Color', 'wolf-core' ),
+					'param_name'   => 'text_font_color',
+					'options'      => array_merge(
 						array( 'default' => esc_html__( 'Default color', 'wolf-core' ) ),
 						wolf_core_get_shared_colors(),
 						array( 'custom' => esc_html__( 'Custom color', 'wolf-core' ) )
 					),
-					'group'      => esc_html__( 'Colors', 'wolf-core' ),
+					'group'        => esc_html__( 'Colors', 'wolf-core' ),
+					'page_builder' => 'vc',
 				),
 
 				array(
-					'type'        => 'colorpicker',
-					'label'       => esc_html__( 'Text Font Custom Color', 'wolf-core' ),
-					'param_name'  => 'text_font_custom_color',
-					'description' => esc_html__( 'Select custom text color.', 'wolf-core' ),
-					'condition'   => array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Font Custom Color', 'wolf-core' ),
+					'param_name'   => 'text_font_custom_color',
+					'description'  => esc_html__( 'Select custom text color.', 'wolf-core' ),
+					'condition'    => array(
 						'text_font_color' => 'custom',
 					),
-					'group'       => esc_html__( 'Colors', 'wolf-core' ),
+					'group'        => esc_html__( 'Colors', 'wolf-core' ),
+					'page_builder' => 'vc',
+				),
+
+				/* Text Color for Elementor in Style tab */
+				array(
+					'label'        => esc_html__( 'Amount Font Color', 'wolf-core' ),
+					'type'         => 'hidden',
+					'param_name'   => 'number_font_color',
+					'default'      => 'custom',
+					'page_builder' => 'elementor',
+				),
+
+				array(
+					'label'        => esc_html__( 'Period Font Color', 'wolf-core' ),
+					'type'         => 'hidden',
+					'param_name'   => 'text_font_color',
+					'default'      => 'custom',
+					'page_builder' => 'elementor',
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Amount Font Color', 'wolf-core' ),
+					'param_name'   => 'number_font_custom_color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-countdown .countdown-amount' => 'color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Period Font Color', 'wolf-core' ),
+					'param_name'   => 'text_font_custom_color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-countdown .countdown-period' => 'color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
 			),
 		)

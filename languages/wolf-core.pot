@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-03-30 09:06:47+00:00\n"
+"POT-Creation-Date: 2021-03-30 11:56:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -739,7 +739,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:573
 #: plugins/elementor/controls/section.php:27
 #: plugins/elementor/elementor-core-functions.php:109
-#: plugins/params/bigtext.php:127 plugins/params/bigtext.php:143
+#: plugins/params/bigtext.php:124 plugins/params/bigtext.php:140
 #: plugins/params/breadcrumb.php:108 plugins/params/breadcrumb.php:123
 #: plugins/params/heading.php:120 plugins/params/heading.php:135
 #: plugins/params/twitter.php:54 plugins/vc/vc-custom-fields.php:61
@@ -1984,7 +1984,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:371
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:450
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:547
-#: plugins/params/album-disc.php:116 plugins/params/bigtext.php:128
+#: plugins/params/album-disc.php:116 plugins/params/bigtext.php:125
 #: plugins/params/breadcrumb.php:109 plugins/params/heading.php:121
 #: plugins/params/video-opener.php:116 plugins/vc/vc-core-functions.php:345
 #: plugins/vc/vc-map/column-inner.php:41 plugins/vc/vc-map/column-inner.php:68
@@ -2018,7 +2018,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:181
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:603
 #: plugins/params/album-disc.php:138 plugins/params/banner.php:62
-#: plugins/params/bigtext.php:183
+#: plugins/params/bigtext.php:180
 #: plugins/vc/vc-params/custom-heading-params.php:181
 #: plugins/vc/vc-params/icon-params.php:603
 msgid "Link"
@@ -2117,8 +2117,10 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:26
 #: pack/wolf-core/plugins/params/bigtext.php:101
+#: pack/wolf-core/plugins/params/countdown.php:79
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:24
-#: plugins/params/bigtext.php:26 plugins/params/bigtext.php:101
+#: plugins/params/bigtext.php:26 plugins/params/bigtext.php:98
+#: plugins/params/countdown.php:79
 #: plugins/vc/vc-params/custom-heading-params.php:24
 msgid "Typography"
 msgstr ""
@@ -2182,14 +2184,14 @@ msgid "Text Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:51
-#: pack/wolf-core/plugins/params/countdown.php:106
-#: pack/wolf-core/plugins/params/countdown.php:129
+#: pack/wolf-core/plugins/params/countdown.php:120
+#: pack/wolf-core/plugins/params/countdown.php:143
 #: pack/wolf-core/plugins/params/heading.php:172
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:100
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:340
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:393
-#: plugins/params/bigtext.php:51 plugins/params/countdown.php:106
-#: plugins/params/countdown.php:129 plugins/params/heading.php:172
+#: plugins/params/bigtext.php:51 plugins/params/countdown.php:121
+#: plugins/params/countdown.php:146 plugins/params/heading.php:172
 #: plugins/vc/vc-params/custom-heading-params.php:100
 #: plugins/vc/vc-params/icon-params.php:340
 #: plugins/vc/vc-params/icon-params.php:393
@@ -2197,8 +2199,8 @@ msgid "Default color"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:54
-#: pack/wolf-core/plugins/params/countdown.php:108
-#: pack/wolf-core/plugins/params/countdown.php:131
+#: pack/wolf-core/plugins/params/countdown.php:122
+#: pack/wolf-core/plugins/params/countdown.php:145
 #: pack/wolf-core/plugins/params/heading.php:175
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:44
 #: pack/wolf-core/plugins/vc/vc-map/column.php:45
@@ -2216,8 +2218,8 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:424
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:384
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:575
-#: plugins/params/bigtext.php:54 plugins/params/countdown.php:108
-#: plugins/params/countdown.php:131 plugins/params/heading.php:175
+#: plugins/params/bigtext.php:54 plugins/params/countdown.php:123
+#: plugins/params/countdown.php:148 plugins/params/heading.php:175
 #: plugins/vc/vc-map/column-inner.php:44 plugins/vc/vc-map/column.php:45
 #: plugins/vc/vc-map/row-inner.php:58 plugins/vc/vc-map/row.php:179
 #: plugins/vc/vc-params/background-params.php:43
@@ -2247,6 +2249,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/bigtext.php:71
 #: pack/wolf-core/plugins/params/bigtext.php:95
 #: pack/wolf-core/plugins/params/bigtext.php:105
+#: pack/wolf-core/plugins/params/countdown.php:83
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:30
 #: pack/wolf-core/plugins/vc/vc-map/column.php:30
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:43
@@ -2281,11 +2284,13 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:412
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:425
 #: plugins/params/bigtext.php:60 plugins/params/bigtext.php:71
-#: plugins/params/bigtext.php:95 plugins/params/bigtext.php:105
-#: plugins/vc/vc-map/column-inner.php:30 plugins/vc/vc-map/column.php:30
-#: plugins/vc/vc-map/row-inner.php:43 plugins/vc/vc-map/row.php:90
-#: plugins/vc/vc-map/row.php:106 plugins/vc/vc-map/row.php:117
-#: plugins/vc/vc-map/row.php:125 plugins/vc/vc-params/background-params.php:32
+#: plugins/params/bigtext.php:92 plugins/params/bigtext.php:102
+#: plugins/params/countdown.php:83 plugins/params/countdown.php:191
+#: plugins/params/countdown.php:202 plugins/vc/vc-map/column-inner.php:30
+#: plugins/vc/vc-map/column.php:30 plugins/vc/vc-map/row-inner.php:43
+#: plugins/vc/vc-map/row.php:90 plugins/vc/vc-map/row.php:106
+#: plugins/vc/vc-map/row.php:117 plugins/vc/vc-map/row.php:125
+#: plugins/vc/vc-params/background-params.php:32
 #: plugins/vc/vc-params/background-params.php:48
 #: plugins/vc/vc-params/background-params.php:64
 #: plugins/vc/vc-params/background-params.php:81
@@ -2320,12 +2325,12 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:111
 #: pack/wolf-core/plugins/params/breadcrumb.php:93
-#: pack/wolf-core/plugins/params/countdown.php:94
+#: pack/wolf-core/plugins/params/countdown.php:107
 #: pack/wolf-core/plugins/params/heading.php:105
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:237
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:123
-#: plugins/params/bigtext.php:111 plugins/params/breadcrumb.php:93
-#: plugins/params/countdown.php:94 plugins/params/heading.php:105
+#: plugins/params/bigtext.php:108 plugins/params/breadcrumb.php:93
+#: plugins/params/countdown.php:107 plugins/params/heading.php:105
 #: plugins/vc/vc-params/button-params.php:237
 #: plugins/vc/vc-params/custom-heading-params.php:123
 msgid "Font Weight"
@@ -2336,7 +2341,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/heading.php:117
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:131
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:543
-#: plugins/params/bigtext.php:124 plugins/params/breadcrumb.php:105
+#: plugins/params/bigtext.php:121 plugins/params/breadcrumb.php:105
 #: plugins/params/heading.php:117
 #: plugins/vc/vc-params/custom-heading-params.php:131
 #: plugins/vc/vc-params/icon-params.php:543
@@ -2348,7 +2353,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/heading.php:122
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:136
 #: pack/wolf-core/plugins/vc/vc-params/icon-params.php:548
-#: plugins/params/bigtext.php:129 plugins/params/breadcrumb.php:110
+#: plugins/params/bigtext.php:126 plugins/params/breadcrumb.php:110
 #: plugins/params/heading.php:122
 #: plugins/vc/vc-params/custom-heading-params.php:136
 #: plugins/vc/vc-params/icon-params.php:548
@@ -2357,7 +2362,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:130
 #: pack/wolf-core/plugins/params/breadcrumb.php:111
-#: pack/wolf-core/plugins/params/heading.php:123 plugins/params/bigtext.php:130
+#: pack/wolf-core/plugins/params/heading.php:123 plugins/params/bigtext.php:127
 #: plugins/params/breadcrumb.php:111 plugins/params/heading.php:123
 msgid "Lowercase"
 msgstr ""
@@ -2366,7 +2371,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/breadcrumb.php:120
 #: pack/wolf-core/plugins/params/heading.php:132
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:143
-#: plugins/params/bigtext.php:140 plugins/params/breadcrumb.php:120
+#: plugins/params/bigtext.php:137 plugins/params/breadcrumb.php:120
 #: plugins/params/heading.php:132
 #: plugins/vc/vc-params/custom-heading-params.php:143
 msgid "Font Style"
@@ -2376,23 +2381,23 @@ msgstr ""
 #: pack/wolf-core/plugins/params/breadcrumb.php:124
 #: pack/wolf-core/plugins/params/heading.php:136
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:147
-#: plugins/params/bigtext.php:144 plugins/params/breadcrumb.php:124
+#: plugins/params/bigtext.php:141 plugins/params/breadcrumb.php:124
 #: plugins/params/heading.php:136
 #: plugins/vc/vc-params/custom-heading-params.php:147
 msgid "Italic"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:154
-#: pack/wolf-core/plugins/params/countdown.php:78
+#: pack/wolf-core/plugins/params/countdown.php:89
 #: pack/wolf-core/plugins/params/heading.php:93
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:67
-#: plugins/params/bigtext.php:154 plugins/params/countdown.php:78
+#: plugins/params/bigtext.php:151 plugins/params/countdown.php:89
 #: plugins/params/heading.php:93
 #: plugins/vc/vc-params/custom-heading-params.php:67
 msgid "Font"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/bigtext.php:166 plugins/params/bigtext.php:166
+#: pack/wolf-core/plugins/params/bigtext.php:166 plugins/params/bigtext.php:163
 msgid "HTML Tag"
 msgstr ""
 
@@ -2520,57 +2525,59 @@ msgid ""
 "target=\"_blank\">here</a>."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:81
-#: pack/wolf-core/plugins/params/countdown.php:89
-#: pack/wolf-core/plugins/params/countdown.php:97
-#: plugins/params/countdown.php:81 plugins/params/countdown.php:89
-#: plugins/params/countdown.php:97
+#: pack/wolf-core/plugins/params/countdown.php:92
+#: pack/wolf-core/plugins/params/countdown.php:101
+#: pack/wolf-core/plugins/params/countdown.php:110
+#: plugins/params/countdown.php:92 plugins/params/countdown.php:101
+#: plugins/params/countdown.php:110
 msgid "Number Font"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:86
+#: pack/wolf-core/plugins/params/countdown.php:98
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:39
-#: plugins/params/countdown.php:86
+#: plugins/params/countdown.php:98
 #: plugins/vc/vc-params/custom-heading-params.php:39
 msgid "Font Size"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:103
-#: plugins/params/countdown.php:103
+#: pack/wolf-core/plugins/params/countdown.php:117
+#: plugins/params/countdown.php:118 plugins/params/countdown.php:168
+#: plugins/params/countdown.php:185
 msgid "Number Font Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:110
-#: pack/wolf-core/plugins/params/countdown.php:121
-#: pack/wolf-core/plugins/params/countdown.php:133
-#: pack/wolf-core/plugins/params/countdown.php:144
-#: plugins/params/countdown.php:110 plugins/params/countdown.php:121
-#: plugins/params/countdown.php:133 plugins/params/countdown.php:144
+#: pack/wolf-core/plugins/params/countdown.php:124
+#: pack/wolf-core/plugins/params/countdown.php:135
+#: pack/wolf-core/plugins/params/countdown.php:147
+#: pack/wolf-core/plugins/params/countdown.php:158
+#: plugins/params/countdown.php:125 plugins/params/countdown.php:137
+#: plugins/params/countdown.php:150 plugins/params/countdown.php:162
 msgid "Colors"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:115
-#: plugins/params/countdown.php:115
+#: pack/wolf-core/plugins/params/countdown.php:129
+#: plugins/params/countdown.php:131
 msgid "Number Font Custom Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:117
-#: plugins/params/countdown.php:117
+#: pack/wolf-core/plugins/params/countdown.php:131
+#: plugins/params/countdown.php:133
 msgid "Select custom single pie chart track color."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:126
-#: plugins/params/countdown.php:126
+#: pack/wolf-core/plugins/params/countdown.php:140
+#: plugins/params/countdown.php:143 plugins/params/countdown.php:176
+#: plugins/params/countdown.php:196
 msgid "Text Font Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:138
-#: plugins/params/countdown.php:138
+#: pack/wolf-core/plugins/params/countdown.php:152
+#: plugins/params/countdown.php:156
 msgid "Text Font Custom Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:140
-#: plugins/params/countdown.php:140
+#: pack/wolf-core/plugins/params/countdown.php:154
+#: plugins/params/countdown.php:158
 msgid "Select custom text color."
 msgstr ""
 

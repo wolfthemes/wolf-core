@@ -131,17 +131,25 @@ function wolf_core_filter_typography_atts() {
 			'wolf_core_' . $element_slug . '_atts',
 			function( $atts ) {
 
-				$typography_atts = array( 'font_family', 'font_size', 'font_weight', 'text_transform', 'font_style', 'line_height', 'letter_spacing' );
-
 				if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+
+					$typography_atts = array( 'font_family', 'font_size', 'font_weight', 'text_transform', 'font_style', 'line_height', 'letter_spacing' );
+
 					foreach ( $typography_atts as $typography_att ) {
-						if ( $atts[ 'typography_' . $typography_att ] ) {
+
+						if ( isset( $atts[ 'typography_' . $typography_att ] ) ) {
 							$atts[ $typography_att ] = $atts[ 'typography_' . $typography_att ];
+						}
+					}
+
+					foreach ( $atts as $k => $a ) {
+
+						if ( is_array( $a ) && isset( $a['size'] ) && isset( $a['unit'] ) ) {
+							$atts[ $k ] = $a['size'] . $a['unit'];
 						}
 					}
 				}
 
-				//debug( $atts );
 				return $atts;
 			}
 		);

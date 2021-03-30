@@ -40,8 +40,6 @@ function wolf_core_bigtext( $atts ) {
 		)
 	);
 
-	//debug( $atts );
-
 	extract( $atts ); // phpcs:ignore
 
 	wp_enqueue_script( 'bigtext' );
