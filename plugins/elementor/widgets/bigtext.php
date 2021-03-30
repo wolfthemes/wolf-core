@@ -9,6 +9,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+
 class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 
 	/**
@@ -20,17 +23,29 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 
 		parent::__construct( $data, $args );
 
-		wp_enqueue_script( 'bigtext' );
-		wp_enqueue_script( 'wolf-core-bigtext' );
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+			foreach ( $scripts as $script ) {
+				wp_enqueue_script( $script );
+			}
+		}
 
 		$this->params = wolf_core_bigtext_params();
 	}
 
 	/**
-	 * Get scripts dependencies
+	 * Retrieve the list of scripts the counter widget depended on.
+	 *
+	 * Used to set scripts dependencies required to run the widget.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget scripts dependencies.
 	 */
 	public function get_script_depends() {
-		return array( 'jquery', 'bigtext', 'wolf-core-bigtext' );
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+			return $this->params['properties']['scripts'];
+		}
 	}
 
 	/**
@@ -88,6 +103,22 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	 */
 	public function get_categories() {
 		return $this->params['properties']['el_categories'];
+	}
+
+	/**
+	 * Get widget keywords.
+	 *
+	 * Retrieve the list of keywords the widget belongs to.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget keywords.
+	 */
+	public function get_keywords() {
+		if ( isset( $this->params['properties']['keywords'] ) ) {
+			return $this->params['properties']['keywords'];
+		}
 	}
 
 	/**

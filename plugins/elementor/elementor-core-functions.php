@@ -122,6 +122,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['type']  = \Elementor\Scheme_Color::get_type();
 			$field_params['value'] = \Elementor\Scheme_Color::COLOR_1;
 
+		} elseif ( 'hidden' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::HIDDEN;
+
 		} elseif ( 'video' === $type ) {
 
 			$field_params['type']       = \Elementor\Controls_Manager::MEDIA;
@@ -151,10 +155,26 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['selectors'] = $p['selectors'];
 		}
 
-		$widget->add_control(
-			$p['param_name'],
-			$field_params
-		);
+		if ( isset( $p['selector'] ) ) {
+			$field_params['selector'] = $p['selector'];
+		}
+
+		if ( 'typography' === $type ) {
+
+			$widget->add_group_control(
+				\Elementor\Group_Control_Typography::get_type(),
+				array_merge(
+					array( 'name' => $p['param_name'] ),
+					$field_params
+				)
+			);
+
+		} else {
+			$widget->add_control(
+				$p['param_name'],
+				$field_params
+			);
+		}
 	}
 }
 
@@ -221,8 +241,8 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->start_controls_section(
 			'style_section',
 			array(
-				'label' => esc_html__( 'Style', 'wolf-core' ),
-				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+				'label' => esc_html__( 'Title', 'wolf-core' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			)
 		);
 
@@ -235,7 +255,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->start_controls_section(
 			'custom_section',
 			array(
-				'label' => esc_html__( 'custom', 'wolf-core' ),
+				'label' => esc_html__( 'Custom', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -273,3 +293,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 		$widget->end_controls_section();
 	}
 }
+
+add_filter( 'wolf_core_fp_container', function() {
+	return '.elementor-section-wrap';
+} );

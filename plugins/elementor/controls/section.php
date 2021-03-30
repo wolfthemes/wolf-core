@@ -35,6 +35,26 @@ add_action(
 );
 
 /**
+ * Add name option
+ */
+add_action(
+	'elementor/element/section/section_layout/before_section_end',
+	function( $section, $args ) {
+
+		$section->add_control(
+			'name',
+			array(
+				'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
+				'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+			)
+		);
+	},
+	10,
+	2
+);
+
+/**
  * Add parallax background option
  */
 add_action(
@@ -76,7 +96,7 @@ add_action(
 
 		if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
 
-			// debug( $settings );
+			debug( $settings );
 
 			if ( 'video' === $settings['background_background'] && isset( $settings['background_video_link'] ) ) {
 
@@ -89,8 +109,18 @@ add_action(
 			}
 		}
 
+		/* Default font color */
 		if ( isset( $settings['font_color'] ) ) {
 			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-font-' . esc_attr( $settings['font_color'] ) );
+		}
+
+		/* Section ID and name data for one-page feature */
+		if ( isset( $settings['name'] ) ) {
+			$section_id = sanitize_title( $settings['name'] );
+			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-parent-row' );
+			$widget->add_render_attribute( '_wrapper', 'id', $section_id );
+			$widget->add_render_attribute( '_wrapper', 'data-anchor', $section_id );
+			$widget->add_render_attribute( '_wrapper', 'data-row-name', esc_attr( $settings['name'] ) );
 		}
 	},
 	10

@@ -27,6 +27,7 @@ function wolf_core_bigtext_params() {
 				'el_categories' => array( 'music' ),
 				'el_base'       => 'bigtext',
 				'icon'          => 'fa fa-text-width',
+				'scripts'       => array( 'jquery', 'bigtext', 'wolf-core-bigtext' ),
 			),
 			'params'     => array(
 				array(
@@ -39,7 +40,8 @@ function wolf_core_bigtext_params() {
 	' . sprintf( esc_html__( 'You can use the %s short tag to display the current page title.', 'wolf-core' ), '{{post_title}}' ),
 				),
 
-				/*array(
+				/* Text Color for VC */
+				array(
 					'type'               => 'select',
 					'label'              => esc_html__( 'Text Color', 'wolf-core' ),
 					'param_name'         => 'color',
@@ -55,66 +57,108 @@ function wolf_core_bigtext_params() {
 					'default'            => 'default',
 					'description'        => esc_html__( 'Select a text color.', 'wolf-core' ),
 					'param_holder_class' => 'wolf_core_colored-select',
+					'group'              => esc_html__( 'Style', 'wolf-core' ),
+					'page_builder'       => 'vc',
 				),
 
 				array(
-					'type'       => 'colorpicker',
-					'label'      => esc_html__( 'Text Color', 'wolf-core' ),
-					'param_name' => 'custom_color',
-					'condition' => array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Custom Color', 'wolf-core' ),
+					'param_name'   => 'custom_color',
+					'condition'    => array(
 						'color' > 'custom',
 					),
-				),*/
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+					'page_builder' => 'vc',
+				),
 
+				/* Text Color for Elementor in Style tab */
 				array(
-					'type'        => 'font_weight',
-					'label'       => esc_html__( 'Font Weight', 'wolf-core' ),
-					'param_name'  => 'font_weight',
-					'admin_label' => true,
-					'default'     => apply_filters( 'wolf_core_default_heading_font_weight', '' ),
-					'placeholder' => apply_filters( 'wolf_core_default_heading_font_weight', '700' ),
-					'selectors'   => array(
-						'{{WRAPPER}} .wolf-core-bigtext' => 'font-weight: {{VALUE}}!important;',
-					),
+					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
+					'type'         => 'hidden',
+					'param_name'   => 'color',
+					'default'      => 'custom',
+					'page_builder' => 'elementor',
 				),
 
 				array(
-					'type'       => 'select',
-					'label'      => esc_html__( 'Text Transform', 'wolf-core' ),
-					'param_name' => 'text_transform',
-					'options'    => array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
+					'param_name'   => 'custom_color',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-bigtext' => 'font-weight: {{VALUE}}!important;',
+					),
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-bigtext' => 'color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				/* Typography Group controls for Elementor */
+				array(
+					'type'         => 'typography',
+					'label'        => esc_html__( 'Typography', 'wolf-core' ),
+					'param_name'   => 'typography',
+					'selector'     => '{{WRAPPER}} .wolf-core-bigtext',
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				/* Typography Settings for VC */
+				array(
+					'type'         => 'font_weight',
+					'label'        => esc_html__( 'Font Weight', 'wolf-core' ),
+					'param_name'   => 'font_weight',
+					'admin_label'  => true,
+					'default'      => apply_filters( 'wolf_core_default_heading_font_weight', '' ),
+					'placeholder'  => apply_filters( 'wolf_core_default_heading_font_weight', '700' ),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-bigtext' => 'font-weight: {{VALUE}}!important;',
+					),
+					'page_builder' => 'vc',
+				),
+
+				array(
+					'type'         => 'select',
+					'label'        => esc_html__( 'Text Transform', 'wolf-core' ),
+					'param_name'   => 'text_transform',
+					'options'      => array(
 						''          => esc_html__( 'Default', 'wolf-core' ),
 						'none'      => esc_html__( 'None', 'wolf-core' ),
 						'uppercase' => esc_html__( 'Uppercase', 'wolf-core' ),
 						'lowercase' => esc_html__( 'Lowercase', 'wolf-core' ),
 					),
-					'selectors'  => array(
+					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-bigtext' => 'text-transform: {{VALUE}}!important;',
 					),
+					'page_builder' => 'vc',
 				),
 
 				array(
-					'type'       => 'select',
-					'label'      => esc_html__( 'Font Style', 'wolf-core' ),
-					'param_name' => 'font_style',
-					'options'    => array(
+					'type'         => 'select',
+					'label'        => esc_html__( 'Font Style', 'wolf-core' ),
+					'param_name'   => 'font_style',
+					'options'      => array(
 						''       => esc_html__( 'Default', 'wolf-core' ),
 						'italic' => esc_html__( 'Italic', 'wolf-core' ),
 					),
-					'selectors'  => array(
+					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-bigtext' => 'font-style: {{VALUE}};',
 					),
+					'page_builder' => 'vc',
 				),
 
 				array(
-					'type'        => 'font_family',
-					'label'       => esc_html__( 'Font', 'wolf-core' ),
-					'param_name'  => 'font_family',
-					'admin_label' => true,
-					'default'     => apply_filters( 'wolf_core_default_heading_font_family', '' ),
-					'selectors'   => array(
+					'type'         => 'font_family',
+					'label'        => esc_html__( 'Font', 'wolf-core' ),
+					'param_name'   => 'font_family',
+					'admin_label'  => true,
+					'default'      => apply_filters( 'wolf_core_default_heading_font_family', '' ),
+					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-bigtext' => 'font-family: {{VALUE}}!important;',
 					),
+					'page_builder' => 'vc',
 				),
 
 				array(
@@ -122,12 +166,15 @@ function wolf_core_bigtext_params() {
 					'label'      => esc_html__( 'HTML Tag', 'wolf-core' ),
 					'param_name' => 'title_tag',
 					'options'    => array(
-						'h2' => 'h2',
-						'p'  => 'p',
-						'h5' => 'h5',
-						'h4' => 'h4',
-						'h3' => 'h3',
-						'h1' => 'h1',
+						'h1'   => 'H1',
+						'h2'   => 'H2',
+						'h3'   => 'H3',
+						'h4'   => 'H4',
+						'h5'   => 'H5',
+						'h6'   => 'H6',
+						'div'  => 'div',
+						'span' => 'span',
+						'p'    => 'p',
 					),
 				),
 

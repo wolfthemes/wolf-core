@@ -59,6 +59,16 @@ function wolf_core_is_elementor_page() {
 }
 
 /**
+ * Check if elementor editor
+ */
+function wolf_core_is_elementor_editor() {
+
+	if ( defined( 'ELEMENTOR_VERSION' ) ) {
+		return \Elementor\Plugin::$instance->editor->is_edit_mode();
+	}
+}
+
+/**
  * Check if we are on the WPB VC Frontend Editor
  *
  * @return bool

@@ -115,3 +115,37 @@ function wolf_core_animation_markup_filter() {
 	}
 }
 add_action( 'init', 'wolf_core_animation_markup_filter' );
+
+/**
+ * Filter typography attributes to suit both page builder
+ */
+function wolf_core_filter_typography_atts() {
+
+	$elements = wolf_core_get_elements();
+
+	foreach ( $elements as $e ) {
+
+		$element_slug = str_replace( '-', '_', $e );
+
+		add_filter(
+			'wolf_core_' . $element_slug . '_atts',
+			function( $atts ) {
+
+				$typography_atts = array( 'font_family', 'font_size', 'font_weight', 'text_transform', 'font_style', 'line_height', 'letter_spacing' );
+
+				if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+					foreach ( $typography_atts as $typography_att ) {
+						if ( $atts[ 'typography_' . $typography_att ] ) {
+							$atts[ $typography_att ] = $atts[ 'typography_' . $typography_att ];
+						}
+					}
+				}
+
+				//debug( $atts );
+				return $atts;
+			}
+		);
+	}
+
+}
+add_action( 'init', 'wolf_core_filter_typography_atts' );

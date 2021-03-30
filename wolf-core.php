@@ -122,10 +122,10 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * @access public
 		 */
 		public function __construct() {
+
 			/**
 			 * Auth and verification
 			 */
-
 			if ( ! $this->verifications() ) {
 				return;
 			}

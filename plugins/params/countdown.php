@@ -27,6 +27,7 @@ function wolf_core_countdown_params() {
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'countdown',
 				'icon'          => 'fa fa-bell-o',
+				'scripts'       => array( 'jquery', 'countdown', 'wolf-core-countdown' ),
 			),
 			'params'     => array(
 
@@ -52,7 +53,7 @@ function wolf_core_countdown_params() {
 					'param_name'  => 'format',
 					'admin_label' => true,
 					'default'     => 'dHMS',
-					'options'       => array(
+					'options'     => array(
 						'yowdHMS' => esc_html__( 'Auto (show all values as needed)', 'wolf-core' ),
 						'dHMS'    => esc_html__( 'By Days', 'wolf-core' ),
 						'wdHM'    => esc_html__( 'By Weeks', 'wolf-core' ),

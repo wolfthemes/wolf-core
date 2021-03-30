@@ -40,6 +40,8 @@ function wolf_core_bigtext( $atts ) {
 		)
 	);
 
+	//debug( $atts );
+
 	extract( $atts ); // phpcs:ignore
 
 	wp_enqueue_script( 'bigtext' );
@@ -74,6 +76,10 @@ function wolf_core_bigtext( $atts ) {
 		$text_style .= 'color:' . wolf_core_sanitize_color( $custom_color ) . ';';
 	} else {
 		$class .= " wolf-core-text-color-$color"; // color class.
+	}
+
+	if ( wolf_core_is_elementor_editor() ) {
+		$text_style = '';
 	}
 
 	$lines = wolf_core_texarea_lines_to_array( $text );

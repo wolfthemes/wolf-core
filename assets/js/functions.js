@@ -73,6 +73,7 @@ var WolfCore = (function ($) {
 		 * Init functions
 		 */
 		init: function () {
+
 			this.isMobile = WolfCoreParams.isMobile;
 
 			var _this = this;

@@ -81,6 +81,22 @@ class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
+	 * Get widget keywords.
+	 *
+	 * Retrieve the list of keywords the widget belongs to.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget keywords.
+	 */
+	public function get_keywords() {
+		if ( isset( $this->params['properties']['keywords'] ) ) {
+			return $this->params['properties']['keywords'];
+		}
+	}
+
+	/**
 	 * Register Album Disc widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
