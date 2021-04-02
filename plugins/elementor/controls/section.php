@@ -96,7 +96,7 @@ add_action(
 
 		if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
 
-			debug( $settings );
+			//debug( $settings );
 
 			if ( 'video' === $settings['background_background'] && isset( $settings['background_video_link'] ) ) {
 

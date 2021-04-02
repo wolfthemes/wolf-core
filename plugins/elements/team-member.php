@@ -1,6 +1,6 @@
 <?php
 /**
- * Blank
+ * Team Member
  *
  * @author WolfThemes
  * @package WolfCore/Elements
@@ -14,10 +14,10 @@ defined( 'ABSPATH' ) || exit;
  *
  * @param array $atts The element attributes.
  */
-function wolf_core_blank( $atts ) {
+function wolf_core_team_member( $atts ) {
 
 	$atts = apply_filters(
-		'wolf_core_blank_atts',
+		'wolf_core_team_member_atts',
 		wp_parse_args(
 			$atts,
 			array(

@@ -78,6 +78,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		$field_params['label']       = $p['label'];
 		$field_params['placeholder'] = isset( $p['placeholder'] ) ? $p['placeholder'] : '';
 
+		if ( isset( $p['default'] ) ) {
+			$field_params['default'] = $p['default'];
+		}
+
 		if ( 'text' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::TEXT;
@@ -116,6 +120,29 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::COLOR;
 
+		} elseif ( 'slider' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::SLIDER;
+
+			if ( isset( $p['default'] ) && ! is_array( $p['default'] ) ) {
+				$field_params['default'] = array(
+					'unit' => '%',
+					'size' => $p['default'],
+				);
+			}
+
+			$field_params['size_units'] = isset( $p['size_units'] ) ? $p['size_units'] : array( '%' );
+
+			if ( isset( $field_params['range'] ) ) {
+				$field_params['range'] = $p['range'];
+			} else {
+				$field_params['range']['%'] = array(
+					'min' => ( isset( $p['min'] ) ) ? $p['min'] : 0,
+					'max' => ( isset( $p['max'] ) ) ? $p['max'] : 100,
+					'step'=> ( isset( $p['step'] ) ) ? $p['step'] : 1,
+				);
+			}
+
 		} elseif ( 'scheme' === $type ) {
 
 			$field_params['type']  = \Elementor\Controls_Manager::COLOR;
@@ -138,9 +165,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 		}
 
-		if ( isset( $p['default'] ) ) {
-			$field_params['default'] = $p['default'];
-		}
 
 		if ( isset( $p['condition'] ) ) {
 			$field_params['condition'] = $p['condition'];

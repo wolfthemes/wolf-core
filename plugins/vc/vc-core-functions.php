@@ -92,6 +92,13 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 			$vc_params['params'][ $i ]['type'] = 'colorpicker';
 
+		} elseif ( 'slider' === $type ) {
+
+			$vc_params['params'][ $i ]['type'] = 'wolf_core_numeric_slider';
+			$vc_params['params'][ $i ]['min'] = $p['min'];
+			$vc_params['params'][ $i ]['max'] = $p['max'];
+			$vc_params['params'][ $i ]['step'] = $p['step'];
+
 		} elseif ( 'video' === $type ) {
 
 			$vc_params['params'][ $i ]['type'] = 'wolf_core_video_url';

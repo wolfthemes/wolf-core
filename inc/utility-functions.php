@@ -1076,7 +1076,7 @@ function wolf_core_process_link_atts( $link_atts ) {
 		$link['rel']    = esc_attr( $vc_link['rel'] );
 		$link['title']  = esc_attr( $vc_link['title'] );
 
-	} else {
+	} elseif ( is_array( $link_atts ) ) {
 
 		$link['url']    = esc_url( $link_atts['url'] );
 		$link['target'] = ( isset( $link_atts['is_external'] ) && 'on' === $link_atts['is_external'] ) ? '_blank' : '_parent';
