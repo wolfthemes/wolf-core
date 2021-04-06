@@ -137,12 +137,11 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				$field_params['range'] = $p['range'];
 			} else {
 				$field_params['range']['%'] = array(
-					'min' => ( isset( $p['min'] ) ) ? $p['min'] : 0,
-					'max' => ( isset( $p['max'] ) ) ? $p['max'] : 100,
-					'step'=> ( isset( $p['step'] ) ) ? $p['step'] : 1,
+					'min'  => ( isset( $p['min'] ) ) ? $p['min'] : 0,
+					'max'  => ( isset( $p['max'] ) ) ? $p['max'] : 100,
+					'step' => ( isset( $p['step'] ) ) ? $p['step'] : 1,
 				);
 			}
-
 		} elseif ( 'scheme' === $type ) {
 
 			$field_params['type']  = \Elementor\Controls_Manager::COLOR;
@@ -163,8 +162,11 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['type']       = \Elementor\Controls_Manager::MEDIA;
 			$field_params['media_type'] = 'image';
 
-		}
+		} elseif ( 'images' === $type ) {
 
+			$field_params['type']       = \Elementor\Controls_Manager::GALLERY;
+
+		}
 
 		if ( isset( $p['condition'] ) ) {
 			$field_params['condition'] = $p['condition'];
@@ -318,6 +320,9 @@ function wolf_core_register_elementor_controls( $widget ) {
 	}
 }
 
-add_filter( 'wolf_core_fp_container', function() {
-	return '.elementor-section-wrap';
-} );
+add_filter(
+	'wolf_core_fp_container',
+	function() {
+		return '.elementor-section-wrap';
+	}
+);

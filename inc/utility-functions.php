@@ -1089,6 +1089,27 @@ function wolf_core_process_link_atts( $link_atts ) {
 	}
 }
 
+/**
+ * Format gallery image attributes
+ *
+ * @param mixed $images
+ * @return string
+ */
+function wolf_core_process_gallery_atts( $images ) {
+	if ( 'elementor' === wolf_core_get_plugin_in_use() && is_array( $images ) ) {
+
+		$images_array = array();
+
+		foreach ( $images as $image ) {
+			$images_array[] = $image['id'];
+		}
+
+		$images = wolf_core_array_to_list( $images_array );
+	}
+
+	return $images;
+}
+
 if ( ! function_exists( 'debug' ) ) {
 	function debug( $var ) {
 		echo '<br><pre class="wolf-core-debug">';

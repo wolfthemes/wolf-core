@@ -1,6 +1,6 @@
 <?php
 /**
- * Big Text
+ * Gallery
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
+class Elementor_Gallery_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * @var string
@@ -26,7 +26,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 			}
 		}
 
-		$this->params = wolf_core_bigtext_params();
+		$this->params = wolf_core_gallery_params();
 	}
 
 	/**
@@ -63,7 +63,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Big Text widget title.
+	 * Retrieve element widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -77,7 +77,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Big Text widget icon.
+	 * Retrieve element widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -91,7 +91,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Big Text widget belongs to.
+	 * Retrieve the list of categories the element widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -119,7 +119,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
-	 * Register Big Text widget controls.
+	 * Register element widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -144,23 +144,12 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'font_family'         => '',
-				'letter_spacing'      => 0,
-				'font_weight'         => 700,
-				'text_transform'      => 'none',
-				'font_style'          => '',
-				'color'               => '',
-				'custom_color'        => '',
-				'css_animation'       => '',
-				'css_animation_delay' => '',
-				'text'                => '',
-				'link'                => '',
-				'title_tag'           => 'h4',
+
 			)
 		);
 
-		echo wolf_core_bigtext( $atts ); // WCS XSS ok.
+		echo wolf_core_gallery( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Bigtext_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Gallery_Widget() );
 

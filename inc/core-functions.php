@@ -104,7 +104,7 @@ function wolf_core_get_elements() {
 		// 'empty-space',
 		// 'events',
 		// 'facebook-page-box',
-		// 'gallery',
+		'gallery',
 		// 'gmaps',
 		// 'google-maps',
 		// 'highlight',
@@ -666,6 +666,52 @@ function wolf_core_get_shared_gradient_colors() {
 	$wolf_core_shared_gradient_colors = apply_filters( 'wolf_core_shared_gradient_colors', $wolf_core_shared_gradient_colors );
 
 	return $wolf_core_shared_gradient_colors;
+}
+
+/**
+ * Get metro pattern options
+ *
+ * @return array
+ */
+function wolf_core_get_metro_patterns() {
+	return apply_filters(
+		'wolf_core_metro_pattern_options',
+		array(
+			'auto'      => esc_html__( 'Auto', 'wolf-core' ),
+			'pattern-1' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 1, 6 ),
+			'pattern-2' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 2, 8 ),
+			'pattern-3' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 3, 10 ),
+			'pattern-4' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 4, 8 ),
+			'pattern-5' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 5, 5 ),
+			'pattern-6' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 6, 5 ),
+			'pattern-7' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 7, 6 ),
+		)
+	);
+}
+
+/**
+ * Get hover effects in array to allow filtering by theme and stuff
+ *
+ * @return array
+ */
+function wolf_core_get_hover_effects() {
+
+	$wolf_core_hover_effects = array(
+		'default'         => esc_html__( 'Theme Default', 'wolf-visual-composer' ),
+		'opacity'         => esc_html__( 'Opacity', 'wolf-visual-composer' ),
+		'opacity-reverse' => esc_html__( 'Opacity Reversed', 'wolf-visual-composer' ),
+		'zoomin'          => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
+		'zoomout'         => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
+		'move-left'       => esc_html__( 'Move Left', 'wolf-visual-composer' ),
+		'move-right'      => esc_html__( 'Move Right', 'wolf-visual-composer' ),
+		'move-up'         => esc_html__( 'Move Up', 'wolf-visual-composer' ),
+		'move-down'       => esc_html__( 'Move Down', 'wolf-visual-composer' ),
+		'up'              => esc_html__( 'Up', 'wolf-visual-composer' ),
+		'greyscale'       => esc_html__( 'Black and white to colored', 'wolf-visual-composer' ),
+		'to-greyscale'    => esc_html__( 'Colored to Black and white', 'wolf-visual-composer' ),
+	);
+
+	return apply_filters( 'wolf_core_hover_effects', $wolf_core_hover_effects );
 }
 
 /**

@@ -106,6 +106,10 @@ function wolf_core_convert_params_to_vc( $params ) {
 		} elseif ( 'image' === $type ) {
 
 			$vc_params['params'][ $i ]['type'] = 'attach_image';
+
+		} elseif ( 'images' === $type ) {
+
+			$vc_params['params'][ $i ]['type'] = 'attach_images';
 		}
 
 		if ( isset( $p['vc_dependency'] ) ) {
