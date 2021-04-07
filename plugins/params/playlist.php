@@ -70,6 +70,7 @@ function wolf_core_playlist_params() {
 						'true'  => esc_html__( 'Show', '%TEXDOMAIN%' ),
 						'false' => esc_html__( 'Hide', '%TEXDOMAIN%' ),
 					),
+					'deffault' => 'true',
 				),
 
 				array(
