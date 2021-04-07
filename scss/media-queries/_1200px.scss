@@ -1,0 +1,64 @@
+/* Slid caption */
+.wolf-core-slide-caption {
+	padding: 114px;
+}
+
+.wolf-core-slide-caption-valign-bottom {
+	.wolf-core-slide-caption {
+		padding-bottom: 50px;
+	}
+}
+
+.wolf-core-slide-caption-valign-top {
+	.wolf-core-slide-caption {
+		padding-top: 50px;
+	}
+}
+
+.wolf-core-show-tablet {
+	display: none !important;
+}
+
+/* Mosaic gallery */
+.wolf-core-mosaic-block {
+	width: 49.999%;
+	float: left;
+}
+
+/* Pricing table */
+/*.wolf-core-pricing-tables-2-cols{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.wolf-core-pricing-tables-3-cols{
+	width: 85%;
+	margin: 0 auto;
+}
+
+.wolf-core-pricing-tables-4-cols{
+	margin: 0 auto;
+}*/
+
+/* Counter */
+.wolf-core-counter {
+	font-size: 72px;
+}
+
+.wolf-core-counter-text {
+	font-size: 16px;
+}
+
+/* Countdown */
+.wolf-core-countdown-container {
+	font-size: 54px;
+
+	.countdown-period {
+		//font-size: 24px!important;
+	}
+}
+
+.wolf-core-slide-text-type-big-text {
+	font-size: 24px;
+	padding: 0;
+}

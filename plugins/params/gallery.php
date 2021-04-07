@@ -28,7 +28,8 @@ function wolf_core_gallery_params() {
 				'el_base'       => 'gallery',
 				'keywords'      => array( 'image', 'photo', 'visual', 'gallery' ),
 				'icon'          => 'dashicons-before dashicons-images-alt',
-				'scripts'       => array( 'jquery' ),
+				//'scripts'       => array( 'jquery', 'flickity', 'imagesloaded', 'isotope', 'packery-mode', 'flex-images', 'wolf-core-carousels', 'wolf-core-galleries' ),
+				'scripts' 		=> array( 'script' ),
 			),
 			'params'     => array(
 				array(
@@ -68,7 +69,7 @@ function wolf_core_gallery_params() {
 
 				array(
 					'type'         => 'checkbox',
-					'label'        => esc_html__( 'Metro Full Height (beta: for pattern 5 only)', 'wolf-core' ),
+					'label'        => esc_html__( 'Metro Full Height', 'wolf-core' ),
 					'param_name'   => 'metro_fullheight',
 					'label_on'     => esc_html__( 'Yes', '%TEXTDOMAIN%' ),
 					'label_off'    => esc_html__( 'No', '%TEXTDOMAIN%' ),
@@ -76,20 +77,22 @@ function wolf_core_gallery_params() {
 					'condition'    => array(
 						'type' => array( 'metro' ),
 					),
+					'description'  => esc_html__( ' (beta: for pattern 5 only)', 'wolf-core' ),
 				),
 
 				array(
-					'type'       => 'select',
-					'label'      => esc_html__( 'Metro Background Size (beta: for pattern 5 only)', 'wolf-core' ),
-					'options'    => array(
+					'type'        => 'select',
+					'label'       => esc_html__( 'Metro Background Size', 'wolf-core' ),
+					'options'     => array(
 						'cover'   => esc_html__( 'Cover', 'wolf-core' ),
 						'contain' => esc_html__( 'Contain', 'wolf-core' ),
 					),
-					'param_name' => 'metro_bg_size',
-					'condition'  => array(
+					'param_name'  => 'metro_bg_size',
+					'condition'   => array(
 						'type' => array( 'metro' ),
 					),
-					'default'    => 'cover',
+					'default'     => 'cover',
+					'description' => esc_html__( ' (beta: for pattern 5 only)', 'wolf-core' ),
 				),
 
 				array(
@@ -190,7 +193,8 @@ function wolf_core_gallery_params() {
 					),
 				),
 
-				/*array(
+				/*
+				array(
 					'type'        => 'select',
 					'label'       => esc_html__( 'Custom link target', 'wolf-core' ),
 					'param_name'  => 'custom_links_target',

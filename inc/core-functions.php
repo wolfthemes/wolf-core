@@ -230,6 +230,27 @@ function wolf_core_mime_types( $mimes ) {
 add_filter( 'upload_mimes', 'wolf_core_mime_types', 10, 1 );
 
 /**
+ * Add image sizes
+ *
+ * These size will be ued for galleries and sliders
+ */
+function wolf_core_add_image_sizes() {
+
+	// Extra Large for background.
+	add_image_size( 'wolf-core-XL', 2000, 3000, false );
+
+	// Slides.
+	add_image_size( 'wolf-core-slide', 1200, 700, true );
+
+	// Masonry.
+	add_image_size( 'wolf-core-masonry', 500, 2000, false );
+
+	// Horizontal photo.
+	add_image_size( 'wolf-core-photo', 500, 500, false );
+}
+add_action( 'init', 'wolf_core_add_image_sizes' );
+
+/**
  * Get socials services
  *
  * @return array
@@ -687,6 +708,65 @@ function wolf_core_get_metro_patterns() {
 			'pattern-7' => sprintf( esc_html__( 'Pattern %1$d (loop of %2$d)', 'wolf-core' ), 7, 6 ),
 		)
 	);
+}
+
+/**
+ * Get metro image size
+ *
+ * Get image size depending on metro pattern
+ *
+ * @param string $pattern
+ * @param int    $index
+ * @return string $img_size
+ */
+function wolf_core_get_metro_img_size( $pattern = 'auto', $i = 0 ) {
+
+	$img_size = 'medium';
+
+	if ( 'auto' === $pattern ) {
+
+		// if ( 0 === $i ) {
+			$img_size = 'large';
+		// }
+
+	} elseif ( 'pattern-1' === $pattern ) {
+
+		if ( 0 === $i || $i % 6 == 0 || $i % 6 == 3 ) {
+			$img_size = 'large';
+		}
+	} elseif ( 'pattern-2' === $pattern ) {
+
+		if ( 0 === $i || $i % 8 == 1 || $i % 8 == 2 || $i % 8 == 4 || $i % 8 == 5 ) {
+			$img_size = 'large';
+		}
+	} elseif ( 'pattern-3' === $pattern ) {
+
+		if ( $i % 10 === 4 || $i % 10 === 8 ) {
+			$img_size = 'large';
+		}
+	} elseif ( 'pattern-4' === $pattern ) {
+
+		if ( 0 === $i || $i % 8 === 0 || $i % 8 === 2 || $i % 8 === 6 || $i % 8 === 7 ) {
+			$img_size = 'large';
+		}
+	} elseif ( 'pattern-5' === $pattern ) {
+
+		if ( 0 === $i || $i % 5 === 0 ) {
+			$img_size = 'large';
+		}
+	} elseif ( 'pattern-6' === $pattern ) {
+
+		if ( 0 === $i || $i % 5 === 2 ) {
+			$img_size = 'large';
+		}
+	} elseif ( 'pattern-7' === $pattern ) {
+
+		if ( 0 === $i || $i % 6 === 0 || $i % 6 === 1 ) {
+			$img_size = 'large';
+		}
+	}
+
+	return $img_size;
 }
 
 /**

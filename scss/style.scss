@@ -19,6 +19,13 @@
 
 @import 'global/video-bg';
 
+@import 'dependencies/aos';
+@import 'dependencies/arrows';
+@import 'dependencies/custom-animations';
+@import 'dependencies/dots';
+@import 'dependencies/flexslider-custom';
+@import 'dependencies/swipebox-custom';
+
 @import 'elements/album-disc';
 
 @import 'elements/bigtext';
@@ -48,3 +55,45 @@
 @import 'elements/video-opener';
 
 @import 'elements/video-preview';
+
+/**
+ * Media Queries
+ */
+@media screen and (min-width: 500px) {
+	@import 'media-queries/500px';
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+	@import 'global/pre-grid';
+}
+
+@media screen and (min-width: 800px) {
+	@import 'media-queries/800px';
+}
+
+@media screen and (min-width: 800px) {
+	/**
+	 * Grid
+	 */
+	@import 'global/grid';
+}
+
+@media screen and (min-width: 1050px) {
+	@import 'media-queries/1000px';
+}
+
+@media screen and (min-width: 1200px) {
+	@import 'media-queries/1200px';
+}
+
+@media screen and (max-width: 800px) {
+	.wolf-core-hide-mobile {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.wolf-core-hide-tablet {
+		display: none !important;
+	}
+}

@@ -382,7 +382,7 @@ function wolf_core_gallery( $atts ) {
 
 					$output .= ' data-w="' . esc_attr( $width ) . '" data-h="' . esc_attr( $height ) . '"';
 				} else {
-					$output .= ' data-w="500" data-h="500"'; // fallback
+					$output .= ' data-w="500" data-h="500"'; // fallback.
 				}
 			}
 
@@ -404,7 +404,7 @@ function wolf_core_gallery( $atts ) {
 
 			$output .= $link_start;
 
-			if ( 'justified' !== $type && ! in_array( $img_size, array( 'thumbnail', 'medium', 'large', 'wolf-core-XL', 'full', 'wolf-core-photo' ) ) ) {
+			if ( 'justified' !== $type && ! in_array( $img_size, array( 'thumbnail', 'medium', 'large', 'wolf-core-XL', 'full', 'wolf-core-photo' ), true ) ) {
 
 				if ( wp_attachment_is_image( $img_id ) ) {
 
@@ -422,7 +422,7 @@ function wolf_core_gallery( $atts ) {
 				}
 			} elseif ( 'justified' === $type ) {
 
-				$blank = wolf_core_URI . '/assets/img/blank.gif';
+				$blank = WOLF_CORE_URI . '/assets/img/blank.gif';
 				$src   = wolf_core_get_url_from_attachment_id( $img_id, $img_size );
 				$alt   = get_post_meta( $img_id, '_wp_attachment_image_alt', true );
 				$title = get_the_title( $img_id );
@@ -453,7 +453,7 @@ function wolf_core_gallery( $atts ) {
 					}
 				}
 
-				if ( 'carouselllll' === $type ) { // disabled
+				if ( 'carouselllll' === $type ) { // disabled.
 
 					$output .= '<img
 					src="' . esc_url( $blank ) . '"
@@ -480,7 +480,7 @@ function wolf_core_gallery( $atts ) {
 						alt="' . esc_attr( $alt ) . '">';
 
 					} else {
-						// fallback
+						// fallback.
 						$src = wolf_core_placeholder_img_url( $img_size );
 
 						$output .= '<img

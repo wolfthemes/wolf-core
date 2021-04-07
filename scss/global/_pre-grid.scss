@@ -1,0 +1,38 @@
+.wolf-core-columns-container-4-cols,
+.wolf-core-columns-container-6-cols {
+	.wolf-core-col-3,
+	.wolf-core-col-2 {
+		display: inline-flex;
+		width: 50%;
+	}
+}
+
+.wolf-core-row-layout-column {
+	.wolf-core-columns-container-4-cols {
+		.wolf-core-col-3 {
+			padding: 0 17px;
+
+			&:nth-child(2n + 1) {
+				padding-left: 0;
+			}
+
+			&:nth-child(2n + 0) {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.wolf-core-columns-container-6-cols {
+		.wolf-core-col-2 {
+			padding: 0 17px;
+
+			&:nth-child(2n + 1) {
+				padding-left: 0;
+			}
+
+			&:nth-child(2n + 0) {
+				padding-right: 0;
+			}
+		}
+	}
+}

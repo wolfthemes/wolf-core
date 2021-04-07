@@ -51,7 +51,7 @@ html.fp-enabled,
 	height: 100vh !important;
 	position: relative;
 
-	.wvc-img-bg > img {
+	.wolf-core-img-bg > img {
 		opacity: 1 !important;
 	}
 }
@@ -63,6 +63,7 @@ html.fp-enabled,
 }
 .fp-scroller {
 	overflow: hidden;
+	height: 100vh;
 }
 .iScrollIndicator {
 	border: 0 !important;
@@ -86,7 +87,7 @@ html.fp-enabled,
 	height: 100vh !important;
 }
 
-html:not(.wvc-touch) body.wvc-fullpage {
+html:not(.wolf-core-touch) body.wolf-core-fullpage {
 	height: 100vh !important;
 
 	#colophon,
@@ -95,7 +96,7 @@ html:not(.wvc-touch) body.wvc-fullpage {
 	}
 }
 
-.wvc-fullpage {
+.wolf-core-fullpage {
 	background: #333;
 }
 
@@ -109,7 +110,7 @@ html:not(.wvc-touch) body.wvc-fullpage {
 	left: 0;
 }
 
-.wvc-scroll-lock {
+.wolf-core-scroll-lock {
 	padding: 0 !important;
 	position: fixed;
 	top: 0;
@@ -119,41 +120,41 @@ html:not(.wvc-touch) body.wvc-fullpage {
 	overflow: hidden;
 	display: flex;
 
-	.wvc-row-wrapper {
+	.wolf-core-row-wrapper {
 		padding: 100px 0;
 	}
 
-	&.wvc-scroll-active {
+	&.wolf-core-scroll-active {
 		visibility: visible;
 		margin-top: 0;
 	}
 }
 
-/*body:not(.wvc-is-firefox) {
-	.wvc-scroll-lock{
+/*body:not(.wolf-core-is-firefox) {
+	.wolf-core-scroll-lock{
 		-webkit-backface-visibility: hidden !important;
 		-webkit-transform: translateZ(0) !important;
 	}
 }*/
 
-.wvc-fullpage.wvc-is-firefox {
+.wolf-core-fullpage.wolf-core-is-firefox {
 }
 
-.wvc-row-layout-block,
-.wvc-fp-section-has-fullwidth-revslider {
-	.wvc-row-wrapper {
+.wolf-core-row-layout-block,
+.wolf-core-fp-section-has-fullwidth-revslider {
+	.wolf-core-row-wrapper {
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 	}
 }
 
-.wvc-fp-nav-next {
+.wolf-core-fp-nav-next {
 	cursor: pointer;
 }
 
-//.admin-bar:not(.wvc-is-firefox){
+//.admin-bar:not(.wolf-core-is-firefox){
 .admin-bar {
-	.wvc-scroll-lock {
+	.wolf-core-scroll-lock {
 		top: 32px;
 	}
 }
@@ -343,8 +344,18 @@ html:not(.wvc-touch) body.wvc-fullpage {
 // Admin bar
 @media screen and (max-width: 782px) {
 	.admin-bar {
-		.wvc-scroll-lock {
+		.wolf-core-scroll-lock {
 			top: 46px;
 		}
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.fp-scroller .wolf-core-row-wrapper {
+		height: 100vh;
+	}
+
+	.fp-scroller .wolf-core-row-content {
+		height: 100%;
 	}
 }

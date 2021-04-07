@@ -1,0 +1,217 @@
+/* Countdown */
+.wolf-core-countdown-container {
+	font-size: 32px;
+	.countdown-period {
+		font-size: 18px !important;
+	}
+}
+
+.wolf-core-button {
+	display: inline-block;
+	width: auto;
+}
+
+.wolf-core-slide-caption {
+	padding: 80px;
+}
+
+.wolf-core-show-mobile {
+	display: none !important;
+}
+
+.wolf-core-section-columns .wolf-core-section-inner {
+	padding: 4em 0;
+}
+
+/* Blocks */
+.wolf-core-section-2-cols {
+	.wolf-core-blocks-wrapper {
+		display: table;
+		width: 100%;
+	}
+	.wolf-core-block {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+	}
+}
+
+/* Lniked image */
+.wolf-core-linked-image .wolf-core-image-inner {
+	display: inline-block;
+}
+
+.wolf-core-block {
+	.wolf-core-linked-image .wolf-core-image-inner {
+		display: block;
+	}
+}
+
+/* Pricing tables */
+/*.wolf-core-pricing-table-inner{
+	//float: left;
+}
+
+.wolf-core-pricing-tables-2-cols{
+	.wolf-core-pricing-table-inner{
+		width: 50%;
+	}
+
+	.wolf-core-pricing-table-featured{
+		position: relative;
+		top: 17px;
+		margin-top: 0;
+	}
+}
+
+.wolf-core-pricing-tables-3-cols{
+	.wolf-core-pricing-table-inner{
+		width: 33.2%;
+	}
+
+	.wolf-core-pricing-table-featured{
+		position: relative;
+		top: 17px;
+		margin-top: 0;
+	}
+}
+
+.wolf-core-pricing-tables-4-cols{
+	.wolf-core-pricing-table-inner{
+		width: 25%;
+	}
+
+	.wolf-core-pricing-table-featured{
+		position: relative;
+		top: 17px;
+		margin-top: 0;
+	}
+}*/
+
+/* Call to action */
+.wolf-core-call-to-action-align-left,
+.wolf-core-call-to-action-align-right {
+	display: table;
+	width: 100%;
+
+	.wolf-core-call-to-action-text,
+	.wolf-core-call-to-action-button {
+		display: table-cell;
+		vertical-align: middle;
+		//height: 150px;
+	}
+
+	.wolf-core-call-to-action-button {
+		text-align: right;
+
+		a.wolf-core-button {
+			margin-right: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+			text-align: center;
+		}
+	}
+
+	.wolf-core-call-to-action-text {
+		margin-bottom: 0;
+	}
+}
+
+.wolf-core-call-to-action-align-left {
+	.wolf-core-call-to-action-text {
+		text-align: left;
+		padding-right: 20px;
+	}
+}
+
+.wolf-core-call-to-action-align-right {
+	.wolf-core-call-to-action-text {
+		text-align: right;
+		padding-left: 20px;
+	}
+
+	.wolf-core-button-container {
+		text-align: left;
+	}
+}
+
+.wolf-core-call-to-action-align-center {
+	.wolf-core-call-to-action-text {
+		margin-bottom: 55px;
+	}
+}
+
+/* Counter */
+.wolf-core-counter {
+	font-size: 48px;
+}
+
+/* Slider */
+.wolf-core-slide-caption-text {
+	font-size: 24px;
+}
+
+/* Mailchimp */
+.wolf-core-mailchimp-size-large {
+	//font-size: 18px;
+
+	.wolf-core-mailchimp-inner {
+		display: flex;
+		flex: 0 auto;
+		width: 100%;
+	}
+
+	.wolf-core-mailchimp-input-container {
+		margin-bottom: 0;
+		padding-right: 5px;
+	}
+
+	.wolf-core-mailchimp-submit-container {
+		width: auto;
+	}
+
+	&.wolf-core-mailchimp-show-name-yes {
+		.wolf-core-mailchimp-input-container {
+		}
+	}
+
+	&.wolf-core-mailchimp-show-name-no {
+		.wolf-core-mailchimp-email-container {
+			flex: 1;
+		}
+	}
+}
+
+/* Buttons */
+.wolf-core-button {
+}
+
+/* Testimonials */
+blockquote.wolf-core-testimonial-content {
+	font-size: 16px;
+}
+
+/* Image gallery columns */
+$columns: 6;
+$width: 100%;
+@for $i from 1 through $columns {
+	.wolf-core-gallery-columns-#{$i} {
+		.wolf-core-img-image_grid {
+			float: left;
+			width: ($width / $i);
+		}
+
+		.wolf-core-img-masonry {
+			float: left;
+			width: ($width / $i) - 0.3;
+		}
+	}
+}
+
+.wolf-core-alpha {
+	margin-left: 0 !important;
+}
+
+.wolf-core-omega {
+	margin-right: 0 !important;
+}

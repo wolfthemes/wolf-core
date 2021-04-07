@@ -1,0 +1,172 @@
+/**
+ * @# Recipe
+ **/
+.wolf-core-recipe {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	padding: 44px;
+
+	ul,
+	ol {
+		padding-left: 20px;
+	}
+
+	.wolf-core-recipe-title-container,
+	.wolf-core-recipe-subtitle-container {
+		max-width: 650px;
+	}
+
+	.wolf-core-recipe-counter {
+		position: relative;
+	}
+
+	.wolf-core-recipe-meta {
+		position: relative;
+		//transform:scale(.7);
+	}
+
+	.wolf-core-recipe-counter-circle {
+		width: 80px;
+		height: 80px;
+		background: #333;
+		color: white;
+		border-radius: 999em;
+		display: block;
+		position: relative;
+	}
+
+	.wolf-core-counter-container {
+		margin: 0 auto;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+
+	.wolf-core-counter {
+		color: white !important;
+		font-size: 16px !important;
+	}
+
+	.wolf-core-counter-text {
+		font-size: 10px;
+	}
+}
+
+.wolf-core-recipe-head {
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.wolf-core-recipe-title {
+	font-size: 1.6em;
+	margin-bottom: 0;
+}
+
+.wolf-core-recipe-details {
+	margin-top: 35px;
+	max-width: 800px;
+	width: 100%;
+	display: flex;
+	//align-content: space-between;
+	justify-content: space-between;
+}
+
+.wolf-core-recipe-meta {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.wolf-core-recipe-total-time-title,
+.wolf-core-recipe-servings-title {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	//margin-bottom: 10px;
+}
+
+.wolf-core-recipe-total-time,
+.wolf-core-recipe-servings {
+}
+
+.wolf-core-recipe-print-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.wolf-core-recipe-description-container {
+	margin-bottom: 35px;
+	max-width: 800px;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+
+.wolf-core-recipe-instructions {
+	ol {
+		list-style-type: decimal;
+	}
+}
+
+.wolf-core-is-mobile {
+	.wolf-core-recipe-print-button {
+		display: none;
+	}
+}
+
+.wolf-core-recipe-image {
+	margin-top: 35px;
+	margin-bottom: 35px;
+
+	img {
+		max-width: 800px;
+		width: 100%;
+	}
+}
+
+.wolf-core-recipe {
+	&.wolf-core-el-800 {
+		.wolf-core-recipe-print-button {
+			display: none;
+		}
+	}
+
+	//&.wolf-core-el-800,
+	&.wolf-core-el-500,
+	&.wolf-core-el-380 {
+		.wolf-core-recipe-meta {
+			display: block;
+			float: left;
+			width: 50%;
+			text-align: center;
+			margin: 0 auto 20px;
+		}
+
+		.wolf-core-recipe-counter-circle {
+			margin: 0 auto;
+		}
+
+		.wolf-core-recipe-details {
+			display: block;
+		}
+
+		.wolf-core-recipe-counter-circle {
+			//width: 80px;
+			//height: 80px;
+		}
+
+		.wolf-core-counter {
+			//font-size: 16px!important;
+		}
+
+		.wolf-core-counter-text {
+			//font-size: 10px;
+		}
+
+		.wolf-core-recipe-total-time,
+		.wolf-core-recipe-servings {
+			display: block;
+		}
+	}
+}
