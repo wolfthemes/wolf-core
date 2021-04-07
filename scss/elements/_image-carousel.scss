@@ -1,0 +1,53 @@
+/**
+ * @# Image Carousel
+ **/
+.wolf-core-gallery-carousel {
+	figure {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 50%;
+	}
+
+	img {
+		backface-visibility: hidden;
+		display: inline-block;
+		text-align: center;
+		vertical-align: bottom;
+		width: auto; // ??
+		//width: 100%;
+	}
+
+	/* Padding */
+	&.wolf-core-gallery-padding-yes {
+		//padding: 5px;
+		.wolf-core-img-carousel {
+			padding: 10px;
+		}
+	}
+
+	&.wolf-core-carousel-has-bullet {
+		margin-bottom: 55px !important;
+	}
+}
+
+/* Columns */
+.wolf-core-carousel-columns-1 .wolf-core-img-carousel {
+	float: none;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+@media screen and (min-width: 800px) {
+	/* Image gallery columns */
+	$columns: 6;
+	$width: 100%;
+	@for $i from 1 through $columns {
+		.wolf-core-carousel-columns-#{$i} {
+			.wolf-core-img-carousel {
+				float: left;
+				width: ($width / $i);
+			}
+		}
+	}
+}
