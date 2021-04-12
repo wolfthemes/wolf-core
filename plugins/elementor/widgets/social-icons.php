@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Countdown
+ * Socials
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_Socials_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -29,7 +29,7 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_countdown_params();
+		$this->params = wolf_core_social_icons_params();
 
 		if ( isset( $this->params['properties']['scripts'] ) ) {
 
@@ -73,7 +73,7 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Breacrumb widget title.
+	 * Retrieve Big Text widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -87,7 +87,7 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Breacrumb widget icon.
+	 * Retrieve Big Text widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -101,7 +101,7 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Breacrumb widget belongs to.
+	 * Retrieve the list of categories the Big Text widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -129,14 +129,14 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 	}
 
 	/**
-	 * Register Breacrumb widget controls.
+	 * Register Big Text widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function _register_controls() { // phpcs:ignore
 
 		wolf_core_register_elementor_controls( $this );
 	}
@@ -154,26 +154,27 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'date'                     => '12/24/2020 12:00:00',
-				'format'                   => 'dHMS',
-				'custom_format'            => '',
-				'offset'                   => -5,
-				'message'                  => esc_html__( 'Done!', 'wolf-visual-composer' ),
-				'font_family'              => '',
-				'font_size'                => '',
-				'font_weight'              => '',
-				'number_font_color'        => '',
-				'number_font_custom_color' => '',
-				'text_font_color'          => '',
-				'text_font_custom_color'   => '',
-				'el_class'                 => '',
-				'css'                      => '',
-				'inline_style'             => '',
+				'services'                  => '',
+				'target'                    => '_blank',
+				'rel'                       => '',
+				'alignment'                 => 'center',
+				'color'                     => 'default',
+				'custom_color'              => '',
+				'background_style'          => 'none',
+				'background_color'          => '',
+				'custom_background_color'   => '',
+				'size'                      => '',
+				'hover_effect'              => 'none',
+				'css_animation'             => '',
+				'css_animation_delay'       => '',
+				'el_class'                  => '',
+				'hide_class'                => '',
+				'add_spotify_follow_button' => '',
 			)
 		);
 
-		echo wolf_core_countdown( $atts ); // WCS XSS ok.
+		echo wolf_core_social_icons( $atts ); // phpcs:ignore
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Countdown_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Socials_Widget() );
 

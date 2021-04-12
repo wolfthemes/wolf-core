@@ -157,3 +157,15 @@ function wolf_core_filter_typography_atts() {
 
 }
 add_action( 'init', 'wolf_core_filter_typography_atts' );
+
+/**
+ * Get target parameter option
+ *
+ * @return array
+ */
+function wolf_core_target_param_list() {
+	return array(
+		'_self' => esc_html__( 'Same window', 'wolf-visual-composer' ),
+		'_blank' => esc_html__( 'New window', 'wolf-visual-composer' ),
+	);
+}

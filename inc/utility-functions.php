@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * We use it to add inline style to row
  *
  * @param $param_value
- * @param string      $prefix
+ * @param string $prefix
  * @return string
  */
 function wolf_core_shortcode_custom_style( $param_value ) {
@@ -390,7 +390,7 @@ function wolf_core_get_first_video_url( $post_id = null ) {
 /**
  * Get dominant color from image
  *
- * @param int $attachment_id
+ * @param int $attachment_id The attachment id.
  */
 function wolf_core_get_image_dominant_color( $attachment_id ) {
 
@@ -408,15 +408,15 @@ function wolf_core_get_image_dominant_color( $attachment_id ) {
 	$filename   = $upload_dir['basedir'] . '/' . $metadata['file'];
 	$ext        = strtolower( pathinfo( $filename, PATHINFO_EXTENSION ) );
 
-	if ( 'jpg' == $ext || 'jpeg' == $ext ) {
+	if ( 'jpg' === $ext || 'jpeg' === $ext ) {
 
 		$image = imagecreatefromjpeg( $filename );
 
-	} elseif ( 'png' == $ext ) {
+	} elseif ( 'png' === $ext ) {
 
 		$image = imagecreatefrompng( $filename );
 
-	} elseif ( 'gif' == $ext ) {
+	} elseif ( 'gif' === $ext ) {
 
 		$image = imagecreatefromgif( $filename );
 
@@ -842,6 +842,7 @@ function wolf_core_get_post_title() {
 
 				$title = get_the_title( get_option( 'page_for_posts' ) );
 			}
+
 		} elseif ( is_tax() ) {
 
 			$queried_object = get_queried_object();
@@ -853,7 +854,7 @@ function wolf_core_get_post_title() {
 
 			$title = get_the_title();
 		}
-	} elseif ( wolf_core_is_woocommerce_page() ) { // shop title
+	} elseif ( wolf_core_is_woocommerce_page() ) { // shop title.
 
 		if ( is_shop() || is_product_taxonomy() ) {
 

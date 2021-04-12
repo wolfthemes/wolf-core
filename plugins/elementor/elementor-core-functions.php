@@ -103,9 +103,9 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		} elseif ( 'checkbox' === $type ) {
 
 			$field_params['type']         = \Elementor\Controls_Manager::SWITCHER;
-			$field_params['label_on']     = $p['label_on'];
-			$field_params['label_off']    = $p['label_off'];
-			$field_params['return_value'] = $p['return_value'];
+			$field_params['label_on']     = ( isset( $p['label_on'] ) ) ? $p['label_on'] : esc_html__( 'Yes', 'wolf-core' );
+			$field_params['label_off']    = ( isset( $p['label_off'] ) ) ? $p['label_off'] : esc_html__( 'No', 'wolf-core' );
+			$field_params['return_value'] = ( isset( $p['return_value'] ) ) ? $p['return_value'] : 'yes';
 
 		} elseif ( 'font_family' === $type ) {
 
@@ -164,7 +164,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 		} elseif ( 'images' === $type ) {
 
-			$field_params['type']       = \Elementor\Controls_Manager::GALLERY;
+			$field_params['type'] = \Elementor\Controls_Manager::GALLERY;
 
 		}
 

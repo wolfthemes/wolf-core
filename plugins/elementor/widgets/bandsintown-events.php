@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Bandsintown Events
  *
@@ -9,14 +9,23 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base {
+class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
+	 * Element parameters
+	 *
 	 * @var string
 	 */
 	public $params = array();
 
-	public function __construct( $data = array(), $args = null ) {
+	/**
+	 *  Element scripts
+	 *
+	 * @var string
+	 */
+	public $scripts = array();
+
+	public function __construct( $data = array(), $args = null ) { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 

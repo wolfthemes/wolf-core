@@ -76,9 +76,6 @@ function wolf_core_sb_instagram_feed_params() {
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Display follow button (theme style)', 'wolf-core' ),
 					'param_name'   => 'follow_button',
-					'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-					'label_off'    => esc_html__( 'No', 'wolf-core' ),
-					'return_value' => 'yes',
 				),
 
 				array(
@@ -101,27 +98,18 @@ function wolf_core_sb_instagram_feed_params() {
 					'label'        => esc_html__( 'Show Header', 'wolf-core' ),
 					'param_name'   => 'showheader',
 					'description'  => esc_html__( 'Whether to show the feed Header.', 'wolf-core' ),
-					'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-					'label_off'    => esc_html__( 'No', 'wolf-core' ),
-					'return_value' => 'yes',
 				),
 
 				array(
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Show "Follow" button', 'wolf-core' ),
 					'param_name'   => 'showfollow',
-					'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-					'label_off'    => esc_html__( 'No', 'wolf-core' ),
-					'return_value' => 'yes',
 				),
 
 				array(
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Show "Load More" button', 'wolf-core' ),
 					'param_name'   => 'showbutton',
-					'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-					'label_off'    => esc_html__( 'No', 'wolf-core' ),
-					'return_value' => 'yes',
 				),
 
 				array(

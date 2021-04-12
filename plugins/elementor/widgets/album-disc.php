@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Album Disc
  *
@@ -9,14 +9,23 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base {
+class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
+	 * Element parameters
+	 *
 	 * @var string
 	 */
 	public $params = array();
 
-	public function __construct( $data = array(), $args = null ) {
+	/**
+	 *  Element scripts
+	 *
+	 * @var string
+	 */
+	public $scripts = array();
+
+	public function __construct( $data = array(), $args = null ) { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 
@@ -104,7 +113,7 @@ class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base {
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function _register_controls() { // phpcs:ignore
 
 		wolf_core_register_elementor_controls( $this );
 	}
@@ -133,7 +142,7 @@ class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base {
 			)
 		);
 
-		echo wolf_core_album_disc( $atts ); // WCS XSS ok.
+		echo wolf_core_album_disc( $atts ); // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Album_Disc_Widget() );

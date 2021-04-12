@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Team Member
  *
@@ -9,24 +9,36 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Team_Member_Widget extends \Elementor\Widget_Base {
+class Elementor_Team_Member_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
+	 * Element parameters
+	 *
 	 * @var string
 	 */
 	public $params = array();
 
-	public function __construct( $data = array(), $args = null ) {
+	/**
+	 *  Element scripts
+	 *
+	 * @var string
+	 */
+	public $scripts = array();
+
+	public function __construct( $data = array(), $args = null ) { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 
+		$this->params = wolf_core_team_member_params();
+
 		if ( isset( $this->params['properties']['scripts'] ) ) {
-			foreach ( $scripts as $script ) {
+
+			$this->scripts = $this->params['properties']['scripts'];
+
+			foreach ( $this->scripts as $script ) {
 				wp_enqueue_script( $script );
 			}
 		}
-
-		$this->params = wolf_core_team_member_params();
 	}
 
 	/**
@@ -40,9 +52,7 @@ class Elementor_Team_Member_Widget extends \Elementor\Widget_Base {
 	 * @return array Widget scripts dependencies.
 	 */
 	public function get_script_depends() {
-		if ( isset( $this->params['properties']['scripts'] ) ) {
-			return $this->params['properties']['scripts'];
-		}
+		return $this->scripts;
 	}
 
 	/**

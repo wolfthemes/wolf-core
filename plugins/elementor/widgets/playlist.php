@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Playlist
  *
@@ -9,18 +9,50 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
+class Elementor_Playlist_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
+	 * Element parameters
+	 *
 	 * @var string
 	 */
 	public $params = array();
 
-	public function __construct( $data = array(), $args = null ) {
+	/**
+	 *  Element scripts
+	 *
+	 * @var string
+	 */
+	public $scripts = array();
+
+	public function __construct( $data = array(), $args = null ) { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 
 		$this->params = wolf_core_playlist_params();
+
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+
+			$this->scripts = $this->params['properties']['scripts'];
+
+			foreach ( $this->scripts as $script ) {
+				wp_enqueue_script( $script );
+			}
+		}
+	}
+
+	/**
+	 * Retrieve the list of scripts the counter widget depended on.
+	 *
+	 * Used to set scripts dependencies required to run the widget.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget scripts dependencies.
+	 */
+	public function get_script_depends() {
+		return $this->scripts;
 	}
 
 	/**
@@ -81,6 +113,22 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
+	 * Get widget keywords.
+	 *
+	 * Retrieve the list of keywords the widget belongs to.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget keywords.
+	 */
+	public function get_keywords() {
+		if ( isset( $this->params['properties']['keywords'] ) ) {
+			return $this->params['properties']['keywords'];
+		}
+	}
+
+	/**
 	 * Register Playlist widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
@@ -88,7 +136,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function _register_controls() { // phpcs:ignore
 
 		wolf_core_register_elementor_controls( $this );
 	}
@@ -113,7 +161,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base {
 			)
 		);
 
-		echo wolf_core_playlist( $atts ); // WCS XSS ok.
+		echo wolf_core_playlist( $atts ); // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Playlist_Widget() );

@@ -12,9 +12,18 @@ defined( 'ABSPATH' ) || exit;
 class Elementor_Spotify_Player_Widget extends \Elementor\Widget_Base {
 
 	/**
+	 * Element parameters
+	 *
 	 * @var string
 	 */
 	public $params = array();
+
+	/**
+	 *  Element scripts
+	 *
+	 * @var string
+	 */
+	public $scripts = array();
 
 	public function __construct( $data = array(), $args = null ) {
 

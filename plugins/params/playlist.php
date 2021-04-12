@@ -51,6 +51,7 @@ function wolf_core_playlist_params() {
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
 				'el_categories' => array( 'music' ),
 				'icon'          => 'dashicons-before dashicons-playlist-audio',
+				'scripts'       => array( 'jquery', 'wp-mediaelement', 'simplebar', 'jquery-cue', 'wpm-mejs', 'wpm-app' ),
 			),
 
 			'params'     => array(
@@ -60,6 +61,7 @@ function wolf_core_playlist_params() {
 					'param_name'  => 'id',
 					'options'     => $choices,
 					'admin_label' => true,
+					'default'     => '',
 				),
 
 				array(
@@ -70,7 +72,7 @@ function wolf_core_playlist_params() {
 						'true'  => esc_html__( 'Show', '%TEXDOMAIN%' ),
 						'false' => esc_html__( 'Hide', '%TEXDOMAIN%' ),
 					),
-					'deffault' => 'true',
+					'default'    => 'true',
 				),
 
 				array(

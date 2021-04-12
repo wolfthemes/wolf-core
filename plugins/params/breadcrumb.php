@@ -71,8 +71,6 @@ function wolf_core_breadcrumb_params() {
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Center Aligned on Mobile', 'wolf-core' ),
 					'param_name'   => 'text_align_mobile',
-					'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-					'label_off'    => esc_html__( 'No', 'wolf-core' ),
 					'return_value' => 'center',
 					'default'      => 'center',
 				),

@@ -139,7 +139,7 @@ function wolf_core_get_elements() {
 		// 'section',
 		// 'separator',
 		// 'service-table',
-		// 'social-icons',
+		'social-icons',
 		// 'social-icons-custom',
 		// 'single-image',
 		// 'soundcloud',

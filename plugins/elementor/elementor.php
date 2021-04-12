@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Wolf Core Elementor Extension Class
  *
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Wolf_Core_Elementor_Extension {
+class Wolf_Core_Elementor_Extension { // phpcs:ignore
 
 	/**
 	 * @var string
@@ -76,12 +76,6 @@ class Wolf_Core_Elementor_Extension {
 	 * @access public
 	 */
 	public function init_controls() {
-
-		// Include Control files
-		// require_once( WOLF_CORE_DIR . '/controls/test-control.php' );
-
-		// Register control
-		// \Elementor\Plugin::$instance->controls_manager->register_control( 'control-type-', new \Test_Control() );
 
 		$controls_files = array(
 			'section',
