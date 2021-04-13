@@ -84,13 +84,20 @@ function wolf_core_animation_markup_filter() {
 				$atts['el_class']     = ( isset( $atts['el_class'] ) ) ? $atts['el_class'] : '';
 				$atts['inline_style'] = ( isset( $atts['inline_style'] ) ) ? $atts['inline_style'] : '';
 
+				/* Link */
 				if ( isset( $atts['link'] ) ) {
 					$atts['link'] = wolf_core_process_link_atts( $atts['link'] );
 				}
 
-				// Sanitize inline CSS.
+				/* Hide class */
+				if ( isset( $atts['hide_class'] ) ) {
+					$atts['el_class'] .= '' . $atts['hide_class'];
+				}
+
+				/* Sanitize inline CSS */
 				$atts['inline_style'] = wolf_core_sanitize_css_field( $atts['inline_style'] );
 
+				/* VC animation and custom style */
 				if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
 					if ( isset( $atts['css'] ) ) {

@@ -26,6 +26,7 @@ function wolf_core_breadcrumb_params() {
 				'el_base'       => 'breadcrumb',
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
+				'keywords'      => array( 'text', 'navigation' ),
 				'icon'          => 'dashicons-before dashicons-album',
 			),
 

@@ -95,6 +95,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['type']    = \Elementor\Controls_Manager::SELECT;
 			$field_params['options'] = $p['options'];
 
+			/* Set the first option as default */
+			if ( ! isset( $p['default'] ) ) {
+				$field_params['default'] = array_key_first( $p['options'] );
+			}
 		} elseif ( 'choose' === $type ) {
 
 			$field_params['type']    = \Elementor\Controls_Manager::CHOOSE;

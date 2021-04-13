@@ -123,7 +123,7 @@ function wolf_core_get_elements() {
 		// 'last-posts',
 		// 'post-slider',
 		// 'list',
-		// 'mailchimp',
+		'mailchimp',
 		// 'message',
 		// 'music-network',
 		// 'next-month',
@@ -153,7 +153,7 @@ function wolf_core_get_elements() {
 		// 'testimonial-slider',
 		// 'testimonial-slide',
 		// 'toggle',
-		// 'twitter',
+		//'twitter',
 		// 'typed',
 		// 'video',
 		'video-opener',
@@ -180,12 +180,16 @@ function wolf_core_get_elements() {
 		$wolf_core_elements[] = 'row-inner';
 	}
 
-	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { //  and not Elementor Pro
+	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { //  and not Elementor Pro.
 		$wolf_core_elements[] = 'countdown';
 	}
 
 	if ( function_exists( 'sb_instagram_feed_init' ) ) {
 		$wolf_core_elements[] = 'sb-instagram-feed';
+	}
+
+	if ( class_exists( 'Wolf_Twitter' ) ) {
+		$wolf_core_elements[] = 'twitter';
 	}
 
 	// apply filters.
@@ -517,8 +521,8 @@ function wolf_core_update_option( $index = 'settings', $key, $value ) {
 /**
  * Get the URL of an attachment from its id
  *
- * @param int    $id
- * @param string $size
+ * @param int    $id The attachent ID.
+ * @param string $size The image size.
  * @return string $url
  */
 function wolf_core_get_url_from_attachment_id( $id, $size = 'thumbnail', $fallback = true ) {
@@ -601,6 +605,20 @@ function wolf_core_placeholder_img( $img_size, $class = '' ) {
 
 	if ( wolf_core_placeholder_img_url( $img_size ) ) {
 		return '<img class="' . wolf_core_sanitize_html_classes( $class ) . '" src="' . wolf_core_placeholder_img_url( $img_size ) . '" alt="placeholder" title="' . esc_html__( 'Image is missing', 'wolf-core' ) . '">';
+	}
+}
+
+/**
+ * Get twitter username from plugin options
+ */
+function wolf_core_get_twitter_usename() {
+	$default_twitter_username = wolf_core_get_option( 'socials', 'twitter' );
+
+	if ( $default_twitter_username ) {
+		if ( preg_match( '/twitter.com\/[a-zA-Z0-9_]+/', $default_twitter_username, $match ) ) {
+			$default_twitter_username = str_replace( 'twitter.com/', '', $match[0] );
+			return $default_twitter_username;
+		}
 	}
 }
 

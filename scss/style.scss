@@ -2,7 +2,6 @@
 @import 'compass';
 
 @import 'var';
-
 @import 'global/mixins';
 
 @import 'global/wow';
@@ -42,6 +41,8 @@
 
 @import 'elements/heading';
 
+@import 'elements/icon-box';
+
 @import 'elements/image-carousel';
 @import 'elements/image-gallery';
 @import 'elements/image-masonry';
@@ -50,7 +51,13 @@
 
 @import 'elements/instagram';
 
+@import 'elements/mailchimp';
+
+@import 'elements/social-icons';
+
 @import 'elements/spotify';
+
+@import 'elements/twitter';
 
 @import 'elements/video-opener';
 

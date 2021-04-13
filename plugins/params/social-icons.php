@@ -165,7 +165,7 @@ function wolf_core_social_icons_params() {
 					'param_name'   => 'custom_color',
 					'page_builder' => 'elementor',
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-bigtext' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-icon' => 'color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
@@ -194,7 +194,7 @@ function wolf_core_social_icons_params() {
 				array(
 					'type'         => 'colorpicker',
 					'label'        => esc_html__( 'Background Custom Color', 'wolf-core' ),
-					'param_name'   => 'background_custom_color',
+					'param_name'   => 'custom_background_color', // backward compatiblity name (WVC plugin).
 					'condition'    => array(
 						'color' > 'custom',
 					),
@@ -214,10 +214,10 @@ function wolf_core_social_icons_params() {
 				array(
 					'type'         => 'colorpicker',
 					'label'        => esc_html__( 'Background Color', 'wolf-core' ),
-					'param_name'   => 'background_custom_color',
+					'param_name'   => 'custom_background_color', // backward compatiblity name (WVC plugin).
 					'page_builder' => 'elementor',
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-bigtext' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-icon-background-fill' => 'color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),

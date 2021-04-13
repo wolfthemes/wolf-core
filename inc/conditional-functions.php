@@ -2,7 +2,7 @@
 /**
  * Wolf Core frontend functions
  *
- * General core functions available on admin.and frontend
+ * Conditional functions available on admin and frontend
  *
  * @author WolfThemes
  * @category Core

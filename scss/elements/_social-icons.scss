@@ -1,0 +1,180 @@
+/**
+ * @# Social Icons
+ **/
+.wolf-core-socials-container {
+	margin: 0 auto;
+	//text-align: center;
+	padding: 1em 0;
+
+	&.wolf-core-text-center {
+		max-width: 92%;
+	}
+
+	a {
+		display: inline-block;
+	}
+}
+
+.wolf-core-social-icon {
+	display: inline-block;
+
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.wolf-core-social-icon {
+	.wolf-core-icon-container {
+		margin: 0.5em 0.5em 0.5em;
+	}
+}
+
+/* Alignement */
+.wolf-core-socials-container {
+	&.wolf-core-text-left {
+		margin-left: -0.5em;
+	}
+
+	&.wolf-core-text-right {
+		margin-right: -0.5em;
+	}
+}
+
+/* Direction */
+.wolf-core-si-direction-vertical {
+	margin: 0;
+	padding: 0;
+
+	.wolf-core-social-icon {
+		display: block;
+		text-align: center;
+	}
+
+	.wolf-core-icon-container {
+		margin: 0;
+	}
+
+	display: flex;
+	flex-direction: column;
+
+	&.wolf-core-si-size-fa-1x {
+		width: 1.4em;
+	}
+
+	&.wolf-core-si-size-fa-2x {
+		width: 2em;
+	}
+
+	&.wolf-core-si-size-fa-3x {
+		width: 3em;
+	}
+
+	&.wolf-core-si-size-fa-4x {
+		width: 4em;
+	}
+
+	&.wolf-core-si-size-fa-5x {
+		width: 5em;
+	}
+
+	&.wolf-core-text-center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.wolf-core-text-left {
+		margin-right: auto;
+		margin-left: 0;
+	}
+
+	&.wolf-core-text-right {
+		margin-left: auto;
+		margin-right: 0;
+	}
+}
+
+/* Widget */
+.wvc_widget_socials {
+	.wolf-core-socials-container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.wolf-core-icon {
+		font-size: 18px;
+		margin: 0 5px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+/* Icon adjustment */
+
+.wolf-core-social.wolf-core-circle,
+.wolf-core-social.wolf-core-square {
+	&.fa-facebook:before {
+		left: 47%;
+		top: 51%;
+	}
+
+	&.wolficon-forrst:before {
+		left: 52%;
+	}
+
+	&.fa-tumblr:before {
+		left: 47%;
+	}
+
+	&.fa-skype:before {
+		left: 48%;
+	}
+}
+
+// .wolf-core-font-dark{
+// 	.wolf-core-icon-color-default{
+// 		color: #444;
+// 	}
+// 	.wolf-core-icon-background-color-default{
+// 		box-shadow:0 0 0 0 #444;
+// 		background-color:#444;
+// 		color:#444;
+// 		border-color:#444;
+
+// 		.wolf-core-icon-background-fill{
+// 			box-shadow:0 0 0 0 #444;
+// 			background-color:#444;
+// 		}
+// 	}
+// }
+
+// .wolf-core-font-light{
+// 	.wolf-core-icon-color-default{
+// 		color: #fff;
+// 	}
+// 	.wolf-core-icon-background-color-default{
+// 		box-shadow:0 0 0 0 #fff;
+// 		background-color:#fff;
+// 		color:#fff;
+// 		border-color:#fff;
+
+// 		.wolf-core-icon-background-fill{
+// 			box-shadow:0 0 0 0 #fff;
+// 			background-color:#fff;
+// 		}
+// 	}
+// }
+
+.wolf-core-social-icon {
+}

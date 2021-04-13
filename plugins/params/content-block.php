@@ -31,13 +31,13 @@ function wolf_core_content_block_params() {
 		'wolf_core_content_block_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Content Block', 'wolf-core' ),
-				'description' => esc_html__( 'A block of content from the Content Block post type', 'wolf-core' ),
-				'vc_base'     => 'wolf_content_block',
-				'vc_category' => esc_html__( 'Content', 'wolf-core' ),
+				'name'          => esc_html__( 'Content Block', 'wolf-core' ),
+				'description'   => esc_html__( 'A block of content from the Content Block post type', 'wolf-core' ),
+				'vc_base'       => 'wolf_content_block',
+				'vc_category'   => esc_html__( 'Content', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
-				'el_base'     => 'content-block',
-				'icon'        => 'dashicons-before dashicons-editor-table',
+				'el_base'       => 'content-block',
+				'icon'          => 'dashicons-before dashicons-editor-table',
 			),
 			'params'     => array(
 				array(
@@ -45,10 +45,10 @@ function wolf_core_content_block_params() {
 					'label'      => esc_html__( 'Content Block', 'wolf-core' ),
 					'param_name' => 'id',
 					'options'    => $content_blocks,
-					//'default'    => '0',
+					// 'default'    => '0',
 				),
 			),
-			'js_view' => 'WolfCoreContentBlockView',
+			'js_view'    => 'WolfCoreContentBlockView',
 		)
 	);
 }

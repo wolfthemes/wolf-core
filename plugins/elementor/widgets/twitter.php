@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Breadcrumb
+ * Twitter
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_Twitter_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -29,7 +29,30 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_breadcrumb_params();
+		$this->params = wolf_core_twitter_params();
+
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+
+			$this->scripts = $this->params['properties']['scripts'];
+
+			foreach ( $this->scripts as $script ) {
+				wp_enqueue_script( $script );
+			}
+		}
+	}
+
+	/**
+	 * Retrieve the list of scripts the counter widget depended on.
+	 *
+	 * Used to set scripts dependencies required to run the widget.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget scripts dependencies.
+	 */
+	public function get_script_depends() {
+		return $this->scripts;
 	}
 
 	/**
@@ -50,7 +73,7 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Breacrumb widget title.
+	 * Retrieve Big Text widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -64,7 +87,7 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Breacrumb widget icon.
+	 * Retrieve Big Text widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -78,7 +101,7 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Breacrumb widget belongs to.
+	 * Retrieve the list of categories the Big Text widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -90,7 +113,23 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 	}
 
 	/**
-	 * Register Breacrumb widget controls.
+	 * Get widget keywords.
+	 *
+	 * Retrieve the list of keywords the widget belongs to.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget keywords.
+	 */
+	public function get_keywords() {
+		if ( isset( $this->params['properties']['keywords'] ) ) {
+			return $this->params['properties']['keywords'];
+		}
+	}
+
+	/**
+	 * Register Big Text widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -115,16 +154,20 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'align'               => '',
-				'text_align_mobile'   => '',
-				'font_size'           => '',
-				'font_weight'         => '',
-				'text_transform'      => '',
+				'username'            => '',
+				'type'                => '',
+				'count'               => 3,
+				'text_align'          => 'center',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
 			)
 		);
 
-		echo wolf_core_breadcrumb( $atts ); // WCS XSS ok.
+		echo wolf_core_twitter( $atts ); // phpcs:ignore
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Breadcrumb_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Twitter_Widget() );
 

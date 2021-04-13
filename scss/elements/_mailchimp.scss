@@ -1,0 +1,198 @@
+/**
+ * @# MailChimp
+ **/
+.wolf-core-mailchimp-form-container {
+	position: relative;
+	z-index: 0;
+	margin: 30px auto;
+	max-width: 100%;
+
+	&.wolf-core-mailchimp-has-bg {
+		&:before {
+			content: ' ';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: #000;
+			opacity: 0.44;
+		}
+
+		padding: 40px 40px 10px;
+		background: #333 no-repeat center center scroll;
+		background-size: cover;
+
+		color: #fff;
+
+		.wolf-core-mailchimp-title {
+			color: #fff;
+		}
+
+		.wolf-core-mailchimp-email {
+			background: #fff;
+		}
+
+		&.wolf-core-mailchimp-size-large {
+			padding: 50px 60px 30px;
+		}
+	}
+
+	.wolf-core-mailchimp-form {
+		position: relative;
+		margin: 0 auto;
+		width: 100%;
+		line-height: 1.5;
+		max-width: 700px;
+	}
+
+	&.wolf-core-mailchimp-text-align-center {
+		text-align: center;
+	}
+
+	&.wolf-core-mailchimp-text-align-left {
+		text-align: left;
+	}
+
+	&.wolf-core-mailchimp-text-align-right {
+		text-align: right;
+	}
+
+	&.wolf-core-mailchimp-align-left {
+		margin-left: 0;
+
+		.wolf-core-mailchimp-form {
+			margin-left: 0;
+		}
+	}
+
+	&.wolf-core-mailchimp-align-right {
+		margin-right: 0;
+
+		.wolf-core-mailchimp-form {
+			margin-right: 0;
+		}
+	}
+
+	.wolf-core-mailchimp-email {
+		margin: 0;
+		width: 100%;
+	}
+
+	.wolf-core-mailchimp-title {
+		//text-align: center;
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	.wolf-core-mailchimp-email-container {
+		margin-bottom: 6px;
+	}
+
+	.wolf-core-mailchimp-submit {
+		display: block;
+		width: 100%;
+		margin-top: 0;
+		outline: none;
+	}
+}
+
+.widget-content {
+	.wolf-core-mailchimp-form-container {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.wolf-core-mailchimp-size-large {
+	//max-width: 750px;
+
+	.wolf-core-mailchimp-email-container {
+		//margin-bottom: 0;
+	}
+}
+
+.wolf-core-mailchimp-size-normal {
+	max-width: 500px;
+
+	.wolf-core-mailchimp-input-container {
+		margin-bottom: 15px;
+	}
+
+	&.wolf-core-mailchimp-show-name-no {
+		.wolf-core-mailchimp-email-container {
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.wolf-core-mailchimp-result {
+	display: block;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+}
+
+.wolf-core-mc-submit-type-icon {
+	.wolf-core-mailchimp-submit-container {
+		position: relative;
+	}
+
+	.wolf-core-mc-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		color: inherit;
+		font-size: 24px;
+		//z-index: 5;
+	}
+
+	.wolf-core-mailchimp-submit {
+	}
+}
+
+/* Mailchimp */
+.wolf-popup-overlay .wolf-core-mailchimp-size-large {
+	//font-size: 18px;
+
+	.wolf-core-mailchimp-inner {
+		display: flex;
+		flex: 0 auto;
+		width: 100%;
+	}
+
+	.wolf-core-mailchimp-input-container {
+		margin-bottom: 0;
+		padding-right: 5px;
+	}
+
+	.wolf-core-mailchimp-submit-container {
+		width: auto;
+	}
+
+	&.wolf-core-mailchimp-show-name-yes {
+		.wolf-core-mailchimp-input-container {
+		}
+	}
+
+	&.wolf-core-mailchimp-show-name-no {
+		.wolf-core-mailchimp-email-container {
+			flex: 1;
+		}
+	}
+}
+
+.wolf-core-mailchimp-show-name-yes {
+	&.wolf-core-mailchimp-size-large {
+		.wolf-core-mailchimp-input-container {
+			margin-bottom: 15px !important;
+		}
+	}
+}
+
+.wolf-core-mailchimp-smaller {
+	.wolf-core-mailchimp-inner {
+		display: block !important;
+	}
+}

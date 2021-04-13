@@ -49,21 +49,18 @@ function wolf_core_social_icons( $atts ) {
 
 	$output = '';
 
-	$class  = $el_class; // init container CSS class.
-	$output = $icon_class = $icon_style = $icon_box_class = $icon_box_style = $icon_container_style = $icon_container_class = $icon_filler_style = '';
-
-	$class         = $el_class;
-	$inline_style  = wolf_core_sanitize_css_field( $inline_style );
-	$inline_style .= wolf_core_shortcode_custom_style( $css );
-
-	if ( $hide_class ) {
-		$class .= ' ' . $hide_class;
-	}
+	$class                = $el_class; // init container CSS class.
+	$icon_class           = '';
+	$icon_style           = '';
+	$icon_box_class       = '';
+	$icon_box_style       = '';
+	$icon_container_style = '';
+	$icon_container_class = '';
+	$icon_filler_style    = '';
 
 	$target = ( $target ) ? $target : '_blank';
 
 	/*Animate */
-
 	if ( $css_animation_each ) {
 		if ( ! wolf_core_is_new_animation( $css_animation ) ) {
 			$icon_box_class .= wolf_core_get_css_animation( $css_animation );
@@ -240,18 +237,20 @@ function wolf_core_social_icons( $atts ) {
 
 	$fab_array = array( 'tiktok' );
 
-	vc_icon_element_fonts_enqueue( 'fontawesome' );
+	if ( function_exists( 'vc_icon_element_fonts_enqueue' ) ) {
+		vc_icon_element_fonts_enqueue( 'fontawesome' );
 
-	if ( array_intersect( $services, $wolf_icon_array ) || array_intersect( array_keys( $services ), $wolf_icon_array ) ) {
-		vc_icon_element_fonts_enqueue( 'wolficons' );
-	}
+		if ( array_intersect( $services, $wolf_icon_array ) || array_intersect( array_keys( $services ), $wolf_icon_array ) ) {
+			vc_icon_element_fonts_enqueue( 'wolficons' );
+		}
 
-	if ( array_intersect( $services, $wolf_icon2_array ) || array_intersect( array_keys( $services ), $wolf_icon2_array ) ) {
-		vc_icon_element_fonts_enqueue( 'wolficons' );
-	}
+		if ( array_intersect( $services, $wolf_icon2_array ) || array_intersect( array_keys( $services ), $wolf_icon2_array ) ) {
+			vc_icon_element_fonts_enqueue( 'wolficons' );
+		}
 
-	if ( array_intersect( $services, $socicon_array ) || array_intersect( array_keys( $services ), $socicon_array ) ) {
-		vc_icon_element_fonts_enqueue( 'socicon' );
+		if ( array_intersect( $services, $socicon_array ) || array_intersect( array_keys( $services ), $socicon_array ) ) {
+			vc_icon_element_fonts_enqueue( 'socicon' );
+		}
 	}
 
 	$single_animation_delay = ( $css_animation_delay ) ? $css_animation_delay : 0;
@@ -266,16 +265,17 @@ function wolf_core_social_icons( $atts ) {
 
 				$single_animation_delay = $single_animation_delay + 200;
 
-				$link = wolf_vc_get_option( 'socials', $service );
+				$link = wolf_core_get_option( 'socials', $service );
 
-				if ( in_array( $service, $wolf_icon_array ) ) {
+				if ( in_array( $service, $wolf_icon_array, true ) ) {
 					$prefix = 'wolficon';
-				} elseif ( in_array( $service, $wolf_icon2_array ) ) {
+
+				} elseif ( in_array( $service, $wolf_icon2_array, true ) ) {
 					$prefix = 'wolficon2';
-				} elseif ( in_array( $service, $socicon_array ) ) {
+
+				} elseif ( in_array( $service, $socicon_array, true ) ) {
 					$prefix = 'socicon';
-					// } elseif ( in_array( $service, $fab_array ) ) {
-					// $prefix = 'fab fa-';
+
 				} else {
 					$prefix = 'fa';
 				}
@@ -283,7 +283,7 @@ function wolf_core_social_icons( $atts ) {
 				$icon = "$prefix-$service";
 
 				if ( 'email' === $service ) {
-					$link = 'mailto:' . wolf_vc_get_option( 'socials', $service );
+					$link = 'mailto:' . wolf_core_get_option( 'socials', $service );
 					$icon = 'fa-envelope-o';
 				}
 

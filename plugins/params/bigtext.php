@@ -25,6 +25,7 @@ function wolf_core_bigtext_params() {
 				'vc_base'       => 'wolf_core_bigtext',
 				'vc_category'   => esc_html__( 'Typography', 'wolf-core' ),
 				'el_categories' => array( 'music' ),
+				'keywords'      => array( 'text', 'typography' ),
 				'el_base'       => 'bigtext',
 				'icon'          => 'fa fa-text-width',
 				'scripts'       => array( 'jquery', 'bigtext', 'wolf-core-bigtext' ),
@@ -54,7 +55,6 @@ function wolf_core_bigtext_params() {
 							'custom'         => esc_html__( 'Custom color', 'wolf-core' ),
 						)
 					),
-					'default'            => 'default',
 					'description'        => esc_html__( 'Select a text color.', 'wolf-core' ),
 					'param_holder_class' => 'wolf_core_colored-select',
 					'group'              => esc_html__( 'Style', 'wolf-core' ),
