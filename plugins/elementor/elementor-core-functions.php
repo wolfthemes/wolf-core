@@ -74,8 +74,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 		$field_params = array();
 
-		$type                        = $p['type'];
-		$field_params['label']       = $p['label'];
+		$type                        = isset( $p['type'] ) ? $p['type'] : '';
+		$field_params['label']       = isset( $p['label'] ) ? $p['label'] : '';
 		$field_params['placeholder'] = isset( $p['placeholder'] ) ? $p['placeholder'] : '';
 
 		if ( isset( $p['default'] ) ) {
@@ -180,6 +180,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['description'] = $p['description'];
 		}
 
+		if ( isset( $p['label_block'] ) ) {
+			$field_params['label_block'] = $p['label_block'];
+		}
+
 		/* Preview render */
 		if ( isset( $p['selectors'] ) ) {
 			$field_params['selectors'] = $p['selectors'];
@@ -189,7 +193,30 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['selector'] = $p['selector'];
 		}
 
-		if ( 'typography' === $type ) {
+		if ( isset( $p['group_tabs'] ) && 'open' === $p['group_tabs'] ) {
+			$widget->start_controls_tabs( $p['name'] );
+		}
+
+		if ( isset( $p['tab'] ) && 'open' === $p['tab'] ) {
+			$widget->start_controls_tab(
+				$p['name'],
+				array(
+					'label' => $p['label'],
+				)
+			);
+		}
+
+		if ( 'css_filters' === $type ) {
+
+			$widget->add_group_control(
+				\Elementor\Group_Control_Css_Filter::get_type(),
+				array(
+					'name'     => $p['param_name'],
+					'selector' => $p['selector'],
+				)
+			);
+
+		} elseif ( 'typography' === $type ) {
 
 			$widget->add_group_control(
 				\Elementor\Group_Control_Typography::get_type(),
@@ -199,11 +226,20 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				)
 			);
 
-		} else {
+		} elseif ( isset( $p['param_name'] ) ) {
+
 			$widget->add_control(
 				$p['param_name'],
 				$field_params
 			);
+		}
+
+		if ( isset( $p['tab'] ) && 'close' === $p['tab'] ) {
+			$widget->end_controls_tab();
+		}
+
+		if ( isset( $p['group_tabs'] ) && 'close' === $p['group_tabs'] ) {
+			$widget->end_controls_tabs();
 		}
 	}
 }

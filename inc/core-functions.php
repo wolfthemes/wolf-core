@@ -106,7 +106,7 @@ function wolf_core_get_elements() {
 		// 'facebook-page-box',
 		'gallery',
 		// 'gmaps',
-		// 'google-maps',
+		'google-maps',
 		// 'highlight',
 		// 'hours',
 		// 'hoverbox',

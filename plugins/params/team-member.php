@@ -64,14 +64,14 @@ function wolf_core_team_member_params() {
 
 				array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Role', 'wolf-visual-composer' ),
+					'label'       => esc_html__( 'Role', 'wolf-core' ),
 					'param_name'  => 'role',
 					'admin_label' => true,
 				),
 
 				array(
 					'type'        => 'textarea',
-					'label'       => esc_html__( 'Description', 'wolf-visual-composer' ),
+					'label'       => esc_html__( 'Description', 'wolf-core' ),
 					'param_name'  => 'tagline',
 					'admin_label' => true,
 				),

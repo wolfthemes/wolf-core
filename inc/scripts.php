@@ -162,6 +162,9 @@ function wolf_core_register_scripts() {
 
 	wp_register_script( 'packery-mode', WOLF_CORE_JS . '/lib/packery-mode.pkgd.min.js', array( 'jquery', 'isotope' ), '2.0.1', true );
 
+	$google_api_key = apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) );
+	wp_register_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . $google_api_key, array(), WOLF_CORE_VERSION, true );
+
 	// JS Cookies.
 	wp_register_script( 'js-cookie', WOLF_CORE_JS . '/lib/js.cookie.min.js', array( 'jquery' ), '2.1.4', true );
 
