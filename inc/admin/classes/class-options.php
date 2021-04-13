@@ -39,16 +39,16 @@ class Wolf_Core_Options {
 
 		$this->settings = $settings + $this->settings;
 
-		// Add menu
+		// Add menu.
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 
-		// Add settings form
+		// Add settings form.
 		add_action( 'admin_init', array( $this, 'settings' ) );
 
-		// set default options
+		// set default options.
 		add_action( 'admin_init', array( $this, 'default_options' ) );
 
-		// Add settings scripts
+		// Add settings scripts.
 		add_action( 'admin_enqueue_scripts', array( $this, 'scripts' ) );
 	}
 
@@ -73,13 +73,17 @@ class Wolf_Core_Options {
 
 				$parent_slug = $section['parent_slug'];
 
-			} elseif ( defined( 'VC_PAGE_MAIN_SLUG' ) ) {
+			} elseif ( 'vc' === wolf_core_get_plugin_in_use() ) {
 				$parent_slug = VC_PAGE_MAIN_SLUG;
-			} elseif ( 1 === 1 ) { // ELEMENTOR
 
+			} elseif ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+
+				$parent_slug = 'elementor';
 			}
 
-			add_submenu_page( $parent_slug, $section['title'], $section['title'], 'activate_plugins', $section['settings_id'], array( $this, 'settings_form' ) );
+			//add_submenu_page( $parent_slug, $section['title'], $section['title'], 'activate_plugins', $section['settings_id'], array( $this, 'settings_form' ) );
+
+			add_theme_page( $section['title'], $section['title'], 'activate_plugins', $section['settings_id'], array( $this, 'settings_form' ) );
 		}
 	}
 
@@ -146,12 +150,21 @@ class Wolf_Core_Options {
 			do_action( 'wolf_core_before_options_save', $input );
 
 			$setting_index = esc_attr( $input['settings_slug'] );
-			wolf_core_update_option_index( $setting_index, $input );
+			$this->update_option_index( $setting_index, $input );
 
 			do_action( 'wolf_core_after_options_save', $input );
 		}
 
 		return $input;
+	}
+
+	public function update_option_index( $index = 'settings', $options_array ) {
+
+		$wolf_core_settings = ( get_option( 'wolf_core_settings' ) && is_array( get_option( 'wolf_core_settings' ) ) ) ? get_option( 'wolf_core_settings' ) : array();
+
+		$wolf_core_settings[ $index ] = $options_array;
+
+		update_option( 'wolf_core_settings', $wolf_core_settings );
 	}
 
 	/**

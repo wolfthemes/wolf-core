@@ -185,11 +185,11 @@ var WolfCoreCarousels = function( $ ) {
 	} );
 
 	$( document ).ready( function() {
-		if ( window.elementorFrontend ) {
-			elementorFrontend.hooks.addAction( 'frontend/element_ready/gallery.default', function( $scope ) {
-				WolfCoreCarousels.init();
-			} );
-		}
+		// if ( window.elementorFrontend && elementorFrontend !== undefined ) {
+		// 	elementorFrontend.hooks.addAction( 'frontend/element_ready/gallery.default', function( $scope ) {
+		// 		WolfCoreCarousels.init();
+		// 	} );
+		// }
 	} );
 
 } )( jQuery );

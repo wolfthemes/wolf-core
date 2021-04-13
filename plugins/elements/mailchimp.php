@@ -78,7 +78,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 
 	$class .= " wolf-core-mailchimp-form-container wolf-core-mailchimp-size-$size wolf-core-mailchimp-align-$alignment wolf-core-mailchimp-text-align-$text_alignment wolf-core-mc-submit-type-$submit_type wolf-core-element wolf-core-mailchimp-show-name-$show_name";
 
-	$image_size = ( 'large' === $size ) ? 'large' : 'medium';
+	$image_size = ( 'large' === $size ) ? 'large' : 'medium_large';
 	$background = wolf_core_get_url_from_attachment_id( $image_id, $image_size );
 
 	if ( $background && $show_bg ) {

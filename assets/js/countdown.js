@@ -261,12 +261,12 @@ var WolfCoreCountdown = function( $ ) {
 	} );
 
 	$( document ).ready( function() {
-		if ( window.elementorFrontend ) {
-			elementorFrontend.hooks.addAction( 'frontend/element_ready/countdown.default', function( $scope ) {
-				WolfCoreCountdown.destroy();
-				WolfCoreCountdown.init();
-			} );
-		}
+		// if ( window.elementorFrontend && elementorFrontend !== undefined ) {
+		// 	elementorFrontend.hooks.addAction( 'frontend/element_ready/countdown.default', function( $scope ) {
+		// 		WolfCoreCountdown.destroy();
+		// 		WolfCoreCountdown.init();
+		// 	} );
+		// }
 	} );
 
 } )( jQuery );

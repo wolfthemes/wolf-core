@@ -43,41 +43,9 @@ $social_fields[] = array(
 );
 
 /**
- * WVC settings panel
+ * Wolf Core Settings Panel
  */
 $wolf_core_options = array(
-
-	// Main settings
-	// array(
-	// 'title' => esc_html__( 'Settings', 'wolf-visual-composer' ),
-	// 'settings_id' => 'wolf-core-settings',
-	// 'settings_slug' => 'settings',
-	// 'fields' => array(
-
-	// array(
-	// 'type' => 'select',
-	// 'field_id' => 'lightbox',
-	// 'label' => esc_html__( 'Lightbox', 'wolf-visual-composer' ),
-	// 'choices' => array(
-	// 'swipebox' => 'swipebox',
-	// 'fancybox' => 'fancybox',
-	// '' => esc_html__( 'None', 'wolf-visual-composer' ),
-	// ),
-	// ),
-
-	// array(
-	// 'type' => 'checkbox',
-	// 'field_id' => 'do_lazyload',
-	// 'label' => esc_html__( 'Enable lazyload for image galleries', 'wolf-visual-composer' ),
-	// ),
-
-	// array(
-	// 'type' => 'checkbox',
-	// 'field_id' => 'do_animation_mobile',
-	// 'label' => esc_html__( 'Enable animation on mobile devices', 'wolf-visual-composer' ),
-	// ),
-	// ),
-	// ),
 
 	array(
 		'title'         => esc_html__( 'Google Maps', 'wolf-visual-composer' ),

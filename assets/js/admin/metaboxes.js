@@ -4,7 +4,7 @@
 
 ;( function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	var colorpickerOptions = {
 
@@ -12,22 +12,22 @@
 	};
 
 	if ( {} !== WolfMetaboxesAdminParams && WolfMetaboxesAdminParams.defaultPalette ) {
-		$( '.wolf-core-metabox-colorpicker' ).wpColorPicker( colorpickerOptions );
+		$( ".wolf-core-metabox-colorpicker" ).wpColorPicker( colorpickerOptions );
 	} else {
-		$( '.wolf-core-metabox-colorpicker' ).wpColorPicker();
+		$( ".wolf-core-metabox-colorpicker" ).wpColorPicker();
 	}
 
 	$( document ).ready( function() {
-		$( '.wolf-core-metabox-metabox-tabs-panel' ).tabs();
+		$( ".wolf-core-metabox-metabox-tabs-panel" ).tabs();
 
-		$( '.has-dependency' ).each( function () {
+		$( ".has-dependency" ).each( function () {
 
 			var $this = $( this ),
 				selectValue,
-				relatedElement = $( this ).data( 'dependency-element' ),
-				values = $( this ).data( 'dependency-values' );
+				relatedElement = $( this ).data( "dependency-element" ),
+				values = $( this ).data( "dependency-values" );
 
-			selectValue = $( '.option-section-' + relatedElement ).find( 'select' ).val();
+			selectValue = $( ".option-section-" + relatedElement ).find( "select" ).val();
 
 			if ( $.inArray( selectValue, values )  !== -1 ) {
 				$this.show();
@@ -35,7 +35,7 @@
 				$this.hide();
 			}
 
-			$( '.option-section-' + relatedElement ).find( 'select' ).on( 'change', function() {
+			$( ".option-section-" + relatedElement ).find( "select" ).on( "change", function() {
 				selectValue = $( this ).val();
 
 				if ( $.inArray( selectValue, values )  !== -1 ) {
@@ -46,20 +46,20 @@
 			} );
 		} );
 
-			$( document ).on( 'click', '.wolf-core-metabox-set-img, .wolf-core-metabox-set-bg', function( e ) {
+			$( document ).on( "click", ".wolf-core-metabox-set-img, .wolf-core-metabox-set-bg", function( e ) {
 				e.preventDefault();
 				var $el = $( this ).parent(),
 					selection, attachment,
 					uploader = wp.media({
 						title : WolfMetaboxesAdminParams.chooseImage,
-						library : { type : 'image'},
+						library : { type : "image"},
 						multiple : false
 					} )
-					.on( 'select', function(){
-						selection = uploader.state().get( 'selection' );
+					.on( "select", function(){
+						selection = uploader.state().get( "selection" );
 						attachment = selection.first().toJSON();
-						$( 'input', $el ).val( attachment.id );
-						$( 'img', $el ).attr( 'src', attachment.url ).show();
+						$( "input", $el ).val( attachment.id );
+						$( "img", $el ).attr( "src", attachment.url ).show();
 					} )
 				.open();
 			} );
@@ -67,23 +67,23 @@
 			/**
 			 * make sure the previews are sortable
 			 */
-			$( '.wolf-core-metabox-images-set' ).sortable( {
+			$( ".wolf-core-metabox-images-set" ).sortable( {
 				update : function() {
-					$( this ).parent().find( 'input' ).val( $( this ).sortable( 'toArray', { attribute: 'data-attachment-id' } ) );
+					$( this ).parent().find( "input" ).val( $( this ).sortable( "toArray", { attribute: "data-attachment-id" } ) );
 				},
-				helper: 'clone',
-				items: '.wolf-core-metabox-image'
+				helper: "clone",
+				items: ".wolf-core-metabox-image"
 			} );
 
 			/**
 			 * activate media uploader to select multiple images for a slideshow
 			 */
-			$( document ).on( 'click', '.wolf-core-metabox-param-set-multiple-img', function( e ) {
+			$( document ).on( "click", ".wolf-core-metabox-param-set-multiple-img", function( e ) {
 				e.preventDefault();
 
 				var frame = frame || null,
 					$el = $( this ).parent(),
-					input = $el.find( 'input' );
+					input = $el.find( "input" );
 
 				/* if there is a frame created, use it */
 				if ( frame ) {
@@ -94,18 +94,18 @@
 				/* open the wp.media frame with our localised title */
 				frame = wp.media.frames.file_frame = wp.media( {
 					title : WolfMetaboxesAdminParams.chooseMultipleImage,
-					library : { type : 'image' },
-					multiple : 'add',
+					library : { type : "image" },
+					multiple : "add",
 					button : { text : WolfMetaboxesAdminParams.chooseMultipleImage }
 				} );
 
-				frame.on( 'close', function() {
+				frame.on( "close", function() {
 					/* get the selection object */
-					var selection = frame.state().get( 'selection' ),
+					var selection = frame.state().get( "selection" ),
 						/* array variable to hold new image IDs */
 						imageIDs = [],
 						/* variable to hold new HTML for the preview */
-						newImages = '';
+						newImages = "";
 						//length = selection.length,
 						//images = selection.models;
 						//ids = [];
@@ -134,21 +134,21 @@
 					} );
 
 					// inser image IDs list in hidden input
-					$( 'input', $el ).val( imageIDs );
+					$( "input", $el ).val( imageIDs );
 
 					if ( imageIDs.length ) {
 						/* populate hidden input and preview */
-						$el.find( '.wolf-core-metabox-images-set' ).html( newImages ).sortable( 'refresh' );
+						$el.find( ".wolf-core-metabox-images-set" ).html( newImages ).sortable( "refresh" );
 					}
 				} );
 
 				/* opens the wp.media frame and selects the appropriate images */
-				frame.on( 'open', function() {
+				frame.on( "open", function() {
 
 					/* get the image IDs from the hidden input */
-					var imgIDs = input.val().split( ',' ),
+					var imgIDs = input.val().split( "," ),
 						/* get the selection object for the wp.media frame */
-						selection = frame.state().get( 'selection' ),
+						selection = frame.state().get( "selection" ),
 						attachment;
 
 					if ( imgIDs && imgIDs.length ) {
@@ -173,88 +173,88 @@
 			/**
 			 * Remove all images from gallery
 			 */
-			$( document ).on( 'click', '.wolf-core-metabox-param-reset-all-img', function( e ) {
+			$( document ).on( "click", ".wolf-core-metabox-param-reset-all-img", function( e ) {
 				e.preventDefault();
 
 				if ( confirm( WolfMetaboxesAdminParams.confirmRemoveAllImages ) ) {
-					$( this ).parent().find( 'input' ).val( '' );
-					$( this ).parent().find( '.wolf-core-metabox-images-set' ).empty();
+					$( this ).parent().find( "input" ).val( "" );
+					$( this ).parent().find( ".wolf-core-metabox-images-set" ).empty();
 				}
 			} );
 
 			/**
 			 * Remove image from images set
 			 */
-			$( document ).on( 'click', '.wolf-core-metabox-remove-img', function( e ) {
+			$( document ).on( "click", ".wolf-core-metabox-remove-img", function( e ) {
 				e.preventDefault();
-				var newImages = '',
+				var newImages = "",
 					$el = $( this ).parent(),
 					$imagesSet = $el.parent(),
-					$input = $imagesSet.parent().find( 'input' ),
-					id = $el.data( 'attachment-id' );
+					$input = $imagesSet.parent().find( "input" ),
+					id = $el.data( "attachment-id" );
 
-				$el.fadeOut( 'fast', function() {
+				$el.fadeOut( "fast", function() {
 
 					$( this ).remove();
 
-					$.each( $imagesSet.find( '.wolf-core-metabox-image' ), function() {
+					$.each( $imagesSet.find( ".wolf-core-metabox-image" ), function() {
 
-						if ( id !== $( this ).data( 'attachment-id' ) ) {
-							newImages += $( this ).data( 'attachment-id' ) + ',';
+						if ( id !== $( this ).data( "attachment-id" ) ) {
+							newImages += $( this ).data( "attachment-id" ) + ",";
 						}
 					} );
 
 					$input.val( newImages );
-					$imagesSet.sortable( 'refresh' );
+					$imagesSet.sortable( "refresh" );
 				} );
 			} );
 
-			$( document ).on( 'click', '.wolf-core-metabox-set-file', function(e){
+			$( document ).on( "click", ".wolf-core-metabox-set-file", function(e){
 				e.preventDefault();
 				var $el = $( this ).parent(),
 					uploader = wp.media({
 					title : WolfMetaboxesAdminParams.chooseFile,
 					multiple : false
 				} )
-				.on( 'select', function(){
-					var selection = uploader.state().get( 'selection' ),
+				.on( "select", function(){
+					var selection = uploader.state().get( "selection" ),
 						attachment = selection.first().toJSON();
-					$( 'input', $el ).val( attachment.url );
-					//$( 'span', $el ).html( attachment.url ).show();
+					$( "input", $el ).val( attachment.url );
+					//$( "span", $el ).html( attachment.url ).show();
 				} )
 				.open();
 			} );
 
-			$( document ).on( 'click', '.wolf-core-metabox-set-video-file', function(e){
+			$( document ).on( "click", ".wolf-core-metabox-set-video-file", function(e){
 				e.preventDefault();
 				var $el = $( this ).parent(),
 					uploader = wp.media( {
 					title : WolfMetaboxesAdminParams.chooseFile,
-					library : { type : 'video'},
+					library : { type : "video"},
 					multiple : false
 
 				} )
-				.on( 'select', function(){
-					var selection = uploader.state().get( 'selection' ),
+				.on( "select", function(){
+					var selection = uploader.state().get( "selection" ),
 						attachment = selection.first().toJSON();
-					$( 'input', $el ).val( attachment.url );
-					$( 'span', $el ).html( attachment.url ).show();
+					$( "input", $el ).val( attachment.url );
+					$( "span", $el ).html( attachment.url ).show();
 				} )
 				.open();
 			} );
 
-			$( document ).on( 'click', '.wolf-core-metabox-reset-img, .wolf-core-metabox-reset-bg', function(){
+			$( document ).on( "click", ".wolf-core-metabox-reset-img, .wolf-core-metabox-reset-bg", function(){
 
-				$( this ).parent().find( 'input' ).val( '' );
-				$( this ).parent().find( '.wolf-core-metabox-img-preview' ).hide();
+				$( this ).parent().find( "input" ).val( "" );
+				$( this ).parent().find( ".wolf-core-metabox-img-preview" ).hide();
 				return false;
 
 			} );
 
-			$( document ).on( 'click', '.wolf-core-metabox-reset-file', function(){
+			$( document ).on( "click", ".wolf-core-metabox-reset-file", function(){
 
-				$( this ).parent().find( 'input' ).val( '' );
-				$( this ).parent().find( 'span' ).empty();
+				$( this ).parent().find( "input" ).val( "" );
+				$( this ).parent().find( "span" ).empty();
 				return false;
 			} );
 	} );

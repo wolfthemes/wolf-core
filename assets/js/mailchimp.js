@@ -28,21 +28,21 @@ var WolfCoreMailchimp = function( $ ) {
 		},
 
 		submitButton : function () {
-			$( ".wvc-mailchimp-submit" ).on( "click", function( event ) {
+			$( ".wolf-core-mailchimp-submit" ).on( "click", function( event ) {
 				event.preventDefault();
 
 				var message = "",
 					$submit = $( this ),
-					$form = $submit.parents( ".wvc-mailchimp-form" ),
-					$result = $form.find( ".wvc-mailchimp-result" ),
-					list_id = $form.find( ".wvc-mailchimp-list" ).val(),
-					firstName = $form.find( ".wvc-mailchimp-f-name" ).val(),
-					lastName = $form.find( ".wvc-mailchimp-l-name" ).val(),
-					hasName = $form.find( ".wvc-mailchimp-has-name" ).val(),
-					email = $form.find( ".wvc-mailchimp-email" ).val(),
+					$form = $submit.parents( ".wolf-core-mailchimp-form" ),
+					$result = $form.find( ".wolf-core-mailchimp-result" ),
+					list_id = $form.find( ".wolf-core-mailchimp-list" ).val(),
+					firstName = $form.find( ".wolf-core-mailchimp-f-name" ).val(),
+					lastName = $form.find( ".wolf-core-mailchimp-l-name" ).val(),
+					hasName = $form.find( ".wolf-core-mailchimp-has-name" ).val(),
+					email = $form.find( ".wolf-core-mailchimp-email" ).val(),
 					data = {
 
-						action : "wvc_mailchimp_ajax",
+						action : "wolf_core_mailchimp_ajax",
 						list_id : list_id,
 						firstName : firstName,
 						lastName : lastName,
@@ -63,7 +63,7 @@ var WolfCoreMailchimp = function( $ ) {
 							message = WolfCoreMailchimpParams.subscriptionSuccessfulMessage;
 
 							/* Use to track subscription event */
-							$( window ).trigger( "wvc_mc_subscribe" );
+							$( window ).trigger( "wolf_core_mc_subscribe" );
 						}
 
 					} else {
@@ -82,11 +82,11 @@ var WolfCoreMailchimp = function( $ ) {
 
 		sizeClasses : function () {
 
-			$( ".wvc-mailchimp-show-name-yes.wvc-mailchimp-size-large" ).each( function() {
+			$( ".wolf-core-mailchimp-show-name-yes.wolf-core-mailchimp-size-large" ).each( function() {
 				if ( 600 > $( this ).width() ) {
-					$( this ).addClass( "wvc-mailchimp-smaller" );
+					$( this ).addClass( "wolf-core-mailchimp-smaller" );
 				} else {
-					$( this ).removeClass( "wvc-mailchimp-smaller" );
+					$( this ).removeClass( "wolf-core-mailchimp-smaller" );
 				}
 			} );
 		}

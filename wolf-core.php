@@ -590,7 +590,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * Include required ajax files.
 		 */
 		public function ajax_includes() {
-			// include_once( 'inc/ajax/ajax-functions.php' );
+			include_once 'inc/ajax-functions.php';
 		}
 
 		/**
@@ -728,7 +728,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 * @return string
 		 */
 		public function ajax_url() {
-			return admin_url( 'admin-ajax.php', 'relative' );
+			return admin_url( 'admin-ajax.php' );
 		}
 
 		/**
