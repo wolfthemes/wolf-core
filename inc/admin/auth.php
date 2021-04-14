@@ -52,6 +52,9 @@ function wolf_core_show_activation_notice() {
 	</div>';
 }
 
+/**
+ * Missing plugin activation notice
+ */
 function wolf_core_admin_notice_missing_main_plugin() {
 
 	if ( isset( $_GET['activate'] ) ) {
@@ -128,31 +131,31 @@ function wolf_core_is_activated() {
 
 	// var_dump( get_transient( 'wolf_core_activation_notice' ) );
 
-	// new
+	// new.
 	if ( ! get_transient( 'wolf_core_activation_notice' ) && ! get_option( 'wolf_core_activation_notice_set' ) ) {
 		set_transient( 'wolf_core_activation_notice', true, 31 * DAY_IN_SECONDS );
 		update_option( 'wolf_core_activation_notice_set', true );
 	}
 
-	// activated
+	// activated.
 	if ( ( get_option( 'wolf_core_activated' ) || get_transient( 'wolf_core_activated' ) ) && get_option( 'wolf_core_key' ) && get_option( 'wolf_core_code' ) ) {
 		// die( 'is fully activated' );
 		return get_option( 'wolf_core_key' );
 	}
 
-	// Trial expired
+	// Trial expired.
 	if ( ( ! get_option( 'wolf_core_activated' ) || ! get_transient( 'wolf_core_activated' ) ) && ! get_option( 'wolf_core_key' ) && ! get_option( 'wolf_core_code' ) && ! get_transient( 'wolf_core_activation_notice' ) && get_option( 'wolf_core_activation_notice_set' ) ) {
 		// die( 'period expired' );
 		return false;
 	}
 
-	// Trial running
+	// Trial running.
 	if ( get_transient( 'wolf_core_activation_notice' ) && get_option( 'wolf_core_activation_notice_set' ) ) {
 		// die( 'period current' );
 		return true;
 	}
 
-	// Recheck
+	// Recheck.
 	if ( ! get_option( 'wolf_core_activated' ) && ! get_transient( 'wolf_core_activation_notice' ) && get_option( 'wolf_core_code' ) && get_option( 'wolf_core_key' ) ) {
 
 		$remote_url = 'https://api.wolfthemes.com/envato/';
@@ -193,7 +196,7 @@ function wolf_core_is_activated() {
 }
 
 /**
- * Not OK bro
+ * Theme not OK
  *
  * @return bool
  */

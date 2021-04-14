@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_get_theme_name() {
 	$wp_theme = wp_get_theme( get_template() );
-	return $wp_theme->Name;
+	return $wp_theme->Name; // phpcs:ignore
 }
 
 if ( ! function_exists( 'wolf_core_get_theme_slug' ) ) {
@@ -48,27 +48,27 @@ add_action( 'wolf_core_license_tab', 'wolf_core_output_license_tab' );
 function wolf_core_output_license_tab_content() {
 	?>
 	<?php
-		if ( isset( $_POST['wolf_core_reset_purchase_code'] ) ) :
-			delete_option( 'wolf_core_activation_notice_set' );
-			delete_transient( 'wolf_core_activation_notice' );
-			delete_option( 'wolf_core_activated' );
-			delete_option( 'wolf_core_code' );
-			delete_option( 'wolf_core_key' );
+	if ( isset( $_POST['wolf_core_reset_purchase_code'] ) ) :
+		delete_option( 'wolf_core_activation_notice_set' );
+		delete_transient( 'wolf_core_activation_notice' );
+		delete_option( 'wolf_core_activated' );
+		delete_option( 'wolf_core_code' );
+		delete_option( 'wolf_core_key' );
 		endif;
 	?>
-	<div id="license" class="wvc-options-panel">
+	<div id="license" class="wolf-core-options-panel">
 	<?php
-		$activated = wolf_core_activate_theme();
+		$activated  = wolf_core_activate_theme();
 		$theme_name = wolf_core_get_theme_name();
 		$theme_slug = wolf_core_get_theme_slug();
-		?>
-		<ul class="wvc-license-info">
+	?>
+		<ul class="wolf-core-license-info">
 			<li>
 			<?php
 				echo sprintf(
-					wp_kses_post( __( '%s theme works with <strong>%s</strong> plugin to offer all its features.', 'wolf-core' ) ),
+					wp_kses_post( __( '%1$s theme works with <strong>%2$s</strong> plugin to offer all its features.', 'wolf-core' ) ),
 					$theme_name,
-					//'https://wolfthemes.com/wolf-wpbakery-page-builder-extension/',
+					// 'https://wolfthemes.com/wolf-wpbakery-page-builder-extension/',
 					'Wolf Core'
 				);
 			?>
@@ -76,13 +76,13 @@ function wolf_core_output_license_tab_content() {
 			<li>
 				<?php
 					echo sprintf(
-						wp_kses_post( __( 'It extends of <a href="%s" target="_blank">%s</a> and <a href="%s" target="_blank">%s</a> plugin.', 'wolf-core' ) ),
+						wp_kses_post( __( 'It extends of <a href="%1$s" target="_blank">%2$s</a> and <a href="%3$s" target="_blank">%4$s</a> plugin.', 'wolf-core' ) ),
 						'https://wlfthm.es/wpbpb',
 						'WPBakery Page Builder',
 						'https://elementor.com/',
 						'Elementor'
 					);
-			?>
+				?>
 			</li>
 			<li>
 				<?php esc_html_e( 'It includes plugin territory features that boost the theme functionalities.', 'wolf-core' ); ?>
@@ -90,24 +90,24 @@ function wolf_core_output_license_tab_content() {
 			<li>
 				<?php
 				echo sprintf(
-					wp_kses_post( __( 'This extension is available only to users who purchased their theme from <a href="%s" target="_blank">%s</a>.', 'wolf-core' ) ),
+					wp_kses_post( __( 'This extension is available only to users who purchased their theme from <a href="%1$s" target="_blank">%2$s</a>.', 'wolf-core' ) ),
 					'https://wolfthemes.com',
 					'WolfThemes'
 				);
-			?>
+				?>
 			</li>
 			<!-- <li> -->
 			<?php
 				// echo sprintf(
-				// 	wp_kses_post( __( 'You <strong>do not need to activate %s</strong> as the full version is already included in the theme (<a href="%s" target="_blank">more infos</a>).', 'wolf-core' ) ),
-				// 	'WPBakery Page Builder',
-				// 	'https://wolfthemes.ticksy.com/article/12629/'
+				// wp_kses_post( __( 'You <strong>do not need to activate %s</strong> as the full version is already included in the theme (<a href="%s" target="_blank">more infos</a>).', 'wolf-core' ) ),
+				// 'WPBakery Page Builder',
+				// 'https://wolfthemes.ticksy.com/article/12629/'
 				// );
 			?>
 			<!-- </li> -->
 		</ul>
 		<?php if ( ! $activated ) : ?>
-		<p class="wvc-license-cta-text">
+		<p class="wolf-core-license-cta-text">
 			<?php
 				echo sprintf(
 					wp_kses_post( __( 'Please enter your <strong>theme purchase code</strong> below to activate your theme license and be able to use all features.', 'wolf-core' ) ),
@@ -116,24 +116,26 @@ function wolf_core_output_license_tab_content() {
 			?>
 		</p>
 		<form method="post" action="<?php echo esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about' ) ); ?>">
-		<input name="theme_purchase_code" placeholder="693e0017-48d3-4bd5-be47-1c5c14e7ab9c" type="text" class="regular-text wvc-license-input"><input value="<?php esc_html_e( 'Activate', 'wolf-core' ); ?>" type="submit" class="button button-primary wvc-license-button">
+		<input name="theme_purchase_code" placeholder="693e0017-48d3-4bd5-be47-1c5c14e7ab9c" type="text" class="regular-text wolf-core-license-input"><input value="<?php esc_html_e( 'Activate', 'wolf-core' ); ?>" type="submit" class="button button-primary wolf-core-license-button">
 		</form>
 		<p>
 			<a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Can-I-Find-my-Purchase-Code-"><?php esc_html_e( 'How to find your purchase code', 'wolf-core' ); ?></a>
 		</p>
 		<?php else : ?>
-		<p><?php
+		<p>
+			<?php
 			echo sprintf(
 				wp_kses_post( __( 'The %s is activated.', 'wolf-core' ) ),
 				'Wolf Core'
 			);
-		?></p>
+			?>
+		</p>
 		<form method="post" action="<?php echo esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about' ) ); ?>"><input name="wolf_core_reset_purchase_code" value="<?php esc_html_e( 'Reset purchase code', 'wolf-core' ); ?>" type="submit" class="button button-secondary">
 			</form>
-		<?php
+			<?php
 		endif;
 
-	?>
+		?>
 	</div><!-- #license -->
 	<?php
 }
@@ -141,12 +143,11 @@ add_action( 'wolf_core_license_tab_content', 'wolf_core_output_license_tab_conte
 
 /**
  * Output the last new feature if set in the changelog XML
- *
  */
 function wolf_core_activate_theme() {
 
-	$activated = get_option( 'wolf_core_key' );
-	$is_error = false;
+	$activated     = get_option( 'wolf_core_key' );
+	$is_error      = false;
 	$error_message = esc_html__( 'Something went wrong. It way be due to a temporary Envato API outage. Please try again in a few minutes.', 'wolf-core' );
 
 	if ( ! $activated && isset( $_POST['theme_purchase_code'] ) ) {
@@ -154,20 +155,23 @@ function wolf_core_activate_theme() {
 		/* Verifiy purchase */
 		if ( isset( $_POST['theme_purchase_code'] ) && ! empty( $_POST['theme_purchase_code'] ) ) {
 
-			$code = esc_attr( $_POST['theme_purchase_code'] );
+			$code       = esc_attr( $_POST['theme_purchase_code'] );
 			$remote_url = 'https://api.wolfthemes.com/envato/';
-			//$remote_url = 'http://localhost/api/envato/';
+			// $remote_url = 'http://localhost/api/envato/';
 
 			$url = $remote_url . '?code=' . $code;
 
 			// send request
-			$response = wp_remote_post( $url, array(
-				'method' => 'POST',
-				'body' => array(
-					'action' => 'activation',
-					'purchase_code' => $_POST['theme_purchase_code'],
-				),
-			) );
+			$response = wp_remote_post(
+				$url,
+				array(
+					'method' => 'POST',
+					'body'   => array(
+						'action'        => 'activation',
+						'purchase_code' => $_POST['theme_purchase_code'],
+					),
+				)
+			);
 
 			// get result if no error
 			if ( ! is_wp_error( $response ) && is_array( $response ) ) {
@@ -180,7 +184,7 @@ function wolf_core_activate_theme() {
 
 					if ( $data && is_object( $data ) && isset( $data->code ) && isset( $data->key ) ) {
 
-						//set_transient( 'wolf_core_activated', true, 365 * DAY_IN_SECONDS );
+						// set_transient( 'wolf_core_activated', true, 365 * DAY_IN_SECONDS );
 						update_option( 'wolf_core_activated', true );
 						add_option( 'wolf_core_code', $data->code );
 						add_option( 'wolf_core_key', $data->key );
@@ -195,24 +199,21 @@ function wolf_core_activate_theme() {
 
 					} else {
 						$is_error = true;
-						$error = $error_message;
+						$error    = $error_message;
 					}
-
 				} else {
 					$is_error = true;
-					$error = $error_message;
+					$error    = $error_message;
 				}
-
 			} else {
 				$is_error = true;
-				$error = $error_message;
+				$error    = $error_message;
 			}
 		} else {
 			$is_error = true;
-			$error = esc_html__( 'Purchase code can not be empty', 'wolf-core' );
+			$error    = esc_html__( 'Purchase code can not be empty', 'wolf-core' );
 		}
-
-	} else if ( $activated ) {
+	} elseif ( $activated ) {
 
 		return true;
 	}
@@ -221,7 +222,7 @@ function wolf_core_activate_theme() {
 
 		echo '<div class="notice-error notice">';
 		echo '<p>';
-		echo sanitize_text_field( $error );
+		echo esc_attr( $error );
 		echo '</p>';
 		echo '</div>';
 	}
@@ -229,13 +230,21 @@ function wolf_core_activate_theme() {
 	return $activated;
 }
 
+/**
+ * Get transient timeout
+ *
+ * @param string $transient The transient name.
+ * @return void
+ */
 function wolf_core_get_transient_timeout( $transient ) {
 	global $wpdb;
-		$transient_timeout = $wpdb->get_col( "
+		$transient_timeout = $wpdb->get_col(
+			"
 		SELECT option_value
 		FROM $wpdb->options
 		WHERE option_name
 		LIKE '%_transient_timeout_$transient%'
-		" );
+		"
+		);
 	return ( isset( $transient_timeout[0] ) ) ? absint( ( $transient_timeout[0] - time() ) / DAY_IN_SECONDS ) : false;
 }

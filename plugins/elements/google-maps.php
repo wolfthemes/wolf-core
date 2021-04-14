@@ -21,16 +21,19 @@ function wolf_core_google_maps( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'type'                => 'simple',
+				'type'                => 'default',
 				'locations'           => '',
-				'size'                => '100%',
+				'name'                => '',
+				'coordinates'         => '',
+				'size'                => '400px',
+				'height'              => '400px',
 				'address'             => '',
 				'zoom'                => 10,
 				'map_skin'            => 'standard',
 				'custom_map_skin'     => '',
 				'marker'              => '',
 				'marker_img'          => '',
-				'marker_color'        => 'custom',
+				'marker_color'        => 'accent',
 				'marker_custom_color' => '#F7584C',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
@@ -66,8 +69,17 @@ function wolf_core_google_maps( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	$size          = ( $size ) ? $size : '100%';
-	$el_height     = wolf_core_sanitize_css_value( $size );
+	$size   = ( $size ) ? $size : '400px';
+	$height = ( $height ) ? $height : '400px';
+
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+
+		$el_height = wolf_core_sanitize_css_value( $height );
+
+	} elseif ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+		$el_height = wolf_core_sanitize_css_value( $size );
+	}
+
 	$inline_style .= "height:$el_height;";
 
 	/* Marker color */
@@ -99,8 +111,8 @@ function wolf_core_google_maps( $atts ) {
 
 	$locations_formatted = array();
 
-	/* Single location (Elementor compat) */
-	if ( $address && 'simple' === $type ) {
+	/* Single location (Elementor default) */
+	if ( $address && ( 'default' === $type || ! $type ) ) {
 		$output .= sprintf(
 			'<div class="elementor-custom-embed"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=%1$s&amp;t=m&amp;z=%2$d&amp;output=embed&amp;iwloc=near" title="%3$s" aria-label="%3$s"></iframe></div>',
 			rawurlencode( $address ),
@@ -110,19 +122,34 @@ function wolf_core_google_maps( $atts ) {
 	}
 
 	/* Multiple locations */
-	if ( $locations && 'multiple' === $type ) {
+	if ( ( $locations && 'multiple' === $type ) || $name && $coordinates && 'simple' === $type ) {
 
-		foreach ( $locations as $location ) {
-			// debug( $location );
-			$coordinates = wvc_list_to_array( $location['coordinates'] );
+		if ( 'simple' === $type ) {
+
+			$coordinates = wolf_core_list_to_array( $coordinates );
 			$latitude    = ( isset( $coordinates[0] ) ) ? $coordinates[0] : false;
 			$longitude   = ( isset( $coordinates[1] ) ) ? $coordinates[1] : false;
 
 			$locations_formatted[] = array(
-				$location['name'],
+				$name,
 				$latitude,
 				$longitude,
 			);
+
+		} elseif ( 'multiple' === $type ) {
+
+			foreach ( $locations as $location ) {
+
+				$coordinates = wolf_core_list_to_array( $location['coordinates'] );
+				$latitude    = ( isset( $coordinates[0] ) ) ? $coordinates[0] : false;
+				$longitude   = ( isset( $coordinates[1] ) ) ? $coordinates[1] : false;
+
+				$locations_formatted[] = array(
+					$location['name'],
+					$latitude,
+					$longitude,
+				);
+			}
 		}
 
 		$output .= '<div id="' . esc_attr( $el_id ) . '"

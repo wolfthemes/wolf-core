@@ -623,7 +623,7 @@ function wolf_core_get_twitter_usename() {
 }
 
 /**
- * Get shared color list in array to allow filtering by theme and stuff
+ * Get shared color list in array to allow filtering by theme
  *
  * @return array
  */
@@ -645,9 +645,27 @@ function wolf_core_get_shared_colors() {
 		'blue'        => esc_html__( 'Blue', 'wolf-core' ),
 	);
 
-	$wolf_core_shared_colors = apply_filters( 'wolf_core_shared_colors', $wolf_core_shared_colors );
+	$wolf_core_shared_colors = apply_filters( 'wolf_core_vc_colors', $wolf_core_shared_colors );
 
 	return $wolf_core_shared_colors;
+}
+
+/**
+ * Get Elementor color list in array to allow filtering by theme
+ *
+ * @return array
+ */
+function wolf_core_get_elementor_colors() {
+	$wolf_core_elementor_colors = array(
+		'black'       => esc_html__( 'Black', 'wolf-core' ),
+		'lightergrey' => esc_html__( 'Light Grey', 'wolf-core' ),
+		'darkgrey'    => esc_html__( 'Dark Grey', 'wolf-core' ),
+		'white'       => esc_html__( 'White', 'wolf-core' ),
+	);
+
+	$wolf_core_elementor_colors = apply_filters( 'wolf_core_elementor_colors', $wolf_core_elementor_colors );
+
+	return $wolf_core_elementor_colors;
 }
 
 /**

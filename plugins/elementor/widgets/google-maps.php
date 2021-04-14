@@ -154,9 +154,11 @@ class Elementor_Google_Maps_Widget extends \Elementor\Widget_Base { // phpcs:ign
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'type'                => 'simple',
+				'type'                => 'default',
 				'locations'           => '',
-				'size'                => '500px',
+				'name'                => '',
+				'coordinates'         => '',
+				'size'                => '100%',
 				'address'             => '',
 				'zoom'                => 10,
 				'map_skin'            => 'standard',

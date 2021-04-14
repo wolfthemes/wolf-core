@@ -66,6 +66,14 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		$params = $widget->params['params'];
 	}
 
+	$elementor_types = array(
+		'text'     => \Elementor\Controls_Manager::TEXT,
+		'textarea' => \Elementor\Controls_Manager::TEXTAREA,
+		'select'   => \Elementor\Controls_Manager::SELECT,
+		'checkbox' => \Elementor\Controls_Manager::SWITCHER,
+		'link'     => \Elementor\Controls_Manager::URL,
+	);
+
 	foreach ( $params as $p ) {
 
 		if ( isset( $p['page_builder'] ) && 'vc' === $p['page_builder'] ) {
@@ -82,7 +90,37 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['default'] = $p['default'];
 		}
 
-		if ( 'text' === $type ) {
+		if ( 'repeater' === $type ) {
+
+			$repeater = new \Elementor\Repeater();
+
+			foreach ( $p['params'] as $r_param ) {
+
+				$repeater->add_control(
+					$r_param['param_name'],
+					array(
+						'label'       => $r_param['label'],
+						'type'        => ( isset( $r_param['type'] ) ) ? $elementor_types[ $r_param['type'] ] : 'text',
+						'default'     => ( isset( $r_param['default'] ) ) ? $r_param['default'] : '',
+						'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
+						'label_block' => true,
+					)
+				);
+			}
+
+			$widget->add_control(
+				$p['param_name'],
+				array(
+					'label'       => $p['label'],
+					'type'        => \Elementor\Controls_Manager::REPEATER,
+					'fields'      => $repeater->get_controls(),
+					'default'     => $p['defaults'],
+					'condition'   => $p['condition'],
+					'title_field' => '{{{ ' . $p['params'][0]['param_name'] . ' }}}',
+				)
+			);
+
+		} elseif ( 'text' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::TEXT;
 
@@ -169,7 +207,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		} elseif ( 'images' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::GALLERY;
-
 		}
 
 		if ( isset( $p['condition'] ) ) {
@@ -226,7 +263,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				)
 			);
 
-		} elseif ( isset( $p['param_name'] ) ) {
+		} elseif ( isset( $p['param_name'] ) && 'repeater' !== $type ) {
 
 			$widget->add_control(
 				$p['param_name'],

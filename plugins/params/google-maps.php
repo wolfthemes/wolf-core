@@ -28,8 +28,9 @@ function wolf_core_google_maps_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'google_maps',
+				'keywords'      => array( 'map', 'embed' ),
 				'icon'          => 'fa fa-map-marker',
-				'scripts'       => array(),
+				'scripts'       => array( 'jquery', 'google-maps-api', 'wolf-core-google-maps' ),
 			),
 			'params'     => array(
 
@@ -38,6 +39,7 @@ function wolf_core_google_maps_params() {
 					'label'       => esc_html__( 'Map Type', 'wolf-core' ),
 					'param_name'  => 'type',
 					'options'     => array(
+						'default'  => esc_html__( 'Default', 'wolf-core' ),
 						'simple'   => esc_html__( 'Simple', 'wolf-core' ),
 						'multiple' => esc_html__( 'Muliple locations', 'wolf-core' ),
 					),
@@ -46,11 +48,66 @@ function wolf_core_google_maps_params() {
 
 				array(
 					'type'        => 'text',
-					'heading'     => esc_html__( 'Address', 'wolf-core' ),
+					'label'       => esc_html__( 'Address', 'wolf-core' ),
 					'param_name'  => 'address',
 					'admin_label' => true,
 					'placeholder' => $default_address,
 					'default'     => $default_address,
+					'label_block' => true,
+					'condition'   => array(
+						'type' => array( 'default' ),
+					),
+				),
+
+				array(
+					'type'       => 'repeater',
+					'param_name' => 'locations',
+					'label'      => esc_html__( 'Locations', 'wolf-core' ),
+					'params'     => array(
+						array(
+							'param_name' => 'name',
+							'label'      => esc_html__( 'Name', 'wolf-core' ),
+						),
+						array(
+							'param_name' => 'coordinates',
+							'label'      => esc_html__( 'Coordinates', 'wolf-core' ),
+						),
+					),
+					'defaults'   => array(
+						array(
+							'name'        => esc_html__( 'Location name', 'wolf-core' ),
+							'coordinates' => '',
+						),
+						array(
+							'name'        => esc_html__( 'Location name', 'wolf-core' ),
+							'coordinates' => '',
+						),
+					),
+					'condition'  => array(
+						'type' => array( 'multiple' ),
+					),
+
+				),
+
+				array(
+					'type'        => 'text',
+					'label'       => esc_html__( 'Location name', 'wolf-core' ),
+					'param_name'  => 'name',
+					'admin_label' => true,
+					'placeholder' => $default_address,
+					'default'     => $default_address,
+					'label_block' => true,
+					'condition'   => array(
+						'type' => array( 'simple' ),
+					),
+				),
+
+				array(
+					'type'        => 'text',
+					'label'       => esc_html__( 'Coordinates', 'wolf-core' ),
+					'param_name'  => 'coordinates',
+					'default'     => '48.58212406669087, 7.750927801893993',
+					'admin_label' => true,
 					'label_block' => true,
 					'condition'   => array(
 						'type' => array( 'simple' ),
@@ -77,6 +134,9 @@ function wolf_core_google_maps_params() {
 						'custom'         => esc_html__( 'Custom', 'wolf-core' ),
 					),
 					'admin_label' => true,
+					'condition'   => array(
+						'type' => array( 'simple', 'multiple' ),
+					),
 				),
 
 				array(
@@ -86,6 +146,7 @@ function wolf_core_google_maps_params() {
 					'description' => sprintf( wolf_core_kses( __( 'You can get a custom code from <a href="%s" target="_blank">https://snazzymaps.com</a> and paste it here', 'wolf-core' ) ), 'https://snazzymaps.com/' ),
 					'condition'   => array(
 						'map_skin' => array( 'custom' ),
+						'type'     => array( 'simple', 'multiple' ),
 					),
 				),
 
@@ -103,7 +164,7 @@ function wolf_core_google_maps_params() {
 					'type'         => 'text',
 					'label'        => esc_html__( 'Map height', 'wolf-core' ),
 					'param_name'   => 'height',
-					'default'      => '500px',
+					'default'      => '400px',
 					'page_builder' => 'elementor',
 				),
 
@@ -111,9 +172,83 @@ function wolf_core_google_maps_params() {
 					'type'         => 'text',
 					'label'        => esc_html__( 'Map height', 'wolf-core' ),
 					'param_name'   => 'size',
-					'default'      => '500px',
+					'default'      => '400px',
 					'admin_label'  => true,
 					'page_builder' => 'vc',
+				),
+
+				array(
+					'type'       => 'select',
+					'label'      => esc_html__( 'Marker Type', 'wolf-visual-composer' ),
+					'param_name' => 'marker',
+					'options'    => array(
+						'default' => esc_html__( 'Standard', 'wolf-visual-composer' ),
+						'custom'  => esc_html__( 'Custom Image', 'wolf-visual-composer' ),
+					),
+					'std'        => 'default',
+				),
+
+				array(
+					'type'        => 'image',
+					'label'       => esc_html__( 'Image', 'wolf-visual-composer' ),
+					'param_name'  => 'marker_img',
+					'value'       => '',
+					'description' => esc_html__( 'Select image from media library.', 'wolf-visual-composer' ),
+					'condition'   => array(
+						'marker' => array( 'custom' ),
+					),
+				),
+
+				array(
+					'type'               => 'select',
+					'label'              => esc_html__( 'Marker Color', 'wolf-visual-composer' ),
+					'param_name'         => 'marker_color',
+					'options'              => array_merge(
+						array( 'default' => esc_html__( 'Default color', 'wolf-visual-composer' ) ),
+						wolf_core_get_shared_colors(),
+						array( 'custom' => esc_html__( 'Custom color', 'wolf-visual-composer' ) )
+					),
+					'std'                => 'default',
+					'description'        => esc_html__( 'Select a marker color.', 'wolf-visual-composer' ),
+					'param_holder_class' => 'wolf_core_colored-select',
+					'condition'          => array(
+						'marker' => array( 'default' ),
+					),
+					'page_builder'       => 'vc',
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Marker Custom Color', 'wolf-visual-composer' ),
+					'param_name'   => 'marker_custom_color',
+					'condition'    => array(
+						'marker_color' => 'custom',
+					),
+					'page_builder' => 'vc',
+				),
+
+				/* Elementor color */
+				array(
+					'type'         => 'select',
+					'label'              => esc_html__( 'Marker Color', 'wolf-visual-composer' ),
+					'param_name'   => 'marker_color',
+					'options'              => array_merge(
+						array( 'default' => esc_html__( 'Default color', 'wolf-visual-composer' ) ),
+						wolf_core_get_elementor_colors(),
+						array( 'custom' => esc_html__( 'Custom color', 'wolf-visual-composer' ) )
+					),
+					'default'      => 'accent',
+					'page_builder' => 'elementor',
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Marker Color', 'wolf-visual-composer' ),
+					'param_name'   => 'marker_custom_color',
+					'page_builder' => 'elementor',
+					'condition'          => array(
+						'marker_color' => array( 'custom' ),
+					),
 				),
 
 				/* Elementor CSS filters */

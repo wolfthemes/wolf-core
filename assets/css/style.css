@@ -2609,6 +2609,37 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   }
 }
 /**
+ * @# Google Maps
+ **/
+.wolf-core-gmaps-container {
+  width: 100%;
+  min-height: 200px;
+}
+.wolf-core-gmaps-container address {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.wolf-core-gmaps {
+  width: 100%;
+  height: 100%;
+}
+
+.wolf-core-google-maps-container {
+  width: 100%;
+  min-height: 200px;
+}
+.wolf-core-google-maps-container address {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.wolf-core-google-maps {
+  width: 100%;
+  height: 100%;
+}
+
+/**
  * @# Heading
  **/
 .wolf-core-heading h1,

@@ -111,11 +111,11 @@ var WolfCoreGalleries = function( $ ) {
 	} );
 
 	$( document ).ready( function() {
-		// if ( window.elementorFrontend && elementorFrontend !== undefined ) {
-		// 	elementorFrontend.hooks.addAction( 'frontend/element_ready/gallery.default', function( $scope ) {
-		// 		WolfCoreGalleries.init();
-		// 	} );
-		// }
+		if ( window.elementorFrontend && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
+			elementorFrontend.hooks.addAction( 'frontend/element_ready/gallery.default', function( $scope ) {
+				WolfCoreGalleries.init();
+			} );
+		}
 	} );
 
 } )( jQuery );
