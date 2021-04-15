@@ -444,6 +444,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'WOLF_CORE_DIR'            => $this->plugin_path(),
 				'WOLF_CORE_URI'            => $this->plugin_url(),
 				'WOLF_CORE_CSS'            => $this->plugin_url() . '/assets/css',
+				'WOLF_CORE_FONTS'          => $this->plugin_url() . '/assets/css/lib/fonts',
 				'WOLF_CORE_JS'             => $this->plugin_url() . '/assets/js',
 				'WOLF_CORE_SCRIPT_VERSION' => ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : $this->version,
 				'WOLF_CORE_SLUG'           => plugin_basename( dirname( __FILE__ ) ),
@@ -652,6 +653,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$helper_files = array(
 				'helpers',
+				'icons',
 			);
 
 			foreach ( $helper_files as $file ) {

@@ -110,7 +110,7 @@ function wolf_core_get_elements() {
 		// 'highlight',
 		// 'hours',
 		// 'hoverbox',
-		// 'icon',
+		'icon',
 		// 'iframe-opener',
 		// 'image-link',
 		// 'image-device-slider',

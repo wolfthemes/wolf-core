@@ -45,6 +45,7 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 
 		add_action( 'init', array( $this, 'include_vc_params' ) );
 		add_action( 'init', array( $this, 'include_shortcode_maps' ), 99 ); // include vc_map late so it is filtered before being initiated.
+		add_action( 'init', array( $this, 'include_deprecated' ) );
 	}
 
 	/**
@@ -55,7 +56,6 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 		$files = array(
 			'vc-core-functions',
 			'vc-custom-fields',
-			'icon-styles',
 			'icon-libraries',
 		);
 
@@ -127,6 +127,39 @@ class Wolf_Core_WPBakery_Page_Builder_Extension {
 			if ( is_file( WOLF_CORE_DIR . '/plugins/vc/vc-map/' . sanitize_title_with_dashes( $e ) . '.php' ) ) {
 
 				include_once WOLF_CORE_DIR . '/plugins/vc/vc-map/' . sanitize_title_with_dashes( $e ) . '.php';
+			}
+		}
+	}
+
+	/**
+	 * Init Widgets
+	 *
+	 * Include widgets files and register them
+	 *
+	 * @version 1.0.0
+	 *
+	 * @access public
+	 */
+	public function include_deprecated() {
+
+		$files = array(
+			'wvc_icon',
+		);
+
+		foreach ( $files as $file ) {
+			if ( ! include_once WOLF_CORE_DIR . '/plugins/vc/deprecated/' . $file . '.php' ) {
+				wp_die(
+					sprintf(
+						wp_kses(
+							/* translators: %s: the code to display */
+							__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
+							array(
+								'code' => array(),
+							)
+						),
+						esc_attr( $file )
+					)
+				);
 			}
 		}
 	}

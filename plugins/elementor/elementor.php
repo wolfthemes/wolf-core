@@ -43,6 +43,8 @@ class Wolf_Core_Elementor_Extension { // phpcs:ignore
 
 		$this->elements = wolf_core_get_elements();
 
+		require_once 'icon-libraries.php';
+
 		add_action( 'elementor/widgets/widgets_registered', array( $this, 'init_widgets' ) );
 		add_action( 'elementor/controls/controls_registered', array( $this, 'init_controls' ) );
 	}

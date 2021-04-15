@@ -161,7 +161,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		} elseif ( 'icon' === $type ) {
 
 			$field_params['type']             = \Elementor\Controls_Manager::ICONS;
-			$field_params['fa4compatibility'] = 'icon'; // ??
+			$field_params['fa4compatibility'] = 'icon';
 
 		} elseif ( 'colorpicker' === $type ) {
 
