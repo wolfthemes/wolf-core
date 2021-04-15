@@ -158,6 +158,11 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::URL;
 
+		} elseif ( 'icon' === $type ) {
+
+			$field_params['type']             = \Elementor\Controls_Manager::ICONS;
+			$field_params['fa4compatibility'] = 'icon'; // ??
+
 		} elseif ( 'colorpicker' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::COLOR;
