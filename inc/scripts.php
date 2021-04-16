@@ -309,7 +309,7 @@ function wolf_core_force_enqueue_scripts() {
 		// 3rd party
 		wp_enqueue_script( 'bandsintown', 'https://widget.bandsintown.com/main.min.js', array(), WOLF_CORE_VERSION, true );
 
-		$google_api_key = apply_filters( 'wolf_core_google_maps_api_key', wolf_vc_get_option( 'google-map', 'google_maps_api_key' ) );
+		$google_api_key = apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) );
 
 		if ( $google_api_key ) {
 			wp_enqueue_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . $google_api_key, array(), WOLF_CORE_VERSION, true );
