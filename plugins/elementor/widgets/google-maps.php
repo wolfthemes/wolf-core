@@ -73,7 +73,7 @@ class Elementor_Google_Maps_Widget extends \Elementor\Widget_Base { // phpcs:ign
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Big Text widget title.
+	 * Retrieve element widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -87,7 +87,7 @@ class Elementor_Google_Maps_Widget extends \Elementor\Widget_Base { // phpcs:ign
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Big Text widget icon.
+	 * Retrieve element widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -101,7 +101,7 @@ class Elementor_Google_Maps_Widget extends \Elementor\Widget_Base { // phpcs:ign
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Big Text widget belongs to.
+	 * Retrieve the list of categories the element widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -129,7 +129,7 @@ class Elementor_Google_Maps_Widget extends \Elementor\Widget_Base { // phpcs:ign
 	}
 
 	/**
-	 * Register Big Text widget controls.
+	 * Register element widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *

@@ -607,8 +607,8 @@ function wolf_fore_get_icon_libraires() {
 			'iconmonstr-iconic-font'  => array(
 				'properties' => array(
 					'name'          => 'iconmonstr-iconic-font',
-					'label'         => esc_html__( 'iconmonstr-iconic-font', 'wolf-core' ),
-					'labelIcon'     => 'im im-inbox',
+					'label'         => esc_html__( 'Iconmonstr', 'wolf-core' ),
+					'labelIcon'     => 'im im-rocket',
 					'prefix'        => 'im-',
 					'displayPrefix' => 'im',
 					'url'           => WOLF_CORE_FONTS . '/iconmonstr-iconic-font/iconmonstr-iconic-font.min.css',
@@ -1964,7 +1964,7 @@ function wolf_fore_get_icon_libraires() {
 				'properties' => array(
 					'name'          => 'linea-basic-elaboration',
 					'label'         => esc_html__( 'Linea Elaboration', 'wolf-core' ),
-					'labelIcon'     => 'linea-basic-elaboration linea-basic-elaboration-todolist',
+					'labelIcon'     => 'linea-basic-elaboration linea-basic-elaboration-todolist-check',
 					'prefix'        => 'linea-basic-elaboration-',
 					'displayPrefix' => 'linea-basic-elaboration',
 					'url'           => WOLF_CORE_FONTS . '/linea-icons/linea-icons.min.css',
@@ -2845,4 +2845,42 @@ function wolf_fore_get_icon_libraires() {
 			),
 		)
 	);
+}
+
+/**
+ * Render icon
+ *
+ * @param array $icon             Icon Type, Icon value
+ * @param array $attributes       Icon HTML Attributes
+ * @param string $tag             Icon HTML tag, defaults to <i>
+ *
+ * @return mixed|string
+ */
+function wolf_core_render_icon( $icon, $attributes = array(), $tag = 'i' ) {
+	if ( empty( $icon['library'] ) ) {
+			return false;
+		}
+		$output = '';
+		// handler SVG Icon
+		if ( 'svg' === $icon['library'] ) {
+			//$output = self::render_svg_icon( $icon['value'] );
+		} else {
+			//$icon_types = self::get_icon_manager_tabs();
+		if ( isset( $icon_types[ $icon['library'] ]['render_callback'] ) && is_callable( $icon_types[ $icon['library'] ]['render_callback'] ) ) {
+			return call_user_func_array( $icon_types[ $icon['library'] ]['render_callback'], [ $icon, $attributes, $tag ] );
+		}
+
+		if ( empty( $attributes['class'] ) ) {
+			$attributes['class'] = $icon['value'];
+		} else {
+			if ( is_array( $attributes['class'] ) ) {
+				$attributes['class'][] = $icon['value'];
+			} else {
+				$attributes['class'] .= ' ' . $icon['value'];
+			}
+		}
+		return '<' . $tag . ' ' . wolf_core_render_html_attributes( $attributes ) . '></' . $tag . '>';
+		}
+
+		echo $output;
 }

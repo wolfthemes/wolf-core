@@ -162,7 +162,7 @@ function wolf_core_sanitize_css_field( $style ) {
 /**
  * Escape html style attribute
  *
- * @param string $style
+ * @param string $style The style attribute to clean
  * @return string
  */
 function wolf_core_esc_style_attr( $style ) {
@@ -177,6 +177,8 @@ function wolf_core_esc_style_attr( $style ) {
 
 	// remove double semicolon.
 	$style = str_replace( array( ';;', '; ;' ), '', $style );
+
+	$style = ( ';' !== $style ) ? $style : '';
 
 	return esc_attr( trim( wolf_core_clean_spaces( $style ) ) );
 }

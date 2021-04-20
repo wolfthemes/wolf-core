@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Socials
+ * Icon
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Socials_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_Button_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -29,7 +29,7 @@ class Elementor_Socials_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_social_icons_params();
+		$this->params = wolf_core_button_params();
 
 		if ( isset( $this->params['properties']['scripts'] ) ) {
 
@@ -154,27 +154,12 @@ class Elementor_Socials_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'services'                  => '',
-				'target'                    => '_blank',
-				'rel'                       => '',
-				'alignment'                 => 'center',
-				'color'                     => 'default',
-				'custom_color'              => '',
-				'background_style'          => 'none',
-				'background_color'          => '',
-				'custom_background_color'   => '',
-				'size'                      => '',
-				'hover_effect'              => 'none',
-				'css_animation'             => '',
-				'css_animation_delay'       => '',
-				'el_class'                  => '',
-				'hide_class'                => '',
-				'add_spotify_follow_button' => '',
+				'type' => '',
 			)
 		);
 
-		echo wolf_core_social_icons( $atts ); // phpcs:ignore
+		echo wolf_core_button( $atts ); // phpcs:ignore
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Socials_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Button_Widget() );
 

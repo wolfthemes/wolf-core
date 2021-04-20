@@ -12,6 +12,25 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Disable all icon libraries except Linea Icons
+ *
+ * Used for animated icon field
+ *
+ * @param array $icon_tabs The Elementor icon tabs.
+ * @return array
+ */
+function wolf_core_disable_non_animatable_icons( $icon_tabs ) {
+
+	foreach ( $icon_tabs as $library => $settings ) {
+		if ( ! preg_match( '/linea-/', $library ) ) {
+			unset( $icon_tabs[ $library ] );
+		}
+	}
+
+	return $icon_tabs;
+}
+
+/**
  * Add widget categories
  *
  * @param object $elements_manager Theme Elementor manager object.
@@ -49,7 +68,6 @@ function wolf_core_add_elementor_widget_categories( $elements_manager ) {
 			'icon'  => 'fa fa-th',
 		)
 	);
-
 }
 add_action( 'elementor/elements/categories_registered', 'wolf_core_add_elementor_widget_categories' );
 
@@ -156,12 +174,17 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 		} elseif ( 'link' === $type ) {
 
-			$field_params['type'] = \Elementor\Controls_Manager::URL;
+			$field_params['type']        = \Elementor\Controls_Manager::URL;
+			$field_params['placeholser'] = 'https://your-website.com';
 
 		} elseif ( 'icon' === $type ) {
 
 			$field_params['type']             = \Elementor\Controls_Manager::ICONS;
 			$field_params['fa4compatibility'] = 'icon';
+
+		} elseif ( 'animated_icon' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::ICONS;
 
 		} elseif ( 'colorpicker' === $type ) {
 
@@ -189,6 +212,11 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					'step' => ( isset( $p['step'] ) ) ? $p['step'] : 1,
 				);
 			}
+		} elseif ( 'dimensions' === $type ) {
+
+			$field_params['type']       = \Elementor\Controls_Manager::DIMENSIONS;
+			$field_params['size_units'] = isset( $p['size_units'] ) ? $p['size_units'] : array( 'px' );
+
 		} elseif ( 'scheme' === $type ) {
 
 			$field_params['type']  = \Elementor\Controls_Manager::COLOR;
@@ -212,9 +240,32 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		} elseif ( 'images' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::GALLERY;
+
+		} elseif ( 'hover_animation' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::HOVER_ANIMATION;
 		}
 
-		if ( isset( $p['condition'] ) ) {
+		$elementor_params = array(
+			'condition',
+			'description',
+			'label_block',
+			'separator',
+			'tablet_default',
+			'mobile_default',
+			'prefix_class',
+			'selectors',
+			'style_transfer',
+			'skin',
+		);
+
+		foreach ( $elementor_params as $elementor_param ) {
+			if ( isset( $p[ $elementor_param ] ) ) {
+				$field_params[ $elementor_param ] = $p[ $elementor_param ];
+			}
+		}
+
+		/*if ( isset( $p['condition'] ) ) {
 			$field_params['condition'] = $p['condition'];
 		}
 
@@ -226,15 +277,27 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['label_block'] = $p['label_block'];
 		}
 
-		/* Preview render */
+		if ( isset( $p['separator'] ) ) {
+			$field_params['separator'] = $p['separator'];
+		}
+
+		if ( isset( $p['tablet_default'] ) ) {
+			$field_params['tablet_default'] = $p['tablet_default'];
+		}
+
+		if ( isset( $p['mobile_default'] ) ) {
+			$field_params['mobile_default'] = $p['mobile_default'];
+		}
+
+		if ( isset( $p['prefix_class'] ) ) {
+			$field_params['prefix_class'] = $p['prefix_class'];
+		}
+
 		if ( isset( $p['selectors'] ) ) {
 			$field_params['selectors'] = $p['selectors'];
-		}
+		}*/
 
-		if ( isset( $p['selector'] ) ) {
-			$field_params['selector'] = $p['selector'];
-		}
-
+		/* Goupe Tabs */
 		if ( isset( $p['group_tabs'] ) && 'open' === $p['group_tabs'] ) {
 			$widget->start_controls_tabs( $p['name'] );
 		}
@@ -248,7 +311,14 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			);
 		}
 
-		if ( 'css_filters' === $type ) {
+		if ( isset( $p['responsive_control'] ) && $p['responsive_control'] ) {
+
+			$widget->add_responsive_control(
+				$p['param_name'],
+				$field_params
+			);
+
+		} elseif ( 'css_filters' === $type ) {
 
 			$widget->add_group_control(
 				\Elementor\Group_Control_Css_Filter::get_type(),
@@ -270,16 +340,24 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 		} elseif ( isset( $p['param_name'] ) && 'repeater' !== $type ) {
 
+			// if ( 'animated_icon' === $type ) {
+			// * Disable all icons excpet the library that can be animated */
+			// add_filter( 'elementor/icons_manager/additional_tabs', 'wolf_core_disable_non_animatable_icons', 99 );
+			// add_filter( 'elementor/icons_manager/native', 'wolf_core_disable_non_animatable_icons', 99 );
+			// }
+
 			$widget->add_control(
 				$p['param_name'],
 				$field_params
 			);
 		}
 
+			/* End tab */
 		if ( isset( $p['tab'] ) && 'close' === $p['tab'] ) {
 			$widget->end_controls_tab();
 		}
 
+		/* End group tabs */
 		if ( isset( $p['group_tabs'] ) && 'close' === $p['group_tabs'] ) {
 			$widget->end_controls_tabs();
 		}
@@ -291,6 +369,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
  *
  * Register control sections of a widget from its params array.
  *
+ * @param object $widget The widget object.
  * @return void
  */
 function wolf_core_register_elementor_controls( $widget ) {

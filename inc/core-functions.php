@@ -13,54 +13,6 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Check which page builder plugin is used
- *
- * @return string plugin slug
- */
-function wolf_core_get_plugin_in_use() {
-
-	if ( did_action( 'elementor/loaded' ) ) {
-
-		return 'elementor';
-
-	} elseif ( defined( 'WPB_VC_VERSION' ) ) {
-
-		return 'vc';
-	}
-}
-
-/**
- * Gets the ID of the post, even if it's not inside the loop.
- *
- * @uses WP_Query
- * @uses get_queried_object()
- * @extends get_the_ID()
- * @see get_the_ID()
- *
- * @return int
- */
-function wolf_core_get_the_id() {
-	global $wp_query;
-
-	$post_id = null;
-
-	if ( function_exists( 'is_shop' ) && is_shop() ) {
-
-		$post_id = get_option( 'woocommerce_shop_page_id' );
-
-		// Get post ID outside the loop
-	} elseif ( is_object( $wp_query ) && isset( $wp_query->queried_object ) && isset( $wp_query->queried_object->ID ) ) {
-
-		$post_id = $wp_query->queried_object->ID;
-
-	} else {
-		$post_id = get_the_ID();
-	}
-
-	return $post_id;
-}
-
-/**
  * Get element list in array to allow filtering by theme and stuff
  *
  * @return array
@@ -201,6 +153,54 @@ function wolf_core_get_elements() {
 	// debug( $wolf_core_elements );
 
 	return $wolf_core_elements;
+}
+
+/**
+ * Check which page builder plugin is used
+ *
+ * @return string plugin slug
+ */
+function wolf_core_get_plugin_in_use() {
+
+	if ( did_action( 'elementor/loaded' ) ) {
+
+		return 'elementor';
+
+	} elseif ( defined( 'WPB_VC_VERSION' ) ) {
+
+		return 'vc';
+	}
+}
+
+/**
+ * Gets the ID of the post, even if it's not inside the loop.
+ *
+ * @uses WP_Query
+ * @uses get_queried_object()
+ * @extends get_the_ID()
+ * @see get_the_ID()
+ *
+ * @return int
+ */
+function wolf_core_get_the_id() {
+	global $wp_query;
+
+	$post_id = null;
+
+	if ( function_exists( 'is_shop' ) && is_shop() ) {
+
+		$post_id = get_option( 'woocommerce_shop_page_id' );
+
+		// Get post ID outside the loop
+	} elseif ( is_object( $wp_query ) && isset( $wp_query->queried_object ) && isset( $wp_query->queried_object->ID ) ) {
+
+		$post_id = $wp_query->queried_object->ID;
+
+	} else {
+		$post_id = get_the_ID();
+	}
+
+	return $post_id;
 }
 
 /**
@@ -669,6 +669,13 @@ function wolf_core_get_elementor_colors() {
 }
 
 /**
+ * Get theme accent color value
+ */
+function wolf_core_get_theme_accent_color_value() {
+	return apply_filters( 'wolf_core_theme_accent_color', '#0073AA' );
+}
+
+/**
  * Get shared color hex value
  */
 function wolf_core_get_shared_colors_hex() {
@@ -696,7 +703,7 @@ function wolf_core_get_shared_colors_hex() {
 		'juicy-pink'  => '#F4524D',
 		'sandy-brown' => '#F79468',
 		'purple'      => '#B97EBB',
-		'accent'      => apply_filters( 'wolf_core_theme_accent_color', '#0073AA' ),
+		'accent'      => wolf_core_get_theme_accent_color_value(),
 	);
 
 	$wolf_core_shared_colors_hex = apply_filters( 'wolf_core_shared_colors_hex', $wolf_core_shared_colors_hex );

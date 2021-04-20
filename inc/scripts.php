@@ -40,7 +40,7 @@ function wolf_core_get_js_params() {
 		'audioButtonPlayText'       => esc_html__( 'Play', 'wolf-visual-composer' ),
 		'audioButtonPauseText'      => esc_html__( 'Pause', 'wolf-visual-composer' ),
 		'language'                  => get_locale(),
-		'accentColor'               => apply_filters( 'wolf_core_theme_accent_color', '#0073AA' ),
+		'accentColor'               => wolf_core_get_theme_accent_color_value(),
 		'fullHeightRowDoWPMOffsset' => apply_filters( 'wolf_core_fullheight_row_do_wpm_offset', true ),
 		'isRTL'                     => apply_filters( 'wolf_core_is_rtl', true ),
 		'printStylesheet'           => WOLF_CORE_CSS . '/print.min.css',
@@ -202,6 +202,7 @@ function wolf_core_register_scripts() {
 	wp_register_script( 'wolf-core-bmic', WOLF_CORE_JS . $folder . '/bmic' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-modal-window', WOLF_CORE_JS . $folder . '/modal-window' . $suffix . '.js', array( 'jquery', 'js-cookie' ), $version, true );
 	wp_register_script( 'wolf-core-privacy-policy-message', WOLF_CORE_JS . $folder . '/privacy-policy-message' . $suffix . '.js', array( 'jquery', 'js-cookie' ), $version, true );
+	wp_register_script( 'wolf-core-icon', WOLF_CORE_JS . $folder . '/icon' . $suffix . '.js', array( 'jquery' ), $version, true );
 
 	// Pie charts.
 	wp_register_script( 'wolf-core-pie', WOLF_CORE_JS . $folder . '/pie' . $suffix . '.js', array( 'jquery' ), $version, true );

@@ -20,7 +20,7 @@ function wolf_core_mailchimp_params() {
 		'wolf_core_mailchimp_params',
 		array(
 			'properties' => array(
-				'name'          => esc_html__( 'mailchimp', 'wolf-core' ),
+				'name'          => esc_html__( 'MailChimp Form', 'wolf-core' ),
 				'description'   => esc_html__( 'Description.', 'wolf-core' ),
 				'vc_base'       => 'wolf_core_mailchimp',
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),

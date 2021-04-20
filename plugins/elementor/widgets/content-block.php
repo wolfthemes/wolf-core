@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Content_Block_Widget extends \Elementor\Widget_Base {
+class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -25,7 +25,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base {
 	 */
 	public $scripts = array();
 
-	public function __construct( $data = array(), $args = null ) {
+	public function __construct( $data = array(), $args = null ) { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 
@@ -97,7 +97,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base {
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function _register_controls() { // phpcs:ignore
 
 		if ( 'wolf_content_block' === get_post_type() ) {
 			return;
@@ -123,7 +123,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base {
 			)
 		);
 
-		echo wolf_core_heading( $atts ); // WCS XSS ok.
+		echo wolf_core_heading( $atts ); // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Content_Block_Widget() );

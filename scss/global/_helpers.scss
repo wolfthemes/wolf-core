@@ -4,18 +4,18 @@
 
 /* Disable lightbox when draggin carousel */
 .wolf-core-disabled {
-	pointer-events: none !important;
+	pointer-events: none;
 }
 
 .flickity-viewport.is-pointer-down {
 	.wolf-core-lightbox {
-		//pointer-events: none!important;
+		//pointer-events: none;
 	}
 }
 
 /* Hide element */
 .wolf-core-hide {
-	display: none !important;
+	display: none;
 }
 
 .wolf-core-hidden,
@@ -51,30 +51,30 @@
 
 /* Text alignement */
 .wolf-core-text-left {
-	text-align: left !important;
+	text-align: left;
 }
 
 .wolf-core-text-center {
-	text-align: center !important;
+	text-align: center;
 }
 
 .wolf-core-text-right {
-	text-align: right !important;
+	text-align: right;
 }
 
 @media screen and (max-width: 800px) {
 	.wolf-core-mobile-text-center,
 	.wolf-core-mobile-text-align-center {
-		text-align: center !important;
+		text-align: center;
 
 		* {
-			text-align: center !important;
+			text-align: center;
 		}
 	}
 
 	.wolf-core-mobile-center,
 	.wolf-core-mobile-align-center {
-		margin: 0 auto !important;
+		margin: 0 auto;
 	}
 }
 
@@ -95,8 +95,8 @@
 
 /* Font */
 .wolf-core-font-bold {
-	font-weight: bold !important;
-	font-weight: 700 !important;
+	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Overflow */
@@ -141,7 +141,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100% !important;
+	height: 100%;
 	z-index: 0;
 	font-family: 'object-fit: cover;'; // polyfill
 }
@@ -163,7 +163,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100% !important;
+	height: 100%;
 	z-index: 0;
 	font-family: 'object-fit: contain;'; // polyfill
 }
@@ -248,7 +248,7 @@
 	overflow: hidden;
 
 	img:not(.wolf-core-img-cover) {
-		//display: none !important;
+		//display: none ;
 	}
 
 	.wolf-core-img-cover {

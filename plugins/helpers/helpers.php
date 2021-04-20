@@ -176,3 +176,26 @@ function wolf_core_target_param_list() {
 		'_blank' => esc_html__( 'New window', 'wolf-visual-composer' ),
 	);
 }
+
+/**
+ * Render html attributes
+ *
+ * @access public
+ * @static
+ * @param array $attributes
+ *
+ * @return string
+ */
+function wolf_core_render_html_attributes( array $attributes ) {
+	$rendered_attributes = array();
+
+	foreach ( $attributes as $attribute_key => $attribute_values ) {
+		if ( is_array( $attribute_values ) ) {
+			$attribute_values = implode( ' ', $attribute_values );
+		}
+
+		$rendered_attributes[] = sprintf( '%1$s="%2$s"', $attribute_key, esc_attr( $attribute_values ) );
+	}
+
+	return implode( ' ', $rendered_attributes );
+}

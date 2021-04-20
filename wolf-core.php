@@ -652,6 +652,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		public function include_helpers() {
 
 			$helper_files = array(
+				'colors',
 				'helpers',
 				'icons',
 			);
