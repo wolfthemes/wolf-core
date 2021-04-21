@@ -193,8 +193,9 @@ function wolf_core_render_html_attributes( array $attributes ) {
 		if ( is_array( $attribute_values ) ) {
 			$attribute_values = implode( ' ', $attribute_values );
 		}
-
-		$rendered_attributes[] = sprintf( '%1$s="%2$s"', $attribute_key, esc_attr( $attribute_values ) );
+		if ( ! empty( $attribute_values ) ) {
+			$rendered_attributes[] = sprintf( '%1$s="%2$s"', $attribute_key, esc_attr( $attribute_values ) );
+		}
 	}
 
 	return implode( ' ', $rendered_attributes );

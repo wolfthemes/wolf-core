@@ -50,15 +50,15 @@
 }
 
 /* Text alignement */
-.wolf-core-text-left {
+.wolf-core-align-left {
 	text-align: left;
 }
 
-.wolf-core-text-center {
+.wolf-core-align-center {
 	text-align: center;
 }
 
-.wolf-core-text-right {
+.wolf-core-align-right {
 	text-align: right;
 }
 
@@ -79,19 +79,19 @@
 }
 
 /* Content alignement */
-.wolf-core-align-left {
-	margin-left: 0;
-	margin-right: auto;
-}
+// .wolf-core-align-left {
+// 	margin-left: 0;
+// 	margin-right: auto;
+// }
 
-.wolf-core-align-right {
-	margin-right: 0;
-	margin-left: auto;
-}
+// .wolf-core-align-right {
+// 	margin-right: 0;
+// 	margin-left: auto;
+// }
 
-.wolf-core-align-center {
-	margin: 0 auto;
-}
+// .wolf-core-align-center {
+// 	margin: 0 auto;
+// }
 
 /* Font */
 .wolf-core-font-bold {

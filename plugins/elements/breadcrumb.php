@@ -57,7 +57,7 @@ function wolf_core_breadcrumb( $atts ) {
 
 	$class .= ' wolf-core-breadcrumb wolf-core-element';
 
-	$class .= " wolf-core-text-$align";
+	$class .= " wolf-core-align-$align";
 
 	$output .= '<div  class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 

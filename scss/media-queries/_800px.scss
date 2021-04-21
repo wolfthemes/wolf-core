@@ -1,14 +1,38 @@
+/* Align */
+.wolf-core-mobile-align-center {
+	text-align: center;
+
+	.wolf-core-button {
+		width: auto;
+	}
+}
+
+.wolf-core-mobile-align-right {
+	text-align: right;
+
+	.wolf-core-button {
+		width: auto;
+	}
+}
+
+.wolf-core-mobile-align-right .wolf-core-mobile-align-left {
+	text-align: left;
+
+	.wolf-core-button {
+		width: auto;
+	}
+}
+
+.wolf-core-mobile-align-justify .wolf-core-button {
+	width: 100%;
+}
+
 /* Countdown */
 .wolf-core-countdown-container {
 	font-size: 32px;
 	.countdown-period {
 		font-size: 18px !important;
 	}
-}
-
-.wolf-core-button {
-	display: inline-block;
-	width: auto;
 }
 
 .wolf-core-slide-caption {

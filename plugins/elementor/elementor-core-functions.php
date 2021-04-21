@@ -265,38 +265,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			}
 		}
 
-		/*if ( isset( $p['condition'] ) ) {
-			$field_params['condition'] = $p['condition'];
-		}
-
-		if ( isset( $p['description'] ) ) {
-			$field_params['description'] = $p['description'];
-		}
-
-		if ( isset( $p['label_block'] ) ) {
-			$field_params['label_block'] = $p['label_block'];
-		}
-
-		if ( isset( $p['separator'] ) ) {
-			$field_params['separator'] = $p['separator'];
-		}
-
-		if ( isset( $p['tablet_default'] ) ) {
-			$field_params['tablet_default'] = $p['tablet_default'];
-		}
-
-		if ( isset( $p['mobile_default'] ) ) {
-			$field_params['mobile_default'] = $p['mobile_default'];
-		}
-
-		if ( isset( $p['prefix_class'] ) ) {
-			$field_params['prefix_class'] = $p['prefix_class'];
-		}
-
-		if ( isset( $p['selectors'] ) ) {
-			$field_params['selectors'] = $p['selectors'];
-		}*/
-
 		/* Goupe Tabs */
 		if ( isset( $p['group_tabs'] ) && 'open' === $p['group_tabs'] ) {
 			$widget->start_controls_tabs( $p['name'] );
@@ -328,10 +296,40 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				)
 			);
 
+		} elseif ( 'border' === $type ) {
+
+			$widget->add_group_control(
+				\Elementor\Group_Control_Border::get_type(),
+				array_merge(
+					array( 'name' => $p['param_name'] ),
+					$field_params
+				)
+			);
+
+		} elseif ( 'box_shadow' === $type ) {
+
+			$widget->add_group_control(
+				\Elementor\Group_Control_Box_Shadow::get_type(),
+				array_merge(
+					array( 'name' => $p['param_name'] ),
+					$field_params
+				)
+			);
+
 		} elseif ( 'typography' === $type ) {
 
 			$widget->add_group_control(
 				\Elementor\Group_Control_Typography::get_type(),
+				array_merge(
+					array( 'name' => $p['param_name'] ),
+					$field_params
+				)
+			);
+
+		} elseif ( 'text_shadow' === $type ) {
+
+			$widget->add_group_control(
+				\Elementor\Group_Control_Text_Shadow::get_type(),
 				array_merge(
 					array( 'name' => $p['param_name'] ),
 					$field_params

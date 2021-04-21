@@ -34,7 +34,7 @@ function wolf_core_button_params() {
 				array(
 					'type'         => 'select',
 					'param_name'   => 'button_type',
-					'label'        => esc_html__( 'Type', 'elementor' ),
+					'label'        => esc_html__( 'Type', 'wolf-core' ),
 					'options'      => apply_filters(
 						'wolf_core_button_types',
 						array(
@@ -50,6 +50,7 @@ function wolf_core_button_params() {
 
 				array(
 					'label'       => esc_html__( 'Text', 'wolf-core' ),
+					'param_name'  => 'text',
 					'type'        => 'text',
 					'default'     => esc_html__( 'Click here', 'wolf-core' ),
 					'placeholder' => esc_html__( 'Click here', 'wolf-core' ),
@@ -62,10 +63,11 @@ function wolf_core_button_params() {
 				),
 
 				array(
-					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
-					'param_name'   => 'align',
-					'type'         => 'choose',
-					'options'      => array(
+					'label'              => esc_html__( 'Alignment', 'wolf-core' ),
+					'responsive_control' => true,
+					'param_name'         => 'align',
+					'type'               => 'choose',
+					'options'            => array(
 						'left'    => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
@@ -83,16 +85,15 @@ function wolf_core_button_params() {
 							'icon'  => 'eicon-text-align-justify',
 						),
 					),
-					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-icon-container' => 'text-align: {{VALUE}}!important;',
-					),
-					'page_builder' => 'wolf-core',
+					'prefix_class'       => 'wolf-core%s-align-',
+					'default'            => '',
+					'page_builder'       => 'wolf-core',
 				),
 
 				array(
 					'type'         => 'select',
 					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
-					'param_name'   => 'alignment',
+					'param_name'   => 'align',
 					'options'      => array(
 						'left'    => esc_html__( 'Left', 'wolf-core' ),
 						'center'  => esc_html__( 'Center', 'wolf-core' ),
@@ -105,6 +106,7 @@ function wolf_core_button_params() {
 				array(
 					'type'           => 'select',
 					'param_name'     => 'size',
+					'label'          => esc_html__( 'Size', 'wolf-core' ),
 					'default'        => 'sm',
 					'options'        => array(
 						'xs' => esc_html__( 'Extra Small', 'wolf-core' ),
@@ -117,6 +119,7 @@ function wolf_core_button_params() {
 				),
 
 				array(
+					'param_name'       => 'selected_icon',
 					'label'            => esc_html__( 'Icon', 'wolf-core' ),
 					'type'             => 'icon',
 					'fa4compatibility' => 'icon',
@@ -152,9 +155,16 @@ function wolf_core_button_params() {
 						),
 					),
 					'selectors'  => array(
-						'{{WRAPPER}} .wolf-core-button .wolf-core-align-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
-						'{{WRAPPER}} .wolf-core-button .wolf-core-align-icon-left' => 'margin-right: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .wolf-core-button-icon-align-right' => 'margin-left: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .wolf-core-button-icon-align-left' => 'margin-right: {{SIZE}}{{UNIT}};',
 					),
+				),
+
+				array(
+					'param_name'  => 'icon_hover_reveal',
+					'label'       => esc_html__( 'Reveal Icon on Hover', 'wolf-core' ),
+					'type'        => 'checkbox',
+					'description' => esc_html__( 'The icon will be visible on hover only.', 'wolf-core' ),
 				),
 
 				array(
@@ -177,11 +187,27 @@ function wolf_core_button_params() {
 					'separator'   => 'before',
 				),
 
+				array(
+					'param_name'  => 'scroll_to_anchor',
+					'label'       => esc_html__( 'Scroll to Anchor', 'wolf-core' ),
+					'type'        => 'checkbox',
+					'description' => esc_html__( 'If your button is linked to an anchor this option will enable a smooth scroll animation.', 'wolf-core' ),
+				),
+
 				/* Typography Group controls for Elementor */
 				array(
 					'type'         => 'typography',
 					'label'        => esc_html__( 'Typography', 'wolf-core' ),
 					'param_name'   => 'typography',
+					'selector'     => '{{WRAPPER}} .wolf-core-button',
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'text_shadow',
+					'label'        => esc_html__( 'Text Shadow', 'wolf-core' ),
+					'param_name'   => 'text_shadow',
 					'selector'     => '{{WRAPPER}} .wolf-core-button',
 					'page_builder' => 'elementor',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
@@ -201,6 +227,28 @@ function wolf_core_button_params() {
 				),
 
 				array(
+					'param_name' => 'button_text_color',
+					'label'      => esc_html__( 'Text Color', 'wolf-core' ),
+					'type'       => 'colorpicker',
+					'default'    => '',
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-button' => 'fill: {{VALUE}}; color: {{VALUE}};',
+					),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'param_name' => 'background_color',
+					'label'      => esc_html__( 'Background Color', 'wolf-core' ),
+					'type'       => 'colorpicker',
+					'default'    => wolf_core_get_theme_accent_color_value(),
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-button' => 'background-color: {{VALUE}};',
+					),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
 					'tab'   => 'close',
 					'group' => esc_html__( 'Style', 'wolf-core' ),
 				),
@@ -213,6 +261,48 @@ function wolf_core_button_params() {
 				),
 
 				array(
+					'param_name' => 'hover_color',
+					'label'      => esc_html__( 'Text Color', 'wolf-core' ),
+					'type'       => 'colorpicker',
+					'default'    => '',
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-button:hover, {{WRAPPER}} .wolf-core-button:focus' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-button:hover svg, {{WRAPPER}} .wolf-core-button:focus svg' => 'fill: {{VALUE}};',
+					),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'param_name' => 'button_background_hover_color',
+					'label'      => esc_html__( 'Backgorund Color', 'wolf-core' ),
+					'type'       => 'colorpicker',
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-button:hover, {{WRAPPER}} .wolf-core-button:focus' => 'background-color: {{VALUE}};',
+					),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'param_name' => 'button_hover_border_color',
+					'label'      => __( 'Border Color', 'wolf-core' ),
+					'type'       => 'colorpicker',
+					'condition'  => array(
+						'border_border!' => '',
+					),
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-button:hover, {{WRAPPER}} .wolf-core-button:focus' => 'border-color: {{VALUE}};',
+					),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'       => 'hover_animation',
+					'param_name' => 'hover_animation',
+					'label'      => esc_html__( 'Hover Animation', 'wolf-core' ),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
 					'tab'   => 'close',
 					'group' => esc_html__( 'Style', 'wolf-core' ),
 				),
@@ -220,6 +310,45 @@ function wolf_core_button_params() {
 				array(
 					'group_tabs' => 'close',
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'param_name' => 'border',
+					'type'       => 'border',
+					'label'      => esc_html__( 'Border', 'wolf-core' ),
+					'selector'   => '{{WRAPPER}} .wolf-core-button',
+					'separator'  => 'before',
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'param_name' => 'border_radius',
+					'type'       => 'dimensions',
+					'label'      => esc_html__( 'Border Radius', 'wolf-core' ),
+					'size_units' => array( 'px', '%', 'em' ),
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'param_name' => 'button_box_shadow',
+					'type'       => 'box_shadow',
+					'label'      => esc_html__( 'Box Shadow', 'wolf-core' ),
+					'selector'   => '{{WRAPPER}} .wolf-core-button',
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'param_name'         => 'text_padding',
+					'responsive_control' => true,
+					'type'               => 'dimensions',
+					'label'              => esc_html__( 'Padding', 'wolf-core' ),
+					'selectors'          => array(
+						'{{WRAPPER}} .wolf-core-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					),
+					'group'              => esc_html__( 'Style', 'wolf-core' ),
 				),
 			),
 		)

@@ -2,3 +2,30 @@
 #wolf-core-one-page-nav {
 	display: block;
 }
+
+.wolf-core-tablet-align-center {
+	text-align: center;
+
+	.wolf-core-button {
+		width: auto;
+	}
+}
+
+.wolf-core-tablet-align-right {
+	text-align: right;
+
+	.wolf-core-button {
+		width: auto;
+	}
+}
+.wolf-core-tablet-align-right .wolf-core-tablet-align-left {
+	text-align: left;
+
+	.wolf-core-button {
+		width: auto;
+	}
+}
+
+.wolf-core-tablet-align-justify .wolf-core-button {
+	width: 100%;
+}

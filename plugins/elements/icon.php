@@ -37,7 +37,7 @@ function wolf_core_icon( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	$class .= " wolf-core-icon-container wolf-core-element wolf-core-text-$align";
+	$class .= " wolf-core-icon-container wolf-core-element wolf-core-align-$align";
 
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
@@ -59,10 +59,10 @@ function wolf_core_icon( $atts ) {
 	// $output .= '<i class="' . wolf_core_sanitize_html_classes( wolf_core_render_icon( $selected_icon ) ) . '"></i>';
 
 	/* Closing */
-	if ( is_array( $link ) ) {
+	if ( is_array( $link ) && ! empty( $link['url'] ) ) {
 		$output .= '</a>';
 	} else {
-		$output .= '<div>';
+		$output .= '</div>';
 	}
 
 	$output .= '</div><!-- .wolf-core-icon -->';

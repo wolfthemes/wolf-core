@@ -42,7 +42,7 @@ function wolf_core_spotify_follow_button( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	$class .= " wolf-core-spotify-follow-button-container wolf-core-text-align-$alignment wolf-core-element";
+	$class .= " wolf-core-spotify-follow-button-container wolf-core-align-$alignment wolf-core-element";
 
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 

@@ -2857,6 +2857,7 @@ function wolf_fore_get_icon_libraires() {
  * @return mixed|string
  */
 function wolf_core_render_icon( $icon, $attributes = array(), $tag = 'i' ) {
+
 	if ( empty( $icon['library'] ) ) {
 			return false;
 		}

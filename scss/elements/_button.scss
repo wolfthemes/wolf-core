@@ -1,3 +1,104 @@
 /**
  * @# Button
  **/
+/* Button container */
+.wolf-core-button-container {
+	position: relative;
+}
+
+.wolf-core-button-container-align-left {
+	text-align: left;
+}
+.wolf-core-button-container-align-center {
+	text-align: center;
+}
+.wolf-core-button-container-align-right {
+	text-align: right;
+}
+
+.wolf-core-button-container-align-justify {
+	margin-bottom: 10px;
+}
+
+/* Default */
+.wolf-core-button {
+	// reset
+	margin: 0;
+	padding: 0;
+	border-width: 2px;
+	border-style: solid;
+	outline: none !important;
+	cursor: pointer;
+	color: #fff;
+	font-size: inherit;
+	text-decoration: none;
+	text-align: center !important;
+	vertical-align: middle; // fixes overflow gap
+	white-space: nowrap;
+	pointer-events: auto !important;
+
+	// base
+	display: inline-block;
+	width: auto;
+	position: relative;
+	line-height: 1;
+	//transition:all .3s ease;
+
+	.wolf-core-icon {
+		position: relative;
+		top: 1px;
+		font-size: inherit;
+	}
+}
+
+/* Default Icon position */
+.wolf-core-button-icon-align-left {
+	.wolf-core-icon {
+		padding-right: 8px;
+	}
+}
+
+.wolf-core-button-icon-align-right {
+	.wolf-core-icon {
+		padding-left: 8px;
+	}
+}
+
+/* Sizes */
+// small
+.wolf-core-button-size-xs {
+	font-size: 13px;
+	padding: 14px 30px;
+}
+
+// Medium
+.wolf-core-button-size-sm,
+.wolf-core-button-size-md,
+.wolf-core-button-size-lg {
+	font-size: 16px;
+	padding: 18px 35px;
+}
+
+.wolf-core-audio-button {
+	min-width: 128px;
+}
+
+.wolf-core-align-justify {
+	.wolf-core-button {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	// Large
+	.wolf-core-button-size-md {
+		font-size: 18px;
+		padding: 20px 38px;
+	}
+
+	// Extra Large
+	.wolf-core-button-size-lg {
+		font-size: 24px;
+		padding: 24px 45px;
+	}
+}

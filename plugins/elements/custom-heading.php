@@ -123,7 +123,7 @@ function wolf_core_heading( $atts ) {
 		$text_container_class .= ' wolf-core-overflow-hidden';
 	}
 
-	$text_container_class .= ' wolf-core-custom-heading wolf-core-element wolf-core-text-align-' . $text_align;
+	$text_container_class .= ' wolf-core-custom-heading wolf-core-element wolf-core-align-' . $text_align;
 	$text_container_class .= ' ' . $hide_class; // device visibility class.
 
 	if ( $background_img ) {
