@@ -29,7 +29,7 @@
 	border-style: solid;
 	outline: none !important;
 	cursor: pointer;
-	color: #fff;
+	color: inherit;
 	font-size: inherit;
 	text-decoration: none;
 	text-align: center !important;
@@ -51,16 +51,231 @@
 	}
 }
 
+/* Shape */
+.wolf-core-button-shape-standard,
+.wolf-core-button-shape-standard-outline {
+	border-radius: 4px;
+}
+
+.wolf-core-button-shape-rounded-less,
+.wolf-core-button-shape-rounded-less-outline {
+	border-radius: 8px;
+}
+
+.wolf-core-button-shape-rounded,
+.wolf-core-button-shape-rounded-outline {
+	border-radius: 999em;
+}
+
+/* Default type */
+.wolf-core-button-info {
+	background-color: #39b54a;
+	color: #fff;
+
+	&[disabled] {
+	}
+}
+.wolf-core-button-success {
+	background-color: #39b54a;
+	color: #fff;
+
+	&:hover {
+		opacity: 0.85;
+	}
+
+	&[disabled] {
+		background-color: #c2cbd2;
+	}
+}
+.wolf-core-button-warning {
+	background-color: #a4afb7;
+	color: #fff;
+}
+.wolf-core-button-danger {
+	background-color: #a4afb7;
+	color: #fff;
+}
+
 /* Default Icon position */
-.wolf-core-button-icon-align-left {
+.wolf-core-button-icon-align-align-left {
 	.wolf-core-icon {
 		padding-right: 8px;
 	}
 }
 
-.wolf-core-button-icon-align-right {
+.wolf-core-button-icon-align-align-right {
 	.wolf-core-icon {
 		padding-left: 8px;
+	}
+}
+
+/* Icon hover effect */
+.wolf-core-button-icon-hover-reveal {
+	.wolf-core-icon {
+		opacity: 0;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		transition: transform 0.2s ease, opacity 0.2s ease;
+		transform: translate3d(0, -50%, 0);
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+		transition: transform 0.2s ease !important;
+		transform: translateX(0);
+	}
+
+	&:hover {
+		.wolf-core-icon {
+			opacity: 1;
+		}
+	}
+
+	&.wolf-core-button-size-lg {
+		.wolf-core-icon {
+			//	margin-top: -12px;
+		}
+
+		&.wolf-core-button-icon-align-right {
+			.wolf-core-icon {
+				transform: translate3d(-8px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(-16px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(0, -50%, 0);
+				}
+			}
+		}
+
+		&.wolf-core-button-icon-align-left {
+			.wolf-core-icon {
+				transform: translate3d(-8px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(16px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(-16px, -50%, 0);
+				}
+			}
+		}
+	}
+
+	&.wolf-core-button-size-md {
+		.wolf-core-icon {
+			//margin-top: -9px;
+		}
+
+		&.wolf-core-button-icon-align-right {
+			.wolf-core-icon {
+				transform: translate3d(-6px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(-12px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(0, -50%, 0);
+				}
+			}
+		}
+
+		&.wolf-core-button-icon-align-left {
+			.wolf-core-icon {
+				transform: translate3d(-6px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(12px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(-12px, -50%, 0);
+				}
+			}
+		}
+	}
+
+	&.wolf-core-button-size-sm {
+		.wolf-core-icon {
+			//margin-top: -8px;
+		}
+
+		&.wolf-core-button-icon-align-right {
+			.wolf-core-icon {
+				transform: translate3d(-6px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(-10px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(0, -50%, 0);
+				}
+			}
+		}
+
+		&.wolf-core-button-icon-align-left {
+			.wolf-core-icon {
+				transform: translate3d(-6px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(10px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(-10px, -50%, 0);
+				}
+			}
+		}
+	}
+
+	&.wolf-core-button-size-xs {
+		.wolf-core-icon {
+			//	margin-top: -6px;
+		}
+
+		&.wolf-core-button-icon-align-right {
+			.wolf-core-icon {
+				transform: translate3d(-6px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(-10px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(0, -50%, 0);
+				}
+			}
+		}
+
+		&.wolf-core-button-icon-align-left {
+			.wolf-core-icon {
+				transform: translate3d(-6px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(10px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(-10px, -50%, 0);
+				}
+			}
+		}
 	}
 }
 

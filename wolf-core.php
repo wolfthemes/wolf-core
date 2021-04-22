@@ -498,6 +498,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'google-fonts',
 				'styles',
 				'scripts',
+				'login-form',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */

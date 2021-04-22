@@ -26,6 +26,7 @@ function wolf_core_button( $atts ) {
 				'link'                          => '',
 				'align'                         => '',
 				'size'                          => '',
+				'shape'                         => '',
 				'selected_icon'                 => '',
 				'icon'                          => '',
 				'icon_align'                    => 'before',
@@ -50,13 +51,13 @@ function wolf_core_button( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
+	dd( $atts );
+
 	$output = '';
 
 	$class = $el_class; // init container CSS class.
 
-	$container_class = "wolf-core-button-container wolf-core-element";
-
-	//$container_class = " wolf-core-align-$align";
+	$container_class = 'wolf-core-button-container wolf-core-element';
 
 	/* Button attribute class */
 
@@ -64,6 +65,14 @@ function wolf_core_button( $atts ) {
 
 	if ( $size ) {
 		$class .= " wolf-core-button-size-$size";
+	}
+
+	if ( $button_type ) {
+		$class .= " $button_type";
+	}
+
+	if ( $shape ) {
+		$class .= " wolf-core-button-shape-$shape";
 	}
 
 	if ( $icon_align ) {
@@ -90,6 +99,7 @@ function wolf_core_button( $atts ) {
 	$button_link_atts = apply_filters(
 		'wolf_core_button_atts',
 		array(
+			'role'  => 'button',
 			'class' => wolf_core_sanitize_html_classes( $class ),
 			'style' => wolf_core_esc_style_attr( $inline_style ),
 		),
@@ -117,15 +127,27 @@ function wolf_core_button( $atts ) {
 	}
 
 	if ( 'left' === $icon_align ) {
-		$output .= wolf_core_render_icon( $selected_icon, array( 'class' => 'wolf-core-icon', 'aria-hidden' => 'true' ) );
+		$output .= wolf_core_render_icon(
+			$selected_icon,
+			array(
+				'class'       => 'wolf-core-icon',
+				'aria-hidden' => 'true',
+			)
+		);
 	}
 
 	$output .= do_action( 'wolf_core_button_text_before', $atts );
-	$output .= esc_attr( $text );
+	$output .= '<span>' . esc_attr( $text ) . '</span>';
 	$output .= do_action( 'wolf_core_button_text_after', $atts );
 
 	if ( 'right' === $icon_align ) {
-		$output .= wolf_core_render_icon( $selected_icon, array( 'aria-hidden' => 'true' ) );
+		$output .= wolf_core_render_icon(
+			$selected_icon,
+			array(
+				'class'       => 'wolf-core-icon',
+				'aria-hidden' => 'true',
+			)
+		);
 	}
 
 	/* Closing link tag */

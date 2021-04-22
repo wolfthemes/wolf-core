@@ -18,9 +18,9 @@ function wolf_core_output_colors_inline_css() {
 	$accent     = wolf_core_get_theme_accent_color_value();
 
 	/* Button default */
-	$colors_css .= ".wolf-core-button{
-		background-color: $accent;
-	}";
+	// $colors_css .= ".wolf-core-button{
+	// 	background-color: $accent;
+	// }";
 
 	/* Icon default */
 	$colors_css .= ".wolf-core-icon-view-stacked .wolf-core-icon{

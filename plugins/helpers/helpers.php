@@ -200,3 +200,44 @@ function wolf_core_render_html_attributes( array $attributes ) {
 
 	return implode( ' ', $rendered_attributes );
 }
+
+
+/**
+ * Sync VC and elementor attributename
+ */
+function wolf_core_sync_atts() {
+
+	$converter = array(
+		'button' => array(
+			'title' => 'text',
+		),
+	);
+
+	$elements = wolf_core_get_elements();
+
+	foreach ( $elements as $e ) {
+
+		$element_slug = str_replace( '-', '_', $e );
+
+		foreach ( $converter as $name => $params ) {
+
+			if ( $name === $element_slug ) {
+
+				add_filter(
+					'wolf_core_' . $element_slug . '_atts',
+					function( $atts ) use ( $element_slug, $params ) {
+
+						dd( $params );
+						if ( isset( $atts[ $converter[ $element_slug ] ] ) ) {
+							debug( 'test' );
+						}
+
+						debug( $atts );
+						return $atts;
+					}
+				);
+			}
+		}
+	}
+}
+add_action( 'init', 'wolf_core_sync_atts' );

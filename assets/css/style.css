@@ -58,15 +58,15 @@
 }
 
 /* Text alignement */
-.wolf-core-text-align-left {
+.wolf-core-align-left {
   text-align: left;
 }
 
-.wolf-core-text-align-center {
+.wolf-core-align-center {
   text-align: center;
 }
 
-.wolf-core-text-align-right {
+.wolf-core-align-right {
   text-align: right;
 }
 
@@ -86,20 +86,6 @@
   }
 }
 /* Content alignement */
-.wolf-core-align-left {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.wolf-core-align-right {
-  margin-right: 0;
-  margin-left: auto;
-}
-
-.wolf-core-align-center {
-  margin: 0 auto;
-}
-
 /* Font */
 .wolf-core-font-bold {
   font-weight: bold;
@@ -2214,7 +2200,7 @@ body.wolf-core-svg #swipebox-close {
   border-style: solid;
   outline: none !important;
   cursor: pointer;
-  color: #fff;
+  color: inherit;
   font-size: inherit;
   text-decoration: none;
   text-align: center !important;
@@ -2232,13 +2218,148 @@ body.wolf-core-svg #swipebox-close {
   font-size: inherit;
 }
 
+/* Shape */
+.wolf-core-button-shape-standard,
+.wolf-core-button-shape-standard-outline {
+  border-radius: 4px;
+}
+
+.wolf-core-button-shape-rounded-less,
+.wolf-core-button-shape-rounded-less-outline {
+  border-radius: 8px;
+}
+
+.wolf-core-button-shape-rounded,
+.wolf-core-button-shape-rounded-outline {
+  border-radius: 999em;
+}
+
+/* Default type */
+.wolf-core-button-info {
+  background-color: #39b54a;
+  color: #fff;
+}
+
+.wolf-core-button-success {
+  background-color: #39b54a;
+  color: #fff;
+}
+.wolf-core-button-success:hover {
+  opacity: 0.85;
+}
+.wolf-core-button-success[disabled] {
+  background-color: #c2cbd2;
+}
+
+.wolf-core-button-warning {
+  background-color: #a4afb7;
+  color: #fff;
+}
+
+.wolf-core-button-danger {
+  background-color: #a4afb7;
+  color: #fff;
+}
+
 /* Default Icon position */
-.wolf-core-button-icon-align-left .wolf-core-icon {
+.wolf-core-button-icon-align-align-left .wolf-core-icon {
   padding-right: 8px;
 }
 
-.wolf-core-button-icon-align-right .wolf-core-icon {
+.wolf-core-button-icon-align-align-right .wolf-core-icon {
   padding-left: 8px;
+}
+
+/* Icon hover effect */
+.wolf-core-button-icon-hover-reveal .wolf-core-icon {
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform: translate3d(0, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s ease !important;
+  transform: translateX(0);
+}
+.wolf-core-button-icon-hover-reveal:hover .wolf-core-icon {
+  opacity: 1;
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-lg.wolf-core-button-icon-align-right .wolf-core-icon {
+  transform: translate3d(-8px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-lg.wolf-core-button-icon-align-right:hover span {
+  transform: translateX(-16px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-lg.wolf-core-button-icon-align-right:hover .wolf-core-icon {
+  transform: translate3d(0, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-lg.wolf-core-button-icon-align-left .wolf-core-icon {
+  transform: translate3d(-8px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-lg.wolf-core-button-icon-align-left:hover span {
+  transform: translateX(16px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-lg.wolf-core-button-icon-align-left:hover .wolf-core-icon {
+  transform: translate3d(-16px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-md.wolf-core-button-icon-align-right .wolf-core-icon {
+  transform: translate3d(-6px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-md.wolf-core-button-icon-align-right:hover span {
+  transform: translateX(-12px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-md.wolf-core-button-icon-align-right:hover .wolf-core-icon {
+  transform: translate3d(0, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-md.wolf-core-button-icon-align-left .wolf-core-icon {
+  transform: translate3d(-6px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-md.wolf-core-button-icon-align-left:hover span {
+  transform: translateX(12px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-md.wolf-core-button-icon-align-left:hover .wolf-core-icon {
+  transform: translate3d(-12px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-sm.wolf-core-button-icon-align-right .wolf-core-icon {
+  transform: translate3d(-6px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-sm.wolf-core-button-icon-align-right:hover span {
+  transform: translateX(-10px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-sm.wolf-core-button-icon-align-right:hover .wolf-core-icon {
+  transform: translate3d(0, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-sm.wolf-core-button-icon-align-left .wolf-core-icon {
+  transform: translate3d(-6px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-sm.wolf-core-button-icon-align-left:hover span {
+  transform: translateX(10px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-sm.wolf-core-button-icon-align-left:hover .wolf-core-icon {
+  transform: translate3d(-10px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xs.wolf-core-button-icon-align-right .wolf-core-icon {
+  transform: translate3d(-6px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xs.wolf-core-button-icon-align-right:hover span {
+  transform: translateX(-10px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xs.wolf-core-button-icon-align-right:hover .wolf-core-icon {
+  transform: translate3d(0, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xs.wolf-core-button-icon-align-left .wolf-core-icon {
+  transform: translate3d(-6px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xs.wolf-core-button-icon-align-left:hover span {
+  transform: translateX(10px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xs.wolf-core-button-icon-align-left:hover .wolf-core-icon {
+  transform: translate3d(-10px, -50%, 0);
 }
 
 /* Sizes */
@@ -2258,7 +2379,7 @@ body.wolf-core-svg #swipebox-close {
   min-width: 128px;
 }
 
-.wolf-core-text-align-justify .wolf-core-button {
+.wolf-core-align-justify .wolf-core-button {
   width: 100%;
 }
 

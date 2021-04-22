@@ -45,7 +45,8 @@ function wolf_core_button_params() {
 							'danger'  => esc_html__( 'Danger', 'wolf-core' ),
 						)
 					),
-					'prefix_class' => 'wolf-core-button-',
+					'style_transfer' => true,
+					//'prefix_class' => 'wolf-core-button-',
 				),
 
 				array(
@@ -60,6 +61,41 @@ function wolf_core_button_params() {
 					'type'       => 'link',
 					'label'      => esc_html__( 'Link', 'wolf-core' ),
 					'param_name' => 'link',
+				),
+
+				array(
+					'type'           => 'select',
+					'param_name'     => 'size',
+					'label'          => esc_html__( 'Size', 'wolf-core' ),
+					'default'        => 'sm',
+					'options'        => array(
+						'xs' => esc_html__( 'Extra Small', 'wolf-core' ),
+						'sm' => esc_html__( 'Small', 'wolf-core' ),
+						'md' => esc_html__( 'Medium', 'wolf-core' ),
+						'lg' => esc_html__( 'Large', 'wolf-core' ),
+						'xl' => esc_html__( 'Extra Large', 'wolf-core' ),
+					),
+					'style_transfer' => true,
+				),
+
+				array(
+					'type'           => 'select',
+					'param_name'     => 'shape',
+					'label'          => esc_html__( 'Shape', 'wolf-core' ),
+					'options'        => array(
+						'standard'             => esc_html__( 'Standard', 'wolf-visual-composer' ),
+						'rounded'              => esc_html__( 'Round', 'wolf-visual-composer' ),
+						'boxed'                => esc_html__( 'Square', 'wolf-visual-composer' ),
+						'rounded-less'         => esc_html__( 'Rounded', 'wolf-visual-composer' ),
+						'standard-outline'     => esc_html__( 'Outline Standard', 'wolf-visual-composer' ),
+						'rounded-outline'      => esc_html__( 'Outline Round', 'wolf-visual-composer' ),
+						'boxed-outline'        => esc_html__( 'Outline Square', 'wolf-visual-composer' ),
+						'rounded-less-outline' => esc_html__( 'Outline Rounded', 'wolf-visual-composer' ),
+					),
+					'style_transfer' => true,
+					'condition' => array(
+						'button_type' => 'default',
+					),
 				),
 
 				array(
@@ -101,21 +137,6 @@ function wolf_core_button_params() {
 						'justify' => esc_html__( 'Justified', 'wolf-core' ),
 					),
 					'page_builder' => 'vc',
-				),
-
-				array(
-					'type'           => 'select',
-					'param_name'     => 'size',
-					'label'          => esc_html__( 'Size', 'wolf-core' ),
-					'default'        => 'sm',
-					'options'        => array(
-						'xs' => esc_html__( 'Extra Small', 'wolf-core' ),
-						'sm' => esc_html__( 'Small', 'wolf-core' ),
-						'md' => esc_html__( 'Medium', 'wolf-core' ),
-						'lg' => esc_html__( 'Large', 'wolf-core' ),
-						'xl' => esc_html__( 'Extra Large', 'wolf-core' ),
-					),
-					'style_transfer' => true,
 				),
 
 				array(
