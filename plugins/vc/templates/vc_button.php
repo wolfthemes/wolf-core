@@ -11,10 +11,35 @@ defined( 'ABSPATH' ) || exit;
 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 
+debug( $atts );
+
 extract( // phpcs:ignore
 	shortcode_atts(
 		array(
-			'type' => '',
+			'button_type'                   => '',
+			'text'                          => '',
+			'link'                          => '',
+			'align'                         => '',
+			'size'                          => '',
+			'shape'                         => '',
+			'selected_icon'                 => '',
+			'icon'                          => '',
+			'icon_align'                    => 'before',
+			'icon_indent'                   => '',
+			'button_css_id'                 => '',
+			'text_shadow'                   => '',
+			'button_text_color'             => '',
+			'background_color'              => '',
+			'hover_color'                   => '',
+			'button_background_hover_color' => '',
+			'button_hover_border_color'     => '',
+			'hover_animation'               => '',
+			'border'                        => '',
+			'border_radius'                 => '',
+			'box_shadow'                    => '',
+			'text_padding'                  => '',
+			'scroll_to_anchor'              => '',
+			'icon_hover_reveal'             => '',
 		),
 		$atts
 	)

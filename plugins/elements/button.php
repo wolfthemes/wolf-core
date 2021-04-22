@@ -51,7 +51,7 @@ function wolf_core_button( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	dd( $atts );
+	debug( $atts );
 
 	$output = '';
 

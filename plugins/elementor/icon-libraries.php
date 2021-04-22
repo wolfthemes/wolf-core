@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_add_icon_libraries( $icon_tabs ) {
 
-	$libraries = wolf_fore_get_icon_libraires();
+	$libraries = wolf_core_get_icon_libraires();
 
 	foreach ( $libraries as $library ) {
 		$icon_tabs[ $library['properties']['name'] ] = array(

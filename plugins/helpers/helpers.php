@@ -161,7 +161,6 @@ function wolf_core_filter_typography_atts() {
 			}
 		);
 	}
-
 }
 add_action( 'init', 'wolf_core_filter_typography_atts' );
 
@@ -182,7 +181,7 @@ function wolf_core_target_param_list() {
  *
  * @access public
  * @static
- * @param array $attributes
+ * @param array $attributes The attribute array duh.
  *
  * @return string
  */
@@ -207,6 +206,10 @@ function wolf_core_render_html_attributes( array $attributes ) {
  */
 function wolf_core_sync_atts() {
 
+	if ( 'vc' !== wolf_core_get_plugin_in_use() ) {
+		return;
+	}
+
 	$converter = array(
 		'button' => array(
 			'title' => 'text',
@@ -227,12 +230,13 @@ function wolf_core_sync_atts() {
 					'wolf_core_' . $element_slug . '_atts',
 					function( $atts ) use ( $element_slug, $params ) {
 
-						dd( $params );
-						if ( isset( $atts[ $converter[ $element_slug ] ] ) ) {
-							debug( 'test' );
+						foreach ( $params as $old => $new ) {
+
+							if ( isset( $atts[ $old ] ) ) {
+								$atts[ $new ] = $atts[ $old ];
+							}
 						}
 
-						debug( $atts );
 						return $atts;
 					}
 				);
@@ -240,4 +244,4 @@ function wolf_core_sync_atts() {
 		}
 	}
 }
-add_action( 'init', 'wolf_core_sync_atts' );
+// add_action( 'init', 'wolf_core_sync_atts' );
