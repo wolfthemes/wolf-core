@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function wolf_fore_get_icon_libraires() {
+function wolf_core_get_icon_libraires() {
 	return apply_filters(
 		'wolf_core_icon_libraries',
 		array(

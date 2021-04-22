@@ -43,11 +43,11 @@ function wolf_core_convert_params_to_vc( $params ) {
 			continue;
 		}
 
-		$type = $p['type'];
+		$type = isset( $p['type'] ) ? $p['type'] : '';
 
 		$vc_params['params'][ $i ]['type'] = $type;
 
-		$vc_params['params'][ $i ]['param_name'] = $p['param_name']; // mandatory.
+		$vc_params['params'][ $i ]['param_name'] = ( isset( $p['param_name'] ) ) ? $p['param_name'] : '';
 
 		if ( isset( $p['label'] ) ) {
 			$vc_params['params'][ $i ]['heading'] = $p['label'];
@@ -75,8 +75,11 @@ function wolf_core_convert_params_to_vc( $params ) {
 			}
 		} elseif ( 'checkbox' === $type ) {
 
+			$label_on     = ( isset( $p['label_on'] ) ) ? $p['label_on'] : esc_html__( 'Yes', 'wolf-core' );
+			$return_value = ( isset( $p['return_value'] ) ) ? $p['return_value'] : 'yes';
+
 			$vc_params['params'][ $i ]['value'] = array(
-				$p['label_on'] => $p['return_value'],
+				$label_on => $return_value,
 			);
 
 		} elseif ( 'font_family' === $type ) {
@@ -88,6 +91,46 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 			$vc_params['params'][ $i ]['type'] = 'vc_link';
 
+		} elseif ( 'icon' === $type ) {
+
+			$library_options = array();
+			$all_libraries   = array_merge( wolf_core_get_icon_libraires(), wolf_core_get_vc_default_icon_libraries() );
+			//$all_libraries   = wolf_core_get_icon_libraires();
+
+			foreach ( $all_libraries as $library ) {
+				$library_options[ $library['properties']['label'] ] = $library['properties']['name'];
+			}
+
+			$vc_params['params'][ $i ]['type']        = 'dropdown';
+			$vc_params['params'][ $i ]['heading']     = esc_html__( 'Icon library', 'wolf-core' );
+			$vc_params['params'][ $i ]['param_name']  = 'type';
+			$vc_params['params'][ $i ]['admin_label'] = true;
+			$vc_params['params'][ $i ]['description'] = esc_html__( 'Select icon library.', 'wolf-core' );
+			$vc_params['params'][ $i ]['std']         = apply_filters( 'wolf_core_default_icon_font', 'fontawesome' );
+			$vc_params['params'][ $i ]['value']       = $library_options;
+
+			foreach ( $all_libraries as $library ) {
+				$i++;
+
+				$vc_params['params'][ $i ] = array(
+					'type'        => 'iconpicker',
+					'heading'     => $library['properties']['label'],
+					'param_name'  => 'icon_' . $library['properties']['name'],
+					'value'       => $library['properties']['labelIcon'],
+					'settings'    => array(
+						'type'         => $library['properties']['name'],
+						'emptyIcon'    => false,
+						'iconsPerPage' => 4000,
+					),
+					'dependency'  => array(
+						'element' => 'type',
+						'value'   => $library['properties']['name'],
+					),
+					'description' => esc_html__( 'Select icon from library.', 'wolf-core' ),
+				);
+
+				//debug( $vc_params['params'][ $i ] );
+			}
 		} elseif ( 'colorpicker' === $type ) {
 
 			$vc_params['params'][ $i ]['type'] = 'colorpicker';
@@ -95,9 +138,9 @@ function wolf_core_convert_params_to_vc( $params ) {
 		} elseif ( 'slider' === $type ) {
 
 			$vc_params['params'][ $i ]['type'] = 'wolf_core_numeric_slider';
-			$vc_params['params'][ $i ]['min']  = $p['min'];
-			$vc_params['params'][ $i ]['max']  = $p['max'];
-			$vc_params['params'][ $i ]['step'] = $p['step'];
+			$vc_params['params'][ $i ]['min']  = ( isset( $p['min'] ) ) ? $p['min'] : 0;
+			$vc_params['params'][ $i ]['max']  = ( isset( $p['max'] ) ) ? $p['max'] : 100;
+			$vc_params['params'][ $i ]['step'] = ( isset( $p['step'] ) ) ? $p['step'] : 1;
 
 		} elseif ( 'video' === $type ) {
 

@@ -21,8 +21,8 @@ function wolf_core_button_params() {
 		array(
 			'properties' => array(
 				'name'          => esc_html__( 'Button', 'wolf-core' ),
-				'description'   => esc_html__( 'Description.', 'wolf-core' ),
-				'vc_base'       => 'wolf_core_button',
+				'description'   => esc_html__( 'Eye catching button', 'wolf-core' ),
+				'vc_base'       => 'vc_button',
 				'vc_category'   => esc_html__( 'Basic', 'wolf-core' ),
 				'el_categories' => array( 'basic' ),
 				'el_base'       => 'button',
@@ -123,7 +123,7 @@ function wolf_core_button_params() {
 					),
 					'prefix_class'       => 'wolf-core%s-align-',
 					'default'            => '',
-					'page_builder'       => 'wolf-core',
+					'page_builder'       => 'elementor',
 				),
 
 				array(

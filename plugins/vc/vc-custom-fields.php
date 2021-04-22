@@ -158,7 +158,7 @@ function wolf_core_int_textfield_settings_field( $settings, $value ) {
 	. '<input placeholder="' . esc_attr( $settings['placeholder'] ) . '" name="' . esc_attr( $settings['param_name'] ) . '" class="wpb_vc_param_value wpb-textinput ' .
 	esc_attr( $settings['param_name'] ) . ' ' .
 	esc_attr( $settings['type'] ) . '_field" type="text" value="' . esc_attr( $value ) . '" />' .
-	'</div>'; // This is html markup that will be outputted in content elements edit form
+	'</div>'; // This is html markup that will be outputted in content elements edit form.
 }
 vc_add_shortcode_param( 'wolf_core_int_textfield', 'wolf_core_int_textfield_settings_field' );
 
@@ -196,7 +196,13 @@ function wolf_core_audio_url_textfield_settings_field( $settings, $value ) {
 }
 vc_add_shortcode_param( 'wolf_core_audio_url', 'wolf_core_audio_url_textfield_settings_field' );
 
-// Create multi dropdown param type
+/**
+ * Create multi dropdown param type
+ *
+ * @param [type] $param
+ * @param [type] $value
+ * @return void
+ */
 function wolf_core_dropdown_multi_settings_field( $param, $value ) {
 
 	$param_line = '';
