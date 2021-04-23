@@ -43,7 +43,11 @@ function wolf_core_convert_params_to_vc( $params ) {
 			continue;
 		}
 
-		$type = isset( $p['type'] ) ? $p['type'] : '';
+		if ( ! isset( $p['type'] ) ) {
+			continue;
+		}
+
+		$type = $p['type'];
 
 		$vc_params['params'][ $i ]['type'] = $type;
 
@@ -106,7 +110,7 @@ function wolf_core_convert_params_to_vc( $params ) {
 			$vc_params['params'][ $i ]['param_name']  = 'type';
 			$vc_params['params'][ $i ]['admin_label'] = true;
 			$vc_params['params'][ $i ]['description'] = esc_html__( 'Select icon library.', 'wolf-core' );
-			$vc_params['params'][ $i ]['std']         = apply_filters( 'wolf_core_default_icon_font', 'fontawesome' );
+			$vc_params['params'][ $i ]['std']         = apply_filters( 'wolf_core_default_icon_font', 'dripicons' );
 			$vc_params['params'][ $i ]['value']       = $library_options;
 
 			foreach ( $all_libraries as $library ) {

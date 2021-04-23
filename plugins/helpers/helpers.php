@@ -227,21 +227,23 @@ function wolf_core_sync_atts() {
 			if ( $name === $element_slug ) {
 
 				add_filter(
-					'wolf_core_' . $element_slug . '_atts',
-					function( $atts ) use ( $element_slug, $params ) {
+					'wolf_core_' . $element_slug . '_vc_atts',
+					function( $atts, $vc_atts ) use ( $element_slug, $params ) {
 
 						foreach ( $params as $old => $new ) {
 
-							if ( isset( $atts[ $old ] ) ) {
+							if ( isset( $vc_atts[ $old ] ) ) {
 								$atts[ $new ] = $atts[ $old ];
 							}
 						}
 
 						return $atts;
-					}
+					},
+					10,
+					2
 				);
 			}
 		}
 	}
 }
-// add_action( 'init', 'wolf_core_sync_atts' );
+add_action( 'init', 'wolf_core_sync_atts' );

@@ -32,10 +32,10 @@ function wolf_core_button_params() {
 			),
 			'params'     => array(
 				array(
-					'type'         => 'select',
-					'param_name'   => 'button_type',
-					'label'        => esc_html__( 'Type', 'wolf-core' ),
-					'options'      => apply_filters(
+					'type'           => 'select',
+					'param_name'     => 'button_type',
+					'label'          => esc_html__( 'Type', 'wolf-core' ),
+					'options'        => apply_filters(
 						'wolf_core_button_types',
 						array(
 							''        => esc_html__( 'Default', 'wolf-core' ),
@@ -46,7 +46,7 @@ function wolf_core_button_params() {
 						)
 					),
 					'style_transfer' => true,
-					//'prefix_class' => 'wolf-core-button-',
+					// 'prefix_class' => 'wolf-core-button-',
 				),
 
 				array(
@@ -93,7 +93,7 @@ function wolf_core_button_params() {
 						'rounded-less-outline' => esc_html__( 'Outline Rounded', 'wolf-visual-composer' ),
 					),
 					'style_transfer' => true,
-					'condition' => array(
+					'condition'      => array(
 						'button_type' => 'default',
 					),
 				),
@@ -166,20 +166,20 @@ function wolf_core_button_params() {
 					),
 				),
 
-				array(
-					'param_name' => 'icon_indent',
-					'label'      => esc_html__( 'Icon Spacing', 'wolf-core' ),
-					'type'       => 'slider',
-					'range'      => array(
-						'px' => array(
-							'max' => 50,
-						),
-					),
-					'selectors'  => array(
-						'{{WRAPPER}} .wolf-core-button-icon-align-right' => 'margin-left: {{SIZE}}{{UNIT}};',
-						'{{WRAPPER}} .wolf-core-button-icon-align-left' => 'margin-right: {{SIZE}}{{UNIT}};',
-					),
-				),
+				// array(
+				// 	'param_name' => 'icon_indent',
+				// 	'label'      => esc_html__( 'Icon Spacing', 'wolf-core' ),
+				// 	'type'       => 'slider',
+				// 	'range'      => array(
+				// 		'px' => array(
+				// 			'max' => 50,
+				// 		),
+				// 	),
+				// 	'selectors'  => array(
+				// 		'{{WRAPPER}} .wolf-core-button-icon-align-right' => 'margin-left: {{SIZE}}{{UNIT}};',
+				// 		'{{WRAPPER}} .wolf-core-button-icon-align-left' => 'margin-right: {{SIZE}}{{UNIT}};',
+				// 	),
+				// ),
 
 				array(
 					'param_name'  => 'icon_hover_reveal',
@@ -340,6 +340,7 @@ function wolf_core_button_params() {
 					'selector'   => '{{WRAPPER}} .wolf-core-button',
 					'separator'  => 'before',
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'page_builder' => 'elementor',
 				),
 
 				array(
@@ -351,6 +352,7 @@ function wolf_core_button_params() {
 						'{{WRAPPER}} .wolf-core-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					),
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'page_builder' => 'elementor',
 				),
 
 				array(
@@ -359,6 +361,7 @@ function wolf_core_button_params() {
 					'label'      => esc_html__( 'Box Shadow', 'wolf-core' ),
 					'selector'   => '{{WRAPPER}} .wolf-core-button',
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'page_builder' => 'elementor',
 				),
 
 				array(
@@ -370,6 +373,7 @@ function wolf_core_button_params() {
 						'{{WRAPPER}} .wolf-core-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					),
 					'group'              => esc_html__( 'Style', 'wolf-core' ),
+					'page_builder' => 'elementor',
 				),
 			),
 		)

@@ -9,9 +9,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-
-debug( $atts );
+$vc_atts = $atts;
+$atts    = apply_filters( 'wolf_core_button_vc_atts', vc_map_get_attributes( $this->getShortcode(), $vc_atts ), $vc_atts );
 
 extract( // phpcs:ignore
 	shortcode_atts(
