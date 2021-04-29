@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Banner
+ * Contact Form 7
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_Contact_Form_7_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -29,7 +29,7 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_banner_params();
+		$this->params = wolf_core_contact_form_7_params();
 
 		if ( isset( $this->params['properties']['scripts'] ) ) {
 
@@ -134,16 +134,12 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'align'               => '',
-				'text_align_mobile'   => '',
-				'font_size'           => '',
-				'font_weight'         => '',
-				'text_transform'      => '',
+				'id' => '',
 			)
 		);
 
-		echo wolf_core_banner( $atts ); // phpcs:ignore
+		echo wolf_core_contact_form_7( $atts ); // phpcs:ignore
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Banner_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Contact_Form_7_Widget() );
 

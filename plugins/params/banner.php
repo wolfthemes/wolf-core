@@ -64,7 +64,7 @@ function wolf_core_banner_params() {
 		}
 	}
 
-	dd($button_params );
+	///dd($button_params );
 
 	return apply_filters(
 		'wolf_core_banner_params',
@@ -339,7 +339,7 @@ function wolf_core_banner_params() {
 					/* Overlay Opacity */
 					array(
 						'type'         => 'slider',
-						'label'        => esc_html__( 'Overlay Opacity', '%TEXTDOMAIN%' ),
+						'label'        => esc_html__( 'Overlay Opacity', 'wolf-core' ),
 						'param_name'   => 'overlay_opacity',
 						'min'          => 0,
 						'max'          => 1,
@@ -354,7 +354,7 @@ function wolf_core_banner_params() {
 
 					array(
 						'type'         => 'slider',
-						'label'        => esc_html__( 'Overlay Opacity in Percent', '%TEXTDOMAIN%' ),
+						'label'        => esc_html__( 'Overlay Opacity in Percent', 'wolf-core' ),
 						'param_name'   => 'overlay_opacity',
 						'min'          => 0,
 						'max'          => 100,

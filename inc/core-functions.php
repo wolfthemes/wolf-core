@@ -132,6 +132,10 @@ function wolf_core_get_elements() {
 		$wolf_core_elements[] = 'row-inner';
 	}
 
+	if ( defined( 'WPCF7_VERSION' ) ) {
+		$wolf_core_elements[] = 'contact-form-7';
+	}
+
 	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { // and not Elementor Pro.
 		$wolf_core_elements[] = 'countdown';
 	}
