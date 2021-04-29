@@ -97,13 +97,15 @@ function wolf_core_animation_markup_filter() {
 				/* Sanitize inline CSS */
 				$atts['inline_style'] = wolf_core_sanitize_css_field( $atts['inline_style'] );
 
-				/* VC animation and custom style */
+				/* VC */
 				if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
+					/* VC custom style */
 					if ( isset( $atts['css'] ) ) {
 						$atts['inline_style'] .= wolf_core_shortcode_custom_style( $atts['css'] );
 					}
 
+					/* VC animation */
 					if ( isset( $atts['css_animation'] ) ) {
 						if ( ! wolf_core_is_new_animation( $atts['css_animation'] ) ) {
 							$atts['el_class'] .= wolf_core_get_css_animation( $atts['css_animation'] );
@@ -112,6 +114,14 @@ function wolf_core_animation_markup_filter() {
 								$atts['inline_style'] .= wolf_core_get_css_animation_delay( $atts['css_animation_delay'] );
 							}
 						}
+					}
+
+					/* VC icon */
+					if ( isset( $atts['icon_type'] ) && isset( $atts[ 'icon_' . $atts['icon_type'] ] ) ) {
+						$atts['selected_icon'] = array(
+							'library' => $atts['icon_type'],
+							'value'   => $atts[ 'icon_' . $atts['icon_type'] ],
+						);
 					}
 				}
 
@@ -200,6 +210,27 @@ function wolf_core_render_html_attributes( array $attributes ) {
 	return implode( ' ', $rendered_attributes );
 }
 
+/**
+ * Get params to convert
+ */
+function wol_core_get_vc_parms_to_convert() {
+	return array(
+		'button' => array(
+			'type'         => 'button_type',
+			'title'        => 'text',
+			'hover_effect' => 'hover_animation',
+			'i_align'      => 'icon_align',
+			'el_id'        => 'button_css_id',
+			'i_hover'      => 'icon_hover_reveal',
+			// 'color' => '',
+			// 'custom_color' => 'background_color',
+		),
+		'banner' => array(
+			'title_font_size' => 'font_size',
+		),
+	);
+}
+
 
 /**
  * Sync VC and elementor attributename
@@ -210,13 +241,8 @@ function wolf_core_sync_atts() {
 		return;
 	}
 
-	$converter = array(
-		'button' => array(
-			'title' => 'text',
-		),
-	);
-
-	$elements = wolf_core_get_elements();
+	$converter = wol_core_get_vc_parms_to_convert();
+	$elements  = wolf_core_get_elements();
 
 	foreach ( $elements as $e ) {
 

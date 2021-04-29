@@ -110,9 +110,6 @@ function wolf_core_bigtext_params() {
 					'admin_label'  => true,
 					'default'      => apply_filters( 'wolf_core_default_heading_font_weight', '' ),
 					'placeholder'  => apply_filters( 'wolf_core_default_heading_font_weight', '700' ),
-					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-bigtext' => 'font-weight: {{VALUE}}!important;',
-					),
 					'page_builder' => 'vc',
 				),
 

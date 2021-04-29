@@ -2104,6 +2104,119 @@ body.wolf-core-svg #swipebox-close {
 }
 
 /**
+ * @# Banner
+ **/
+.wolf-core-banner {
+  position: relative;
+  margin: 0 auto;
+}
+
+.wolf-core-banner-link-mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.wolf-core-banner-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+.wolf-core-banner-image img {
+  backface-visibility: visible;
+  width: 100%;
+}
+
+.wolf-core-banner-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+  color: #fff;
+}
+
+.wolf-core-banner-caption-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.wolf-core-banner-caption-table-cell {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+}
+
+.wolf-core-banner-title {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.wolf-core-banner-tagline {
+  width: 100%;
+}
+
+.wolf-core-banner-alignment-center {
+  text-align: center;
+}
+
+.wolf-core-banner-alignment-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.wolf-core-banner-alignment-right {
+  text-align: right;
+  margin-right: 0;
+}
+
+.wolf-core-banner-text-align-left .wolf-core-banner-caption {
+  text-align: left;
+}
+
+.wolf-core-banner-text-align-center .wolf-core-banner-caption {
+  text-align: center;
+}
+
+.wolf-core-banner-text-align-right .wolf-core-banner-caption {
+  text-align: right;
+}
+
+.wolf-core-banner-text-vertical-align-top .wolf-core-banner-caption-table-cell {
+  vertical-align: top;
+}
+
+.wolf-core-banner-text-vertical-align-middle .wolf-core-banner-caption-table-cell {
+  vertical-align: middle;
+}
+
+.wolf-core-banner-text-vertical-align-bottom .wolf-core-banner-caption-table-cell {
+  vertical-align: bottom;
+}
+
+.wolf-core-banner-price {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.wolf-core-banner .wolf-core-button-container {
+  margin-top: 14px;
+  z-index: 5;
+}
+
+/**
  * @# Big Text
  **/
 .wolf-core-bigtext {
@@ -2262,11 +2375,11 @@ body.wolf-core-svg #swipebox-close {
 }
 
 /* Default Icon position */
-.wolf-core-button-icon-align-align-left .wolf-core-icon {
+.wolf-core-button-icon-align-left .wolf-core-icon {
   padding-right: 8px;
 }
 
-.wolf-core-button-icon-align-align-right .wolf-core-icon {
+.wolf-core-button-icon-align-right .wolf-core-icon {
   padding-left: 8px;
 }
 

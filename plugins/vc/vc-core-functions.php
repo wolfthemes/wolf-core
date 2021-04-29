@@ -99,7 +99,7 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 			$library_options = array();
 			$all_libraries   = array_merge( wolf_core_get_icon_libraires(), wolf_core_get_vc_default_icon_libraries() );
-			//$all_libraries   = wolf_core_get_icon_libraires();
+			// $all_libraries   = wolf_core_get_icon_libraires();
 
 			foreach ( $all_libraries as $library ) {
 				$library_options[ $library['properties']['label'] ] = $library['properties']['name'];
@@ -107,11 +107,15 @@ function wolf_core_convert_params_to_vc( $params ) {
 
 			$vc_params['params'][ $i ]['type']        = 'dropdown';
 			$vc_params['params'][ $i ]['heading']     = esc_html__( 'Icon library', 'wolf-core' );
-			$vc_params['params'][ $i ]['param_name']  = 'type';
+			$vc_params['params'][ $i ]['param_name']  = 'icon_type';
 			$vc_params['params'][ $i ]['admin_label'] = true;
 			$vc_params['params'][ $i ]['description'] = esc_html__( 'Select icon library.', 'wolf-core' );
 			$vc_params['params'][ $i ]['std']         = apply_filters( 'wolf_core_default_icon_font', 'dripicons' );
 			$vc_params['params'][ $i ]['value']       = $library_options;
+			$vc_params['params'][ $i ]['dependency']  = array(
+				'element' => 'add_icon',
+				'value'   => 'yes',
+			);
 
 			foreach ( $all_libraries as $library ) {
 				$i++;
@@ -127,13 +131,13 @@ function wolf_core_convert_params_to_vc( $params ) {
 						'iconsPerPage' => 4000,
 					),
 					'dependency'  => array(
-						'element' => 'type',
+						'element' => 'icon_type',
 						'value'   => $library['properties']['name'],
 					),
 					'description' => esc_html__( 'Select icon from library.', 'wolf-core' ),
 				);
 
-				//debug( $vc_params['params'][ $i ] );
+				// debug( $vc_params['params'][ $i ] );
 			}
 		} elseif ( 'colorpicker' === $type ) {
 
@@ -157,6 +161,10 @@ function wolf_core_convert_params_to_vc( $params ) {
 		} elseif ( 'images' === $type ) {
 
 			$vc_params['params'][ $i ]['type'] = 'attach_images';
+
+		} elseif ( 'hover_animation' === $type ) {
+			$vc_params['params'][ $i ]['type'] = 'dropdown';
+			$vc_params['params'][ $i ]['value'] = array_flip( wolf_core_get_hover_animations() );
 		}
 
 		if ( isset( $p['vc_dependency'] ) ) {

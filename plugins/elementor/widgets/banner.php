@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Banner
  *
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Banner_Widget extends \Elementor\Widget_Base {
+class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -25,11 +25,20 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
 	 */
 	public $scripts = array();
 
-	public function __construct( $data = array(), $args = null ) {
+	public function __construct( $data = array(), $args = null ) { // phpcs:ignore
 
 		parent::__construct( $data, $args );
 
 		$this->params = wolf_core_banner_params();
+
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+
+			$this->scripts = $this->params['properties']['scripts'];
+
+			foreach ( $this->scripts as $script ) {
+				wp_enqueue_script( $script );
+			}
+		}
 	}
 
 	/**
@@ -84,6 +93,22 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
 	}
 
 	/**
+	 * Get widget keywords.
+	 *
+	 * Retrieve the list of keywords the widget belongs to.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget keywords.
+	 */
+	public function get_keywords() {
+		if ( isset( $this->params['properties']['keywords'] ) ) {
+			return $this->params['properties']['keywords'];
+		}
+	}
+
+	/**
 	 * Register widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
@@ -91,7 +116,7 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function _register_controls() { // phpcs:ignore
 
 		wolf_core_register_elementor_controls( $this );
 	}

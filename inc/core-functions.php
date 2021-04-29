@@ -105,7 +105,7 @@ function wolf_core_get_elements() {
 		// 'testimonial-slider',
 		// 'testimonial-slide',
 		// 'toggle',
-		//'twitter',
+		// 'twitter',
 		// 'typed',
 		// 'video',
 		'video-opener',
@@ -132,7 +132,7 @@ function wolf_core_get_elements() {
 		$wolf_core_elements[] = 'row-inner';
 	}
 
-	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { //  and not Elementor Pro.
+	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { // and not Elementor Pro.
 		$wolf_core_elements[] = 'countdown';
 	}
 
@@ -468,12 +468,21 @@ function wolf_core_get_aos_animations() {
 }
 
 /**
+ * Get hover animations
+ *
+ * @return array
+ */
+function wolf_core_get_hover_animations() {
+	return array();
+}
+
+/**
  * Retrieve an option value from the plugin settings
  *
- * @param string $index
- * @param [type] $name
- * @param [type] $default
- * @return void
+ * @param string $index The option index.
+ * @param string $name The option name.
+ * @param string $default The default value.
+ * @return mixed
  */
 function wolf_core_get_option( $index = 'settings', $name, $default = null ) {
 
@@ -500,9 +509,9 @@ function wolf_core_get_option( $index = 'settings', $name, $default = null ) {
 /**
  * Update an option value from the plugin settings
  *
- * @param string $index
- * @param [type] $key
- * @param [type] $value
+ * @param string $index The option index.
+ * @param string $key The option key.
+ * @param string $value The new value.
  * @return void
  */
 function wolf_core_update_option( $index = 'settings', $key, $value ) {
@@ -563,7 +572,7 @@ function wolf_core_get_image_sizes() {
 /**
  * Get placeholder image URL
  *
- * @param string $img_size
+ * @param string $img_size The image size.
  * @return string
  */
 function wolf_core_placeholder_img_url( $img_size ) {

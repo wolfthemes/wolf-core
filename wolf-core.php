@@ -633,6 +633,28 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function include_elements() {
 
+			$common_params_files = array(
+				'button',
+			);
+
+			foreach ( $common_params_files as $file ) {
+
+				if ( ! require_once WOLF_CORE_DIR . '/plugins/common-params/' . $file . '-params.php' ) {
+					wp_die(
+						sprintf(
+							wp_kses(
+								/* translators: the code to output */
+								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
+								array(
+									'code' => array(),
+								)
+							),
+							esc_attr( $file )
+						)
+					);
+				}
+			}
+
 			$element_files = wolf_core_get_elements();
 
 			foreach ( $element_files as $element ) {

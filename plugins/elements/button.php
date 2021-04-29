@@ -27,8 +27,9 @@ function wolf_core_button( $atts ) {
 				'align'                         => '',
 				'size'                          => '',
 				'shape'                         => '',
-				'selected_icon'                 => '',
-				'icon'                          => '',
+				'add_icon'                      => '',
+				'icon_type'                     => '', // VC
+				'selected_icon'                 => '', // Elementor
 				'icon_align'                    => 'before',
 				'icon_indent'                   => '',
 				'button_css_id'                 => '',
@@ -51,16 +52,17 @@ function wolf_core_button( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	debug( $atts );
-
 	$output = '';
 
 	$class = $el_class; // init container CSS class.
 
 	$container_class = 'wolf-core-button-container wolf-core-element';
 
-	/* Button attribute class */
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+		$add_icon = ! empty( $atts['selected_icon']['value'] );
+	}
 
+	/* Button attribute class */
 	$class .= ' wolf-core-button';
 
 	if ( $size ) {
@@ -126,7 +128,7 @@ function wolf_core_button( $atts ) {
 		$output .= '<span ' . wolf_core_render_html_attributes( $button_link_atts ) . '>';
 	}
 
-	if ( 'left' === $icon_align ) {
+	if ( $add_icon && 'left' === $icon_align ) {
 		$output .= wolf_core_render_icon(
 			$selected_icon,
 			array(
@@ -140,7 +142,7 @@ function wolf_core_button( $atts ) {
 	$output .= '<span>' . esc_attr( $text ) . '</span>';
 	$output .= do_action( 'wolf_core_button_text_after', $atts );
 
-	if ( 'right' === $icon_align ) {
+	if ( $add_icon && 'right' === $icon_align ) {
 		$output .= wolf_core_render_icon(
 			$selected_icon,
 			array(
