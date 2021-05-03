@@ -83,7 +83,7 @@ function wolf_core_get_elements() {
 		// 'old-instagram',
 		// 'parallax-holder',
 		// 'pie',
-		'playlist',
+		//'playlist',
 		// 'pricing-table',
 		// 'process-container',
 		// 'process-item',

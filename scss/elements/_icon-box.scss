@@ -202,54 +202,6 @@
 	}
 }
 
-/* Round */
-.wolf-core-icon-background-style-rounded,
-.wolf-core-icon-background-style-rounded-outline {
-	.fa-stack {
-		border-radius: 999em;
-	}
-}
-
-/* Rounded */
-.wolf-core-icon-background-style-rounded-less,
-.wolf-core-icon-background-style-rounded-less-outline {
-	.fa-stack,
-	.wolf-core-icon-background-fill {
-		border-radius: 3px;
-	}
-
-	.fa-stack-4x {
-		&.fa-stack,
-		.wolf-core-icon-background-fill {
-			border-radius: 4px;
-		}
-	}
-
-	.fa-stack-5x {
-		&.fa-stack,
-		.wolf-core-icon-background-fill {
-			border-radius: 5px;
-		}
-	}
-}
-
-/* Outline */
-.wolf-core-icon-background-style-rounded-outline,
-.wolf-core-icon-background-style-boxed-outline,
-.wolf-core-icon-background-style-rounded-less-outline {
-	.wolf-core-icon-container {
-		background-color: transparent !important;
-	}
-}
-
-/* Ban */
-.wolf-core-icon-background-style-ban {
-	.wolf-core-icon-container {
-		background-color: transparent !important;
-		border: none !important;
-	}
-}
-
 /* Position */
 .wolf-core-icon-position-top {
 	text-align: center;

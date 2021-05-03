@@ -21,7 +21,7 @@ function wolf_core_contact_form_7( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'id'                  => '',
+				'form_id'             => '',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
 				'el_class'            => '',
@@ -45,7 +45,9 @@ function wolf_core_contact_form_7( $atts ) {
 
 	$output .= '>';
 
-	$output .= do_shortcode( '[contact-form-7 id="' . absint( $id ) . '"]' );
+	if ( $form_id ) {
+		$output .= do_shortcode( '[contact-form-7 id="' . absint( $form_id ) . '"]' );
+	}
 
 	$output .= '</div>';
 

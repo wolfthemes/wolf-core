@@ -43,7 +43,7 @@ function wolf_core_content_block_params() {
 				array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Content Block', 'wolf-core' ),
-					'param_name' => 'id',
+					'param_name' => 'content_block_id',
 					'options'    => $content_blocks,
 					// 'default'    => '0',
 				),

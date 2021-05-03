@@ -114,3 +114,7 @@ function wolf_core_sb_instagram_feed( $atts ) {
 
 	return $output;
 }
+
+if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+	add_shortcode( 'wolf_core_sb_instagram_feed', 'wolf_core_sb_instagram_feed' );
+}

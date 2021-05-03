@@ -58,7 +58,7 @@ function wolf_core_playlist_params() {
 				array(
 					'type'        => 'select',
 					'label'       => esc_html__( 'Playlist', '%TEXDOMAIN%' ),
-					'param_name'  => 'id',
+					'param_name'  => 'playlist_id',
 					'options'     => $choices,
 					'admin_label' => true,
 					'default'     => '',

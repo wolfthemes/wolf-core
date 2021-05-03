@@ -20,7 +20,7 @@ function wolf_core_playlist( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'id'                  => '',
+				'playlist_id'         => '',
 				'show_tracklist'      => '',
 				'theme'               => '',
 				'css_animation'       => '',
@@ -46,7 +46,7 @@ function wolf_core_playlist( $atts ) {
 	$class .= ' wvc-wolf-playlist-shortcode-container wvc-element';
 
 	ob_start();
-	wpm_playlist( $id, $attrs );
+	wpm_playlist( $playlist_id, $attrs );
 	$playlist = ob_get_clean();
 
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';

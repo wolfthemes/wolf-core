@@ -351,7 +351,7 @@ function wolf_core_social_icons( $atts ) {
 			}
 
 			$output .= '<div class="' . wolf_core_sanitize_html_classes( $icon_box_class ) . '"  style="' . wolf_core_esc_style_attr( $icon_box_style ) . '">';
-			$output .= '<div class="' . wolf_core_sanitize_html_classes( $icon_container_class ) . '" style="' . wolf_core_esc_style_attr( $icon_container_style ) . '"><div class="wolf-core-icon-background-fill ' . wolf_core_esc_style_attr( $icon_filler_style ) . '"></div>';
+			$output .= '<div class="' . wolf_core_sanitize_html_classes( $icon_container_class ) . '" style="' . wolf_core_esc_style_attr( $icon_container_style ) . '"><div class="wolf-core-icon-background-fill" style="' . wolf_core_esc_style_attr( $icon_filler_style ) . '"></div>';
 
 			if ( 'none' === $background_style ) {
 

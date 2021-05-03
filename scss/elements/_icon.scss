@@ -47,3 +47,51 @@ $accent: red;
 		border-radius: 50%;
 	}
 }
+
+/* Round */
+.wolf-core-icon-background-style-rounded,
+.wolf-core-icon-background-style-rounded-outline {
+	.wolf-core-icon-container {
+		border-radius: 999em;
+	}
+}
+
+/* Outline */
+.wolf-core-icon-background-style-rounded-outline,
+.wolf-core-icon-background-style-boxed-outline,
+.wolf-core-icon-background-style-rounded-less-outline {
+	.wolf-core-icon-container {
+		background-color: transparent !important;
+	}
+}
+
+/* Ban */
+.wolf-core-icon-background-style-ban {
+	.wolf-core-icon-container {
+		background-color: transparent !important;
+		border: none !important;
+	}
+}
+
+/* Rounded */
+.wolf-core-icon-background-style-rounded-less,
+.wolf-core-icon-background-style-rounded-less-outline {
+	.wolf-icon,
+	.wolf-core-icon-background-fill {
+		border-radius: 3px;
+	}
+
+	.fa-stack-4x {
+		&.wolf-icon,
+		.wolf-core-icon-background-fill {
+			border-radius: 4px;
+		}
+	}
+
+	.fa-stack-5x {
+		&.wolf-icon,
+		.wolf-core-icon-background-fill {
+			border-radius: 5px;
+		}
+	}
+}

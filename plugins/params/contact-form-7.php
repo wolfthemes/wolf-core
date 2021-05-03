@@ -18,13 +18,13 @@ function wolf_core_contact_form_7_params() {
 
 	$contact_form_posts = get_posts( 'post_type="wpcf7_contact_form"&numberposts=-1' );
 
-	$contact_forms = array();
+	$contact_forms = array( 0 => esc_html__( 'Choose a form', 'wolf-core' ) );
 	if ( $contact_form_posts ) {
 		foreach ( $contact_form_posts as $contact_form_options ) {
 			$contact_forms[ $contact_form_options->ID ] = $contact_form_options->post_title;
 		}
 	} else {
-		$content_blocks[0] = esc_html__( 'No Contact Form yet', 'wolf-core' );
+		$contact_forms[0] = esc_html__( 'No Contact Form yet', 'wolf-core' );
 	}
 
 	return apply_filters(
@@ -37,14 +37,15 @@ function wolf_core_contact_form_7_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'contact-form-7',
-				'icon'          => 'fa fa-enveloppe',
+				'icon'          => 'fa-envelope-open',
 			),
 			'params'     => array(
 				array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Select Contact Form', 'wolf-core' ),
-					'param_name' => 'id',
+					'param_name' => 'form_id',
 					'options'    => $contact_forms,
+					'default'    => 0,
 				),
 			),
 		)

@@ -119,7 +119,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'id' => '',
+				'content_block_id' => '',
 			)
 		);
 

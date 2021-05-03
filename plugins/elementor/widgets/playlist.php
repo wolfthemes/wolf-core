@@ -154,10 +154,10 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'id'                  => '',
-				'show_tracklist'      => '',
-				'theme'               => '',
-				'inline_style'        => '',
+				'playlist_id'    => '',
+				'show_tracklist' => '',
+				'theme'          => '',
+				'inline_style'   => '',
 			)
 		);
 

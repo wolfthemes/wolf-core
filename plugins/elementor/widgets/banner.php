@@ -42,6 +42,20 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 	}
 
 	/**
+	 * Retrieve the list of scripts the counter widget depended on.
+	 *
+	 * Used to set scripts dependencies required to run the widget.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget scripts dependencies.
+	 */
+	public function get_script_depends() {
+		return $this->scripts;
+	}
+
+	/**
 	 * Get widget name
 	 *
 	 * @version 1.0.0

@@ -134,7 +134,7 @@ class Elementor_Contact_Form_7_Widget extends \Elementor\Widget_Base { // phpcs:
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'id' => '',
+				'contact_form_id'   => '',
 			)
 		);
 

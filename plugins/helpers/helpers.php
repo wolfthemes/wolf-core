@@ -228,6 +228,12 @@ function wol_core_get_vc_parms_to_convert() {
 		'banner' => array(
 			'title_font_size' => 'font_size',
 		),
+		'content-block' => array(
+			'id' => 'contact_block_id',
+		),
+		'playlist' => array(
+			'id' => 'playlist_id',
+		),
 	);
 }
 

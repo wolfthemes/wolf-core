@@ -217,7 +217,7 @@ function wolf_core_social_icons_params() {
 					'param_name'   => 'custom_background_color', // backward compatiblity name (WVC plugin).
 					'page_builder' => 'elementor',
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-icon-background-fill' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-icon-background-fill' => 'background-color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
