@@ -16,6 +16,28 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_team_member_params() {
 
+	/* Get social params */
+	$social_params = array();
+
+	$social_params[] = array(
+		'type'       => 'checkbox',
+		'label'      => esc_html__( 'Show Socials', 'wolf-core' ),
+		'param_name' => 'show_socials',
+	);
+
+	foreach ( wolf_core_get_team_member_socials() as $social ) {
+		$social_params[] = array(
+			'type'        => 'text',
+			'label'       => ucfirst( $social ),
+			'param_name'  => $social,
+			'placeholder' => 'http://',
+			'condition'   => array(
+				'show_socials' => 'yes',
+			),
+			// 'group'       => esc_html__( 'Socials', 'wolf-core' ),
+		);
+	}
+
 	return apply_filters(
 		'wolf_core_team_member_params',
 		array(
@@ -28,66 +50,79 @@ function wolf_core_team_member_params() {
 				'el_base'       => 'team-member',
 				'icon'          => 'fa fa-user',
 			),
-			'params'     => array(
-
-				/* Content */
+			'params'     => array_merge(
 				array(
-					'type'       => 'image',
-					'label'      => esc_html__( 'Photo', 'wolf-core' ),
-					'param_name' => 'image_id',
+
+					/* Content */
+					array(
+						'type'       => 'image',
+						'label'      => esc_html__( 'Photo', 'wolf-core' ),
+						'param_name' => 'image_id',
+					),
+
+					array(
+						'type'        => 'select',
+						'label'       => esc_html__( 'Image Size', 'wolf-core' ),
+						'param_name'  => 'img_size',
+						'options'     => wolf_core_get_image_sizes(),
+						'default'     => 'medium',
+						'description' => esc_html__( 'You can set the "large", "medium" and "thumbnail" sizes in the WP media settings.', 'wolf-core' ),
+						'admin_label' => true,
+					),
+
+					array(
+						'type'        => 'text',
+						'label'       => esc_html__( 'Custom Image Size', 'wolf-core' ),
+						'param_name'  => 'custom_img_size',
+						'description' => esc_html__( 'Enter size in pixels (Example: 200x100 (Width x Height).', 'wolf-core' ),
+						'condition'   => array( 'img_size' => 'custom' ),
+					),
+
+					array(
+						'type'        => 'text',
+						'label'       => esc_html__( 'Name', 'wolf-core' ),
+						'param_name'  => 'name',
+						'admin_label' => true,
+					),
+
+					array(
+						'type'       => 'select',
+						'label'      => esc_html__( 'HTML Tag', 'wolf-core' ),
+						'param_name' => 'title_tag',
+						'options'    => array(
+							'h1'   => 'H1',
+							'h2'   => 'H2',
+							'h3'   => 'H3',
+							'h4'   => 'H4',
+							'h5'   => 'H5',
+							'h6'   => 'H6',
+							'div'  => 'div',
+							'span' => 'span',
+							'p'    => 'p',
+						),
+					),
+
+					array(
+						'type'        => 'text',
+						'label'       => esc_html__( 'Role', 'wolf-core' ),
+						'param_name'  => 'role',
+						'admin_label' => true,
+					),
+
+					array(
+						'type'        => 'textarea',
+						'label'       => esc_html__( 'Description', 'wolf-core' ),
+						'param_name'  => 'tagline',
+						'admin_label' => true,
+					),
+
+					array(
+						'type'       => 'link',
+						'label'      => esc_html__( 'Link', 'wolf-core' ),
+						'param_name' => 'link',
+					),
 				),
-
-				array(
-					'type'        => 'select',
-					'label'       => esc_html__( 'Image Size', 'wolf-core' ),
-					'param_name'  => 'img_size',
-					'options'     => wolf_core_get_image_sizes(),
-					'default'     => 'landscape',
-					'description' => esc_html__( 'You can set the "large", "medium" and "thumbnail" sizes in the WP media settings.', 'wolf-core' ),
-					'admin_label' => true,
-				),
-
-				array(
-					'type'        => 'text',
-					'label'       => esc_html__( 'Custom Image Size', 'wolf-core' ),
-					'param_name'  => 'custom_img_size',
-					'description' => esc_html__( 'Enter size in pixels (Example: 200x100 (Width x Height).', 'wolf-core' ),
-					'condition'   => array( 'img_size' => 'custom' ),
-				),
-
-				array(
-					'type'        => 'text',
-					'label'       => esc_html__( 'Name', 'wolf-core' ),
-					'param_name'  => 'name',
-					'admin_label' => true,
-				),
-
-				array(
-					'type'        => 'text',
-					'label'       => esc_html__( 'Role', 'wolf-core' ),
-					'param_name'  => 'role',
-					'admin_label' => true,
-				),
-
-				array(
-					'type'        => 'textarea',
-					'label'       => esc_html__( 'Description', 'wolf-core' ),
-					'param_name'  => 'tagline',
-					'admin_label' => true,
-				),
-
-				array(
-					'type'       => 'link',
-					'label'      => esc_html__( 'Link', 'wolf-core' ),
-					'param_name' => 'link',
-				),
-
-				/* Socials */
-
-
-				/* Style */
-
-
+				$social_params,
 			),
 		)
 	);

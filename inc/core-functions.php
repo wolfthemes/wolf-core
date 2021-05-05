@@ -83,7 +83,7 @@ function wolf_core_get_elements() {
 		// 'old-instagram',
 		// 'parallax-holder',
 		// 'pie',
-		//'playlist',
+		'playlist',
 		// 'pricing-table',
 		// 'process-container',
 		// 'process-item',
@@ -100,7 +100,7 @@ function wolf_core_get_elements() {
 		// 'spotify-follow-button', // added in themes
 		// 'tabs',
 		// 'tab',
-		// 'team-member',
+		'team-member',
 		// 'testimonials',
 		// 'testimonial-slider',
 		// 'testimonial-slide',

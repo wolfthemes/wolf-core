@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 function wolf_core_banner_params() {
 
 	/* Button params */
-	$button_params   = wolf_core_get_button_params();
+	$button_params   = array();
 	$params_to_unset = array(
 		'admin_label',
 		'align',
@@ -28,43 +28,27 @@ function wolf_core_banner_params() {
 		'css',
 	);
 
-	if ( is_array( $button_params ) && ! empty( $button_params ) ) {
-		foreach ( $button_params as $key => $param ) {
-			if ( is_array( $param ) && ! empty( $param ) ) {
-
-				/* remove unwanted params */
-				if ( isset( $param['param_name'] ) && in_array( $param['param_name'], $params_to_unset, true ) ) {
-					unset( $button_params[ $key ] );
-				}
-
-				if ( ! isset( $param['param_name'] ) ) {
-					unset( $button_params[ $key ] );
-				} else {
-					/* Add prefix to param name */
-					$button_params[ $key ]['param_name'] = 'btn_' . $param['param_name'];
-				}
-
-				/* Add condition */
-				if ( ! isset( $param['condition'] ) && isset( $param['param_name'] ) ) {
-					$param['condition'] = array(
-						'add_button' => 'yes',
-					);
-				}
+	foreach ( wolf_core_get_button_params() as $key => $params ) {
 
 
-				// else {
-				// $button_params[ $key ]['condition'] = array_merge(
-				// $button_params[ $key ]['condition'],
-				// array(
-				// 'add_button' => 'yes',
-				// )
-				// );
-				// }
-			}
+		if ( ! isset( $params['param_name'] ) || in_array( $params['param_name'], $params_to_unset, true ) ) {
+
+			continue;
+
+		} else {
+			/* Add prefix to param name */
+			$params['param_name'] = 'btn_' . $params['param_name'];
 		}
-	}
 
-	///dd($button_params );
+		/* Add condition */
+		if ( ! isset( $params['condition'] ) && isset( $params['params_name'] ) ) {
+			$params['condition'] = array(
+				'add_button' => 'yes',
+			);
+		}
+
+		$button_params[] = $params;
+	}
 
 	return apply_filters(
 		'wolf_core_banner_params',
@@ -319,9 +303,17 @@ function wolf_core_banner_params() {
 					/* Overlay Color for Elementor in Style tab */
 					array(
 						'label'        => esc_html__( 'Overlay Color', 'wolf-core' ),
-						'type'         => 'hidden',
+						'type'         => 'select',
 						'param_name'   => 'overlay_color',
-						'default'      => 'custom',
+						'options'      => array_merge(
+							array(
+								'auto'   => esc_html__( 'Auto', 'wolf-core' ),
+								'#000'   => esc_html__( 'Black', 'wolf-core' ),
+								'#fff'   => esc_html__( 'White', 'wolf-core' ),
+								'custom' => esc_html__( 'Custom color', 'wolf-core' ),
+							)
+						),
+						'default'      => 'auto',
 						'page_builder' => 'elementor',
 					),
 

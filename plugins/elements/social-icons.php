@@ -388,3 +388,7 @@ function wolf_core_social_icons( $atts ) {
 
 	return $output;
 }
+
+if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+	add_shortcode( 'wolf_core_social_icons', 'wolf_core_social_icons' );
+}
