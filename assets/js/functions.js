@@ -5,7 +5,7 @@
  */
 /* jshint -W062 */
 /* global DocumentTouch,
-WolfCoreParams,
+WolfCoreJSParams,
 WolfCoreFitText,
 WolfCoreFullPage,
 WolfCoreBigText,
@@ -74,7 +74,7 @@ var WolfCore = (function ($) {
 		 */
 		init: function () {
 
-			this.isMobile = WolfCoreParams.isMobile;
+			this.isMobile = WolfCoreJSParams.isMobile;
 
 			var _this = this;
 
@@ -193,7 +193,7 @@ var WolfCore = (function ($) {
 
 			if (
 				(this.isMobile || 800 > $(window).width()) &&
-				!WolfCoreParams.forceAnimationMobile
+				!WolfCoreJSParams.forceAnimationMobile
 			) {
 				this.body.addClass("wolf-core-no-animations");
 			}
@@ -341,7 +341,7 @@ var WolfCore = (function ($) {
 
 			if (
 				$("body").hasClass("is-wpm-bar-player") &&
-				WolfCoreParams.fullHeightRowDoWPMOffsset
+				WolfCoreJSParams.fullHeightRowDoWPMOffsset
 			) {
 				scrollOffset += $(".wpm-sticky-playlist-container").height();
 			}
@@ -687,7 +687,7 @@ var WolfCore = (function ($) {
 		AOS: function (selector) {
 			var wowAnimate,
 				doWow =
-					WolfCoreParams.forceAnimationMobile ||
+					WolfCoreJSParams.forceAnimationMobile ||
 					(!this.isMobile && 800 < $(window).width()),
 				disable = !doWow;
 
@@ -741,13 +741,13 @@ var WolfCore = (function ($) {
 		wowAnimate: function () {
 			var wowAnimate,
 				doWow =
-					WolfCoreParams.forceAnimationMobile ||
+					WolfCoreJSParams.forceAnimationMobile ||
 					(!this.isMobile && 800 < $(window).width());
 
 			if ("undefined" !== typeof WOW && doWow) {
 				wowAnimate = new WOW({
 					boxClass: "wolf-core-wow",
-					offset: WolfCoreParams.WOWAnimationOffset,
+					offset: WolfCoreJSParams.WOWAnimationOffset,
 				}); // init wow for CSS animation
 				wowAnimate.init();
 			}
@@ -759,7 +759,7 @@ var WolfCore = (function ($) {
 		parallax: function () {
 			var smallScreen =
 				(800 > $(window).width() || this.isMobile) &&
-				WolfCoreParams.parallaxNoSmallScreen;
+				WolfCoreJSParams.parallaxNoSmallScreen;
 
 			/*
 			@todo
@@ -908,8 +908,8 @@ var WolfCore = (function ($) {
 										scrollTop:
 											$targetSection.offset().top - toolBarOffset - menuOffset,
 									},
-									parseInt(WolfCoreParams.smoothScrollSpeed, 10),
-									WolfCoreParams.smoothScrollEase,
+									parseInt(WolfCoreJSParams.smoothScrollSpeed, 10),
+									WolfCoreJSParams.smoothScrollEase,
 									function () {
 										if ("" !== hash) {
 											// push hash
@@ -1008,8 +1008,8 @@ var WolfCore = (function ($) {
 					{
 						scrollTop: sectionOffsetTop - toolBarOffset - menuOffset,
 					},
-					parseInt(WolfCoreParams.smoothScrollSpeed, 10),
-					WolfCoreParams.smoothScrollEase,
+					parseInt(WolfCoreJSParams.smoothScrollSpeed, 10),
+					WolfCoreJSParams.smoothScrollEase,
 					function () {
 						if ("" !== hash && "undefined" !== typeof hash) {
 							// push hash
@@ -1115,7 +1115,7 @@ var WolfCore = (function ($) {
 				var bulletClass = "wolf-core-scroll wolf-core-one-page-nav-bullet",
 					i = 0;
 
-				if (WolfCoreParams.fullPage) {
+				if (WolfCoreJSParams.fullPage) {
 					bulletClass = "wolf-core-fp-nav wolf-core-one-page-nav-bullet";
 				}
 
@@ -1152,7 +1152,7 @@ var WolfCore = (function ($) {
 		 * Set active menu item
 		 */
 		setActiveOnePagerBullet: function (scrollTop) {
-			if (WolfCoreParams.fullPage) {
+			if (WolfCoreJSParams.fullPage) {
 				return;
 			}
 
@@ -1450,7 +1450,7 @@ var WolfCore = (function ($) {
 		 */
 		delayWow: function (selector) {
 			var doWow =
-				WolfCoreParams.forceAnimationMobile ||
+				WolfCoreJSParams.forceAnimationMobile ||
 				(!this.isMobile && 800 < $(window).width());
 
 			selector = selector || "#content";
@@ -1479,13 +1479,13 @@ var WolfCore = (function ($) {
 		doWow: function () {
 			var wowAnimate,
 				doWow =
-					WolfCoreParams.forceAnimationMobile ||
+					WolfCoreJSParams.forceAnimationMobile ||
 					(!this.isMobile && 800 < $(window).width());
 
 			if ("undefined" !== typeof WOW && doWow) {
 				wowAnimate = new WOW({
 					boxClass: "wolf-core-delayed-wow",
-					offset: WolfCoreParams.WOWAnimationOffset,
+					offset: WolfCoreJSParams.WOWAnimationOffset,
 				}); // init wow for CSS animation
 				wowAnimate.init();
 			}

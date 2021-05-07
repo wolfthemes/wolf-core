@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-05-05 14:00:58+00:00\n"
+"POT-Creation-Date: 2021-05-07 12:52:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -219,6 +219,7 @@ msgstr ""
 
 #: inc/admin/admin-options.php:185
 #: pack/wolf-core/inc/admin/admin-options.php:185
+#: plugins/elementor/controls/page.php:32
 msgid "No Content Block Yet"
 msgstr ""
 
@@ -770,6 +771,10 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:485
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:573
 #: plugins/common-params/button-params.php:25
+#: plugins/elementor/controls/page.php:24
+#: plugins/elementor/controls/page.php:45
+#: plugins/elementor/controls/page.php:64
+#: plugins/elementor/controls/page.php:82
 #: plugins/elementor/controls/section.php:27
 #: plugins/elementor/elementor-core-functions.php:173
 #: plugins/params/bigtext.php:121 plugins/params/bigtext.php:137
@@ -2384,6 +2389,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:40
 #: pack/wolf-core/plugins/vc/vc-map/row.php:87
 #: pack/wolf-core/plugins/vc/vc-map/row.php:263
+#: plugins/elementor/controls/page.php:84
 #: plugins/elementor/controls/section.php:28 plugins/params/gallery.php:299
 #: plugins/params/gallery.php:313 plugins/params/google-maps.php:126
 #: plugins/params/playlist.php:83 plugins/vc/vc-map/column-inner.php:28
@@ -2402,6 +2408,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:41
 #: pack/wolf-core/plugins/vc/vc-map/row.php:86
 #: pack/wolf-core/plugins/vc/vc-map/row.php:264
+#: plugins/elementor/controls/page.php:83
 #: plugins/elementor/controls/section.php:29 plugins/params/gallery.php:298
 #: plugins/params/gallery.php:312 plugins/params/google-maps.php:124
 #: plugins/params/playlist.php:84 plugins/vc/vc-map/column-inner.php:27
@@ -2958,11 +2965,11 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/column-inner-params.php:75
 #: pack/wolf-core/plugins/vc/vc-params/column-params.php:86
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:135
-#: plugins/params/album-disc.php:117 plugins/params/bigtext.php:122
-#: plugins/params/breadcrumb.php:108 plugins/params/gallery.php:170
-#: plugins/params/heading.php:119 plugins/params/social-icons.php:109
-#: plugins/params/social-icons.php:244 plugins/params/video-opener.php:116
-#: plugins/vc/deprecated/wvc_icon.php:373
+#: plugins/elementor/controls/page.php:25 plugins/params/album-disc.php:117
+#: plugins/params/bigtext.php:122 plugins/params/breadcrumb.php:108
+#: plugins/params/gallery.php:170 plugins/params/heading.php:119
+#: plugins/params/social-icons.php:109 plugins/params/social-icons.php:244
+#: plugins/params/video-opener.php:116 plugins/vc/deprecated/wvc_icon.php:373
 #: plugins/vc/deprecated/wvc_icon.php:454
 #: plugins/vc/deprecated/wvc_icon.php:557 plugins/vc/vc-core-functions.php:411
 #: plugins/vc/vc-map/column-inner.php:41 plugins/vc/vc-map/column-inner.php:68
@@ -4166,7 +4173,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/sb-instagram-feed.php:25
 #: plugins/params/sb-instagram-feed.php:25
-msgid "Instagram Feed (Smash Balloon)"
+msgid "Instagram Feed"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/sb-instagram-feed.php:26
@@ -4959,8 +4966,9 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/column.php:70
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:83
 #: pack/wolf-core/plugins/vc/vc-map/row.php:204
-#: plugins/vc/vc-map/column-inner.php:69 plugins/vc/vc-map/column.php:70
-#: plugins/vc/vc-map/row-inner.php:83 plugins/vc/vc-map/row.php:204
+#: plugins/elementor/controls/page.php:65 plugins/vc/vc-map/column-inner.php:69
+#: plugins/vc/vc-map/column.php:70 plugins/vc/vc-map/row-inner.php:83
+#: plugins/vc/vc-map/row.php:204
 msgid "Solid"
 msgstr ""
 
@@ -5060,7 +5068,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:44
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:385
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:576
-#: plugins/vc/vc-map/column.php:44
+#: plugins/elementor/controls/page.php:68 plugins/vc/vc-map/column.php:44
 #: plugins/vc/vc-params/background-params.php:44
 #: plugins/vc/vc-params/row-params.php:385
 #: plugins/vc/vc-params/row-params.php:576
@@ -6140,6 +6148,58 @@ msgstr ""
 
 #: pack/wolf-core/wolf-core.php:362 wolf-core.php:362
 msgid "PHP"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:39
+msgid "Menu Layout"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:46
+msgid "Top Right"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:47
+msgid "Top Justify"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:48
+msgid "Top Justify Left"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:49
+msgid "Centered"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:50
+msgid "Top Left"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:51
+msgid "No Menu"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:58
+msgid "Menu Style"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:66
+msgid "Semi-transparent White"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:67
+msgid "Semi-transparent Black"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:76
+msgid "Menu Font Tone"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:92
+msgid "Post-header Block"
+msgstr ""
+
+#: plugins/elementor/controls/page.php:101
+msgid "Pre-footer Block"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

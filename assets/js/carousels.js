@@ -7,7 +7,7 @@
  */
 /* jshint -W062 */
 
-/* global WolfCoreParams */
+/* global WolfCoreJSParams */
 var WolfCoreCarousels = function( $ ) {
 
 	'use strict';
@@ -21,7 +21,7 @@ var WolfCoreCarousels = function( $ ) {
 		 */
 		init : function () {
 
-			this.isMobile = WolfCoreParams.isMobile;
+			this.isMobile = WolfCoreJSParams.isMobile;
 
 			var _this = this;
 

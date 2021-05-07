@@ -5,7 +5,7 @@
  */
 /* jshint -W062 */
 
-/* global WolfCoreParams, WolfCore, WolfCoreCounter, WolfCoreYTVideoBg, AOS, $f */
+/* global WolfCoreJSParams, WolfCore, WolfCoreCounter, WolfCoreYTVideoBg, AOS, $f */
 var WolfCoreFullPage = function( $ ) {
 
 	'use strict';
@@ -26,14 +26,14 @@ var WolfCoreFullPage = function( $ ) {
 
 		init : function() {
 
-			if ( this.initFlag || ! WolfCoreParams.fullPage ) {
+			if ( this.initFlag || ! WolfCoreJSParams.fullPage ) {
 				return;
 			}
 
-			this.$container = $( WolfCoreParams.fullPageContainer || '.page-entry-content' );
-			this.fpAnimTime = WolfCoreParams.fpAnimTime;
-			this.fpEasing = WolfCoreParams.fpEasing;
-			this.fpTransitionEffect = WolfCoreParams.fpTransitionEffect;
+			this.$container = $( WolfCoreJSParams.fullPageContainer || '.page-entry-content' );
+			this.fpAnimTime = WolfCoreJSParams.fpAnimTime;
+			this.fpEasing = WolfCoreJSParams.fpEasing;
+			this.fpTransitionEffect = WolfCoreJSParams.fpTransitionEffect;
 
 			this.prepare();
 			this.fullPage();

@@ -216,3 +216,63 @@ function wolf_core_ajax_bmic_form() {
 }
 add_action( 'wp_ajax_wolf_core_ajax_bmic_form', 'wolf_core_ajax_bmic_form' );
 add_action( 'wp_ajax_nopriv_wolf_core_ajax_bmic_form', 'wolf_core_ajax_bmic_form' );
+
+/**
+ * Update menu layout meta
+ */
+function wolf_core_ajax_update_menu_layout_post_meta() {
+	if ( isset( $_POST['menuLayout'] ) && ! empty( $_POST['postId'] ) ) {
+
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_menu_layout', esc_attr( $_POST['menuLayout'] ) ) ) {
+			echo 'OK';
+		}
+	}
+	exit;
+}
+add_action( 'wp_ajax_wolf_core_ajax_update_menu_layout_post_meta', 'wolf_core_ajax_update_menu_layout_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_menu_layout_post_meta', 'wolf_core_ajax_update_menu_layout_post_meta' );
+
+/**
+ * Update menu style meta
+ */
+function wolf_core_ajax_update_menu_style_post_meta() {
+	if ( isset( $_POST['menuStyle'] ) && ! empty( $_POST['postId'] ) ) {
+
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_menu_style', esc_attr( $_POST['menuStyle'] ) ) ) {
+			echo 'OK';
+		}
+	}
+	exit;
+}
+add_action( 'wp_ajax_wolf_core_ajax_update_menu_style_post_meta', 'wolf_core_ajax_update_menu_style_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_menu_style_post_meta', 'wolf_core_ajax_update_menu_style_post_meta' );
+
+/**
+ * Update header block
+ */
+function wolf_core_ajax_update_post_header_block_post_meta() {
+	if ( isset( $_POST['postHeaderBlock'] ) && ! empty( $_POST['postId'] ) ) {
+
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_post_header_block', esc_attr( $_POST['postHeaderBlock'] ) ) ) {
+			echo 'OK';
+		}
+	}
+	exit;
+}
+add_action( 'wp_ajax_wolf_core_ajax_update_post_header_block_post_meta', 'wolf_core_ajax_update_post_header_block_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_post_header_block_post_meta', 'wolf_core_ajax_update_post_header_block_post_meta' );
+
+/**
+ * Update footer block
+ */
+function wolf_core_ajax_update_pre_footer_block_post_meta() {
+	if ( isset( $_POST['preFooterBlock'] ) && ! empty( $_POST['postId'] ) ) {
+
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_pre_footer_block', esc_attr( $_POST['preFooterBlock'] ) ) ) {
+			echo 'OK';
+		}
+	}
+	exit;
+}
+add_action( 'wp_ajax_wolf_core_ajax_update_pre_footer_block_post_meta', 'wolf_core_ajax_update_pre_footer_block_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_pre_footer_block_post_meta', 'wolf_core_ajax_update_pre_footer_block_post_meta' );

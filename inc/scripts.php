@@ -257,7 +257,7 @@ function wolf_core_enqueue_common_scripts() {
 	wp_enqueue_script( 'wolf-core-functions' ); // common functions.
 
 	// add JS global variables.
-	wp_localize_script( 'wolf-core-functions', 'WolfCoreParams', wolf_core_get_js_params() );
+	wp_localize_script( 'wolf-core-functions', 'WolfCoreJSParams', wolf_core_get_js_params() );
 }
 add_action( 'wp_enqueue_scripts', 'wolf_core_enqueue_common_scripts' );
 

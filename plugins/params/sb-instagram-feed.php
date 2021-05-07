@@ -22,7 +22,7 @@ function wolf_core_sb_instagram_feed_params() {
 		'wolf_core_sb_instagram_feed_params',
 		array(
 			'properties' => array(
-				'name'          => esc_html__( 'Instagram Feed (Smash Balloon)', 'wolf-core' ),
+				'name'          => esc_html__( 'Instagram Feed', 'wolf-core' ),
 				'description'   => esc_html__( 'Your last instagram photos', 'wolf-core' ),
 				'vc_base'       => 'wolf_core_sb_instagram_feed',
 				'el_base'       => 'sb-instagram-feed',

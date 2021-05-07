@@ -5,7 +5,7 @@
  */
 /* jshint -W062 */
 
-/* global google, WolfCoreParams */
+/* global google, WolfCoreJSParams */
 var WolfCoreGoogleMaps = function( $ ) {
 
 	"use strict";
@@ -17,7 +17,7 @@ var WolfCoreGoogleMaps = function( $ ) {
 		 */
 		init : function () {
 
-			if ( ! WolfCoreParams.googleMapApiKey ) {
+			if ( ! WolfCoreJSParams.googleMapApiKey ) {
 				return;
 			}
 
@@ -243,7 +243,7 @@ var WolfCoreGoogleMaps = function( $ ) {
 				        "elementType": "geometry.fill",
 				        "stylers": [
 				            {
-				                 "color": WolfCoreParams.accentColor
+				                 "color": WolfCoreJSParams.accentColor
 				            }
 				        ]
 				    },
@@ -355,11 +355,11 @@ var WolfCoreGoogleMaps = function( $ ) {
 
 	"use strict";
 
-	if ( ! WolfCoreParams.googleMapApiKey ) {
+	if ( ! WolfCoreJSParams.googleMapApiKey ) {
 		return;
 	}
 
-	if ( "undefined" !== google && WolfCoreParams.googleMapApiKey ) {
+	if ( "undefined" !== google && WolfCoreJSParams.googleMapApiKey ) {
 		google.maps.event.addDomListener( window, "load", WolfCoreGoogleMaps.init() );
 	}
 

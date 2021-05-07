@@ -22,6 +22,7 @@ class Wolf_Core_Elementor_Extension { // phpcs:ignore
 	public function __construct() {
 
 		require_once 'elementor-core-functions.php';
+		require_once 'elementor-editor-functions.php';
 
 		if ( is_admin() ) {
 			require_once WOLF_CORE_DIR . '/inc/admin/admin-elementor-functions.php';
@@ -82,6 +83,7 @@ class Wolf_Core_Elementor_Extension { // phpcs:ignore
 		$controls_files = array(
 			'section',
 			'heading',
+			'page',
 		);
 
 		foreach ( $controls_files as $controls_file ) {

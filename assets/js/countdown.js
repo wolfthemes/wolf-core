@@ -5,7 +5,7 @@
  */
 /* jshint -W062 */
 
-/* global WolfCoreParams */
+/* global WolfCoreJSParams */
 
 var WolfCoreCountdown = function( $ ) {
 
@@ -53,7 +53,7 @@ var WolfCoreCountdown = function( $ ) {
 
 		setLang : function () {
 
-			var lang = WolfCoreParams.language;
+			var lang = WolfCoreJSParams.language;
 
 			// fr
 			if ( 'fr_FR' === lang || 'fr_BE' === lang || 'fr_CA' === lang ) {
