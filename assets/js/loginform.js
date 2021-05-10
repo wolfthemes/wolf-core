@@ -7,7 +7,7 @@
 
 var WolfCoreLoginForm = function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	return {
 
@@ -15,8 +15,8 @@ var WolfCoreLoginForm = function( $ ) {
 		 * Init UI
 		 */
 		init : function () {
-			$( '.wolf-core-loginform-tabs' ).each( function() {
-				$( '#' + $( this ).attr( 'id' ) ).tabs( {
+			$( ".wolf-core-loginform-tabs" ).each( function() {
+				$( "#" + $( this ).attr( "id" ) ).tabs( {
 					select: function(event, ui) {
 						$( ui.panel ).animate( {opacity : 0.1} );
 					},
@@ -32,7 +32,7 @@ var WolfCoreLoginForm = function( $ ) {
 
 ( function( $ ) {
 
-	'use strict';
+	"use strict";
 
 	$( document ).ready( function() {
 		WolfCoreLoginForm.init();

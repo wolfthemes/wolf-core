@@ -16,6 +16,7 @@ var WolfCorePostMeta = function( $ ) {
 		 */
 		init : function () {
 			if ( elementor !== undefined && elementor !== elementor.settings && elementor !== elementor.settings.page ) {
+				elementor.settings.page.addChangeCallback( "loading_animation_type", this.handleMenuLayout );
 				elementor.settings.page.addChangeCallback( "menu_layout", this.handleMenuLayout );
 				elementor.settings.page.addChangeCallback( "menu_style", this.handleMenuStyle );
 				elementor.settings.page.addChangeCallback( "post_header_block", this.handlePostHeaderBlock );
@@ -26,11 +27,31 @@ var WolfCorePostMeta = function( $ ) {
 		/**
 		 * Update menu layout meta
 		 */
+		handleloadingAnimationType : function ( newValue ) {
+
+			/* AJAX save */
+			$.post( WolfCoreJSParams.ajaxUrl, {
+				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
+				action : "wolf_core_ajax_update_loading_animation_type_post_meta",
+				loadingAnimationType : newValue
+			}, function (
+				response
+			) {
+
+				if ("OK" === response) {
+					elementor.reloadPreview();
+				}
+			});
+		},
+
+		/**
+		 * Update menu layout meta
+		 */
 		handleMenuLayout : function ( newValue ) {
 
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
-				postId : elementor.$previewContents.find( 'body' ).data( 'post-id' ),
+				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_menu_layout_post_meta",
 				menuLayout : newValue
 			}, function (
@@ -50,7 +71,7 @@ var WolfCorePostMeta = function( $ ) {
 
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
-				postId : elementor.$previewContents.find( 'body' ).data( 'post-id' ),
+				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_menu_style_post_meta",
 				menuStyle : newValue
 			}, function (
@@ -70,7 +91,7 @@ var WolfCorePostMeta = function( $ ) {
 
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
-				postId : elementor.$previewContents.find( 'body' ).data( 'post-id' ),
+				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_post_header_block_post_meta",
 				postHeaderBlock : newValue
 			}, function (
@@ -90,7 +111,7 @@ var WolfCorePostMeta = function( $ ) {
 
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
-				postId : elementor.$previewContents.find( 'body' ).data( 'post-id' ),
+				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_pre_footer_block_post_meta",
 				menuLayout : newValue
 			}, function (

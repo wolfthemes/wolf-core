@@ -225,6 +225,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			// Includes helpers.
 			$this->include_helpers();
 
+			// Includes WP widgets.
+			$this->include_wp_widgets();
+
 			if ( $this->is_request( 'frontend' ) ) {
 				$this->frontend_includes();
 			}
@@ -683,6 +686,35 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			foreach ( $helper_files as $file ) {
 
 				if ( ! require_once WOLF_CORE_DIR . '/plugins/helpers/' . $file . '.php' ) {
+					wp_die(
+						sprintf(
+							wp_kses(
+								/* translators: the code to output */
+								__( 'Error locating <code>%s</code> for inclusion.', 'wolf-core' ),
+								array(
+									'code' => array(),
+								)
+							),
+							esc_attr( $file )
+						)
+					);
+				}
+			}
+		}
+
+		/**
+		 * Include WP widget files files.
+		 */
+		public function include_wp_widgets() {
+
+			$helper_files = array(
+				'mailchimp',
+				'social-icons',
+			);
+
+			foreach ( $helper_files as $file ) {
+
+				if ( ! require_once WOLF_CORE_DIR . '/inc/wp-widgets/class-widget-' . $file . '.php' ) {
 					wp_die(
 						sprintf(
 							wp_kses(

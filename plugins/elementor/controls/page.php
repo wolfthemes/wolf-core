@@ -33,6 +33,22 @@ function wolf_core_add_elementor_page_settings_controls( $page ) {
 	}
 
 	$post_meta = array(
+		/* Loading Animation */
+		array(
+			'type'       => 'select',
+			'label'      => esc_html__( 'Loading Animation', 'wolf-core' ),
+			'param_name' => 'loading_animation_type',
+			'default'    => '',
+			'options'    => apply_filters(
+				'wolf_core_theme_loading_animation_type',
+				array(
+					''        => '&mdash; ' . esc_html__( 'Default', 'wolf-core' ) . ' &mdash;',
+					'none'    => esc_html__( 'None', 'wolf-core' ),
+					'overlay' => esc_html__( 'Overlay', 'wolf-core' ),
+				)
+			),
+		),
+
 		/* Menu Layout */
 		array(
 			'type'       => 'select',
@@ -89,7 +105,7 @@ function wolf_core_add_elementor_page_settings_controls( $page ) {
 		/* Header content block */
 		array(
 			'type'       => 'select',
-			'label'      => esc_html__( 'Post-header Block', 'wolf-core' ),
+			'label'      => esc_html__( 'Header Content Block', 'wolf-core' ),
 			'param_name' => 'after_header_block',
 			'default'    => '',
 			'options'    => $content_blocks,
@@ -98,7 +114,7 @@ function wolf_core_add_elementor_page_settings_controls( $page ) {
 		/* Footer content block */
 		array(
 			'type'       => 'select',
-			'label'      => esc_html__( 'Pre-footer Block', 'wolf-core' ),
+			'label'      => esc_html__( 'Footer Content Block', 'wolf-core' ),
 			'param_name' => 'pre_footer_block',
 			'default'    => '',
 			'options'    => $content_blocks,

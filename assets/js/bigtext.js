@@ -22,7 +22,7 @@ var WolfCoreBigText = function( $ ) {
 				_this.bigText();
 			} );
 
-			if ( $( 'body' ).hasClass( 'elementor-editor-active' ) || $( 'body' ).hasClass( 'vc-frontend' ) ) {
+			if ( $( "body" ).hasClass( "elementor-editor-active" ) || $( "body" ).hasClass( "vc-frontend" ) ) {
 				_this.editor();
 			}
 		},
@@ -54,7 +54,7 @@ var WolfCoreBigText = function( $ ) {
 
 	$( document ).ready( function() {
 		if ( window.elementorFrontend && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
-			elementorFrontend.hooks.addAction( 'frontend/element_ready/bigtext.default', function( $scope ) {
+			elementorFrontend.hooks.addAction( "frontend/element_ready/bigtext.default", function( $scope ) {
 				window.dispatchEvent( new Event( "resize" ) );
 			} );
 		}

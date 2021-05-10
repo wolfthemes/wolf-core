@@ -218,6 +218,21 @@ add_action( 'wp_ajax_wolf_core_ajax_bmic_form', 'wolf_core_ajax_bmic_form' );
 add_action( 'wp_ajax_nopriv_wolf_core_ajax_bmic_form', 'wolf_core_ajax_bmic_form' );
 
 /**
+ * Update loading animation type
+ */
+function wolf_core_ajax_update_loading_animation_type_post_meta() {
+	if ( isset( $_POST['loadingAnimationType'] ) && ! empty( $_POST['postId'] ) ) {
+
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_loading_animation_type', esc_attr( $_POST['loadingAnimationType'] ) ) ) {
+			echo 'OK';
+		}
+	}
+	exit;
+}
+add_action( 'wp_ajax_wolf_core_ajax_update_loading_animation_type_post_meta', 'wolf_core_ajax_update_loading_animation_type_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_loading_animation_type_post_meta', 'wolf_core_ajax_update_loading_animation_type_post_meta' );
+
+/**
  * Update menu layout meta
  */
 function wolf_core_ajax_update_menu_layout_post_meta() {
