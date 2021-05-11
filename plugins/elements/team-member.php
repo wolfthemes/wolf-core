@@ -68,6 +68,10 @@ function wolf_core_team_member( $atts ) {
 
 	$class .= " wolf-core-team-member-container wolf-core-team-member-layout-$layout wolf-core-text-$alignment wolf-core-tm-valign-$v_alignment wolf-core-element";
 
+	if ( 'custom' === $img_size ) {
+		$img_size = $custom_img_size;
+	}
+
 	if ( wp_attachment_is_image( $image_id ) ) {
 
 		$img = wolf_core_get_img_by_size(

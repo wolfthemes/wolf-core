@@ -20,6 +20,7 @@ function wolf_core_get_js_params() {
 	$js_params = array(
 		'themeSlug'                 => wolf_core_get_theme_slug(),
 		'ajaxUrl'                   => esc_url( WOLF_CORE()->ajax_url() ),
+		'ajaxNonce'                 => wp_create_nonce( 'wolf_core_ajax_nonce' ),
 		'WolfCoreUrl'               => esc_url( WOLF_CORE_URI ),
 		'lightbox'                  => apply_filters( 'wolf_core_lightbox', 'swipebox' ),
 		'isMobile'                  => wp_is_mobile(),

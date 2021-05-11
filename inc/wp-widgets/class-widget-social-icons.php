@@ -63,7 +63,7 @@ class Wolf_Core_Widget_Socials extends WP_Widget {
 		if ( ! empty( $title ) ) {
 			echo $before_title . $title . $after_title;
 		}
-		echo wolf_core_socials(
+		echo wolf_core_social_icons(
 			array(
 				'services'  => $socials,
 				'alignment' => 'left',

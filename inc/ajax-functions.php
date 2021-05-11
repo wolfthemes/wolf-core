@@ -221,6 +221,9 @@ add_action( 'wp_ajax_nopriv_wolf_core_ajax_bmic_form', 'wolf_core_ajax_bmic_form
  * Update loading animation type
  */
 function wolf_core_ajax_update_loading_animation_type_post_meta() {
+
+	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
+
 	if ( isset( $_POST['loadingAnimationType'] ) && ! empty( $_POST['postId'] ) ) {
 
 		if ( update_post_meta( absint( $_POST['postId'] ), '_post_loading_animation_type', esc_attr( $_POST['loadingAnimationType'] ) ) ) {
@@ -236,6 +239,9 @@ add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_loading_animation_type_post_me
  * Update menu layout meta
  */
 function wolf_core_ajax_update_menu_layout_post_meta() {
+
+	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
+
 	if ( isset( $_POST['menuLayout'] ) && ! empty( $_POST['postId'] ) ) {
 
 		if ( update_post_meta( absint( $_POST['postId'] ), '_post_menu_layout', esc_attr( $_POST['menuLayout'] ) ) ) {
@@ -251,6 +257,9 @@ add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_menu_layout_post_meta', 'wolf_
  * Update menu style meta
  */
 function wolf_core_ajax_update_menu_style_post_meta() {
+
+	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
+
 	if ( isset( $_POST['menuStyle'] ) && ! empty( $_POST['postId'] ) ) {
 
 		if ( update_post_meta( absint( $_POST['postId'] ), '_post_menu_style', esc_attr( $_POST['menuStyle'] ) ) ) {
@@ -266,9 +275,12 @@ add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_menu_style_post_meta', 'wolf_c
  * Update header block
  */
 function wolf_core_ajax_update_post_header_block_post_meta() {
+
+	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
+
 	if ( isset( $_POST['postHeaderBlock'] ) && ! empty( $_POST['postId'] ) ) {
 
-		if ( update_post_meta( absint( $_POST['postId'] ), '_post_post_header_block', esc_attr( $_POST['postHeaderBlock'] ) ) ) {
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_header_block', esc_attr( $_POST['postHeaderBlock'] ) ) ) {
 			echo 'OK';
 		}
 	}
@@ -281,6 +293,9 @@ add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_post_header_block_post_meta', 
  * Update footer block
  */
 function wolf_core_ajax_update_pre_footer_block_post_meta() {
+
+	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
+
 	if ( isset( $_POST['preFooterBlock'] ) && ! empty( $_POST['postId'] ) ) {
 
 		if ( update_post_meta( absint( $_POST['postId'] ), '_post_pre_footer_block', esc_attr( $_POST['preFooterBlock'] ) ) ) {

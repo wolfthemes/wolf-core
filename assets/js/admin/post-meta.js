@@ -33,6 +33,7 @@ var WolfCorePostMeta = function( $ ) {
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_loading_animation_type_post_meta",
+				security : WolfCoreJSParams.ajaxNonce,
 				loadingAnimationType : newValue
 			}, function (
 				response
@@ -53,6 +54,7 @@ var WolfCorePostMeta = function( $ ) {
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_menu_layout_post_meta",
+				security : WolfCoreJSParams.ajaxNonce,
 				menuLayout : newValue
 			}, function (
 				response
@@ -73,6 +75,7 @@ var WolfCorePostMeta = function( $ ) {
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_menu_style_post_meta",
+				security : WolfCoreJSParams.ajaxNonce,
 				menuStyle : newValue
 			}, function (
 				response
@@ -93,6 +96,7 @@ var WolfCorePostMeta = function( $ ) {
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_post_header_block_post_meta",
+				security : WolfCoreJSParams.ajaxNonce,
 				postHeaderBlock : newValue
 			}, function (
 				response
@@ -113,6 +117,7 @@ var WolfCorePostMeta = function( $ ) {
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_pre_footer_block_post_meta",
+				security : WolfCoreJSParams.ajaxNonce,
 				menuLayout : newValue
 			}, function (
 				response
