@@ -211,6 +211,30 @@ function wolf_core_render_html_attributes( array $attributes ) {
 }
 
 /**
+ * Render shortcode attributes
+ *
+ * @access public
+ * @static
+ * @param array $attributes The attribute array duh.
+ *
+ * @return string
+ */
+function wolf_core_render_shortcode_attributes( array $attributes ) {
+	$rendered_attributes = array();
+
+	foreach ( $attributes as $attribute_key => $attribute_values ) {
+		if ( is_array( $attribute_values ) ) {
+			continue;
+		}
+		if ( ! empty( $attribute_values ) && ! is_array( $attribute_values ) ) {
+			$rendered_attributes[] = sprintf( '%1$s="%2$s"', $attribute_key, esc_attr( $attribute_values ) );
+		}
+	}
+
+	return implode( ' ', $rendered_attributes );
+}
+
+/**
  * Get params to convert
  */
 function wol_core_get_vc_parms_to_convert() {

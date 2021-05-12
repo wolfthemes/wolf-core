@@ -642,43 +642,43 @@ function wolf_core_get_twitter_usename() {
  */
 function wolf_core_get_shared_colors() {
 
-	$wolf_core_shared_colors = array(
-		'black'       => esc_html__( 'Black', 'wolf-core' ),
-		'lightergrey' => esc_html__( 'Light Grey', 'wolf-core' ),
-		'darkgrey'    => esc_html__( 'Dark Grey', 'wolf-core' ),
-		'white'       => esc_html__( 'White', 'wolf-core' ),
-		'orange'      => esc_html__( 'Orange', 'wolf-core' ),
-		'green'       => esc_html__( 'Green', 'wolf-core' ),
-		'turquoise'   => esc_html__( 'Turquoise', 'wolf-core' ),
-		'violet'      => esc_html__( 'Violet', 'wolf-core' ),
-		'pink'        => esc_html__( 'Pink', 'wolf-core' ),
-		'greyblue'    => esc_html__( 'Grey blue', 'wolf-core' ),
-		'red'         => esc_html__( 'Red', 'wolf-core' ),
-		'yellow'      => esc_html__( 'Yellow', 'wolf-core' ),
-		'blue'        => esc_html__( 'Blue', 'wolf-core' ),
-	);
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 
-	$wolf_core_shared_colors = apply_filters( 'wolf_core_vc_colors', $wolf_core_shared_colors );
+		$wolf_core_shared_colors = apply_filters(
+			'wolf_core_elementor_colors',
+			array(
+				'black'       => esc_html__( 'Black', 'wolf-core' ),
+				'lightergrey' => esc_html__( 'Light Grey', 'wolf-core' ),
+				'darkgrey'    => esc_html__( 'Dark Grey', 'wolf-core' ),
+				'white'       => esc_html__( 'White', 'wolf-core' ),
+			)
+		);
+
+	} elseif ( 'vc' === wolf_core_get_plugin_in_use() ) {
+
+		$wolf_core_shared_colors = apply_filters(
+			'wolf_core_vc_colors',
+			array(
+				'black'       => esc_html__( 'Black', 'wolf-core' ),
+				'lightergrey' => esc_html__( 'Light Grey', 'wolf-core' ),
+				'darkgrey'    => esc_html__( 'Dark Grey', 'wolf-core' ),
+				'white'       => esc_html__( 'White', 'wolf-core' ),
+				'orange'      => esc_html__( 'Orange', 'wolf-core' ),
+				'green'       => esc_html__( 'Green', 'wolf-core' ),
+				'turquoise'   => esc_html__( 'Turquoise', 'wolf-core' ),
+				'violet'      => esc_html__( 'Violet', 'wolf-core' ),
+				'pink'        => esc_html__( 'Pink', 'wolf-core' ),
+				'greyblue'    => esc_html__( 'Grey blue', 'wolf-core' ),
+				'red'         => esc_html__( 'Red', 'wolf-core' ),
+				'yellow'      => esc_html__( 'Yellow', 'wolf-core' ),
+				'blue'        => esc_html__( 'Blue', 'wolf-core' ),
+			)
+		);
+	}
+
+	$wolf_core_shared_colors = apply_filters( 'wolf_core_shared_colors', $wolf_core_shared_colors );
 
 	return $wolf_core_shared_colors;
-}
-
-/**
- * Get Elementor color list in array to allow filtering by theme
- *
- * @return array
- */
-function wolf_core_get_elementor_colors() {
-	$wolf_core_elementor_colors = array(
-		'black'       => esc_html__( 'Black', 'wolf-core' ),
-		'lightergrey' => esc_html__( 'Light Grey', 'wolf-core' ),
-		'darkgrey'    => esc_html__( 'Dark Grey', 'wolf-core' ),
-		'white'       => esc_html__( 'White', 'wolf-core' ),
-	);
-
-	$wolf_core_elementor_colors = apply_filters( 'wolf_core_elementor_colors', $wolf_core_elementor_colors );
-
-	return $wolf_core_elementor_colors;
 }
 
 /**

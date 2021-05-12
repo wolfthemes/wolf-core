@@ -203,7 +203,7 @@ function wolf_core_google_maps_params() {
 					'type'               => 'select',
 					'label'              => esc_html__( 'Marker Color', 'wolf-visual-composer' ),
 					'param_name'         => 'marker_color',
-					'options'              => array_merge(
+					'options'            => array_merge(
 						array( 'default' => esc_html__( 'Default color', 'wolf-visual-composer' ) ),
 						wolf_core_get_shared_colors(),
 						array( 'custom' => esc_html__( 'Custom color', 'wolf-visual-composer' ) )
@@ -230,11 +230,11 @@ function wolf_core_google_maps_params() {
 				/* Elementor color */
 				array(
 					'type'         => 'select',
-					'label'              => esc_html__( 'Marker Color', 'wolf-visual-composer' ),
+					'label'        => esc_html__( 'Marker Color', 'wolf-visual-composer' ),
 					'param_name'   => 'marker_color',
-					'options'              => array_merge(
+					'options'      => array_merge(
 						array( 'default' => esc_html__( 'Default color', 'wolf-visual-composer' ) ),
-						wolf_core_get_elementor_colors(),
+						wolf_core_get_shared_colors(),
 						array( 'custom' => esc_html__( 'Custom color', 'wolf-visual-composer' ) )
 					),
 					'default'      => 'accent',
@@ -246,7 +246,7 @@ function wolf_core_google_maps_params() {
 					'label'        => esc_html__( 'Marker Color', 'wolf-visual-composer' ),
 					'param_name'   => 'marker_custom_color',
 					'page_builder' => 'elementor',
-					'condition'          => array(
+					'condition'    => array(
 						'marker_color' => array( 'custom' ),
 					),
 				),

@@ -280,7 +280,7 @@ function wolf_core_ajax_update_post_header_block_post_meta() {
 
 	if ( isset( $_POST['postHeaderBlock'] ) && ! empty( $_POST['postId'] ) ) {
 
-		if ( update_post_meta( absint( $_POST['postId'] ), '_post_header_block', esc_attr( $_POST['postHeaderBlock'] ) ) ) {
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_post_header_block', esc_attr( $_POST['postHeaderBlock'] ) ) ) {
 			echo 'OK';
 		}
 	}

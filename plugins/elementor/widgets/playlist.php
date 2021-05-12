@@ -162,6 +162,7 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 		);
 
 		echo wolf_core_playlist( $atts ); // phpcs:ignore
+		//echo '[wolf_playlist ' . wolf_core_render_shortcode_attributes( $atts ) . ']'; // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Playlist_Widget() );
