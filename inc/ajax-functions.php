@@ -272,15 +272,33 @@ add_action( 'wp_ajax_wolf_core_ajax_update_menu_style_post_meta', 'wolf_core_aja
 add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_menu_style_post_meta', 'wolf_core_ajax_update_menu_style_post_meta' );
 
 /**
- * Update header block
+ * Update hero font tone meta
  */
-function wolf_core_ajax_update_post_header_block_post_meta() {
+function wolf_core_ajax_update_hero_font_tone_post_meta() {
 
 	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
 
-	if ( isset( $_POST['postHeaderBlock'] ) && ! empty( $_POST['postId'] ) ) {
+	if ( isset( $_POST['heroFontTone'] ) && ! empty( $_POST['postId'] ) ) {
 
-		if ( update_post_meta( absint( $_POST['postId'] ), '_post_post_header_block', esc_attr( $_POST['postHeaderBlock'] ) ) ) {
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_hero_font_tone', esc_attr( $_POST['heroFontTone'] ) ) ) {
+			echo 'OK';
+		}
+	}
+	exit;
+}
+add_action( 'wp_ajax_wolf_core_ajax_update_hero_font_tone_post_meta', 'wolf_core_ajax_update_hero_font_tone_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_hero_font_tone_post_meta', 'wolf_core_ajax_update_hero_font_tone_post_meta' );
+
+/**
+ * Update header block
+ */
+function wolf_core_ajax_update_after_header_block_post_meta() {
+
+	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
+
+	if ( isset( $_POST['afterHeaderBlock'] ) && ! empty( $_POST['postId'] ) ) {
+
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_after_header_block', esc_attr( $_POST['afterHeaderBlock'] ) ) ) {
 			echo 'OK';
 		}
 	}

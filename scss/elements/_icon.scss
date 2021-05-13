@@ -2,6 +2,7 @@ $accent: red;
 /**
  * @# Icon
  **/
+
 .wolf-core-icon {
 	display: inline-block;
 	line-height: 1;
@@ -20,6 +21,14 @@ $accent: red;
 		position: relative;
 		display: block;
 	}
+}
+
+.fab {
+	font-size: inherit;
+}
+
+.fa-stack {
+	width: 2em !important;
 }
 
 .wolf-core-icon-view-stacked {

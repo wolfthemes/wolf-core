@@ -16,10 +16,12 @@ var WolfCorePostMeta = function( $ ) {
 		 */
 		init : function () {
 			if ( elementor !== undefined && elementor !== elementor.settings && elementor !== elementor.settings.page ) {
+
 				elementor.settings.page.addChangeCallback( "loading_animation_type", this.handleMenuLayout );
 				elementor.settings.page.addChangeCallback( "menu_layout", this.handleMenuLayout );
 				elementor.settings.page.addChangeCallback( "menu_style", this.handleMenuStyle );
-				elementor.settings.page.addChangeCallback( "post_header_block", this.handlePostHeaderBlock );
+				elementor.settings.page.addChangeCallback( "hero_font_tone", this.handleHeroFontTone );
+				elementor.settings.page.addChangeCallback( "after_header_block", this.handleAfterHeaderBlock );
 				elementor.settings.page.addChangeCallback( "pre_footer_block", this.handlePreFooterBlock );
 			}
 		},
@@ -28,6 +30,8 @@ var WolfCorePostMeta = function( $ ) {
 		 * Update menu layout meta
 		 */
 		handleloadingAnimationType : function ( newValue ) {
+
+			//alert( self );
 
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
@@ -90,17 +94,40 @@ var WolfCorePostMeta = function( $ ) {
 		/**
 		 * Update menu layout meta
 		 */
-		handlePostHeaderBlock : function ( newValue ) {
+		handleHeroFontTone : function ( newValue ) {
 
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
-				action : "wolf_core_ajax_update_post_header_block_post_meta",
+				action : "wolf_core_ajax_update_hero_font_tone_post_meta",
 				security : WolfCoreJSParams.ajaxNonce,
-				postHeaderBlock : newValue
+				heroFontTone : newValue
 			}, function (
 				response
 			) {
+
+				if ("OK" === response) {
+					elementor.reloadPreview();
+				}
+			});
+		},
+
+		/**
+		 * Update menu layout meta
+		 */
+		handleAfterHeaderBlock : function ( newValue ) {
+
+			/* AJAX save */
+			$.post( WolfCoreJSParams.ajaxUrl, {
+				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
+				action : "wolf_core_ajax_update_after_header_block_post_meta",
+				security : WolfCoreJSParams.ajaxNonce,
+				afterHeaderBlock : newValue
+			}, function (
+				response
+			) {
+
+				console.log( data );
 
 				if ("OK" === response) {
 					elementor.reloadPreview();
@@ -118,7 +145,7 @@ var WolfCorePostMeta = function( $ ) {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
 				action : "wolf_core_ajax_update_pre_footer_block_post_meta",
 				security : WolfCoreJSParams.ajaxNonce,
-				menuLayout : newValue
+				preFooterBlock : newValue
 			}, function (
 				response
 			) {

@@ -35,7 +35,7 @@ function wolf_core_get_button_params() {
 
 		array(
 			'label'       => esc_html__( 'Text', 'wolf-core' ),
-			'param_name'  => 'title',
+			'param_name'  => 'text',
 			'type'        => 'text',
 			'default'     => esc_html__( 'Click here', 'wolf-core' ),
 			'placeholder' => esc_html__( 'Click here', 'wolf-core' ),
