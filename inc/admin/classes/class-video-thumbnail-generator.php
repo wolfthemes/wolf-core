@@ -1,26 +1,26 @@
 <?php
 /**
- * Video Thumbnail Generator Video thumbnail generator
+ * Video Thumbnail Generator
  *
  * Supports vimeo and youtube
  *
  * @package WordPress
- * @subpackage %NAME %
+ * @subpackage %NAME%
  * @version 1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! class_exists( 'Wolf_Core_Video_Thumbnail_Generator' ) ) {
+if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 	/**
-	 * Wolf_Core_Video_Thumbnail_Generator class
+	 * Wolf_Video_Thumbnail_Generator_Processor class
 	 *
 	 * Helper class to generate thumbnail from youtube and vimeo videos
 	 */
-	class Wolf_Core_Video_Thumbnail_Generator {
+	class Wolf_Video_Thumbnail_Generator_Processor {
 
 		/**
-		 * Wolf_Core_Video_Thumbnail_Generator Constructor.
+		 * Wolf_Video_Thumbnail_Generator_Processor Constructor.
 		 */
 		public function __construct() {
 
@@ -48,7 +48,7 @@ if ( ! class_exists( 'Wolf_Core_Video_Thumbnail_Generator' ) ) {
 		 */
 		public function get_post_types() {
 
-			return array( 'post', 'page', 'wvc_content_block', 'work', 'event', 'release', 'video' );
+			return array( 'post', 'page', 'wvc_content_block', 'wolf_core_block', 'work', 'event', 'release', 'video', 'product' );
 		}
 
 		/**
@@ -249,9 +249,9 @@ if ( ! class_exists( 'Wolf_Core_Video_Thumbnail_Generator' ) ) {
 			}
 
 			// check if the thumbnail has already been generated and saved in a post meta.
-			// if ( ! get_post_meta( $post_id, '_video_thumbnail_attachment_id', true ) ) {
-			// return;
-			// }
+			//if ( ! get_post_meta( $post_id, '_video_thumbnail_attachment_id', true ) ) {
+			//	return;
+			//}
 
 			// get video thumbnail.
 			$new_thumbnail = $this->get_video_thumbnail( $post_id );
@@ -410,7 +410,7 @@ if ( ! class_exists( 'Wolf_Core_Video_Thumbnail_Generator' ) ) {
 			$video_thumbnail    = '';
 			$video_thumbnail_id = get_post_meta( $post_id, '_video_thumbnail_attachment_id', true );
 
-			// debug( $video_thumbnail_id );
+			//debug( $video_thumbnail_id );
 
 			if ( $video_thumbnail_id ) {
 
@@ -622,6 +622,6 @@ if ( ! class_exists( 'Wolf_Core_Video_Thumbnail_Generator' ) ) {
 
 	} // end class
 
-	new Wolf_Core_Video_Thumbnail_Generator();
+	new Wolf_Video_Thumbnail_Generator_Processor();
 
 } // end class check

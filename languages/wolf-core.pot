@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-05-13 09:58:18+00:00\n"
+"POT-Creation-Date: 2021-05-13 15:02:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -778,10 +778,10 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:573
 #: plugins/common-params/button-params.php:25
 #: plugins/elementor/controls/page.php:24
-#: plugins/elementor/controls/page.php:45
-#: plugins/elementor/controls/page.php:61
-#: plugins/elementor/controls/page.php:80
-#: plugins/elementor/controls/page.php:98
+#: plugins/elementor/controls/page.php:47
+#: plugins/elementor/controls/page.php:63
+#: plugins/elementor/controls/page.php:82
+#: plugins/elementor/controls/page.php:100
 #: plugins/elementor/controls/section.php:27
 #: plugins/elementor/elementor-core-functions.php:173
 #: plugins/params/bigtext.php:121 plugins/params/bigtext.php:137
@@ -2620,7 +2620,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/column-params.php:86
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:135
 #: plugins/elementor/controls/page.php:25
-#: plugins/elementor/controls/page.php:46 plugins/params/album-disc.php:117
+#: plugins/elementor/controls/page.php:48 plugins/params/album-disc.php:117
 #: plugins/params/bigtext.php:122 plugins/params/breadcrumb.php:108
 #: plugins/params/gallery.php:170 plugins/params/heading.php:119
 #: plugins/params/social-icons.php:109 plugins/params/social-icons.php:244
@@ -2640,52 +2640,52 @@ msgid "None"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:39
-#: plugins/elementor/controls/page.php:39
+#: plugins/elementor/controls/page.php:41
 msgid "Loading Animation"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:47
-#: plugins/elementor/controls/page.php:47
+#: plugins/elementor/controls/page.php:49
 msgid "Overlay"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:55
-#: plugins/elementor/controls/page.php:55
+#: plugins/elementor/controls/page.php:57
 msgid "Menu Layout"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:62
-#: plugins/elementor/controls/page.php:62
+#: plugins/elementor/controls/page.php:64
 msgid "Top Right"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:63
-#: plugins/elementor/controls/page.php:63
+#: plugins/elementor/controls/page.php:65
 msgid "Top Justify"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:64
-#: plugins/elementor/controls/page.php:64
+#: plugins/elementor/controls/page.php:66
 msgid "Top Justify Left"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:65
-#: plugins/elementor/controls/page.php:65
+#: plugins/elementor/controls/page.php:67
 msgid "Centered"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:66
-#: plugins/elementor/controls/page.php:66
+#: plugins/elementor/controls/page.php:68
 msgid "Top Left"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:67
-#: plugins/elementor/controls/page.php:67
+#: plugins/elementor/controls/page.php:69
 msgid "No Menu"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:74
-#: plugins/elementor/controls/page.php:74
+#: plugins/elementor/controls/page.php:76
 msgid "Menu Style"
 msgstr ""
 
@@ -2694,19 +2694,19 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/column.php:70
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:83
 #: pack/wolf-core/plugins/vc/vc-map/row.php:204
-#: plugins/elementor/controls/page.php:81 plugins/vc/vc-map/column-inner.php:69
+#: plugins/elementor/controls/page.php:83 plugins/vc/vc-map/column-inner.php:69
 #: plugins/vc/vc-map/column.php:70 plugins/vc/vc-map/row-inner.php:83
 #: plugins/vc/vc-map/row.php:204
 msgid "Solid"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:82
-#: plugins/elementor/controls/page.php:82
+#: plugins/elementor/controls/page.php:84
 msgid "Semi-transparent White"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:83
-#: plugins/elementor/controls/page.php:83
+#: plugins/elementor/controls/page.php:85
 msgid "Semi-transparent Black"
 msgstr ""
 
@@ -2715,7 +2715,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:44
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:385
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:576
-#: plugins/elementor/controls/page.php:84 plugins/vc/vc-map/column.php:44
+#: plugins/elementor/controls/page.php:86 plugins/vc/vc-map/column.php:44
 #: plugins/vc/vc-params/background-params.php:44
 #: plugins/vc/vc-params/row-params.php:385
 #: plugins/vc/vc-params/row-params.php:576
@@ -2723,7 +2723,7 @@ msgid "Transparent"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:92
-#: plugins/elementor/controls/page.php:92
+#: plugins/elementor/controls/page.php:94
 msgid "Menu Font Tone"
 msgstr ""
 
@@ -2738,7 +2738,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:41
 #: pack/wolf-core/plugins/vc/vc-map/row.php:86
 #: pack/wolf-core/plugins/vc/vc-map/row.php:264
-#: plugins/elementor/controls/page.php:99
+#: plugins/elementor/controls/page.php:101
 #: plugins/elementor/controls/section.php:29 plugins/params/gallery.php:298
 #: plugins/params/gallery.php:312 plugins/params/google-maps.php:124
 #: plugins/params/playlist.php:84 plugins/vc/vc-map/column-inner.php:27
@@ -2758,7 +2758,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:40
 #: pack/wolf-core/plugins/vc/vc-map/row.php:87
 #: pack/wolf-core/plugins/vc/vc-map/row.php:263
-#: plugins/elementor/controls/page.php:100
+#: plugins/elementor/controls/page.php:102
 #: plugins/elementor/controls/section.php:28 plugins/params/gallery.php:299
 #: plugins/params/gallery.php:313 plugins/params/google-maps.php:126
 #: plugins/params/playlist.php:83 plugins/vc/vc-map/column-inner.php:28
@@ -2768,12 +2768,12 @@ msgid "Dark"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:108
-#: plugins/elementor/controls/page.php:108
+#: plugins/elementor/controls/page.php:110
 msgid "Header Content Block"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:117
-#: plugins/elementor/controls/page.php:117
+#: plugins/elementor/controls/page.php:119
 msgid "Footer Content Block"
 msgstr ""
 
