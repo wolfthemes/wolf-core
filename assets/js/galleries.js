@@ -4,7 +4,7 @@
  * WPBakery Page Builder Extension 3.2.8
  */
 /* jshint -W062 */
-
+/* global DocumentTouch, WolfCore */
 var WolfCoreGalleries = function( $ ) {
 
 	"use strict";
@@ -114,6 +114,8 @@ var WolfCoreGalleries = function( $ ) {
 		if ( window.elementorFrontend && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
 			elementorFrontend.hooks.addAction( "frontend/element_ready/gallery.default", function( $scope ) {
 				WolfCoreGalleries.init();
+				WolfCore.lazyLoad();
+				WolfCore.AOS();
 			} );
 		}
 	} );

@@ -22,7 +22,7 @@ var WolfCorePostMeta = function( $ ) {
 				elementor.settings.page.addChangeCallback( "menu_style", this.handleMenuStyle );
 				elementor.settings.page.addChangeCallback( "hero_font_tone", this.handleHeroFontTone );
 				elementor.settings.page.addChangeCallback( "after_header_block", this.handleAfterHeaderBlock );
-				elementor.settings.page.addChangeCallback( "pre_footer_block", this.handlePreFooterBlock );
+				elementor.settings.page.addChangeCallback( "before_footer_block", this.handlebeforeFooterBlock );
 			}
 		},
 
@@ -127,8 +127,6 @@ var WolfCorePostMeta = function( $ ) {
 				response
 			) {
 
-				console.log( data );
-
 				if ("OK" === response) {
 					elementor.reloadPreview();
 				}
@@ -138,14 +136,14 @@ var WolfCorePostMeta = function( $ ) {
 		/**
 		 * Update menu layout meta
 		 */
-		handlePreFooterBlock : function ( newValue ) {
+		handlebeforeFooterBlock : function ( newValue ) {
 
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),
-				action : "wolf_core_ajax_update_pre_footer_block_post_meta",
+				action : "wolf_core_ajax_update_before_footer_block_post_meta",
 				security : WolfCoreJSParams.ajaxNonce,
-				preFooterBlock : newValue
+				beforeFooterBlock : newValue
 			}, function (
 				response
 			) {

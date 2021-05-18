@@ -14,24 +14,77 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_output_colors_inline_css() {
 
+	$colors = wolf_core_get_shared_colors_hex();
+
 	$colors_css = '';
-	$accent     = wolf_core_get_theme_accent_color_value();
 
-	/* Button default */
-	// $colors_css .= ".wolf-core-button{
-	// 	background-color: $accent;
-	// }";
+	/*
+	----------------------------------------------------
 
-	/* Icon default */
-	$colors_css .= ".wolf-core-icon-view-stacked .wolf-core-icon{
-		background-color: $accent;
+	BACKGROUND
+
+	-------------------------------------------------------
+	*/
+	foreach ( $colors as $color => $hex ) {
+
+		/* Background */
+		$colors_css .= "
+			.wolf-core-background-color-$color{
+				background-color:$hex;
+			}
+		";
+
+		/* Border */
+		$colors_css .= "
+			.wolf-core-border-color-$color{
+				border-color:$hex;
+			}
+		";
+
+		/* Button */
+		$colors_css .= "
+			.wolf-core-button-background-color-$color{
+				background-color:$hex;
+				color:$hex;
+				border-color:$hex;
+			}
+
+			.wolf-core-button-background-color-$color .wolf-core-button-background-fill{
+				box-shadow:0 0 0 0 $hex;
+				background-color:$hex;
+			}
+		";
+
+		/* Icons */
+		$colors_css .= "
+			.wolf-core-icon-color-$color{
+				color:$hex;
+			}
+
+			.wolf-core-svg-icon-color-$color svg *{
+				stroke:$hex!important;
+			}
+
+			.wolf-core-icon-background-color-$color{
+				box-shadow:0 0 0 0 $hex;
+				background-color:$hex;
+				color:$hex;
+				border-color:$hex;
+			}
+
+			.wolf-core-icon-background-color-$color .wolf-core-icon-background-fill{
+				box-shadow:0 0 0 0 $hex;
+				background-color:$hex;
+			}
+		";
+
+		/* Text */
+		$colors_css .= "
+			.wolf-core-text-color-$color{
+				color:$hex!important;
+			}
+		";
 	}
-	.wolf-core-icon-view-framed  .wolf-core-icon {
-		fill: $accent;
-		color: $accent;
-		border-color: $accent;
-	}
-	";
 
 	if ( ! SCRIPT_DEBUG ) {
 		$colors_css = wolf_core_clean_spaces( $colors_css );

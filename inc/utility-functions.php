@@ -511,7 +511,7 @@ function wolf_core_get_first_category_url( $post_id = null ) {
 /**
  * @param array $atts
  */
-function wolf_core_element_aos_animation_data_attr( $atts ) {
+function wolf_core_element_aos_animation_data_attr( $atts, $force = false ) {
 	$data = '';
 
 	if ( isset( $atts['css_animation'] ) && 'none' !== $atts['css_animation'] ) {
@@ -519,7 +519,7 @@ function wolf_core_element_aos_animation_data_attr( $atts ) {
 		$css_animation       = esc_attr( $atts['css_animation'] );
 		$css_animation_delay = ( isset( $atts['css_animation_delay'] ) ) ? absint( $atts['css_animation_delay'] ) : '';
 
-		if ( wolf_core_is_new_animation( $css_animation ) ) {
+		if ( wolf_core_is_new_animation( $css_animation ) || $force ) {
 			wp_enqueue_style( 'aos' );
 			wp_enqueue_script( 'aos' );
 

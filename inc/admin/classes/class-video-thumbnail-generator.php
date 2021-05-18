@@ -5,7 +5,7 @@
  * Supports vimeo and youtube
  *
  * @package WordPress
- * @subpackage %NAME%
+ * @subpackage Wolf Core
  * @version 1.0.0
  */
 

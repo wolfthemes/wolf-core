@@ -117,7 +117,7 @@ function wolf_core_add_elementor_page_settings_controls( $page ) {
 			array(
 				'type'       => 'select',
 				'label'      => esc_html__( 'Footer Content Block', 'wolf-core' ),
-				'param_name' => 'pre_footer_block',
+				'param_name' => 'before_footer_block',
 				'default'    => '',
 				'options'    => $content_blocks,
 			),

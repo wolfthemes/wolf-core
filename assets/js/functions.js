@@ -694,6 +694,7 @@ var WolfCore = (function ($) {
 			selector = selector || "#content";
 
 			if ("undefined" !== typeof AOS) {
+
 				$(selector)
 					.find(".aos-disabled")
 					.each(function () {

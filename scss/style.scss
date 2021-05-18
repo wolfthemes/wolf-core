@@ -12,11 +12,18 @@
 
 @import 'global/containers';
 
+@import 'global/lazyload';
+
 @import 'global/fluid-video';
 
 @import 'global/one-page';
 
 @import 'global/video-bg';
+
+/**
+ * Colors
+ */
+@import 'colors/background';
 
 @import 'dependencies/aos';
 @import 'dependencies/arrows';

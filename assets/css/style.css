@@ -405,6 +405,28 @@
 }
 
 /**
+ * @# Lazyload
+ **/
+/* to prevent flickering for lazyload */
+.wolf-core-lazyload-bg {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lazy-hidden {
+  opacity: 0;
+}
+
+.lazy-loaded {
+  opacity: 1 !important;
+}
+
+/* Fix for Safari issue not removing lazy-hidden class */
+.wolf-core-is-apple .lazy-hidden {
+  opacity: 1 !important;
+}
+
+/**
  * @# Fluid Video
  **/
 .wolf-core-fluid-video {
@@ -632,6 +654,37 @@
 .wolf-core-yt-video-bg-pause {
   background: #0d0d0d;
   right: 55px;
+}
+
+/**
+ * Colors
+ */
+/**
+ * @# BG Colors
+ **/
+.wolf-core-background-color-gradient-color-105898 {
+  background: linear-gradient(to bottom right, #75d69c 0%, #3452ff 100%);
+}
+
+.wolf-core-background-color-gradient-color-111420 {
+  background: radial-gradient(center top, circle cover, #0cb4ce 17%, #1080d0 79%);
+  background: -webkit-radial-gradient(center top, circle cover, #0cb4ce 17%, #1080d0 79%);
+}
+
+.wolf-core-background-color-gradient-color-3452ff {
+  background: linear-gradient(to bottom right, #ff1053 0%, #3452ff 100%);
+}
+
+.wolf-core-background-color-gradient-color-588694 {
+  background: linear-gradient(to right, #e9168c 3%, #1080d0 98%);
+}
+
+.wolf-core-background-color-gradient-color-470604 {
+  background: linear-gradient(to right, #e9168c 2%, #f75254 99%);
+}
+
+.wolf-core-background-color-gradient-color-b900b4 {
+  background: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
 }
 
 /**
@@ -3893,10 +3946,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   display: block;
   height: 100%;
   width: 100%;
-}
-
-.wolf-core-social-icon .wolf-core-icon-container {
-  margin: 0.5em 0.5em 0.5em;
 }
 
 /* Alignement */

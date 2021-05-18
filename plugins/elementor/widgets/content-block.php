@@ -123,7 +123,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 			)
 		);
 
-		echo wolf_core_heading( $atts ); // phpcs:ignore
+		echo wolf_core_content_block( $atts ); // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Content_Block_Widget() );

@@ -281,7 +281,16 @@ function wolf_core_gallery( $atts ) {
 				$figure_style = 'animation-delay:' . absint( $single_animation_delay ) . 'ms;';
 			}
 
-			$single_animation_delay = $single_animation_delay + 200;
+			$uncover_animations = array(
+				'uncoverXLeft',
+				'uncoverXRight',
+				'uncoverYTop',
+				'uncoverYBottom',
+			);
+
+			$add_delay = ( in_array( $css_animation, $uncover_animations, true ) ) ? 300 : 200;
+
+			$single_animation_delay = $single_animation_delay + $add_delay;
 
 			$large_img_src = wolf_core_get_url_from_attachment_id( $img_id, 'wolf-core-XL' );
 
@@ -367,8 +376,9 @@ function wolf_core_gallery( $atts ) {
 			$output .= "<figure class='$figure_class $metro_class wolf-core-img-$type' style='$figure_style'";
 
 			if ( $css_animation_each ) {
+				$force                       = ( 'elementor' === wolf_core_get_plugin_in_use() ) ? true : false;
 				$atts['css_animation_delay'] = $single_animation_delay;
-				$output                     .= wolf_core_element_aos_animation_data_attr( $atts );
+				$output                     .= wolf_core_element_aos_animation_data_attr( $atts, $force );
 			}
 
 			if ( 'justified' === $type ) {
@@ -471,7 +481,7 @@ function wolf_core_gallery( $atts ) {
 						$height = $metadata['sizes']['wolf-core-photo']['height'];
 
 						$output .= '<img
-						class="lazy-hidden"
+						class="wolf-core-lazy-hidden"
 						width="' . esc_attr( $width ) . '"
 						height="' . esc_attr( $height ) . '"
 						src="' . esc_url( $blank ) . '"
@@ -484,7 +494,7 @@ function wolf_core_gallery( $atts ) {
 						$src = wolf_core_placeholder_img_url( $img_size );
 
 						$output .= '<img
-						class="lazy-hidden"
+						class="wolf-core-lazy-hidden"
 						width="500"
 						height="500"
 						src="' . esc_url( $blank ) . '"

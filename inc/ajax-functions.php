@@ -300,27 +300,31 @@ function wolf_core_ajax_update_after_header_block_post_meta() {
 
 		if ( update_post_meta( absint( $_POST['postId'] ), '_post_after_header_block', esc_attr( $_POST['afterHeaderBlock'] ) ) ) {
 			echo 'OK';
+		} else {
+			echo 'error';
 		}
 	}
 	exit;
 }
-add_action( 'wp_ajax_wolf_core_ajax_update_post_header_block_post_meta', 'wolf_core_ajax_update_post_header_block_post_meta' );
-add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_post_header_block_post_meta', 'wolf_core_ajax_update_post_header_block_post_meta' );
+add_action( 'wp_ajax_wolf_core_ajax_update_after_header_block_post_meta', 'wolf_core_ajax_update_after_header_block_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_after_header_block_post_meta', 'wolf_core_ajax_update_after_header_block_post_meta' );
 
 /**
  * Update footer block
  */
-function wolf_core_ajax_update_pre_footer_block_post_meta() {
+function wolf_core_ajax_update_before_footer_block_post_meta() {
 
 	check_ajax_referer( 'wolf_core_ajax_nonce', 'security' );
 
-	if ( isset( $_POST['preFooterBlock'] ) && ! empty( $_POST['postId'] ) ) {
+	if ( isset( $_POST['beforeFooterBlock'] ) && ! empty( $_POST['postId'] ) ) {
 
-		if ( update_post_meta( absint( $_POST['postId'] ), '_post_pre_footer_block', esc_attr( $_POST['preFooterBlock'] ) ) ) {
+		if ( update_post_meta( absint( $_POST['postId'] ), '_post_before_footer_block', esc_attr( $_POST['beforeFooterBlock'] ) ) ) {
 			echo 'OK';
+		} else {
+			echo 'error footer';
 		}
 	}
 	exit;
 }
-add_action( 'wp_ajax_wolf_core_ajax_update_pre_footer_block_post_meta', 'wolf_core_ajax_update_pre_footer_block_post_meta' );
-add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_pre_footer_block_post_meta', 'wolf_core_ajax_update_pre_footer_block_post_meta' );
+add_action( 'wp_ajax_wolf_core_ajax_update_before_footer_block_post_meta', 'wolf_core_ajax_update_before_footer_block_post_meta' );
+add_action( 'wp_ajax_nopriv_wolf_core_ajax_update_before_footer_block_post_meta', 'wolf_core_ajax_update_before_footer_block_post_meta' );

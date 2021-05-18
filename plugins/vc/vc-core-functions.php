@@ -332,7 +332,7 @@ add_filter( 'wolf_core_shared_colors', 'wolf_core_add_vc_shared_color' );
 function wolf_core_add_animations( $animations ) {
 
 	$animations[] = array(
-		'label'  => esc_html__( 'Custom Animations', 'wolf-visual-composer' ),
+		'label'  => esc_html__( 'Custom Animations', 'wolf-core' ),
 		'values' => array(
 			'uncoverXLeft'   => array(
 				'value' => 'uncoverXLeft',
@@ -364,36 +364,36 @@ add_filter( 'vc_param_animation_style_list', 'wolf_core_add_animations' );
  */
 // function wolf_core_get_aos_animations() {
 // return array(
-// 'fade'            => esc_html__( 'Fade', 'wolf-visual-composer' ),
-// 'fade-up'         => esc_html__( 'Fade Up', 'wolf-visual-composer' ),
-// 'fade-down'       => esc_html__( 'Fade Down', 'wolf-visual-composer' ),
-// 'fade-left'       => esc_html__( 'Fade Left', 'wolf-visual-composer' ),
-// 'fade-right'      => esc_html__( 'Fade Right', 'wolf-visual-composer' ),
-// 'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-visual-composer' ),
-// 'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-visual-composer' ),
-// 'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-visual-composer' ),
-// 'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-visual-composer' ),
+// 'fade'            => esc_html__( 'Fade', 'wolf-core' ),
+// 'fade-up'         => esc_html__( 'Fade Up', 'wolf-core' ),
+// 'fade-down'       => esc_html__( 'Fade Down', 'wolf-core' ),
+// 'fade-left'       => esc_html__( 'Fade Left', 'wolf-core' ),
+// 'fade-right'      => esc_html__( 'Fade Right', 'wolf-core' ),
+// 'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-core' ),
+// 'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-core' ),
+// 'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-core' ),
+// 'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-core' ),
 
-// 'flip-up'         => esc_html__( 'Flip Up', 'wolf-visual-composer' ),
-// 'flip-down'       => esc_html__( 'Flip Down', 'wolf-visual-composer' ),
-// 'flip-left'       => esc_html__( 'Flip Left', 'wolf-visual-composer' ),
-// 'flip-right'      => esc_html__( 'Flip Right', 'wolf-visual-composer' ),
+// 'flip-up'         => esc_html__( 'Flip Up', 'wolf-core' ),
+// 'flip-down'       => esc_html__( 'Flip Down', 'wolf-core' ),
+// 'flip-left'       => esc_html__( 'Flip Left', 'wolf-core' ),
+// 'flip-right'      => esc_html__( 'Flip Right', 'wolf-core' ),
 
-// 'slide-up'        => esc_html__( 'Slide Up', 'wolf-visual-composer' ),
-// 'slide-down'      => esc_html__( 'Slide Down', 'wolf-visual-composer' ),
-// 'slide-left'      => esc_html__( 'Slide Left', 'wolf-visual-composer' ),
-// 'slide-right'     => esc_html__( 'Slide Right', 'wolf-visual-composer' ),
+// 'slide-up'        => esc_html__( 'Slide Up', 'wolf-core' ),
+// 'slide-down'      => esc_html__( 'Slide Down', 'wolf-core' ),
+// 'slide-left'      => esc_html__( 'Slide Left', 'wolf-core' ),
+// 'slide-right'     => esc_html__( 'Slide Right', 'wolf-core' ),
 
-// 'zoom-in'         => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
-// 'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-visual-composer' ),
-// 'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-visual-composer' ),
-// 'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-visual-composer' ),
-// 'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-visual-composer' ),
-// 'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
-// 'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-visual-composer' ),
-// 'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-visual-composer' ),
-// 'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-visual-composer' ),
-// 'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-visual-composer' ),
+// 'zoom-in'         => esc_html__( 'Zoom In', 'wolf-core' ),
+// 'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-core' ),
+// 'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-core' ),
+// 'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-core' ),
+// 'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-core' ),
+// 'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-core' ),
+// 'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-core' ),
+// 'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-core' ),
+// 'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-core' ),
+// 'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-core' ),
 // );
 // }
 
@@ -407,11 +407,11 @@ function wolf_core_filter_animation_styles( $animation_syles ) {
 
 	$new_animations = array(
 		array(
-			// 'label' => esc_html__( 'New Animations', 'wolf-visual-composer' ),
-			'values' => array_flip( array( 'none' => esc_html__( 'None', 'wolf-visual-composer' ) ) ),
+			// 'label' => esc_html__( 'New Animations', 'wolf-core' ),
+			'values' => array_flip( array( 'none' => esc_html__( 'None', 'wolf-core' ) ) ),
 		),
 		array(
-			'label'  => esc_html__( 'New Animation Engine (beta)', 'wolf-visual-composer' ),
+			'label'  => esc_html__( 'New Animation Engine (beta)', 'wolf-core' ),
 			'values' => array_flip( wolf_core_get_aos_animations() ),
 		),
 	);
