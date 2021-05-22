@@ -41,11 +41,20 @@ add_action(
 	'elementor/element/section/section_layout/before_section_end',
 	function( $section, $args ) {
 
+
 		$section->add_control(
 			'name',
 			array(
 				'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
 				'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+			)
+		);
+
+		$section->add_control(
+			'el_class',
+			array(
+				'label'       => esc_html__( 'Extra Class', 'wolf-core' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
 			)
 		);
@@ -112,6 +121,11 @@ add_action(
 		/* Default font color */
 		if ( isset( $settings['font_color'] ) ) {
 			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-font-' . esc_attr( $settings['font_color'] ) );
+		}
+
+		/* Section ID and name data for one-page feature */
+		if ( isset( $settings['el_class'] ) ) {
+			$widget->add_render_attribute( '_wrapper', 'class', esc_attr( $settings['el_class'] ) );
 		}
 
 		/* Section ID and name data for one-page feature */

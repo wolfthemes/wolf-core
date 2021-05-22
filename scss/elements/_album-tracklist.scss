@@ -1,0 +1,271 @@
+/**
+ * @# Album Tracklist
+ **/
+.wolf-core-album-tracklist {
+}
+
+ol.wolf-core-album-tracklist-list {
+	padding: 0 !important;
+	margin: 0 !important;
+	border: none !important;
+	list-style-type: none;
+}
+
+li.wolf-core-album-tracklist-item {
+	//	list-style-type: none;
+	list-style-type: none !important;
+}
+
+.wolf-core-album-tracklist-ordered {
+	ol.wolf-core-album-tracklist-list {
+		counter-reset: item;
+	}
+
+	li.wolf-core-album-tracklist-item {
+		counter-increment: step-counter;
+		.wolf-core-ati-title:before {
+			content: counter(step-counter) '.';
+			margin-right: 8px;
+		}
+	}
+}
+
+li.wolf-core-album-tracklist-item {
+	position: relative;
+	line-height: 1.4;
+	padding: 18px 0;
+	border-bottom: 1px solid #f4f4f4;
+	font-size: 16px;
+}
+
+.wolf-core-ati-table {
+	//position: absolute;
+	//top: 50%;
+	//transform:translate3d(0,-50%,0);
+	//left: 5px;
+
+	//margin-top: -1px;
+
+	//justify-content: space-between;
+	width: 100%;
+	display: table;
+}
+
+.wolf-core-ati-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+$action_w: 132px;
+$cell: 44px;
+
+.wolf-core-ati-title-cell {
+	//font-weight: 700;
+	width: calc(100% - #{$action_w + $cell * 3});
+	font-size: 15px;
+}
+
+.wolf-core-ati-duration-cell {
+	text-align: left;
+	//width: 150px;
+	font-weight: 400;
+	opacity: 0.88;
+	font-size: 12px;
+	width: $cell;
+}
+
+.wolf-core-ati-audio-cell {
+	text-align: center;
+	width: $cell;
+}
+
+.wolf-core-ati-play,
+.wolf-core-ati-pause {
+	transition: opacity 0.2s ease;
+	opacity: 0;
+}
+
+.wolf-core-ati-play {
+	opacity: 1;
+}
+
+.wolf-core-ati-play-button {
+	position: relative;
+	width: 22px;
+	height: 22px;
+	//top: 3px;
+	&.wolf-core-ati-track-playing {
+		.wolf-core-ati-play {
+			opacity: 0;
+		}
+
+		.wolf-core-ati-pause {
+			opacity: 1;
+		}
+	}
+}
+
+.wolf-core-ati-video-cell {
+	text-align: left;
+	width: $cell;
+}
+
+.wolf-core-ati-action-cell {
+	width: $action_w;
+	text-align: right;
+	font-weight: 400;
+	font-size: 18px;
+
+	.added_to_cart {
+		display: none;
+	}
+}
+
+.wolf-core-ati-price {
+	font-size: 13px;
+	padding-right: 8px;
+}
+
+.wolf-core-ati-add-to-cart-button {
+	position: relative;
+}
+
+.wolf-core-ati-add-to-cart-button-title {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 5;
+}
+
+.wolf-core-ati-add-to-cart {
+	position: relative;
+	z-index: 0;
+}
+
+.wolf-core-ati-add-to-cart-button.loading .wolf-core-ati-add-to-cart:before {
+	opacity: 0.66;
+}
+
+.wolf-core-ati-add-to-cart-button.added .wolf-core-ati-add-to-cart:before {
+	animation: wolf_core_ati_pop 0.3s linear 1;
+}
+
+// Add to cart pop animation
+@keyframes wolf_core_ati_pop {
+	50% {
+		transform: scale(1.8);
+	}
+}
+
+.wolf-core-ati-play-button {
+	display: block;
+	position: relative;
+	width: 30px;
+
+	.wolf-core-ati-icon {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+.wolf-core-ati-link {
+	cursor: pointer;
+}
+
+.wolf-core-ati-icon:before {
+	position: relative;
+	margin: 0 8px;
+	@include icon();
+	font-family: FontAwesome;
+}
+
+.wolf-core-ati-play:before {
+	content: '\f04b';
+}
+
+.wolf-core-ati-pause:before {
+	content: '\f04c';
+}
+
+.wolf-core-ati-video:before {
+	content: '\f03d';
+}
+
+.wolf-core-ati-itunes:before {
+	content: '\f179';
+}
+
+.wolf-core-ati-amazon:before {
+	content: '\f270';
+	top: 2px;
+}
+
+.wolf-core-ati-googleplay:before {
+	font-family: socicon;
+	content: '\e064';
+	top: 1px;
+}
+
+.wolf-core-ati-buy:before {
+	content: '\f07a';
+}
+
+.wolf-core-ati-add-to-cart:before {
+	content: '\f218';
+}
+
+.wolf-core-ati-download:before {
+	content: '\f0ed';
+}
+
+.wolf-core-font-dark {
+	li.wolf-core-album-tracklist-item {
+		border-color: rgba(0, 0, 0, 0.14);
+	}
+}
+
+.wolf-core-font-light {
+	li.wolf-core-album-tracklist-item {
+		border-color: rgba(255, 255, 255, 0.14);
+	}
+}
+
+.wolf-core-album-tracklist-500,
+.wolf-core-album-tracklist-380 {
+	li.wolf-core-album-tracklist-item {
+		font-size: 12px;
+	}
+
+	.wolf-core-ati-duration-cell {
+		display: none;
+	}
+
+	.wolf-core-ati-action-cell {
+		font-size: 14px;
+	}
+
+	.wolf-core-ati-title-cell {
+		padding-right: 8px;
+		width: 120px;
+		font-size: 12px;
+	}
+
+	.wolf-core-ati-play-button {
+		top: 3px;
+	}
+}
+
+.wolf-core-album-tracklist-380 {
+	// .wolf-core-ati-audio-cell,
+	// .wolf-core-ati-video-cell{
+	// 	width: 30px;
+	// }
+
+	// .wolf-core-ati-title-cell{
+	// 	width: 150px;
+	// }
+}

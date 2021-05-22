@@ -1240,3 +1240,32 @@ function wolf_core_get_breadcrumb() {
 
 	return $output;
 }
+
+/**
+ * Get current page URL
+ */
+function wolf_core_get_current_url() {
+	global $wp;
+	return esc_url( home_url( add_query_arg( array(), $wp->request ) ) );
+}
+
+/**
+ * Add to cart tag
+ *
+ * @param int    $product_id
+ * @param string $text button class
+ * @param string $classes link text content
+ * @return string
+ */
+function wolf_core_add_to_cart( $product_id, $classes = '', $text = '' ) {
+	// <a rel="nofollow" href="/factory/retine/shop/shop-boxed/?add-to-cart=60" data-quantity="1" data-product_id="60" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart"><span>Add to cart</span></a>
+	$wc_url = untrailingslashit( wolf_core_get_current_url() ) . '/?add-to-cart=' . absint( $product_id );
+
+	$classes .= ' product_type_simple add_to_cart_button ajax_add_to_cart';
+
+	return '<a
+		href="' . esc_url( $wc_url ) . '"
+		rel="nofollow"
+		data-quantity="1" data-product_id="' . absint( $product_id ) . '"
+		class="' . wolf_core_sanitize_html_classes( $classes ) . '">' . $text . '</a>';
+}

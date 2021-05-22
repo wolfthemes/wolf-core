@@ -549,7 +549,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'admin-theme-activation',
 				'classes/class-options',
 				'classes/class-admin',
-				'classes/class-video-thumbnail-generator',
+				//'classes/class-video-thumbnail-generator',
 				'classes/class-metaboxes',
 			);
 

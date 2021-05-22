@@ -90,6 +90,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		'select'   => \Elementor\Controls_Manager::SELECT,
 		'checkbox' => \Elementor\Controls_Manager::SWITCHER,
 		'link'     => \Elementor\Controls_Manager::URL,
+		'audio'    => \Elementor\Controls_Manager::MEDIA,
+		'video'    => \Elementor\Controls_Manager::MEDIA,
 	);
 
 	foreach ( $params as $p ) {
@@ -114,17 +116,40 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			foreach ( $p['params'] as $r_param ) {
 
+				$r_type = ( isset( $r_param['type'] ) ) ? $elementor_types[ $r_param['type'] ] : 'text';
+
+				//debug( $r_type );
+
+				$r_params = array(
+					'label'       => $r_param['label'],
+					'type'        => $r_type,
+					//'default'     => ( isset( $r_param['default'] ) ) ? $r_param['default'] : array(),
+					'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
+					'description' => ( isset( $r_param['description'] ) ) ? $r_param['description'] : '',
+					'condition' => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
+					'label_block' => true,
+				);
+
+				if ( isset( $r_param['type'] ) ) {
+
+					if ( 'audio' === $r_param['type'] ) {
+						$r_params['media_type'] = 'audio';
+					} elseif ( 'video' === $r_param['type'] ) {
+						$r_params['media_type'] = 'video';
+					} elseif ( 'select' === $r_param['type'] ) {
+						$r_params['options'] = $r_param['options'];
+					}
+				}
+
+				//debug( $r_params );
+
 				$repeater->add_control(
 					$r_param['param_name'],
-					array(
-						'label'       => $r_param['label'],
-						'type'        => ( isset( $r_param['type'] ) ) ? $elementor_types[ $r_param['type'] ] : 'text',
-						'default'     => ( isset( $r_param['default'] ) ) ? $r_param['default'] : '',
-						'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
-						'label_block' => true,
-					)
+					$r_params
 				);
 			}
+
+			//die();
 
 			$widget->add_control(
 				$p['param_name'],
@@ -132,8 +157,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					'label'       => $p['label'],
 					'type'        => \Elementor\Controls_Manager::REPEATER,
 					'fields'      => $repeater->get_controls(),
-					'default'     => $p['defaults'],
-					'condition'   => $p['condition'],
+					'default'     => ( isset( $p['defaults'] ) ) ? $p['defaults'] : array(),
+					'condition'   => ( isset( $p['condition'] ) ) ? $p['condition'] : array(),
 					'title_field' => '{{{ ' . $p['params'][0]['param_name'] . ' }}}',
 				)
 			);
@@ -231,6 +256,11 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type']       = \Elementor\Controls_Manager::MEDIA;
 			$field_params['media_type'] = 'video';
+
+		} elseif ( 'audio' === $type ) {
+
+			$field_params['type']       = \Elementor\Controls_Manager::MEDIA;
+			$field_params['media_type'] = 'audio';
 
 		} elseif ( 'image' === $type ) {
 

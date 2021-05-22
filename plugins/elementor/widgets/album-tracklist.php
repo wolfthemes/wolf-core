@@ -1,6 +1,6 @@
-<?php
+<?php // phpcs:ignore
 /**
- * Content Block
+ * Album Tracklist
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_Album_Tracklist_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -29,11 +29,34 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_content_block_params();
+		$this->params = wolf_core_album_tracklist_params();
+
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+
+			$this->scripts = $this->params['properties']['scripts'];
+
+			foreach ( $this->scripts as $script ) {
+				wp_enqueue_script( $script );
+			}
+		}
 	}
 
 	/**
-	 * Get widget name.
+	 * Retrieve the list of scripts the counter widget depended on.
+	 *
+	 * Used to set scripts dependencies required to run the widget.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget scripts dependencies.
+	 */
+	public function get_script_depends() {
+		return $this->scripts;
+	}
+
+	/**
+	 * Get widget name
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -50,7 +73,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 	/**
 	 * Get widget title.
 	 *
-	 * Retrieve Pie Chart widget title.
+	 * Retrieve Album Disc widget title.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -64,7 +87,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 	/**
 	 * Get widget icon.
 	 *
-	 * Retrieve Pie Chart widget icon.
+	 * Retrieve Album Disc widget icon.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -78,7 +101,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 	/**
 	 * Get widget categories.
 	 *
-	 * Retrieve the list of categories the Pie Chart widget belongs to.
+	 * Retrieve the list of categories the Album Disc widget belongs to.
 	 *
 	 * @version 1.0.0
 	 * @access public
@@ -90,7 +113,23 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 	}
 
 	/**
-	 * Register Pie Chart widget controls.
+	 * Get widget keywords.
+	 *
+	 * Retrieve the list of keywords the widget belongs to.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget keywords.
+	 */
+	public function get_keywords() {
+		if ( isset( $this->params['properties']['keywords'] ) ) {
+			return $this->params['properties']['keywords'];
+		}
+	}
+
+	/**
+	 * Register Album Disc widget controls.
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
@@ -98,10 +137,6 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 	 * @access protected
 	 */
 	protected function _register_controls() { // phpcs:ignore
-
-		if ( 'wolf_content_block' === get_post_type() ) {
-			return;
-		}
 
 		wolf_core_register_elementor_controls( $this );
 	}
@@ -119,12 +154,11 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'content_block_id' => '',
+
 			)
 		);
 
-		echo wolf_core_content_block( $atts['content_block_id'] ); // phpcs:ignore
+		echo wolf_core_album_tracklist( $atts ); // phpcs:ignore
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Content_Block_Widget() );
-
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Album_Tracklist_Widget() );

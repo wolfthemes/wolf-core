@@ -30,6 +30,14 @@ function wolf_core_convert_params_to_vc( $params ) {
 	$vc_params['category']    = $properties['vc_category'];
 	$vc_params['icon']        = $properties['icon'];
 
+	if ( isset( $properties['vc_as_parent'] ) ) {
+		$vc_params['as_parent'] = $properties['vc_as_parent'];
+	}
+
+	if ( isset( $properties['vc_as_child'] ) ) {
+		$vc_params['as_child'] = $properties['vc_as_child'];
+	}
+
 	$vc_params['params'] = array();
 
 	/* Other */

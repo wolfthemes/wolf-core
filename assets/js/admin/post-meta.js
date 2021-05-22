@@ -31,8 +31,6 @@ var WolfCorePostMeta = function( $ ) {
 		 */
 		handleloadingAnimationType : function ( newValue ) {
 
-			//alert( self );
-
 			/* AJAX save */
 			$.post( WolfCoreJSParams.ajaxUrl, {
 				postId : elementor.$previewContents.find( "body" ).data( "post-id" ),

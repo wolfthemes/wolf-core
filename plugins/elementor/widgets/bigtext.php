@@ -156,8 +156,8 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 			array(
 				'font_family'         => '',
 				'letter_spacing'      => 0,
-				'font_weight'         => 700,
-				'text_transform'      => 'none',
+				'font_weight'         => '',
+				'text_transform'      => '',
 				'font_style'          => '',
 				'color'               => '',
 				'custom_color'        => '',
@@ -165,7 +165,7 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 				'css_animation_delay' => '',
 				'text'                => '',
 				'link'                => '',
-				'title_tag'           => 'h4',
+				'title_tag'           => 'h3',
 			)
 		);
 

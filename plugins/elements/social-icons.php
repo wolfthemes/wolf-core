@@ -85,7 +85,6 @@ function wolf_core_social_icons( $atts ) {
 
 	if ( ! $css_animation_each ) {
 		$output .= wolf_core_element_aos_animation_data_attr( $atts );
-
 	}
 
 	$output .= '>';
@@ -297,8 +296,9 @@ function wolf_core_social_icons( $atts ) {
 				$output .= '<div class="' . wolf_core_sanitize_html_classes( $icon_box_class ) . '"  style="' . wolf_core_esc_style_attr( $icon_box_style ) . '"';
 
 				if ( $css_animation_each ) {
+					$force                       = ( 'elementor' === wolf_core_get_plugin_in_use() ) ? true : false;
 					$atts['css_animation_delay'] = $single_animation_delay;
-					$output                     .= wolf_core_element_aos_animation_data_attr( $atts );
+					$output                     .= wolf_core_element_aos_animation_data_attr( $atts, $force );
 				}
 
 				$output .= '>';

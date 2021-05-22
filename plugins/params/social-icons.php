@@ -27,6 +27,7 @@ function wolf_core_social_icons_params() {
 				'vc_category'   => esc_html__( 'Social', 'wolf-core' ),
 				'el_categories' => array( 'social' ),
 				'icon'          => 'fa fa-share-alt',
+				'scripts'       => array( 'jquery', 'AOS' ),
 			),
 
 			'params'     => array(
@@ -99,6 +100,69 @@ function wolf_core_social_icons_params() {
 					'type'       => 'checkbox',
 					'label'      => sprintf( wolf_core_kses( __( 'Add %s attribute', 'wolf-core' ) ), '"noreferrer, noopener" rel' ),
 					'param_name' => 'rel',
+				),
+
+				array(
+					'type'         => 'checkbox',
+					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
+					'param_name'   => 'css_animation_each',
+					'group'        => esc_html__( 'Animation', 'wolf-core' ),
+					'weight'       => -5,
+					'page_builder' => 'vc',
+				),
+
+				array(
+					'type'         => 'hidden',
+					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
+					'param_name'   => 'css_animation_each',
+					'default'      => 'yes',
+					'page_builder' => 'elementor',
+				),
+
+				array(
+					'type'         => 'select',
+					'label'        => esc_html__( 'Animation', 'wolf-core' ),
+					'param_name'   => 'css_animation',
+					'options'      => array(
+						'none'            => esc_html__( 'None', 'wolf-core' ),
+						'fade'            => esc_html__( 'Fade', 'wolf-core' ),
+						'fade-up'         => esc_html__( 'Fade Up', 'wolf-core' ),
+						'fade-down'       => esc_html__( 'Fade Down', 'wolf-core' ),
+						'fade-left'       => esc_html__( 'Fade Left', 'wolf-core' ),
+						'fade-right'      => esc_html__( 'Fade Right', 'wolf-core' ),
+						'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-core' ),
+						'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-core' ),
+						'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-core' ),
+						'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-core' ),
+
+						'uncoverXLeft'    => esc_html__( 'uncoverXLeft', 'wolf-core' ),
+						'uncoverXRight'   => esc_html__( 'uncoverXRight', 'wolf-core' ),
+						'uncoverYTop'     => esc_html__( 'uncoverYTop', 'wolf-core' ),
+						'uncoverYBottom'  => esc_html__( 'uncoverYBottom', 'wolf-core' ),
+
+						'flip-up'         => esc_html__( 'Flip Up', 'wolf-core' ),
+						'flip-down'       => esc_html__( 'Flip Down', 'wolf-core' ),
+						'flip-left'       => esc_html__( 'Flip Left', 'wolf-core' ),
+						'flip-right'      => esc_html__( 'Flip Right', 'wolf-core' ),
+
+						'slide-up'        => esc_html__( 'Slide Up', 'wolf-core' ),
+						'slide-down'      => esc_html__( 'Slide Down', 'wolf-core' ),
+						'slide-left'      => esc_html__( 'Slide Left', 'wolf-core' ),
+						'slide-right'     => esc_html__( 'Slide Right', 'wolf-core' ),
+
+						'zoom-in'         => esc_html__( 'Zoom In', 'wolf-core' ),
+						'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-core' ),
+						'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-core' ),
+						'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-core' ),
+						'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-core' ),
+						'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-core' ),
+						'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-core' ),
+						'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-core' ),
+						'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-core' ),
+						'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-core' ),
+					),
+					'default'      => 'none',
+					'page_builder' => 'elementor',
 				),
 
 				array(

@@ -115,7 +115,7 @@ var WolfCore = (function ($) {
 
 			this.objectFitfallback();
 
-			this.videoOpener();
+			this.videoLightbox();
 
 			//this.scrollDownMousewheel();
 
@@ -1259,7 +1259,8 @@ var WolfCore = (function ($) {
 		/**
 		 * Video Opener
 		 */
-		videoOpener: function () {
+		videoLightbox: function () {
+
 			if ("undefined" !== typeof lity) {
 				$(document).on("click", ".wolf-core-video-opener", lity);
 			}

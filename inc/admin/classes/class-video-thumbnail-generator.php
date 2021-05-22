@@ -273,7 +273,7 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 
 					foreach ( $attachments as $attachment ) {
 
-						if ( get_post_meta( $attachment->ID, '_video_thumbnail_url', true ) == $new_thumbnail ) {
+						if ( get_post_meta( $attachment->ID, '_video_thumbnail_url', true ) === $new_thumbnail ) {
 							$attachment_id = $attachment->ID;
 							break;
 						}
@@ -343,7 +343,6 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 				$query      = $wpdb->prepare( "SELECT $post_table.ID FROM $post_table WHERE $post_table.guid= %s;", $attachment_url );
 				$attachment = $wpdb->get_col( $query );
 				return $attachment[0];
-
 			}
 		}
 
