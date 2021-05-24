@@ -30,20 +30,26 @@
 	}
 }
 
-.wolf-core-social-icon {
+.wolf-core-social-icon:not(.wolf-core-icon-background-style-none) {
 	.wolf-core-icon-container {
-		//margin: 0.5em 0.5em 0.5em;
+		margin: 0.5em 0.5em 0.5em;
 	}
 }
 
 /* Alignement */
-.wolf-core-socials-container {
-	&.wolf-core-text-left {
-		margin-left: -0.5em;
+.wolf-core-socials-container.wolf-core-align-left
+	.wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
+	.wolf-core-icon-container {
+	&:first-child {
+		margin-left: 0;
 	}
+}
 
-	&.wolf-core-text-right {
-		margin-right: -0.5em;
+.wolf-core-socials-container.wolf-core-align-right
+	.wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
+	.wolf-core-icon-container {
+	&:last-child {
+		margin-right: 0;
 	}
 }
 

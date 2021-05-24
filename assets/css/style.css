@@ -2203,7 +2203,6 @@ li.wolf-core-album-tracklist-item {
 }
 
 .wolf-core-ati-title-cell {
-  font-weight: 700;
   width: calc(100% - 264px);
   font-size: 15px;
 }
@@ -2286,10 +2285,10 @@ li.wolf-core-album-tracklist-item {
 }
 
 .wolf-core-ati-add-to-cart-button.added .wolf-core-ati-add-to-cart:before {
-  animation: wvc_ati_pop 0.3s linear 1;
+  animation: wolf_core_ati_pop 0.3s linear 1;
 }
 
-@keyframes wvc_ati_pop {
+@keyframes wolf_core_ati_pop {
   50% {
     transform: scale(1.8);
   }
@@ -4192,12 +4191,22 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   width: 100%;
 }
 
-/* Alignement */
-.wolf-core-socials-container.wolf-core-text-left {
-  margin-left: -0.5em;
+.wolf-core-social-icon:not(.wolf-core-icon-background-style-none) .wolf-core-icon-container {
+  margin: 0.5em 0.5em 0.5em;
 }
-.wolf-core-socials-container.wolf-core-text-right {
-  margin-right: -0.5em;
+
+/* Alignement */
+.wolf-core-socials-container.wolf-core-align-left
+.wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
+.wolf-core-icon-container:first-child {
+  margin-left: 0;
+}
+
+.wolf-core-socials-container.wolf-core-text-left .wolf-core-social-icon:not(.wolf-core-icon-background-style-none):first-child {
+  margin-left: 0;
+}
+.wolf-core-socials-container.wolf-core-text-right .wolf-core-social-icon:not(.wolf-core-icon-background-style-none):last-child {
+  margin-right: 0;
 }
 
 /* Direction */
@@ -5125,7 +5134,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   .wolf-core-mailchimp-size-large .wolf-core-mailchimp-submit-container {
     width: auto;
   }
-  .wolf-core-mailchimp-size-large.wolf-core-mailchimp-show-name-no .wolf-core-mailchimp-email-container {
+  .wolf-core-mailchimp-size-large.wolf-core-mailchimp-show-name-no .wolf-core-mailchimp-email-container, .wolf-core-mailchimp-size-large.wolf-core-mailchimp-show-name- .wolf-core-mailchimp-email-container {
     flex: 1;
   }
 

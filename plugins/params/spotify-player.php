@@ -54,8 +54,8 @@ function wolf_core_spotify_player_params() {
 					'type'        => 'text',
 					'label'       => esc_html__( 'Width', 'wolf-core' ),
 					'param_name'  => 'width',
-					'default'     => 300,
-					'placeholder' => '300',
+					'default'     => 700,
+					'placeholder' => '700',
 					'admin_label' => true,
 				),
 

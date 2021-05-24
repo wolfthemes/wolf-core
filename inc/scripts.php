@@ -118,7 +118,7 @@ function wolf_core_register_scripts() {
 	wp_register_script( 'mousewheel', WOLF_CORE_JS . '/lib/jquery.mousewheel.min.js', array( 'jquery' ), '3.1.13', true );
 
 	// InView.
-	wp_register_script( 'inview', WOLF_CORE_JS . '/lib/jquery.inview.min.js', array( 'jquery' ), '1.1.2', true );
+	wp_enqueue_script( 'inview', WOLF_CORE_JS . '/lib/jquery.inview.min.js', array( 'jquery' ), '1.1.2', true );
 
 	/* Full Page */
 	wp_register_script( 'scrolloverflow', WOLF_CORE_JS . '/lib/scrolloverflow.min.js', array(), '0.0.5', true );

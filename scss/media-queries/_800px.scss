@@ -199,7 +199,8 @@
 		}
 	}
 
-	&.wolf-core-mailchimp-show-name-no {
+	&.wolf-core-mailchimp-show-name-no,
+	&.wolf-core-mailchimp-show-name- {
 		.wolf-core-mailchimp-email-container {
 			flex: 1;
 		}
