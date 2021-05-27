@@ -51,6 +51,10 @@ function wolf_core_enqueue_styles() {
 		wp_enqueue_style( 'wolf-core-wpbpb', WOLF_CORE_CSS . '/wpbpb' . $suffix . '.css', array(), $version );
 	}
 
+	// Default icon fonts.
+	wp_register_style( 'socicon', WOLF_CORE_CSS . '/lib/fonts/socicon/socicon.min.css', array(), $version );
+	wp_register_style( 'wolficons', WOLF_CORE_CSS . '/lib/fonts/wolficons/wolficons.min.css', array(), $version );
+
 	// Libraries.
 	wp_enqueue_style( 'flexslider' ); // be sure that flexslider CSS file is enqueue BEFORE our plugin styles.
 	wp_enqueue_style( 'flickity', WOLF_CORE_CSS . '/lib/flickity.min.css', array(), '2.2.1' );

@@ -1,0 +1,91 @@
+/**
+ * @# Accordion
+ **/
+.wolf-core-accordion,
+.elementor-accordion .elementor-accordion-item {
+	.ui-state-focus {
+		outline: none;
+	}
+
+	.ui-accordion-content,
+	.elementor-tab-content {
+		padding: 1em 1.5em;
+
+		p {
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		.wpb_content_element {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.wolf-core-accordion-tab,
+.elementor-tab-title {
+	margin: 0;
+	padding: 8px 15px;
+	cursor: pointer;
+	a {
+		display: block;
+	}
+}
+
+.wolf-core-at-has-icon {
+	.wolf-core-at-title-container {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.wolf-core-at-icon-container,
+	.wolf-core-accordion-title-text {
+		display: table-cell;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	.wolf-core-at-icon-container {
+		width: 35px;
+	}
+}
+
+.wolf-core-font-dark {
+	.wolf-core-accordion,
+	.elementor-accordion .elementor-accordion-item {
+		.ui-accordion-content,
+		.elementor-tab-content {
+			background: #fff;
+			box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	.wolf-core-accordion-tab,
+	.elementor-tab-title {
+		background: #fff;
+		border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+		a {
+			color: #0d0d0d !important;
+		}
+	}
+}
+
+.wolf-core-font-light {
+	.wolf-core-accordion,
+	.elementor-accordion .elementor-accordion-item {
+		.ui-accordion-content {
+			background: #333333;
+			box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	.wolf-core-accordion-tab,
+	.elementor-tab-title {
+		background: #333333;
+		border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+		a {
+			color: #fff !important;
+		}
+	}
+}

@@ -182,5 +182,34 @@
 // 	}
 // }
 
-.wolf-core-social-icon {
+.wolf-core-font-light {
+	.wolf-core-icon-color-default {
+		color: #fff;
+	}
+
+	.wolf-core-social-icon:not(.wolf-core-icon-background-style-none) {
+		.wolf-core-icon-container {
+			background: #fff;
+		}
+
+		.wolf-core-icon {
+			color: #000;
+		}
+	}
+}
+
+.wolf-core-font-dark {
+	.wolf-core-icon-color-default {
+		color: #000;
+	}
+
+	.wolf-core-social-icon:not(.wolf-core-icon-background-style-none) {
+		.wolf-core-icon-container {
+			background: #000;
+		}
+
+		.wolf-core-icon {
+			color: #fff;
+		}
+	}
 }

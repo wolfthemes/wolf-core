@@ -314,9 +314,7 @@
 .wolf-core-font-dark .wolf-core-tabs-container .ui-tabs-panel {
   background: #fff;
 }
-.wolf-core-font-dark .wolf-core-social,
-.wolf-core-font-dark .wolf-core-icon-box a,
-.wolf-core-font-dark .wolf-core-team-member-social-container a {
+.wolf-core-font-dark .wolf-core-icon-box a {
   color: #333;
 }
 .wolf-core-font-dark .wolf-share-button-count {
@@ -388,7 +386,6 @@
 .wolf-core-font-light .owl-dot:hover {
   box-shadow: 0 0 0 1px #fff;
 }
-.wolf-core-font-light .wolf-core-social,
 .wolf-core-font-light .wolf-core-icon-box a,
 .wolf-core-font-light .wolf-core-team-member-social-container a {
   color: #fff;
@@ -1974,6 +1971,91 @@ body.wolf-core-svg #swipebox-close {
 }
 
 /**
+ * @# Accordion
+ **/
+.wolf-core-accordion .ui-state-focus,
+.elementor-accordion .elementor-accordion-item .ui-state-focus {
+  outline: none;
+}
+.wolf-core-accordion .ui-accordion-content,
+.wolf-core-accordion .elementor-tab-content,
+.elementor-accordion .elementor-accordion-item .ui-accordion-content,
+.elementor-accordion .elementor-accordion-item .elementor-tab-content {
+  padding: 1em 1.5em;
+}
+.wolf-core-accordion .ui-accordion-content p,
+.wolf-core-accordion .elementor-tab-content p,
+.elementor-accordion .elementor-accordion-item .ui-accordion-content p,
+.elementor-accordion .elementor-accordion-item .elementor-tab-content p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.wolf-core-accordion .ui-accordion-content .wpb_content_element,
+.wolf-core-accordion .elementor-tab-content .wpb_content_element,
+.elementor-accordion .elementor-accordion-item .ui-accordion-content .wpb_content_element,
+.elementor-accordion .elementor-accordion-item .elementor-tab-content .wpb_content_element {
+  margin-bottom: 0;
+}
+
+.wolf-core-accordion-tab,
+.elementor-tab-title {
+  margin: 0;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.wolf-core-accordion-tab a,
+.elementor-tab-title a {
+  display: block;
+}
+
+.wolf-core-at-has-icon .wolf-core-at-title-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.wolf-core-at-has-icon .wolf-core-at-icon-container,
+.wolf-core-at-has-icon .wolf-core-accordion-title-text {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+.wolf-core-at-has-icon .wolf-core-at-icon-container {
+  width: 35px;
+}
+
+.wolf-core-font-dark .wolf-core-accordion .ui-accordion-content,
+.wolf-core-font-dark .wolf-core-accordion .elementor-tab-content,
+.wolf-core-font-dark .elementor-accordion .elementor-accordion-item .ui-accordion-content,
+.wolf-core-font-dark .elementor-accordion .elementor-accordion-item .elementor-tab-content {
+  background: #fff;
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+.wolf-core-font-dark .wolf-core-accordion-tab,
+.wolf-core-font-dark .elementor-tab-title {
+  background: #fff;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+}
+.wolf-core-font-dark .wolf-core-accordion-tab a,
+.wolf-core-font-dark .elementor-tab-title a {
+  color: #0d0d0d !important;
+}
+
+.wolf-core-font-light .wolf-core-accordion .ui-accordion-content,
+.wolf-core-font-light .elementor-accordion .elementor-accordion-item .ui-accordion-content {
+  background: #333333;
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+.wolf-core-font-light .wolf-core-accordion-tab,
+.wolf-core-font-light .elementor-tab-title {
+  background: #333333;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+}
+.wolf-core-font-light .wolf-core-accordion-tab a,
+.wolf-core-font-light .elementor-tab-title a {
+  color: #fff !important;
+}
+
+/**
  * @# Album Disc
  **/
 .wolf-core-album-disc {
@@ -2347,7 +2429,7 @@ li.wolf-core-album-tracklist-item {
 
 .wolf-core-ati-googleplay:before {
   font-family: socicon;
-  content: '\e064';
+  content: '\e0a5';
   top: 1px;
 }
 
@@ -4202,10 +4284,9 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   margin-left: 0;
 }
 
-.wolf-core-socials-container.wolf-core-text-left .wolf-core-social-icon:not(.wolf-core-icon-background-style-none):first-child {
-  margin-left: 0;
-}
-.wolf-core-socials-container.wolf-core-text-right .wolf-core-social-icon:not(.wolf-core-icon-background-style-none):last-child {
+.wolf-core-socials-container.wolf-core-align-right
+.wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
+.wolf-core-icon-container:last-child {
   margin-right: 0;
 }
 
@@ -4284,6 +4365,26 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 .wolf-core-social.wolf-core-circle.fa-skype:before,
 .wolf-core-social.wolf-core-square.fa-skype:before {
   left: 48%;
+}
+
+.wolf-core-font-light .wolf-core-icon-color-default {
+  color: #fff;
+}
+.wolf-core-font-light .wolf-core-social-icon:not(.wolf-core-icon-background-style-none) .wolf-core-icon-container {
+  background: #fff;
+}
+.wolf-core-font-light .wolf-core-social-icon:not(.wolf-core-icon-background-style-none) .wolf-core-icon {
+  color: #000;
+}
+
+.wolf-core-font-dark .wolf-core-icon-color-default {
+  color: #000;
+}
+.wolf-core-font-dark .wolf-core-social-icon:not(.wolf-core-icon-background-style-none) .wolf-core-icon-container {
+  background: #000;
+}
+.wolf-core-font-dark .wolf-core-social-icon:not(.wolf-core-icon-background-style-none) .wolf-core-icon {
+  color: #fff;
 }
 
 /**

@@ -31,7 +31,7 @@ function wolf_core_social_icons( $atts ) {
 				'background_style'          => 'none',
 				'background_color'          => '',
 				'custom_background_color'   => '',
-				'size'                      => '',
+				'size'                      => 'fa-1x',
 				'hover_effect'              => 'opacity',
 				'css_animation'             => '',
 				'css_animation_delay'       => '',
@@ -129,7 +129,6 @@ function wolf_core_social_icons( $atts ) {
 	}
 
 	$wolf_icon_array  = array( 'bandsintown', 'evernote', 'grooveshark', 'mailchimp' );
-	$wolf_icon2_array = array();
 	$socicon_array    = array(
 		'8tracks',
 		'airbnb',
@@ -176,7 +175,7 @@ function wolf_core_social_icons( $atts ) {
 		// 'imdb',
 		'issuu',
 		'istock',
-		'itunes',
+		//'itunes',
 		'keybase',
 		'lanyrd',
 		'line',
@@ -235,7 +234,22 @@ function wolf_core_social_icons( $atts ) {
 		'zynga',
 	);
 
-	$fab_array = array( 'tiktok', 'vimeo', 'youtube' );
+	$fab_array = array(
+		'apple',
+		'bandcamp',
+		'codepen',
+		'dribbble',
+		'flickr',
+		'instagram',
+		'linkedin',
+		//'messenger',
+		'spotify',
+		'tiktok',
+		'twitter',
+		'vimeo',
+		'vk',
+		'youtube',
+	);
 
 	if ( function_exists( 'vc_icon_element_fonts_enqueue' ) ) {
 		vc_icon_element_fonts_enqueue( 'fontawesome' );
@@ -244,12 +258,18 @@ function wolf_core_social_icons( $atts ) {
 			vc_icon_element_fonts_enqueue( 'wolficons' );
 		}
 
-		if ( array_intersect( $services, $wolf_icon2_array ) || array_intersect( array_keys( $services ), $wolf_icon2_array ) ) {
-			vc_icon_element_fonts_enqueue( 'wolficons' );
+		if ( array_intersect( $services, $socicon_array ) || array_intersect( array_keys( $services ), $socicon_array ) ) {
+			vc_icon_element_fonts_enqueue( 'socicon' );
+		}
+	} else {
+		wp_enqueue_style( 'font-awesome' );
+
+		if ( array_intersect( $services, $wolf_icon_array ) || array_intersect( array_keys( $services ), $wolf_icon_array ) ) {
+			wp_enqueue_style( 'wolficons' );
 		}
 
 		if ( array_intersect( $services, $socicon_array ) || array_intersect( array_keys( $services ), $socicon_array ) ) {
-			vc_icon_element_fonts_enqueue( 'socicon' );
+			wp_enqueue_style( 'socicon' );
 		}
 	}
 
@@ -271,9 +291,6 @@ function wolf_core_social_icons( $atts ) {
 
 				if ( in_array( $service, $wolf_icon_array, true ) ) {
 					$prefix = 'wolficon';
-
-				} elseif ( in_array( $service, $wolf_icon2_array, true ) ) {
-					$prefix = 'wolficon2';
 
 				} elseif ( in_array( $service, $socicon_array, true ) ) {
 					$prefix = 'socicon';
@@ -344,8 +361,6 @@ function wolf_core_social_icons( $atts ) {
 
 			if ( in_array( $service, $wolf_icon_array, true ) ) {
 				$prefix = 'wolficon';
-			} elseif ( in_array( $service, $wolf_icon2_array, true ) ) {
-				$prefix = 'wolficon2';
 			} elseif ( in_array( $service, $socicon_array, true ) ) {
 				$prefix = 'socicon';
 

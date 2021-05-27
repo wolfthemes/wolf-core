@@ -43,7 +43,7 @@ function wolf_core_playlist( $atts ) {
 		'theme'          => $theme,
 	);
 
-	$class .= ' wvc-wolf-playlist-shortcode-container wvc-element';
+	$class .= ' wolf-core-wolf-playlist-shortcode-container wolf-core-element';
 
 	ob_start();
 	wpm_playlist( $playlist_id, $attrs );
@@ -54,7 +54,7 @@ function wolf_core_playlist( $atts ) {
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';
 
-	$output .= $playlist . '</div><!-- .wvc-wolf-playlist-shortcode-container -->';
+	$output .= $playlist . '</div><!-- .wolf-core-wolf-playlist-shortcode-container -->';
 
 	return $output;
 }

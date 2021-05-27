@@ -50,7 +50,7 @@ function wolf_core_album_tracklist( $atts ) {
 		$class .= ' wolf-core-album-tracklist-ordered';
 	}
 
-	$output = '<div itemscope="" itemtype="http://schema.org/MusicPlaylist" class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+	$output = '<wolf_core_album_tracklist itemscope="" itemtype="http://schema.org/MusicPlaylist" class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';
@@ -140,7 +140,7 @@ function wolf_core_album_tracklist( $atts ) {
 			$output .= '<span class="wolf-core-ati-cell wolf-core-ati-video-cell">';
 
 			if ( $video_url ) {
-				$output .= '<a class="wolf-core-video-opener wolf-core-ati-link" title="' . esc_html( 'Watch the video', 'wolf-visual-composer' ) . '" href="' . esc_url( $video_url ) . '">';
+				$output .= '<a class="wolf-core-video-opener wolf-core-ati-link" title="' . esc_html( 'Watch the video', 'wolf-core' ) . '" href="' . esc_url( $video_url ) . '">';
 				$output .= '<i class="wolf-core-ati-icon wolf-core-ati-video"></i>';
 				$output .= '</a>';
 			}
@@ -154,35 +154,35 @@ function wolf_core_album_tracklist( $atts ) {
 
 				$file_name = parse_url( $mp3, PHP_URL_QUERY );
 
-				$output .= '<a class="wvc-ati-link" title="' . esc_html__( 'Download', 'wolf-visual-composer' ) . '" href="' . esc_url( $mp3 ) . '" download="' . esc_attr( $file_name ) . '"><i class="wvc-ati-icon wvc-ati-download"></i></a>';
+				$output .= '<a class="wolf-core-ati-link" title="' . esc_html__( 'Download', 'wolf-core' ) . '" href="' . esc_url( $mp3 ) . '" download="' . esc_attr( $file_name ) . '"><i class="wolf-core-ati-icon wolf-core-ati-download"></i></a>';
 
 			} elseif ( 'link' === $action ) {
 
 				if ( $price ) {
-					$output .= '<span class="wvc-ati-price">' . sanitize_text_field( $price ) . '</span>';
+					$output .= '<span class="wolf-core-ati-price">' . sanitize_text_field( $price ) . '</span>';
 				}
 
 				if ( $itunes_url ) {
-					$output .= '<a class="wvc-ati-link" title="' . sprintf( esc_html__( 'Buy on %s', 'wolf-visual-composer' ), 'iTunes' ) . '" href="' . esc_url( $itunes_url ) . '" target="_blank"><i class="wvc-ati-icon wvc-ati-itunes"></i></a>';
+					$output .= '<a class="wolf-core-ati-link" title="' . sprintf( esc_html__( 'Buy on %s', 'wolf-core' ), 'Apple Music' ) . '" href="' . esc_url( $itunes_url ) . '" target="_blank"><i class="wolf-core-ati-icon wolf-core-ati-itunes"></i></a>';
 				}
 
 				if ( $amazon_url ) {
-					$output .= '<a class="wvc-ati-link" title="' . sprintf( esc_html__( 'Buy on %s', 'wolf-visual-composer' ), 'amazon' ) . '" href="' . esc_url( $amazon_url ) . '" target="_blank"><i class="wvc-ati-icon wvc-ati-amazon"></i></a>';
+					$output .= '<a class="wolf-core-ati-link" title="' . sprintf( esc_html__( 'Buy on %s', 'wolf-core' ), 'amazon' ) . '" href="' . esc_url( $amazon_url ) . '" target="_blank"><i class="wolf-core-ati-icon wolf-core-ati-amazon"></i></a>';
 				}
 
 				if ( $googleplay_url ) {
-					$output .= '<a class="wvc-ati-link" title="' . sprintf( esc_html__( 'Buy on %s', 'wolf-visual-composer' ), 'Google Play' ) . '" href="' . esc_url( $googleplay_url ) . '" target="_blank"><i class="wvc-ati-icon wvc-ati-googleplay"></i></a>';
+					$output .= '<a class="wolf-core-ati-link" title="' . sprintf( esc_html__( 'Buy on %s', 'wolf-core' ), 'YT Music' ) . '" href="' . esc_url( $googleplay_url ) . '" target="_blank"><i class="wolf-core-ati-icon wolf-core-ati-googleplay"></i></a>';
 				}
 
 				if ( $buy_url ) {
-					$output .= '<a class="wvc-ati-link" title="' . esc_html__( 'Buy', 'wolf-visual-composer' ) . '" href="' . esc_url( $buy_url ) . '" target="_blank"><i class="wvc-ati-icon wvc-ati-buy"></i></a>';
+					$output .= '<a class="wolf-core-ati-link" title="' . esc_html__( 'Buy', 'wolf-core' ) . '" href="' . esc_url( $buy_url ) . '" target="_blank"><i class="wolf-core-ati-icon wolf-core-ati-buy"></i></a>';
 				}
 
 				if ( $product_id ) {
-					$output .= wolf_core_add_to_cart( $product_id, 'wvc-ati-link wvc-ati-add-to-cart-button', '<span class="wvc-ati-add-to-cart-button-title" title="' . esc_html__( 'Add to cart', 'wolf-visual-composer' ) . '"></span><i class="wvc-ati-icon wvc-ati-add-to-cart"></i>' );
+					$output .= wolf_core_add_to_cart( $product_id, 'wolf-core-ati-link wolf-core-ati-add-to-cart-button', '<span class="wolf-core-ati-add-to-cart-button-title" title="' . esc_html__( 'Add to cart', 'wolf-core' ) . '"></span><i class="wolf-core-ati-icon wolf-core-ati-add-to-cart"></i>' );
 				}
 			} elseif ( 'add_to_cart' === $action && absint( $product_id ) ) {
-				$output .= '<i class="wvc-ati-icon wvc-ati-add-to-cart-icon"></i>';
+				$output .= '<i class="wolf-core-ati-icon wolf-core-ati-add-to-cart-icon"></i>';
 			}
 
 			$output .= '</span>';
@@ -192,7 +192,7 @@ function wolf_core_album_tracklist( $atts ) {
 		}
 	}
 
-	$output .= '</ol></div>';
+	$output .= '</ol></wolf_core_album_tracklist>';
 
 	return $output;
 }

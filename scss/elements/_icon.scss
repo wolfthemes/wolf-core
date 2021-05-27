@@ -65,6 +65,13 @@ $accent: red;
 	}
 }
 
+.wolf-core-icon-background-style-rounded-less,
+.wolf-core-icon-background-style-rounded-less-outline {
+	.wolf-core-icon-container {
+		border-radius: 0.5em;
+	}
+}
+
 /* Outline */
 .wolf-core-icon-background-style-rounded-outline,
 .wolf-core-icon-background-style-boxed-outline,

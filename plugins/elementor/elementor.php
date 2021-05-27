@@ -85,6 +85,7 @@ class Wolf_Core_Elementor_Extension { // phpcs:ignore
 			'heading',
 			'image',
 			'page',
+			'text-editor',
 		);
 
 		foreach ( $controls_files as $controls_file ) {

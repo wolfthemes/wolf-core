@@ -136,8 +136,12 @@ function wolf_core_get_elements() {
 		$wolf_core_elements[] = 'contact-form-7';
 	}
 
-	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { // and not Elementor Pro.
+	if ( 'vc' === wolf_core_get_plugin_in_use() || 'elementor' === wolf_core_get_plugin_in_use() ) { // and not Elementor Pro?
 		$wolf_core_elements[] = 'countdown';
+	}
+
+	if ( 'elementor' === wolf_core_get_plugin_in_use() ) { // and not Elementor Pro?
+		//$wolf_core_elements[] = 'blockquote';
 	}
 
 	if ( function_exists( 'sb_instagram_feed_init' ) ) {
@@ -310,8 +314,8 @@ function wolf_core_get_socials() {
 		'tripadvisor',
 		'skype',
 		'snapchat',
-		'itunes',
-		'delicious',
+		//'itunes',
+		//'delicious',
 		'stumbleupon',
 		// 'forrst',
 		// 'evernote',

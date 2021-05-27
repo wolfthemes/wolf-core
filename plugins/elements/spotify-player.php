@@ -44,7 +44,7 @@ function wolf_core_spotify_player( $atts ) {
 
 	$inline_style .= 'max-width:' . absint( $width ) . 'px';
 
-	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+	$output .= '<wolf_core_spotify_player class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';
@@ -60,7 +60,7 @@ function wolf_core_spotify_player( $atts ) {
 		}
 	}
 
-	$output .= '</div><!-- .wolf-core-spotify-container -->';
+	$output .= '</wolf_core_spotify_player><!-- .wolf-core-spotify-container -->';
 
 	return $output;
 }

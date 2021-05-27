@@ -64,10 +64,12 @@ class Wolf_Core_Widget_Socials extends WP_Widget {
 			echo $before_title . $title . $after_title;
 		}
 		echo wolf_core_social_icons(
-			apply_filters( 'wolf_core_widget_socials_args', array(
-				'services'  => $socials,
-				'alignment' => 'left',
-			) )
+			apply_filters(
+				'wolf_core_widget_socials_args',
+				array(
+					'services' => $socials,
+				)
+			)
 		);
 		echo $after_widget;
 	}
