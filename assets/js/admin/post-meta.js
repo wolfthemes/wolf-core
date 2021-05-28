@@ -15,15 +15,17 @@ var WolfCorePostMeta = function( $ ) {
 		 * Init UI
 		 */
 		init : function () {
-			if ( elementor !== undefined && elementor !== elementor.settings && elementor !== elementor.settings.page ) {
 
-				elementor.settings.page.addChangeCallback( "loading_animation_type", this.handleMenuLayout );
-				elementor.settings.page.addChangeCallback( "menu_layout", this.handleMenuLayout );
-				elementor.settings.page.addChangeCallback( "menu_style", this.handleMenuStyle );
-				elementor.settings.page.addChangeCallback( "hero_font_tone", this.handleHeroFontTone );
-				elementor.settings.page.addChangeCallback( "after_header_block", this.handleAfterHeaderBlock );
-				elementor.settings.page.addChangeCallback( "before_footer_block", this.handlebeforeFooterBlock );
+			if ( "undefined" === typeof elementor ) {
+				return;
 			}
+
+			elementor.settings.page.addChangeCallback( "loading_animation_type", this.handleMenuLayout );
+			elementor.settings.page.addChangeCallback( "menu_layout", this.handleMenuLayout );
+			elementor.settings.page.addChangeCallback( "menu_style", this.handleMenuStyle );
+			elementor.settings.page.addChangeCallback( "hero_font_tone", this.handleHeroFontTone );
+			elementor.settings.page.addChangeCallback( "after_header_block", this.handleAfterHeaderBlock );
+			elementor.settings.page.addChangeCallback( "before_footer_block", this.handlebeforeFooterBlock );
 		},
 
 		/**

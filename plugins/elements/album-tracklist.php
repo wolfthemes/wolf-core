@@ -50,7 +50,7 @@ function wolf_core_album_tracklist( $atts ) {
 		$class .= ' wolf-core-album-tracklist-ordered';
 	}
 
-	$output = '<wolf_core_album_tracklist itemscope="" itemtype="http://schema.org/MusicPlaylist" class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+	$output = '<wolf-core-album-tracklist itemscope="" itemtype="http://schema.org/MusicPlaylist" class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';
@@ -192,7 +192,7 @@ function wolf_core_album_tracklist( $atts ) {
 		}
 	}
 
-	$output .= '</ol></wolf_core_album_tracklist>';
+	$output .= '</ol></wolf-core-album-tracklist>';
 
 	return $output;
 }

@@ -134,6 +134,42 @@
 		}
 	}
 
+	&.wolf-core-button-size-xl {
+		.wolf-core-icon {
+			//	margin-top: -12px;
+		}
+
+		&.wolf-core-button-icon-align-right {
+			.wolf-core-icon {
+				transform: translate3d(-8px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(-16px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(0, -50%, 0);
+				}
+			}
+		}
+
+		&.wolf-core-button-icon-align-left {
+			.wolf-core-icon {
+				transform: translate3d(-8px, -50%, 0);
+			}
+
+			&:hover {
+				span {
+					transform: translateX(16px);
+				}
+				.wolf-core-icon {
+					transform: translate3d(-16px, -50%, 0);
+				}
+			}
+		}
+	}
+
 	&.wolf-core-button-size-lg {
 		.wolf-core-icon {
 			//	margin-top: -12px;
@@ -289,7 +325,8 @@
 // Medium
 .wolf-core-button-size-sm,
 .wolf-core-button-size-md,
-.wolf-core-button-size-lg {
+.wolf-core-button-size-lg,
+.wolf-core-button-size-xl {
 	font-size: 16px;
 	padding: 18px 35px;
 }
@@ -313,6 +350,12 @@
 
 	// Extra Large
 	.wolf-core-button-size-lg {
+		font-size: 24px;
+		padding: 24px 45px;
+	}
+
+	// Extra Large
+	.wolf-core-button-size-xl {
 		font-size: 24px;
 		padding: 24px 45px;
 	}

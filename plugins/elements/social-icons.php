@@ -239,6 +239,7 @@ function wolf_core_social_icons( $atts ) {
 		'bandcamp',
 		'codepen',
 		'dribbble',
+		'facebook',
 		'flickr',
 		'instagram',
 		'linkedin',
@@ -279,7 +280,7 @@ function wolf_core_social_icons( $atts ) {
 
 		foreach ( $services as $service ) {
 
-			$fa = 'fa';
+			$fa = 'fab';
 
 			if ( in_array( $service, $wolf_core_socials, true ) ) {
 

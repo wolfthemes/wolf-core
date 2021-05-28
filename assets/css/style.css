@@ -2775,6 +2775,24 @@ li.wolf-core-album-tracklist-item {
 .wolf-core-button-icon-hover-reveal:hover .wolf-core-icon {
   opacity: 1;
 }
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xl.wolf-core-button-icon-align-right .wolf-core-icon {
+  transform: translate3d(-8px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xl.wolf-core-button-icon-align-right:hover span {
+  transform: translateX(-16px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xl.wolf-core-button-icon-align-right:hover .wolf-core-icon {
+  transform: translate3d(0, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xl.wolf-core-button-icon-align-left .wolf-core-icon {
+  transform: translate3d(-8px, -50%, 0);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xl.wolf-core-button-icon-align-left:hover span {
+  transform: translateX(16px);
+}
+.wolf-core-button-icon-hover-reveal.wolf-core-button-size-xl.wolf-core-button-icon-align-left:hover .wolf-core-icon {
+  transform: translate3d(-16px, -50%, 0);
+}
 .wolf-core-button-icon-hover-reveal.wolf-core-button-size-lg.wolf-core-button-icon-align-right .wolf-core-icon {
   transform: translate3d(-8px, -50%, 0);
 }
@@ -2856,7 +2874,8 @@ li.wolf-core-album-tracklist-item {
 
 .wolf-core-button-size-sm,
 .wolf-core-button-size-md,
-.wolf-core-button-size-lg {
+.wolf-core-button-size-lg,
+.wolf-core-button-size-xl {
   font-size: 16px;
   padding: 18px 35px;
 }
@@ -2876,6 +2895,11 @@ li.wolf-core-album-tracklist-item {
   }
 
   .wolf-core-button-size-lg {
+    font-size: 24px;
+    padding: 24px 45px;
+  }
+
+  .wolf-core-button-size-xl {
     font-size: 24px;
     padding: 24px 45px;
   }
@@ -3363,7 +3387,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
  **/
 .wolf-core-icon {
   display: inline-block;
-  line-height: 1;
   transition: all 0.3s;
   font-size: 50px;
   text-align: center;
@@ -3411,6 +3434,11 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 .wolf-core-icon-background-style-rounded .wolf-core-icon-container,
 .wolf-core-icon-background-style-rounded-outline .wolf-core-icon-container {
   border-radius: 999em;
+}
+
+.wolf-core-icon-background-style-rounded-less .wolf-core-icon-container,
+.wolf-core-icon-background-style-rounded-less-outline .wolf-core-icon-container {
+  border-radius: 0.5em;
 }
 
 /* Outline */
