@@ -105,6 +105,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		$type                        = isset( $p['type'] ) ? $p['type'] : '';
 		$field_params['label']       = isset( $p['label'] ) ? $p['label'] : '';
 		$field_params['placeholder'] = isset( $p['placeholder'] ) ? $p['placeholder'] : '';
+		$field_params['selector'] = isset( $p['selector'] ) ? $p['selector'] : '';
 
 		if ( isset( $p['default'] ) ) {
 			$field_params['default'] = $p['default'];
@@ -118,15 +119,15 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 				$r_type = ( isset( $r_param['type'] ) ) ? $elementor_types[ $r_param['type'] ] : 'text';
 
-				//debug( $r_type );
+				// debug( $r_type );
 
 				$r_params = array(
 					'label'       => $r_param['label'],
 					'type'        => $r_type,
-					//'default'     => ( isset( $r_param['default'] ) ) ? $r_param['default'] : array(),
+					// 'default'     => ( isset( $r_param['default'] ) ) ? $r_param['default'] : array(),
 					'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
 					'description' => ( isset( $r_param['description'] ) ) ? $r_param['description'] : '',
-					'condition' => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
+					'condition'   => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
 					'label_block' => true,
 				);
 
@@ -141,7 +142,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					}
 				}
 
-				//debug( $r_params );
+				// debug( $r_params );
 
 				$repeater->add_control(
 					$r_param['param_name'],
@@ -149,7 +150,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				);
 			}
 
-			//die();
+			// die();
 
 			$widget->add_control(
 				$p['param_name'],
@@ -200,7 +201,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		} elseif ( 'link' === $type ) {
 
 			$field_params['type']        = \Elementor\Controls_Manager::URL;
-			$field_params['placeholser'] = 'https://your-website.com';
+			$field_params['placeholder'] = 'https://your-website.com';
 
 		} elseif ( 'icon' === $type ) {
 

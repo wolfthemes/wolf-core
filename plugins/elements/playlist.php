@@ -21,8 +21,8 @@ function wolf_core_playlist( $atts ) {
 			$atts,
 			array(
 				'playlist_id'         => '',
-				'show_tracklist'      => '',
-				'theme'               => '',
+				'show_tracklist'      => 'yes',
+				'theme'               => 'dark',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
 				'el_class'            => '',

@@ -49,6 +49,7 @@ Event
 var WolfCore = (function ($) {
 	"use strict";
 
+
 	return {
 		body: $("body"),
 		isMobile: false,
@@ -971,6 +972,7 @@ var WolfCore = (function ($) {
 		 * Scroll to next section
 		 */
 		scrollToNextSection: function ($currentRow, callback) {
+
 			var _this = this,
 				sectionOffsetTop,
 				toolBarOffset = this.getToolBarOffset(),

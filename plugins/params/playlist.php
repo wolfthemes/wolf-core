@@ -31,6 +31,8 @@ function wolf_core_playlist_params() {
 		)
 	); // get all playlist.
 
+	$choices[0] = esc_html__( 'Choose a Playlist', '%TEXDOMAIN%' );
+
 	foreach ( $playlists as $playlist ) {
 		$choices[ $playlist->ID ] = $playlist->post_title;
 	}

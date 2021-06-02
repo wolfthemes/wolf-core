@@ -23,7 +23,7 @@ function wolf_core_album_disc( $atts ) {
 			array(
 				'type'                => 'cd', // CD or vinyl.
 				'alignment'           => '',
-				'worn_border'         => 'yes',
+				'worn_border'         => 'no',
 				'rotate'              => '',
 				'rotation_speed'      => '',
 				'cover_image'         => '',

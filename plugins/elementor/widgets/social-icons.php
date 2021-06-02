@@ -31,14 +31,14 @@ class Elementor_Socials_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		$this->params = wolf_core_social_icons_params();
 
-		if ( isset( $this->params['properties']['scripts'] ) ) {
+		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-			$this->scripts = $this->params['properties']['scripts'];
+		// 	$this->scripts = $this->params['properties']['scripts'];
 
-			foreach ( $this->scripts as $script ) {
-				wp_enqueue_script( $script );
-			}
-		}
+		// 	foreach ( $this->scripts as $script ) {
+		// 		wp_enqueue_script( $script );
+		// 	}
+		// }
 	}
 
 	/**

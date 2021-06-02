@@ -31,14 +31,14 @@ class Elementor_Mailchimp_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 
 		$this->params = wolf_core_mailchimp_params();
 
-		if ( isset( $this->params['properties']['scripts'] ) ) {
+		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-			$this->scripts = $this->params['properties']['scripts'];
+		// 	$this->scripts = $this->params['properties']['scripts'];
 
-			foreach ( $this->scripts as $script ) {
-				wp_enqueue_script( $script );
-			}
-		}
+		// 	foreach ( $this->scripts as $script ) {
+		// 		wp_enqueue_script( $script );
+		// 	}
+		// }
 	}
 
 	/**

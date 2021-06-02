@@ -2890,18 +2890,18 @@ li.wolf-core-album-tracklist-item {
 
 @media screen and (min-width: 800px) {
   .wolf-core-button-size-md {
-    font-size: 18px;
-    padding: 20px 38px;
+    padding: 18px 45px;
+    font-size: 13px;
   }
 
   .wolf-core-button-size-lg {
-    font-size: 24px;
-    padding: 24px 45px;
+    font-size: 16px;
+    padding: 20px 55px;
   }
 
   .wolf-core-button-size-xl {
-    font-size: 24px;
-    padding: 24px 45px;
+    font-size: 18px;
+    padding: 25px 75px;
   }
 }
 /**

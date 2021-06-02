@@ -39,7 +39,7 @@ function wolf_core_background_params() {
 			'param_name'         => 'background_color',
 			'value'              => array_merge(
 				array( esc_html__( 'Default', 'wolf-core' ) => 'default' ),
-				wolf_core_get_shared_colors(),
+				array_flip( wolf_core_get_shared_colors() ),
 				array( esc_html__( 'Custom color', 'wolf-core' ) => 'custom' ),
 				array( esc_html__( 'Transparent', 'wolf-core' ) => 'transparent' )
 			),

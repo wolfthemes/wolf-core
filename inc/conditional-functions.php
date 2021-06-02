@@ -39,7 +39,7 @@ function wolf_core_is_page_builder_page() {
 	$is_events_page      = function_exists( 'wolf_events_get_page_id' ) && is_page( wolf_events_get_page_id() );
 	$is_portfolio_page   = function_exists( 'wolf_portfolio_get_page_id' ) && is_page( wolf_portfolio_get_page_id() );
 
-	if ( $is_videos_page || $is_discography_page || $is_albums_page || $is_events_page ) {
+	if ( $is_videos_page || $is_discography_page || $is_albums_page || $is_events_page || is_tax() ) {
 		$bool = false;
 	}
 
