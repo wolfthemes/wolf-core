@@ -239,7 +239,7 @@ function wolf_core_render_shortcode_attributes( array $attributes ) {
  */
 function wol_core_get_vc_parms_to_convert() {
 	return array(
-		'button' => array(
+		'button'        => array(
 			'type'         => 'button_type',
 			'title'        => 'text',
 			'hover_effect' => 'hover_animation',
@@ -249,13 +249,13 @@ function wol_core_get_vc_parms_to_convert() {
 			// 'color' => '',
 			// 'custom_color' => 'background_color',
 		),
-		'banner' => array(
+		'banner'        => array(
 			'title_font_size' => 'font_size',
 		),
 		'content-block' => array(
 			'id' => 'contact_block_id',
 		),
-		'playlist' => array(
+		'playlist'      => array(
 			'id' => 'playlist_id',
 		),
 	);
@@ -303,3 +303,22 @@ function wolf_core_sync_atts() {
 	}
 }
 add_action( 'init', 'wolf_core_sync_atts' );
+
+/**
+ * Register scripts for a widget based on an array
+ *
+ * @param array $scripts The scripts to register.
+ */
+function wolf_core_register_elementor_widget_scripts( $scripts = array() ) {
+
+	$theme_version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : wolf_core_get_theme_version();
+
+	foreach ( $scripts as $handle => $properties ) {
+		$src          = esc_url( $properties['src'] );
+		$dependencies = ( isset( $properties['dependencies'] ) ) ? $properties['dependencies'] : array( 'jquery' );
+		$version      = ( isset( $properties['version'] ) ) ? $properties['version'] : $theme_version;
+		$in_footer    = ( isset( $properties['in_footer'] ) ) ? $properties['in_footer'] : true;
+
+		wp_register_script( $handle, $src, $dependencies, $version, $in_footer );
+	}
+}

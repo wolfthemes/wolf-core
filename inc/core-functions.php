@@ -221,6 +221,16 @@ function wolf_core_get_theme_slug() {
 }
 
 /**
+ * Get theme version
+ *
+ * @return string
+ */
+function woolf_core_get_theme_version() {
+	$theme = wp_get_theme();
+	return $theme->get( 'Version' );
+}
+
+/**
  * Allow SVG files
  *
  * @param array $mimes The allowed mime types.
