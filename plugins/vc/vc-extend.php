@@ -10,6 +10,14 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Disable WPBPB frontend
+ */
+function wvc_vc_remove_frontend_links() {
+	vc_disable_frontend();
+}
+add_action( 'vc_after_init', 'wvc_vc_remove_frontend_links' );
+
+/**
  * Replace default css class for vc_row shortcode and vc_column
  *
  * @param string $class_string The row class to output.

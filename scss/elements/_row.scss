@@ -1048,3 +1048,16 @@ $eq_margin: 12px;
 		}
 	}
 }
+
+@media screen and (max-width: 800px) {
+	.wolf-core-row-mobile-reverse .wolf-core-columns-container {
+		flex-direction: column-reverse;
+		display: flex;
+	}
+
+	.wolf-core-row-mobile-reverse
+		.wolf-core-columns-container
+		.wolf-core-element {
+		margin-bottom: 35px;
+	}
+}

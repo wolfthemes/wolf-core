@@ -147,6 +147,8 @@ add_action( 'wp_enqueue_scripts', 'wolf_core_register_icon_styles' );
  */
 function wolf_core_admin_icon_styles() {
 
+	wp_enqueue_style( 'vc_font_awesome_5' );
+
 	$libraries = wolf_core_get_icon_libraires();
 
 	foreach ( $libraries as $library ) {

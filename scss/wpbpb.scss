@@ -5,5 +5,17 @@
 @import 'global/mixins';
 
 @import 'elements/row';
+@import 'elements/columns';
 
 @import 'deprecated/icon';
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+	@import 'global/pre-grid';
+}
+
+@media screen and (min-width: 800px) {
+	/**
+	 * Grid
+	 */
+	@import 'global/grid';
+}
