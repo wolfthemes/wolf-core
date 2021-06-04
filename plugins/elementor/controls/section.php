@@ -129,7 +129,7 @@ add_action(
 		}
 
 		/* Section ID and name data for one-page feature */
-		if ( isset( $settings['name'] ) ) {
+		if ( ! empty( $settings['name'] ) ) {
 			$section_id = sanitize_title( $settings['name'] );
 			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-parent-row' );
 			$widget->add_render_attribute( '_wrapper', 'id', $section_id );

@@ -101,16 +101,21 @@ function wolf_core_social_icons( $atts ) {
 
 	/* Icon color */
 	if ( 'custom' === $color ) {
-		$color       = $custom_color;
-		$icon_style .= 'color:' . wolf_core_sanitize_color( $color ) . ';';
+		$color = $custom_color;
+
+		if ( $color ) {
+			$icon_style .= 'color:' . wolf_core_sanitize_color( $color ) . ';';
+		}
 	}
 
 	/* Background color */
 	if ( 'custom' === $background_color ) {
-		$background_color      = $custom_background_color;
-		$bg_color              = wolf_core_sanitize_color( $background_color );
-		$icon_container_style .= "background-color:$bg_color;border-color:$bg_color;box-shadow-color:$bg_color;";
-		$icon_filler_style    .= "background-color:$bg_color;box-shadow-color:$bg_color;";
+		$background_color = $custom_background_color;
+		$bg_color         = wolf_core_sanitize_color( $background_color );
+		if ( $bg_color ) {
+			$icon_container_style .= "background-color:$bg_color;border-color:$bg_color;box-shadow-color:$bg_color;";
+			$icon_filler_style    .= "background-color:$bg_color;box-shadow-color:$bg_color;";
+		}
 	}
 
 	$wolf_core_socials = wolf_core_get_socials();
@@ -128,8 +133,8 @@ function wolf_core_social_icons( $atts ) {
 		$is_list = false;
 	}
 
-	$wolf_icon_array  = array( 'bandsintown', 'evernote', 'grooveshark', 'mailchimp' );
-	$socicon_array    = array(
+	$wolf_icon_array = array( 'bandsintown', 'evernote', 'grooveshark', 'mailchimp' );
+	$socicon_array   = array(
 		'8tracks',
 		'airbnb',
 		'alliance',
@@ -175,7 +180,7 @@ function wolf_core_social_icons( $atts ) {
 		// 'imdb',
 		'issuu',
 		'istock',
-		//'itunes',
+		// 'itunes',
 		'keybase',
 		'lanyrd',
 		'line',
@@ -227,7 +232,7 @@ function wolf_core_social_icons( $atts ) {
 		'yandex',
 		'yelp',
 		'younow',
-		//'youtube',
+		// 'youtube',
 		'zapier',
 		'zerply',
 		'zomato',
@@ -243,7 +248,7 @@ function wolf_core_social_icons( $atts ) {
 		'flickr',
 		'instagram',
 		'linkedin',
-		//'messenger',
+		// 'messenger',
 		'spotify',
 		'tiktok',
 		'twitter',
