@@ -64,3 +64,12 @@ function wolf_core_enqueue_styles() {
 	wp_enqueue_style( 'wolf-core-styles', WOLF_CORE_CSS . '/style' . $suffix . '.css', array(), $version );
 }
 add_action( 'wp_enqueue_scripts', 'wolf_core_enqueue_styles' );
+
+
+/**
+ * Admin styles
+ */
+// function wolf_core_enqueue_el_adm_styles() {
+// 	wp_enqueue_style( 'wolficons', WOLF_CORE_CSS . '/lib/fonts/wolficons/wolficons.min.css', array(), WOLF_CORE_VERSION );
+// }
+// add_action( 'wp_enqueue_scripts', 'wolf_core_enqueue_el_adm_styles' );

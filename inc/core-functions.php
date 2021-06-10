@@ -37,7 +37,7 @@ function wolf_core_get_elements() {
 		// 'bandsintown-tracking-button', // added in themes
 		// 'banner-gallery',
 		// 'banner-product',
-		'banner',
+		//'banner',
 		'bigtext',
 		'breadcrumb',
 		'button',
@@ -83,7 +83,6 @@ function wolf_core_get_elements() {
 		// 'old-instagram',
 		// 'parallax-holder',
 		// 'pie',
-		'playlist',
 		// 'pricing-table',
 		// 'process-container',
 		// 'process-item',
@@ -118,6 +117,10 @@ function wolf_core_get_elements() {
 		// 'youtube',
 		// 'zigzag',
 	);
+
+	if ( class_exists( 'Wolf_Playlist_Manager' ) ) {
+		$wolf_core_elements[] = 'playlist';
+	}
 
 	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 		$wolf_core_elements[] = 'heading';

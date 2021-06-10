@@ -50,3 +50,11 @@ function wolf_core_enqueue_admin_scripts() {
 	);
 }
 add_action( 'admin_enqueue_scripts', 'wolf_core_enqueue_admin_scripts' );
+
+/**
+ * Admin styles
+ */
+// function wolf_core_enqueue_admin_styles() {
+// 	wp_enqueue_style( 'wolficons', WOLF_CORE_CSS . '/lib/fonts/wolficons/wolficons.min.css', array(), WOLF_CORE_VERSION );
+// }
+// add_action( 'admin_enqueue_scripts', 'wolf_core_enqueue_admin_styles' );
