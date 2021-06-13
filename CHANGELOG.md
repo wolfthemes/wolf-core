@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 10th June 2021 - Version 1.0.3
+
+-   Fix: Missing editor icons
+
 #### 10th June 2021 - Version 1.0.2
 
 -   Fix: Add condition to playlist widgets to avoid error message
