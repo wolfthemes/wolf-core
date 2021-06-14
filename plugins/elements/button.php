@@ -138,9 +138,9 @@ function wolf_core_button( $atts ) {
 		);
 	}
 
-	$output .= do_action( 'wolf_core_button_text_before', $atts );
-	$output .= '<span>' . esc_attr( $text ) . '</span>';
-	$output .= do_action( 'wolf_core_button_text_after', $atts );
+	$output .= apply_filters( 'wolf_core_button_text_before', '', $atts );
+	$output .= '<span class="wolf-core-button-text">' . esc_attr( $text ) . '</span>';
+	$output .= apply_filters( 'wolf_core_button_text_after', '', $atts );
 
 	if ( $add_icon && 'right' === $icon_align ) {
 		$output .= wolf_core_render_icon(
