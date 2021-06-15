@@ -92,6 +92,7 @@ var WolfCore = (function ($) {
 
 			this.rowCosmetic();
 			this.rowMargins();
+			this.rowPostFeaturedImgBg();
 
 			this.parallax();
 
@@ -448,6 +449,16 @@ var WolfCore = (function ($) {
 					"margin-right": "",
 				});
 			}
+		},
+
+		rowPostFeaturedImgBg : function () {
+
+			$( '.wolf-core-row-post-featured-img-bg' ).each( function() {
+				var bgUrl = $( this ).data( 'post-bg-imag-url' );
+				$( this ).css( {
+					'background-image' : 'url(' + bgUrl + ')'
+				} );
+			} );
 		},
 
 		/**

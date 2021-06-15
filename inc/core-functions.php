@@ -234,6 +234,17 @@ function woolf_core_get_theme_version() {
 }
 
 /**
+ * Get blog URL
+ */
+function wolf_core_get_blog_url() {
+	if ( get_option( 'page_for_posts' ) ) {
+		return esc_url( get_permalink( get_option( 'page_for_posts' ) ) );
+	} else {
+		return esc_url( home_url( '/' ) );
+	}
+}
+
+/**
  * Allow SVG files
  *
  * @param array $mimes The allowed mime types.
@@ -1221,7 +1232,7 @@ function wolf_core_get_breadcrumb() {
 					$output .= $delimiter;
 				// }
 
-			} elseif ( is_singular( 'wolf_core_content_block' ) ) {
+			} elseif ( is_singular( 'wolf_content_block' ) ) {
 
 				$output .= '<li itemprop="itemListElement" itemscope
       itemtype="https://schema.org/ListItem"><span itemprop="name">' . esc_html__( 'Content Block', 'wolf-core' ) . '</span>

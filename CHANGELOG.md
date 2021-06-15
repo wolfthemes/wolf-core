@@ -1,7 +1,11 @@
 
 # Changelog
 
-#### 10th June 2021 - Version 1.0.3
+#### 15th June 2021 - Version 1.0.5
+
+-   Tweak: Added featured image background option to Elementor section
+-   Tweak: Improve bredcrumb preview (align)
+#### 14th June 2021 - Version 1.0.3
 
 -   Fix: Missing editor icons
 

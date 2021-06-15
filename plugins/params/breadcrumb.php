@@ -27,7 +27,7 @@ function wolf_core_breadcrumb_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'keywords'      => array( 'text', 'navigation' ),
-				'icon'          => 'dashicons-before dashicons-album',
+				'icon'          => 'fas fa-angle-double-right',
 			),
 
 			'params'     => array(
@@ -51,7 +51,7 @@ function wolf_core_breadcrumb_params() {
 						),
 					),
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-breadcrumb' => 'margin-{{VALUE}}: 0;',
+						'{{WRAPPER}} .wolf-core-breadcrumb' => 'text-align:{{VALUE}};',
 					),
 					'page_builder' => 'elementor',
 				),

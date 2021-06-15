@@ -160,7 +160,7 @@ function wolf_core_social_icons( $atts ) {
 		'filmweb',
 		'envato',
 		'etsy',
-		'facebook',
+		//'facebook',
 		'flattr',
 		'forrst',
 		'friendfeed',

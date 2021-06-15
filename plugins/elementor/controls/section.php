@@ -19,6 +19,7 @@ add_action(
 			'font_color',
 			array(
 				'label'        => esc_html__( 'Default Font Color', 'wolf-core' ),
+
 				'type'         => \Elementor\Controls_Manager::SELECT,
 				'default'      => '',
 				'prefix_class' => 'wolf-core-font-',
@@ -40,8 +41,6 @@ add_action(
 add_action(
 	'elementor/element/section/section_layout/before_section_end',
 	function( $section, $args ) {
-
-
 		$section->add_control(
 			'name',
 			array(
@@ -54,8 +53,8 @@ add_action(
 		$section->add_control(
 			'el_class',
 			array(
-				'label'       => esc_html__( 'Extra Class', 'wolf-core' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
+				'label' => esc_html__( 'Extra Class', 'wolf-core' ),
+				'type'  => \Elementor\Controls_Manager::TEXT,
 			)
 		);
 	},
@@ -71,11 +70,30 @@ add_action(
 	function( $section, $args ) {
 
 		$section->add_control(
+			'post_featured_img_bg',
+			array(
+				'label'        => esc_html__( 'Use post featured image', 'wolf-core' ),
+				'description'  => esc_html__( 'The current post/page featured image will overwrite the above image if set.', 'wolf-core' ),
+				'type'         => \Elementor\Controls_Manager::SWITCHER,
+				'default'      => 'no',
+				'return_value' => 'yes',
+				'prefix_class' => '',
+				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
+				'label_off'    => esc_html__( 'No', 'wolf-core' ),
+				'condition'    => array(
+					'background_background' => array( 'classic' ),
+				),
+			)
+		);
+
+		$section->add_control(
 			'parallax',
 			array(
 				'label'        => esc_html__( 'Parallax', 'wolf-core' ),
+				'description'  => esc_html__( 'Not visible in editor preview yet.', 'wolf-core' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'default'      => 'no',
+				'return_value' => 'yes',
 				'prefix_class' => '',
 				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
 				'label_off'    => esc_html__( 'No', 'wolf-core' ),
@@ -105,7 +123,7 @@ add_action(
 
 		if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
 
-			//debug( $settings );
+			// debug( $settings );
 
 			if ( 'video' === $settings['background_background'] && isset( $settings['background_video_link'] ) ) {
 
@@ -135,6 +153,17 @@ add_action(
 			$widget->add_render_attribute( '_wrapper', 'id', $section_id );
 			$widget->add_render_attribute( '_wrapper', 'data-anchor', $section_id );
 			$widget->add_render_attribute( '_wrapper', 'data-row-name', esc_attr( $settings['name'] ) );
+		}
+
+
+
+		if ( isset( $settings['post_featured_img_bg'] ) && 'yes' === $settings['post_featured_img_bg'] ) {
+
+			if ( wolf_core_get_the_id() && get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) ) {
+				$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-row-post-featured-img-bg' );
+				$widget->add_render_attribute( '_wrapper', 'data-post-bg-imag-url', get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) );
+
+			}
 		}
 	},
 	10

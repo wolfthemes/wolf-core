@@ -2905,6 +2905,13 @@ li.wolf-core-album-tracklist-item {
   }
 }
 /**
+ * @# Content Block
+ **/
+.single-wolf_content_block .entry-meta {
+  display: none;
+}
+
+/**
  * @# Countdown
  **/
 .wolf-core-countdown-container {
