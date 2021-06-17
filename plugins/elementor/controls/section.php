@@ -77,7 +77,7 @@ add_action(
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'default'      => 'no',
 				'return_value' => 'yes',
-				'prefix_class' => '',
+				'prefix_class' => 'wolf-core-row-post-featured-img-',
 				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
 				'label_off'    => esc_html__( 'No', 'wolf-core' ),
 				'condition'    => array(
@@ -94,7 +94,7 @@ add_action(
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'default'      => 'no',
 				'return_value' => 'yes',
-				'prefix_class' => '',
+				'prefix_class' => 'wolf-core-row-parallax-',
 				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
 				'label_off'    => esc_html__( 'No', 'wolf-core' ),
 				'condition'    => array(
@@ -120,6 +120,8 @@ add_action(
 		}
 
 		$settings = $widget->get_active_settings();
+
+		$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-elementor-row' );
 
 		if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
 
@@ -154,8 +156,6 @@ add_action(
 			$widget->add_render_attribute( '_wrapper', 'data-anchor', $section_id );
 			$widget->add_render_attribute( '_wrapper', 'data-row-name', esc_attr( $settings['name'] ) );
 		}
-
-
 
 		if ( isset( $settings['post_featured_img_bg'] ) && 'yes' === $settings['post_featured_img_bg'] ) {
 

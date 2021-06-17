@@ -127,7 +127,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 		$output .= "<i class='wolf-core-mc-icon fa $icon'></i>";
 
 	} else {
-		$output .= $submit_text;
+		$output .= '<span class="wolf-core-button-text">' . $submit_text . '</span>';
 	}
 
 	$output .= '</button>';
