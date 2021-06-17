@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 15th June 2021 - Version 1.0.5
+#### 17th June 2021 - Version 1.0.6
 
+-   Tweak: Added blockquote and link elements
 -   Tweak: Added featured image background option to Elementor section
 -   Tweak: Improve bredcrumb preview (align)
 #### 14th June 2021 - Version 1.0.3

@@ -1,6 +1,6 @@
 <?php
 /**
- * Blockquote
+ * Link
  *
  * @author WolfThemes
  * @package WolfCore/Elements
@@ -14,19 +14,19 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function wolf_core_blockquote_params() {
+function wolf_core_link_params() {
 
 	return apply_filters(
-		'wolf_core_blockquote_params',
+		'wolf_core_link_params',
 		array(
 			'properties' => array(
-				'name'          => esc_html__( 'Blockquote', 'wolf-core' ),
+				'name'          => esc_html__( 'Link', 'wolf-core' ),
 				'description'   => esc_html__( 'Description.', 'wolf-core' ),
-				'vc_base'       => 'wolf_core_blockquote',
+				'vc_base'       => 'wolf_core_link',
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
-				'el_base'       => 'blockquote',
-				'icon'          => 'fas fa-quote-left',
+				'el_base'       => 'link',
+				'icon'          => 'fas fa-link',
 			),
 			'params'     => array(
 				array(
@@ -40,14 +40,9 @@ function wolf_core_blockquote_params() {
 					'param_name'  => 'tagline',
 				),
 				array(
-					'type'        => 'text',
-					'label'       => esc_html__( 'Author Name', 'wolf-core' ),
-					'param_name'  => 'cite',
-				),
-				array(
-					'type'        => 'image',
-					'label'       => esc_html__( 'Avatar', 'wolf-core' ),
-					'param_name'  => 'avatar',
+					'type'        => 'link',
+					'label'       => esc_html__( 'URL', 'wolf-core' ),
+					'param_name'  => 'link',
 				),
 			),
 		)

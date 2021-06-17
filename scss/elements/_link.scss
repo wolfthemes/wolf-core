@@ -1,0 +1,22 @@
+/**
+ * @# Link
+ **/
+.wolf-core-link-inner {
+}
+
+.wolf-core-link {
+	position: relative;
+}
+
+.wolf-core-link-tagline {
+	margin-bottom: 15px;
+}
+
+.wolf-core-link-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}

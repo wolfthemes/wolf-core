@@ -2638,6 +2638,30 @@ li.wolf-core-album-tracklist-item {
 }
 
 /**
+ * @# Blockquote
+ **/
+.wolf-core-blockquote-text blockquote {
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.wolf-core-blockquote-tagline {
+  margin-bottom: 15px;
+}
+
+.wolf-core-blockquote-author {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+}
+.wolf-core-blockquote-author img {
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+/**
  * @# Breadcrumb
  **/
 .wolf-core-breadcrumb-list {
@@ -4139,6 +4163,25 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 }
 .wolf-core-wolf-gram-shortcode-container:not(.wolf-core-sbif-disable-hover-true) .sbi_item:not(.sbi_type_video) .sbi_photo:hover:before, .wolf-core-wolf-gram-shortcode-container:not(.wolf-core-sbif-disable-hover-true) .sbi_item:not(.sbi_type_video) .sbi_photo:hover:after {
   opacity: 1;
+}
+
+/**
+ * @# Link
+ **/
+.wolf-core-link {
+  position: relative;
+}
+
+.wolf-core-link-tagline {
+  margin-bottom: 15px;
+}
+
+.wolf-core-link-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /**
