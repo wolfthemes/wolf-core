@@ -150,7 +150,6 @@ function wolf_core_album_disc( $atts ) {
 	}
 
 	$output .= '</div><!-- .wolf-core-album-disc-cover-container -->';
-
 	$output .= '</div><!-- .wolf-core-album-disc -->';
 
 	return $output;

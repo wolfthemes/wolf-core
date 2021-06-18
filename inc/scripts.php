@@ -17,40 +17,43 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_get_js_params() {
 
-	$js_params = array(
-		'themeSlug'                 => wolf_core_get_theme_slug(),
-		'ajaxUrl'                   => esc_url( WOLF_CORE()->ajax_url() ),
-		'ajaxNonce'                 => wp_create_nonce( 'wolf_core_ajax_nonce' ),
-		'WolfCoreUrl'               => esc_url( WOLF_CORE_URI ),
-		'lightbox'                  => apply_filters( 'wolf_core_lightbox', 'swipebox' ),
-		'isMobile'                  => wp_is_mobile(),
-		'WOWAnimationOffset'        => apply_filters( 'wolf_core_wow_animation_offset', 0 ),
-		'forceAnimationMobile'      => apply_filters( 'wolf_core_force_animation_mobile', false ),
-		'smoothScrollSpeed'         => apply_filters( 'wolf_core_smooth_scroll_speed', 900 ),
-		'smoothScrollEase'          => apply_filters( 'wolf_core_smooth_scroll_ease', 'swing' ),
-		'pieChartLineWidth'         => apply_filters( 'wolf_core_default_pie_chart_line_width', 5 ),
-		'parallaxNoIos'             => apply_filters( 'wolf_core_parallax_no_ios', true ),
-		'parallaxNoAndroid'         => apply_filters( 'wolf_core_parallax_no_android', true ),
-		'parallaxNoSmallScreen'     => apply_filters( 'wolf_core_parallax_no_small_screen', true ),
-		'googleMapApiKey'           => apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) ),
-		'fullPage'                  => apply_filters( 'wolf_core_do_fullpage', wolf_core_do_fullpage() ),
-		'fpTransitionEffect'        => apply_filters( 'wolf_core_fp_transition_effect', 'mix' ),
-		'fpAnimTime'                => apply_filters( 'wolf_core_fp_animtime', 900 ),
-		'fpEasing'                  => apply_filters( 'wolf_core_fp_easing', 'swing' ),
-		'fullPageContainer'         => apply_filters( 'wolf_core_fp_container', '.page-entry-content' ),
-		'audioButtonPlayText'       => esc_html__( 'Play', 'wolf-visual-composer' ),
-		'audioButtonPauseText'      => esc_html__( 'Pause', 'wolf-visual-composer' ),
-		'language'                  => get_locale(),
-		'accentColor'               => wolf_core_get_theme_accent_color_value(),
-		'fullHeightRowDoWPMOffsset' => apply_filters( 'wolf_core_fullheight_row_do_wpm_offset', true ),
-		'isRTL'                     => apply_filters( 'wolf_core_is_rtl', true ),
-		'printStylesheet'           => WOLF_CORE_CSS . '/print.min.css',
-		'l10n'                      => array(
-			'emptyFields'           => esc_html__( 'Please fill all fields.', 'wolf-visual-composer' ),
-			'unknownError'          => esc_html__( 'Something went wrong while submuitting the form, please try again later.', 'wolf-visual-composer' ),
-			'processingMessage'     => esc_html__( 'Loading', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
-			'BMICProcessingMessage' => esc_html__( 'Calculating', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
-		),
+	$js_params = apply_filters(
+		'wolf_core_js_params',
+		array(
+			'themeSlug'                 => wolf_core_get_theme_slug(),
+			'ajaxUrl'                   => esc_url( WOLF_CORE()->ajax_url() ),
+			'ajaxNonce'                 => wp_create_nonce( 'wolf_core_ajax_nonce' ),
+			'WolfCoreUrl'               => esc_url( WOLF_CORE_URI ),
+			'lightbox'                  => apply_filters( 'wolf_core_lightbox', 'swipebox' ),
+			'isMobile'                  => wp_is_mobile(),
+			'WOWAnimationOffset'        => apply_filters( 'wolf_core_wow_animation_offset', 0 ),
+			'forceAnimationMobile'      => apply_filters( 'wolf_core_force_animation_mobile', false ),
+			'smoothScrollSpeed'         => apply_filters( 'wolf_core_smooth_scroll_speed', 900 ),
+			'smoothScrollEase'          => apply_filters( 'wolf_core_smooth_scroll_ease', 'swing' ),
+			'pieChartLineWidth'         => apply_filters( 'wolf_core_default_pie_chart_line_width', 5 ),
+			'parallaxNoIos'             => apply_filters( 'wolf_core_parallax_no_ios', true ),
+			'parallaxNoAndroid'         => apply_filters( 'wolf_core_parallax_no_android', true ),
+			'parallaxNoSmallScreen'     => apply_filters( 'wolf_core_parallax_no_small_screen', true ),
+			'googleMapApiKey'           => apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) ),
+			'fullPage'                  => apply_filters( 'wolf_core_do_fullpage', wolf_core_do_fullpage() ),
+			'fpTransitionEffect'        => apply_filters( 'wolf_core_fp_transition_effect', 'mix' ),
+			'fpAnimTime'                => apply_filters( 'wolf_core_fp_animtime', 900 ),
+			'fpEasing'                  => apply_filters( 'wolf_core_fp_easing', 'swing' ),
+			'fullPageContainer'         => apply_filters( 'wolf_core_fp_container', '.page-entry-content' ),
+			'audioButtonPlayText'       => esc_html__( 'Play', 'wolf-visual-composer' ),
+			'audioButtonPauseText'      => esc_html__( 'Pause', 'wolf-visual-composer' ),
+			'language'                  => get_locale(),
+			'accentColor'               => wolf_core_get_theme_accent_color_value(),
+			'fullHeightRowDoWPMOffsset' => apply_filters( 'wolf_core_fullheight_row_do_wpm_offset', true ),
+			'isRTL'                     => apply_filters( 'wolf_core_is_rtl', true ),
+			'printStylesheet'           => WOLF_CORE_CSS . '/print.min.css',
+			'l10n'                      => array(
+				'emptyFields'           => esc_html__( 'Please fill all fields.', 'wolf-visual-composer' ),
+				'unknownError'          => esc_html__( 'Something went wrong while submuitting the form, please try again later.', 'wolf-visual-composer' ),
+				'processingMessage'     => esc_html__( 'Loading', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
+				'BMICProcessingMessage' => esc_html__( 'Calculating', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
+			),
+		)
 	);
 
 	$js_params = apply_filters( 'wolf_core_js_params', $js_params );
@@ -61,9 +64,61 @@ function wolf_core_get_js_params() {
 /**
  * Register scripts
  *
+ * @param array $scripts The scripts to register.
+ */
+function wolf_core_register_scripts( $scripts = array() ) {
+
+	$theme_version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WOLF_CORE_VERSION;
+
+	foreach ( $scripts as $handle => $properties ) {
+		$src          = esc_url( $properties['src'] );
+		$dependencies = ( isset( $properties['dependencies'] ) ) ? $properties['dependencies'] : array( 'jquery' );
+		$version      = ( isset( $properties['version'] ) ) ? $properties['version'] : $theme_version;
+		$in_footer    = ( isset( $properties['in_footer'] ) ) ? $properties['in_footer'] : true;
+
+		wp_register_script( $handle, $src, $dependencies, $version, $in_footer );
+	}
+}
+
+/**
+ * Returns script sto register
+ */
+function wolf_core_get_register_scripts() {
+
+	$suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	$version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WOLF_CORE_VERSION;
+
+	// Don't serve minified JS files if Autoptimize plugin is activated.
+	if ( defined( 'AUTOPTIMIZE_PLUGIN_DIR' ) ) {
+		$suffix = '';
+	}
+
+	return apply_filters(
+		'wolf_core_register_scripts',
+		array(
+			'jarallax'       => array(
+				'src'          => WOLF_CORE_JS . '/lib/jarallax.min.js',
+				'version'      => '1.10.6',
+				'dependencies' => array(),
+				'in_footer'    => false,
+			),
+
+			'jarallax-video' => array(
+				'src'          => WOLF_CORE_JS . '/lib/jarallax-video.min.js',
+				'version'      => '1.0.1',
+				'dependencies' => array(),
+				'in_footer'    => false,
+			),
+		)
+	);
+}
+
+/**
+ * Enqueue scripts
+ *
  * @since WPBakery Page Builder Extension 3.2.8
  */
-function wolf_core_register_scripts() {
+function wolf_core_enqueue_scripts() {
 
 	$version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WOLF_CORE_VERSION;
 	$folder  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '/min';
@@ -75,12 +130,11 @@ function wolf_core_register_scripts() {
 		$folder = '';
 	}
 
+	/* Register conditional scripts */
+	wolftheme_register_scripts( wolftheme_get_register_scripts() );
+
 	/* Lightbox */
 	wp_register_script( 'swipebox', WOLF_CORE_JS . '/lib/jquery.swipebox.min.js', array( 'jquery' ), '1.2.9', true );
-
-	// Parallax background.
-	wp_register_script( 'jarallax', WOLF_CORE_JS . '/lib/jarallax/jarallax.min.js', array(), '1.10.6', false );
-	wp_register_script( 'jarallax-video', WOLF_CORE_JS . '/lib/jarallax/jarallax-video.min.js', array(), '1.0.1', false );
 
 	// Parallax element.
 	wp_register_script( 'parallax-scroll', WOLF_CORE_JS . '/lib/jquery.parallax-scroll.min.js', array( 'jquery' ), '1.0.0b', true );
@@ -135,9 +189,6 @@ function wolf_core_register_scripts() {
 
 	// Concat and minifed scripts for theme that use AJAX.
 	wp_register_script( 'wolf-core-scripts', WOLF_CORE_JS . '/min/scripts.min.js', array( 'jquery' ), WOLF_CORE_VERSION, true );
-
-	// Polyfill for Edge to support object-fit for images.
-	wp_register_script( 'object-fit-images', WOLF_CORE_JS . '/lib/ofi.min.js', array(), '3.2.3', true );
 
 	/*
 	Don't register script below if we use the wolf_core_force_enqueue_scripts filter
@@ -231,7 +282,7 @@ function wolf_core_register_scripts() {
 	// wp_enqueue_script( 'wolf-core-wavesurfer', Wolf_core_LIB . '/wavesurfer/wavesurfer.js', array(), '3.3.3', false );
 	// wp_enqueue_script( 'wolf-core-wavesurfer-regions', Wolf_core_LIB . '/wavesurfer/wavesurfer.regions.js', array(), '3.3.3', false );
 }
-add_action( 'wp_enqueue_scripts', 'wolf_core_register_scripts' );
+add_action( 'wp_enqueue_scripts', 'wolf_core_enqueue_scripts' );
 
 /**
  * Enqueue conditional scripts
@@ -249,10 +300,6 @@ function wolf_core_enqueue_common_scripts() {
 	}
 
 	wp_enqueue_script( 'lazyloadxt' );
-
-	if ( wolf_core_is_edge() ) {
-		wp_enqueue_script( 'object-fit-images' );
-	}
 
 	// Plugin common scripts.
 	wp_enqueue_script( 'wolf-core-functions' ); // common functions.

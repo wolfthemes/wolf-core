@@ -126,6 +126,7 @@ function wolf_core_get_elements() {
 
 	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 		$wolf_core_elements[] = 'heading';
+		$wolf_core_elements[] = 'interactive-links';
 	}
 
 	if ( 'vc' === wolf_core_get_plugin_in_use() ) {

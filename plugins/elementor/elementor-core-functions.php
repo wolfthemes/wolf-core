@@ -85,13 +85,14 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 	}
 
 	$elementor_types = array(
-		'text'     => \Elementor\Controls_Manager::TEXT,
-		'textarea' => \Elementor\Controls_Manager::TEXTAREA,
-		'select'   => \Elementor\Controls_Manager::SELECT,
-		'checkbox' => \Elementor\Controls_Manager::SWITCHER,
-		'link'     => \Elementor\Controls_Manager::URL,
-		'audio'    => \Elementor\Controls_Manager::MEDIA,
-		'video'    => \Elementor\Controls_Manager::MEDIA,
+		'text'       => \Elementor\Controls_Manager::TEXT,
+		'textarea'   => \Elementor\Controls_Manager::TEXTAREA,
+		'select'     => \Elementor\Controls_Manager::SELECT,
+		'checkbox'   => \Elementor\Controls_Manager::SWITCHER,
+		'link'       => \Elementor\Controls_Manager::URL,
+		'audio'      => \Elementor\Controls_Manager::MEDIA,
+		'video'      => \Elementor\Controls_Manager::MEDIA,
+		'background' => '',
 	);
 
 	foreach ( $params as $p ) {
@@ -105,7 +106,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		$type                        = isset( $p['type'] ) ? $p['type'] : '';
 		$field_params['label']       = isset( $p['label'] ) ? $p['label'] : '';
 		$field_params['placeholder'] = isset( $p['placeholder'] ) ? $p['placeholder'] : '';
-		$field_params['selector'] = isset( $p['selector'] ) ? $p['selector'] : '';
+		$field_params['selector']    = isset( $p['selector'] ) ? $p['selector'] : '';
 
 		if ( isset( $p['default'] ) ) {
 			$field_params['default'] = $p['default'];
@@ -119,35 +120,50 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 				$r_type = ( isset( $r_param['type'] ) ) ? $elementor_types[ $r_param['type'] ] : 'text';
 
-				// debug( $r_type );
+				if ( isset( $r_param['type'] ) && 'background' === $r_param['type'] ) {
 
-				$r_params = array(
-					'label'       => $r_param['label'],
-					'type'        => $r_type,
-					// 'default'     => ( isset( $r_param['default'] ) ) ? $r_param['default'] : array(),
-					'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
-					'description' => ( isset( $r_param['description'] ) ) ? $r_param['description'] : '',
-					'condition'   => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
-					'label_block' => true,
-				);
+					$repeater->add_group_control(
+						\Elementor\Group_Control_Background::get_type(),
+						array(
+							'name'     => $r_param['param_name'],
+							'label'    => esc_html__( 'Background', 'wolf-core' ),
+							'types'    => array( 'classic', 'video' ),
+							'selectors' => $r_param['selectors'],
+						)
+					);
 
-				if ( isset( $r_param['type'] ) ) {
+				} else {
 
-					if ( 'audio' === $r_param['type'] ) {
-						$r_params['media_type'] = 'audio';
-					} elseif ( 'video' === $r_param['type'] ) {
-						$r_params['media_type'] = 'video';
-					} elseif ( 'select' === $r_param['type'] ) {
-						$r_params['options'] = $r_param['options'];
+					// debug( $r_type );
+
+					$r_params = array(
+						'label'       => $r_param['label'],
+						'type'        => $r_type,
+						// 'default'     => ( isset( $r_param['default'] ) ) ? $r_param['default'] : array(),
+						'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
+						'description' => ( isset( $r_param['description'] ) ) ? $r_param['description'] : '',
+						'condition'   => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
+						'label_block' => true,
+					);
+
+					if ( isset( $r_param['type'] ) ) {
+
+						if ( 'audio' === $r_param['type'] ) {
+							$r_params['media_type'] = 'audio';
+						} elseif ( 'video' === $r_param['type'] ) {
+							$r_params['media_type'] = 'video';
+						} elseif ( 'select' === $r_param['type'] ) {
+							$r_params['options'] = $r_param['options'];
+						}
 					}
+
+					// debug( $r_params );
+
+					$repeater->add_control(
+						$r_param['param_name'],
+						$r_params
+					);
 				}
-
-				// debug( $r_params );
-
-				$repeater->add_control(
-					$r_param['param_name'],
-					$r_params
-				);
 			}
 
 			// die();
@@ -334,6 +350,18 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				array_merge(
 					array( 'name' => $p['param_name'] ),
 					$field_params
+				)
+			);
+
+		} elseif ( 'background' === $type ) {
+
+			$widget->add_group_control(
+				\Elementor\Group_Control_Background::get_type(),
+				array(
+					'name'     => $p['param_name'],
+					'label'    => esc_html__( 'Background', 'wolf-core' ),
+					'types'    => array( 'classic', 'gradient', 'video' ),
+					'selector' => $p['selector'],
 				)
 			);
 

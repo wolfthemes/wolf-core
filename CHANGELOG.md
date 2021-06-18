@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 18th June 2021 - Version 1.0.7
+
+-   Tweak: Added interactive links elements
+
 #### 17th June 2021 - Version 1.0.6
 
 -   Tweak: Added blockquote and link elements
