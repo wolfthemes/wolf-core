@@ -77,6 +77,13 @@ function wolf_core_heading_params() {
 					),
 					'default'    => 'no',
 				),
+
+				array(
+					'type'       => 'text',
+					'label'    => esc_html__( 'Extra Class', 'wolf-core' ),
+					'param_name' => 'extra_class',
+				),
+
 				array(
 					'type'       => 'text',
 					'label'      => esc_html__( 'Minimum Font Size', 'wolf-core' ),

@@ -97,14 +97,14 @@ function wolf_core_get_register_scripts() {
 		'wolf_core_register_scripts',
 		array(
 			'jarallax'       => array(
-				'src'          => WOLF_CORE_JS . '/lib/jarallax.min.js',
+				'src'          => WOLF_CORE_JS . '/lib/jarallax/jarallax.min.js',
 				'version'      => '1.10.6',
 				'dependencies' => array(),
 				'in_footer'    => false,
 			),
 
 			'jarallax-video' => array(
-				'src'          => WOLF_CORE_JS . '/lib/jarallax-video.min.js',
+				'src'          => WOLF_CORE_JS . '/lib/jarallax/jarallax-video.min.js',
 				'version'      => '1.0.1',
 				'dependencies' => array(),
 				'in_footer'    => false,
@@ -131,7 +131,7 @@ function wolf_core_enqueue_scripts() {
 	}
 
 	/* Register conditional scripts */
-	wolftheme_register_scripts( wolftheme_get_register_scripts() );
+	wolf_core_register_scripts( wolf_core_get_register_scripts() );
 
 	/* Lightbox */
 	wp_register_script( 'swipebox', WOLF_CORE_JS . '/lib/jquery.swipebox.min.js', array( 'jquery' ), '1.2.9', true );
@@ -172,7 +172,8 @@ function wolf_core_enqueue_scripts() {
 	wp_register_script( 'mousewheel', WOLF_CORE_JS . '/lib/jquery.mousewheel.min.js', array( 'jquery' ), '3.1.13', true );
 
 	// InView.
-	wp_enqueue_script( 'inview', WOLF_CORE_JS . '/lib/jquery.inview.min.js', array( 'jquery' ), '1.1.2', true );
+	wp_register_script( 'inview', WOLF_CORE_JS . '/lib/jquery.inview.min.js', array( 'jquery' ), '1.1.2', true );
+	wp_enqueue_script( 'inview' );
 
 	/* Full Page */
 	wp_register_script( 'scrolloverflow', WOLF_CORE_JS . '/lib/scrolloverflow.min.js', array(), '0.0.5', true );
