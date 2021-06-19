@@ -733,6 +733,10 @@ function wolf_core_kses( $output ) {
 				'class' => array(),
 				'id'    => array(),
 			),
+			'em'     => array(
+				'class' => array(),
+				'id'    => array(),
+			),
 			'br'         => array(),
 			'img'        => array(
 				'src'      => array(),

@@ -609,7 +609,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 										$new = absint( $_POST[ $field_id ] );
 
-									} elseif ( 'editor' == $type ) {
+									} elseif ( 'editor' == $type || 'textarea' == $type ) {
 
 										$new = $_POST[ $field_id ];
 
