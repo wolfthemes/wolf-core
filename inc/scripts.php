@@ -40,6 +40,7 @@ function wolf_core_get_js_params() {
 			'fpAnimTime'                => apply_filters( 'wolf_core_fp_animtime', 900 ),
 			'fpEasing'                  => apply_filters( 'wolf_core_fp_easing', 'swing' ),
 			'fullPageContainer'         => apply_filters( 'wolf_core_fp_container', '.page-entry-content' ),
+			'fullSelector'              => apply_filters( 'wolf_core_fp_selector', '.wolf-core-parent-row' ),
 			'audioButtonPlayText'       => esc_html__( 'Play', 'wolf-visual-composer' ),
 			'audioButtonPauseText'      => esc_html__( 'Pause', 'wolf-visual-composer' ),
 			'language'                  => get_locale(),

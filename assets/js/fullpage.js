@@ -31,7 +31,7 @@ var WolfCoreFullPage = function( $ ) {
 			}
 
 			this.$container = $( WolfCoreJSParams.fullPageContainer || '.page-entry-content' );
-			this.rowSelector = $( WolfCoreJSParams.fullPageRowSelector || '.wolf-core-parent-row' );
+			this.rowSelector = $( WolfCoreJSParams.fullPageSelector || '.wolf-core-parent-row' );
 			this.fpAnimTime = WolfCoreJSParams.fpAnimTime;
 			this.fpEasing = WolfCoreJSParams.fpEasing;
 			this.fpTransitionEffect = WolfCoreJSParams.fpTransitionEffect;
