@@ -40,7 +40,7 @@ function wolf_core_get_js_params() {
 			'fpAnimTime'                => apply_filters( 'wolf_core_fp_animtime', 900 ),
 			'fpEasing'                  => apply_filters( 'wolf_core_fp_easing', 'swing' ),
 			'fullPageContainer'         => apply_filters( 'wolf_core_fp_container', '.page-entry-content' ),
-			'fullSelector'              => apply_filters( 'wolf_core_fp_selector', '.wolf-core-parent-row' ),
+			'fullPageSelector'          => apply_filters( 'wolf_core_fp_selector', '.wolf-core-parent-row' ),
 			'audioButtonPlayText'       => esc_html__( 'Play', 'wolf-visual-composer' ),
 			'audioButtonPauseText'      => esc_html__( 'Pause', 'wolf-visual-composer' ),
 			'language'                  => get_locale(),
@@ -110,6 +110,16 @@ function wolf_core_get_register_scripts() {
 				'dependencies' => array(),
 				'in_footer'    => false,
 			),
+
+			'parallax-scroll' => array(
+				'src'          => WOLF_CORE_JS . '/lib/jquery.parallax-scroll.min.js',
+				'version'      => '1.0.0b',
+			),
+
+			'lazyloadxt' => array(
+				'src'          => WOLF_CORE_JS . '/lib/jquery.lazyloadxt.min.js',
+				'version'      => '1.1.0',
+			),
 		)
 	);
 }
@@ -136,12 +146,6 @@ function wolf_core_enqueue_scripts() {
 
 	/* Lightbox */
 	wp_register_script( 'swipebox', WOLF_CORE_JS . '/lib/jquery.swipebox.min.js', array( 'jquery' ), '1.2.9', true );
-
-	// Parallax element.
-	wp_register_script( 'parallax-scroll', WOLF_CORE_JS . '/lib/jquery.parallax-scroll.min.js', array( 'jquery' ), '1.0.0b', true );
-
-	// Lazyload.
-	wp_register_script( 'lazyloadxt', WOLF_CORE_JS . '/lib/jquery.lazyloadxt.min.js', array( 'jquery' ), '1.1.0', true );
 
 	// BigText.
 	wp_register_script( 'bigtext', WOLF_CORE_JS . '/lib/jquery.bigtext.min.js', array( 'jquery' ), '1.0.0', true );
