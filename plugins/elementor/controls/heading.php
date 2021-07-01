@@ -44,7 +44,7 @@ add_action(
 		$class = 'wolf-core-heading';
 
 		if ( ! empty( $settings['extra_class'] ) ) {
-			$class .= $settings['extra_class'];
+			$class .= ' ' . $settings['extra_class'];
 		}
 
 		//debug( $settings );
