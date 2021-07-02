@@ -232,11 +232,11 @@ var WolfCoreFullPage = function( $ ) {
 			var video, YTPlayerId, VimeoPlayerId, vimeoPlayer;
 
 			/* HTML video */
-			if ( $container.find( '.wolf-core-video-bg' ).length ) {
+			if ( $container.find( '.wolf-core-video-bg, .video-bg' ).length ) {
 
 				setTimeout( function() {
 
-					video = $container.find( '.wolf-core-video-bg' ).get(0);
+					video = $container.find( '.wolf-core-video-bg, .video-bg' ).get(0);
 
 					if ( video.paused ) {
 						video.play();

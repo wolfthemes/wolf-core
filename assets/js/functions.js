@@ -1123,20 +1123,21 @@ var WolfCore = (function ($) {
 		 * One Pager
 		 */
 		onePager: function () {
+
 			if ($("body").hasClass("wolf-core-one-pager")) {
+			//if (1 === 1) {
 				$("body").prepend('<div id="wolf-core-one-page-nav" />');
 
 				var bulletClass = "wolf-core-scroll wolf-core-one-page-nav-bullet",
+					onePageSelector = WolfCoreJSParams.onePageSelector || '.wolf-core-parent-row',
 					i = 0;
 
 				if (WolfCoreJSParams.fullPage) {
 					bulletClass = "wolf-core-fp-nav wolf-core-one-page-nav-bullet";
 				}
 
-				$(".wolf-core-parent-row[data-row-name]").each(function (index) {
+				$( onePageSelector + "[data-row-name]" ).each(function (index) {
 					i++;
-
-					//console.log( i );
 
 					var $row = $(this),
 						id = $row.attr("id"),

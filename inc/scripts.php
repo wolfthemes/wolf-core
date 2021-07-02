@@ -35,6 +35,7 @@ function wolf_core_get_js_params() {
 			'parallaxNoAndroid'         => apply_filters( 'wolf_core_parallax_no_android', true ),
 			'parallaxNoSmallScreen'     => apply_filters( 'wolf_core_parallax_no_small_screen', true ),
 			'googleMapApiKey'           => apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) ),
+			'onePageSelector'           => apply_filters( 'wolf_core_one_page_selector', '.wolf-core-parent-row' ),
 			'fullPage'                  => apply_filters( 'wolf_core_do_fullpage', wolf_core_do_fullpage() ),
 			'fpTransitionEffect'        => apply_filters( 'wolf_core_fp_transition_effect', 'mix' ),
 			'fpAnimTime'                => apply_filters( 'wolf_core_fp_animtime', 900 ),
