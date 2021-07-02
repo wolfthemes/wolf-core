@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Enqueue Elementor admn scripts
+ * Enqueue Elementor admin scripts
  */
 function wolf_core_enqueue_elementor_admin_scripts() {
 	wp_enqueue_script( 'wolf-core-post-meta', WOLF_CORE_JS . '/admin/post-meta.js', array( 'jquery' ), WOLF_CORE_VERSION, true );
