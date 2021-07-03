@@ -70,12 +70,12 @@ function wolf_core_get_js_params() {
  */
 function wolf_core_register_scripts( $scripts = array() ) {
 
-	$theme_version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WOLF_CORE_VERSION;
+	$plugin_version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WOLF_CORE_VERSION;
 
 	foreach ( $scripts as $handle => $properties ) {
 		$src          = esc_url( $properties['src'] );
 		$dependencies = ( isset( $properties['dependencies'] ) ) ? $properties['dependencies'] : array( 'jquery' );
-		$version      = ( isset( $properties['version'] ) ) ? $properties['version'] : $theme_version;
+		$version      = ( isset( $properties['version'] ) ) ? $properties['version'] : $plugin_version;
 		$in_footer    = ( isset( $properties['in_footer'] ) ) ? $properties['in_footer'] : true;
 
 		wp_register_script( $handle, $src, $dependencies, $version, $in_footer );
@@ -98,14 +98,14 @@ function wolf_core_get_register_scripts() {
 	return apply_filters(
 		'wolf_core_register_scripts',
 		array(
-			'jarallax'       => array(
+			'jarallax'        => array(
 				'src'          => WOLF_CORE_JS . '/lib/jarallax/jarallax.min.js',
 				'version'      => '1.10.6',
 				'dependencies' => array(),
 				'in_footer'    => false,
 			),
 
-			'jarallax-video' => array(
+			'jarallax-video'  => array(
 				'src'          => WOLF_CORE_JS . '/lib/jarallax/jarallax-video.min.js',
 				'version'      => '1.0.1',
 				'dependencies' => array(),
@@ -113,13 +113,13 @@ function wolf_core_get_register_scripts() {
 			),
 
 			'parallax-scroll' => array(
-				'src'          => WOLF_CORE_JS . '/lib/jquery.parallax-scroll.min.js',
-				'version'      => '1.0.0b',
+				'src'     => WOLF_CORE_JS . '/lib/jquery.parallax-scroll.min.js',
+				'version' => '1.0.0b',
 			),
 
-			'lazyloadxt' => array(
-				'src'          => WOLF_CORE_JS . '/lib/jquery.lazyloadxt.min.js',
-				'version'      => '1.1.0',
+			'lazyloadxt'      => array(
+				'src'     => WOLF_CORE_JS . '/lib/jquery.lazyloadxt.min.js',
+				'version' => '1.1.0',
 			),
 		)
 	);
@@ -421,3 +421,13 @@ function wolf_core_overwrite_vc_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wolf_core_overwrite_vc_scripts', 999 );
 
+function wolf_core_add_type_attribute( $tag, $handle, $src ) {
+	// if not your script, do nothing and return original $tag
+	if ( 'wolf-core-work-category-marquee' !== $handle ) {
+		return $tag;
+	}
+	// change the script tag by adding type="module" and return it.
+	$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+	return $tag;
+}
+//add_filter( 'script_loader_tag', 'wolf_core_add_type_attribute', 10, 3 );

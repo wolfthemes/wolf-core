@@ -4930,6 +4930,122 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 }
 
 /**
+ * @# Work Category Marquee
+ **/
+.work-category-marquee-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 13rem);
+  position: relative;
+  justify-content: center;
+}
+
+.work-category-marquee-item {
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 -1px #a7927b;
+}
+
+.work-category-marquee-item:last-child {
+  box-shadow: 0 1px #a7927b, 0 -1px #a7927b;
+}
+
+.work-category-marquee-item-link {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.work-category-marquee-item-link:focus,
+.work-category-marquee-item-link:focus-visible {
+  color: #775e41;
+}
+
+.work-category-marquee-item-link:focus:not(:focus-visible) {
+  color: black;
+}
+
+.work-category-marquee-item-marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: black;
+  transform: translate3d(0, 101%, 0);
+}
+
+.work-category-marquee-item-marquee,
+.work-category-marquee-item-marquee__inner-wrap {
+  transition: transform 0.2s ease;
+}
+
+.work-category-marquee-item-marquee__inner-wrap {
+  height: 100%;
+  width: 100%;
+  transform: translate3d(0, -101%, 0);
+}
+
+.work-category-marquee-item-marquee__inner {
+  height: 100%;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  position: relative;
+  animation: marquee 15s linear infinite;
+  will-change: transform;
+}
+
+.work-category-marquee-item-marquee-active .work-category-marquee-item-marquee {
+  transform: translate3d(0, 0, 0);
+}
+.work-category-marquee-item-marquee-active .work-category-marquee-item-marquee__inner-wrap {
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes marquee {
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.work-category-marquee-item-link,
+.work-category-marquee-item-marquee span {
+  white-space: nowrap;
+  font-size: 6vw;
+  line-height: 1.2;
+  font-weight: 600;
+  padding: 1vh 1vw 0;
+  text-transform: uppercase;
+}
+
+.work-category-marquee-item-marquee span {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+
+.work-category-marquee-item-marquee__img {
+  width: 15vw;
+  height: 70%;
+  margin: 0 2vw;
+  border-radius: 5vw;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@media screen and (min-width: 53em) {
+  .work-category-marquee-container {
+    height: 100vh;
+  }
+}
+/**
  * @# Hover Efects
  **/
 .wolf-core-img {

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.0.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-07-02 13:49:49+00:00\n"
+"POT-Creation-Date: 2021-07-03 09:39:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1518,31 +1518,31 @@ msgstr ""
 msgid "Lost your password?"
 msgstr ""
 
-#: inc/scripts.php:45 pack/wolf-core/inc/scripts.php:44
+#: inc/scripts.php:45 pack/wolf-core/inc/scripts.php:45
 msgid "Play"
 msgstr ""
 
-#: inc/scripts.php:46 pack/wolf-core/inc/scripts.php:45
+#: inc/scripts.php:46 pack/wolf-core/inc/scripts.php:46
 msgid "Pause"
 msgstr ""
 
-#: inc/scripts.php:53 pack/wolf-core/inc/scripts.php:52
+#: inc/scripts.php:53 pack/wolf-core/inc/scripts.php:53
 msgid "Please fill all fields."
 msgstr ""
 
-#: inc/scripts.php:54 pack/wolf-core/inc/scripts.php:53
+#: inc/scripts.php:54 pack/wolf-core/inc/scripts.php:54
 msgid "Something went wrong while submuitting the form, please try again later."
 msgstr ""
 
-#: inc/scripts.php:55 pack/wolf-core/inc/scripts.php:54
+#: inc/scripts.php:55 pack/wolf-core/inc/scripts.php:55
 msgid "Loading"
 msgstr ""
 
-#: inc/scripts.php:56 pack/wolf-core/inc/scripts.php:55
+#: inc/scripts.php:56 pack/wolf-core/inc/scripts.php:56
 msgid "Calculating"
 msgstr ""
 
-#: inc/scripts.php:391 pack/wolf-core/inc/scripts.php:390
+#: inc/scripts.php:391 pack/wolf-core/inc/scripts.php:391
 msgid "An unknown error occured."
 msgstr ""
 
@@ -2979,6 +2979,7 @@ msgstr ""
 #: plugins/params/interactive-links.php:26 plugins/params/link.php:26
 #: plugins/params/mailchimp.php:26 plugins/params/sb-instagram-feed.php:29
 #: plugins/params/shape-slider.php:26 plugins/params/team-member.php:48
+#: plugins/params/work-category-marquee.php:26
 msgid "Extension"
 msgstr ""
 
@@ -3416,6 +3417,7 @@ msgstr ""
 #: plugins/params/icon.php:26 plugins/params/interactive-links.php:24
 #: plugins/params/link.php:24 plugins/params/mailchimp.php:24
 #: plugins/params/shape-slider.php:24
+#: plugins/params/work-category-marquee.php:24
 msgid "Description."
 msgstr ""
 
@@ -5090,6 +5092,7 @@ msgid "List"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/twitter.php:98 plugins/params/twitter.php:98
+#: plugins/params/work-category-marquee.php:39
 msgid "Count"
 msgstr ""
 
@@ -6694,6 +6697,10 @@ msgstr ""
 
 #: pack/wolf-core/wolf-core.php:365 wolf-core.php:365
 msgid "PHP"
+msgstr ""
+
+#: plugins/params/work-category-marquee.php:23
+msgid "Work Categoryies Marquee"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
