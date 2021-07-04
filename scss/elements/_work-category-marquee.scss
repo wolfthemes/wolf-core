@@ -61,7 +61,7 @@ $menu-focus: #775e41;
 
 .work-category-marquee-item-marquee,
 .work-category-marquee-item-marquee__inner-wrap {
-	transition: transform 0.2s ease;
+	//transition: transform 0.2s ease;
 }
 
 .work-category-marquee-item-marquee__inner-wrap {
@@ -80,13 +80,82 @@ $menu-focus: #775e41;
 	will-change: transform;
 }
 
+.over-from-top {
+	.work-category-marquee-item-marquee,
+	.work-category-marquee-item-marquee__inner-wrap {
+		animation: overFromTop;
+		animation-duration: 0.6s;
+	}
+}
+
+.over-from-bottom {
+	.work-category-marquee-item-marquee,
+	.work-category-marquee-item-marquee__inner-wrap {
+		animation: overFromBottom;
+		animation-duration: 0.6s;
+	}
+}
+
+.out-from-top {
+	.work-category-marquee-item-marquee,
+	.work-category-marquee-item-marquee__inner-wrap {
+		animation: outFromTop;
+		animation-duration: 0.6s;
+	}
+}
+
+.out-from-bottom {
+	.work-category-marquee-item-marquee,
+	.work-category-marquee-item-marquee__inner-wrap {
+		animation: outFromBottom;
+		animation-duration: 0.6s;
+	}
+}
+
 .work-category-marquee-item-marquee-active {
-	.work-category-marquee-item-marquee {
+	.work-category-marquee-item-marquee,
+	.work-category-marquee-item-marquee__inner-wrap {
 		transform: translate3d(0, 0, 0);
 	}
 
 	.work-category-marquee-item-marquee__inner-wrap {
 		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes overFromTop {
+	0% {
+		transform: translate3d(0, -101%, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes overFromBottom {
+	0% {
+		transform: translate3d(0, 101%, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes outFromTop {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, -101%, 0);
+	}
+}
+
+@keyframes outFromBottom {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 101%, 0);
 	}
 }
 
@@ -116,7 +185,7 @@ $menu-focus: #775e41;
 	width: 15vw;
 	height: 70%;
 	margin: 0 2vw;
-	border-radius: 5vw;
+	//border-radius: 5vw;
 	background-size: cover;
 	background-position: 50% 50%;
 }

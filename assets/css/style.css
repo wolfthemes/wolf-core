@@ -4981,11 +4981,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   transform: translate3d(0, 101%, 0);
 }
 
-.work-category-marquee-item-marquee,
-.work-category-marquee-item-marquee__inner-wrap {
-  transition: transform 0.2s ease;
-}
-
 .work-category-marquee-item-marquee__inner-wrap {
   height: 100%;
   width: 100%;
@@ -5002,11 +4997,76 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   will-change: transform;
 }
 
-.work-category-marquee-item-marquee-active .work-category-marquee-item-marquee {
+.over-from-top .work-category-marquee-item-marquee,
+.over-from-top .work-category-marquee-item-marquee__inner-wrap {
+  animation: overFromTop;
+  animation-duration: 0.6s;
+}
+
+.over-from-bottom .work-category-marquee-item-marquee,
+.over-from-bottom .work-category-marquee-item-marquee__inner-wrap {
+  animation: overFromBottom;
+  animation-duration: 0.6s;
+}
+
+.out-from-top .work-category-marquee-item-marquee,
+.out-from-top .work-category-marquee-item-marquee__inner-wrap {
+  animation: outFromTop;
+  animation-duration: 0.6s;
+}
+
+.out-from-bottom .work-category-marquee-item-marquee,
+.out-from-bottom .work-category-marquee-item-marquee__inner-wrap {
+  animation: outFromBottom;
+  animation-duration: 0.6s;
+}
+
+.work-category-marquee-item-marquee-active .work-category-marquee-item-marquee,
+.work-category-marquee-item-marquee-active .work-category-marquee-item-marquee__inner-wrap {
   transform: translate3d(0, 0, 0);
 }
 .work-category-marquee-item-marquee-active .work-category-marquee-item-marquee__inner-wrap {
   transform: translate3d(0, 0, 0);
+}
+
+@keyframes overFromTop {
+  0% {
+    transform: translate3d(0, -101%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes overFromBottom {
+  0% {
+    transform: translate3d(0, 101%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes outFromTop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -101%, 0);
+  }
+}
+
+@keyframes outFromBottom {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 101%, 0);
+  }
 }
 
 @keyframes marquee {
@@ -5035,7 +5095,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   width: 15vw;
   height: 70%;
   margin: 0 2vw;
-  border-radius: 5vw;
   background-size: cover;
   background-position: 50% 50%;
 }

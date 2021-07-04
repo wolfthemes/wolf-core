@@ -18,24 +18,72 @@ var WolfCoreWorkCategoryMarquee = function( $ ) {
 
 			$( ".work-category-marquee-item" ).each( function() {
 				var $item = $( this ),
+					el_pos,
 					edge;
 
 				$item.on( "mouseenter", function( event ) {
-					edge = _this.findClosestEdge(event);
+					el_pos = $( this ).offset(),
+					edge = _this.closestEdge( event.pageX - el_pos.left, event.pageY - el_pos.top, $item.width(), $item.height() );
 
-					$item.addClass( 'work-category-marquee-item-marquee-active' );
+					$item.removeClass( 'out-from-top out-from-bottom' );
+
+					if ( 'top' === edge ) {
+
+						$( this ).addClass( 'over-from-top' ).on( WolfCore.animationEventEnd(), function() {
+							$( this ).addClass( 'work-category-marquee-item-marquee-active' );
+						} );
+
+					} else {
+
+						$( this ).addClass( 'over-from-bottom' ).on( WolfCore.animationEventEnd(), function() {
+							$( this ).addClass( 'work-category-marquee-item-marquee-active' );
+						} );
+					}
 
 				} ).on( "mouseleave", function( event ) {
-					edge = _this.findClosestEdge(event);
+					el_pos = $( this ).offset(),
+					edge = _this.closestEdge( event.pageX - el_pos.left, event.pageY - el_pos.top, $item.width(), $item.height() );
 
-					$item.removeClass( 'work-category-marquee-item-marquee-active' );
+					if ( 'top' === edge ) {
+
+						$( this ).addClass( 'out-from-top' ).on( WolfCore.animationEventEnd(), function() {
+							$( this ).removeClass( 'work-category-marquee-item-marquee-active' );
+						} );
+
+					} else {
+
+						$( this ).addClass( 'out-from-bottom' ).on( WolfCore.animationEventEnd(), function() {
+							$( this ).removeClass( 'work-category-marquee-item-marquee-active' );
+						} );
+					}
 				} );
 			} );
 		},
 
-		findClosestEdge : function( event ) {
+		closestEdge : function ( x,y,w,h ) {
+			var topEdgeDist = this.distMetric( x,y,w/2,0 );
+			var bottomEdgeDist = this.distMetric( x,y,w/2,h );
+			var leftEdgeDist = this.distMetric( x,y,0,h/2 );
+			var rightEdgeDist = this.distMetric( x,y,w,h/2 );
 
-		}
+			var min = Math.min( topEdgeDist, bottomEdgeDist, leftEdgeDist, rightEdgeDist );
+			switch ( min ) {
+				case leftEdgeDist:
+					return 'left';
+				case rightEdgeDist:
+					return 'right';
+				case topEdgeDist:
+					return 'top';
+				case bottomEdgeDist:
+					return 'bottom';
+			}
+		},
+
+		distMetric : function ( x,y,x2,y2 ) {
+			var xDiff = x - x2,
+				yDiff = y - y2;
+			return ( xDiff * xDiff ) + ( yDiff * yDiff );
+		},
 	};
 
 }( jQuery );
