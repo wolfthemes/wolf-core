@@ -90,6 +90,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		'select'     => \Elementor\Controls_Manager::SELECT,
 		'checkbox'   => \Elementor\Controls_Manager::SWITCHER,
 		'link'       => \Elementor\Controls_Manager::URL,
+		'image'      => \Elementor\Controls_Manager::MEDIA,
 		'audio'      => \Elementor\Controls_Manager::MEDIA,
 		'video'      => \Elementor\Controls_Manager::MEDIA,
 		'background' => '',
@@ -150,6 +151,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 						if ( 'audio' === $r_param['type'] ) {
 							$r_params['media_type'] = 'audio';
+						} elseif ( 'image' === $r_param['type'] ) {
+							$r_params['media_type'] = 'image';
 						} elseif ( 'video' === $r_param['type'] ) {
 							$r_params['media_type'] = 'video';
 						} elseif ( 'select' === $r_param['type'] ) {

@@ -44,6 +44,7 @@ function wolf_core_get_elements() {
 		'button',
 		// 'cards-gallery',
 		// 'cta',
+		'clients',
 		// 'comparison_slider',
 		'content-block',
 		// 'content-slider',
