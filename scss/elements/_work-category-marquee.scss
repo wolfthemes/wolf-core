@@ -14,7 +14,7 @@ $menu-focus: #775e41;
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	height: calc(100vh - 13rem);
+	//height: calc(100vh - 13rem);
 	position: relative;
 	justify-content: center;
 }
@@ -170,7 +170,7 @@ $menu-focus: #775e41;
 	white-space: nowrap;
 	font-size: 6vw;
 	line-height: 1.2;
-	font-weight: 600;
+	//font-weight: 600;
 	padding: 1vh 1vw 0;
 	text-transform: uppercase;
 }
@@ -192,6 +192,6 @@ $menu-focus: #775e41;
 
 @media screen and (min-width: 53em) {
 	.work-category-marquee-container {
-		height: 100vh;
+		//height: 100vh;
 	}
 }

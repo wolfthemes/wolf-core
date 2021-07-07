@@ -2959,6 +2959,11 @@ li.wolf-core-album-tracklist-item {
   position: relative;
 }
 
+.wolf-core-client-image-inner {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
 .wolf-core-client-image-hover-inner {
   position: absolute;
   top: 0;
@@ -2969,6 +2974,9 @@ li.wolf-core-album-tracklist-item {
   transition: opacity 0.2s ease;
 }
 
+.wolf-core-client:hover .wolf-core-client-image-inner {
+  opacity: 1;
+}
 .wolf-core-client:hover .wolf-core-client-image-hover-inner {
   opacity: 1;
 }
@@ -5026,7 +5034,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: calc(100vh - 13rem);
   position: relative;
   justify-content: center;
 }
@@ -5170,7 +5177,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   white-space: nowrap;
   font-size: 6vw;
   line-height: 1.2;
-  font-weight: 600;
   padding: 1vh 1vw 0;
   text-transform: uppercase;
 }
@@ -5189,11 +5195,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   background-position: 50% 50%;
 }
 
-@media screen and (min-width: 53em) {
-  .work-category-marquee-container {
-    height: 100vh;
-  }
-}
 /**
  * @# Hover Efects
  **/

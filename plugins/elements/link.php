@@ -23,7 +23,7 @@ function wolf_core_link( $atts ) {
 			array(
 				'text'    => '',
 				'tagline' => '',
-				'url'    => '',
+				'link'    => '',
 			)
 		)
 	);
