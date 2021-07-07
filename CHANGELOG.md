@@ -1,6 +1,9 @@
 
 # Changelog
 
+#### 7th July 2021 - Version 1.0.8
+
+-   Tweak: Added work category marquee element
 #### 18th June 2021 - Version 1.0.7
 
 -   Tweak: Added interactive links elements
