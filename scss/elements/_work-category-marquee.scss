@@ -2,10 +2,9 @@
  * @# Work Category Marquee
  **/
 $color-text: #111;
-$color-bg: #f8c792;
-$color-link: #000;
+$color-link: rgb(7, 7, 7);
 $color-link-hover: #000;
-$color-border: #a7927b;
+$color-border: rgba(255, 255, 255, 0.14);
 $marquee-bg: #000;
 $marquee-text: #fff;
 $menu-focus: #775e41;
@@ -44,7 +43,7 @@ $menu-focus: #775e41;
 }
 
 .work-category-marquee-item-link:focus:not(:focus-visible) {
-	color: $color-link;
+	//color: $color-link;
 }
 
 .work-category-marquee-item-marquee {

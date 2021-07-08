@@ -332,6 +332,7 @@
 .wolf-core-font-light h6:not(.wolf-core-service-title),
 .wolf-core-font-light strong,
 .wolf-core-font-light b,
+.wolf-core-font-light a,
 .wolf-core-font-light .wolf-core-counter,
 .wolf-core-font-light .wolf-core-bigtext-link,
 .wolf-core-font-light .wolf-core-fittext-link,
@@ -5043,11 +5044,11 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   position: relative;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 -1px #a7927b;
+  box-shadow: 0 -1px rgba(255, 255, 255, 0.14);
 }
 
 .work-category-marquee-item:last-child {
-  box-shadow: 0 1px #a7927b, 0 -1px #a7927b;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.14), 0 -1px rgba(255, 255, 255, 0.14);
 }
 
 .work-category-marquee-item-link {
@@ -5060,10 +5061,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 .work-category-marquee-item-link:focus,
 .work-category-marquee-item-link:focus-visible {
   color: #775e41;
-}
-
-.work-category-marquee-item-link:focus:not(:focus-visible) {
-  color: black;
 }
 
 .work-category-marquee-item-marquee {
