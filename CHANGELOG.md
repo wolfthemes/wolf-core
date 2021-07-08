@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 7th July 2021 - Version 1.0.8
+#### 8th July 2021 - Version 1.0.9
 
 -   Tweak: Added work category marquee element
+-   Fix: Google maps custom skin field
 #### 18th June 2021 - Version 1.0.7
 
 -   Tweak: Added interactive links elements

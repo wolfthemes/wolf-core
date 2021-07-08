@@ -140,7 +140,7 @@ function wolf_core_google_maps_params() {
 				),
 
 				array(
-					'type'        => 'textarea_raw_html',
+					'type'        => 'textarea',
 					'label'       => esc_html__( 'Custom code', 'wolf-core' ),
 					'param_name'  => 'custom_map_skin',
 					'description' => sprintf( wolf_core_kses( __( 'You can get a custom code from <a href="%s" target="_blank">https://snazzymaps.com</a> and paste it here', 'wolf-core' ) ), 'https://snazzymaps.com/' ),

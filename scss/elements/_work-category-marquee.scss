@@ -39,7 +39,7 @@ $menu-focus: #775e41;
 
 .work-category-marquee-item-link:focus,
 .work-category-marquee-item-link:focus-visible {
-	color: $menu-focus;
+	//color: $menu-focus;
 }
 
 .work-category-marquee-item-link:focus:not(:focus-visible) {

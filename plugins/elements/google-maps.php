@@ -54,7 +54,7 @@ function wolf_core_google_maps( $atts ) {
 			printf(
 				wp_kses_post( __( '<p class="wolf-core-align-center">You must set a Google Map API key in the <a style="text-decoration:underline;" href="%1$s" target="_blank">%2$s settings</a>. You can get your Google Map API <a style="text-decoration:underline;" href="%3$s" target="_blank">here</a>.<p>', 'wolf-visual-composer' ) ),
 				esc_url( admin_url( 'admin.php?page=wolf-core-google-map' ) ),
-				'Wolf WPBakery Page Builder Extension',
+				'Wolf Core',
 				esc_url( 'https://developers.google.com/maps/documentation/javascript/get-api-key' )
 			);
 		}
@@ -160,7 +160,7 @@ function wolf_core_google_maps( $atts ) {
 		data-marker-color="' . esc_attr( $marker_color ) . '"';
 
 		if ( $custom_map_skin ) {
-			$custom_map_skin = wolf_core_clean_spaces( rawurldecode( base64_decode( wp_strip_all_tags( $custom_map_skin ) ) ) );
+			//$custom_map_skin = wolf_core_clean_spaces( rawurldecode( base64_decode( wp_strip_all_tags( $custom_map_skin ) ) ) );
 			$output         .= ' data-custom-map-skin="' . esc_js( $custom_map_skin ) . '"';
 		}
 

@@ -48,7 +48,6 @@ function wolf_core_blockquote( $atts ) {
 
 	$output .= '<div class="wolf-core-blockquote-inner">';
 
-
 	if ( $tagline ) {
 		$output .= '<div class="wolf-core-blockquote-tagline">';
 		$output .= $tagline;
