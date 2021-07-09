@@ -1,0 +1,36 @@
+/**
+ * @# Animtaed SVG
+ **/
+.wolf-core-svg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		max-width: 100%;
+		overflow: visible !important;
+
+		path {
+			fill: none;
+			stroke: #998866;
+			stroke-miterlimit: 10;
+			stroke-width: 5;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-dasharray: 100000;
+			stroke-dashoffset: 100000;
+		}
+	}
+}
+
+.loaded .wolf-core-row-visible {
+	.wolf-core-svg svg path {
+		animation: wolfCoreDraw 10s linear forwards;
+	}
+}
+
+@keyframes wolfCoreDraw {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

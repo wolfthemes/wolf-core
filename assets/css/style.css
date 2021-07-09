@@ -2478,6 +2478,39 @@ li.wolf-core-album-tracklist-item {
 }
 
 /**
+ * @# Animtaed SVG
+ **/
+.wolf-core-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wolf-core-svg svg {
+  max-width: 100%;
+  overflow: visible !important;
+}
+.wolf-core-svg svg path {
+  fill: none;
+  stroke: #998866;
+  stroke-miterlimit: 10;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100000;
+  stroke-dashoffset: 100000;
+}
+
+.loaded .wolf-core-row-visible .wolf-core-svg svg path {
+  animation: wolfCoreDraw 10s linear forwards;
+}
+
+@keyframes wolfCoreDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/**
  * @# Banner
  **/
 .wolf-core-banner {
@@ -5058,11 +5091,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-}
-
-.work-category-marquee-item-link:focus,
-.work-category-marquee-item-link:focus-visible {
-  color: #775e41;
 }
 
 .work-category-marquee-item-marquee {

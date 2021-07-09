@@ -29,6 +29,7 @@ function wolf_core_get_elements() {
 		// 'album-tracklist',
 		// 'album-tracklist-item',
 		// 'anchor',
+		'animated-svg',
 		// 'anything-slider',
 		// 'anything-slide',
 		// 'audio',
@@ -432,38 +433,38 @@ function wolf_core_get_team_member_socials() {
  * @param array  $args The passed arguments.
  * @return string
  */
-function wolf_core_animated_svg( $file, $args = array() ) {
+// function wolf_core_animated_svg( $file, $args = array() ) {
 
-	$args = wp_parse_args(
-		$args,
-		array(
-			'class'              => '',
-			'animation_duration' => '',
-		)
-	);
+// 	$args = wp_parse_args(
+// 		$args,
+// 		array(
+// 			'class'              => '',
+// 			'animation_duration' => '',
+// 		)
+// 	);
 
-	wp_enqueue_script( 'vivus' );
-	wp_enqueue_script( 'wolf-core-vivus' );
+// 	wp_enqueue_script( 'vivus' );
+// 	wp_enqueue_script( 'wolf-core-vivus' );
 
-	extract( $args );
+// 	extract( $args );
 
-	$class .= ' wolf-core-vivus wolf-core-svg-icon';
+// 	$class .= ' wolf-core-vivus wolf-core-svg-icon';
 
-	$rand = 'wolf-core-svg-' . wp_rand( 0, 999999 ); // unique ID.
+// 	$rand = 'wolf-core-svg-' . wp_rand( 0, 999999 ); // unique ID.
 
-	$output = '';
+// 	$output = '';
 
-	$output .= '<span id="' . esc_attr( $rand ) . '" class="' . wolf_core_sanitize_html_classes( $class ) . '"
-	data-file="' . esc_url( $file ) . '"';
+// 	$output .= '<span id="' . esc_attr( $rand ) . '" class="' . wolf_core_sanitize_html_classes( $class ) . '"
+// 	data-file="' . esc_url( $file ) . '"';
 
-	if ( $animation_duration ) {
-		$output .= ' data-animation-duration="' . absint( $animation_duration ) . '"';
-	}
+// 	if ( $animation_duration ) {
+// 		$output .= ' data-animation-duration="' . absint( $animation_duration ) . '"';
+// 	}
 
-	$output .= '></span>';
+// 	$output .= '></span>';
 
-	return $output;
-}
+// 	return $output;
+// }
 
 /**
  * New animations

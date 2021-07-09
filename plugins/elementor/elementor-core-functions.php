@@ -85,15 +85,16 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 	}
 
 	$elementor_types = array(
-		'text'       => \Elementor\Controls_Manager::TEXT,
-		'textarea'   => \Elementor\Controls_Manager::TEXTAREA,
-		'select'     => \Elementor\Controls_Manager::SELECT,
-		'checkbox'   => \Elementor\Controls_Manager::SWITCHER,
-		'link'       => \Elementor\Controls_Manager::URL,
-		'image'      => \Elementor\Controls_Manager::MEDIA,
-		'audio'      => \Elementor\Controls_Manager::MEDIA,
-		'video'      => \Elementor\Controls_Manager::MEDIA,
-		'background' => '',
+		'text'        => \Elementor\Controls_Manager::TEXT,
+		'textarea'    => \Elementor\Controls_Manager::TEXTAREA,
+		'select'      => \Elementor\Controls_Manager::SELECT,
+		'checkbox'    => \Elementor\Controls_Manager::SWITCHER,
+		'link'        => \Elementor\Controls_Manager::URL,
+		'image'       => \Elementor\Controls_Manager::MEDIA,
+		'audio'       => \Elementor\Controls_Manager::MEDIA,
+		'video'       => \Elementor\Controls_Manager::MEDIA,
+		'colorpicker' => \Elementor\Controls_Manager::COLOR,
+		'background'  => '',
 	);
 
 	foreach ( $params as $p ) {
@@ -126,9 +127,9 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					$repeater->add_group_control(
 						\Elementor\Group_Control_Background::get_type(),
 						array(
-							'name'     => $r_param['param_name'],
-							'label'    => esc_html__( 'Background', 'wolf-core' ),
-							'types'    => array( 'classic', 'video' ),
+							'name'      => $r_param['param_name'],
+							'label'     => esc_html__( 'Background', 'wolf-core' ),
+							'types'     => array( 'classic', 'video' ),
 							'selectors' => $r_param['selectors'],
 						)
 					);
