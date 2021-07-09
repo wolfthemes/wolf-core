@@ -21,16 +21,120 @@ function wolf_core_testimonial_slider( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-
+				'autoplay'            => 'yes',
+				'transition'          => 'slide',
+				'slideshow_speed'     => 4000,
+				'pause_on_hover'      => 'yes',
+				'nav_bullets'         => 'yes',
+				'nav_arrows'          => 'yes',
+				'testimonials'        => array(),
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
 			)
 		)
 	);
 
 	extract( $atts ); // phpcs:ignore
 
+	//wp_enqueue_script( 'flickity' );
+	//wp_enqueue_script( 'wolf-core-carousels' );
+
 	$output = '';
 
 	$class = $el_class; // init container CSS class.
+
+	$class .= ' wolf-core-testimonial-slider-container wolf-core-element';
+
+	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+
+	$output .= wolf_core_element_aos_animation_data_attr( $atts );
+	$output .= '>';
+
+	$slider_data = "data-pause-on-hover='$autoplay'
+		data-autoplay='$autoplay'
+		data-transition='$transition'
+		data-slideshow-speed='$slideshow_speed'
+		data-nav-arrows='$nav_arrows'
+		data-nav-bullets='$nav_bullets'";
+
+	$output .= "<div $slider_data class='wolf-core-testimonial-slider'>";
+
+	foreach ( $testimonials as $testimonial ) {
+
+		$output .= '<div class="wolf-core-testimonal-slide">';
+
+		$output .= '<div class="wolf-core-blockquote-inner">';
+
+		$testimonial = extract(
+			apply_filters(
+				'wolf_core_testimonial_atts',
+				wp_parse_args(
+					$testimonial,
+					array(
+						'text'    => '',
+						'tagline' => '',
+						'cite'    => '',
+						'avatar'  => '',
+						'rating'  => '',
+					)
+				)
+			)
+		);
+
+		if ( is_array( $avatar ) && isset( $avatar['id'] ) ) {
+			$avatar = $avatar['id'];
+		}
+
+		if ( $tagline ) {
+			$output .= '<div class="wolf-core-blockquote-tagline">';
+			$output .= $tagline;
+			$output .= '</div><!--.wolf-core-blockquote-tagline-->';
+		}
+
+		if ( $text ) {
+			$output .= '<div class="wolf-core-blockquote-text">';
+			$output .= '<blockquote>';
+			$output .= $text;
+			$output .= '</blockquote>';
+			$output .= '</div><!--.wolf-core-blockquote-text-->';
+		}
+
+		if ( $avatar || $cite ) {
+			$output .= '<div class="wolf-core-blockquote-author">';
+		}
+
+		if ( $avatar ) {
+
+			$output .= '<div class="wolf-core-blockquote-avatar">';
+
+			if ( wp_attachment_is_image( $avatar ) ) {
+				$output .= wp_get_attachment_image( $avatar, 'thumbnail', false );
+			} else {
+				$output .= wolf_core_placeholder_img( 'thumbnail' );
+			}
+
+			$output .= '</div><!--.wolf-core-blockquote-avatar-->';
+
+		}
+
+		if ( $cite ) {
+			$output .= '<cite class="wolf-core-blockquote-cite">';
+			$output .= $cite;
+			$output .= '</cite><!--.wolf-core-blockquote-cite-->';
+		}
+
+		if ( $avatar || $cite ) {
+			$output .= '</div><!--.wolf-core-blockquote-author-->';
+		}
+
+		$output .= '</div><!--.wolf-core-blockquote-inner-->';
+		$output .= '</div><!--.wolf-core-blockquote--></wolf-core-blockquote>';
+	}
+
+	$output .= '</div></div><!--.wolf-core-testimonial-slider-->';
 
 	return $output;
 }

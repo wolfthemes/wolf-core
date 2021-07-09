@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 8th July 2021 - Version 1.1.1
+#### 9th July 2021 - Version 1.1.2
 
+-   Tweak: Added client image link element
 -   Tweak: Added animated SVG element
 -   Tweak: Added testimonial slider element
 -   Tweak: Added work category marquee element

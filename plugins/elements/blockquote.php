@@ -81,9 +81,9 @@ function wolf_core_blockquote( $atts ) {
 	}
 
 	if ( $cite ) {
-		$output .= '<div class="wolf-core-blockquote-cite">';
+		$output .= '<cite class="wolf-core-blockquote-cite">';
 		$output .= $cite;
-		$output .= '</div><!--.wolf-core-blockquote-cite-->';
+		$output .= '</cite><!--.wolf-core-blockquote-cite-->';
 	}
 
 	if ( $avatar || $cite ) {

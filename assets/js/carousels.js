@@ -96,7 +96,7 @@ var WolfCoreCarousels = function( $ ) {
 			var defaultTransition = ( this.isMobile ) ? 'slide' : 'fade';
 			//var defaultTransition = 'slide';
 
-			$( '.wolf-core-testimonials-slider' ).each( function () {
+			$( '.wolf-core-testimonial-slider' ).each( function () {
 
 				var $slider = $( this ),
 					transition,
@@ -185,11 +185,11 @@ var WolfCoreCarousels = function( $ ) {
 	} );
 
 	$( document ).ready( function() {
-		// if ( window.elementorFrontend && elementorFrontend !== undefined ) {
-		// 	elementorFrontend.hooks.addAction( 'frontend/element_ready/gallery.default', function( $scope ) {
-		// 		WolfCoreCarousels.init();
-		// 	} );
-		// }
+		if (  window.elementorFrontend !== undefined && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
+			elementorFrontend.hooks.addAction( 'frontend/element_ready/testimonial-slider.default', function( $scope ) {
+				WolfCoreCarousels.testimonials();
+			} );
+		}
 	} );
 
 } )( jQuery );

@@ -26,7 +26,7 @@ function wolf_core_clients( $atts ) {
 				'padding'             => 'yes',
 				'img_size'            => 'thumbnail',
 				'custom_img_size'     => '',
-				'clients'             => '',
+				'clients'             => array(),
 
 				'css_animation'       => '',
 				'css_animation_delay' => '',
@@ -104,7 +104,6 @@ function wolf_core_clients( $atts ) {
 	$add_delay = ( in_array( $css_animation, $uncover_animations, true ) ) ? 300 : 200;
 
 
-
 	foreach ( $clients as $client ) {
 
 		$single_animation_delay = $single_animation_delay + $add_delay;
@@ -151,7 +150,15 @@ function wolf_core_clients( $atts ) {
 			$output .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '"></a>';
 		}
 
-		$output .= '<div class="wolf-core-client-inner">';
+		$inner_class = 'wolf-core-client-inner';
+
+		if ( $image_hover ) {
+			$inner_class .= ' wolf-core-client-has-hover-image';
+		} else {
+			$inner_class .= ' wolf-core-client-no-hover-image';
+		}
+
+		$output .= "<div class='$inner_class'>";
 
 		/* Image */
 		if ( $image ) {

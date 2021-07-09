@@ -1,6 +1,6 @@
 <?php
 /**
- * text Editor settings
+ * Text Editor Controls
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Controls

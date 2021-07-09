@@ -50,6 +50,12 @@ function wolf_core_testimonial_slider_params() {
 							'label'      => esc_html__( 'Text', 'wolf-core' ),
 							'param_name' => 'text',
 						),
+
+						array(
+							'label'      => esc_html__( 'Tagline', 'wolf-core' ),
+							'param_name' => 'tagline',
+						),
+
 						array(
 							'type'       => 'text',
 							'label'      => esc_html__( 'Author Name', 'wolf-core' ),

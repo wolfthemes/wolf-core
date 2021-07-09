@@ -2978,7 +2978,9 @@ li.wolf-core-album-tracklist-item {
   backface-visibility: hidden;
   display: block;
   vertical-align: bottom;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 .wolf-core-clients-grid.wolf-core-clients-padding-yes .wolf-core-client-grid {
   padding: 0 40px;
@@ -2994,7 +2996,7 @@ li.wolf-core-album-tracklist-item {
 }
 
 .wolf-core-client-image-inner {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.2s ease;
 }
 
@@ -3008,11 +3010,15 @@ li.wolf-core-album-tracklist-item {
   transition: opacity 0.2s ease;
 }
 
-.wolf-core-client:hover .wolf-core-client-image-inner {
+.wolf-core-client:hover .wolf-core-client-has-hover-image .wolf-core-client-image-inner {
+  opacity: 0;
+}
+.wolf-core-client:hover .wolf-core-client-has-hover-image .wolf-core-client-image-hover-inner {
   opacity: 1;
 }
-.wolf-core-client:hover .wolf-core-client-image-hover-inner {
-  opacity: 1;
+
+.wolf-core-client:hover .wolf-core-client-no-hover-image .wolf-core-client-image-inner {
+  opacity: 0.7;
 }
 
 /* Columns */
@@ -3741,6 +3747,8 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 /* Columns */
 .wolf-core-gallery-image_grid-columns-1 .wolf-core-img-image_grid {
   float: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 .wolf-core-gallery-image_grid-columns-1 .wolf-core-img-image_grid:last-child {
   padding-bottom: 0;
@@ -4837,6 +4845,19 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 
 .wolf-core-tm-valign-top .wolf-core-team-member-caption-container {
   align-items: flex-start;
+}
+
+.wolf-core-testimonials-container {
+  z-index: 5;
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wolf-core-testimonal-slide {
+  width: 100%;
+  padding-bottom: 15px;
 }
 
 /**

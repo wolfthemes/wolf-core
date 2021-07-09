@@ -34,6 +34,8 @@ $image_galery_padding: 15px;
 /* Columns */
 .wolf-core-gallery-image_grid-columns-1 .wolf-core-img-image_grid {
 	float: none;
+	padding-left: 0;
+	padding-right: 0;
 
 	&:last-child {
 		padding-bottom: 0;
