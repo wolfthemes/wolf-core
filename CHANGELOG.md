@@ -1,8 +1,10 @@
 
 # Changelog
 
-#### 8th July 2021 - Version 1.0.9
+#### 8th July 2021 - Version 1.1.1
 
+-   Tweak: Added animated SVG element
+-   Tweak: Added testimonial slider element
 -   Tweak: Added work category marquee element
 -   Fix: Google maps custom skin field
 #### 18th June 2021 - Version 1.0.7
