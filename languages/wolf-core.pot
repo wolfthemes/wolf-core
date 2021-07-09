@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.1.1\n"
+"Project-Id-Version: Wolf Core 1.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-07-09 14:18:40+00:00\n"
+"POT-Creation-Date: 2021-07-09 15:48:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3309,13 +3309,43 @@ msgstr ""
 msgid "CSS inline style"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:184
-#: plugins/helpers/helpers.php:184
+#: pack/wolf-core/plugins/helpers/helpers.php:86
+#: pack/wolf-core/plugins/params/gallery.php:269 plugins/helpers/helpers.php:86
+#: plugins/params/gallery.php:269
+msgid "Autoplay"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:93
+#: pack/wolf-core/plugins/params/gallery.php:283 plugins/helpers/helpers.php:93
+#: plugins/params/gallery.php:283
+msgid "Pause on Hover (if autoplay)"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:98
+#: pack/wolf-core/plugins/params/gallery.php:297 plugins/helpers/helpers.php:98
+#: plugins/params/gallery.php:297
+msgid "Slideshow Speed in ms"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:104
+#: pack/wolf-core/plugins/params/gallery.php:308
+#: plugins/helpers/helpers.php:104 plugins/params/gallery.php:308
+msgid "Show Navigation Bullets"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:111
+#: pack/wolf-core/plugins/params/gallery.php:322
+#: plugins/helpers/helpers.php:111 plugins/params/gallery.php:322
+msgid "Show Navigation Arrows"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:240
+#: plugins/helpers/helpers.php:240
 msgid "Same window"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:185
-#: plugins/helpers/helpers.php:185
+#: pack/wolf-core/plugins/helpers/helpers.php:241
+#: plugins/helpers/helpers.php:241
 msgid "New window"
 msgstr ""
 
@@ -4080,20 +4110,22 @@ msgid "Blockquote"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/blockquote.php:39
-#: pack/wolf-core/plugins/params/link.php:39 plugins/params/blockquote.php:39
-#: plugins/params/link.php:39
+#: pack/wolf-core/plugins/params/link.php:39
+#: pack/wolf-core/plugins/params/testimonial-slider.php:55
+#: plugins/params/blockquote.php:39 plugins/params/link.php:39
+#: plugins/params/testimonial-slider.php:55
 msgid "Tagline"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/blockquote.php:44
-#: pack/wolf-core/plugins/params/testimonial-slider.php:55
-#: plugins/params/blockquote.php:44 plugins/params/testimonial-slider.php:55
+#: pack/wolf-core/plugins/params/testimonial-slider.php:61
+#: plugins/params/blockquote.php:44 plugins/params/testimonial-slider.php:61
 msgid "Author Name"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/blockquote.php:49
-#: pack/wolf-core/plugins/params/testimonial-slider.php:60
-#: plugins/params/blockquote.php:49 plugins/params/testimonial-slider.php:60
+#: pack/wolf-core/plugins/params/testimonial-slider.php:66
+#: plugins/params/blockquote.php:49 plugins/params/testimonial-slider.php:66
 msgid "Avatar"
 msgstr ""
 
@@ -4549,10 +4581,6 @@ msgstr ""
 msgid "Enter links for each slide (Note: divide links with linebreaks (Enter))."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/gallery.php:269 plugins/params/gallery.php:269
-msgid "Autoplay"
-msgstr ""
-
 #: pack/wolf-core/plugins/params/gallery.php:275
 #: pack/wolf-core/plugins/params/gallery.php:289
 #: pack/wolf-core/plugins/params/gallery.php:300
@@ -4566,22 +4594,6 @@ msgstr ""
 #: plugins/params/gallery.php:342 plugins/params/gallery.php:356
 #: plugins/params/gallery.php:370
 msgid "Carousel Settings"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/gallery.php:283 plugins/params/gallery.php:283
-msgid "Pause on Hover (if autoplay)"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/gallery.php:297 plugins/params/gallery.php:297
-msgid "Slideshow Speed in ms"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/gallery.php:308 plugins/params/gallery.php:308
-msgid "Show Navigation Bullets"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/gallery.php:322 plugins/params/gallery.php:322
-msgid "Show Navigation Arrows"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/gallery.php:336 plugins/params/gallery.php:336
