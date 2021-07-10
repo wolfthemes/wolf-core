@@ -19,6 +19,7 @@ var WolfCoreAnimatedSVG = function( $ ) {
 				var $container = $( this ),
 					$svg = $( this ).find( "svg" ),
 					width = $container.data( "width" ) || $container.width(),
+					strokeWidth = $container.data( "stroke-width" ) || 5,
 					color = $container.data( "path-color" ) || WolfCoreJSParams.accentColor,
 						animationDuration = $container.data( "animation-duration" ) || 5,
 						animationDelay = $container.data( "animation-delay" ) || 0;
@@ -33,6 +34,7 @@ var WolfCoreAnimatedSVG = function( $ ) {
 						length = $path[ 0 ].getTotalLength();
 
 					$path.css( {
+						"stroke-width": $path.data( "stroke-width" ) || strokeWidth,
 						"stroke-dasharray": length,
 	  					"stroke-dashoffset": length,
 						"stroke": $path.data( "color" ) || color,
