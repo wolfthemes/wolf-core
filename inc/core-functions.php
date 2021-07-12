@@ -99,7 +99,7 @@ function wolf_core_get_elements() {
 		// 'single-image',
 		// 'soundcloud',
 		// 'span',
-		// 'spotify-player', // added in themes
+		'spotify-player', // added in themes
 		// 'spotify-follow-button', // added in themes
 		// 'tabs',
 		// 'tab',

@@ -441,6 +441,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 	$custom_group_params   = array();
 	$extra_group_params    = array();
 	$advanced_group_params = array();
+	$options_group_params  = array();
 
 	foreach ( $widget->params['params'] as $param ) {
 
@@ -456,6 +457,8 @@ function wolf_core_register_elementor_controls( $widget ) {
 			$extra_group_params[] = $param;
 		} elseif ( 'Advanced' === $param['group'] ) {
 			$advanced_group_params[] = $param;
+		} elseif ( 'Options' === $param['group'] ) {
+			$options_group_params[] = $param;
 		}
 	}
 
@@ -536,7 +539,21 @@ function wolf_core_register_elementor_controls( $widget ) {
 			)
 		);
 
-		wolf_core_convert_params_to_elementor( $widget, $style_group_params );
+		wolf_core_convert_params_to_elementor( $widget, $advanced_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $options_group_params ) {
+		$widget->start_controls_section(
+			'options_section',
+			array(
+				'label' => esc_html__( 'Options', 'wolf-core' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $options_group_params );
 
 		$widget->end_controls_section();
 	}

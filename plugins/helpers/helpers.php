@@ -10,6 +10,67 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Add carousel params
+ */
+function wolf_core_add_carousel_params() {
+
+	$elements = array(
+		'testimonial-slider',
+	);
+
+	foreach ( $elements as $e ) {
+
+		$element_slug = str_replace( '-', '_', $e );
+
+		add_filter(
+			'wolf_core_' . $element_slug . '_params',
+			function( $params ) {
+
+				$params['params'][] = array(
+					'type'         => 'checkbox',
+					'label'        => esc_html__( 'Autoplay', 'wolf-core' ),
+					'param_name'   => 'autoplay',
+					'return_value' => 'true',
+					'group'       => esc_html__( 'Options', 'wolf-core' ),
+				);
+
+				$params['params'][] = array(
+					'type'       => 'checkbox',
+					'label'      => esc_html__( 'Pause on Hover (if autoplay)', 'wolf-core' ),
+					'param_name' => 'pause_on_hover',
+					'group'       => esc_html__( 'Options', 'wolf-core' ),
+				);
+
+				$params['params'][] = array(
+					'label'      => esc_html__( 'Slideshow Speed in ms', 'wolf-core' ),
+					'param_name' => 'slideshow_speed',
+					'group'       => esc_html__( 'Options', 'wolf-core' ),
+				);
+
+				$params['params'][] = array(
+					'type'         => 'checkbox',
+					'label'        => esc_html__( 'Show Navigation Bullets', 'wolf-core' ),
+					'param_name'   => 'nav_bullets',
+					'return_value' => 'true',
+					'group'       => esc_html__( 'Options', 'wolf-core' ),
+				);
+
+				$params['params'][] = array(
+					'type'         => 'checkbox',
+					'label'        => esc_html__( 'Show Navigation Arrows', 'wolf-core' ),
+					'param_name'   => 'nav_arrows',
+					'return_value' => 'true',
+					'group'       => esc_html__( 'Options', 'wolf-core' ),
+				);
+
+				return $params;
+			}
+		);
+	}
+}
+add_action( 'init', 'wolf_core_add_carousel_params' );
+
+/**
  * Add inline style param
  */
 function wolf_core_add_extra_params() {
@@ -63,62 +124,6 @@ function wolf_core_add_extra_params() {
 	}
 }
 add_action( 'init', 'wolf_core_add_extra_params' );
-
-/**
- * Add carousel params
- */
-function wolf_core_add_carousel_params() {
-
-	$elements = array(
-		'testimonial-slider',
-	);
-
-	foreach ( $elements as $e ) {
-
-		$element_slug = str_replace( '-', '_', $e );
-
-		add_filter(
-			'wolf_core_' . $element_slug . '_params',
-			function( $params ) {
-
-				$params['params'][] = array(
-					'type'         => 'checkbox',
-					'label'        => esc_html__( 'Autoplay', 'wolf-core' ),
-					'param_name'   => 'autoplay',
-					'return_value' => 'true',
-				);
-
-				$params['params'][] = array(
-					'type'       => 'checkbox',
-					'label'      => esc_html__( 'Pause on Hover (if autoplay)', 'wolf-core' ),
-					'param_name' => 'pause_on_hover',
-				);
-
-				$params['params'][] = array(
-					'label'      => esc_html__( 'Slideshow Speed in ms', 'wolf-core' ),
-					'param_name' => 'slideshow_speed',
-				);
-
-				$params['params'][] = array(
-					'type'         => 'checkbox',
-					'label'        => esc_html__( 'Show Navigation Bullets', 'wolf-core' ),
-					'param_name'   => 'nav_bullets',
-					'return_value' => 'true',
-				);
-
-				$params['params'][] = array(
-					'type'         => 'checkbox',
-					'label'        => esc_html__( 'Show Navigation Arrows', 'wolf-core' ),
-					'param_name'   => 'nav_arrows',
-					'return_value' => 'true',
-				);
-
-				return $params;
-			}
-		);
-	}
-}
-add_action( 'init', 'wolf_core_add_carousel_params' );
 
 /**
  * Animate Elements
