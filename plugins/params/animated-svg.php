@@ -100,6 +100,12 @@ function wolf_core_animated_svg_params() {
 				),
 
 				array(
+					'label'      => esc_html__( 'Animate Once', 'wolf-core' ),
+					'param_name' => 'anim_once',
+					'type'		=> 'checkbox',
+				),
+
+				array(
 					'label'      => esc_html__( 'Animation Duration (in seconds)', 'wolf-core' ),
 					'param_name' => 'anim_duration',
 				),

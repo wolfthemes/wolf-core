@@ -23,8 +23,14 @@
 	}
 }
 
+.loaded .wolf-core-row-appeared {
+	.wolf-core-svg-anim-once-yes svg path {
+		animation: wolfCoreDraw 10s linear forwards;
+	}
+}
+
 .loaded .wolf-core-row-visible {
-	.wolf-core-svg svg path {
+	.wolf-core-svg-anim-once-no svg path {
 		animation: wolfCoreDraw 10s linear forwards;
 	}
 }

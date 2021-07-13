@@ -156,6 +156,7 @@ class Elementor_Animated_SVG_Widget extends \Elementor\Widget_Base { // phpcs:ig
 			array(
 				'inline_code'   => '',
 				'path_color'    => '',
+				'anim_once'     => '',
 				'anim_duration' => '',
 				'anim_delay'    => '',
 				'stroke_width'  => '',

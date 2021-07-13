@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-07-10 14:29:10+00:00\n"
+"POT-Creation-Date: 2021-07-13 09:32:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1301,7 +1301,7 @@ msgid "Full"
 msgstr ""
 
 #: inc/core-functions.php:603 pack/wolf-core/inc/core-functions.php:603
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:506
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:509
 #: pack/wolf-core/plugins/params/countdown.php:61
 #: pack/wolf-core/plugins/params/google-maps.php:134
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:47
@@ -1321,7 +1321,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row.php:213
 #: pack/wolf-core/plugins/vc/vc-map/row.php:221
 #: pack/wolf-core/plugins/vc/vc-params/style-params.php:21
-#: plugins/elementor/elementor-core-functions.php:506
+#: plugins/elementor/elementor-core-functions.php:509
 #: plugins/params/countdown.php:61 plugins/params/google-maps.php:134
 #: plugins/vc/vc-map/column-inner.php:47 plugins/vc/vc-map/column-inner.php:59
 #: plugins/vc/vc-map/column-inner.php:78 plugins/vc/vc-map/column-inner.php:86
@@ -1616,7 +1616,7 @@ msgstr ""
 #: inc/wp-widgets/class-widget-social-icons.php:111
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:142
 #: pack/wolf-core/inc/wp-widgets/class-widget-social-icons.php:111
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:492
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:495
 #: pack/wolf-core/plugins/params/album-tracklist.php:58
 #: pack/wolf-core/plugins/params/clients.php:158
 #: pack/wolf-core/plugins/params/interactive-links.php:50
@@ -1624,7 +1624,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/video-preview.php:44
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:529
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:24
-#: plugins/elementor/elementor-core-functions.php:492
+#: plugins/elementor/elementor-core-functions.php:495
 #: plugins/params/album-tracklist.php:58 plugins/params/clients.php:158
 #: plugins/params/interactive-links.php:50 plugins/params/shape-slider.php:46
 #: plugins/params/video-preview.php:44 plugins/vc/deprecated/wvc_icon.php:529
@@ -2983,6 +2983,7 @@ msgid "Required for the \"one-page\" scroll, this gives the name to the section.
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/section.php:56
+#: pack/wolf-core/plugins/elementor/controls/text-editor.php:22
 #: pack/wolf-core/plugins/params/heading.php:83
 #: plugins/elementor/controls/section.php:56
 #: plugins/elementor/controls/text-editor.php:22 plugins/params/heading.php:83
@@ -3091,50 +3092,63 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:465
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:468
 #: pack/wolf-core/plugins/params/content-block.php:37
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:25
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:18
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:68
-#: plugins/elementor/elementor-core-functions.php:465
+#: plugins/elementor/elementor-core-functions.php:468
 #: plugins/params/content-block.php:37 plugins/vc/deprecated/wvc_icon.php:25
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:18
 #: plugins/vc/vc-params/button-params.php:68
 msgid "Content"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:478
-#: plugins/elementor/elementor-core-functions.php:478
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:481
+#: plugins/elementor/elementor-core-functions.php:481
 msgid "Query"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:520
-#: pack/wolf-core/plugins/helpers/helpers.php:32
-#: pack/wolf-core/plugins/helpers/helpers.php:48
-#: pack/wolf-core/plugins/helpers/helpers.php:57
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:523
+#: pack/wolf-core/plugins/helpers/helpers.php:93
+#: pack/wolf-core/plugins/helpers/helpers.php:109
+#: pack/wolf-core/plugins/helpers/helpers.php:118
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:96
 #: pack/wolf-core/plugins/vc/vc-map/column.php:97
 #: pack/wolf-core/plugins/vc/vc-map/column.php:105
 #: pack/wolf-core/plugins/vc/vc-map/column.php:114
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:242
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:251
-#: plugins/elementor/elementor-core-functions.php:520
-#: plugins/helpers/helpers.php:32 plugins/helpers/helpers.php:48
-#: plugins/helpers/helpers.php:57 plugins/vc/vc-map/column-inner.php:96
+#: plugins/elementor/elementor-core-functions.php:523
+#: plugins/helpers/helpers.php:93 plugins/helpers/helpers.php:109
+#: plugins/helpers/helpers.php:118 plugins/vc/vc-map/column-inner.php:96
 #: plugins/vc/vc-map/column.php:97 plugins/vc/vc-map/column.php:105
 #: plugins/vc/vc-map/column.php:114 plugins/vc/vc-params/button-params.php:242
 #: plugins/vc/vc-params/button-params.php:251
 msgid "Extra"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:534
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:537
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:113
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:267
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:277
-#: plugins/elementor/elementor-core-functions.php:534
+#: plugins/elementor/elementor-core-functions.php:537
 #: plugins/vc/vc-map/row-inner.php:113 plugins/vc/vc-params/row-params.php:267
 #: plugins/vc/vc-params/row-params.php:277
 msgid "Advanced"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:551
+#: pack/wolf-core/plugins/helpers/helpers.php:34
+#: pack/wolf-core/plugins/helpers/helpers.php:41
+#: pack/wolf-core/plugins/helpers/helpers.php:47
+#: pack/wolf-core/plugins/helpers/helpers.php:55
+#: pack/wolf-core/plugins/helpers/helpers.php:63
+#: plugins/elementor/elementor-core-functions.php:551
+#: plugins/helpers/helpers.php:34 plugins/helpers/helpers.php:41
+#: plugins/helpers/helpers.php:47 plugins/helpers/helpers.php:55
+#: plugins/helpers/helpers.php:63
+msgid "Options"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/widgets/countdown.php:161
@@ -3242,111 +3256,119 @@ msgstr ""
 msgid "Play Video"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:29 plugins/helpers/helpers.php:29
-msgid "Extra Class Name"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:36
-#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:117
-#: pack/wolf-core/plugins/vc/vc-params/row-params.php:199
-#: plugins/helpers/helpers.php:36 plugins/vc/vc-params/row-inner-params.php:117
-#: plugins/vc/vc-params/row-params.php:199
-msgid "Visibility"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:40
-#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:120
-#: pack/wolf-core/plugins/vc/vc-params/row-params.php:202
-#: plugins/helpers/helpers.php:40 plugins/vc/vc-params/row-inner-params.php:120
-#: plugins/vc/vc-params/row-params.php:202
-msgid "Always visible"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:41
-#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:121
-#: pack/wolf-core/plugins/vc/vc-params/row-params.php:203
-#: plugins/helpers/helpers.php:41 plugins/vc/vc-params/row-inner-params.php:121
-#: plugins/vc/vc-params/row-params.php:203
-msgid "Hide on tablet and mobile"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:42
-#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:122
-#: pack/wolf-core/plugins/vc/vc-params/row-params.php:204
-#: plugins/helpers/helpers.php:42 plugins/vc/vc-params/row-inner-params.php:122
-#: plugins/vc/vc-params/row-params.php:204
-msgid "Hide on mobile"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:43
-#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:123
-#: pack/wolf-core/plugins/vc/vc-params/row-params.php:205
-#: plugins/helpers/helpers.php:43 plugins/vc/vc-params/row-inner-params.php:123
-#: plugins/vc/vc-params/row-params.php:205
-msgid "Show on tablet and mobile only"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:44
-#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:124
-#: pack/wolf-core/plugins/vc/vc-params/row-params.php:206
-#: plugins/helpers/helpers.php:44 plugins/vc/vc-params/row-inner-params.php:124
-#: plugins/vc/vc-params/row-params.php:206
-msgid "Show on mobile only"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:45
-#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:125
-#: pack/wolf-core/plugins/vc/vc-params/row-params.php:207
-#: plugins/helpers/helpers.php:45 plugins/vc/vc-params/row-inner-params.php:125
-#: plugins/vc/vc-params/row-params.php:207
-msgid "Always hidden"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:53 plugins/helpers/helpers.php:53
-msgid "Quick CSS"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:54 plugins/helpers/helpers.php:54
-msgid "CSS inline style"
-msgstr ""
-
-#: pack/wolf-core/plugins/helpers/helpers.php:86
-#: pack/wolf-core/plugins/params/gallery.php:269 plugins/helpers/helpers.php:86
+#: pack/wolf-core/plugins/helpers/helpers.php:31
+#: pack/wolf-core/plugins/params/gallery.php:269 plugins/helpers/helpers.php:31
 #: plugins/params/gallery.php:269
 msgid "Autoplay"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:93
-#: pack/wolf-core/plugins/params/gallery.php:283 plugins/helpers/helpers.php:93
+#: pack/wolf-core/plugins/helpers/helpers.php:39
+#: pack/wolf-core/plugins/params/gallery.php:283 plugins/helpers/helpers.php:39
 #: plugins/params/gallery.php:283
 msgid "Pause on Hover (if autoplay)"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:98
-#: pack/wolf-core/plugins/params/gallery.php:297 plugins/helpers/helpers.php:98
+#: pack/wolf-core/plugins/helpers/helpers.php:45
+#: pack/wolf-core/plugins/params/gallery.php:297 plugins/helpers/helpers.php:45
 #: plugins/params/gallery.php:297
 msgid "Slideshow Speed in ms"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:104
-#: pack/wolf-core/plugins/params/gallery.php:308
-#: plugins/helpers/helpers.php:104 plugins/params/gallery.php:308
+#: pack/wolf-core/plugins/helpers/helpers.php:52
+#: pack/wolf-core/plugins/params/gallery.php:308 plugins/helpers/helpers.php:52
+#: plugins/params/gallery.php:308
 msgid "Show Navigation Bullets"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:111
-#: pack/wolf-core/plugins/params/gallery.php:322
-#: plugins/helpers/helpers.php:111 plugins/params/gallery.php:322
+#: pack/wolf-core/plugins/helpers/helpers.php:60
+#: pack/wolf-core/plugins/params/gallery.php:322 plugins/helpers/helpers.php:60
+#: plugins/params/gallery.php:322
 msgid "Show Navigation Arrows"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:240
-#: plugins/helpers/helpers.php:240
+#: pack/wolf-core/plugins/helpers/helpers.php:90 plugins/helpers/helpers.php:90
+msgid "Extra Class Name"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:97
+#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:117
+#: pack/wolf-core/plugins/vc/vc-params/row-params.php:199
+#: plugins/helpers/helpers.php:97 plugins/vc/vc-params/row-inner-params.php:117
+#: plugins/vc/vc-params/row-params.php:199
+msgid "Visibility"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:101
+#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:120
+#: pack/wolf-core/plugins/vc/vc-params/row-params.php:202
+#: plugins/helpers/helpers.php:101
+#: plugins/vc/vc-params/row-inner-params.php:120
+#: plugins/vc/vc-params/row-params.php:202
+msgid "Always visible"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:102
+#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:121
+#: pack/wolf-core/plugins/vc/vc-params/row-params.php:203
+#: plugins/helpers/helpers.php:102
+#: plugins/vc/vc-params/row-inner-params.php:121
+#: plugins/vc/vc-params/row-params.php:203
+msgid "Hide on tablet and mobile"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:103
+#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:122
+#: pack/wolf-core/plugins/vc/vc-params/row-params.php:204
+#: plugins/helpers/helpers.php:103
+#: plugins/vc/vc-params/row-inner-params.php:122
+#: plugins/vc/vc-params/row-params.php:204
+msgid "Hide on mobile"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:104
+#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:123
+#: pack/wolf-core/plugins/vc/vc-params/row-params.php:205
+#: plugins/helpers/helpers.php:104
+#: plugins/vc/vc-params/row-inner-params.php:123
+#: plugins/vc/vc-params/row-params.php:205
+msgid "Show on tablet and mobile only"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:105
+#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:124
+#: pack/wolf-core/plugins/vc/vc-params/row-params.php:206
+#: plugins/helpers/helpers.php:105
+#: plugins/vc/vc-params/row-inner-params.php:124
+#: plugins/vc/vc-params/row-params.php:206
+msgid "Show on mobile only"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:106
+#: pack/wolf-core/plugins/vc/vc-params/row-inner-params.php:125
+#: pack/wolf-core/plugins/vc/vc-params/row-params.php:207
+#: plugins/helpers/helpers.php:106
+#: plugins/vc/vc-params/row-inner-params.php:125
+#: plugins/vc/vc-params/row-params.php:207
+msgid "Always hidden"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:114
+#: plugins/helpers/helpers.php:114
+msgid "Quick CSS"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:115
+#: plugins/helpers/helpers.php:115
+msgid "CSS inline style"
+msgstr ""
+
+#: pack/wolf-core/plugins/helpers/helpers.php:245
+#: plugins/helpers/helpers.php:245
 msgid "Same window"
 msgstr ""
 
-#: pack/wolf-core/plugins/helpers/helpers.php:241
-#: plugins/helpers/helpers.php:241
+#: pack/wolf-core/plugins/helpers/helpers.php:246
+#: plugins/helpers/helpers.php:246
 msgid "New window"
 msgstr ""
 
@@ -3702,6 +3724,11 @@ msgid "SVG Inline Code"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/animated-svg.php:113
+#: plugins/params/animated-svg.php:113
+msgid "Stroke Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/animated-svg.php:118
 #: plugins/params/animated-svg.php:118
 msgid "SVG Width (in px)"
 msgstr ""
@@ -6904,10 +6931,6 @@ msgstr ""
 
 #: pack/wolf-core/wolf-core.php:365 wolf-core.php:365
 msgid "PHP"
-msgstr ""
-
-#: plugins/params/animated-svg.php:113
-msgid "Stroke Width"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
