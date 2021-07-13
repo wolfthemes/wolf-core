@@ -58,7 +58,11 @@ var WolfCoreAnimatedSVG = function( $ ) {
 
 	$( document ).ready( function() {
 		if (  window.elementorFrontend !== undefined && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
-			elementorFrontend.hooks.addAction( "frontend/element_ready/animated-svg.default", function( $scope ) {
+
+			elementorFrontend.hooks.addAction( 'init', function() {
+				WolfCoreAnimatedSVG.init();
+			} );
+			elementorFrontend.hooks.addAction( "frontend/element_ready/animated-svg.default", function() {
 				WolfCoreAnimatedSVG.init();
 			} );
 		}

@@ -182,12 +182,10 @@ var WolfCoreCarousels = function( $ ) {
 
 	$( document ).ready( function() {
 		WolfCoreCarousels.init();
-	} );
 
-	$( document ).ready( function() {
 		if (  window.elementorFrontend !== undefined && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
 			elementorFrontend.hooks.addAction( 'frontend/element_ready/testimonial-slider.default', function( $scope ) {
-				WolfCoreCarousels.testimonials();
+				WolfCoreCarousels.init();
 			} );
 		}
 	} );

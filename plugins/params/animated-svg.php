@@ -33,7 +33,7 @@ function wolf_core_animated_svg_params() {
 						'version' => WOLF_CORE_VERSION,
 					),
 				),
-				'scripts'          => array( 'wolf-core-animated-svg' ),
+				'scripts'          => array( 'wolf-core-functions', 'wolf-core-animated-svg' ),
 			),
 			'params'     => array(
 

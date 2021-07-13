@@ -6,7 +6,6 @@
 	figure {
 		margin: 0;
 		padding: 0;
-		padding-bottom: 40px;
 	}
 
 	img {
@@ -22,7 +21,7 @@
 	/* Padding */
 	&.wolf-core-clients-padding-yes {
 		.wolf-core-client-grid {
-			padding: 0 40px;
+			padding: 0 40px 40px;
 			margin: 0 0 80px;
 		}
 
