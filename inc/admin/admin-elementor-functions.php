@@ -56,7 +56,7 @@ function wolf_core_sync_elementor_page_settings( $post_id ) {
 
 			$page_meta = $page_settings_model->get_settings();
 
-			$metafields = array( 'loading_animation_type', 'menu_layout', 'menu_style', 'hero_font_tone', 'after_header_block', 'before_footer_block' );
+			$metafields = apply_filters( 'wolf_core_elementor_page_settings', array( 'loading_animation_type', 'menu_layout', 'menu_style', 'hero_font_tone', 'after_header_block', 'before_footer_block' ) );
 
 			foreach ( $metafields as $metafield ) {
 				if ( isset( $_POST[ '_post_' . $metafield ] ) ) {
