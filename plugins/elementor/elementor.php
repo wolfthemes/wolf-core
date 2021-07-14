@@ -84,6 +84,7 @@ class Wolf_Core_Elementor_Extension { // phpcs:ignore
 			'section',
 			'heading',
 			'image',
+			'image-carousel',
 			'page',
 			'text-editor',
 		);
