@@ -78,11 +78,11 @@ function wolf_core_pricing_table_params() {
 
 					),
 				),
-				array(
-					'type'       => 'checkbox',
-					'label'      => esc_html__( 'Offer', 'wolf-core' ),
-					'param_name' => 'offer',
-				),
+				// array(
+				// 	'type'       => 'checkbox',
+				// 	'label'      => esc_html__( 'Offer', 'wolf-core' ),
+				// 	'param_name' => 'offer',
+				// ),
 				array(
 					'type'        => 'text',
 					'label'       => esc_html__( 'Offer Price', 'wolf-core' ),

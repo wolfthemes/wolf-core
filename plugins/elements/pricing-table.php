@@ -60,6 +60,10 @@ function wolf_core_pricing_table( $atts ) {
 		$class .= ' wolf-core-pricing-table-has-featured-text';
 	}
 
+	if ( $offer_price ) {
+		$class .= ' wolf-core-pricing-table-has-offer';
+	}
+
 	$output = '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
@@ -89,7 +93,7 @@ function wolf_core_pricing_table( $atts ) {
 
 		$output .= '</div><!-- .wolf-pricing-table-title-wrapper -->';
 
-		$output .= '<div class="wolf-core-pricing-table-price">';
+		$output .= '<div class="wolf-core-pricing-table-price-wrapper">';
 
 		// Offer.
 	if ( 'yes' === $offer && $offer_price ) {
@@ -108,6 +112,8 @@ function wolf_core_pricing_table( $atts ) {
 
 		$output .= '</del>';
 
+		$output .= '<div class="wolf-core-pricing-table-price">';
+
 		if ( $currency && 'before' === $display_currency ) {
 			$output .= '<span class="wolf-core-pricing-table-price-currency">' . esc_attr( $currency ) . '</span>';
 		}
@@ -117,7 +123,12 @@ function wolf_core_pricing_table( $atts ) {
 		if ( $currency && 'after' === $display_currency ) {
 			$output .= '<span class="wolf-core-pricing-table-price-currency">' . esc_attr( $currency ) . '</span>';
 		}
+
+		$output .= '</div>';
 	} else {
+
+
+		$output .= '<div class="wolf-core-pricing-table-price">';
 
 		if ( $currency && 'before' === $display_currency ) {
 			$output .= '<span class="wolf-core-pricing-table-price-currency">' . esc_attr( $currency ) . '</span>';
@@ -128,10 +139,12 @@ function wolf_core_pricing_table( $atts ) {
 		if ( $currency && 'after' === $display_currency ) {
 			$output .= '<span class="wolf-core-pricing-table-price-currency">' . esc_attr( $currency ) . '</span>';
 		}
+
+		$output .= '</div>';
 	}
 
 	if ( $price_period ) {
-		$output .= '<span class="wolf-core-pricing-table-price-period">' . esc_attr( $price_period ) . '</span>';
+		$output .= '<div class="wolf-core-pricing-table-price-period">' . esc_attr( $price_period ) . '</div>';
 	}
 
 		$output .= '</div><!-- .wolf-pricing-table-price -->';
