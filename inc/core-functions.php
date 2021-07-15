@@ -521,7 +521,7 @@ function wolf_core_get_hover_animations() {
  * @param string $default The default value.
  * @return mixed
  */
-function wolf_core_get_option( $index = 'settings', $name, $default = null ) {
+function wolf_core_get_option( $index, $name, $default = null ) {
 
 	global $options;
 
@@ -551,7 +551,7 @@ function wolf_core_get_option( $index = 'settings', $name, $default = null ) {
  * @param string $value The new value.
  * @return void
  */
-function wolf_core_update_option( $index = 'settings', $key, $value ) {
+function wolf_core_update_option( $index, $key, $value ) {
 
 	$wolf_core_settings = ( get_option( 'wolf_core_settings' ) && is_array( get_option( 'wolf_core_settings' ) ) ) ? get_option( 'wolf_core_settings' ) : array();
 

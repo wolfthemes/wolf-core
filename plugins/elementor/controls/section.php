@@ -69,22 +69,22 @@ add_action(
 	'elementor/element/section/section_background/before_section_end',
 	function( $section, $args ) {
 
-		$section->add_control(
-			'post_featured_img_bg',
-			array(
-				'label'        => esc_html__( 'Use post featured image', 'wolf-core' ),
-				'description'  => esc_html__( 'The current post/page featured image will overwrite the above image if set.', 'wolf-core' ),
-				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'default'      => 'no',
-				'return_value' => 'yes',
-				'prefix_class' => 'wolf-core-row-post-featured-img-',
-				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-				'label_off'    => esc_html__( 'No', 'wolf-core' ),
-				'condition'    => array(
-					'background_background' => array( 'classic' ),
-				),
-			)
-		);
+		// $section->add_control(
+		// 	'post_featured_img_bg',
+		// 	array(
+		// 		'label'        => esc_html__( 'Use post featured image', 'wolf-core' ),
+		// 		'description'  => esc_html__( 'The current post/page featured image will overwrite the above image if set.', 'wolf-core' ),
+		// 		'type'         => \Elementor\Controls_Manager::SWITCHER,
+		// 		'default'      => 'no',
+		// 		'return_value' => 'yes',
+		// 		'prefix_class' => 'wolf-core-row-post-featured-img-',
+		// 		'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
+		// 		'label_off'    => esc_html__( 'No', 'wolf-core' ),
+		// 		'condition'    => array(
+		// 			'background_background' => array( 'classic' ),
+		// 		),
+		// 	)
+		// );
 
 		$section->add_control(
 			'parallax',
@@ -160,9 +160,8 @@ add_action(
 		if ( isset( $settings['post_featured_img_bg'] ) && 'yes' === $settings['post_featured_img_bg'] ) {
 
 			if ( wolf_core_get_the_id() && get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) ) {
-				$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-row-post-featured-img-bg' );
-				$widget->add_render_attribute( '_wrapper', 'data-post-bg-imag-url', get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) );
-
+				//$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-row-post-featured-img-bg' );
+				//$widget->add_render_attribute( '_wrapper', 'data-post-bg-image-url', get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) );
 			}
 		}
 	},

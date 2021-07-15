@@ -92,7 +92,7 @@ var WolfCore = (function ($) {
 
 			this.rowCosmetic();
 			this.rowMargins();
-			this.rowPostFeaturedImgBg();
+			//this.rowPostFeaturedImgBg();
 
 			this.parallax();
 
@@ -454,7 +454,7 @@ var WolfCore = (function ($) {
 		rowPostFeaturedImgBg : function () {
 
 			$( '.wolf-core-row-post-featured-img-bg' ).each( function() {
-				var bgUrl = $( this ).data( 'post-bg-imag-url' );
+				var bgUrl = $( this ).data( 'post-bg-image-url' );
 				$( this ).css( {
 					'background-image' : 'url(' + bgUrl + ')'
 				} );
