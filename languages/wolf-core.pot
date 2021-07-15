@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.1.3\n"
+"Project-Id-Version: Wolf Core 1.1.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-07-15 12:19:13+00:00\n"
+"POT-Creation-Date: 2021-07-15 14:35:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1626,8 +1626,9 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:24
 #: plugins/elementor/elementor-core-functions.php:495
 #: plugins/params/album-tracklist.php:58 plugins/params/clients.php:158
-#: plugins/params/interactive-links.php:50 plugins/params/shape-slider.php:46
-#: plugins/params/video-preview.php:44 plugins/vc/deprecated/wvc_icon.php:529
+#: plugins/params/interactive-links.php:50 plugins/params/pricing-table.php:34
+#: plugins/params/shape-slider.php:46 plugins/params/video-preview.php:44
+#: plugins/vc/deprecated/wvc_icon.php:529
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:24
 msgid "Title"
 msgstr ""
@@ -1659,7 +1660,6 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:158
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:166
 #: pack/wolf-core/plugins/elementor/controls/image.php:23
-#: pack/wolf-core/plugins/elementor/controls/section.php:81
 #: pack/wolf-core/plugins/elementor/controls/section.php:98
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:212
 #: pack/wolf-core/plugins/params/album-disc.php:103
@@ -1729,7 +1729,6 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:159
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:167
 #: pack/wolf-core/plugins/elementor/controls/image.php:24
-#: pack/wolf-core/plugins/elementor/controls/section.php:82
 #: pack/wolf-core/plugins/elementor/controls/section.php:99
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:213
 #: pack/wolf-core/plugins/params/album-disc.php:104
@@ -2313,11 +2312,13 @@ msgstr ""
 
 #: pack/wolf-core/plugins/common-params/button-params.php:148
 #: plugins/common-params/button-params.php:148
+#: plugins/params/pricing-table.php:76
 msgid "Before"
 msgstr ""
 
 #: pack/wolf-core/plugins/common-params/button-params.php:149
 #: plugins/common-params/button-params.php:149
+#: plugins/params/pricing-table.php:77
 msgid "After"
 msgstr ""
 
@@ -2765,6 +2766,16 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
+#: pack/wolf-core/plugins/elementor/controls/image-carousel.php:22
+#: pack/wolf-core/plugins/elementor/controls/section.php:56
+#: pack/wolf-core/plugins/elementor/controls/text-editor.php:22
+#: pack/wolf-core/plugins/params/heading.php:83
+#: plugins/elementor/controls/image-carousel.php:22
+#: plugins/elementor/controls/section.php:56
+#: plugins/elementor/controls/text-editor.php:22 plugins/params/heading.php:83
+msgid "Extra Class"
+msgstr ""
+
 #: pack/wolf-core/plugins/elementor/controls/image.php:21
 #: plugins/elementor/controls/image.php:21
 msgid "Inline Display"
@@ -2980,23 +2991,6 @@ msgstr ""
 msgid "Required for the \"one-page\" scroll, this gives the name to the section."
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/controls/section.php:56
-#: pack/wolf-core/plugins/elementor/controls/text-editor.php:22
-#: pack/wolf-core/plugins/params/heading.php:83
-#: plugins/elementor/controls/image-carousel.php:22
-#: plugins/elementor/controls/section.php:56
-#: plugins/elementor/controls/text-editor.php:22 plugins/params/heading.php:83
-msgid "Extra Class"
-msgstr ""
-
-#: pack/wolf-core/plugins/elementor/controls/section.php:75
-msgid "Use post featured image"
-msgstr ""
-
-#: pack/wolf-core/plugins/elementor/controls/section.php:76
-msgid "The current post/page featured image will overwrite the above image if set."
-msgstr ""
-
 #: pack/wolf-core/plugins/elementor/controls/section.php:93
 #: plugins/elementor/controls/section.php:93
 msgid "Not visible in editor preview yet."
@@ -3051,9 +3045,9 @@ msgstr ""
 #: plugins/params/contact-form-7.php:37 plugins/params/countdown.php:26
 #: plugins/params/gallery.php:26 plugins/params/google-maps.php:28
 #: plugins/params/interactive-links.php:26 plugins/params/link.php:26
-#: plugins/params/mailchimp.php:26 plugins/params/sb-instagram-feed.php:29
-#: plugins/params/shape-slider.php:26 plugins/params/team-member.php:48
-#: plugins/params/testimonial-slider.php:26
+#: plugins/params/mailchimp.php:26 plugins/params/pricing-table.php:26
+#: plugins/params/sb-instagram-feed.php:29 plugins/params/shape-slider.php:26
+#: plugins/params/team-member.php:48 plugins/params/testimonial-slider.php:26
 #: plugins/params/work-category-marquee.php:26
 msgid "Extension"
 msgstr ""
@@ -3548,7 +3542,8 @@ msgstr ""
 #: plugins/params/gallery.php:24 plugins/params/google-maps.php:26
 #: plugins/params/icon.php:26 plugins/params/interactive-links.php:24
 #: plugins/params/link.php:24 plugins/params/mailchimp.php:24
-#: plugins/params/shape-slider.php:24 plugins/params/testimonial-slider.php:24
+#: plugins/params/pricing-table.php:24 plugins/params/shape-slider.php:24
+#: plugins/params/testimonial-slider.php:24
 #: plugins/params/work-category-marquee.php:24
 msgid "Description."
 msgstr ""
@@ -3624,7 +3619,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/album-tracklist.php:89
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:66
-#: plugins/params/album-tracklist.php:89
+#: plugins/params/album-tracklist.php:89 plugins/params/pricing-table.php:60
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:66
 msgid "Price"
 msgstr ""
@@ -3829,7 +3824,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/bigtext.php:160
 #: pack/wolf-core/plugins/params/team-member.php:90
 #: plugins/params/banner.php:104 plugins/params/bigtext.php:160
-#: plugins/params/team-member.php:90
+#: plugins/params/pricing-table.php:39 plugins/params/team-member.php:90
 msgid "HTML Tag"
 msgstr ""
 
@@ -4143,7 +4138,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/link.php:39
 #: pack/wolf-core/plugins/params/testimonial-slider.php:55
 #: plugins/params/blockquote.php:39 plugins/params/link.php:39
-#: plugins/params/testimonial-slider.php:55
+#: plugins/params/pricing-table.php:55 plugins/params/testimonial-slider.php:55
 msgid "Tagline"
 msgstr ""
 
@@ -5065,7 +5060,7 @@ msgid "A set of icons linked to your social profiles"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/social-icons.php:36
-#: plugins/params/social-icons.php:36
+#: plugins/params/pricing-table.php:123 plugins/params/social-icons.php:36
 msgid "Services"
 msgstr ""
 
@@ -6933,6 +6928,58 @@ msgstr ""
 
 #: pack/wolf-core/wolf-core.php:365 wolf-core.php:365
 msgid "PHP"
+msgstr ""
+
+#: plugins/params/pricing-table.php:23
+msgid "Pricing Table"
+msgstr ""
+
+#: plugins/params/pricing-table.php:66
+msgid "Currency"
+msgstr ""
+
+#: plugins/params/pricing-table.php:69
+msgid "e.g: $ or €"
+msgstr ""
+
+#: plugins/params/pricing-table.php:73
+msgid "Display Currency"
+msgstr ""
+
+#: plugins/params/pricing-table.php:83
+msgid "Offer"
+msgstr ""
+
+#: plugins/params/pricing-table.php:88
+msgid "Offer Price"
+msgstr ""
+
+#: plugins/params/pricing-table.php:94
+msgid "Price Period"
+msgstr ""
+
+#: plugins/params/pricing-table.php:96
+msgid "e.g \"monthly\" or \"per month\""
+msgstr ""
+
+#: plugins/params/pricing-table.php:101
+msgid "Button Text"
+msgstr ""
+
+#: plugins/params/pricing-table.php:107
+msgid "Button Link"
+msgstr ""
+
+#: plugins/params/pricing-table.php:112
+msgid "Featured"
+msgstr ""
+
+#: plugins/params/pricing-table.php:118
+msgid "Featured Text"
+msgstr ""
+
+#: plugins/params/pricing-table.php:125
+msgid "Enter one service per line."
 msgstr ""
 
 #. Plugin URI of the plugin/theme
