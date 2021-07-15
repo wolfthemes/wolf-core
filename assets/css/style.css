@@ -2500,7 +2500,11 @@ li.wolf-core-album-tracklist-item {
   stroke-dashoffset: 100000;
 }
 
-.loaded .wolf-core-row-visible .wolf-core-svg svg path {
+.loaded .wolf-core-row-appeared .wolf-core-svg-anim-once-yes svg path {
+  animation: wolfCoreDraw 10s linear forwards;
+}
+
+.loaded .wolf-core-row-visible .wolf-core-svg-anim-once-no svg path {
   animation: wolfCoreDraw 10s linear forwards;
 }
 
@@ -2983,7 +2987,7 @@ li.wolf-core-album-tracklist-item {
   margin: 0 auto;
 }
 .wolf-core-clients-grid.wolf-core-clients-padding-yes .wolf-core-client-grid {
-  padding: 0 40px;
+  padding: 0 40px 40px;
   margin: 0 0 80px;
 }
 
@@ -4522,6 +4526,26 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 }
 
 /**
+ * @# Pricing Table
+ **/
+.wolf-core-pricing-table-featured {
+  background: #f7f7f7;
+}
+
+.wolf-core-pricing-table-inner {
+  border: 1px solid #dbdbdb;
+  padding: 77px 60px 71px;
+}
+
+.wolf-core-pricing-table-price-value {
+  font-size: 1.5em;
+}
+
+.wolf-core-pricing-table-price-strike {
+  padding-right: 10px;
+}
+
+/**
  * @# Social Icons
  **/
 .wolf-core-socials-container {
@@ -5138,7 +5162,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   align-items: center;
   display: flex;
   position: relative;
-  animation: marquee 15s linear infinite;
+  animation: marquee 8s linear infinite;
   will-change: transform;
 }
 

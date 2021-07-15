@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 15th July 2021 - Version 1.1.3
+#### 15th July 2021 - Version 1.1.4
 
+-   Tweak: Added pricing table element
 -   Fix: PHP8 fixes
 #### 9th July 2021 - Version 1.1.2
 
