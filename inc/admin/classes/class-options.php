@@ -158,7 +158,7 @@ class Wolf_Core_Options {
 		return $input;
 	}
 
-	public function update_option_index( $index = 'settings', $options_array ) {
+	public function update_option_index( $index, $options_array ) {
 
 		$wolf_core_settings = ( get_option( 'wolf_core_settings' ) && is_array( get_option( 'wolf_core_settings' ) ) ) ? get_option( 'wolf_core_settings' ) : array();
 

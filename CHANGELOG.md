@@ -1,6 +1,9 @@
 
 # Changelog
 
+#### 15th July 2021 - Version 1.1.3
+
+-   Fix: PHP8 fixes
 #### 9th July 2021 - Version 1.1.2
 
 -   Tweak: Added client image link element
