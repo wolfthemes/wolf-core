@@ -28,8 +28,8 @@ function wolf_core_button( $atts ) {
 				'size'                          => '',
 				'shape'                         => '',
 				'add_icon'                      => '',
-				'icon_type'                     => '', // VC
-				'selected_icon'                 => '', // Elementor
+				'icon_type'                     => '', // VC.
+				'selected_icon'                 => '', // Elementor.
 				'icon_align'                    => 'before',
 				'icon_indent'                   => '',
 				'button_css_id'                 => '',

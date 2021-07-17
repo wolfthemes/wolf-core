@@ -743,6 +743,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'current-year',
 				'next-month',
 				'span',
+				'text-hover-image',
 			);
 
 			foreach ( $shortcode_files as $shortcode ) {

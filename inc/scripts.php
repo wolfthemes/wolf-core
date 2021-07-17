@@ -87,12 +87,14 @@ function wolf_core_register_scripts( $scripts = array() ) {
  */
 function wolf_core_get_register_scripts() {
 
-	$suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	$version = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : WOLF_CORE_VERSION;
+	$folder  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '/min';
+	$suffix  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	// Don't serve minified JS files if Autoptimize plugin is activated.
 	if ( defined( 'AUTOPTIMIZE_PLUGIN_DIR' ) ) {
 		$suffix = '';
+		$folder = '';
 	}
 
 	return apply_filters(
@@ -120,6 +122,11 @@ function wolf_core_get_register_scripts() {
 			'lazyloadxt'      => array(
 				'src'     => WOLF_CORE_JS . '/lib/jquery.lazyloadxt.min.js',
 				'version' => '1.1.0',
+			),
+
+
+			'wolf-core-text-hover-image'      => array(
+				'src'     => WOLF_CORE_JS . $folder . '/text-hover-image' . $suffix . '.js',
 			),
 		)
 	);
