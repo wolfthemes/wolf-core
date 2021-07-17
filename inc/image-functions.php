@@ -140,7 +140,7 @@ if ( ! function_exists( 'wolf_core_resize_image' ) ) {
 	 * @return array
 	 * @since 4.2
 	 */
-	function wolf_core_resize_image( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
+	function wolf_core_resize_image( $attach_id, $img_url, $width, $height, $crop = false ) {
 		// This is an attachment, so we have the ID.
 		$image_src = array();
 		if ( $attach_id ) {
