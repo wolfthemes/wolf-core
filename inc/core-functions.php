@@ -107,6 +107,7 @@ function wolf_core_get_elements() {
 		// 'testimonials',
 		'testimonial-slider',
 		// 'testimonial-slide',
+		'textual-showcase',
 		// 'toggle',
 		// 'twitter',
 		// 'typed',

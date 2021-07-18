@@ -1,0 +1,147 @@
+<?php
+/**
+ * Textual Showcase
+ *
+ * @author WolfThemes
+ * @package WolfCore/Elements
+ * @version 1.0.0
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Element Parameters
+ *
+ * @return array
+ */
+function wolf_core_textual_showcase_params() {
+
+	return apply_filters(
+		'wolf_core_textual_showcase_params',
+		array(
+			'properties' => array(
+				'name'          => esc_html__( 'Textual Showcase', 'wolf-core' ),
+				'description'   => esc_html__( 'Description.', 'wolf-core' ),
+				'vc_base'       => 'wolf_core_textual_showcase',
+				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
+				'el_categories' => array( 'extension' ),
+				'el_base'       => 'textual-showcase',
+				'icon'          => 'eicon-t-letter',
+			),
+			'params'     => array(
+				array(
+					'type'         => 'typography',
+					'label'        => esc_html__( 'Typography', 'wolf-core' ),
+					'param_name'   => 'typography',
+					'selector'     => '{{WRAPPER}} .wolf-core-textual-showcase-item',
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'hidden',
+					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
+					'param_name'   => 'css_animation_each',
+					'default'      => 'yes',
+					'page_builder' => 'elementor',
+				),
+
+				array(
+					'type'         => 'select',
+					'label'        => esc_html__( 'Animation', 'wolf-core' ),
+					'param_name'   => 'css_animation',
+					'options'      => array(
+						'none'            => esc_html__( 'None', 'wolf-core' ),
+						'fade'            => esc_html__( 'Fade', 'wolf-core' ),
+						'fade-up'         => esc_html__( 'Fade Up', 'wolf-core' ),
+						'fade-down'       => esc_html__( 'Fade Down', 'wolf-core' ),
+						'fade-left'       => esc_html__( 'Fade Left', 'wolf-core' ),
+						'fade-right'      => esc_html__( 'Fade Right', 'wolf-core' ),
+						'fade-up-right'   => esc_html__( 'Fade Up Right', 'wolf-core' ),
+						'fade-up-left'    => esc_html__( 'Fade Up Left', 'wolf-core' ),
+						'fade-down-right' => esc_html__( 'Fade Down Right', 'wolf-core' ),
+						'fade-down-left'  => esc_html__( 'Fade Down Left', 'wolf-core' ),
+
+						'uncoverXLeft'    => esc_html__( 'uncoverXLeft', 'wolf-core' ),
+						'uncoverXRight'   => esc_html__( 'uncoverXRight', 'wolf-core' ),
+						'uncoverYTop'     => esc_html__( 'uncoverYTop', 'wolf-core' ),
+						'uncoverYBottom'  => esc_html__( 'uncoverYBottom', 'wolf-core' ),
+
+						'flip-up'         => esc_html__( 'Flip Up', 'wolf-core' ),
+						'flip-down'       => esc_html__( 'Flip Down', 'wolf-core' ),
+						'flip-left'       => esc_html__( 'Flip Left', 'wolf-core' ),
+						'flip-right'      => esc_html__( 'Flip Right', 'wolf-core' ),
+
+						'slide-up'        => esc_html__( 'Slide Up', 'wolf-core' ),
+						'slide-down'      => esc_html__( 'Slide Down', 'wolf-core' ),
+						'slide-left'      => esc_html__( 'Slide Left', 'wolf-core' ),
+						'slide-right'     => esc_html__( 'Slide Right', 'wolf-core' ),
+
+						'zoom-in'         => esc_html__( 'Zoom In', 'wolf-core' ),
+						'zoom-in-up'      => esc_html__( 'Zoom In Up', 'wolf-core' ),
+						'zoom-in-down'    => esc_html__( 'Zoom In Down', 'wolf-core' ),
+						'zoom-in-left'    => esc_html__( 'Zoom In Left', 'wolf-core' ),
+						'zoom-in-right'   => esc_html__( 'Zoom In Right', 'wolf-core' ),
+						'zoom-out'        => esc_html__( 'Zoom Out', 'wolf-core' ),
+						'zoom-out-up'     => esc_html__( 'Zoom Out Up', 'wolf-core' ),
+						'zoom-out-down'   => esc_html__( 'Zoom Out Down', 'wolf-core' ),
+						'zoom-out-left'   => esc_html__( 'Zoom Out Left', 'wolf-core' ),
+						'zoom-out-right'  => esc_html__( 'Zoom Out Right', 'wolf-core' ),
+					),
+					'default'      => 'none',
+					'page_builder' => 'elementor',
+				),
+				array(
+					'type'       => 'repeater',
+					'param_name' => 'items',
+					'label'      => esc_html__( 'Items', 'wolf-core' ),
+					'params'     => array(
+						array(
+							'type'       => 'select',
+							'label'      => esc_html__( 'Type', 'wolf-core' ),
+							'param_name' => 'type',
+							'options'    => array(
+								'text'             => esc_html__( 'Text', 'wolf-core' ),
+								'image'            => esc_html__( 'Image', 'wolf-core' ),
+								'text_hover_image' => esc_html__( 'Text with Image on Hover', 'wolf-core' ),
+							),
+							'default' => 'text',
+						),
+						array(
+							'type'       => 'text',
+							'label'      => esc_html__( 'Text', 'wolf-core' ),
+							'param_name' => 'text',
+							'condition'  => array(
+								'type' => array( 'text', 'text_image_hover', 'text_video_hover' ),
+							),
+						),
+						array(
+							'type'       => 'image',
+							'label'      => esc_html__( 'Image', 'wolf-core' ),
+							'param_name' => 'image',
+							'condition'  => array(
+								'type' => array( 'image', 'text_image_hover' ),
+							),
+						),
+						array(
+							'type'       => 'image',
+							'label'      => esc_html__( 'Image Hover', 'wolf-core' ),
+							'param_name' => 'image_hover',
+							'condition'  => array(
+								'type' => array( 'image' ),
+							),
+						),
+						array(
+							'type'       => 'video',
+							'label'      => esc_html__( 'Video', 'wolf-core' ),
+							'param_name' => 'video',
+							'condition'  => array(
+								'type' => array( 'text_video_hover' ),
+							),
+						),
+					),
+				),
+			),
+		)
+	);
+}

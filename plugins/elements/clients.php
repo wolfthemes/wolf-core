@@ -103,7 +103,6 @@ function wolf_core_clients( $atts ) {
 
 	$add_delay = ( in_array( $css_animation, $uncover_animations, true ) ) ? 300 : 200;
 
-
 	foreach ( $clients as $client ) {
 
 		$single_animation_delay = $single_animation_delay + $add_delay;
@@ -210,7 +209,7 @@ function wolf_core_clients( $atts ) {
 
 	/* Image Hover */
 
-	$output .= '</div><!--.wolf-core-gallery-->';
+	$output .= '</div><!--.wolf-core-client-->';
 
 	return $output;
 }

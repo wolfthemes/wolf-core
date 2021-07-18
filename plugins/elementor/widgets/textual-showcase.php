@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Testimonial Slider
+ * Textual Showcase
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Testimonial_Slider_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_Textual_Showcase_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -29,7 +29,7 @@ class Elementor_Testimonial_Slider_Widget extends \Elementor\Widget_Base { // ph
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_testimonial_slider_params();
+		$this->params = wolf_core_textual_showcase_params();
 
 		if ( isset( $this->params['properties']['register_scripts'] ) ) {
 
@@ -158,8 +158,8 @@ class Elementor_Testimonial_Slider_Widget extends \Elementor\Widget_Base { // ph
 			)
 		);
 
-		echo wolf_core_testimonial_slider( $atts ); // WCS XSS ok.
+		echo wolf_core_textual_showcase( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Testimonial_Slider_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Textual_Showcase_Widget() );
 
