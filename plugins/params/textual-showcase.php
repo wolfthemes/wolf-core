@@ -20,31 +20,64 @@ function wolf_core_textual_showcase_params() {
 		'wolf_core_textual_showcase_params',
 		array(
 			'properties' => array(
-				'name'          => esc_html__( 'Textual Showcase', 'wolf-core' ),
-				'description'   => esc_html__( 'Description.', 'wolf-core' ),
-				'vc_base'       => 'wolf_core_textual_showcase',
-				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
-				'el_categories' => array( 'extension' ),
-				'el_base'       => 'textual-showcase',
-				'icon'          => 'eicon-t-letter',
+				'name'             => esc_html__( 'Textual Showcase', 'wolf-core' ),
+				'description'      => esc_html__( 'Description.', 'wolf-core' ),
+				'vc_base'          => 'wolf_core_textual_showcase',
+				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
+				'el_categories'    => array( 'extension' ),
+				'el_base'          => 'textual-showcase',
+				'icon'             => 'eicon-t-letter',
+				'register_scripts' => array(
+					'wolf-core-textual-showcase' => array(
+						'src'     => WOLF_CORE_JS . '/textual-showcase.js',
+						'version' => WOLF_CORE_VERSION,
+					),
+				),
+				'scripts'          => array( 'wolf-core-textual-showcase' ),
 			),
 			'params'     => array(
+
+				array(
+					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
+					'param_name'   => 'alignment',
+					'type'         => 'choose',
+					'options'      => array(
+						'flex-start' => array(
+							'title' => esc_html__( 'Left', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-left',
+						),
+						'center'     => array(
+							'title' => esc_html__( 'Center', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-center',
+						),
+						'flex-end'   => array(
+							'title' => esc_html__( 'Right', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-right',
+						),
+					),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-textual-showcase' => 'justify-content:{{VALUE}};',
+					),
+					'page_builder' => 'elementor',
+				),
+
 				array(
 					'type'         => 'typography',
 					'label'        => esc_html__( 'Typography', 'wolf-core' ),
 					'param_name'   => 'typography',
-					'selector'     => '{{WRAPPER}} .wolf-core-textual-showcase-item',
+					'selector'     => '{{WRAPPER}}',
 					'page_builder' => 'elementor',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
 
+				/*
 				array(
 					'type'         => 'hidden',
 					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
 					'param_name'   => 'css_animation_each',
 					'default'      => 'yes',
 					'page_builder' => 'elementor',
-				),
+				),*/
 
 				array(
 					'type'         => 'select',
@@ -91,11 +124,20 @@ function wolf_core_textual_showcase_params() {
 					'default'      => 'none',
 					'page_builder' => 'elementor',
 				),
+
 				array(
 					'type'       => 'repeater',
 					'param_name' => 'items',
 					'label'      => esc_html__( 'Items', 'wolf-core' ),
 					'params'     => array(
+						array(
+							'type'       => 'text',
+							'label'      => esc_html__( 'Text', 'wolf-core' ),
+							'param_name' => 'text',
+							// 'condition'  => array(
+							// 'type' => array( 'text', 'text_hover_image', 'text_hover_video' ),
+							// ),
+						),
 						array(
 							'type'       => 'select',
 							'label'      => esc_html__( 'Type', 'wolf-core' ),
@@ -104,23 +146,16 @@ function wolf_core_textual_showcase_params() {
 								'text'             => esc_html__( 'Text', 'wolf-core' ),
 								'image'            => esc_html__( 'Image', 'wolf-core' ),
 								'text_hover_image' => esc_html__( 'Text with Image on Hover', 'wolf-core' ),
+								'text_hover_video' => esc_html__( 'Text with Video on Hover', 'wolf-core' ),
 							),
-							'default' => 'text',
-						),
-						array(
-							'type'       => 'text',
-							'label'      => esc_html__( 'Text', 'wolf-core' ),
-							'param_name' => 'text',
-							'condition'  => array(
-								'type' => array( 'text', 'text_image_hover', 'text_video_hover' ),
-							),
+							//'default'    => 'text',
 						),
 						array(
 							'type'       => 'image',
 							'label'      => esc_html__( 'Image', 'wolf-core' ),
 							'param_name' => 'image',
 							'condition'  => array(
-								'type' => array( 'image', 'text_image_hover' ),
+								'type' => array( 'image', 'text_hover_image' ),
 							),
 						),
 						array(
@@ -136,8 +171,14 @@ function wolf_core_textual_showcase_params() {
 							'label'      => esc_html__( 'Video', 'wolf-core' ),
 							'param_name' => 'video',
 							'condition'  => array(
-								'type' => array( 'text_video_hover' ),
+								'type' => array( 'text_hover_video' ),
 							),
+						),
+
+						array(
+							'param_name' => 'link',
+							'label'      => esc_html__( 'Link', 'wolf-core' ),
+							'type'       => 'link',
 						),
 					),
 				),

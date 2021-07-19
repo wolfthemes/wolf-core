@@ -21,16 +21,20 @@ function wolf_core_textual_showcase( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'items' => array(),
-				'font_family'    => '',
-				'letter_spacing' => '',
-				'font_weight'    => '',
-				'text_transform' => '',
-				'font_style'     => '',
-				'type'           => '',
-				'el_class'       => '',
-				'css'            => '',
-				'inline_style'   => '',
+				'items'               => array(),
+				'alignment'           => '',
+				'font_family'         => '',
+				'letter_spacing'      => '',
+				'font_weight'         => '',
+				'text_transform'      => '',
+				'font_style'          => '',
+				'type'                => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'css_animation_each'  => '',
 			)
 		)
 	);
@@ -39,19 +43,27 @@ function wolf_core_textual_showcase( $atts ) {
 
 	$item_class = '';
 	$item_style = '';
-	$link_start   = '';
-	$link_end     = '';
+	$link_start = '';
+	$link_end   = '';
 
 	$output = '';
 
 	$class = $el_class; // init container CSS class.
 
-	$class .= " wolf-core-textual-showcase wolf-core-element";
+	$class .= " wolf-core-textual-showcase wolf-core-textual-showcase-align-$alignment wolf-core-element";
+
+	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+
+	if ( ! $css_animation_each ) {
+		$output .= wolf_core_element_aos_animation_data_attr( $atts );
+	}
+
+	$output .= '>';
 
 	$single_animation_delay = ( $css_animation_delay ) ? $css_animation_delay : 0;
 
 	if ( ! wolf_core_is_new_animation( $css_animation ) ) {
-		$figure_style = 'animation-delay:' . absint( $single_animation_delay ) . 'ms;';
+		$item_style = 'animation-delay:' . absint( $single_animation_delay ) . 'ms;';
 	}
 
 	$uncover_animations = array(
@@ -73,14 +85,26 @@ function wolf_core_textual_showcase( $atts ) {
 				wp_parse_args(
 					$item,
 					array(
-						'type'    => 'text',
-						'text'    => '',
-						'image' => '',
-						'video' => '',
+						'text'            => '',
+						'type'            => 'text',
+						'image'           => '',
+						'video'           => array(),
+						'img_size'        => '224x94',
+						'custom_img_size' => '',
+						'link'            => '',
 					)
 				)
 			)
 		);
+
+		$media_hover_type = array( 'text_hover_image', 'text_hover_video' );
+		if ( in_array( $type, $media_hover_type, true ) ) {
+			$item_class = ' wolf-core-tsi-text_hover_media';
+		} else {
+			$item_class = '';
+		}
+
+		$output .= "<span class='$item_class wolf-core-textual-showcase-item wolf-core-tsi-$type' style='$item_style'";
 
 		if ( $css_animation_each ) {
 			$force                       = ( 'elementor' === wolf_core_get_plugin_in_use() ) ? true : false;
@@ -88,20 +112,133 @@ function wolf_core_textual_showcase( $atts ) {
 			$output                     .= wolf_core_element_aos_animation_data_attr( $atts, $force );
 		}
 
-		$content = do_shortcode( $text );
+		$output .= '>';
 
-		if ( 'image' === $type ) {
-			if ( is_array( $image ) && isset( $image['id'] ) ) {
-				$image = $image['id'];
-			}
+		$content = '';
 
-			if ( is_array( $image_hover ) && isset( $image_hover['id'] ) ) {
-				$image_hover = $image_hover['id'];
-			}
+		$link = wolf_core_process_link_atts( $link );
+
+		if ( is_array( $link ) && ! empty( $link['url'] ) ) {
+			$content .= '<a rel="' . esc_attr( $link['rel'] ) . '" class="wolf-core-link-mask"';
+			$content .= ' target="' . esc_attr( $link['target'] ) . '"';
+			$content .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '"></a>';
 		}
 
-		$output .= '<span class="wolf-core-textual-showcase-item-' . esc_attr( $type ) . '" style="' . esc_attr(  ) . '">' . $content . '</span>';
-	}
+		if ( is_array( $image ) && isset( $image['id'] ) ) {
+			$image = $image['id'];
+		}
+
+		if ( is_array( $image_hover ) && isset( $image_hover['id'] ) ) {
+			$image_hover = $image_hover['id'];
+		}
+
+		/* Image */
+		if ( 'image' === $type ) {
+
+			if ( $image_hover ) {
+				$img_wrapper_class = ' wolf-core-textual-showcase-image-has-hover-image';
+			} else {
+				$img_wrapper_class = ' wolf-core-textual-showcase-image-no-hover-image';
+			}
+
+			$content .= '<span class="wolf-core-textual-showcase-image-wrapper ' . esc_attr( $img_wrapper_class ) . '">';
+
+			if ( $image ) {
+				$content .= '<span class="wolf-core-textual-showcase-image-inner">';
+
+				if ( wp_attachment_is_image( $image ) ) {
+
+					$img = wolf_core_get_img_by_size(
+						array(
+							'attach_id'  => $image,
+							'thumb_size' => $img_size,
+							'class'      => 'wolf-core-textual-showcase-image',
+						)
+					);
+
+					$content .= $img['thumbnail'];
+				} else {
+					$content .= wolf_core_placeholder_img( $img_size );
+				}
+
+				$content .= '</span>';
+			}
+
+			if ( $image_hover ) {
+				$content .= '<span class="wolf-core-textual-showcase-image-hover-inner">';
+
+				if ( wp_attachment_is_image( $image_hover ) ) {
+
+					$img = wolf_core_get_img_by_size(
+						array(
+							'attach_id'  => $image_hover,
+							'thumb_size' => $img_size,
+							'class'      => 'wolf-core-textual-showcase-image-hover',
+						)
+					);
+
+					$content .= $img['thumbnail'];
+				} else {
+					$content .= wolf_core_placeholder_img( $img_size );
+				}
+
+				$content .= '</span>';
+			}
+
+			$content .= '</span>';
+
+		} elseif ( 'text_hover_image' === $type ) {
+
+			$content  = '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
+			$content .= '<span class="wolf-core-tsi-hover-reveal"><span class="wolf-core-tsi-hover-reveal__inner">';
+
+			if ( wp_attachment_is_image( $image ) ) {
+
+				$image_src = wp_get_attachment_url( absint( $image ) );
+				$img       = wolf_core_get_img_by_size(
+					array(
+						'attach_id'  => $image,
+						'thumb_size' => '250x300',
+						'class'      => 'wolf-core-tsi-hover-reveal__img',
+					)
+				);
+
+				$content .= $img['thumbnail'];
+				// $content  .= wp_get_attachment_image( $image, '250x300', '', array( 'class' => 'wolf-core-tsi-hover-reveal__img' ) );
+			}
+
+			$content .= '</span></span>';
+
+		} elseif ( 'text_hover_video' === $type ) {
+
+			$video_url = isset( $video['url'] ) ? $video['url'] : '';
+			$video_id  = isset( $video['id'] ) ? $video['id'] : '';
+
+			$content  = '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
+			$content .= '<span class="wolf-core-tsi-hover-reveal"><span class="wolf-core-tsi-hover-reveal__inner">';
+
+			if ( wp_attachment_is( 'video', $video_id ) ) {
+
+				$content .= wolf_core_video_bg(
+					array(
+						'video_bg_url' => $video_url,
+					)
+				);
+			}
+
+			$content .= '</span></span>';
+
+			/* Text */
+		} else {
+			$content = '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
+		}
+
+		$output .= $content;
+
+		$output .= '</span>';
+	} // end foreach.
+
+	$output .= '</div><!--.wolf-core-textual-showcase-->';
 
 	return $output;
 }

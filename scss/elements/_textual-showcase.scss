@@ -1,3 +1,133 @@
 /**
  * @# Textual Showcase
  **/
+.wolf-core-textual-showcase {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wolf-core-textual-showcase-align-center {
+	justify-content: center;
+}
+
+.wolf-core-textual-showcase-align-flex-start {
+	justify-content: flex-start;
+}
+
+.wolf-core-textual-showcase-align-flex-end {
+	justify-content: flex-end;
+}
+
+.wolf-core-textual-showcase-item {
+	z-index: 0;
+	position: relative;
+	margin: 0 30px 0 0;
+	padding: 0 15px 0 0;
+}
+
+.wolf-core-tsi-image {
+	img {
+		transform: translateZ(0);
+		backface-visibility: hidden;
+		display: inline-block;
+		vertical-align: middle;
+		//margin: 0 auto;
+	}
+}
+
+.wolf-core-textual-showcase-image-wrapper,
+.wolf-core-textual-showcase-image-inner,
+.wolf-core-textual-showcase-image-hover-inner {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+}
+
+.wolf-core-textual-showcase-image-wrapper {
+	width: 230px;
+	height: 100px;
+}
+
+.wolf-core-textual-showcase-image-inner {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+
+.wolf-core-textual-showcase-image-hover-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.wolf-core-tsi-image:hover .wolf-core-textual-showcase-image-has-hover-image {
+	.wolf-core-textual-showcase-image-inner {
+		opacity: 0;
+	}
+	.wolf-core-textual-showcase-image-hover-inner {
+		opacity: 1;
+	}
+}
+
+.wolf-core-tsi:hover .wolf-core-tsi-no-hover-image {
+	.wolf-core-textual-showcase-image-inner {
+		opacity: 0.7;
+	}
+}
+
+.wolf-core-tsi-text_hover_media {
+	z-index: 1;
+	.wolf-core-tsi-text-inner {
+		position: relative;
+		z-index: 1;
+	}
+
+	.wolf-core-tsi-hover-reveal {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		pointer-events: none;
+		visibility: hidden;
+		transition: transform 0.3s ease;
+		z-index: 0;
+
+		.wolf-core-tsi-hover-reveal__inner {
+			display: block;
+		}
+
+		&.wolf-core-tsi-text_hover_media-active {
+			visibility: visible;
+		}
+	}
+
+	.wolf-core-tsi-hover-reveal__img,
+	.wolf-core-video-bg-container {
+		transform: translate(-5%, -60%);
+		max-width: 250px;
+		max-height: 300px;
+		height: auto;
+		width: auto;
+		display: block;
+	}
+
+	.wolf-core-text-hover-image-text {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.wolf-core-tsi-text_hover_video {
+	.wolf-core-video-bg-container {
+		width: 250px;
+		height: 300px;
+
+		.wolf-core-video-bg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
