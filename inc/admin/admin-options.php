@@ -47,7 +47,7 @@ $social_fields[] = array(
  */
 $wolf_core_options = array(
 
-	array(
+	/*array(
 		'title'         => esc_html__( 'Google Maps', 'wolf-visual-composer' ),
 		'settings_id'   => 'wolf-core-google-map',
 		'settings_slug' => 'google-map',
@@ -63,7 +63,7 @@ $wolf_core_options = array(
 				'placeholder' => 'CIzaqsdMik5OYxo5hIZGvi6XhIQsvsOdUJQmm_beS8-us8',
 			),
 		),
-	),
+	),*/
 
 	array(
 		'title'         => esc_html__( 'MailChimp', 'wolf-visual-composer' ),

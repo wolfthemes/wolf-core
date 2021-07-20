@@ -200,9 +200,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		private function init_hooks() {
 
-			register_activation_hook( __FILE__, array( $this, 'activate' ) );
-
 			add_action( 'init', array( $this, 'init' ), 0 );
+
+			register_activation_hook( __FILE__, array( $this, 'activate' ) );
 
 			// Plugin update notifications.
 			add_action( 'admin_init', array( $this, 'plugin_update' ) );
@@ -395,8 +395,11 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'wolf_content_block',
 				'work',
 				'page',
+				'release',
 				'video',
 				'product',
+				'event',
+				'post',
 			);
 
 			foreach ( $supported_post_types as $cpt ) {

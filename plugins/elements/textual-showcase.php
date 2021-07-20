@@ -189,7 +189,7 @@ function wolf_core_textual_showcase( $atts ) {
 
 		} elseif ( 'text_hover_image' === $type ) {
 
-			$content  = '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
+			$content .= '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
 			$content .= '<span class="wolf-core-tsi-hover-reveal"><span class="wolf-core-tsi-hover-reveal__inner">';
 
 			if ( wp_attachment_is_image( $image ) ) {
@@ -214,7 +214,7 @@ function wolf_core_textual_showcase( $atts ) {
 			$video_url = isset( $video['url'] ) ? $video['url'] : '';
 			$video_id  = isset( $video['id'] ) ? $video['id'] : '';
 
-			$content  = '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
+			$content .= '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
 			$content .= '<span class="wolf-core-tsi-hover-reveal"><span class="wolf-core-tsi-hover-reveal__inner">';
 
 			if ( wp_attachment_is( 'video', $video_id ) ) {

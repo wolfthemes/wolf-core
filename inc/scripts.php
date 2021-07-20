@@ -34,7 +34,7 @@ function wolf_core_get_js_params() {
 			'parallaxNoIos'             => apply_filters( 'wolf_core_parallax_no_ios', true ),
 			'parallaxNoAndroid'         => apply_filters( 'wolf_core_parallax_no_android', true ),
 			'parallaxNoSmallScreen'     => apply_filters( 'wolf_core_parallax_no_small_screen', true ),
-			'googleMapApiKey'           => apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) ),
+			'googleMapApiKey'           => wolf_core_get_google_maps_api_key(),
 			'onePageSelector'           => apply_filters( 'wolf_core_one_page_selector', '.wolf-core-parent-row' ),
 			'fullPage'                  => apply_filters( 'wolf_core_do_fullpage', wolf_core_do_fullpage() ),
 			'fpTransitionEffect'        => apply_filters( 'wolf_core_fp_transition_effect', 'mix' ),
@@ -228,8 +228,7 @@ function wolf_core_enqueue_scripts() {
 
 	wp_register_script( 'packery-mode', WOLF_CORE_JS . '/lib/packery-mode.pkgd.min.js', array( 'jquery', 'isotope' ), '2.0.1', true );
 
-	$google_api_key = apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) );
-	wp_register_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . $google_api_key, array(), WOLF_CORE_VERSION, true );
+	wp_register_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . wolf_core_get_google_maps_api_key(), array(), WOLF_CORE_VERSION, true );
 
 	// JS Cookies.
 	wp_register_script( 'js-cookie', WOLF_CORE_JS . '/lib/js.cookie.min.js', array( 'jquery' ), '2.1.4', true );
@@ -372,7 +371,7 @@ function wolf_core_force_enqueue_scripts() {
 		// 3rd party
 		wp_enqueue_script( 'bandsintown', 'https://widget.bandsintown.com/main.min.js', array(), WOLF_CORE_VERSION, true );
 
-		$google_api_key = apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) );
+		$google_api_key = wolf_core_get_google_maps_api_key();
 
 		if ( $google_api_key ) {
 			wp_enqueue_script( 'google-maps-api', '//maps.googleapis.com/maps/api/js?key=' . $google_api_key, array(), WOLF_CORE_VERSION, true );

@@ -79,7 +79,7 @@ function wolf_core_textual_showcase_params() {
 					'page_builder' => 'elementor',
 				),*/
 
-				array(
+				/*array(
 					'type'         => 'select',
 					'label'        => esc_html__( 'Animation', 'wolf-core' ),
 					'param_name'   => 'css_animation',
@@ -123,7 +123,7 @@ function wolf_core_textual_showcase_params() {
 					),
 					'default'      => 'none',
 					'page_builder' => 'elementor',
-				),
+				),*/
 
 				array(
 					'type'       => 'repeater',

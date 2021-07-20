@@ -1303,3 +1303,19 @@ function wolf_core_add_to_cart( $product_id, $classes = '', $text = '' ) {
 		data-quantity="1" data-product_id="' . absint( $product_id ) . '"
 		class="' . wolf_core_sanitize_html_classes( $classes ) . '">' . $text . '</a>';
 }
+
+/**
+ * Get Google Maps API key
+ *
+ * @return string
+ */
+function wolf_core_get_google_maps_api_key() {
+
+	$gmaps_api_key = wolf_core_get_option( 'google-map', 'google_maps_api_key' );
+
+	if ( get_option( 'elementor_google_maps_api_key' ) && 'elementor' === wolf_core_get_plugin_in_use() ) {
+		$gmaps_api_key = get_option( 'elementor_google_maps_api_key' );
+	}
+
+	return apply_filters( 'wolf_core_google_maps_api_key', $gmaps_api_key );
+}

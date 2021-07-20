@@ -27,13 +27,13 @@ function wolf_core_heading_params() {
 				'icon'        => 'fa fa-text-width',
 			),
 			'params'     => array(
-				array(
+				/*array(
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Center Aligned on Mobile', 'wolf-core' ),
 					'param_name'   => 'text_align_mobile',
 					'return_value' => 'center',
 					'default'      => 'center',
-				),
+				),*/
 
 				// array(
 				// 	'type'         => 'select',
@@ -67,7 +67,7 @@ function wolf_core_heading_params() {
 					'page_builder' => 'vc',
 				),
 
-				array(
+				/*array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Behavior', 'wolf-core' ),
 					'param_name' => 'responsive',
@@ -76,7 +76,7 @@ function wolf_core_heading_params() {
 						'yes' => esc_html__( 'Responsive', 'wolf-core' ),
 					),
 					'default'    => 'no',
-				),
+				),*/
 
 				array(
 					'type'       => 'text',

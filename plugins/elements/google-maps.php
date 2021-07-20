@@ -46,7 +46,7 @@ function wolf_core_google_maps( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	$google_api_key = apply_filters( 'wolf_core_google_maps_api_key', wolf_core_get_option( 'google-map', 'google_maps_api_key' ) );
+	$google_api_key = wolf_core_get_google_maps_api_key();
 
 	if ( ! $google_api_key ) {
 
