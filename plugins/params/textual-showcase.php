@@ -70,16 +70,16 @@ function wolf_core_textual_showcase_params() {
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
 
-				/*
+
 				array(
-					'type'         => 'hidden',
-					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
+					'type'         => 'checkbox',
+					'label'        => esc_html__( 'Animate Items', 'wolf-core' ),
 					'param_name'   => 'css_animation_each',
 					'default'      => 'yes',
 					'page_builder' => 'elementor',
-				),*/
+				),
 
-				/*array(
+				array(
 					'type'         => 'select',
 					'label'        => esc_html__( 'Animation', 'wolf-core' ),
 					'param_name'   => 'css_animation',
@@ -123,7 +123,10 @@ function wolf_core_textual_showcase_params() {
 					),
 					'default'      => 'none',
 					'page_builder' => 'elementor',
-				),*/
+					'condition'  => array(
+						'css_animation_each' => 'yes',
+					),
+				),
 
 				array(
 					'type'       => 'repeater',
@@ -166,10 +169,20 @@ function wolf_core_textual_showcase_params() {
 								'type' => array( 'image' ),
 							),
 						),
+
 						array(
 							'type'       => 'video',
 							'label'      => esc_html__( 'Video', 'wolf-core' ),
 							'param_name' => 'video',
+							'condition'  => array(
+								'type' => array( 'text_hover_video' ),
+							),
+						),
+
+						array(
+							'type'       => 'image',
+							'label'      => esc_html__( 'Video Poster', 'wolf-core' ),
+							'param_name' => 'video_poster',
 							'condition'  => array(
 								'type' => array( 'text_hover_video' ),
 							),

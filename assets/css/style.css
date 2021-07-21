@@ -2507,6 +2507,9 @@ li.wolf-core-album-tracklist-item {
 .loaded .wolf-core-row-visible .wolf-core-svg-anim-once-no svg path {
   animation: wolfCoreDraw 10s linear forwards;
 }
+.loaded .wolf-core-row-visible .wolf-core-svg-anim-once- svg path {
+  animation: wolfCoreDraw 10s linear forwards;
+}
 
 @keyframes wolfCoreDraw {
   to {
@@ -4953,7 +4956,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 .wolf-core-textual-showcase-image-hover-inner {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .wolf-core-textual-showcase-image-wrapper {

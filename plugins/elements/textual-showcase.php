@@ -87,8 +87,9 @@ function wolf_core_textual_showcase( $atts ) {
 					array(
 						'text'            => '',
 						'type'            => 'text',
-						'image'           => '',
+						'image'           => array(),
 						'video'           => array(),
+						'video_poster'    => array(),
 						'img_size'        => '224x94',
 						'custom_img_size' => '',
 						'link'            => '',
@@ -211,6 +212,10 @@ function wolf_core_textual_showcase( $atts ) {
 
 		} elseif ( 'text_hover_video' === $type ) {
 
+			if ( is_array( $video_poster ) && isset( $video_poster['id'] ) ) {
+				$video_poster = $video_poster['id'];
+			}
+
 			$video_url = isset( $video['url'] ) ? $video['url'] : '';
 			$video_id  = isset( $video['id'] ) ? $video['id'] : '';
 
@@ -221,7 +226,9 @@ function wolf_core_textual_showcase( $atts ) {
 
 				$content .= wolf_core_video_bg(
 					array(
-						'video_bg_url' => $video_url,
+						'video_bg_url'      => $video_url,
+						'video_bg_img'      => $video_poster,
+						'video_bg_img_size' => '250x300',
 					)
 				);
 			}
