@@ -29,6 +29,7 @@ function wolf_core_textual_showcase( $atts ) {
 				'text_transform'      => '',
 				'font_style'          => '',
 				'type'                => '',
+				'line_break'	=> '',
 				'el_class'            => '',
 				'css'                 => '',
 				'inline_style'        => '',
@@ -105,7 +106,7 @@ function wolf_core_textual_showcase( $atts ) {
 			$item_class = '';
 		}
 
-		$output .= "<span class='$item_class wolf-core-textual-showcase-item wolf-core-tsi-$type' style='$item_style'";
+		$output .= "<span class='$item_class wolf-core-textual-showcase-item wolf-core-tsi-$type wolf-core-tsi-line-break-$line_break' style='$item_style'";
 
 		if ( $css_animation_each ) {
 			$force                       = ( 'elementor' === wolf_core_get_plugin_in_use() ) ? true : false;
@@ -243,6 +244,7 @@ function wolf_core_textual_showcase( $atts ) {
 		$output .= $content;
 
 		$output .= '</span>';
+
 	} // end foreach.
 
 	$output .= '</div><!--.wolf-core-textual-showcase-->';

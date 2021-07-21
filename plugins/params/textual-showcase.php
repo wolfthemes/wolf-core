@@ -161,7 +161,7 @@ function wolf_core_textual_showcase_params() {
 								'text_hover_image' => esc_html__( 'Text with Image on Hover', 'wolf-core' ),
 								'text_hover_video' => esc_html__( 'Text with Video on Hover', 'wolf-core' ),
 							),
-							//'default'    => 'text',
+							'default'    => 'text',
 						),
 						array(
 							'type'       => 'image',
@@ -202,6 +202,12 @@ function wolf_core_textual_showcase_params() {
 							'param_name' => 'link',
 							'label'      => esc_html__( 'Link', 'wolf-core' ),
 							'type'       => 'link',
+						),
+
+						array(
+							'param_name' => 'line_break',
+							'label'      => esc_html__( 'Line break', 'wolf-core' ),
+							'type'       => 'checkbox',
 						),
 					),
 				),

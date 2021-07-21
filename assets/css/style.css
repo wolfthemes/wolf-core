@@ -4949,10 +4949,14 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   justify-content: flex-end;
 }
 
+.wolf-core-tsi-line-break-yes {
+  flex-basis: 100%;
+}
+
 .wolf-core-textual-showcase-item {
   z-index: 0;
   position: relative;
-  margin: 0 2.5% 0 0;
+  margin: 0 2% 0 0;
 }
 
 .wolf-core-tsi-image img {
