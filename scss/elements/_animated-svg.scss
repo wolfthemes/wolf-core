@@ -1,7 +1,7 @@
 /**
  * @# Animtaed SVG
  **/
-.wolf-core-svg {
+.wolf-core-animated-svg {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -21,6 +21,18 @@
 			stroke-dashoffset: 100000;
 		}
 	}
+}
+
+.wolf-core-animated-svg-align-center {
+	justify-content: center;
+}
+
+.wolf-core-animated-svg-align-flex-start {
+	justify-content: flex-start;
+}
+
+.wolf-core-animated-svg-align-flex-end {
+	justify-content: flex-end;
 }
 
 .loaded .wolf-core-row-appeared {

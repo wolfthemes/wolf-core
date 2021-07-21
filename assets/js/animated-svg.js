@@ -14,7 +14,7 @@ var WolfCoreAnimatedSVG = function( $ ) {
 		 */
 		init : function () {
 
-			$( ".wolf-core-svg" ).each( function() {
+			$( ".wolf-core-animated-svg" ).each( function() {
 
 				var $container = $( this ),
 					$svg = $( this ).find( "svg" ),
@@ -31,7 +31,8 @@ var WolfCoreAnimatedSVG = function( $ ) {
 				$svg.find( "path" ).each( function ( index ) {
 
 					var $path = $( this ),
-						length = $path[ 0 ].getTotalLength();
+						length = $path[ 0 ].getTotalLength(),
+						delay = $path.data( "animation-delay" ) || index * animationDuration;
 
 					$path.css( {
 						"stroke-width": $path.data( "stroke-width" ) || strokeWidth,
@@ -39,7 +40,7 @@ var WolfCoreAnimatedSVG = function( $ ) {
 	  					"stroke-dashoffset": length,
 						"stroke": $path.data( "color" ) || color,
 						"animation-duration" : $path.data( "animation-duration" ) || animationDuration + "s",
-						"animation-delay" : $path.data( "animation-delay" ) || animationDelay + "s"
+						"animation-delay" : delay + "s"
 					} );
 				} );
 			} );

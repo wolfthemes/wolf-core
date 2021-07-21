@@ -70,6 +70,16 @@ function wolf_core_textual_showcase_params() {
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
 
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
+					'param_name'   => 'custom_color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-textual-showcase' => 'color: {{VALUE}};',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
 
 				array(
 					'type'         => 'checkbox',

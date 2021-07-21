@@ -49,6 +49,30 @@ function wolf_core_animated_svg_params() {
 				),
 
 				array(
+					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
+					'param_name'   => 'alignment',
+					'type'         => 'choose',
+					'options'      => array(
+						'flex-start' => array(
+							'title' => esc_html__( 'Left', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-left',
+						),
+						'center'     => array(
+							'title' => esc_html__( 'Center', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-center',
+						),
+						'flex-end'   => array(
+							'title' => esc_html__( 'Right', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-right',
+						),
+					),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-animated-text' => 'justify-content:{{VALUE}};',
+					),
+					'page_builder' => 'elementor',
+				),
+
+				array(
 					'type'       => 'repeater',
 					'param_name' => 'paths',
 					'label'      => esc_html__( 'Paths', 'wolf-core' ),
