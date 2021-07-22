@@ -1559,7 +1559,6 @@ var WolfCore = (function ($) {
 				}
 			});
 
-
 			$(".elementor-inner-section").on("inview", function (event, isInView) {
 				if ( isInView ) {
 

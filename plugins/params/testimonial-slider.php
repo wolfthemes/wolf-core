@@ -41,6 +41,24 @@ function wolf_core_testimonial_slider_params() {
 			),
 			'params'     => array(
 				array(
+					'type'       => 'colorpicker',
+					'param_name' => 'arrows_color',
+					'label'      => esc_html__( 'Arrows Color', 'wolf-core' ),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'selectors'  => array(
+						'{{WRAPPER}} .flickity-prev-next-button svg' => 'fill: {{VALUE}};',
+					),
+				),
+				array(
+					'type'       => 'colorpicker',
+					'param_name' => 'dots_color',
+					'label'      => esc_html__( 'Dots Color', 'wolf-core' ),
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'selectors'  => array(
+						'{{WRAPPER}} .flickity-page-dots .dot:after' => 'background:{{VALUE}};border-color:{{VALUE}};',
+					),
+				),
+				array(
 					'type'       => 'repeater',
 					'param_name' => 'testimonials',
 					'label'      => esc_html__( 'Testimonials', 'wolf-core' ),

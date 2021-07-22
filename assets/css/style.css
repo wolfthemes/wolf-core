@@ -1636,7 +1636,7 @@ body[data-aos-delay='5000'] [data-aos].aos-animate, [data-aos][data-aos][data-ao
   font-size: 0;
   height: 70px;
 }
-.flickity-prev-next-button svg {
+.flickity-prev-next-button svg.flickity-button-icon {
   display: none;
 }
 .flickity-prev-next-button:before {

@@ -27,6 +27,8 @@ function wolf_core_testimonial_slider( $atts ) {
 				'pause_on_hover'      => 'yes',
 				'nav_bullets'         => 'yes',
 				'nav_arrows'          => 'yes',
+				'arrows_color'        => '',
+				'dots_color'          => '',
 				'testimonials'        => array(),
 				'css_animation'       => '',
 				'css_animation_delay' => '',
@@ -39,8 +41,10 @@ function wolf_core_testimonial_slider( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	//wp_enqueue_script( 'flickity' );
-	//wp_enqueue_script( 'wolf-core-carousels' );
+	if ( 'vc' === wolf_core_get_plugin_in_use() ) {
+		wp_enqueue_script( 'flickity' );
+		wp_enqueue_script( 'wolf-core-carousels' );
+	}
 
 	$output = '';
 
@@ -57,6 +61,8 @@ function wolf_core_testimonial_slider( $atts ) {
 		data-autoplay='$autoplay'
 		data-transition='$transition'
 		data-slideshow-speed='$slideshow_speed'
+		data-arrows-color='$arrows_color'
+		data-dots-color='$dots_color'
 		data-nav-arrows='$nav_arrows'
 		data-nav-bullets='$nav_bullets'";
 
