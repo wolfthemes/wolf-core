@@ -73,7 +73,13 @@ function wolf_core_social_icons( $atts ) {
 		}
 	}
 
-	$class                .= " wolf-core-socials-container wolf-core-si-size-$size wolf-core-align-$alignment wolf-core-si-direction-$direction wolf-core-si-acronym-$acronym wolf-core-element";
+	if ( 'yes' === $acronym ) {
+		$background_style = 'none';
+	}
+
+	//wolf-core-align-$alignment
+
+	$class                .= " wolf-core-socials-container wolf-core-si-size-$size wolf-core-si-direction-$direction wolf-core-si-acronym-$acronym wolf-core-element";
 	$icon_box_class       .= " wolf-core-social-icon wolf-core-icon-box wolf-core-icon-background-style-$background_style wolf-core-icon-hover-$hover_effect";
 	$icon_container_class .= " wolf-core-icon-background-color-$background_color";
 	$icon_container_class .= ' wolf-core-icon-container ' . $size;
@@ -118,6 +124,7 @@ function wolf_core_social_icons( $atts ) {
 			$icon_filler_style    .= "background-color:$bg_color;box-shadow-color:$bg_color;";
 		}
 	}
+
 
 	$wolf_core_socials = wolf_core_get_socials();
 
@@ -267,15 +274,15 @@ function wolf_core_social_icons( $atts ) {
 			'instagram'   => 'in',
 			'tiktok'      => 'tk',
 			'linkedin'    => 'li',
-			'behance'     => 'br',
+			'behance'     => 'be',
 			'youtube'     => 'yt',
 			'vimeo'       => 'vi',
 			'pinterest'   => 'pn',
 			'dribbble'    => 'dr',
 			'spotify'     => 'sp',
 			'bandcamp'    => 'bc',
-			'bandsintown' => 'bi',
-			'github'      => 'gi',
+			'bandsintown' => 'bt',
+			'github'      => 'gh',
 			'vk'          => 'vk',
 			'envato'      => 'en',
 			'messenger'   => 'mg',
