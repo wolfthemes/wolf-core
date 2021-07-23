@@ -51,6 +51,12 @@
 	}
 }
 
+.elementor-editor-active {
+	.wolf-core-animated-svg svg path {
+		animation: wolfCoreDraw 10s linear forwards;
+	}
+}
+
 @keyframes wolfCoreDraw {
 	to {
 		stroke-dashoffset: 0;

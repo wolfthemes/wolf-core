@@ -94,16 +94,17 @@ function wolf_core_textual_showcase( $atts ) {
 						'img_size'        => '224x94',
 						'custom_img_size' => '',
 						'link'            => '',
+						'el_class'        => '',
 					)
 				)
 			)
 		);
 
+		$item_class = $el_class;
+
 		$media_hover_type = array( 'text_hover_image', 'text_hover_video' );
 		if ( in_array( $type, $media_hover_type, true ) ) {
-			$item_class = ' wolf-core-tsi-text_hover_media';
-		} else {
-			$item_class = '';
+			$item_class .= ' wolf-core-tsi-text_hover_media';
 		}
 
 		$output .= "<span class='$item_class wolf-core-textual-showcase-item wolf-core-tsi-$type wolf-core-tsi-line-break-$line_break' style='$item_style'";

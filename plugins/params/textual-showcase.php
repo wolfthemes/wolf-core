@@ -133,7 +133,7 @@ function wolf_core_textual_showcase_params() {
 					),
 					'default'      => 'none',
 					'page_builder' => 'elementor',
-					'condition'  => array(
+					'condition'    => array(
 						'css_animation_each' => 'yes',
 					),
 				),
@@ -142,73 +142,76 @@ function wolf_core_textual_showcase_params() {
 					'type'       => 'repeater',
 					'param_name' => 'items',
 					'label'      => esc_html__( 'Items', 'wolf-core' ),
-					'params'     => array(
+					'params'     => apply_filters(
+						'wolf_core_textual_showcase_item_params',
 						array(
-							'type'       => 'text',
-							'label'      => esc_html__( 'Text', 'wolf-core' ),
-							'param_name' => 'text',
-							// 'condition'  => array(
-							// 'type' => array( 'text', 'text_hover_image', 'text_hover_video' ),
-							// ),
-						),
-						array(
-							'type'       => 'select',
-							'label'      => esc_html__( 'Type', 'wolf-core' ),
-							'param_name' => 'type',
-							'options'    => array(
-								'text'             => esc_html__( 'Text', 'wolf-core' ),
-								'image'            => esc_html__( 'Image', 'wolf-core' ),
-								'text_hover_image' => esc_html__( 'Text with Image on Hover', 'wolf-core' ),
-								'text_hover_video' => esc_html__( 'Text with Video on Hover', 'wolf-core' ),
+							array(
+								'type'       => 'text',
+								'label'      => esc_html__( 'Text', 'wolf-core' ),
+								'param_name' => 'text',
+								// 'condition'  => array(
+								// 'type' => array( 'text', 'text_hover_image', 'text_hover_video' ),
+								// ),
 							),
-							'default'    => 'text',
-						),
-						array(
-							'type'       => 'image',
-							'label'      => esc_html__( 'Image', 'wolf-core' ),
-							'param_name' => 'image',
-							'condition'  => array(
-								'type' => array( 'image', 'text_hover_image' ),
+							array(
+								'type'       => 'select',
+								'label'      => esc_html__( 'Type', 'wolf-core' ),
+								'param_name' => 'type',
+								'options'    => array(
+									'text'             => esc_html__( 'Text', 'wolf-core' ),
+									'image'            => esc_html__( 'Image', 'wolf-core' ),
+									'text_hover_image' => esc_html__( 'Text with Image on Hover', 'wolf-core' ),
+									'text_hover_video' => esc_html__( 'Text with Video on Hover', 'wolf-core' ),
+								),
+								'default'    => 'text',
 							),
-						),
-						array(
-							'type'       => 'image',
-							'label'      => esc_html__( 'Image Hover', 'wolf-core' ),
-							'param_name' => 'image_hover',
-							'condition'  => array(
-								'type' => array( 'image' ),
+							array(
+								'type'       => 'image',
+								'label'      => esc_html__( 'Image', 'wolf-core' ),
+								'param_name' => 'image',
+								'condition'  => array(
+									'type' => array( 'image', 'text_hover_image' ),
+								),
 							),
-						),
+							array(
+								'type'       => 'image',
+								'label'      => esc_html__( 'Image Hover', 'wolf-core' ),
+								'param_name' => 'image_hover',
+								'condition'  => array(
+									'type' => array( 'image' ),
+								),
+							),
 
-						array(
-							'type'       => 'video',
-							'label'      => esc_html__( 'Video', 'wolf-core' ),
-							'param_name' => 'video',
-							'condition'  => array(
-								'type' => array( 'text_hover_video' ),
+							array(
+								'type'       => 'video',
+								'label'      => esc_html__( 'Video', 'wolf-core' ),
+								'param_name' => 'video',
+								'condition'  => array(
+									'type' => array( 'text_hover_video' ),
+								),
 							),
-						),
 
-						array(
-							'type'       => 'image',
-							'label'      => esc_html__( 'Video Poster', 'wolf-core' ),
-							'param_name' => 'video_poster',
-							'condition'  => array(
-								'type' => array( 'text_hover_video' ),
+							array(
+								'type'       => 'image',
+								'label'      => esc_html__( 'Video Poster', 'wolf-core' ),
+								'param_name' => 'video_poster',
+								'condition'  => array(
+									'type' => array( 'text_hover_video' ),
+								),
 							),
-						),
 
-						array(
-							'param_name' => 'link',
-							'label'      => esc_html__( 'Link', 'wolf-core' ),
-							'type'       => 'link',
-						),
+							array(
+								'param_name' => 'link',
+								'label'      => esc_html__( 'Link', 'wolf-core' ),
+								'type'       => 'link',
+							),
 
-						array(
-							'param_name' => 'line_break',
-							'label'      => esc_html__( 'Line break', 'wolf-core' ),
-							'type'       => 'checkbox',
-						),
+							array(
+								'param_name' => 'line_break',
+								'label'      => esc_html__( 'Line break', 'wolf-core' ),
+								'type'       => 'checkbox',
+							),
+						)
 					),
 				),
 			),

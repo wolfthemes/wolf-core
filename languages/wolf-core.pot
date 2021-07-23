@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.1.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-07-22 08:46:30+00:00\n"
+"POT-Creation-Date: 2021-07-23 12:56:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1027,8 +1027,8 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:321
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:499
 #: plugins/params/banner.php:70 plugins/params/clients.php:162
-#: plugins/params/google-maps.php:193 plugins/params/textual-showcase.php:160
-#: plugins/params/textual-showcase.php:168
+#: plugins/params/google-maps.php:193 plugins/params/textual-showcase.php:162
+#: plugins/params/textual-showcase.php:170
 #: plugins/vc/deprecated/wvc_icon.php:35
 #: plugins/vc/vc-params/row-params.php:321
 #: plugins/vc/vc-params/row-params.php:499
@@ -2802,7 +2802,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:481
 #: plugins/common-params/button-params.php:21 plugins/params/album-disc.php:73
 #: plugins/params/animated-svg.php:42 plugins/params/clients.php:34
-#: plugins/params/spotify-player.php:43 plugins/params/textual-showcase.php:156
+#: plugins/params/spotify-player.php:43 plugins/params/textual-showcase.php:158
 #: plugins/params/twitter.php:44 plugins/vc/vc-params/row-params.php:290
 #: plugins/vc/vc-params/row-params.php:481
 msgid "Type"
@@ -2867,8 +2867,8 @@ msgstr ""
 #: plugins/common-params/button-params.php:37 plugins/params/banner.php:97
 #: plugins/params/bigtext.php:36 plugins/params/blockquote.php:34
 #: plugins/params/link.php:34 plugins/params/testimonial-slider.php:68
-#: plugins/params/textual-showcase.php:148
-#: plugins/params/textual-showcase.php:159
+#: plugins/params/textual-showcase.php:150
+#: plugins/params/textual-showcase.php:161
 #: plugins/vc/deprecated/wvc_icon.php:533
 #: plugins/vc/deprecated/wvc_icon.php:541
 #: plugins/vc/deprecated/wvc_icon.php:548
@@ -2927,7 +2927,7 @@ msgstr ""
 #: plugins/params/bigtext.php:177 plugins/params/clients.php:172
 #: plugins/params/icon.php:113 plugins/params/interactive-links.php:56
 #: plugins/params/link.php:23 plugins/params/shape-slider.php:51
-#: plugins/params/team-member.php:121 plugins/params/textual-showcase.php:203
+#: plugins/params/team-member.php:121 plugins/params/textual-showcase.php:205
 #: plugins/vc/deprecated/wvc_icon.php:613
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:74
 #: plugins/vc/vc-params/custom-heading-params.php:181
@@ -8117,7 +8117,7 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/vc/vc-params/background-params.php:26
 #: pack/wolf-core/plugins/params/textual-showcase.php:185
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:26
-#: plugins/params/textual-showcase.php:185
+#: plugins/params/textual-showcase.php:187
 #: plugins/vc/vc-params/background-params.php:26
 msgid "Video"
 msgstr ""
@@ -9347,27 +9347,27 @@ msgid "Items"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/textual-showcase.php:161
-#: plugins/params/textual-showcase.php:161
+#: plugins/params/textual-showcase.php:163
 msgid "Text with Image on Hover"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/textual-showcase.php:162
-#: plugins/params/textual-showcase.php:162
+#: plugins/params/textual-showcase.php:164
 msgid "Text with Video on Hover"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/textual-showcase.php:176
-#: plugins/params/textual-showcase.php:176
+#: plugins/params/textual-showcase.php:178
 msgid "Image Hover"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/textual-showcase.php:194
-#: plugins/params/textual-showcase.php:194
+#: plugins/params/textual-showcase.php:196
 msgid "Video Poster"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/textual-showcase.php:209
-#: plugins/params/textual-showcase.php:209
+#: plugins/params/textual-showcase.php:211
 msgid "Line break"
 msgstr ""
 
