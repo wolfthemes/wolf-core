@@ -73,7 +73,7 @@ function wolf_core_social_icons( $atts ) {
 		}
 	}
 
-	$class                .= " wolf-core-socials-container wolf-core-si-size-$size wolf-core-align-$alignment wolf-core-si-direction-$direction wolf-core-element";
+	$class                .= " wolf-core-socials-container wolf-core-si-size-$size wolf-core-align-$alignment wolf-core-si-direction-$direction wolf-core-si-acronym-$acronym wolf-core-element";
 	$icon_box_class       .= " wolf-core-social-icon wolf-core-icon-box wolf-core-icon-background-style-$background_style wolf-core-icon-hover-$hover_effect";
 	$icon_container_class .= " wolf-core-icon-background-color-$background_color";
 	$icon_container_class .= ' wolf-core-icon-container ' . $size;
