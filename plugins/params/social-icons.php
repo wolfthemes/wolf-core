@@ -53,10 +53,10 @@ function wolf_core_social_icons_params() {
 				),
 
 				array(
-					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
-					'param_name'   => 'alignment',
-					'type'         => 'choose',
-					'options'      => array(
+					'label'              => esc_html__( 'Alignment', 'wolf-core' ),
+					'param_name'         => 'alignment',
+					'type'               => 'choose',
+					'options'            => array(
 						'left'   => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
@@ -70,10 +70,11 @@ function wolf_core_social_icons_params() {
 							'icon'  => 'eicon-text-align-right',
 						),
 					),
-					'selectors'    => array(
+					'selectors'          => array(
 						'{{WRAPPER}} .wolf-core-socials-container' => 'text-align:{{VALUE}};',
 					),
-					'page_builder' => 'elementor',
+					'page_builder'       => 'elementor',
+					'responsive_control' => true,
 				),
 
 				array(
@@ -186,7 +187,7 @@ function wolf_core_social_icons_params() {
 					),
 					'description' => esc_html__( 'Select background shape and style for icon.', 'wolf-core' ),
 					'default'     => 'none',
-					'condition' => array(
+					'condition'   => array(
 						'acronym!' => 'yes',
 					),
 				),
@@ -230,7 +231,7 @@ function wolf_core_social_icons_params() {
 					'param_name'   => 'color',
 					'default'      => 'custom',
 					'page_builder' => 'elementor',
-					'condition' => array(
+					'condition'    => array(
 						'acronym!' => 'yes',
 					),
 				),
@@ -244,21 +245,21 @@ function wolf_core_social_icons_params() {
 						'{{WRAPPER}} .wolf-core-icon' => 'color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
-					'condition' => array(
+					'condition'    => array(
 						'acronym!' => 'yes',
 					),
 				),
 
 				array(
 					'type'         => 'colorpicker',
-					'label'        => esc_html__( 'Texttt Color', 'wolf-core' ),
+					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
 					'param_name'   => 'acronym_text_color',
 					'page_builder' => 'elementor',
 					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-social-acronym-link' => 'color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
-					'condition' => array(
+					'condition'    => array(
 						'acronym' => 'yes',
 					),
 				),
@@ -302,7 +303,7 @@ function wolf_core_social_icons_params() {
 					'param_name'   => 'background_color',
 					'default'      => 'custom',
 					'page_builder' => 'elementor',
-					'condition' => array(
+					'condition'    => array(
 						'acronym!' => 'yes',
 					),
 				),
@@ -316,7 +317,7 @@ function wolf_core_social_icons_params() {
 						'{{WRAPPER}} .wolf-core-icon-background-fill' => 'background-color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
-					'condition' => array(
+					'condition'    => array(
 						'acronym!' => 'yes',
 					),
 				),
@@ -355,7 +356,7 @@ function wolf_core_social_icons_params() {
 					),
 					'admin_label' => true,
 					'default'     => 'opacity',
-					'condition' => array(
+					'condition'   => array(
 						'acronym!' => 'yes',
 					),
 				),
