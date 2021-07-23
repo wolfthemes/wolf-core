@@ -103,6 +103,12 @@ function wolf_core_social_icons_params() {
 				),
 
 				array(
+					'type'       => 'checkbox',
+					'label'      => esc_html__( 'Display Acronym instead of icon', 'wolf-core' ),
+					'param_name' => 'acronym',
+				),
+
+				array(
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
 					'param_name'   => 'css_animation_each',
@@ -180,6 +186,9 @@ function wolf_core_social_icons_params() {
 					),
 					'description' => esc_html__( 'Select background shape and style for icon.', 'wolf-core' ),
 					'default'     => 'none',
+					'condition' => array(
+						'acronym!' => 'yes',
+					),
 				),
 
 				/* Icon Color for VC */
@@ -221,6 +230,9 @@ function wolf_core_social_icons_params() {
 					'param_name'   => 'color',
 					'default'      => 'custom',
 					'page_builder' => 'elementor',
+					'condition' => array(
+						'acronym!' => 'yes',
+					),
 				),
 
 				array(
@@ -232,6 +244,23 @@ function wolf_core_social_icons_params() {
 						'{{WRAPPER}} .wolf-core-icon' => 'color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
+					'condition' => array(
+						'acronym!' => 'yes',
+					),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Texttt Color', 'wolf-core' ),
+					'param_name'   => 'acronym_text_color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-social-acronym-link' => 'color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+					'condition' => array(
+						'acronym' => 'yes',
+					),
 				),
 
 				/* Background Color for VC */
@@ -273,6 +302,9 @@ function wolf_core_social_icons_params() {
 					'param_name'   => 'background_color',
 					'default'      => 'custom',
 					'page_builder' => 'elementor',
+					'condition' => array(
+						'acronym!' => 'yes',
+					),
 				),
 
 				array(
@@ -284,6 +316,9 @@ function wolf_core_social_icons_params() {
 						'{{WRAPPER}} .wolf-core-icon-background-fill' => 'background-color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
+					'condition' => array(
+						'acronym!' => 'yes',
+					),
 				),
 
 				array(
@@ -320,6 +355,9 @@ function wolf_core_social_icons_params() {
 					),
 					'admin_label' => true,
 					'default'     => 'opacity',
+					'condition' => array(
+						'acronym!' => 'yes',
+					),
 				),
 
 				array(

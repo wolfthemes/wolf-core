@@ -33,6 +33,7 @@ function wolf_core_social_icons( $atts ) {
 				'custom_background_color'   => '',
 				'size'                      => 'fa-1x',
 				'hover_effect'              => 'opacity',
+				'acronym'                   => '',
 				'css_animation'             => '',
 				'css_animation_delay'       => '',
 				'css_animation_each'        => '',
@@ -160,7 +161,7 @@ function wolf_core_social_icons( $atts ) {
 		'filmweb',
 		'envato',
 		'etsy',
-		//'facebook',
+		// 'facebook',
 		'flattr',
 		'forrst',
 		'friendfeed',
@@ -257,6 +258,34 @@ function wolf_core_social_icons( $atts ) {
 		'youtube',
 	);
 
+	$social_services_acronym = apply_filters(
+		'wolf_core_social_icon_acronyms',
+		array(
+			'apple'       => 'ap',
+			'facebook'    => 'fb',
+			'twitter'     => 'tw',
+			'instagram'   => 'in',
+			'tiktok'      => 'tk',
+			'linkedin'    => 'li',
+			'behance'     => 'br',
+			'youtube'     => 'yt',
+			'vimeo'       => 'vi',
+			'pinterest'   => 'pn',
+			'dribbble'    => 'dr',
+			'spotify'     => 'sp',
+			'bandcamp'    => 'bc',
+			'bandsintown' => 'bi',
+			'github'      => 'gi',
+			'vk'          => 'vk',
+			'envato'      => 'en',
+			'messenger'   => 'mg',
+			'flickr'      => 'fl',
+			'codepen'     => 'co',
+			'telegram'    => 'tl',
+			'tumblr'      => 'tb',
+		)
+	);
+
 	if ( function_exists( 'vc_icon_element_fonts_enqueue' ) ) {
 		vc_icon_element_fonts_enqueue( 'fontawesome' );
 
@@ -328,25 +357,41 @@ function wolf_core_social_icons( $atts ) {
 
 				$output .= '<div class="' . wolf_core_sanitize_html_classes( $icon_container_class ) . '" style="' . wolf_core_esc_style_attr( $icon_container_style ) . '"><div class="wolf-core-icon-background-fill ' . wolf_core_esc_style_attr( $icon_filler_style ) . '"></div>';
 
-				if ( 'none' === $background_style ) {
+				if ( 'yes' === $acronym && isset( $social_services_acronym[ $service ] ) ) {
 
-					$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . '"><a title="' . esc_attr( $service ) . '" class="wolf-core-social-icon-link" target="' . esc_attr( $target ) . '"';
+					$output .= '<a title="' . esc_attr( $service ) . '" class="wolf-core-social-acronym-link" target="' . esc_attr( $target ) . '"';
 
 					if ( '_blank' === $target && $rel ) {
 						$output .= ' rel="noreferrer, noopener"';
 					}
 
-					$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+					$output .= ' href="' . esc_url( $link ) . '">';
+
+					$output .= $social_services_acronym[ $service ];
+
+					$output .= '</a></i>';
 
 				} else {
+					if ( 'none' === $background_style ) {
 
-					$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . ' fa-stack-1x"><a title="' . esc_attr( $service ) . '" class="wolf-core-social-icon-link" target="' . esc_attr( $target ) . '"';
+						$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . '"><a title="' . esc_attr( $service ) . '" class="wolf-core-social-icon-link" target="' . esc_attr( $target ) . '"';
 
-					if ( '_blank' === $target && $rel ) {
-						$output .= ' rel="noreferrer, noopener"';
+						if ( '_blank' === $target && $rel ) {
+							$output .= ' rel="noreferrer, noopener"';
+						}
+
+						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+
+					} else {
+
+						$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . ' fa-stack-1x"><a title="' . esc_attr( $service ) . '" class="wolf-core-social-icon-link" target="' . esc_attr( $target ) . '"';
+
+						if ( '_blank' === $target && $rel ) {
+							$output .= ' rel="noreferrer, noopener"';
+						}
+
+						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
 					}
-
-					$output .= ' href="' . esc_url( $link ) . '"></a></i>';
 				}
 
 				$output .= '</div>'; // end icon container.
@@ -388,26 +433,42 @@ function wolf_core_social_icons( $atts ) {
 			$output .= '<div class="' . wolf_core_sanitize_html_classes( $icon_box_class ) . '"  style="' . wolf_core_esc_style_attr( $icon_box_style ) . '">';
 			$output .= '<div class="' . wolf_core_sanitize_html_classes( $icon_container_class ) . '" style="' . wolf_core_esc_style_attr( $icon_container_style ) . '"><div class="wolf-core-icon-background-fill" style="' . wolf_core_esc_style_attr( $icon_filler_style ) . '"></div>';
 
-			if ( 'none' === $background_style ) {
+			if ( 'yes' === $acronym && isset( $social_services_acronym[ $service ] ) ) {
 
-				$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . '"><a title="' . esc_attr( $service ) . '" target="' . esc_attr( $target ) . '"';
+					$output .= '<a title="' . esc_attr( $service ) . '" class="wolf-core-social-acronym-link" target="' . esc_attr( $target ) . '"';
 
-				if ( '_blank' === $target && $rel ) {
-					$output .= ' rel="noreferrer, noopener"';
+					if ( '_blank' === $target && $rel ) {
+						$output .= ' rel="noreferrer, noopener"';
+					}
+
+					$output .= ' href="' . esc_url( $link ) . '">';
+
+					$output .= $social_services_acronym[ $service ];
+
+					$output .= '</a></i>';
+
+				} else {
+					if ( 'none' === $background_style ) {
+
+						$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . '"><a title="' . esc_attr( $service ) . '" class="wolf-core-social-icon-link" target="' . esc_attr( $target ) . '"';
+
+						if ( '_blank' === $target && $rel ) {
+							$output .= ' rel="noreferrer, noopener"';
+						}
+
+						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+
+					} else {
+
+						$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . ' fa-stack-1x"><a title="' . esc_attr( $service ) . '" class="wolf-core-social-icon-link" target="' . esc_attr( $target ) . '"';
+
+						if ( '_blank' === $target && $rel ) {
+							$output .= ' rel="noreferrer, noopener"';
+						}
+
+						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+					}
 				}
-
-				$output .= ' href="' . esc_url( $link ) . '"></a></i>';
-
-			} else {
-
-				$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . ' fa-stack-1x"><a title="' . esc_attr( $service ) . '" target="' . esc_attr( $target ) . '"';
-
-				if ( '_blank' === $target && $rel ) {
-					$output .= ' rel="noreferrer, noopener"';
-				}
-
-				$output .= ' href="' . $link . '"></a></i>';
-			}
 
 			$output .= '</div>'; // end icon container.
 

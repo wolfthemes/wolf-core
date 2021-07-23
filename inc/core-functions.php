@@ -323,7 +323,7 @@ function wolf_core_get_socials() {
 		'flickr',
 		'foursquare',
 		'github',
-		'google',
+		//'google',
 		'twitter',
 		'instagram',
 		'linkedin',

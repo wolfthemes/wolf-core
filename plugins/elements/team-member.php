@@ -136,6 +136,8 @@ function wolf_core_team_member( $atts ) {
 
 		$wolf_core_socials_args             = apply_filters( 'wolf_core_team_member_socials_args', array() );
 		$wolf_core_socials_args['services'] = $social_services;
+
+
 		$output                            .= wolf_core_social_icons( $wolf_core_socials_args );
 
 		$output .= '</div><!--.wolf-core-team-member-social-container-->';
