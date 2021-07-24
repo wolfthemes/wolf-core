@@ -47,7 +47,8 @@ $social_fields[] = array(
  */
 $wolf_core_options = array(
 
-	/*array(
+	/*
+	array(
 		'title'         => esc_html__( 'Google Maps', 'wolf-visual-composer' ),
 		'settings_id'   => 'wolf-core-google-map',
 		'settings_slug' => 'google-map',
@@ -134,11 +135,13 @@ $wolf_core_options = array(
 				'placeholder' => esc_html__( 'Thanks for subscribing', 'wolf-visual-composer' ),
 			),
 
+			/*
 			array(
 				'type'     => 'image',
 				'field_id' => 'background',
 				'label'    => esc_html__( 'Background image', 'wolf-visual-composer' ),
 			),
+			*/
 		),
 	),
 
