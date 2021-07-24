@@ -29,7 +29,7 @@ function wolf_core_google_maps_params() {
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'google_maps',
 				'keywords'      => array( 'map', 'embed' ),
-				'icon'          => 'fa fa-map-marker',
+				'icon'          => 'linea-basic linea-basic-geolocalize-05',
 				'scripts'       => array( 'jquery', 'google-maps-api', 'wolf-core-google-maps' ),
 			),
 			'params'     => array(

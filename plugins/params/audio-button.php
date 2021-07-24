@@ -25,7 +25,7 @@ function wolf_core_audio_button_params() {
 				'vc_base'       => 'wolf_core_audio_button',
 				'el_base'       => 'audio-button',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
+				'el_categories' => array( 'extension' ),
 				'icon'          => 'dashicons-before dashicons-album',
 			),
 

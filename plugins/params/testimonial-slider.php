@@ -26,7 +26,7 @@ function wolf_core_testimonial_slider_params() {
 				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories'    => array( 'extension' ),
 				'el_base'          => 'testimonial-slider',
-				'icon'             => 'fa fa-quote',
+				'icon'             => 'eicon-testimonial-carousel',
 				'register_scripts' => array(
 					'flickity'            => array(
 						'src'     => WOLF_CORE_JS . '/lib/flickity.pkgd.min.js',

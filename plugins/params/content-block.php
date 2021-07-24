@@ -37,7 +37,7 @@ function wolf_core_content_block_params() {
 				'vc_category'   => esc_html__( 'Content', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'content-block',
-				'icon'          => 'dashicons-before dashicons-editor-table',
+				'icon'          => 'linea-software linea-software-layout-4lines',
 			),
 			'params'     => array(
 				array(

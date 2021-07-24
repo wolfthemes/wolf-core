@@ -5,6 +5,7 @@
 	margin: 0 auto;
 	//text-align: center;
 	padding: 1em 0;
+	display: flex;
 
 	&.wolf-core-text-center {
 		max-width: 92%;
@@ -37,7 +38,7 @@
 }
 
 /* Alignement */
-.wolf-core-socials-container.wolf-core-align-left
+.wolf-core-socials-container.wolf-core-align-flex-start
 	.wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
 	.wolf-core-icon-container {
 	&:first-child {
@@ -45,7 +46,7 @@
 	}
 }
 
-.wolf-core-socials-container.wolf-core-align-right
+.wolf-core-socials-container.wolf-core-align-flex-end
 	.wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
 	.wolf-core-icon-container {
 	&:last-child {

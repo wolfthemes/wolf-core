@@ -26,7 +26,7 @@ function wolf_core_pricing_table_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'pricing-table',
-				'icon'          => 'eicon-price-table',
+				'icon'          => 'linea-ecommerce linea-ecommerce-receipt-dollar',
 			),
 			'params'     => array(
 				array(

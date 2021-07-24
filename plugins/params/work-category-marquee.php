@@ -26,7 +26,7 @@ function wolf_core_work_category_marquee_params() {
 				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories'    => array( 'extension' ),
 				'el_base'          => 'work-category-marquee',
-				'icon'             => 'fa fa-text-width',
+				'icon'             => 'linea-software linea-software-font-tracking',
 				'register_scripts' => array(
 					'wolf-core-work-category-marquee' => array(
 						'src' => WOLF_CORE_JS . '/work-category-marquee.js',

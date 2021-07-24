@@ -25,7 +25,7 @@ function wolf_core_bandsintown_tracking_button_params() {
 				'vc_base'       => 'wolf_core_bandsintown_tracking_button',
 				'el_base'       => 'bandsintown-tracking-button',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
+				'el_categories' => array( 'extension' ),
 				'icon'          => 'fa wolficon-bandsintown',
 			),
 

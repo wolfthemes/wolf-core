@@ -26,8 +26,8 @@ function wolf_core_video_preview_params() {
 				'vc_base'       => 'wolf_core_video_preview',
 				'el_base'       => 'video-preview',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
-				'icon'          => 'fa fa-play-circle-o',
+				'el_categories' => array( 'extension' ),
+				'icon'          => 'linea-basic linea-basic-video',
 			),
 
 			'params'     => array(

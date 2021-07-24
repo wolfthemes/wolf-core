@@ -29,7 +29,7 @@ function wolf_core_icon_params() {
 				'el_categories' => array( 'basic' ),
 				'el_base'       => 'icon',
 				'keywords'      => array( 'icon' ),
-				'icon'          => 'fa fa-rocket',
+				'icon'          => 'linea-basic linea-basic-star',
 				'scripts'       => array( 'jquery', 'wolf-core-icon' ),
 			),
 			'params'     => array(

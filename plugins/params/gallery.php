@@ -27,7 +27,7 @@ function wolf_core_gallery_params() {
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'gallery',
 				'keywords'      => array( 'image', 'photo', 'visual', 'gallery' ),
-				'icon'          => 'dashicons-before dashicons-images-alt',
+				'icon'          => 'linea-basic linea-basic-picture-multiple',
 				'scripts'       => array( 'jquery', 'aos', 'flickity', 'imagesloaded', 'isotope', 'packery-mode', 'flex-images', 'wolf-core', 'wolf-core-carousels', 'wolf-core-galleries' ),
 			),
 			'params'     => array(

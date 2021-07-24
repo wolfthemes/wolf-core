@@ -25,8 +25,8 @@ function wolf_core_social_icons_params() {
 				'vc_base'       => 'wolf_core_social_icons',
 				'el_base'       => 'socials',
 				'vc_category'   => esc_html__( 'Social', 'wolf-core' ),
-				'el_categories' => array( 'social' ),
-				'icon'          => 'fa fa-share-alt',
+				'el_categories' => array( 'extension' ),
+				'icon'          => 'linea-basic linea-basic-share',
 				'scripts'       => array( 'jquery', 'AOS' ),
 			),
 
@@ -57,7 +57,7 @@ function wolf_core_social_icons_params() {
 					'param_name'         => 'alignment',
 					'type'               => 'choose',
 					'options'            => array(
-						'left'   => array(
+						'flex-start'   => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
 						),
@@ -65,13 +65,13 @@ function wolf_core_social_icons_params() {
 							'title' => esc_html__( 'Center', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-center',
 						),
-						'right'  => array(
+						'flex-end'  => array(
 							'title' => esc_html__( 'Right', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-right',
 						),
 					),
 					'selectors'          => array(
-						'{{WRAPPER}} .wolf-core-socials-container' => 'text-align:{{VALUE}};',
+						'{{WRAPPER}} .wolf-core-socials-container' => 'justify-content:{{VALUE}};',
 					),
 					'page_builder'       => 'elementor',
 					'responsive_control' => true,
@@ -361,6 +361,7 @@ function wolf_core_social_icons_params() {
 					),
 				),
 
+				/*
 				array(
 					'type'        => 'select',
 					'label'       => esc_html__( 'Direction', 'wolf-core' ),
@@ -373,6 +374,7 @@ function wolf_core_social_icons_params() {
 					'admin_label' => true,
 					'default'     => 'horizontal',
 				),
+				*/
 
 				array(
 					'type'       => 'checkbox',

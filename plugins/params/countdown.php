@@ -26,7 +26,7 @@ function wolf_core_countdown_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'countdown',
-				'icon'          => 'fa fa-bell-o',
+				'icon'          => 'linea-basic linea-basic-anticlockwise',
 				'scripts'       => array( 'jquery', 'countdown', 'wolf-core-countdown' ),
 			),
 			'params'     => array(

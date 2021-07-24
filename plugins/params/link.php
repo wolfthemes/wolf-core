@@ -26,7 +26,7 @@ function wolf_core_link_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'link',
-				'icon'          => 'fas fa-link',
+				'icon'          => 'linea-basic linea-basic-link',
 			),
 			'params'     => array(
 				array(

@@ -37,7 +37,7 @@ function wolf_core_album_tracklist_params() {
 				'vc_base'       => 'wolf_core_album_tracklist',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
 				'vc_as_parent'  => array( 'only' => 'wolf_core_album_tracklist_item' ),
-				'el_categories' => array( 'music' ),
+				'el_categories' => array( 'extension' ),
 				'el_base'       => 'album-tracklist',
 				'icon'          => 'fa fa-text-width',
 				'scripts'       => array( 'jquery', 'wolf-core-album-tracklist' ),

@@ -37,7 +37,7 @@ function wolf_core_contact_form_7_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'contact-form-7',
-				'icon'          => 'fas fa-envelope-open',
+				'icon'          => 'linea-basic linea-basic-mail-open-text',
 			),
 			'params'     => array(
 				array(

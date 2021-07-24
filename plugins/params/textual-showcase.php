@@ -26,7 +26,7 @@ function wolf_core_textual_showcase_params() {
 				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories'    => array( 'extension' ),
 				'el_base'          => 'textual-showcase',
-				'icon'             => 'eicon-t-letter',
+				'icon'             => 'linea-software linea-software-font-kerning',
 				'register_scripts' => array(
 					'wolf-core-textual-showcase' => array(
 						'src'     => WOLF_CORE_JS . '/textual-showcase.js',

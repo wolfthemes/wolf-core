@@ -27,7 +27,7 @@ function wolf_core_breadcrumb_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'keywords'      => array( 'text', 'navigation' ),
-				'icon'          => 'fas fa-angle-double-right',
+				'icon'          => 'linea-arrows linea-arrows-right-double',
 			),
 
 			'params'     => array(

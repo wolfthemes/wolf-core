@@ -48,7 +48,7 @@ function wolf_core_team_member_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'team-member',
-				'icon'          => 'fa fa-user',
+				'icon'          => 'lnr lnr-user',
 			),
 			'params'     => array_merge(
 				array(

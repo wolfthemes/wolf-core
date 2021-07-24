@@ -51,8 +51,8 @@ function wolf_core_playlist_params() {
 				'vc_base'       => 'wolf_core_playlist',
 				'el_base'       => 'playlist',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
-				'icon'          => 'dashicons-before dashicons-playlist-audio',
+				'el_categories' => array( 'extension' ),
+				'icon'          => 'linea-music linea-music-playlist',
 				'scripts'       => array( 'jquery', 'wp-mediaelement', 'simplebar', 'jquery-cue', 'wpm-mejs', 'wpm-app' ),
 			),
 

@@ -24,10 +24,10 @@ function wolf_core_bigtext_params() {
 				'description'   => esc_html__( 'A big line of text that will take the full width of its container.', 'wolf-core' ),
 				'vc_base'       => 'wolf_core_bigtext',
 				'vc_category'   => esc_html__( 'Typography', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
+				'el_categories' => array( 'extension' ),
 				'keywords'      => array( 'text', 'typography' ),
 				'el_base'       => 'bigtext',
-				'icon'          => 'fa fa-text-width',
+				'icon'          => 'linea-software linea-software-font-horizontal-scale',
 				'scripts'       => array( 'jquery', 'bigtext', 'wolf-core-bigtext' ),
 			),
 			'params'     => array(

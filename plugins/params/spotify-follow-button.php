@@ -24,7 +24,7 @@ function wolf_core_spotify_follow_button_params() {
 				'vc_base'       => 'wolf_core_spotify_follow_button',
 				'el_base'       => 'spotify-follow-button',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
+				'el_categories' => array( 'extension' ),
 				'icon'          => 'fa fa-spotify',
 			),
 

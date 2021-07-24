@@ -25,7 +25,7 @@ function wolf_core_album_disc_params() {
 				'vc_base'       => 'wolf_core_album_disc',
 				'el_base'       => 'album-disc',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
+				'el_categories' => array( 'extension' ),
 				'keywords'      => array( 'music' ),
 				'icon'          => 'dashicons-before dashicons-album',
 			),

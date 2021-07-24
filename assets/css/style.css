@@ -4570,6 +4570,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 .wolf-core-socials-container {
   margin: 0 auto;
   padding: 1em 0;
+  display: flex;
 }
 .wolf-core-socials-container.wolf-core-text-center {
   max-width: 92%;
@@ -4597,13 +4598,13 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 }
 
 /* Alignement */
-.wolf-core-socials-container.wolf-core-align-left
+.wolf-core-socials-container.wolf-core-align-flex-start
 .wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
 .wolf-core-icon-container:first-child {
   margin-left: 0;
 }
 
-.wolf-core-socials-container.wolf-core-align-right
+.wolf-core-socials-container.wolf-core-align-flex-end
 .wolf-core-social-icon:not(.wolf-core-icon-background-style-none)
 .wolf-core-icon-container:last-child {
   margin-right: 0;

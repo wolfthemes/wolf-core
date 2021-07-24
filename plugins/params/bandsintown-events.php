@@ -25,7 +25,7 @@ function wolf_core_bandsintown_events_params() {
 				'vc_base'       => 'wolf_core_bandsintown_events',
 				'el_base'       => 'bandsintown-events',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'music' ),
+				'el_categories' => array( 'extension' ),
 				'keywords'      => array( 'music', 'social', 'event' ),
 				'icon'          => 'fa wolficon-bandsintown',
 			),

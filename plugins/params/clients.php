@@ -26,7 +26,7 @@ function wolf_core_clients_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'clients',
-				'icon'          => 'fa fa-user',
+				'icon'          => 'linea-basic linea-basic-folder-multiple',
 			),
 			'params'     => array(
 				array(
