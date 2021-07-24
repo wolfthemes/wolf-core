@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.1.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-07-24 08:34:09+00:00\n"
+"POT-Creation-Date: 2021-07-24 10:00:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,51 +68,51 @@ msgstr ""
 
 #: inc/admin/admin-options.php:70
 #: pack/dist/wolf-core/inc/admin/admin-options.php:69
-#: pack/wolf-core/inc/admin/admin-options.php:69
+#: pack/wolf-core/inc/admin/admin-options.php:70
 msgid "MailChimp"
 msgstr ""
 
 #: inc/admin/admin-options.php:77
 #: pack/dist/wolf-core/inc/admin/admin-options.php:76
-#: pack/wolf-core/inc/admin/admin-options.php:76
+#: pack/wolf-core/inc/admin/admin-options.php:77
 msgid "MailChimp API key"
 msgstr ""
 
 #: inc/admin/admin-options.php:79
 #: pack/dist/wolf-core/inc/admin/admin-options.php:78
-#: pack/wolf-core/inc/admin/admin-options.php:78
+#: pack/wolf-core/inc/admin/admin-options.php:79
 msgid "You can get a MailChimp API key <a href=\"%s\" target=\"_blank\">here</a>."
 msgstr ""
 
 #: inc/admin/admin-options.php:88
 #: pack/dist/wolf-core/inc/admin/admin-options.php:87
-#: pack/wolf-core/inc/admin/admin-options.php:87
+#: pack/wolf-core/inc/admin/admin-options.php:88
 msgid "Default MailChimp list ID"
 msgstr ""
 
 #: inc/admin/admin-options.php:90
 #: pack/dist/wolf-core/inc/admin/admin-options.php:89
-#: pack/wolf-core/inc/admin/admin-options.php:89
+#: pack/wolf-core/inc/admin/admin-options.php:90
 msgid "<a href=\"%s\" target=\"_blank\">Find Your List ID</a>."
 msgstr ""
 
 #: inc/admin/admin-options.php:99
 #: pack/dist/wolf-core/inc/admin/admin-options.php:98
-#: pack/wolf-core/inc/admin/admin-options.php:98
+#: pack/wolf-core/inc/admin/admin-options.php:99
 msgid "Newsletter form title"
 msgstr ""
 
 #: inc/admin/admin-options.php:100 inc/admin/classes/class-options.php:434
 #: pack/dist/wolf-core/inc/admin/admin-options.php:99
 #: pack/dist/wolf-core/inc/admin/classes/class-options.php:434
-#: pack/wolf-core/inc/admin/admin-options.php:99
+#: pack/wolf-core/inc/admin/admin-options.php:100
 #: pack/wolf-core/inc/admin/classes/class-options.php:434
 msgid "Subscribe to our newsletter"
 msgstr ""
 
 #: inc/admin/admin-options.php:106
 #: pack/dist/wolf-core/inc/admin/admin-options.php:105
-#: pack/wolf-core/inc/admin/admin-options.php:105
+#: pack/wolf-core/inc/admin/admin-options.php:106
 msgid "\"Subscribe\" button text"
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/params/mailchimp.php:131
 #: pack/dist/wolf-core/plugins/params/mailchimp.php:132
 #: pack/dist/wolf-core/plugins/vc/templates/wolf_core_mailchimp.php:23
-#: pack/wolf-core/inc/admin/admin-options.php:106
+#: pack/wolf-core/inc/admin/admin-options.php:107
 #: pack/wolf-core/inc/admin/classes/class-options.php:435
 #: pack/wolf-core/plugins/elementor/widgets/mailchimp.php:163
 #: pack/wolf-core/plugins/elements/mailchimp.php:29
@@ -140,7 +140,7 @@ msgstr ""
 
 #: inc/admin/admin-options.php:113
 #: pack/dist/wolf-core/inc/admin/admin-options.php:112
-#: pack/wolf-core/inc/admin/admin-options.php:112
+#: pack/wolf-core/inc/admin/admin-options.php:113
 msgid "Form first name input placeholder"
 msgstr ""
 
@@ -148,7 +148,7 @@ msgstr ""
 #: pack/dist/wolf-core/inc/admin/admin-options.php:113
 #: pack/dist/wolf-core/inc/admin/classes/class-options.php:436
 #: pack/dist/wolf-core/plugins/elements/mailchimp.php:37
-#: pack/wolf-core/inc/admin/admin-options.php:113
+#: pack/wolf-core/inc/admin/admin-options.php:114
 #: pack/wolf-core/inc/admin/classes/class-options.php:436
 #: pack/wolf-core/plugins/elements/mailchimp.php:37
 #: plugins/elements/mailchimp.php:37
@@ -157,7 +157,7 @@ msgstr ""
 
 #: inc/admin/admin-options.php:120
 #: pack/dist/wolf-core/inc/admin/admin-options.php:119
-#: pack/wolf-core/inc/admin/admin-options.php:119
+#: pack/wolf-core/inc/admin/admin-options.php:120
 msgid "Form last name input placeholder"
 msgstr ""
 
@@ -165,7 +165,7 @@ msgstr ""
 #: pack/dist/wolf-core/inc/admin/admin-options.php:120
 #: pack/dist/wolf-core/inc/admin/classes/class-options.php:437
 #: pack/dist/wolf-core/plugins/elements/mailchimp.php:38
-#: pack/wolf-core/inc/admin/admin-options.php:120
+#: pack/wolf-core/inc/admin/admin-options.php:121
 #: pack/wolf-core/inc/admin/classes/class-options.php:437
 #: pack/wolf-core/plugins/elements/mailchimp.php:38
 #: plugins/elements/mailchimp.php:38
@@ -174,28 +174,28 @@ msgstr ""
 
 #: inc/admin/admin-options.php:127
 #: pack/dist/wolf-core/inc/admin/admin-options.php:126
-#: pack/wolf-core/inc/admin/admin-options.php:126
+#: pack/wolf-core/inc/admin/admin-options.php:127
 msgid "Form email input placeholder"
 msgstr ""
 
 #: inc/admin/admin-options.php:128 inc/admin/classes/class-options.php:438
 #: pack/dist/wolf-core/inc/admin/admin-options.php:127
 #: pack/dist/wolf-core/inc/admin/classes/class-options.php:438
-#: pack/wolf-core/inc/admin/admin-options.php:127
+#: pack/wolf-core/inc/admin/admin-options.php:128
 #: pack/wolf-core/inc/admin/classes/class-options.php:438
 msgid "Your email"
 msgstr ""
 
 #: inc/admin/admin-options.php:134
 #: pack/dist/wolf-core/inc/admin/admin-options.php:133
-#: pack/wolf-core/inc/admin/admin-options.php:133
+#: pack/wolf-core/inc/admin/admin-options.php:134
 msgid "Thank you message"
 msgstr ""
 
 #: inc/admin/admin-options.php:135
 #: pack/dist/wolf-core/inc/admin/admin-options.php:134
 #: pack/dist/wolf-core/plugins/elements/mailchimp.php:71
-#: pack/wolf-core/inc/admin/admin-options.php:134
+#: pack/wolf-core/inc/admin/admin-options.php:135
 #: pack/wolf-core/plugins/elements/mailchimp.php:71
 #: plugins/elements/mailchimp.php:71
 msgid "Thanks for subscribing"
@@ -203,19 +203,19 @@ msgstr ""
 
 #: inc/admin/admin-options.php:150
 #: pack/dist/wolf-core/inc/admin/admin-options.php:147
-#: pack/wolf-core/inc/admin/admin-options.php:147
+#: pack/wolf-core/inc/admin/admin-options.php:150
 msgid "Fonts Loader"
 msgstr ""
 
 #: inc/admin/admin-options.php:157
 #: pack/dist/wolf-core/inc/admin/admin-options.php:154
-#: pack/wolf-core/inc/admin/admin-options.php:154
+#: pack/wolf-core/inc/admin/admin-options.php:157
 msgid "Google fonts"
 msgstr ""
 
 #: inc/admin/admin-options.php:160
 #: pack/dist/wolf-core/inc/admin/admin-options.php:157
-#: pack/wolf-core/inc/admin/admin-options.php:157
+#: pack/wolf-core/inc/admin/admin-options.php:160
 msgid ""
 "You can get your fonts on the <a href=\"%s\" target=\"_blank\">Google "
 "Fonts</a> website."
@@ -223,7 +223,7 @@ msgstr ""
 
 #: inc/admin/admin-options.php:169
 #: pack/dist/wolf-core/inc/admin/admin-options.php:166
-#: pack/wolf-core/inc/admin/admin-options.php:166
+#: pack/wolf-core/inc/admin/admin-options.php:169
 msgid "Social Profiles"
 msgstr ""
 
@@ -234,9 +234,9 @@ msgstr ""
 #: pack/dist/wolf-core/inc/admin/admin-options.php:334
 #: pack/dist/wolf-core/plugins/vc/vc-params/row-params.php:293
 #: pack/dist/wolf-core/plugins/vc/vc-params/row-params.php:484
-#: pack/wolf-core/inc/admin/admin-options.php:178
-#: pack/wolf-core/inc/admin/admin-options.php:310
-#: pack/wolf-core/inc/admin/admin-options.php:334
+#: pack/wolf-core/inc/admin/admin-options.php:181
+#: pack/wolf-core/inc/admin/admin-options.php:313
+#: pack/wolf-core/inc/admin/admin-options.php:337
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:293
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:484
 #: plugins/vc/vc-params/row-params.php:293
@@ -247,7 +247,7 @@ msgstr ""
 #: inc/admin/admin-options.php:188
 #: pack/dist/wolf-core/inc/admin/admin-options.php:185
 #: pack/dist/wolf-core/plugins/elementor/controls/page.php:32
-#: pack/wolf-core/inc/admin/admin-options.php:185
+#: pack/wolf-core/inc/admin/admin-options.php:188
 #: pack/wolf-core/plugins/elementor/controls/page.php:32
 #: plugins/elementor/controls/page.php:32
 msgid "No Content Block Yet"
@@ -255,19 +255,19 @@ msgstr ""
 
 #: inc/admin/admin-options.php:192
 #: pack/dist/wolf-core/inc/admin/admin-options.php:189
-#: pack/wolf-core/inc/admin/admin-options.php:189
+#: pack/wolf-core/inc/admin/admin-options.php:192
 msgid "Modal Window"
 msgstr ""
 
 #: inc/admin/admin-options.php:200
 #: pack/dist/wolf-core/inc/admin/admin-options.php:197
-#: pack/wolf-core/inc/admin/admin-options.php:197
+#: pack/wolf-core/inc/admin/admin-options.php:200
 msgid "Modal Window Content"
 msgstr ""
 
 #: inc/admin/admin-options.php:203
 #: pack/dist/wolf-core/inc/admin/admin-options.php:200
-#: pack/wolf-core/inc/admin/admin-options.php:200
+#: pack/wolf-core/inc/admin/admin-options.php:203
 msgid ""
 "Choose a <a href=\"%s\" target=\"_blank\">content block</a> to display in "
 "your modal window."
@@ -275,7 +275,7 @@ msgstr ""
 
 #: inc/admin/admin-options.php:211
 #: pack/dist/wolf-core/inc/admin/admin-options.php:208
-#: pack/wolf-core/inc/admin/admin-options.php:208
+#: pack/wolf-core/inc/admin/admin-options.php:211
 msgid "Modal Window Type"
 msgstr ""
 
@@ -285,7 +285,7 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/params/google-maps.php:122
 #: pack/dist/wolf-core/plugins/params/google-maps.php:185
 #: pack/dist/wolf-core/plugins/vc/vc-params/button-params.php:120
-#: pack/wolf-core/inc/admin/admin-options.php:210
+#: pack/wolf-core/inc/admin/admin-options.php:213
 #: pack/wolf-core/plugins/common-params/button-params.php:70
 #: pack/wolf-core/plugins/params/google-maps.php:122
 #: pack/wolf-core/plugins/params/google-maps.php:185
@@ -298,25 +298,25 @@ msgstr ""
 
 #: inc/admin/admin-options.php:214
 #: pack/dist/wolf-core/inc/admin/admin-options.php:211
-#: pack/wolf-core/inc/admin/admin-options.php:211
+#: pack/wolf-core/inc/admin/admin-options.php:214
 msgid "Non-Intrusive (bottom right corner)"
 msgstr ""
 
 #: inc/admin/admin-options.php:221
 #: pack/dist/wolf-core/inc/admin/admin-options.php:218
-#: pack/wolf-core/inc/admin/admin-options.php:218
+#: pack/wolf-core/inc/admin/admin-options.php:221
 msgid "Exclude MailChimp subscribers"
 msgstr ""
 
 #: inc/admin/admin-options.php:227
 #: pack/dist/wolf-core/inc/admin/admin-options.php:224
-#: pack/wolf-core/inc/admin/admin-options.php:224
+#: pack/wolf-core/inc/admin/admin-options.php:227
 msgid "Pop-up Delay"
 msgstr ""
 
 #: inc/admin/admin-options.php:229
 #: pack/dist/wolf-core/inc/admin/admin-options.php:226
-#: pack/wolf-core/inc/admin/admin-options.php:226
+#: pack/wolf-core/inc/admin/admin-options.php:229
 msgid ""
 "The time before the modal window pops up in seconds.<br>You can set a very "
 "high number to prevent the window to pop-up automatically if you want it to "
@@ -325,13 +325,13 @@ msgstr ""
 
 #: inc/admin/admin-options.php:235
 #: pack/dist/wolf-core/inc/admin/admin-options.php:232
-#: pack/wolf-core/inc/admin/admin-options.php:232
+#: pack/wolf-core/inc/admin/admin-options.php:235
 msgid "Show Only Once"
 msgstr ""
 
 #: inc/admin/admin-options.php:236
 #: pack/dist/wolf-core/inc/admin/admin-options.php:233
-#: pack/wolf-core/inc/admin/admin-options.php:233
+#: pack/wolf-core/inc/admin/admin-options.php:236
 msgid ""
 "Don't show the pop-up again once it is closed. If this option is not "
 "checked, an opt-out link will be displayed below the window."
@@ -339,13 +339,13 @@ msgstr ""
 
 #: inc/admin/admin-options.php:242
 #: pack/dist/wolf-core/inc/admin/admin-options.php:239
-#: pack/wolf-core/inc/admin/admin-options.php:239
+#: pack/wolf-core/inc/admin/admin-options.php:242
 msgid "Show When Navigates Away"
 msgstr ""
 
 #: inc/admin/admin-options.php:243
 #: pack/dist/wolf-core/inc/admin/admin-options.php:240
-#: pack/wolf-core/inc/admin/admin-options.php:240
+#: pack/wolf-core/inc/admin/admin-options.php:243
 msgid ""
 "The window will pop up only when the mouse leave the main window. The "
 "pop-up delay will still be applied."
@@ -353,31 +353,31 @@ msgstr ""
 
 #: inc/admin/admin-options.php:249
 #: pack/dist/wolf-core/inc/admin/admin-options.php:246
-#: pack/wolf-core/inc/admin/admin-options.php:246
+#: pack/wolf-core/inc/admin/admin-options.php:249
 msgid "Cookie Persistency"
 msgstr ""
 
 #: inc/admin/admin-options.php:251
 #: pack/dist/wolf-core/inc/admin/admin-options.php:248
-#: pack/wolf-core/inc/admin/admin-options.php:248
+#: pack/wolf-core/inc/admin/admin-options.php:251
 msgid "How long the browser will remember the user opt-out action (in days)."
 msgstr ""
 
 #: inc/admin/admin-options.php:257
 #: pack/dist/wolf-core/inc/admin/admin-options.php:254
-#: pack/wolf-core/inc/admin/admin-options.php:254
+#: pack/wolf-core/inc/admin/admin-options.php:257
 msgid "Modal Window Width"
 msgstr ""
 
 #: inc/admin/admin-options.php:264
 #: pack/dist/wolf-core/inc/admin/admin-options.php:261
-#: pack/wolf-core/inc/admin/admin-options.php:261
+#: pack/wolf-core/inc/admin/admin-options.php:264
 msgid "Exclude Post Types"
 msgstr ""
 
 #: inc/admin/admin-options.php:266
 #: pack/dist/wolf-core/inc/admin/admin-options.php:263
-#: pack/wolf-core/inc/admin/admin-options.php:263
+#: pack/wolf-core/inc/admin/admin-options.php:266
 msgid ""
 "The modal window will NOT popup in these specific post types. Separate each "
 "post type by a comma."
@@ -385,13 +385,13 @@ msgstr ""
 
 #: inc/admin/admin-options.php:272
 #: pack/dist/wolf-core/inc/admin/admin-options.php:269
-#: pack/wolf-core/inc/admin/admin-options.php:269
+#: pack/wolf-core/inc/admin/admin-options.php:272
 msgid "Include Post Types"
 msgstr ""
 
 #: inc/admin/admin-options.php:274
 #: pack/dist/wolf-core/inc/admin/admin-options.php:271
-#: pack/wolf-core/inc/admin/admin-options.php:271
+#: pack/wolf-core/inc/admin/admin-options.php:274
 msgid ""
 "The modal window will popup ONLY in these specific post types. Separate "
 "each post type by a comma."
@@ -399,13 +399,13 @@ msgstr ""
 
 #: inc/admin/admin-options.php:280
 #: pack/dist/wolf-core/inc/admin/admin-options.php:277
-#: pack/wolf-core/inc/admin/admin-options.php:277
+#: pack/wolf-core/inc/admin/admin-options.php:280
 msgid "Exclude Post IDs"
 msgstr ""
 
 #: inc/admin/admin-options.php:282
 #: pack/dist/wolf-core/inc/admin/admin-options.php:279
-#: pack/wolf-core/inc/admin/admin-options.php:279
+#: pack/wolf-core/inc/admin/admin-options.php:282
 msgid ""
 "The modal window will NOT popup in these specific posts. Separate each ID "
 "by a comma."
@@ -413,13 +413,13 @@ msgstr ""
 
 #: inc/admin/admin-options.php:288
 #: pack/dist/wolf-core/inc/admin/admin-options.php:285
-#: pack/wolf-core/inc/admin/admin-options.php:285
+#: pack/wolf-core/inc/admin/admin-options.php:288
 msgid "Include Post IDs"
 msgstr ""
 
 #: inc/admin/admin-options.php:290
 #: pack/dist/wolf-core/inc/admin/admin-options.php:287
-#: pack/wolf-core/inc/admin/admin-options.php:287
+#: pack/wolf-core/inc/admin/admin-options.php:290
 msgid ""
 "The modal window will popup ONLY in these specific posts. Separate each ID "
 "by a comma."
@@ -427,14 +427,14 @@ msgstr ""
 
 #: inc/admin/admin-options.php:296
 #: pack/dist/wolf-core/inc/admin/admin-options.php:293
-#: pack/wolf-core/inc/admin/admin-options.php:293
+#: pack/wolf-core/inc/admin/admin-options.php:296
 msgid "Close Button Color"
 msgstr ""
 
 #: inc/admin/admin-options.php:302
 #: pack/dist/wolf-core/inc/admin/admin-options.php:299
 #: pack/dist/wolf-core/plugins/common-params/button-params.php:26
-#: pack/wolf-core/inc/admin/admin-options.php:299
+#: pack/wolf-core/inc/admin/admin-options.php:302
 #: pack/wolf-core/plugins/common-params/button-params.php:26
 #: plugins/common-params/button-params.php:26
 msgid "Info"
@@ -442,7 +442,7 @@ msgstr ""
 
 #: inc/admin/admin-options.php:304
 #: pack/dist/wolf-core/inc/admin/admin-options.php:301
-#: pack/wolf-core/inc/admin/admin-options.php:301
+#: pack/wolf-core/inc/admin/admin-options.php:304
 msgid ""
 "You can add the <strong>\"%1$s\"</strong> class to any link to use it as "
 "pop-up window \"close\" button.<br>Also add the <strong>\"%2$s\"</strong> "
@@ -454,32 +454,32 @@ msgstr ""
 #: inc/admin/admin-options.php:326 inc/admin/admin-options.php:347
 #: pack/dist/wolf-core/inc/admin/admin-options.php:323
 #: pack/dist/wolf-core/inc/admin/admin-options.php:344
-#: pack/wolf-core/inc/admin/admin-options.php:323
-#: pack/wolf-core/inc/admin/admin-options.php:344
+#: pack/wolf-core/inc/admin/admin-options.php:326
+#: pack/wolf-core/inc/admin/admin-options.php:347
 msgid "Privacy Policy Message"
 msgstr ""
 
 #: inc/admin/admin-options.php:335
 #: pack/dist/wolf-core/inc/admin/admin-options.php:332
-#: pack/wolf-core/inc/admin/admin-options.php:332
+#: pack/wolf-core/inc/admin/admin-options.php:335
 msgid "Status"
 msgstr ""
 
 #: inc/admin/admin-options.php:338
 #: pack/dist/wolf-core/inc/admin/admin-options.php:335
-#: pack/wolf-core/inc/admin/admin-options.php:335
+#: pack/wolf-core/inc/admin/admin-options.php:338
 msgid "Enabled"
 msgstr ""
 
 #: inc/admin/admin-options.php:339
 #: pack/dist/wolf-core/inc/admin/admin-options.php:336
-#: pack/wolf-core/inc/admin/admin-options.php:336
+#: pack/wolf-core/inc/admin/admin-options.php:339
 msgid "Enabled for EU users only"
 msgstr ""
 
 #: inc/admin/admin-options.php:341
 #: pack/dist/wolf-core/inc/admin/admin-options.php:338
-#: pack/wolf-core/inc/admin/admin-options.php:338
+#: pack/wolf-core/inc/admin/admin-options.php:341
 msgid ""
 "If the \"Enabled for EU users only\" is selected, %1$s must be activated "
 "and a %2$s License key must be set to enable localisation."
@@ -487,25 +487,25 @@ msgstr ""
 
 #: inc/admin/admin-options.php:353
 #: pack/dist/wolf-core/inc/admin/admin-options.php:350
-#: pack/wolf-core/inc/admin/admin-options.php:350
+#: pack/wolf-core/inc/admin/admin-options.php:353
 msgid "Privacy Policy Page"
 msgstr ""
 
 #: inc/admin/admin-options.php:355
 #: pack/dist/wolf-core/inc/admin/admin-options.php:352
-#: pack/wolf-core/inc/admin/admin-options.php:352
+#: pack/wolf-core/inc/admin/admin-options.php:355
 msgid "If a page is set, a link to the Privacy Policy Page will be displayed."
 msgstr ""
 
 #: inc/admin/admin-options.php:361
 #: pack/dist/wolf-core/inc/admin/admin-options.php:358
-#: pack/wolf-core/inc/admin/admin-options.php:358
+#: pack/wolf-core/inc/admin/admin-options.php:361
 msgid "Link Text"
 msgstr ""
 
 #: inc/admin/admin-options.php:362
 #: pack/dist/wolf-core/inc/admin/admin-options.php:359
-#: pack/wolf-core/inc/admin/admin-options.php:359
+#: pack/wolf-core/inc/admin/admin-options.php:362
 msgid "Read more"
 msgstr ""
 
@@ -517,7 +517,7 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/params/social-icons.php:280
 #: pack/dist/wolf-core/plugins/vc/vc-params/background-params.php:38
 #: pack/dist/wolf-core/plugins/vc/vc-params/background-params.php:58
-#: pack/wolf-core/inc/admin/admin-options.php:365
+#: pack/wolf-core/inc/admin/admin-options.php:368
 #: pack/wolf-core/plugins/common-params/button-params.php:261
 #: pack/wolf-core/plugins/params/social-icons.php:270
 #: pack/wolf-core/plugins/params/social-icons.php:301
@@ -535,7 +535,7 @@ msgstr ""
 #: inc/admin/admin-options.php:374
 #: pack/dist/wolf-core/inc/admin/admin-options.php:371
 #: pack/dist/wolf-core/plugins/vc/vc-map/row-inner.php:36
-#: pack/wolf-core/inc/admin/admin-options.php:371
+#: pack/wolf-core/inc/admin/admin-options.php:374
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:36
 #: plugins/vc/vc-map/row-inner.php:36
 msgid "Font Color"
@@ -805,7 +805,6 @@ msgstr ""
 #: inc/admin/classes/class-metaboxes.php:294
 #: pack/dist/wolf-core/inc/admin/admin-options.php:140
 #: pack/dist/wolf-core/inc/admin/classes/class-metaboxes.php:294
-#: pack/wolf-core/inc/admin/admin-options.php:140
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:294
 msgid "Background image"
 msgstr ""
@@ -5932,7 +5931,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/gallery.php:223
 #: pack/wolf-core/plugins/params/social-icons.php:116
 #: pack/wolf-core/plugins/params/social-icons.php:131
-#: pack/wolf-core/plugins/params/social-icons.php:381
+#: pack/wolf-core/plugins/params/social-icons.php:383
 #: pack/wolf-core/plugins/params/textual-showcase.php:94
 #: pack/wolf-core/plugins/vc/vc-params/animation-params.php:92
 #: pack/wolf-core/plugins/vc/vc-params/animation-params.php:94
@@ -7112,22 +7111,19 @@ msgid "Pop"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/social-icons.php:327
-#: pack/wolf-core/plugins/params/social-icons.php:366
 msgid "Direction"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/social-icons.php:331
-#: pack/wolf-core/plugins/params/social-icons.php:370
 msgid "Horizontal"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/social-icons.php:332
-#: pack/wolf-core/plugins/params/social-icons.php:371
 msgid "Vertical"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/social-icons.php:340
-#: pack/wolf-core/plugins/params/social-icons.php:379
+#: pack/wolf-core/plugins/params/social-icons.php:381
 #: plugins/params/social-icons.php:381
 msgid "Animate Icons One By One"
 msgstr ""

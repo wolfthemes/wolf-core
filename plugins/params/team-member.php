@@ -90,10 +90,10 @@ function wolf_core_team_member_params() {
 						'label'      => esc_html__( 'HTML Tag', 'wolf-core' ),
 						'param_name' => 'title_tag',
 						'options'    => array(
+							'h4'   => 'H4',
 							'h1'   => 'H1',
 							'h2'   => 'H2',
 							'h3'   => 'H3',
-							'h4'   => 'H4',
 							'h5'   => 'H5',
 							'h6'   => 'H6',
 							'div'  => 'div',
