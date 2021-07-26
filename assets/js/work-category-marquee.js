@@ -27,7 +27,7 @@ var WolfCoreWorkCategoryMarquee = function( $ ) {
 
 					$item.removeClass( 'out-from-top out-from-bottom over-from-top over-from-bottom' );
 
-					console.log( 'enter ' + edge );
+				//	console.log( 'enter ' + edge );
 
 					if ( 'top' === edge ) {
 
@@ -40,13 +40,18 @@ var WolfCoreWorkCategoryMarquee = function( $ ) {
 						$( this ).addClass( 'over-from-bottom' ).on( WolfCore.animationEventEnd(), function() {
 							$( this ).addClass( 'work-category-marquee-item-marquee-active' );
 						} );
+					} else {
+						$( this ).addClass( 'over-from-top' ).on( WolfCore.animationEventEnd(), function() {
+							$( this ).addClass( 'work-category-marquee-item-marquee-active' );
+						} );
 					}
+
 
 				} ).on( "mouseleave", function( event ) {
 					el_pos = $( this ).offset(),
 					edge = _this.closestEdge( event.pageX - el_pos.left, event.pageY - el_pos.top, $item.width(), $item.height() );
 
-					console.log( 'out ' + edge );
+					//console.log( 'out ' + edge );
 
 					if ( 'top' === edge ) {
 
@@ -56,6 +61,10 @@ var WolfCoreWorkCategoryMarquee = function( $ ) {
 
 					} else if ( 'bottom' === edge ) {
 
+						$( this ).addClass( 'out-from-bottom' ).on( WolfCore.animationEventEnd(), function() {
+							$( this ).removeClass( 'work-category-marquee-item-marquee-active' );
+						} );
+					} else {
 						$( this ).addClass( 'out-from-bottom' ).on( WolfCore.animationEventEnd(), function() {
 							$( this ).removeClass( 'work-category-marquee-item-marquee-active' );
 						} );
@@ -100,13 +109,11 @@ var WolfCoreWorkCategoryMarquee = function( $ ) {
 		WolfCoreWorkCategoryMarquee.init();
 	} );
 
-	$( document ).ready( function() {
-		// if ( window.elementorFrontend && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
-		// 	elementorFrontend.hooks.addAction( 'frontend/element_ready/icon.default', function( $scope ) {
+	$( window ).on( 'elementor/frontend/init', function() {
 
-		// 		WolfCoreWorkCategoryMarquee.init( $scope );
-		// 	} );
-		// }
+		elementorFrontend.hooks.addAction( "frontend/element_ready/work-category-marquee.default", function() {
+			WolfCoreWorkCategoryMarquee.init();
+		} );
 	} );
 
 } )( jQuery );
