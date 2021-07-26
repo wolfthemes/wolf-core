@@ -58,4 +58,10 @@ var WolfCoreTexualShowcase = function( $ ) {
 		WolfCoreTexualShowcase.init();
 	} );
 
+	$( window ).on( 'elementor/frontend/init', function() {
+		elementorFrontend.hooks.addAction( "frontend/element_ready/textual-showcase.default", function( $scope ) {
+			WolfCoreTexualShowcase.init();
+		} );
+	} );
+
 } )( jQuery );

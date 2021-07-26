@@ -57,16 +57,10 @@ var WolfCoreAnimatedSVG = function( $ ) {
 		WolfCoreAnimatedSVG.init();
 	} );
 
-	$( document ).ready( function() {
-		if (  window.elementorFrontend !== undefined && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
-
-			elementorFrontend.hooks.addAction( 'init', function() {
-				WolfCoreAnimatedSVG.init();
-			} );
-			elementorFrontend.hooks.addAction( "frontend/element_ready/animated-svg.default", function() {
-				WolfCoreAnimatedSVG.init();
-			} );
-		}
+	$( window ).on( 'elementor/frontend/init', function() {
+		elementorFrontend.hooks.addAction( "frontend/element_ready/animated-svg.default", function() {
+			WolfCoreAnimatedSVG.init();
+		} );
 	} );
 
 } )( jQuery );

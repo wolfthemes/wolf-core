@@ -182,23 +182,16 @@ var WolfCoreCarousels = function( $ ) {
 
 	$( document ).ready( function() {
 		WolfCoreCarousels.init();
-
-		if (  window.elementorFrontend !== undefined && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
-			elementorFrontend.hooks.addAction( 'frontend/element_ready/testimonial-slider.default', function( $scope ) {
-				WolfCoreCarousels.testimonials();
-			} );
-		}
 	} );
 
 	$( window ).on( 'elementor/frontend/init', function() {
-		if ( typeof elementorFrontend === 'undefined' ) {
-			return;
-		}
 
-		elementorFrontend.on( 'components:init', function() {
-			setTimeout( function() {
-				WolfCoreCarousels.testimonials();
-			}, 1500 );
+		setTimeout( function() {
+			WolfCoreCarousels.testimonials();
+		}, 1000 );
+
+		elementorFrontend.hooks.addAction( "frontend/element_ready/testimonial-slider.default", function() {
+			WolfCoreCarousels.testimonials();
 		} );
 	} );
 
