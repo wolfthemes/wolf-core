@@ -22,7 +22,7 @@ var WolfCoreTextImageHover = function( $ ) {
 
 				$item.on( "mousemove", function( e ) {
 
-					console.log( "translate3d(" + (e.clientX - offsetLeft) + "px, " + ( e.clientY - offsetTop) + "px, 0)" );
+					//console.log( "translate3d(" + (e.clientX - offsetLeft) + "px, " + ( e.clientY - offsetTop) + "px, 0)" );
 
 					$img.css( {
 						"transform": "translate3d(" + (e.clientX - offsetLeft) + "px, " + (e.clientY - offsetTop) + "px, 0)"

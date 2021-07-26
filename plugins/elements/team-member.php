@@ -86,7 +86,14 @@ function wolf_core_team_member( $atts ) {
 		$output .= wolf_core_placeholder_img( $img_size );
 	}
 
-	$output  = '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+	$html_atts = wolf_core_render_html_attributes(
+		array(
+			'class' => wolf_core_sanitize_html_classes( $class ),
+			'style' => wolf_core_esc_style_attr( $inline_style ),
+		)
+	);
+
+	$output  = '<div ' . $html_atts;
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';
 
@@ -94,6 +101,12 @@ function wolf_core_team_member( $atts ) {
 
 	if ( $img ) {
 		$output .= '<div class="wolf-core-team-member-image">';
+
+		if ( is_array( $link ) && isset( $link['url'] ) ) {
+			$output .= '<a class="wolf-core-team-member-link" rel="' . esc_attr( $link['rel'] ) . '"';
+			$output .= ' target="' . esc_attr( $link['target'] ) . '"';
+			$output .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '"></a>';
+		}
 
 		$output .= $img;
 
@@ -103,12 +116,6 @@ function wolf_core_team_member( $atts ) {
 	$output .= '<div class="wolf-core-team-member-caption-container">';
 
 	$output .= '<div class="wolf-core-team-member-caption">';
-
-	if ( is_array( $link ) && isset( $link['url'] ) ) {
-		$output .= '<a rel="' . esc_attr( $link['rel'] ) . '"';
-		$output .= ' target="' . esc_attr( $link['target'] ) . '"';
-		$output .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '"></a>';
-	}
 
 	$headings_array = array( 'h2', 'h3', 'h4', 'h5', 'h6' );
 	$title_tag      = ( in_array( $title_tag, $headings_array, true ) ) ? $title_tag : 'h3';
@@ -137,8 +144,7 @@ function wolf_core_team_member( $atts ) {
 		$wolf_core_socials_args             = apply_filters( 'wolf_core_team_member_socials_args', array() );
 		$wolf_core_socials_args['services'] = $social_services;
 
-
-		$output                            .= wolf_core_social_icons( $wolf_core_socials_args );
+		$output .= wolf_core_social_icons( $wolf_core_socials_args );
 
 		$output .= '</div><!--.wolf-core-team-member-social-container-->';
 	}

@@ -337,7 +337,7 @@ add_filter( 'wolf_core_shared_colors', 'wolf_core_add_vc_shared_color' );
  * @param array $animations Animation array.
  * @return array
  */
-function wolf_core_add_animations( $animations ) {
+function wolf_core_add_vc_animations( $animations ) {
 
 	$animations[] = array(
 		'label'  => esc_html__( 'Custom Animations', 'wolf-core' ),
@@ -365,7 +365,7 @@ function wolf_core_add_animations( $animations ) {
 
 	return $animations;
 }
-add_filter( 'vc_param_animation_style_list', 'wolf_core_add_animations' );
+add_filter( 'vc_param_animation_style_list', 'wolf_core_add_vc_animations' );
 
 /**
  * New animations

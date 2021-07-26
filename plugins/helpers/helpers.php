@@ -268,7 +268,7 @@ function wolf_core_render_html_attributes( array $attributes ) {
 		}
 	}
 
-	return implode( ' ', $rendered_attributes );
+	return implode( ' ', apply_filters( 'wolf_core_html_attributes', $rendered_attributes ) );
 }
 
 /**

@@ -27,6 +27,16 @@
 	}
 }
 
+.wolf-core-team-member-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 1;
+}
+
 .wolf-core-team-member-name {
 	font-size: 18px;
 }

@@ -53,6 +53,7 @@ function wolf_core_album_tracklist( $atts ) {
 	$output = '<wolf-core-album-tracklist itemscope="" itemtype="http://schema.org/MusicPlaylist" class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
+
 	$output .= '>';
 
 	// $output .= '<meta itemprop="numTracks" content="4">';

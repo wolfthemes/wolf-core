@@ -17,15 +17,18 @@ var WolfCoreTexualShowcase = function( $ ) {
 
 				var $item = $( this ),
 					$media = $item.find( ".wolf-core-tsi-hover-reveal" ),
-					offsetLeft = $media.offset().left,
-					offsetTop = $media.offset().top;
+					offsetLeft = $item.offset().left + ($item.width() / 2),
+					offsetTop = $item.offset().top + ($item.height() / 2);
+
+				// Init position
+				$media.css( {
+					"--translate": "translate3d(" + offsetLeft + "px, " + offsetTop + "px, 0)"
+				} );
 
 				$item.on( "mousemove", function( e ) {
 
-					console.log( "translate3d(" + (e.clientX - offsetLeft) + "px, " + ( e.clientY - offsetTop) + "px, 0)" );
-
 					$media.css( {
-						"transform": "translate3d(" + (e.clientX - offsetLeft) + "px, " + (e.clientY - offsetTop) + "px, 0)"
+						"--translate": "translate3d(" + e.clientX + "px, " + e.clientY + "px, 0)"
 					} );
 				} );
 

@@ -90,7 +90,7 @@ function wolf_core_textual_showcase_params() {
 				),
 
 				array(
-					'type'         => 'select',
+					'type'         => 'hidden',
 					'label'        => esc_html__( 'Animation', 'wolf-core' ),
 					'param_name'   => 'css_animation',
 					'options'      => array(

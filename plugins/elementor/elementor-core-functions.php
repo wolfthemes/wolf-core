@@ -148,6 +148,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 						'label_block' => true,
 					);
 
+					if ( 'select' === $r_type ) {
+						$r_params['default'] = ( isset( $r_param['default'] ) ) ? $r_param['default'] : '';
+					}
+
 					if ( isset( $r_param['type'] ) ) {
 
 						if ( 'audio' === $r_param['type'] ) {
@@ -565,3 +569,22 @@ add_filter(
 		return '.elementor-section-wrap';
 	}
 );
+
+
+/**
+ * Add animations
+ *
+ * @param array $animations Animation array.
+ * @return array
+ */
+function wolf_core_add_elementor_animations( $animations ) {
+
+	$animations = array(
+		'Custom' => array(
+			'wolfFadeInUp'    => 'Fade In Up',
+		),
+	);
+
+	return apply_filters( 'wolf_core_elementor_animations', $animations );
+}
+add_filter( 'elementor/controls/animations/additional_animations', 'wolf_core_add_elementor_animations' );

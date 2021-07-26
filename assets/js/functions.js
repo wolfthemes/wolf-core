@@ -562,6 +562,7 @@ var WolfCore = (function ($) {
 					// 	$video.get(0).play();
 					// }, 500 );
 					//}
+					return;
 				}
 
 				/* Landscape */
