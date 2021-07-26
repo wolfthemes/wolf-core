@@ -20,6 +20,7 @@ var WolfCoreGalleries = function( $ ) {
 
 			this.masonry();
 
+
 			$( window ).resize( function() {
 				_this.masonry();
 			} );
@@ -110,14 +111,10 @@ var WolfCoreGalleries = function( $ ) {
 		WolfCoreGalleries.init();
 	} );
 
-	$( document ).ready( function() {
-		if ( window.elementorFrontend && elementorFrontend !== undefined && elementorFrontend.hooks !== undefined ) {
-			elementorFrontend.hooks.addAction( "frontend/element_ready/gallery.default", function( $scope ) {
-				WolfCoreGalleries.init();
-				WolfCore.lazyLoad();
-				WolfCore.AOS();
-			} );
-		}
+	$( window ).on( 'elementor/frontend/init', function() {
+		elementorFrontend.hooks.addAction( "frontend/element_ready/image-gallery.default", function() {
+			WolfCoreGalleries.init();
+		} );
 	} );
 
 } )( jQuery );

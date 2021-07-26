@@ -261,7 +261,7 @@ function wolf_core_enqueue_scripts() {
 	wp_register_script( 'wolf-core-google-maps', WOLF_CORE_JS . $folder . '/google-maps' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-progress-bar', WOLF_CORE_JS . $folder . '/progress-bar' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-process', WOLF_CORE_JS . $folder . '/process' . $suffix . '.js', array( 'jquery' ), $version, true );
-	wp_register_script( 'wolf-core-galleries', WOLF_CORE_JS . $folder . '/galleries' . $suffix . '.js', array( 'jquery' ), $version, true );
+	//wp_register_script( 'wolf-core-galleries', WOLF_CORE_JS . $folder . '/galleries' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-album-tracklist', WOLF_CORE_JS . $folder . '/album-tracklist' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-loginform', WOLF_CORE_JS . $folder . '/loginform' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-bmic', WOLF_CORE_JS . $folder . '/bmic' . $suffix . '.js', array( 'jquery' ), $version, true );

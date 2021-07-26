@@ -20,15 +20,21 @@ function wolf_core_gallery_params() {
 		'wolf_core_gallery_params',
 		array(
 			'properties' => array(
-				'name'          => esc_html__( 'Gallery', 'wolf-core' ),
-				'description'   => esc_html__( 'Description.', 'wolf-core' ),
-				'vc_base'       => 'wolf_core_gallery',
-				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
-				'el_categories' => array( 'extension' ),
-				'el_base'       => 'gallery',
-				'keywords'      => array( 'image', 'photo', 'visual', 'gallery' ),
-				'icon'          => 'linea-basic linea-basic-picture-multiple',
-				'scripts'       => array( 'jquery', 'aos', 'flickity', 'imagesloaded', 'isotope', 'packery-mode', 'flex-images', 'wolf-core', 'wolf-core-carousels', 'wolf-core-galleries' ),
+				'name'             => esc_html__( 'Gallery', 'wolf-core' ),
+				'description'      => esc_html__( 'Description.', 'wolf-core' ),
+				'vc_base'          => 'wolf_core_gallery',
+				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
+				'el_categories'    => array( 'extension' ),
+				'el_base'          => 'gallery',
+				'keywords'         => array( 'image', 'photo', 'visual', 'gallery' ),
+				'icon'             => 'linea-basic linea-basic-picture-multiple',
+				'register_scripts' => array(
+					'wolf-core-galleries' => array(
+						'src'     => WOLF_CORE_JS . '/galleries.js',
+						'version' => WOLF_CORE_VERSION,
+					),
+				),
+				'scripts'          => array( 'jquery', 'aos', 'flickity', 'imagesloaded', 'isotope', 'packery-mode', 'flex-images', 'wolf-core', 'wolf-core-carousels', 'wolf-core-galleries' ),
 			),
 			'params'     => array(
 				array(

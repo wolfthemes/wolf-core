@@ -3,6 +3,12 @@
  **/
 /* Image grid */
 .wolf-core-clients-grid {
+	display: grid;
+
+	&:before {
+		display: none;
+	}
+
 	figure {
 		margin: 0;
 		padding: 0;
@@ -20,9 +26,11 @@
 
 	/* Padding */
 	&.wolf-core-clients-padding-yes {
+		grid-gap: 40px;
+
 		.wolf-core-client-grid {
-			padding: 0 40px 40px;
-			margin: 0 0 80px;
+			//padding: 0 40px 40px;
+			//margin: 0 0 80px;
 		}
 
 		//margin-left: -16px;
@@ -69,59 +77,17 @@
 }
 
 /* Columns */
-.wolf-core-clients-grid-columns-1 .wolf-core-client-grid {
-	float: none;
-	padding: 0;
-	padding-bottom: 10px;
-}
-
-/* Auto column */
-@media screen and (max-width: 600px) {
-	.wolf-core-clients-columns-auto {
-		float: none;
-		padding: 0;
-		padding-bottom: 10px;
-	}
-}
-
-@media screen and (min-width: 600px) {
-	.wolf-core-clients-columns-auto {
-		.wolf-core-client-grid {
-			float: left;
-			width: (100% / 2);
-		}
-
-		.wolf-core-client-masonry {
-			float: left;
-			width: (100% / 2) - 0.3;
-		}
+@media screen and (min-width: 480px) {
+	.wolf-core-clients-grid {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
 @media screen and (min-width: 800px) {
-	.wolf-core-clients-columns-auto {
-		.wolf-core-client-grid {
-			float: left;
-			width: (100% / 4);
-		}
-
-		.wolf-core-client-masonry {
-			float: left;
-			width: (100% / 4) - 0.3;
-		}
-	}
-}
-
-@media screen and (min-width: 1600px) {
-	.wolf-core-clients-columns-auto {
-		.wolf-core-client-grid {
-			float: left;
-			width: (100% / 6);
-		}
-
-		.wolf-core-client-masonry {
-			float: left;
-			width: (100% / 6) - 0.3;
+	$columns: 6;
+	@for $i from 1 through $columns {
+		.wolf-core-clients-columns-#{$i} {
+			grid-template-columns: repeat(#{$i}, 1fr);
 		}
 	}
 }

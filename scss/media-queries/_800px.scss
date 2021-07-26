@@ -221,11 +221,6 @@ $columns: 6;
 $width: 100%;
 @for $i from 1 through $columns {
 	.wolf-core-gallery-columns-#{$i} {
-		.wolf-core-img-image_grid {
-			float: left;
-			width: ($width / $i);
-		}
-
 		.wolf-core-img-masonry {
 			float: left;
 			width: ($width / $i) - 0.3;
@@ -233,19 +228,19 @@ $width: 100%;
 	}
 }
 
-@for $i from 1 through $columns {
-	.wolf-core-clients-columns-#{$i} {
-		.wolf-core-client-grid {
-			float: left;
-			width: ($width / $i);
-		}
+// @for $i from 1 through $columns {
+// 	.wolf-core-clients-columns-#{$i} {
+// 		.wolf-core-client-grid {
+// 			float: left;
+// 			width: ($width / $i);
+// 		}
 
-		.wolf-core-client-masonry {
-			float: left;
-			width: ($width / $i) - 0.3;
-		}
-	}
-}
+// 		.wolf-core-client-masonry {
+// 			float: left;
+// 			width: ($width / $i) - 0.3;
+// 		}
+// 	}
+// }
 
 .wolf-core-alpha {
 	margin-left: 0 !important;
