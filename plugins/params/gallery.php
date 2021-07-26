@@ -49,7 +49,7 @@ function wolf_core_gallery_params() {
 					'param_name'  => 'type',
 					'options'     => array(
 						'image_grid' => esc_html__( 'Grid', 'wolf-core' ),
-						'carousel'   => esc_html__( 'Carousel', 'wolf-core' ),
+						//'carousel'   => esc_html__( 'Carousel', 'wolf-core' ),
 						'mosaic'     => esc_html__( 'Mosaic', 'wolf-core' ),
 						'metro'      => esc_html__( 'Metro', 'wolf-core' ),
 						'masonry'    => esc_html__( 'Masonry', 'wolf-core' ),

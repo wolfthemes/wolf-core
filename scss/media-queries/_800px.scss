@@ -216,18 +216,6 @@ blockquote.wolf-core-testimonial-content {
 	font-size: 16px;
 }
 
-/* Image gallery columns */
-$columns: 6;
-$width: 100%;
-@for $i from 1 through $columns {
-	.wolf-core-gallery-columns-#{$i} {
-		.wolf-core-img-masonry {
-			float: left;
-			width: ($width / $i) - 0.3;
-		}
-	}
-}
-
 // @for $i from 1 through $columns {
 // 	.wolf-core-clients-columns-#{$i} {
 // 		.wolf-core-client-grid {

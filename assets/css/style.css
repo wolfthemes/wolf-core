@@ -3854,6 +3854,38 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   margin: 5px;
 }
 
+@media screen and (min-width: 800px) {
+  /* Image gallery columns */
+  .wolf-core-gallery-columns-1 .wolf-core-img-masonry {
+    float: left;
+    width: 100%;
+  }
+
+  .wolf-core-gallery-columns-2 .wolf-core-img-masonry {
+    float: left;
+    width: 50%;
+  }
+
+  .wolf-core-gallery-columns-3 .wolf-core-img-masonry {
+    float: left;
+    width: 33.33333%;
+  }
+
+  .wolf-core-gallery-columns-4 .wolf-core-img-masonry {
+    float: left;
+    width: 25%;
+  }
+
+  .wolf-core-gallery-columns-5 .wolf-core-img-masonry {
+    float: left;
+    width: 20%;
+  }
+
+  .wolf-core-gallery-columns-6 .wolf-core-img-masonry {
+    float: left;
+    width: 16.66667%;
+  }
+}
 /**
  * @# Image Metro
  **/
@@ -5881,37 +5913,6 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   /* Testimonials */
   blockquote.wolf-core-testimonial-content {
     font-size: 16px;
-  }
-
-  /* Image gallery columns */
-  .wolf-core-gallery-columns-1 .wolf-core-img-masonry {
-    float: left;
-    width: 99.7%;
-  }
-
-  .wolf-core-gallery-columns-2 .wolf-core-img-masonry {
-    float: left;
-    width: 49.7%;
-  }
-
-  .wolf-core-gallery-columns-3 .wolf-core-img-masonry {
-    float: left;
-    width: 33.03333%;
-  }
-
-  .wolf-core-gallery-columns-4 .wolf-core-img-masonry {
-    float: left;
-    width: 24.7%;
-  }
-
-  .wolf-core-gallery-columns-5 .wolf-core-img-masonry {
-    float: left;
-    width: 19.7%;
-  }
-
-  .wolf-core-gallery-columns-6 .wolf-core-img-masonry {
-    float: left;
-    width: 16.36667%;
   }
 
   .wolf-core-alpha {
