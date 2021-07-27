@@ -81,7 +81,7 @@ var WolfCore = (function ($) {
 
 			this.setClasses();
 
-			this.setAnimationMasks();
+			//this.setAnimationMasks();
 
 			this.videoBackground();
 			this.playButton();

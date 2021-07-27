@@ -32,6 +32,10 @@ function wolf_core_body_class( $classes ) {
 			$classes[] = 'wolf-core-elementor';
 		}
 
+		if ( wolf_core_is_elementor_page() ) {
+			$classes[] = 'wolf-core-elementor-page';
+		}
+
 		$classes[] = 'wolf-core-' . str_replace( '.', '-', WOLF_CORE_VERSION );
 		$classes[] = sanitize_title_with_dashes( get_template() ); // theme slug.
 

@@ -105,7 +105,10 @@ function wolf_core_get_button_params() {
 					'icon'  => 'eicon-text-align-justify',
 				),
 			),
-			'prefix_class'       => 'wolf-core%s-align-',
+			'prefix_class'       => 'elementor%s-align-',
+			// 'selectors'    => array(
+			// 	'{{WRAPPER}} .wolf-core-button' => 'text-align:{{VALUE}};',
+			// ),
 			'default'            => '',
 			'page_builder'       => 'elementor',
 		),
