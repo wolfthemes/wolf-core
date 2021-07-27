@@ -14,6 +14,66 @@
   }
 }
 
+.uncoverXLeft {
+  animation-name: uncoverXLeft;
+}
+
+.uncoverXRight {
+  animation-name: uncoverXRight;
+}
+
+.uncoverYTop {
+  animation-name: uncoverYTop;
+}
+
+.uncoverYBottom {
+  animation-name: uncoverYBottom;
+}
+
+@keyframes uncoverXLeft {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes uncoverXRight {
+  0% {
+    clip-path: inset(0 0 0 100%);
+    -webkit-clip-path: inset(0 0 0 100%);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes uncoverYTop {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes uncoverYBottom {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 /**
  * @# WOW
  **/
@@ -1686,96 +1746,6 @@ body[data-aos-delay='5000'] [data-aos].aos-animate, [data-aos][data-aos][data-ao
 
 .wolf-core-carousel-nav-arrows-tone-dark .flickity-prev-next-button:before {
   color: #333;
-}
-
-/**
- * @# Custom Animations
- **/
-.wolf-core-animation-mask {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: white;
-}
-
-.wolf-core-font-light .wolf-core-animation-mask {
-  background-color: black;
-}
-
-.uncoverXLeft,
-.uncoverXRight,
-.uncoverYTop,
-.uncoverYBottom {
-  visibility: visible !important;
-}
-.uncoverXLeft:not(.wolf-core-animation-mask),
-.uncoverXRight:not(.wolf-core-animation-mask),
-.uncoverYTop:not(.wolf-core-animation-mask),
-.uncoverYBottom:not(.wolf-core-animation-mask) {
-  display: none;
-}
-
-.uncoverXLeft {
-  transform-origin: 100% 50%;
-  animation: uncoverXLeft 1s ease forwards;
-}
-
-.uncoverXRight {
-  transform-origin: 0 50%;
-  animation: uncoverXRight 1s ease forwards;
-}
-
-.uncoverYTop {
-  transform-origin: 0 0;
-  animation: uncoverYTop 1s ease forwards;
-}
-
-.uncoverYBottom {
-  transform-origin: 100% 0;
-  animation: uncoverYBottom 1s ease forwards;
-}
-
-@keyframes uncoverXLeft {
-  0% {
-    transform: scaleX(1);
-  }
-
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-@keyframes uncoverXRight {
-  0% {
-    transform: scaleX(1);
-  }
-
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-@keyframes uncoverYTop {
-  0% {
-    transform: scaleY(1);
-  }
-
-  100% {
-    transform: scaleY(0);
-  }
-}
-
-@keyframes uncoverYBottom {
-  0% {
-    transform: scaleY(1);
-  }
-
-  100% {
-    transform: scaleY(0);
-  }
 }
 
 /**

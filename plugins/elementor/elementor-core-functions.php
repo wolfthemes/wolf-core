@@ -581,7 +581,9 @@ function wolf_core_add_elementor_animations( $animations ) {
 
 	$animations = array(
 		'Custom' => array(
-			'wolfFadeInUp'    => 'Fade In Up',
+			'wolfFadeInUp'  => 'Fade In Up',
+			'uncoverXLeft'  => 'uncoverXLeft',
+			'uncoverXRight' => 'uncoverXRight',
 		),
 	);
 

@@ -20,7 +20,7 @@ var WolfCorePostMeta = function( $ ) {
 				return;
 			}
 
-			elementor.settings.page.addChangeCallback( "loading_animation_type", this.handleMenuLayout );
+			elementor.settings.page.addChangeCallback( "loading_animation_type", this.handleloadingAnimationType );
 			elementor.settings.page.addChangeCallback( "menu_layout", this.handleMenuLayout );
 			elementor.settings.page.addChangeCallback( "menu_style", this.handleMenuStyle );
 			elementor.settings.page.addChangeCallback( "hero_font_tone", this.handleHeroFontTone );

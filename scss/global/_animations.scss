@@ -13,3 +13,63 @@
 		opacity: 1;
 	}
 }
+
+.uncoverXLeft {
+	animation-name: uncoverXLeft;
+}
+
+.uncoverXRight {
+	animation-name: uncoverXRight;
+}
+
+.uncoverYTop {
+	animation-name: uncoverYTop;
+}
+
+.uncoverYBottom {
+	animation-name: uncoverYBottom;
+}
+
+@keyframes uncoverXLeft {
+	0% {
+		clip-path: inset(0 100% 0 0);
+		-webkit-clip-path: inset(0 100% 0 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+		-webkit-clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes uncoverXRight {
+	0% {
+		clip-path: inset(0 0 0 100%);
+		-webkit-clip-path: inset(0 0 0 100%);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+		-webkit-clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes uncoverYTop {
+	0% {
+		clip-path: inset(0 100% 0 0);
+		-webkit-clip-path: inset(0 100% 0 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+		-webkit-clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes uncoverYBottom {
+	0% {
+		clip-path: inset(0 0 100% 0);
+		-webkit-clip-path: inset(0 0 100% 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+		-webkit-clip-path: inset(0 0 0 0);
+	}
+}

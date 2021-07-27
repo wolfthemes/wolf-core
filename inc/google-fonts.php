@@ -135,3 +135,21 @@ function wolf_core_add_google_fonts_editor_styles() {
 	}
 }
 add_action( 'after_setup_theme', 'wolf_core_add_google_fonts_editor_styles' );
+
+/**
+ * Add fonts to Elementor
+ *
+ * @param array $fonts The fonts option array.
+ * @return array $fonts
+ */
+function wolf_core_add_fonts_to_elementor( $fonts ) {
+
+	$google_fonts = wolf_core_get_google_fonts_options();
+
+	foreach ( $google_fonts as $k => $v ) {
+		$fonts[ $k ] = 'googlefonts';
+	}
+
+	return $fonts;
+}
+add_filter( 'elementor/fonts/additional_fonts', 'wolf_core_add_fonts_to_elementor' );
