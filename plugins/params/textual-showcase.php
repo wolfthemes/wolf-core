@@ -65,7 +65,7 @@ function wolf_core_textual_showcase_params() {
 					'type'         => 'typography',
 					'label'        => esc_html__( 'Typography', 'wolf-core' ),
 					'param_name'   => 'typography',
-					'selector'     => '{{WRAPPER}}',
+					'selector'     => '{{WRAPPER}} .wolf-core-textual-showcase-item',
 					'page_builder' => 'elementor',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
