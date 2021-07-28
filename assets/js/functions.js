@@ -123,7 +123,6 @@ var WolfCore = (function ($) {
 
 			this.addResizedEvent();
 
-			this.setVisibleRowClass();
 
 			// Scroll event
 			$(window).scroll(function () {
@@ -1523,6 +1522,7 @@ var WolfCore = (function ($) {
 			$("body").addClass("wolf-core-loaded");
 
 			if (this.fireAnimation) {
+				this.setVisibleRowClass();
 				this.wowAnimate();
 				this.AOS();
 			}

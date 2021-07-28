@@ -17,16 +17,20 @@ var WolfCoreImagHoverVideo = (function ($) {
 				return;
 			}
 
-			$( document ).on( 'mouseover', '.wolf-core-image-hover-video', function() {
-				if ( $( this ).find( 'video' ).length ) {
-					$( this ).find( 'video' )[0].play();
-				}
+			$( ".wolf-core-image-hover-video" ).each( function() {
 
-			} ).on( "mouseout", function( event ) {
-				if ( $( this ).find( 'video' ).length ) {
-					var media = $( this ).find( 'video' ).get(0);
-					media.pause();
-					media.currentTime = 0;
+				var $item = $( this );
+
+				if ( $item.find( 'video' ).length ) {
+
+					$item.on( "mouseover", function() {
+						$item.find( 'video' )[0].play();
+
+					} ).on( "mouseout", function() {
+						var media = $item.find( 'video' ).get(0);
+						media.pause();
+						media.currentTime = 0;
+					} );
 				}
 			} );
 		}
