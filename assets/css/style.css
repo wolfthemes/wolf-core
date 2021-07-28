@@ -4170,6 +4170,24 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   float: right;
 }
 
+.wolf-core-image-hover-video video {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.wolf-core-image-hover-video img {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+  width: 100%;
+  height: auto;
+}
+.wolf-core-image-hover-video:hover img {
+  opacity: 0;
+}
+
 /**
  * @# Instagram
  **/
@@ -4980,6 +4998,11 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   height: 5vw;
 }
 
+@media screen and (max-width: 800px) {
+  .wolf-core-textual-showcase-image-wrapper {
+    height: 7vw;
+  }
+}
 .wolf-core-textual-showcase-image-inner {
   opacity: 1;
   transition: opacity 0.2s ease;

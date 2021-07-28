@@ -1,0 +1,23 @@
+.wolf-core-image-hover-video {
+	video {
+		object-fit: cover;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	img {
+		position: relative;
+		z-index: 1;
+		opacity: 1;
+		transition: opacity 0.2s ease-out;
+		width: 100%;
+		height: auto;
+	}
+
+	&:hover {
+		img {
+			opacity: 0;
+		}
+	}
+}

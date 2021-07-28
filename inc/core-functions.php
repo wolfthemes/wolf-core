@@ -69,6 +69,7 @@ function wolf_core_get_elements() {
 		// 'iframe-opener',
 		// 'image-link',
 		// 'image-device-slider',
+		'image-hover-video',
 		// 'info-table',
 		// 'interactive-links',
 		// 'interactive-link-item',
