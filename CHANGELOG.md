@@ -1,11 +1,18 @@
 
 # Changelog
 
+#### 29th July 2021 - Version 1.1.9
+
+-   Tweak: Added textual showcase element
+-   Tweak: Added image hover video element
+-   Tweak: Social icon text style and repsonsive align option
+-   Fix: Button align responsive class
 #### 20th July 2021 - Version 1.1.5
 
 -   Tweak: Added pricing table element
 -   Fix: PHP8 fixes
 -   Fix: Activation default settings hooks
+
 #### 9th July 2021 - Version 1.1.2
 
 -   Tweak: Added client image link element
