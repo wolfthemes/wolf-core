@@ -38,14 +38,14 @@ function wolf_core_animated_svg_params() {
 			'params'     => array(
 
 				array(
-					'type'        => 'hidden',
-					'label'       => esc_html__( 'Type', 'wolf-core' ),
-					'param_name'  => 'type',
-					'options'     => array(
+					'type'       => 'hidden',
+					'label'      => esc_html__( 'Type', 'wolf-core' ),
+					'param_name' => 'type',
+					'options'    => array(
 						'simple'   => esc_html__( 'Simple', 'wolf-core' ),
 						'multiple' => esc_html__( 'Muliple Paths', 'wolf-core' ),
 					),
-					'default'     => 'simple',
+					'default'    => 'simple',
 				),
 
 				array(
@@ -109,12 +109,13 @@ function wolf_core_animated_svg_params() {
 				),
 
 				array(
-					'type'       => 'textarea',
-					'label'      => esc_html__( 'SVG Inline Code', 'wolf-core' ),
-					'param_name' => 'inline_code',
-					'condition'  => array(
+					'type'        => 'textarea',
+					'label'       => esc_html__( 'SVG Inline Code', 'wolf-core' ),
+					'param_name'  => 'inline_code',
+					'condition'   => array(
 						'type' => array( 'simple' ),
 					),
+					'description' => sprintf( wolf_core_kses( __( '<a href="%s" target="_blank">How to get an SVG code.</a>', 'wolf-core' ) ), 'https://wolfthemes.ticksy.com/article/17288/' ),
 				),
 
 				array(
@@ -126,7 +127,7 @@ function wolf_core_animated_svg_params() {
 				array(
 					'label'      => esc_html__( 'Animate Once', 'wolf-core' ),
 					'param_name' => 'anim_once',
-					'type'		=> 'checkbox',
+					'type'       => 'checkbox',
 				),
 
 				array(
