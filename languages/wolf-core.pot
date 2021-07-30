@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.1.9\n"
+"Project-Id-Version: Wolf Core 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-07-29 10:48:33+00:00\n"
+"POT-Creation-Date: 2021-07-30 07:10:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -5107,24 +5107,24 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:68
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:98
 #: pack/wolf-core/plugins/params/animated-svg.php:92
-#: pack/wolf-core/plugins/params/animated-svg.php:122
-#: plugins/params/animated-svg.php:92 plugins/params/animated-svg.php:122
+#: pack/wolf-core/plugins/params/animated-svg.php:123
+#: plugins/params/animated-svg.php:92 plugins/params/animated-svg.php:123
 msgid "Stroke Color"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:73
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:109
 #: pack/wolf-core/plugins/params/animated-svg.php:97
-#: pack/wolf-core/plugins/params/animated-svg.php:133
-#: plugins/params/animated-svg.php:97 plugins/params/animated-svg.php:133
+#: pack/wolf-core/plugins/params/animated-svg.php:134
+#: plugins/params/animated-svg.php:97 plugins/params/animated-svg.php:134
 msgid "Animation Duration (in seconds)"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:78
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:114
 #: pack/wolf-core/plugins/params/animated-svg.php:102
-#: pack/wolf-core/plugins/params/animated-svg.php:138
-#: plugins/params/animated-svg.php:102 plugins/params/animated-svg.php:138
+#: pack/wolf-core/plugins/params/animated-svg.php:139
+#: plugins/params/animated-svg.php:102 plugins/params/animated-svg.php:139
 msgid "Animation Delay (in seconds)"
 msgstr ""
 
@@ -5135,20 +5135,20 @@ msgid "SVG Inline Code"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:103
-#: pack/wolf-core/plugins/params/animated-svg.php:127
-#: plugins/params/animated-svg.php:127
+#: pack/wolf-core/plugins/params/animated-svg.php:128
+#: plugins/params/animated-svg.php:128
 msgid "Animate Once"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:119
-#: pack/wolf-core/plugins/params/animated-svg.php:143
-#: plugins/params/animated-svg.php:143
+#: pack/wolf-core/plugins/params/animated-svg.php:144
+#: plugins/params/animated-svg.php:144
 msgid "Stroke Width"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:124
-#: pack/wolf-core/plugins/params/animated-svg.php:148
-#: plugins/params/animated-svg.php:148
+#: pack/wolf-core/plugins/params/animated-svg.php:149
+#: plugins/params/animated-svg.php:149
 msgid "SVG Width (in px)"
 msgstr ""
 
@@ -6242,7 +6242,7 @@ msgid "Mosaic"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/gallery.php:48
-#: pack/wolf-core/plugins/params/gallery.php:54 plugins/params/gallery.php:54
+#: pack/wolf-core/plugins/params/gallery.php:54
 msgid "Metro"
 msgstr ""
 
@@ -9328,6 +9328,11 @@ msgstr ""
 #: pack/dist/wolf-core/wolf-core.php:365 pack/wolf-core/wolf-core.php:365
 #: wolf-core.php:365
 msgid "PHP"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/animated-svg.php:118
+#: plugins/params/animated-svg.php:118
+msgid "<a href=\"%s\" target=\"_blank\">How to get an SVG code.</a>"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/image-hover-video.php:23

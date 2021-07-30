@@ -92,44 +92,47 @@ function wolf_core_gallery( $atts ) {
 		$img_size = esc_attr( $custom_img_size );
 	}
 
-	if ( 'carousel' === $type ) {
+	if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
-		wp_enqueue_script( 'flickity' );
-		wp_enqueue_script( 'wolf-core-carousels' );
-	}
+		if ( 'carousel' === $type ) {
 
-	if ( 'masonry' === $type ) {
-		wp_enqueue_script( 'imagesloaded' );
-		wp_enqueue_script( 'isotope' );
-		wp_enqueue_script( 'wolf-core-galleries' );
-	}
+			wp_enqueue_script( 'flickity' );
+			wp_enqueue_script( 'wolf-core-carousels' );
+		}
 
-	if ( 'metro' === $type ) {
-		wp_enqueue_script( 'imagesloaded' );
-		wp_enqueue_script( 'isotope' );
-		wp_enqueue_script( 'packery-mode' );
-		wp_enqueue_script( 'wolf-core-galleries' );
-	}
+		if ( 'masonry' === $type ) {
+			wp_enqueue_script( 'imagesloaded' );
+			wp_enqueue_script( 'isotope' );
+			wp_enqueue_script( 'wolf-core-galleries' );
+		}
 
-	if ( 'justified' === $type ) {
-		wp_enqueue_script( 'flex-images' );
-		wp_enqueue_script( 'wolf-core-galleries' );
-	}
+		if ( 'metro' === $type ) {
+			wp_enqueue_script( 'imagesloaded' );
+			wp_enqueue_script( 'isotope' );
+			wp_enqueue_script( 'packery-mode' );
+			wp_enqueue_script( 'wolf-core-galleries' );
+		}
 
-	if ( 'link_image' === $onclick ) {
+		if ( 'justified' === $type ) {
+			wp_enqueue_script( 'flex-images' );
+			wp_enqueue_script( 'wolf-core-galleries' );
+		}
 
-		wp_enqueue_script( 'prettyphoto' );
-		wp_enqueue_style( 'prettyphoto' );
+		if ( 'link_image' === $onclick ) {
 
-	} elseif ( 'swipebox' === $onclick ) {
+			wp_enqueue_script( 'prettyphoto' );
+			wp_enqueue_style( 'prettyphoto' );
 
-		wp_enqueue_script( 'swipebox' );
-		wp_enqueue_style( 'swipebox' );
+		} elseif ( 'swipebox' === $onclick ) {
 
-	} elseif ( 'lightbox' === $onclick ) {
+			wp_enqueue_script( 'swipebox' );
+			wp_enqueue_style( 'swipebox' );
 
-		wp_enqueue_script( 'swipebox' );
-		wp_enqueue_style( 'swipebox' );
+		} elseif ( 'lightbox' === $onclick ) {
+
+			wp_enqueue_script( 'swipebox' );
+			wp_enqueue_style( 'swipebox' );
+		}
 	}
 
 	$pretty_rel_random   = ' data-rel="prettyPhoto[rel-' . get_the_ID() . '-' . rand() . ']"';

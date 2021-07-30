@@ -20,7 +20,6 @@ var WolfCoreGalleries = function( $ ) {
 
 			this.masonry();
 
-
 			$( window ).resize( function() {
 				_this.masonry();
 			} );
@@ -80,7 +79,6 @@ var WolfCoreGalleries = function( $ ) {
 					} else {
 
 						$( ".wolf-core-gallery-metro" ).isotope( "layout" );
-
 					}
 				} );
 
@@ -112,8 +110,19 @@ var WolfCoreGalleries = function( $ ) {
 	} );
 
 	$( window ).on( 'elementor/frontend/init', function() {
-		elementorFrontend.hooks.addAction( "frontend/element_ready/image-gallery.default", function() {
-			WolfCoreGalleries.init();
+		elementorFrontend.hooks.addAction( "frontend/element_ready/gallery.default", function( $scope ) {
+
+			if ( $scope.find(".wolf-core-gallery-justified") ) {
+				WolfCoreGalleries.justify();
+			}
+
+			if ( $scope.find(".wolf-core-gallery-masonry") ) {
+				WolfCoreGalleries.masonry();
+			}
+
+			if ( $scope.find(".wolf-core-gallery-metro") ) {
+				WolfCoreGalleries.masonry();
+			}
 		} );
 	} );
 

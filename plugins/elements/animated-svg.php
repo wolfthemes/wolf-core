@@ -27,7 +27,7 @@ function wolf_core_animated_svg( $atts ) {
 				'inline_code'   => '',
 				'path_color'    => '',
 				'anim_once'     => 'yes',
-				'anim_duration' => '5s',
+				'anim_duration' => '5',
 				'anim_delay'    => '0',
 				'stroke_width'  => '5',
 				'width'         => '',
@@ -41,7 +41,7 @@ function wolf_core_animated_svg( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	$output .= '<div class="wolf-core-animated-svg wolf-core-animated-svg-align-' . esc_attr( $alignment ) . ' wolf-core-svg-anim-once-' . esc_attr( $anim_once ) . '" data-width="' . absint( $width ) . '" data-stroke-width="' . absint( $stroke_width ) . '" data-path-color="' . esc_attr( $path_color ) . '" data-animation-duration="' . absint( $anim_duration ) . '" data-animation-delay="' . absint( $anim_delay ) . '">';
+	$output .= '<div class="wolf-core-animated-svg wolf-core-animated-svg-align-' . esc_attr( $alignment ) . ' wolf-core-svg-anim-once-' . esc_attr( $anim_once ) . '" data-width="' . absint( $width ) . '" data-stroke-width="' . absint( $stroke_width ) . '" data-path-color="' . esc_attr( $path_color ) . '" data-animation-duration="' . esc_attr( $anim_duration ) . '" data-animation-delay="' . esc_attr( $anim_delay ) . '">';
 
 	if ( 'multiple' === $type ) {
 

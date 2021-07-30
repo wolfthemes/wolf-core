@@ -1,6 +1,11 @@
 
 # Changelog
 
+#### 30th July 2021 - Version 1.2.2
+
+-   Fix: Animated SVG animation duration
+-   Fix: Gallery editor preview JS
+
 #### 29th July 2021 - Version 1.2.0
 
 -   Tweak: Added textual showcase element

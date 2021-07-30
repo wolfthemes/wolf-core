@@ -34,7 +34,7 @@ function wolf_core_gallery_params() {
 						'version' => WOLF_CORE_VERSION,
 					),
 				),
-				'scripts'          => array( 'jquery', 'aos', 'flickity', 'imagesloaded', 'isotope', 'packery-mode', 'flex-images', 'wolf-core', 'wolf-core-carousels', 'wolf-core-galleries' ),
+				'scripts'          => array( 'jquery', 'aos', 'flickity', 'imagesloaded', 'isotope', 'packery-mode', 'flex-images', 'wolf-core', 'wolf-core-galleries' ),
 			),
 			'params'     => array(
 				array(
@@ -51,7 +51,7 @@ function wolf_core_gallery_params() {
 						'image_grid' => esc_html__( 'Grid', 'wolf-core' ),
 						//'carousel'   => esc_html__( 'Carousel', 'wolf-core' ),
 						'mosaic'     => esc_html__( 'Mosaic', 'wolf-core' ),
-						'metro'      => esc_html__( 'Metro', 'wolf-core' ),
+						//'metro'      => esc_html__( 'Metro', 'wolf-core' ),
 						'masonry'    => esc_html__( 'Masonry', 'wolf-core' ),
 						'justified'  => esc_html__( 'Justified', 'wolf-core' ),
 					),
