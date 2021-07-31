@@ -1,6 +1,9 @@
 
 # Changelog
 
+#### 31th July 2021 - Version 1.2.3
+
+-   Fix: HTML formatting bug fix (testimonial slider and social icons)
 #### 30th July 2021 - Version 1.2.2
 
 -   Fix: Animated SVG animation duration
