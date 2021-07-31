@@ -374,7 +374,7 @@ function wolf_core_social_icons( $atts ) {
 
 					$output .= $social_services_acronym[ $service ];
 
-					$output .= '</a></i>';
+					$output .= '</a>';
 
 				} else {
 					if ( 'none' === $background_style ) {
@@ -450,7 +450,7 @@ function wolf_core_social_icons( $atts ) {
 
 					$output .= $social_services_acronym[ $service ];
 
-					$output .= '</a></i>';
+					$output .= '</a>';
 
 				} else {
 					if ( 'none' === $background_style ) {
