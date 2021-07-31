@@ -137,7 +137,7 @@ function wolf_core_testimonial_slider( $atts ) {
 		}
 
 		$output .= '</div><!--.wolf-core-blockquote-inner-->';
-		$output .= '</div><!--.wolf-core-blockquote--></wolf-core-blockquote>';
+		$output .= '</div><!--.wolf-core-blockquote-->';
 	}
 
 	$output .= '</div></div><!--.wolf-core-testimonial-slider-->';
