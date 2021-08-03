@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 3rd August 2021 - Version 1.2.4
+
+-   Fix: Work marquee behavior
+
 #### 31th July 2021 - Version 1.2.3
 
 -   Fix: HTML formatting bug fix (testimonial slider and social icons)

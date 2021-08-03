@@ -4180,7 +4180,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   position: relative;
   z-index: 1;
   opacity: 1;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.44s ease-out;
   width: 100%;
   height: auto;
 }
@@ -5361,7 +5361,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   align-items: center;
   display: flex;
   position: relative;
-  animation: marquee 8s linear infinite;
+  animation: marquee 32s linear infinite;
   will-change: transform;
 }
 

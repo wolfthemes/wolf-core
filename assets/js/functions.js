@@ -757,7 +757,8 @@ var WolfCore = (function ($) {
 					WolfCoreJSParams.forceAnimationMobile ||
 					(!this.isMobile && 800 < $(window).width());
 
-			if ("undefined" !== typeof WOW && doWow) {
+			//if ("undefined" !== typeof WOW && doWow) {
+			if ("undefined" !== typeof WOW) {
 				wowAnimate = new WOW({
 					boxClass: "wolf-core-wow",
 					offset: WolfCoreJSParams.WOWAnimationOffset,

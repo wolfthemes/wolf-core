@@ -87,7 +87,24 @@ function wolf_core_work_category_marquee( $atts ) {
 
 		while ( $query->have_posts() ) {
 			$query->the_post();
+			$output .= '<span>' . get_the_title() . '</span>';
+			$output .= '<div class="work-category-marquee-item-marquee__img" style="background-image:url(' . get_the_post_thumbnail_url() . ');"></div>';
+		}
 
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			$output .= '<span>' . get_the_title() . '</span>';
+			$output .= '<div class="work-category-marquee-item-marquee__img" style="background-image:url(' . get_the_post_thumbnail_url() . ');"></div>';
+		}
+
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			$output .= '<span>' . get_the_title() . '</span>';
+			$output .= '<div class="work-category-marquee-item-marquee__img" style="background-image:url(' . get_the_post_thumbnail_url() . ');"></div>';
+		}
+
+		while ( $query->have_posts() ) {
+			$query->the_post();
 			$output .= '<span>' . get_the_title() . '</span>';
 			$output .= '<div class="work-category-marquee-item-marquee__img" style="background-image:url(' . get_the_post_thumbnail_url() . ');"></div>';
 		}
