@@ -42,7 +42,7 @@ function wolf_core_interactive_links( $atts ) {
 
 	$output .= '<div class="wolf-core-interactive-links-bg-holder">';
 
-	$i = 0;
+	$i = 1;
 	foreach ( $panels as $panel_bg_atts ) {
 		$panel_bg_atts = apply_filters(
 			'wolf_core_interactive_links_bg_atts',
@@ -63,7 +63,7 @@ function wolf_core_interactive_links( $atts ) {
 
 			$output .= wolf_core_background_img(
 				array(
-					'background_img'      => esc_url( $background_image['url'] ),
+					'background_img'      => esc_attr( $background_image['id'] ),
 					'background_position' => esc_attr( $background_position ),
 					'background_repeat'   => esc_attr( $background_repeat ),
 					'background_size'     => esc_attr( $background_size ),
@@ -92,7 +92,7 @@ function wolf_core_interactive_links( $atts ) {
 	$output .= '<div class="wolf-core-interactive-links-inner">';
 	$output .= '<ul class="wolf-core-interactive-links-text">';
 
-	$i = 0;
+	$i = 1;
 	foreach ( $panels as $panel_txt_atts ) {
 		$panel_txt_atts = apply_filters(
 			'wolf_core_interactive_links_text_atts',
@@ -114,7 +114,7 @@ function wolf_core_interactive_links( $atts ) {
 			$output .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '">';
 		}
 
-		$output .= $title;
+		$output .= '<span class="wolf-core-interactive-link-text">' . $title . '</span>';
 
 		if ( is_array( $link ) && isset( $link['url'] ) ) {
 			$output .= '</a>';

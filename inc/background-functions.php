@@ -126,7 +126,10 @@ function wolf_core_background_img( $args = array() ) {
 			$container_class .= ' wolf-core-preloader-bg';
 		}
 
-		$cover_style = 'object-position:' . $position[ $background_position ] . ';';
+		$cover_style = '';
+		if ( isset( $position[ $background_position ] ) ) {
+			$cover_style = 'object-position:' . $position[ $background_position ] . ';';
+		}
 
 		if ( 'zoomin' === $background_effect ) {
 			$cover_class .= ' wolf-core-zoomin';
@@ -485,7 +488,7 @@ function wolf_core_video_bg( $args ) {
 		}
 	}
 
-	// open tag
+	// open tag.
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '">';
 
 	$output .= wolf_core_video_bg_img_fallback( $args );
