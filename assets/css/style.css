@@ -4349,6 +4349,14 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   z-index: 5;
 }
 
+.wolf-core-interactive-links-list {
+  list-style: none;
+}
+
+.wolf-core-interactive-links-list li {
+  list-style-type: none;
+}
+
 .wolf-core-interactive-links-bg-holder {
   position: absolute;
   top: 0;

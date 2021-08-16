@@ -90,7 +90,7 @@ function wolf_core_interactive_links( $atts ) {
 	$output .= '</div>';
 
 	$output .= '<div class="wolf-core-interactive-links-inner">';
-	$output .= '<ul class="wolf-core-interactive-links-text">';
+	$output .= '<ul class="wolf-core-interactive-links-list">';
 
 	$i = 1;
 	foreach ( $panels as $panel_txt_atts ) {
@@ -108,6 +108,9 @@ function wolf_core_interactive_links( $atts ) {
 
 		$link = wolf_core_process_link_atts( $link );
 		$current_class = ( 0 === $i ) ? 'link-active' : '';
+
+		$output .= '<li class="wolf-core-interactive-link-item" id="wolf-core-interactive-link-item-' . absint( $i ) . '">';
+
 		if ( is_array( $link ) && isset( $link['url'] ) ) {
 			$output .= '<a class="wolf-core-interactive-link ' . esc_attr( $current_class ) . '" data-panel-index="' . absint( $i ) . '"';
 			$output .= ' target="' . esc_attr( $link['target'] ) . '"';
@@ -119,6 +122,8 @@ function wolf_core_interactive_links( $atts ) {
 		if ( is_array( $link ) && isset( $link['url'] ) ) {
 			$output .= '</a>';
 		}
+
+		$output .= '</li>';
 
 		$i++;
 	}
