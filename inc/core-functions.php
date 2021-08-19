@@ -1090,7 +1090,7 @@ function wolf_core_get_breadcrumb() {
 
 		if ( is_attachment() ) {
 
-			esc_html_e( 'Attachment', 'wolf-core' );
+			$output .= esc_html__( 'Attachment', 'wolf-core' );
 
 			$output .= $delimiter;
 
