@@ -24,7 +24,7 @@ function wolf_core_get_js_params() {
 			'ajaxUrl'                   => esc_url( WOLF_CORE()->ajax_url() ),
 			'ajaxNonce'                 => wp_create_nonce( 'wolf_core_ajax_nonce' ),
 			'WolfCoreUrl'               => esc_url( WOLF_CORE_URI ),
-			'lightbox'                  => apply_filters( 'wolf_core_lightbox', 'swipebox' ),
+			'lightbox'                  => apply_filters( 'wolf_core_lightbox', 'fancybox' ),
 			'isMobile'                  => wp_is_mobile(),
 			'WOWAnimationOffset'        => apply_filters( 'wolf_core_wow_animation_offset', 0 ),
 			'forceAnimationMobile'      => apply_filters( 'wolf_core_force_animation_mobile', false ),
