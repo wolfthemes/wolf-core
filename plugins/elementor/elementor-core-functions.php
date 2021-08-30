@@ -253,7 +253,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['size_units'] = isset( $p['size_units'] ) ? $p['size_units'] : array( '%' );
 
-			if ( isset( $field_params['range'] ) ) {
+
+			if ( isset( $p['range'] ) ) {
 				$field_params['range'] = $p['range'];
 			} else {
 				$field_params['range']['%'] = array(
@@ -262,6 +263,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					'step' => ( isset( $p['step'] ) ) ? $p['step'] : 1,
 				);
 			}
+
 		} elseif ( 'dimensions' === $type ) {
 
 			$field_params['type']       = \Elementor\Controls_Manager::DIMENSIONS;
@@ -404,12 +406,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			);
 
 		} elseif ( isset( $p['param_name'] ) && 'repeater' !== $type ) {
-
-			// if ( 'animated_icon' === $type ) {
-			// * Disable all icons excpet the library that can be animated */
-			// add_filter( 'elementor/icons_manager/additional_tabs', 'wolf_core_disable_non_animatable_icons', 99 );
-			// add_filter( 'elementor/icons_manager/native', 'wolf_core_disable_non_animatable_icons', 99 );
-			// }
 
 			$widget->add_control(
 				$p['param_name'],
