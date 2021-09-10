@@ -58,5 +58,6 @@ function wolf_core_enqueue_admin_styles() {
 	wp_enqueue_style( 'linearicons', WOLF_CORE_CSS . '/lib/fonts/linearicons/linearicons.min.css', array(), WOLF_CORE_VERSION );
 	wp_enqueue_style( 'linea-software', WOLF_CORE_CSS . '/lib/fonts/linea-icons/linea-icons.min.css', array(), WOLF_CORE_VERSION );
 	wp_enqueue_style( 'wolficons', WOLF_CORE_CSS . '/lib/fonts/wolficons/wolficons.min.css', array(), WOLF_CORE_VERSION );
+	wp_enqueue_style( 'font-awesome' );
 }
 add_action( 'elementor/editor/after_enqueue_scripts', 'wolf_core_enqueue_admin_styles' );

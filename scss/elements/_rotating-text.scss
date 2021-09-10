@@ -1,0 +1,23 @@
+/**
+ * @# Rotating text
+ **/
+.wolf-core-rotating-text svg {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 220px;
+	animation-name: rotatingTextRotate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotatingTextRotate {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
+	}
+}

@@ -22,13 +22,13 @@ function wolf_core_twitter_params() {
 		'wolf_core_twitter_params',
 		array(
 			'properties' => array(
-				'name'        => esc_html__( 'Twitter Feed', 'wolf-core' ),
-				'description' => esc_html__( 'Your last tweets', 'wolf-core' ),
-				'vc_base'     => 'wolf_core_twitter',
-				'vc_category' => esc_html__( 'Socials', 'wolf-core' ),
+				'name'          => esc_html__( 'Twitter Feed', 'wolf-core' ),
+				'description'   => esc_html__( 'Your last tweets', 'wolf-core' ),
+				'vc_base'       => 'wolf_core_twitter',
+				'vc_category'   => esc_html__( 'Socials', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
-				'el_base'     => 'twitter',
-				'icon'        => 'fa fa-twitter',
+				'el_base'       => 'twitter',
+				'icon'          => 'fab fa-twitter',
 			),
 			'params'     => array(
 				array(
@@ -47,7 +47,7 @@ function wolf_core_twitter_params() {
 						'single' => esc_html__( 'Single', 'wolf-core' ),
 						'list'   => esc_html__( 'List', 'wolf-core' ),
 					),
-					'default' => 'single',
+					'default'    => 'single',
 				),
 
 				array(

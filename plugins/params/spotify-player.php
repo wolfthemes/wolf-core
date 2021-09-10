@@ -25,7 +25,7 @@ function wolf_core_spotify_player_params() {
 				'el_base'       => 'spotify-player',
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
-				'icon'          => 'fa fa-spotify',
+				'icon'          => 'fab fa-spotify',
 			),
 
 			'params'     => array(
