@@ -22,8 +22,6 @@ function wolf_core_marquee_text( $atts ) {
 			$atts,
 			array(
 				'text' => '',
-				'width' => '',
-				'link' => '',
 			)
 		)
 	);
