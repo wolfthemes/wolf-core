@@ -243,7 +243,7 @@ function wolf_core_wrong_theme() {
 		'swingster',
 		'speaker',
 		'nu',
-		'newtheme',
+		'galatea',
 	);
 
 	return ( ! in_array( esc_attr( sanitize_title_with_dashes( get_template() ) ), $ok, true ) );

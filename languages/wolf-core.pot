@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.2.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-09-10 14:43:05+00:00\n"
+"POT-Creation-Date: 2021-09-20 15:28:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2473,6 +2473,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:150
 #: pack/wolf-core/plugins/params/mailchimp.php:169
 #: pack/wolf-core/plugins/params/mailchimp.php:181
+#: pack/wolf-core/plugins/params/rotating-text.php:75
 #: pack/wolf-core/plugins/params/social-icons.php:65
 #: pack/wolf-core/plugins/params/social-icons.php:85
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:82
@@ -2577,6 +2578,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:146
 #: pack/wolf-core/plugins/params/mailchimp.php:170
 #: pack/wolf-core/plugins/params/mailchimp.php:182
+#: pack/wolf-core/plugins/params/rotating-text.php:71
 #: pack/wolf-core/plugins/params/social-icons.php:61
 #: pack/wolf-core/plugins/params/social-icons.php:86
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:78
@@ -2684,6 +2686,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:154
 #: pack/wolf-core/plugins/params/mailchimp.php:171
 #: pack/wolf-core/plugins/params/mailchimp.php:183
+#: pack/wolf-core/plugins/params/rotating-text.php:79
 #: pack/wolf-core/plugins/params/social-icons.php:69
 #: pack/wolf-core/plugins/params/social-icons.php:87
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:86
@@ -2848,7 +2851,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/blockquote.php:34
 #: pack/wolf-core/plugins/params/link.php:34
 #: pack/wolf-core/plugins/params/marquee-text.php:45
-#: pack/wolf-core/plugins/params/rotating-text.php:34
+#: pack/wolf-core/plugins/params/rotating-text.php:41
 #: pack/wolf-core/plugins/params/testimonial-slider.php:68
 #: pack/wolf-core/plugins/params/textual-showcase.php:150
 #: pack/wolf-core/plugins/params/textual-showcase.php:161
@@ -3085,6 +3088,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/icon.php:118
 #: pack/wolf-core/plugins/params/icon.php:143
 #: pack/wolf-core/plugins/params/mailchimp.php:178
+#: pack/wolf-core/plugins/params/rotating-text.php:66
 #: pack/wolf-core/plugins/params/social-icons.php:56
 #: pack/wolf-core/plugins/params/social-icons.php:82
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:73
@@ -3284,7 +3288,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/bigtext.php:98
 #: pack/wolf-core/plugins/params/breadcrumb.php:74
 #: pack/wolf-core/plugins/params/marquee-text.php:51
-#: pack/wolf-core/plugins/params/rotating-text.php:51
+#: pack/wolf-core/plugins/params/rotating-text.php:93
 #: pack/wolf-core/plugins/params/textual-showcase.php:66
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:24
 #: plugins/common-params/button-params.php:222 plugins/params/bigtext.php:26
@@ -3452,8 +3456,8 @@ msgstr ""
 #: pack/wolf-core/plugins/params/icon.php:337
 #: pack/wolf-core/plugins/params/marquee-text.php:55
 #: pack/wolf-core/plugins/params/marquee-text.php:66
-#: pack/wolf-core/plugins/params/rotating-text.php:55
-#: pack/wolf-core/plugins/params/rotating-text.php:66
+#: pack/wolf-core/plugins/params/rotating-text.php:97
+#: pack/wolf-core/plugins/params/rotating-text.php:108
 #: pack/wolf-core/plugins/params/social-icons.php:212
 #: pack/wolf-core/plugins/params/social-icons.php:223
 #: pack/wolf-core/plugins/params/social-icons.php:247
@@ -3601,7 +3605,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/heading.php:172
 #: pack/wolf-core/plugins/params/heading.php:191
 #: pack/wolf-core/plugins/params/marquee-text.php:60
-#: pack/wolf-core/plugins/params/rotating-text.php:60
+#: pack/wolf-core/plugins/params/rotating-text.php:102
 #: pack/wolf-core/plugins/params/social-icons.php:255
 #: pack/wolf-core/plugins/params/textual-showcase.php:75
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:95
@@ -9352,6 +9356,11 @@ msgstr ""
 msgid "Rotating Text"
 msgstr ""
 
+#: pack/wolf-core/plugins/params/rotating-text.php:46
+#: plugins/params/rotating-text.php:46
+msgid "Width (in px)"
+msgstr ""
+
 #: pack/wolf-core/plugins/params/social-icons.php:108
 #: plugins/params/social-icons.php:108
 msgid "Display Acronym instead of icon"
@@ -9405,10 +9414,6 @@ msgstr ""
 #: pack/wolf-core/plugins/params/textual-showcase.php:211
 #: plugins/params/textual-showcase.php:211
 msgid "Line break"
-msgstr ""
-
-#: plugins/params/rotating-text.php:46
-msgid "Width (in px)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

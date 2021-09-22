@@ -31,14 +31,14 @@ var WolfCoreRotatingText = function( $ ) {
 	"use strict";
 
 	$( document ).ready( function() {
-		WolfCoreRotatingText.init();
+		//WolfCoreRotatingText.init();
 	} );
 
 	$( window ).on( 'elementor/frontend/init', function() {
+	//	alert();
 		elementorFrontend.hooks.addAction( "frontend/element_ready/rotating-text.default", function( $scope ) {
-
 			if ( $scope.find(".wolf-core-rotating-text") ) {
-				WolfCoreRotatingText.init();
+				//WolfCoreRotatingText.init();
 			}
 		} );
 	} );

@@ -7,3 +7,15 @@
 	text-transform: uppercase;
 	font-size: 8vw;
 }
+
+.elementor-editor-active {
+	.wolf-core-marquee-text span:not(:first-child) {
+		display: none;
+	}
+
+	.wolf-core-marquee-text {
+		position: absolute;
+		width: 100000px;
+		height: 500px;
+	}
+}

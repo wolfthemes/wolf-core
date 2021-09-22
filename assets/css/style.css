@@ -4564,6 +4564,16 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   padding-right: 20vw;
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 8vw;
+}
+
+.elementor-editor-active .wolf-core-marquee-text span:not(:first-child) {
+  display: none;
+}
+.elementor-editor-active .wolf-core-marquee-text {
+  position: absolute;
+  width: 100000px;
+  height: 500px;
 }
 
 /**
