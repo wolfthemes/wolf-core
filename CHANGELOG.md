@@ -1,7 +1,7 @@
 
 # Changelog
 
-#### 14th September 2021 - Version 1.2.6
+#### 23th September 2021 - Version 1.2.6
 
 -   Tweak: Added marquee text element
 -   Tweak: Added rotating text element
