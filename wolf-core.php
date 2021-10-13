@@ -251,12 +251,10 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			$message = sprintf(
-				wp_kses_post( __( '"%1$s" requires <a href="%2$s" target="_blank">%3$s</a> or <a href="%4$s" target="_blank">%5$s</a> to be installed and activated.', 'wolf-core' ) ),
+				wp_kses_post( __( '"%1$s" requires <a href="%2$s" target="_blank">%3$s</a> to be installed and activated.', 'wolf-core' ) ),
 				'<strong>' . esc_html__( 'Wolf Core', 'wolf-core' ) . '</strong>',
 				'https://wlfthm.es/elementor',
 				'<strong>' . esc_html__( 'Elementor', 'wolf-core' ) . '</strong>',
-				'https://wlfthm.es/wpbpb',
-				'<strong>' . esc_html__( 'WPBakery Page Builder', 'wolf-core' ) . '</strong>'
 			);
 
 			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );

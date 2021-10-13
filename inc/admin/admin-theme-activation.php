@@ -76,9 +76,7 @@ function wolf_core_output_license_tab_content() {
 			<li>
 				<?php
 					echo sprintf(
-						wp_kses_post( __( 'It extends of <a href="%1$s" target="_blank">%2$s</a> and <a href="%3$s" target="_blank">%4$s</a> plugin.', 'wolf-core' ) ),
-						'https://wlfthm.es/wpbpb',
-						'WPBakery Page Builder',
+						wp_kses_post( __( 'It extends of <a href="%1$s" target="_blank">%2$s</a> plugin.', 'wolf-core' ) ),
 						'https://elementor.com/',
 						'Elementor'
 					);
