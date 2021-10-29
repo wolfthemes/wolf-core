@@ -22,9 +22,9 @@ function wolf_core_spotify_player( $atts ) {
 			$atts,
 			array(
 				'url'                 => '',
-				'type'                => '',
+				'type'                => 'large',
 				'width'               => '',
-				'height'              => '',
+				'height'              => '380',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
 				'el_class'            => '',

@@ -152,7 +152,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 		if ( ! $api_key ) {
 
 			$output .= sprintf(
-				wp_kses_post( __( '<p class="wolf-core-align-center">You must set a MailChimp API key in the <a href="%1$s" target="_blank">Wolf WPBakery Page Builder Extension</a>. You can get your MailChimp API <a href="%2$s" target="_blank">here</a>.<p>', 'wolf-visual-composer' ) ),
+				wp_kses_post( __( '<p class="wolf-core-align-center">You must set a MailChimp API key in the <a href="%1$s" target="_blank">Wolf Core</a>. You can get your MailChimp API <a href="%2$s" target="_blank">here</a>.<p>', 'wolf-visual-composer' ) ),
 				esc_url( admin_url( 'admin.php?page=wolf-core-mailchimp' ) ),
 				esc_url( 'http://kb.mailchimp.com/integrations/api-integrations/about-api-keys' )
 			);

@@ -110,13 +110,13 @@ function wolf_core_add_extra_params() {
 					);
 				}
 
-				$params['params'][] = array(
+				/*$params['params'][] = array(
 					'label'       => esc_html__( 'Quick CSS', 'wolf-core' ),
 					'description' => esc_html__( 'CSS inline style', 'wolf-core' ),
 					'param_name'  => 'inline_style',
 					'type'        => 'textarea',
 					'group'       => esc_html__( 'Extra', 'wolf-core' ),
-				);
+				);*/
 
 				return $params;
 			}
@@ -186,7 +186,6 @@ function wolf_core_animation_markup_filter() {
 					}
 				}
 
-				// debug( $atts );
 				return $atts;
 			}
 		);

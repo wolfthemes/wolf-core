@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.2.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2021-10-11 11:00:34+00:00\n"
+"POT-Creation-Date: 2021-10-25 10:25:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -588,76 +588,73 @@ msgid ""
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:79
-#: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:79
 #: pack/wolf-core/inc/admin/admin-theme-activation.php:79
-msgid ""
-"It extends of <a href=\"%1$s\" target=\"_blank\">%2$s</a> and <a "
-"href=\"%3$s\" target=\"_blank\">%4$s</a> plugin."
+msgid "It extends of <a href=\"%1$s\" target=\"_blank\">%2$s</a> plugin."
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:88
+#: inc/admin/admin-theme-activation.php:86
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:88
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:88
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:86
 msgid "It includes plugin territory features that boost the theme functionalities."
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:93
+#: inc/admin/admin-theme-activation.php:91
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:93
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:93
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:91
 msgid ""
 "This extension is available only to users who purchased their theme from <a "
 "href=\"%1$s\" target=\"_blank\">%2$s</a>."
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:113
+#: inc/admin/admin-theme-activation.php:111
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:113
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:113
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:111
 msgid ""
 "Please enter your <strong>theme purchase code</strong> below to activate "
 "your theme license and be able to use all features."
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:119
+#: inc/admin/admin-theme-activation.php:117
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:119
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:119
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:117
 msgid "Activate"
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:122
+#: inc/admin/admin-theme-activation.php:120
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:122
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:122
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:120
 msgid "How to find your purchase code"
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:128
+#: inc/admin/admin-theme-activation.php:126
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:128
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:128
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:126
 msgid "The %s is activated."
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:133
+#: inc/admin/admin-theme-activation.php:131
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:133
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:133
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:131
 msgid "Reset purchase code"
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:151
+#: inc/admin/admin-theme-activation.php:149
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:151
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:151
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:149
 msgid ""
 "Something went wrong. It way be due to a temporary Envato API outage. "
 "Please try again in a few minutes."
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:196
+#: inc/admin/admin-theme-activation.php:194
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:196
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:196
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:194
 msgid "Extension activated"
 msgstr ""
 
-#: inc/admin/admin-theme-activation.php:214
+#: inc/admin/admin-theme-activation.php:212
 #: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:214
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:214
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:212
 msgid "Purchase code can not be empty"
 msgstr ""
 
@@ -685,9 +682,9 @@ msgstr ""
 #: inc/admin/auth.php:68 pack/dist/wolf-core/inc/admin/auth.php:68
 #: pack/dist/wolf-core/wolf-core.php:257 pack/dist/wolf-core/wolf-core.php:284
 #: pack/dist/wolf-core/wolf-core.php:311 pack/wolf-core/inc/admin/auth.php:68
-#: pack/wolf-core/wolf-core.php:257 pack/wolf-core/wolf-core.php:284
-#: pack/wolf-core/wolf-core.php:311 wolf-core.php:257 wolf-core.php:284
-#: wolf-core.php:311
+#: pack/wolf-core/wolf-core.php:257 pack/wolf-core/wolf-core.php:282
+#: pack/wolf-core/wolf-core.php:309 wolf-core.php:257 wolf-core.php:282
+#: wolf-core.php:309
 msgid "Elementor"
 msgstr ""
 
@@ -721,12 +718,12 @@ msgstr ""
 #: pack/dist/wolf-core/wolf-core.php:693 pack/dist/wolf-core/wolf-core.php:722
 #: pack/wolf-core/inc/admin/classes/class-admin.php:68
 #: pack/wolf-core/plugins/vc/vc.php:69 pack/wolf-core/plugins/vc/vc.php:103
-#: pack/wolf-core/plugins/vc/vc.php:156 pack/wolf-core/wolf-core.php:518
-#: pack/wolf-core/wolf-core.php:567 pack/wolf-core/wolf-core.php:623
-#: pack/wolf-core/wolf-core.php:653 pack/wolf-core/wolf-core.php:696
-#: pack/wolf-core/wolf-core.php:725 plugins/vc/vc.php:69 plugins/vc/vc.php:103
-#: plugins/vc/vc.php:156 wolf-core.php:518 wolf-core.php:567 wolf-core.php:623
-#: wolf-core.php:653 wolf-core.php:696 wolf-core.php:725
+#: pack/wolf-core/plugins/vc/vc.php:156 pack/wolf-core/wolf-core.php:516
+#: pack/wolf-core/wolf-core.php:565 pack/wolf-core/wolf-core.php:621
+#: pack/wolf-core/wolf-core.php:651 pack/wolf-core/wolf-core.php:694
+#: pack/wolf-core/wolf-core.php:723 plugins/vc/vc.php:69 plugins/vc/vc.php:103
+#: plugins/vc/vc.php:156 wolf-core.php:516 wolf-core.php:565 wolf-core.php:621
+#: wolf-core.php:651 wolf-core.php:694 wolf-core.php:723
 #. translators: the code to output
 #. translators: the code to output
 #. translators: %s: the code to display
@@ -2784,6 +2781,12 @@ msgstr ""
 msgid "You can get a Google Maps API key <a href=\"%s\" target=\"_blank\">here</a>."
 msgstr ""
 
+#: pack/dist/wolf-core/inc/admin/admin-theme-activation.php:79
+msgid ""
+"It extends of <a href=\"%1$s\" target=\"_blank\">%2$s</a> and <a "
+"href=\"%3$s\" target=\"_blank\">%4$s</a> plugin."
+msgstr ""
+
 #: pack/dist/wolf-core/plugins/common-params/button-params.php:21
 #: pack/dist/wolf-core/plugins/params/album-disc.php:73
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:42
@@ -4357,7 +4360,6 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:523
 #: pack/wolf-core/plugins/helpers/helpers.php:93
 #: pack/wolf-core/plugins/helpers/helpers.php:109
-#: pack/wolf-core/plugins/helpers/helpers.php:118
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:96
 #: pack/wolf-core/plugins/vc/vc-map/column.php:97
 #: pack/wolf-core/plugins/vc/vc-map/column.php:105
@@ -4366,9 +4368,9 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:251
 #: plugins/elementor/elementor-core-functions.php:523
 #: plugins/helpers/helpers.php:93 plugins/helpers/helpers.php:109
-#: plugins/helpers/helpers.php:118 plugins/vc/vc-map/column-inner.php:96
-#: plugins/vc/vc-map/column.php:97 plugins/vc/vc-map/column.php:105
-#: plugins/vc/vc-map/column.php:114 plugins/vc/vc-params/button-params.php:242
+#: plugins/vc/vc-map/column-inner.php:96 plugins/vc/vc-map/column.php:97
+#: plugins/vc/vc-map/column.php:105 plugins/vc/vc-map/column.php:114
+#: plugins/vc/vc-params/button-params.php:242
 #: plugins/vc/vc-params/button-params.php:251
 msgid "Extra"
 msgstr ""
@@ -4495,8 +4497,6 @@ msgid "Enter your email address"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/elements/mailchimp.php:155
-#: pack/wolf-core/plugins/elements/mailchimp.php:155
-#: plugins/elements/mailchimp.php:155
 msgid ""
 "<p class=\"wolf-core-align-center\">You must set a MailChimp API key in the "
 "<a href=\"%1$s\" target=\"_blank\">Wolf WPBakery Page Builder "
@@ -4663,26 +4663,22 @@ msgid "Always hidden"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/helpers/helpers.php:114
-#: pack/wolf-core/plugins/helpers/helpers.php:114
-#: plugins/helpers/helpers.php:114
 msgid "Quick CSS"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/helpers/helpers.php:115
-#: pack/wolf-core/plugins/helpers/helpers.php:115
-#: plugins/helpers/helpers.php:115
 msgid "CSS inline style"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/helpers/helpers.php:245
-#: pack/wolf-core/plugins/helpers/helpers.php:245
-#: plugins/helpers/helpers.php:245
+#: pack/wolf-core/plugins/helpers/helpers.php:244
+#: plugins/helpers/helpers.php:244
 msgid "Same window"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/helpers/helpers.php:246
-#: pack/wolf-core/plugins/helpers/helpers.php:246
-#: plugins/helpers/helpers.php:246
+#: pack/wolf-core/plugins/helpers/helpers.php:245
+#: plugins/helpers/helpers.php:245
 msgid "New window"
 msgstr ""
 
@@ -9290,8 +9286,7 @@ msgstr ""
 msgid "CSS box"
 msgstr ""
 
-#: pack/dist/wolf-core/wolf-core.php:254 pack/wolf-core/wolf-core.php:254
-#: wolf-core.php:254
+#: pack/dist/wolf-core/wolf-core.php:254
 msgid ""
 "\"%1$s\" requires <a href=\"%2$s\" target=\"_blank\">%3$s</a> or <a "
 "href=\"%4$s\" target=\"_blank\">%5$s</a> to be installed and activated."
@@ -9302,14 +9297,13 @@ msgid "Wolf Core"
 msgstr ""
 
 #: pack/dist/wolf-core/wolf-core.php:259 pack/dist/wolf-core/wolf-core.php:286
-#: pack/dist/wolf-core/wolf-core.php:338 pack/wolf-core/wolf-core.php:259
-#: pack/wolf-core/wolf-core.php:286 pack/wolf-core/wolf-core.php:338
-#: wolf-core.php:259 wolf-core.php:286 wolf-core.php:338
+#: pack/dist/wolf-core/wolf-core.php:338 pack/wolf-core/wolf-core.php:284
+#: pack/wolf-core/wolf-core.php:336 wolf-core.php:284 wolf-core.php:336
 msgid "WPBakery Page Builder"
 msgstr ""
 
-#: pack/dist/wolf-core/wolf-core.php:281 pack/wolf-core/wolf-core.php:281
-#: wolf-core.php:281
+#: pack/dist/wolf-core/wolf-core.php:281 pack/wolf-core/wolf-core.php:279
+#: wolf-core.php:279
 msgid ""
 "\"%1$s\" requires to choose between \"<a href=\"%2$s\" "
 "target=\"_blank\">%3$s</a>\" or \"<a href=\"%4$s\" "
@@ -9318,22 +9312,30 @@ msgid ""
 msgstr ""
 
 #: pack/dist/wolf-core/wolf-core.php:309 pack/dist/wolf-core/wolf-core.php:336
-#: pack/dist/wolf-core/wolf-core.php:363 pack/wolf-core/wolf-core.php:309
-#: pack/wolf-core/wolf-core.php:336 pack/wolf-core/wolf-core.php:363
-#: wolf-core.php:309 wolf-core.php:336 wolf-core.php:363
+#: pack/dist/wolf-core/wolf-core.php:363 pack/wolf-core/wolf-core.php:307
+#: pack/wolf-core/wolf-core.php:334 pack/wolf-core/wolf-core.php:361
+#: wolf-core.php:307 wolf-core.php:334 wolf-core.php:361
 #. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: pack/dist/wolf-core/wolf-core.php:364 pack/wolf-core/wolf-core.php:364
-#: wolf-core.php:364
+#: pack/dist/wolf-core/wolf-core.php:364 pack/wolf-core/wolf-core.php:362
+#: wolf-core.php:362
 msgid "Wolf Elementor Extension"
 msgstr ""
 
-#: pack/dist/wolf-core/wolf-core.php:365 pack/wolf-core/wolf-core.php:365
-#: wolf-core.php:365
+#: pack/dist/wolf-core/wolf-core.php:365 pack/wolf-core/wolf-core.php:363
+#: wolf-core.php:363
 msgid "PHP"
+msgstr ""
+
+#: pack/wolf-core/plugins/elements/mailchimp.php:155
+#: plugins/elements/mailchimp.php:155
+msgid ""
+"<p class=\"wolf-core-align-center\">You must set a MailChimp API key in the "
+"<a href=\"%1$s\" target=\"_blank\">Wolf Core</a>. You can get your "
+"MailChimp API <a href=\"%2$s\" target=\"_blank\">here</a>.<p>"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/animated-svg.php:118
@@ -9414,6 +9416,12 @@ msgstr ""
 #: pack/wolf-core/plugins/params/textual-showcase.php:211
 #: plugins/params/textual-showcase.php:211
 msgid "Line break"
+msgstr ""
+
+#: pack/wolf-core/wolf-core.php:254 wolf-core.php:254
+msgid ""
+"\"%1$s\" requires <a href=\"%2$s\" target=\"_blank\">%3$s</a> to be "
+"installed and activated."
 msgstr ""
 
 #. Plugin URI of the plugin/theme
