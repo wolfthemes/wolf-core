@@ -67,6 +67,18 @@ function wolf_core_playlist_params() {
 				),
 
 				array(
+					'type'        => 'select',
+					'label'       => esc_html__( 'Type', 'wolf-core' ),
+					'param_name'  => 'is_sticky_player',
+					'options'     => array(
+						'false'     => esc_html__( 'Large', 'wolf-core' ),
+						'true' => esc_html__( 'Compact', 'wolf-core' ),
+					),
+					'default'     => 'large',
+					'admin_label' => true,
+				),
+
+				array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Tracklist Visibility', '%TEXDOMAIN%' ),
 					'param_name' => 'show_tracklist',

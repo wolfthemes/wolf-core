@@ -4577,6 +4577,16 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 }
 
 /**
+ * @# Playlist
+ **/
+.elementor-widget-container .wpm-sticky-playlist-container {
+  position: relative;
+}
+.elementor-widget-container .wpm-sticky-playlist {
+  border: none !important;
+}
+
+/**
  * @# Pricing Table
  **/
 .wolf-core-pricing-table-featured {

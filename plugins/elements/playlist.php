@@ -23,6 +23,7 @@ function wolf_core_playlist( $atts ) {
 				'playlist_id'         => '',
 				'show_tracklist'      => 'yes',
 				'theme'               => 'dark',
+				'is_sticky_player'    => '',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
 				'el_class'            => '',
@@ -38,9 +39,16 @@ function wolf_core_playlist( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
+	if ( 'large' === $is_sticky_player ) {
+		$is_sticky_player = false;
+	} else {
+		$show_tracklist = wolf_core_shortcode_bool( $is_sticky_player ) ? false : $show_tracklist;
+	}
+
 	$attrs = array(
-		'show_tracklist' => wolf_core_shortcode_bool( $show_tracklist ),
-		'theme'          => $theme,
+		'show_tracklist'   => wolf_core_shortcode_bool( $show_tracklist ),
+		'theme'            => $theme,
+		'is_sticky_player' => wolf_core_shortcode_bool( $is_sticky_player ),
 	);
 
 	$class .= ' wolf-core-wolf-playlist-shortcode-container wolf-core-element';

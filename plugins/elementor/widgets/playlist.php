@@ -33,11 +33,11 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+		// $this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
+		// foreach ( $this->scripts as $script ) {
+		// wp_enqueue_script( $script );
+		// }
 		// }
 	}
 
@@ -154,15 +154,16 @@ class Elementor_Playlist_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'playlist_id'    => '',
-				'show_tracklist' => '',
-				'theme'          => '',
-				'inline_style'   => '',
+				'is_sticky_player' => '',
+				'playlist_id'      => '',
+				'show_tracklist'   => '',
+				'theme'            => '',
+				'inline_style'     => '',
 			)
 		);
 
 		echo wolf_core_playlist( $atts ); // phpcs:ignore
-		//echo do_shortcode( '[wolf_playlist ' . wolf_core_render_shortcode_attributes( $atts ) . ']' ); // phpcs:ignore
+		// echo do_shortcode( '[wolf_playlist ' . wolf_core_render_shortcode_attributes( $atts ) . ']' ); // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Playlist_Widget() );

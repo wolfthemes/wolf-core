@@ -31,6 +31,7 @@ function wolf_core_pricing_table( $atts ) {
 				'offer_price'         => '',
 				'price_period'        => '',
 				'button_text'         => '',
+				'button_link'         => '',
 				'link'                => '',
 				'featured'            => '',
 				'featured_text'       => '',
