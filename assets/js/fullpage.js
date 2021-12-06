@@ -26,7 +26,7 @@ var WolfCoreFullPage = function( $ ) {
 
 		init : function() {
 
-			if ( this.initFlag || ! WolfCoreJSParams.fullPage ) {
+			if ( this.initFlag || ! WolfCoreJSParams.fullPage || "undefined" !== typeof elementor ) {
 				return;
 			}
 

@@ -202,6 +202,11 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				echo '<input type="checkbox" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" ', ( $meta ) ? ' checked="checked"' : '','/>
 						<span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
+			// datepicker
+					} elseif ( $field['type'] == 'datepicker' ) {
+						echo '<input type="text" class="wd-metabox-datepicker" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" size="30">
+						<br><span class="description">' . $desc . '</span>';
+
 				// select
 			} elseif ( 'select' == $type ) {
 

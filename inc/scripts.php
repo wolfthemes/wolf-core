@@ -49,6 +49,7 @@ function wolf_core_get_js_params() {
 			'fullHeightRowDoWPMOffsset' => apply_filters( 'wolf_core_fullheight_row_do_wpm_offset', true ),
 			'isRTL'                     => apply_filters( 'wolf_core_is_rtl', true ),
 			'printStylesheet'           => WOLF_CORE_CSS . '/print.min.css',
+			'isElementorEditor'			=> wolf_core_is_elementor_editor(),
 			'l10n'                      => array(
 				'emptyFields'           => esc_html__( 'Please fill all fields.', 'wolf-visual-composer' ),
 				'unknownError'          => esc_html__( 'Something went wrong while submuitting the form, please try again later.', 'wolf-visual-composer' ),
