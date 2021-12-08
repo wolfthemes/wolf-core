@@ -163,6 +163,10 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage {
 	display: flex;
 	align-items: center;
 	align-self: stretch;
+
+	.elementor-container {
+		max-width: 1400px;
+	}
 }
 
 @keyframes opacityIn {
