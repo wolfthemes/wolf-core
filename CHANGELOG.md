@@ -1,6 +1,13 @@
 
 # Changelog
 
+#### 10th December 2021 - Version 1.3.0
+
+-   Fix: release datepicker field
+-   Fix: typo
+-   Tweak: added is_sticky_player default settings
+-   Tweak: Added Spectacle theme compatibility
+
 #### 23th September 2021 - Version 1.2.6
 
 -   Tweak: Added marquee text element
