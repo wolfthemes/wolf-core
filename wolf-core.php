@@ -3,7 +3,7 @@
  * Plugin Name: Wolf Core
  * Plugin URI: https://wlfthm.es/wolf-core
  * Description: Core functions for Wolf Themes.
- * Version: 1.3.0
+ * Version: 1.3.2
  * Author: WolfThemes
  * Author URI: https://wolfthemes.com
  * Requires at least: 5.0
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 	 * Contains the main functions for Wolf_Core
 	 *
 	 * @class Wolf_Core
-	 * @version 1.3.0
+	 * @version 1.3.2
 	 * @since 1.0.0
 	 */
 	final class Wolf_Core {
@@ -74,7 +74,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		/**
 		 * @var string
 		 */
-		public $version = '1.3.0';
+		public $version = '1.3.2';
 
 
 
@@ -400,14 +400,17 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'post',
 			);
 
-			foreach ( $supported_post_types as $cpt ) {
-				if ( ! in_array( $cpt, $cpt_support, true ) ) {
-					$cpt_support[] = $cpt;
-
+			if ( ! $cpt_support ) {
+				update_option( 'elementor_cpt_support', $supported_post_types );
+			} else {
+				foreach ( $supported_post_types as $cpt ) {
+					if ( ! in_array( $cpt, $cpt_support, true ) ) {
+						$cpt_support[] = $cpt;
+					}
 				}
-			}
 
-			update_option( 'elementor_cpt_support', $cpt_support ); // update database.
+				update_option( 'elementor_cpt_support', $cpt_support ); // update database.
+			}
 
 			// Disable Elementor Default Colors and fonts to inherit everything from the theme.
 			update_option( 'elementor_disable_color_schemes', 'yes' );

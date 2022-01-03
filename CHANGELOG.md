@@ -1,11 +1,19 @@
 
 # Changelog
 
+#### 3rdth January 2022 - Version 1.3.2
+
+-   Other: Removed Spotify follow button (deprecated)
+
+#### 28th December 2021 - Version 1.3.1
+
+-   Fix: Default settings
+
 #### 10th December 2021 - Version 1.3.0
 
--   Fix: release datepicker field
--   Fix: typo
--   Tweak: added is_sticky_player default settings
+-   Fix: Release datepicker field
+-   Fix: Typo
+-   Tweak: Added is_sticky_player default settings
 -   Tweak: Added Spectacle theme compatibility
 
 #### 23th September 2021 - Version 1.2.6
