@@ -1,7 +1,11 @@
 
 # Changelog
 
-#### 3rdth January 2022 - Version 1.3.2
+#### 26th January 2022 - Version 1.3.3
+
+-   Other: Minor fixes (typo etc.)
+
+#### 3rd January 2022 - Version 1.3.2
 
 -   Other: Removed Spotify follow button (deprecated)
 

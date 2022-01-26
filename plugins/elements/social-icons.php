@@ -288,6 +288,7 @@ function wolf_core_social_icons( $atts ) {
 			'codepen'     => 'co',
 			'telegram'    => 'tl',
 			'tumblr'      => 'tb',
+			'email'       => 'em',
 		)
 	);
 
