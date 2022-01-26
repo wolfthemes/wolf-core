@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 26th January 2022 - Version 1.3.3
+#### 26th January 2022 - Version 1.3.4
 
+-   Fix: Default animated disc link
 -   Other: Minor fixes (typo etc.)
 
 #### 3rd January 2022 - Version 1.3.2
