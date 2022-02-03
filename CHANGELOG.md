@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 3rd February 2022 - Version 1.3.5
+
+-   Tweak: Added social icons (tidal, deezer, beatport)
+
 #### 26th January 2022 - Version 1.3.4
 
 -   Fix: Default animated disc link

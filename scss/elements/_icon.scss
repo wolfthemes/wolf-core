@@ -3,6 +3,13 @@ $accent: red;
  * @# Icon
  **/
 
+[class*=' socicon-'],
+[class*=' socicon-']:before,
+[class^='socicon-'],
+[class^='socicon-']:before {
+	line-height: inherit !important;
+}
+
 .wolf-core-icon {
 	display: inline-block;
 	//line-height: 1;

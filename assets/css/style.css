@@ -3303,6 +3303,9 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   align-items: center;
   align-self: stretch;
 }
+.fp-tableCell .elementor-container {
+  max-width: 1400px;
+}
 
 @keyframes opacityIn {
   from {
@@ -3559,6 +3562,13 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 /**
  * @# Icon
  **/
+[class*=' socicon-'],
+[class*=' socicon-']:before,
+[class^='socicon-'],
+[class^='socicon-']:before {
+  line-height: inherit !important;
+}
+
 .wolf-core-icon {
   display: inline-block;
   transition: all 0.3s;

@@ -309,6 +309,7 @@ function wolf_core_get_socials() {
 		'amazon',
 		// 'amplement',
 		'apple', // iTunes.
+		'beatport',
 		'bandcamp',
 		'bandsintown',
 		'behance',
@@ -316,6 +317,7 @@ function wolf_core_get_socials() {
 		'codepen',
 		'dailymotion',
 		'deviantart',
+		'deezer',
 		'digg',
 		'dribbble',
 		// 'dropbox',
@@ -365,6 +367,7 @@ function wolf_core_get_socials() {
 		'viadeo',
 		'vk',
 		'telegram',
+		'tidal',
 		'tiktok',
 		'twitch',
 		// 'qq',
