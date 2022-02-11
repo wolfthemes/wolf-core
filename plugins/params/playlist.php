@@ -71,8 +71,8 @@ function wolf_core_playlist_params() {
 					'label'       => esc_html__( 'Type', 'wolf-core' ),
 					'param_name'  => 'is_sticky_player',
 					'options'     => array(
-						'false'     => esc_html__( 'Large', 'wolf-core' ),
-						'true' => esc_html__( 'Compact', 'wolf-core' ),
+						'false' => esc_html__( 'Large', 'wolf-core' ),
+						'true'  => esc_html__( 'Compact', 'wolf-core' ),
 					),
 					'default'     => 'large',
 					'admin_label' => true,
@@ -98,6 +98,25 @@ function wolf_core_playlist_params() {
 						'light' => esc_html__( 'Light', '%TEXDOMAIN%' ),
 					),
 					'default'    => apply_filters( 'wee_default_playlist_skin', 'dark' ),
+					'condition'  => array(
+						'is_sticky_player' => 'false',
+					),
+				),
+
+				array(
+					'type'       => 'select',
+					'label'      => esc_html__( 'Skin', '%TEXDOMAIN%' ),
+					'param_name' => 'sticky_player_playlist_skin',
+					'options'    => array(
+						'dark'              => esc_html__( 'Dark', '%TEXDOMAIN%' ),
+						'light'             => esc_html__( 'Light', '%TEXDOMAIN%' ),
+						'transparent-light' => esc_html__( 'Transparent Light', 'wolf-visual-composer' ),
+						'transparent-dark'  => esc_html__( 'Transparent Dark', 'wolf-visual-composer' ),
+					),
+					'default'    => apply_filters( 'wee_default_playlist_skin', 'dark' ),
+					'condition'  => array(
+						'is_sticky_player' => 'true',
+					),
 				),
 			),
 		)

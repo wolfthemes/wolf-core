@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 11th February 2022 - Version 1.3.6
+
+-   Tweak: Added semi transparent dark and semi transparent light playlist bar option
+
 #### 3rd February 2022 - Version 1.3.5
 
 -   Tweak: Added social icons (tidal, deezer, beatport)

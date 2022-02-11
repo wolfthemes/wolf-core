@@ -23,6 +23,7 @@ function wolf_core_playlist( $atts ) {
 				'playlist_id'         => '',
 				'show_tracklist'      => 'yes',
 				'theme'               => 'dark',
+				'sticky_player_playlist_skin' => '',
 				'is_sticky_player'    => '',
 				'css_animation'       => '',
 				'css_animation_delay' => '',
@@ -43,6 +44,10 @@ function wolf_core_playlist( $atts ) {
 		$is_sticky_player = false;
 	} else {
 		$show_tracklist = wolf_core_shortcode_bool( $is_sticky_player ) ? false : $show_tracklist;
+
+		if ( $sticky_player_playlist_skin ) {
+			$theme = $sticky_player_playlist_skin;
+		}
 	}
 
 	$attrs = array(
