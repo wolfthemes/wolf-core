@@ -4647,6 +4647,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   margin: 0 auto;
   padding: 1em 0;
   display: flex;
+  flex-wrap: wrap;
 }
 .wolf-core-socials-container.wolf-core-text-center {
   max-width: 92%;

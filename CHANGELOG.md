@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 22th February 2022 - Version 1.3.7
+
+-   Fix: Social container flex-wrap
+
 #### 11th February 2022 - Version 1.3.6
 
 -   Tweak: Added semi transparent dark and semi transparent light playlist bar option
