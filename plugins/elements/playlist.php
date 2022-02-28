@@ -20,16 +20,16 @@ function wolf_core_playlist( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'playlist_id'         => '',
-				'show_tracklist'      => 'yes',
-				'theme'               => 'dark',
+				'playlist_id'                 => '',
+				'show_tracklist'              => 'yes',
+				'theme'                       => 'dark',
 				'sticky_player_playlist_skin' => '',
-				'is_sticky_player'    => '',
-				'css_animation'       => '',
-				'css_animation_delay' => '',
-				'el_class'            => '',
-				'css'                 => '',
-				'inline_style'        => '',
+				'is_sticky_player'            => 'false',
+				'css_animation'               => '',
+				'css_animation_delay'         => '',
+				'el_class'                    => '',
+				'css'                         => '',
+				'inline_style'                => '',
 			)
 		)
 	);
@@ -39,6 +39,8 @@ function wolf_core_playlist( $atts ) {
 	$output = '';
 
 	$class = $el_class; // init container CSS class.
+
+	$theme = ( $theme ) ? $theme : 'dark'; // set default color theme explicitly.
 
 	if ( 'large' === $is_sticky_player ) {
 		$is_sticky_player = false;

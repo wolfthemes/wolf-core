@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 22th February 2022 - Version 1.3.8
+#### 28th February 2022 - Version 1.3.9
 
+-   Fix: Default playlist color theme settings
 -   Fix: Social container flex-wrap set to nowrap in theme navigation
 
 #### 22th February 2022 - Version 1.3.7
