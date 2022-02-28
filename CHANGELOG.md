@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 22th February 2022 - Version 1.3.8
+
+-   Fix: Social container flex-wrap set to nowrap in theme navigation
+
 #### 22th February 2022 - Version 1.3.7
 
 -   Fix: Social container flex-wrap
