@@ -122,6 +122,7 @@ function wolf_core_get_elements() {
 		// 'videos',
 		// 'waveform-player',
 		// 'wc-categories',
+		'wc-search-form',
 		// 'youtube',
 		// 'zigzag',
 	);

@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Image Hover Video
+ * WooCommerce Search form
  *
  * @author WolfThemes
  * @package WolfCore/Elementor/Widgets
@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Image_Hover_Video_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_WC_Search_Form extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -29,7 +29,7 @@ class Elementor_Image_Hover_Video_Widget extends \Elementor\Widget_Base { // php
 
 		parent::__construct( $data, $args );
 
-		$this->params = wolf_core_image_hover_video_params();
+		$this->params = wolf_core_wc_search_form_params();
 
 		if ( isset( $this->params['properties']['register_scripts'] ) ) {
 
@@ -158,8 +158,8 @@ class Elementor_Image_Hover_Video_Widget extends \Elementor\Widget_Base { // php
 			)
 		);
 
-		echo wolf_core_image_hover_video( $atts ); // WCS XSS ok.
+		echo wolf_core_wc_search_form( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Image_Hover_Video_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_WC_Search_Form() );
 

@@ -4656,6 +4656,10 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   display: inline-block;
 }
 
+.cta-container .wolf-core-socials-container {
+  flex-wrap: nowrap !important;
+}
+
 .wolf-core-social-icon {
   display: inline-block;
 }
@@ -5383,6 +5387,39 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   color: #0d0d0d;
 }
 
+.wolf-core-wc-search-form {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  line-height: 1.5;
+  max-width: 700px;
+  font-size: 2em;
+}
+.wolf-core-wc-search-form .search-field {
+  margin-bottom: 6px;
+}
+.wolf-core-wc-search-form .search-submit {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  outline: none;
+}
+
+@media screen and (min-width: 800px) {
+  .wolf-core-wc-search-form .woocommerce-product-search {
+    display: flex;
+    flex: 0 auto;
+    width: 100%;
+  }
+  .wolf-core-wc-search-form .woocommerce-product-search .search-field {
+    flex: 1;
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+  .wolf-core-wc-search-form .woocommerce-product-search .search-submit {
+    width: auto;
+  }
+}
 /**
  * @# Work Category Marquee
  **/

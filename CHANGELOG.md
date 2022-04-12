@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 12th April 2022 - Version 1.4.0
+
+-   Tweak: Added WooCommmerce Search form element
+
 #### 28th February 2022 - Version 1.3.9
 
 -   Fix: Default playlist color theme settings
