@@ -127,11 +127,22 @@ function wolf_core_team_member( $atts ) {
 	}
 
 	if ( $role ) {
-		$output .= '<span class="wolf-core-team-member-role" style="color:' . $text_color . '">' . $role . '</span>';
+		$output .= '<span class="wolf-core-team-member-role"';
+		if ( $text_color ) {
+			$output .= ' style="color:' . $text_color . '"';
+		}
+
+		$output .= '>' . $role . '</span>';
 	}
 
 	if ( $tagline ) {
-		$output .= '<div class="wolf-core-team-member-tagline" style="color:' . $text_color . '"><p>' . $tagline . '</p></div>';
+
+		$output .= '<span class="wolf-core-team-member-tagline"';
+		if ( $text_color ) {
+			$output .= ' style="color:' . $text_color . '"';
+		}
+
+		$output .= '><p>' . $tagline . '</p></span>';
 	}
 
 	if ( is_array( $link ) && isset( $link['url'] ) ) {
