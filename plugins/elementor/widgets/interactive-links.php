@@ -136,7 +136,7 @@ class Elementor_Interactive_Links_Widget extends \Elementor\Widget_Base { // php
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() { // phpcs:ignore
+	protected function register_controls() { // phpcs:ignore
 
 		wolf_core_register_elementor_controls( $this );
 	}

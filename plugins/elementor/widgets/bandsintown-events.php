@@ -97,7 +97,7 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base { // ph
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function register_controls() {
 
 		wolf_core_register_elementor_controls( $this );
 	}

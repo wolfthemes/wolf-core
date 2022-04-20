@@ -136,7 +136,7 @@ class Elementor_Team_Member_Widget extends \Elementor\Widget_Base { // phpcs:ign
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function register_controls() {
 
 		wolf_core_register_elementor_controls( $this );
 	}

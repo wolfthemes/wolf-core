@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 20th April 2022 - Version 1.4.1
+#### 20th April 2022 - Version 1.4.2
 
 -   Fix: Don't output Team member text style if empty
+-   Fix: Elementor _register_control depcrecated function
 #### 12th April 2022 - Version 1.4.0
 
 -   Tweak: Added WooCommmerce Search form element

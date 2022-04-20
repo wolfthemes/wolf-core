@@ -97,7 +97,7 @@ class Elementor_Content_Block_Widget extends \Elementor\Widget_Base { // phpcs:i
 	 * @version 1.0.0
 	 * @access protected
 	 */
-	protected function _register_controls() { // phpcs:ignore
+	protected function register_controls() { // phpcs:ignore
 
 		if ( 'wolf_content_block' === get_post_type() ) {
 			return;
