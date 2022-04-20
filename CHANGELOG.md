@@ -1,6 +1,9 @@
 
 # Changelog
 
+#### 20th April 2022 - Version 1.4.1
+
+-   Fix: Don't output Team member text style if empty
 #### 12th April 2022 - Version 1.4.0
 
 -   Tweak: Added WooCommmerce Search form element
