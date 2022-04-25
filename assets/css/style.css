@@ -486,6 +486,10 @@
   background: #fff;
 }
 
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 1400px;
+}
+
 /**
  * @# Lazyload
  **/

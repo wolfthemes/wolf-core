@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 25th April 2022 - Version 1.4.3
+
+-   Tweak: Set default Elementor content width to 1400px
+
 #### 20th April 2022 - Version 1.4.2
 
 -   Fix: Don't output Team member text style if empty

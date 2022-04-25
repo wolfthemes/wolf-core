@@ -1326,3 +1326,28 @@ function wolf_core_get_google_maps_api_key() {
 
 	return apply_filters( 'wolf_core_google_maps_api_key', $gmaps_api_key );
 }
+
+function wolf_core_set_default_kit_values() {
+
+	if ( get_option( '_wolf_core_set_default_kit_values' ) ) {
+		return;
+	}
+
+	/* Get default kit */
+	$default_kit_post = get_page_by_title( 'Default Kit', OBJECT, 'elementor_library');
+
+	if ( $default_kit_post ) {
+
+		$default_kit_post_id = $default_kit_post->ID;
+
+		$css_meta = array();
+		$css_meta['container_width'] = array();
+		$css_meta['container_width']['unit'] = 'px';
+		$css_meta['container_width']['size'] = '1400';
+
+		/* Update Default Kit */
+		update_post_meta( $default_kit_post_id, '_elementor_page_settings', $css_meta );
+		add_option( '_wolf_core_set_default_kit_values', true );
+	}
+}
+add_action( 'admin_init', 'wolf_core_set_default_kit_values' );
