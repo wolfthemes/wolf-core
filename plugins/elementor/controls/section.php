@@ -65,105 +65,79 @@ add_action(
 /**
  * Add parallax background option
  */
-add_action(
-	'elementor/element/section/section_background/before_section_end',
-	function( $section, $args ) {
-
-		// $section->add_control(
-		// 	'post_featured_img_bg',
-		// 	array(
-		// 		'label'        => esc_html__( 'Use post featured image', 'wolf-core' ),
-		// 		'description'  => esc_html__( 'The current post/page featured image will overwrite the above image if set.', 'wolf-core' ),
-		// 		'type'         => \Elementor\Controls_Manager::SWITCHER,
-		// 		'default'      => 'no',
-		// 		'return_value' => 'yes',
-		// 		'prefix_class' => 'wolf-core-row-post-featured-img-',
-		// 		'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-		// 		'label_off'    => esc_html__( 'No', 'wolf-core' ),
-		// 		'condition'    => array(
-		// 			'background_background' => array( 'classic' ),
-		// 		),
-		// 	)
-		// );
-
-		$section->add_control(
-			'parallax',
-			array(
-				'label'        => esc_html__( 'Parallax', 'wolf-core' ),
-				'description'  => esc_html__( 'Not visible in editor preview yet.', 'wolf-core' ),
-				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'default'      => 'no',
-				'return_value' => 'yes',
-				'prefix_class' => 'wolf-core-row-parallax-',
-				'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
-				'label_off'    => esc_html__( 'No', 'wolf-core' ),
-				'condition'    => array(
-					'background_background' => array( 'classic', 'video' ),
-				),
-			)
-		);
-	},
-	10,
-	2
-);
+function wolf_core_add_parallax_background_option( $section, $args )  {
+	$section->add_control(
+		'parallax',
+		array(
+			'label'        => esc_html__( 'Parallax', 'wolf-core' ),
+			'description'  => esc_html__( 'Not visible in editor preview yet.', 'wolf-core' ),
+			'type'         => \Elementor\Controls_Manager::SWITCHER,
+			'default'      => 'no',
+			'return_value' => 'yes',
+			'prefix_class' => 'wolf-core-row-parallax-',
+			'label_on'     => esc_html__( 'Yes', 'wolf-core' ),
+			'label_off'    => esc_html__( 'No', 'wolf-core' ),
+			'condition'    => array(
+				'background_background' => array( 'classic', 'video' ),
+			),
+		)
+	);
+}
+add_action( 'elementor/element/section/section_background/before_section_end', 'wolf_core_add_parallax_background_option', 10, 2 );
 
 /**
  * Render Section custom attributes
  */
-add_action(
-	'elementor/frontend/section/before_render',
-	function( $widget ) {
+function wolf_core_render_custom_attributes( $widget ) {
+	// Make sure we are in a section element.
+	if ( 'section' !== $widget->get_name() ) {
+		return;
+	}
 
-		// Make sure we are in a section element.
-		if ( 'section' !== $widget->get_name() ) {
-			return;
+	$settings = $widget->get_active_settings();
+
+	$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-elementor-row' );
+
+	if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
+
+		// debug( $settings );
+
+		if ( 'video' === $settings['background_background'] && isset( $settings['background_video_link'] ) ) {
+
+			wp_enqueue_script( 'jarallax-video' ); // enqeueue video parallax script.
+			$widget->add_render_attribute( '_wrapper', 'data-jarallax-video', esc_url( $settings['background_video_link'] ) );
+			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-video-parallax' );
+
+		} else {
+			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-parallax' );
 		}
+	}
 
-		$settings = $widget->get_active_settings();
+	/* Default font color */
+	if ( isset( $settings['font_color'] ) ) {
+		$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-font-' . esc_attr( $settings['font_color'] ) );
+	}
 
-		$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-elementor-row' );
+	/* Section ID and name data for one-page feature */
+	if ( isset( $settings['el_class'] ) ) {
+		$widget->add_render_attribute( '_wrapper', 'class', esc_attr( $settings['el_class'] ) );
+	}
 
-		if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
+	/* Section ID and name data for one-page feature */
+	if ( ! empty( $settings['name'] ) ) {
+		$section_id = sanitize_title( $settings['name'] );
+		$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-parent-row' );
+		$widget->add_render_attribute( '_wrapper', 'id', $section_id );
+		$widget->add_render_attribute( '_wrapper', 'data-anchor', $section_id );
+		$widget->add_render_attribute( '_wrapper', 'data-row-name', esc_attr( $settings['name'] ) );
+	}
 
-			// debug( $settings );
+	if ( isset( $settings['post_featured_img_bg'] ) && 'yes' === $settings['post_featured_img_bg'] ) {
 
-			if ( 'video' === $settings['background_background'] && isset( $settings['background_video_link'] ) ) {
-
-				wp_enqueue_script( 'jarallax-video' ); // enqeueue video parallax script.
-				$widget->add_render_attribute( '_wrapper', 'data-jarallax-video', esc_url( $settings['background_video_link'] ) );
-				$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-video-parallax' );
-
-			} else {
-				$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-parallax' );
-			}
+		if ( wolf_core_get_the_id() && get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) ) {
+			//$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-row-post-featured-img-bg' );
+			//$widget->add_render_attribute( '_wrapper', 'data-post-bg-image-url', get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) );
 		}
-
-		/* Default font color */
-		if ( isset( $settings['font_color'] ) ) {
-			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-font-' . esc_attr( $settings['font_color'] ) );
-		}
-
-		/* Section ID and name data for one-page feature */
-		if ( isset( $settings['el_class'] ) ) {
-			$widget->add_render_attribute( '_wrapper', 'class', esc_attr( $settings['el_class'] ) );
-		}
-
-		/* Section ID and name data for one-page feature */
-		if ( ! empty( $settings['name'] ) ) {
-			$section_id = sanitize_title( $settings['name'] );
-			$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-parent-row' );
-			$widget->add_render_attribute( '_wrapper', 'id', $section_id );
-			$widget->add_render_attribute( '_wrapper', 'data-anchor', $section_id );
-			$widget->add_render_attribute( '_wrapper', 'data-row-name', esc_attr( $settings['name'] ) );
-		}
-
-		if ( isset( $settings['post_featured_img_bg'] ) && 'yes' === $settings['post_featured_img_bg'] ) {
-
-			if ( wolf_core_get_the_id() && get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) ) {
-				//$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-row-post-featured-img-bg' );
-				//$widget->add_render_attribute( '_wrapper', 'data-post-bg-image-url', get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) );
-			}
-		}
-	},
-	10
-);
+	}
+}
+add_action( 'elementor/frontend/section/before_render', 'wolf_core_render_custom_attributes', 10 );
