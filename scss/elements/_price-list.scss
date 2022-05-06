@@ -1,0 +1,48 @@
+.wolf-core-price-list{
+	list-style: none;
+}
+
+.wolf-core-price-item {
+	list-style-type: none;
+	display: block;
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.wolf-core-price-item-title-container{
+	display: flex;
+	width: 100%;
+	align-items: baseline;
+}
+
+.wolf-core-price-item-title,
+.wolf-core-price-item-line,
+.wolf-core-price-item-price{
+
+}
+
+.wolf-core-price-item-title,
+.wolf-core-price-item-price{
+	white-space: nowrap;
+	width: auto;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.wolf-core-price-item-title {
+
+}
+
+.wolf-core-price-item-price {
+
+}
+
+.wolf-core-price-item-line{
+	border-bottom: 2px dotted #ddd;
+	flex-grow: 1;
+	margin: 0 10px;
+}
+
+.wolf-core-price-item-description{
+	display: block;
+}
