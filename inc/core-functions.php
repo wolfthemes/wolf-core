@@ -91,7 +91,7 @@ function wolf_core_get_elements() {
 		// 'pie',
 		'price-list',
 		'pricing-table',
-		'process',
+		//'process',
 		// 'process-container',
 		// 'process-item',
 		// 'progress-bar',

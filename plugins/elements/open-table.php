@@ -21,14 +21,20 @@ function wolf_core_open_table( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-
+				'rid'         => '412810',
+				'lang'        => 'en-US',
+				'theme'       => 'wide',
+				'color'       => '2',
+				'dark'        => 'false',
+				'newtab'      => 'false',
+				'ot_campaign' => '',
 			)
 		)
 	);
 
 	extract( $atts ); // phpcs:ignore
 
-	$output = '';
+	$output = "<script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=$rid&type=standard&theme=$theme&color=$color&dark=$dark&iframe=false&domain=com&lang=$lang&newtab=$newtab&ot_source=Restaurant%20website&ot_campaign=$ot_campaign'></script>";
 
 	$class = $el_class; // init container CSS class.
 

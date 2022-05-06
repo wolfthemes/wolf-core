@@ -26,7 +26,7 @@ function wolf_core_process_params() {
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'el_base'       => 'process',
-				'icon'          => 'far fa-clock',
+				'icon'          => 'far fa-lightbulb',
 			),
 			'params'     => array(
 				array(
@@ -43,10 +43,10 @@ function wolf_core_process_params() {
 					'label'      => esc_html__( 'Size', 'wolf-core' ),
 					'param_name' => 'size',
 					'options'    => array(
-						'medium'      => esc_html__( 'Medium', 'wolf-visual-composer' ),
-						'small'       => esc_html__( 'Small', 'wolf-visual-composer' ),
-						'large'       => esc_html__( 'Large', 'wolf-visual-composer' ),
-						'extra-large' => esc_html__( 'Extra Large', 'wolf-visual-composer' ),
+						'medium'      => esc_html__( 'Medium', 'wolf-core' ),
+						'small'       => esc_html__( 'Small', 'wolf-core' ),
+						'large'       => esc_html__( 'Large', 'wolf-core' ),
+						'extra-large' => esc_html__( 'Extra Large', 'wolf-core' ),
 					),
 				),
 				array(
@@ -56,18 +56,63 @@ function wolf_core_process_params() {
 				),
 				array(
 					'type'       => 'repeater',
-					'param_name' => 'hours',
-					'label'      => esc_html__( 'Hours', 'wolf-core' ),
+					'param_name' => 'items',
+					'label'      => esc_html__( 'Items', 'wolf-core' ),
 					'params'     => array(
 
 						array(
-							'label'      => esc_html__( 'Day', 'wolf-core' ),
-							'param_name' => 'day',
+							'label'      => esc_html__( 'Title', 'wolf-core' ),
+							'param_name' => 'title',
 						),
 
 						array(
-							'label'      => esc_html__( 'Hours', 'wolf-core' ),
-							'param_name' => 'hours',
+							'type'       => 'select',
+							'label'      => esc_html__( 'Type', 'wolf-core' ),
+							'param_name' => 'type',
+							'options'    => array(
+								'icon'   => esc_html__( 'Icon', 'wolf-core' ),
+								'number' => esc_html__( 'Number', 'wolf-core' ),
+								'none'   => esc_html__( 'None', 'wolf-core' ),
+							),
+						),
+
+						array(
+							'param_name'  => 'selected_icon',
+							'type'        => 'icon',
+							'label'       => esc_html__( 'Icon', 'wolf-core' ),
+							'default'     => array(
+								'value'   => apply_filters( 'wolf_core_default_icon', 'fa fa-rocket' ),
+								'library' => apply_filters( 'wolf_core_default_icon_font', 'fontawesome' ),
+							),
+							'condition'   => array(
+								'type' => 'icon',
+							),
+						),
+
+						array(
+							'label'      => esc_html__( 'Icon Color', 'wolf-core' ),
+							'type'       => 'colorpicker',
+							'param_name' => 'icon_color',
+							'condition'   => array(
+								'type' => 'icon',
+							),
+						),
+
+						array(
+							'label'      => esc_html__( 'Background', 'wolf-core' ),
+							'type'       => 'image',
+							'param_name' => 'background',
+						),
+
+						array(
+							'label'      => esc_html__( 'Text', 'wolf-core' ),
+							'param_name' => 'text',
+						),
+
+						array(
+							'label'      => esc_html__( 'Link', 'wolf-core' ),
+							'type'       => 'link',
+							'param_name' => 'link',
 						),
 					),
 				),

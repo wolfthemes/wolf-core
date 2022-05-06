@@ -93,6 +93,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		'image'       => \Elementor\Controls_Manager::MEDIA,
 		'audio'       => \Elementor\Controls_Manager::MEDIA,
 		'video'       => \Elementor\Controls_Manager::MEDIA,
+		'icon'        => \Elementor\Controls_Manager::ICON,
 		'colorpicker' => \Elementor\Controls_Manager::COLOR,
 		'background'  => '',
 	);
