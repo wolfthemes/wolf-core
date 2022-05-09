@@ -34,7 +34,7 @@ function wolf_core_open_table( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	$output = "<script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=$rid&type=standard&theme=$theme&color=$color&dark=$dark&iframe=false&domain=com&lang=$lang&newtab=$newtab&ot_source=Restaurant%20website&ot_campaign=$ot_campaign'></script>";
+	$output = "<script type='text/javascript' src='https://www.opentable.com/widget/reservation/loader?rid=$rid&type=standard&theme=$theme&color=$color&dark=$dark&iframe=false&domain=com&lang=$lang&newtab=$newtab&ot_source=Restaurant%20website&ot_campaign=$ot_campaign'></script>";
 
 	$class = $el_class; // init container CSS class.
 

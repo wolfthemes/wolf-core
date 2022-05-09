@@ -1,0 +1,30 @@
+/**
+ * @# Open Table
+ **/
+.ot-dtp-picker{
+	table th,
+	table td{
+		padding: 0;
+	}
+}
+
+.ot-dtp-picker{
+	margin: 0 auto;
+}
+.ot-dtp-picker.wide{
+	//display: flex;
+	width: 960px;
+	//align-items: center;
+
+	.ot-dtp-picker-form{
+		display: flex;
+	}
+
+	.ot-title{
+		min-width: 210px;
+		line-height: 1.5;
+		position: relative;
+		top: 5px;
+		display: none;
+	}
+}

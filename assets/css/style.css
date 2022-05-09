@@ -3559,7 +3559,12 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   font-size: inherit !important;
 }
 
+/**
+ * @# Hour List
+ **/
 .wolf-core-hour-list {
+  margin: 0;
+  padding: 0;
   margin-bottom: 14px;
   list-style: none;
 }
@@ -4611,6 +4616,33 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 }
 
 /**
+ * @# Open Table
+ **/
+.ot-dtp-picker table th,
+.ot-dtp-picker table td {
+  padding: 0;
+}
+
+.ot-dtp-picker {
+  margin: 0 auto;
+}
+
+.ot-dtp-picker.wide {
+  display: flex;
+  width: 960px;
+  align-items: center;
+}
+.ot-dtp-picker.wide .ot-dtp-picker-form {
+  display: flex;
+}
+.ot-dtp-picker.wide .ot-title {
+  min-width: 210px;
+  line-height: 1.5;
+  position: relative;
+  top: 5px;
+}
+
+/**
  * @# Playlist
  **/
 .elementor-widget-container .wpm-sticky-playlist-container {
@@ -4640,8 +4672,13 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   padding-right: 10px;
 }
 
+/**
+ * @# Price list
+ **/
 .wolf-core-price-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .wolf-core-price-item {
