@@ -4628,9 +4628,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 }
 
 .ot-dtp-picker.wide {
-  display: flex;
   width: 960px;
-  align-items: center;
 }
 .ot-dtp-picker.wide .ot-dtp-picker-form {
   display: flex;
@@ -4640,6 +4638,7 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   line-height: 1.5;
   position: relative;
   top: 5px;
+  display: none;
 }
 
 /**

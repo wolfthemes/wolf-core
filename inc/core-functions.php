@@ -1344,8 +1344,8 @@ function wolf_core_set_default_kit_values() {
 
 		$css_meta = array();
 		$css_meta['container_width'] = array();
-		$css_meta['container_width']['unit'] = 'px';
-		$css_meta['container_width']['size'] = '1400';
+		$css_meta['container_width']['unit'] = apply_filters( 'wolf_core_default_elementor_container_width_unit', 'px' );
+		$css_meta['container_width']['size'] = apply_filters( 'wolf_core_default_elementor_container_width_size', '1400' );
 
 		/* Update Default Kit */
 		update_post_meta( $default_kit_post_id, '_elementor_page_settings', $css_meta );

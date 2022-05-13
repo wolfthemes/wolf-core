@@ -83,7 +83,7 @@ function wolf_core_process( $atts ) {
 
 		$graphic_inline_style = $graphic_class = '';
 
-		$output = '<li class="' . wolf_core_sanitize_html_classes( $container_class ) . '">';
+		$output .= '<li class="' . wolf_core_sanitize_html_classes( $container_class ) . '">';
 
 		$class               .= ' wolf-core-icon-box wolf-core-icon-position-top wolf-core-icon-background-style-rounded-outline ';
 		$bg_style             = '';

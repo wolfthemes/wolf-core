@@ -337,7 +337,7 @@ function wolf_core_social_icons_params() {
 				),
 
 				array(
-					'type'        => 'dropdown',
+					'type'        => 'select',
 					'label'       => esc_html__( 'Hover Transition', 'wolf-core' ),
 					'param_name'  => 'hover_effect',
 					'options'     => array(
