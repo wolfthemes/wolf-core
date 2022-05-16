@@ -121,11 +121,11 @@ function wolf_core_button( $atts ) {
 			$button_link_atts
 		);
 
-		$output .= '<a ' . wolf_core_render_html_attributes( $button_link_atts ) . '>';
+		$output .= '<a ' . wolf_core_render_html_attributes( $button_link_atts ) . ' id="' . esc_attr( $button_css_id ) . '">';
 
 	} else {
 
-		$output .= '<span ' . wolf_core_render_html_attributes( $button_link_atts ) . '>';
+		$output .= '<span ' . wolf_core_render_html_attributes( $button_link_atts ) . ' id="' . esc_attr( $button_css_id ) . '">';
 	}
 
 	if ( $add_icon && 'left' === $icon_align ) {
