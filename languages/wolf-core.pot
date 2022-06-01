@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.4.3\n"
+"Project-Id-Version: Wolf Core 1.4.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2022-05-16 09:02:42+00:00\n"
+"POT-Creation-Date: 2022-06-01 07:41:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6881,10 +6881,9 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/vc/deprecated/wvc_icon.php:460
 #: pack/wolf-core/plugins/params/icon.php:295
 #: pack/wolf-core/plugins/params/social-icons-custom.php:330
-#: pack/wolf-core/plugins/params/social-icons.php:350
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:460
 #: plugins/params/icon.php:295 plugins/params/social-icons-custom.php:330
-#: plugins/params/social-icons.php:350 plugins/vc/deprecated/wvc_icon.php:460
+#: plugins/vc/deprecated/wvc_icon.php:460
 msgid "Rotate"
 msgstr ""
 
@@ -7343,30 +7342,27 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/params/social-icons.php:310
 #: pack/dist/wolf-core/plugins/vc/deprecated/wvc_icon.php:456
 #: pack/wolf-core/plugins/params/social-icons-custom.php:326
-#: pack/wolf-core/plugins/params/social-icons.php:346
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:456
 #: plugins/params/social-icons-custom.php:326
-#: plugins/params/social-icons.php:346 plugins/vc/deprecated/wvc_icon.php:456
+#: plugins/vc/deprecated/wvc_icon.php:456
 msgid "Inset border"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/social-icons.php:311
 #: pack/dist/wolf-core/plugins/vc/deprecated/wvc_icon.php:457
 #: pack/wolf-core/plugins/params/social-icons-custom.php:327
-#: pack/wolf-core/plugins/params/social-icons.php:347
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:457
 #: plugins/params/social-icons-custom.php:327
-#: plugins/params/social-icons.php:347 plugins/vc/deprecated/wvc_icon.php:457
+#: plugins/vc/deprecated/wvc_icon.php:457
 msgid "Sonar"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/social-icons.php:312
 #: pack/dist/wolf-core/plugins/vc/deprecated/wvc_icon.php:458
 #: pack/wolf-core/plugins/params/social-icons-custom.php:328
-#: pack/wolf-core/plugins/params/social-icons.php:348
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:458
 #: plugins/params/social-icons-custom.php:328
-#: plugins/params/social-icons.php:348 plugins/vc/deprecated/wvc_icon.php:458
+#: plugins/vc/deprecated/wvc_icon.php:458
 msgid "Fill"
 msgstr ""
 
@@ -9794,6 +9790,11 @@ msgstr ""
 #: plugins/params/social-icons-custom.php:88
 #: plugins/params/social-icons.php:108
 msgid "Display Acronym instead of icon"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/social-icons.php:347
+#: plugins/params/social-icons.php:347
+msgid "Shrink"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/testimonial-slider.php:46

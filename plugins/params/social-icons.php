@@ -343,11 +343,11 @@ function wolf_core_social_icons_params() {
 					'options'     => array(
 						'none'         => esc_html__( 'None', 'wolf-core' ),
 						'opacity'      => esc_html__( 'Opacity', 'wolf-core' ),
-						'border-inset' => esc_html__( 'Inset border', 'wolf-core' ),
-						'sonar'        => esc_html__( 'Sonar', 'wolf-core' ),
-						'fill'         => esc_html__( 'Fill', 'wolf-core' ),
+						//'border-inset' => esc_html__( 'Inset border', 'wolf-core' ),
+						'sonar'        => esc_html__( 'Shrink', 'wolf-core' ),
+						//'fill'         => esc_html__( 'Fill', 'wolf-core' ),
 						'pop'          => esc_html__( 'Pop', 'wolf-core' ),
-						'rotate'       => esc_html__( 'Rotate', 'wolf-core' ),
+						//'rotate'       => esc_html__( 'Rotate', 'wolf-core' ),
 					),
 					// 'description' => esc_html__( 'Custom hover effects won\'t apply to icon with custom colors settings', 'wolf-core' ),
 					'condition'   => array(
