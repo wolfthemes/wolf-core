@@ -1897,3 +1897,10 @@
     width: calc(60% - 35px);
   }
 }
+.we-date-format-custom {
+  width: 35px;
+}
+
+table.variations th.label {
+  border: none;
+}
