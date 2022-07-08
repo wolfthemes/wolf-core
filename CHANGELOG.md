@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 8th July 2022 - Version 1.4.5
+
+-   Tweak: Disable Spotify button (deprecated by Spotify)
+
 #### 25th April 2022 - Version 1.4.4
 
 -   Tweak: Added social icon hover effect options

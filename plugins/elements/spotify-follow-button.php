@@ -35,6 +35,8 @@ function wolf_core_spotify_follow_button( $atts ) {
 		)
 	);
 
+	return;
+
 	extract( $atts ); // phpcs:ignore
 
 	$output      = '';
