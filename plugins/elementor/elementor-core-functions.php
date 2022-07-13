@@ -95,6 +95,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		'video'       => \Elementor\Controls_Manager::MEDIA,
 		'icon'        => \Elementor\Controls_Manager::ICON,
 		'colorpicker' => \Elementor\Controls_Manager::COLOR,
+		'number'      => \Elementor\Controls_Manager::NUMBER,
 		'background'  => '',
 	);
 
@@ -241,6 +242,13 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::COLOR;
 
+		} elseif ( 'number' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::NUMBER;
+			$field_params['min']  = ( isset( $p['min'] ) ) ? $p['min'] : 0;
+			$field_params['max']  = ( isset( $p['max'] ) ) ? $p['max'] : 100;
+			$field_params['step'] = ( isset( $p['step'] ) ) ? $p['step'] : 1;
+
 		} elseif ( 'slider' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::SLIDER;
@@ -254,7 +262,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['size_units'] = isset( $p['size_units'] ) ? $p['size_units'] : array( '%' );
 
-
 			if ( isset( $p['range'] ) ) {
 				$field_params['range'] = $p['range'];
 			} else {
@@ -264,7 +271,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					'step' => ( isset( $p['step'] ) ) ? $p['step'] : 1,
 				);
 			}
-
 		} elseif ( 'dimensions' === $type ) {
 
 			$field_params['type']       = \Elementor\Controls_Manager::DIMENSIONS;
