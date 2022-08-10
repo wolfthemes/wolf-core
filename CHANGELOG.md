@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 14th July 2022 - Version 1.4.6
+
+-   Tweak: Added number param type
+
 #### 8th July 2022 - Version 1.4.5
 
 -   Tweak: Disable Spotify button (deprecated by Spotify)
