@@ -38,7 +38,7 @@ function wolf_core_get_elements() {
 		// 'bandsintown-tracking-button', // added in themes
 		// 'banner-gallery',
 		// 'banner-product',
-		//'banner',
+		// 'banner',
 		'bigtext',
 		'blockquote',
 		'breadcrumb',
@@ -91,7 +91,7 @@ function wolf_core_get_elements() {
 		// 'pie',
 		'price-list',
 		'pricing-table',
-		//'process',
+		// 'process',
 		// 'process-container',
 		// 'process-item',
 		// 'progress-bar',
@@ -100,7 +100,7 @@ function wolf_core_get_elements() {
 		// 'separator',
 		// 'service-table',
 		'social-icons',
-		//'social-icons-custom',
+		// 'social-icons-custom',
 		// 'single-image',
 		// 'soundcloud',
 		// 'span',
@@ -135,7 +135,7 @@ function wolf_core_get_elements() {
 
 	if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 		$wolf_core_elements[] = 'heading';
-		//$wolf_core_elements[] = 'interactive-links';
+		// $wolf_core_elements[] = 'interactive-links';
 	}
 
 	if ( 'vc' === wolf_core_get_plugin_in_use() ) {
@@ -156,7 +156,7 @@ function wolf_core_get_elements() {
 	}
 
 	if ( 'elementor' === wolf_core_get_plugin_in_use() ) { // and not Elementor Pro?
-		//$wolf_core_elements[] = 'blockquote';
+		// $wolf_core_elements[] = 'blockquote';
 	}
 
 	if ( function_exists( 'sb_instagram_feed_init' ) ) {
@@ -267,11 +267,8 @@ function wolf_core_mime_types( $mimes ) {
 	$mimes['svgz'] = 'image/svg+xml';
 	$mimes['webp'] = 'image/webp';
 	$mimes['csv']  = 'text/csv';
-
-	if ( class_exists( 'PixProofPlugin' ) ) {
-		$mimes['zip'] = 'application/zip';
-		$mimes['gz']  = 'application/x-gzip';
-	}
+	$mimes['zip']  = 'application/zip';
+	$mimes['gz']   = 'application/x-gzip';
 
 	return $mimes;
 }
@@ -331,7 +328,7 @@ function wolf_core_get_socials() {
 		'flickr',
 		'foursquare',
 		'github',
-		//'google',
+		// 'google',
 		'twitter',
 		'instagram',
 		'linkedin',
@@ -352,8 +349,8 @@ function wolf_core_get_socials() {
 		'tripadvisor',
 		'skype',
 		'snapchat',
-		//'itunes',
-		//'delicious',
+		// 'itunes',
+		// 'delicious',
 		'stumbleupon',
 		// 'forrst',
 		// 'evernote',
@@ -445,35 +442,35 @@ function wolf_core_get_team_member_socials() {
  */
 // function wolf_core_animated_svg( $file, $args = array() ) {
 
-// 	$args = wp_parse_args(
-// 		$args,
-// 		array(
-// 			'class'              => '',
-// 			'animation_duration' => '',
-// 		)
-// 	);
+// $args = wp_parse_args(
+// $args,
+// array(
+// 'class'              => '',
+// 'animation_duration' => '',
+// )
+// );
 
-// 	wp_enqueue_script( 'vivus' );
-// 	wp_enqueue_script( 'wolf-core-vivus' );
+// wp_enqueue_script( 'vivus' );
+// wp_enqueue_script( 'wolf-core-vivus' );
 
-// 	extract( $args );
+// extract( $args );
 
-// 	$class .= ' wolf-core-vivus wolf-core-svg-icon';
+// $class .= ' wolf-core-vivus wolf-core-svg-icon';
 
-// 	$rand = 'wolf-core-svg-' . wp_rand( 0, 999999 ); // unique ID.
+// $rand = 'wolf-core-svg-' . wp_rand( 0, 999999 ); // unique ID.
 
-// 	$output = '';
+// $output = '';
 
-// 	$output .= '<span id="' . esc_attr( $rand ) . '" class="' . wolf_core_sanitize_html_classes( $class ) . '"
-// 	data-file="' . esc_url( $file ) . '"';
+// $output .= '<span id="' . esc_attr( $rand ) . '" class="' . wolf_core_sanitize_html_classes( $class ) . '"
+// data-file="' . esc_url( $file ) . '"';
 
-// 	if ( $animation_duration ) {
-// 		$output .= ' data-animation-duration="' . absint( $animation_duration ) . '"';
-// 	}
+// if ( $animation_duration ) {
+// $output .= ' data-animation-duration="' . absint( $animation_duration ) . '"';
+// }
 
-// 	$output .= '></span>';
+// $output .= '></span>';
 
-// 	return $output;
+// return $output;
 // }
 
 /**
@@ -1336,14 +1333,14 @@ function wolf_core_set_default_kit_values() {
 	}
 
 	/* Get default kit */
-	$default_kit_post = get_page_by_title( 'Default Kit', OBJECT, 'elementor_library');
+	$default_kit_post = get_page_by_title( 'Default Kit', OBJECT, 'elementor_library' );
 
 	if ( $default_kit_post ) {
 
 		$default_kit_post_id = $default_kit_post->ID;
 
-		$css_meta = array();
-		$css_meta['container_width'] = array();
+		$css_meta                            = array();
+		$css_meta['container_width']         = array();
 		$css_meta['container_width']['unit'] = apply_filters( 'wolf_core_default_elementor_container_width_unit', 'px' );
 		$css_meta['container_width']['size'] = apply_filters( 'wolf_core_default_elementor_container_width_size', '1400' );
 

@@ -15,7 +15,7 @@ var WolfCoreMarquee = function( $ ) {
 		init : function () {
 			$( ".wolf-core-marquee-text" ).marquee({
 				direction: "left",
-				duration: ($(window).width() < 768 ? 5000 : 15000),
+				duration: ($(window).width() < 768 ? 5000 : 20000),
 				gap: 0,
 				delayBeforeStart: 0,
 				duplicated: true,
