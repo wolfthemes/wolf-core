@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 31th August 2022 - Version 1.4.7
+
+-   Tweak: Added gallery html tag data attribute filter
+
 #### 14th July 2022 - Version 1.4.6
 
 -   Tweak: Added number param type
