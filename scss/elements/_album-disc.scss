@@ -43,6 +43,12 @@
 	//0px 10px 7px -2px rgba(255,255,255,0.14); // whit bottom
 	//padding: 2px;
 	overflow: hidden;
+
+}
+
+.wolf-core-album-cover-reveal{
+	transform: translate3d(20%, 0, 0);
+	transition: all 0.7s cubic-bezier(0, 0.45, 0.54, 0.99);
 }
 
 .wolf-core-album-disc-disc-inner {
@@ -50,6 +56,7 @@
 	//z-index: 0;
 	width: 100%;
 	height: 100%;
+
 }
 
 .wolf-core-album-disc-cover-img {
@@ -176,6 +183,10 @@
 	transform: translate3d(40%, 0, 0) rotate(-42deg);
 }
 
+.animated.wolf-core-album-cover-reveal {
+	transform: translate3d(0, 0, 0);
+}
+
 .wolf-core-album-disc-has-link:hover {
 	.wolf-core-album-disc-disc-inner {
 		//margin-left: 15px;
@@ -217,10 +228,20 @@
 	.wolf-core-album-disc-reveal {
 		transform: translate3d(40%, 0, 0) rotate(-42deg);
 	}
+
+	.wolf-core-album-cover-reveal {
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 .elementor-editor-active {
 	.wolf-core-album-disc-disc-container {
+		visibility: visible;
+		transform: translate3d(40%, 0, 0) rotate(-42deg);
+	}
+
+	.wolf-core-album-cover-reveal {
 		visibility: visible;
 		transform: translate3d(40%, 0, 0) rotate(-42deg);
 	}

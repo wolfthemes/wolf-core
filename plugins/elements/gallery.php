@@ -201,7 +201,7 @@ function wolf_core_gallery( $atts ) {
 		}
 	}
 
-	$output .= '<div ' . $carousel_data . ' class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+	$output .= '<div ' . apply_filters( 'wolf_core_gallery_data_atts', '', $atts ) . ' ' . $carousel_data . ' class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	if ( ! $css_animation_each ) {
 		$output .= wolf_core_element_aos_animation_data_attr( $atts );

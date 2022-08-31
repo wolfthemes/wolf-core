@@ -130,7 +130,7 @@ function wolf_core_album_disc( $atts ) {
 
 	if ( $cover_image ) {
 
-		$output .= '<div class="wolf-core-album-disc-cover-inner">';
+		$output .= '<div class="wolf-core-album-disc-cover-inner wow wolf-core-album-cover-reveal">';
 
 		if ( wp_attachment_is_image( $cover_image ) ) {
 

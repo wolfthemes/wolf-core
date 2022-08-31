@@ -873,18 +873,18 @@ function wolf_core_get_metro_img_size( $pattern = 'auto', $i = 0 ) {
 function wolf_core_get_hover_effects() {
 
 	$wolf_core_hover_effects = array(
-		'default'         => esc_html__( 'Theme Default', 'wolf-visual-composer' ),
-		'opacity'         => esc_html__( 'Opacity', 'wolf-visual-composer' ),
-		'opacity-reverse' => esc_html__( 'Opacity Reversed', 'wolf-visual-composer' ),
-		'zoomin'          => esc_html__( 'Zoom In', 'wolf-visual-composer' ),
-		'zoomout'         => esc_html__( 'Zoom Out', 'wolf-visual-composer' ),
-		'move-left'       => esc_html__( 'Move Left', 'wolf-visual-composer' ),
-		'move-right'      => esc_html__( 'Move Right', 'wolf-visual-composer' ),
-		'move-up'         => esc_html__( 'Move Up', 'wolf-visual-composer' ),
-		'move-down'       => esc_html__( 'Move Down', 'wolf-visual-composer' ),
-		'up'              => esc_html__( 'Up', 'wolf-visual-composer' ),
-		'greyscale'       => esc_html__( 'Black and white to colored', 'wolf-visual-composer' ),
-		'to-greyscale'    => esc_html__( 'Colored to Black and white', 'wolf-visual-composer' ),
+		'default'         => esc_html__( 'Theme Default', 'wolf-core' ),
+		'opacity'         => esc_html__( 'Opacity', 'wolf-core' ),
+		'opacity-reverse' => esc_html__( 'Opacity Reversed', 'wolf-core' ),
+		'zoomin'          => esc_html__( 'Zoom In', 'wolf-core' ),
+		'zoomout'         => esc_html__( 'Zoom Out', 'wolf-core' ),
+		'move-left'       => esc_html__( 'Move Left', 'wolf-core' ),
+		'move-right'      => esc_html__( 'Move Right', 'wolf-core' ),
+		'move-up'         => esc_html__( 'Move Up', 'wolf-core' ),
+		'move-down'       => esc_html__( 'Move Down', 'wolf-core' ),
+		'up'              => esc_html__( 'Up', 'wolf-core' ),
+		'greyscale'       => esc_html__( 'Black and white to colored', 'wolf-core' ),
+		'to-greyscale'    => esc_html__( 'Colored to Black and white', 'wolf-core' ),
 	);
 
 	return apply_filters( 'wolf_core_hover_effects', $wolf_core_hover_effects );

@@ -2095,6 +2095,11 @@ body.wolf-core-svg #swipebox-close {
   overflow: hidden;
 }
 
+.wolf-core-album-cover-reveal {
+  transform: translate3d(20%, 0, 0);
+  transition: all 0.7s cubic-bezier(0, 0.45, 0.54, 0.99);
+}
+
 .wolf-core-album-disc-disc-inner {
   width: 100%;
   height: 100%;
@@ -2207,6 +2212,10 @@ body.wolf-core-svg #swipebox-close {
   transform: translate3d(40%, 0, 0) rotate(-42deg);
 }
 
+.animated.wolf-core-album-cover-reveal {
+  transform: translate3d(0, 0, 0);
+}
+
 .wolf-core-album-disc-rotate-always .wolf-core-album-disc-disc-inner,
 .wolf-core-album-disc-rotate-hover .wolf-core-album-disc-disc-inner,
 .wolf-core-album-disc-rotate-hover-stop .wolf-core-album-disc-disc-inner {
@@ -2230,8 +2239,16 @@ body.wolf-core-svg #swipebox-close {
 .wolf-core-no-animations .wolf-core-album-disc-reveal {
   transform: translate3d(40%, 0, 0) rotate(-42deg);
 }
+.wolf-core-no-animations .wolf-core-album-cover-reveal {
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
 
 .elementor-editor-active .wolf-core-album-disc-disc-container {
+  visibility: visible;
+  transform: translate3d(40%, 0, 0) rotate(-42deg);
+}
+.elementor-editor-active .wolf-core-album-cover-reveal {
   visibility: visible;
   transform: translate3d(40%, 0, 0) rotate(-42deg);
 }

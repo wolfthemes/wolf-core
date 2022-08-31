@@ -149,7 +149,7 @@ function wolf_core_gallery_params() {
 					'default'    => 'yes',
 				),
 
-				array(
+				'hover_effect' => array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Hover Effect', 'wolf-core' ),
 					'param_name' => 'hover_effect',
