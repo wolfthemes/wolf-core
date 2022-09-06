@@ -66,6 +66,12 @@ $move-final: calc(-50% + 20vw);
 	line-height: 1.15;
 }
 
+.wolf-core-marquee-direction-right{
+	.wolf-core-marquee__inner {
+		animation-direction: reverse;
+	}
+}
+
 @keyframes marquee {
 	0% {
 		transform: translate3d($move-initial, 0, 0);

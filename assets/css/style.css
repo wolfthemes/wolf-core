@@ -4656,6 +4656,10 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   line-height: 1.15;
 }
 
+.wolf-core-marquee-direction-right .wolf-core-marquee__inner {
+  animation-direction: reverse;
+}
+
 @keyframes marquee {
   0% {
     transform: translate3d(calc(-25% + 20vw), 0, 0);

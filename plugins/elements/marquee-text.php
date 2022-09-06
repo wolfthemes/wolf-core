@@ -21,18 +21,23 @@ function wolf_core_marquee_text( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'text' => '',
+				'text'      => '',
+				'direction' => 'left',
 			)
 		)
 	);
 
 	extract( $atts ); // phpcs:ignore
 
+
+
 	$output = '';
 
 	$class = $el_class; // init container CSS class.
 
 	$class .= ' wolf-core-marquee-container wolf-core-element';
+
+	$class .= ' wolf-core-marquee-direction-' . $direction;
 
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );

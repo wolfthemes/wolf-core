@@ -20,30 +20,29 @@ function wolf_core_marquee_text_params() {
 		'wolf_core_marquee_text_params',
 		array(
 			'properties' => array(
-				'name'             => esc_html__( 'Marquee Text', 'wolf-core' ),
+				'name'          => esc_html__( 'Marquee Text', 'wolf-core' ),
 				// 'description'   => esc_html__( 'Description.', 'wolf-core' ),
-				'vc_base'          => 'wolf_core_marquee_text',
-				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
-				'el_categories'    => array( 'extension' ),
-				'el_base'          => 'marquee_text',
-				'icon'             => 'linea-software linea-software-font-tracking',
-				// 'register_scripts' => array(
-				// 	'jquery-marquee'    => array(
-				// 		'src'     => 'https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js',
-				// 		'version' => WOLF_CORE_VERSION,
-				// 	),
-				// 	'wolf-core-marquee' => array(
-				// 		'src'     => WOLF_CORE_JS . '/marquee.js',
-				// 		'version' => WOLF_CORE_VERSION,
-				// 	),
-				// ),
-				// 'scripts'          => array( 'jquery-marquee', 'wolf-core-marquee' ),
+				'vc_base'       => 'wolf_core_marquee_text',
+				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
+				'el_categories' => array( 'extension' ),
+				'el_base'       => 'marquee_text',
+				'icon'          => 'linea-software linea-software-font-tracking',
 			),
 			'params'     => array(
 				array(
 					'type'       => 'text',
 					'label'      => esc_html__( 'Text', 'wolf-core' ),
 					'param_name' => 'text',
+				),
+
+				array(
+					'type'       => 'select',
+					'label'      => esc_html__( 'Direction', 'wolf-core' ),
+					'param_name' => 'direction',
+					'options'    => array(
+						'right' => esc_html__( 'To the right', 'wolf-core' ),
+						'left'  => esc_html__( 'To the left', 'wolf-core' ),
+					),
 				),
 
 				array(
@@ -62,6 +61,17 @@ function wolf_core_marquee_text_params() {
 					'page_builder' => 'elementor',
 					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-marquee-text' => 'color: {{VALUE}};',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Background Color', 'wolf-core' ),
+					'param_name'   => 'bg_color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .elementor-widget-container' => 'background-color: {{VALUE}};',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
