@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 31th August 2022 - Version 1.4.7
+#### 6th September 2022 - Version 1.4.8
 
+-   Tweak: Improved marquee element (CSS only)
 -   Tweak: Added gallery html tag data attribute filter
 
 #### 14th July 2022 - Version 1.4.6
