@@ -27,17 +27,17 @@ function wolf_core_marquee_text_params() {
 				'el_categories'    => array( 'extension' ),
 				'el_base'          => 'marquee_text',
 				'icon'             => 'linea-software linea-software-font-tracking',
-				'register_scripts' => array(
-					'jquery-marquee'    => array(
-						'src'     => 'https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js',
-						'version' => WOLF_CORE_VERSION,
-					),
-					'wolf-core-marquee' => array(
-						'src'     => WOLF_CORE_JS . '/marquee.js',
-						'version' => WOLF_CORE_VERSION,
-					),
-				),
-				'scripts'          => array( 'jquery-marquee', 'wolf-core-marquee' ),
+				// 'register_scripts' => array(
+				// 	'jquery-marquee'    => array(
+				// 		'src'     => 'https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js',
+				// 		'version' => WOLF_CORE_VERSION,
+				// 	),
+				// 	'wolf-core-marquee' => array(
+				// 		'src'     => WOLF_CORE_JS . '/marquee.js',
+				// 		'version' => WOLF_CORE_VERSION,
+				// 	),
+				// ),
+				// 'scripts'          => array( 'jquery-marquee', 'wolf-core-marquee' ),
 			),
 			'params'     => array(
 				array(
