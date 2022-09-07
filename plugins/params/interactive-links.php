@@ -40,6 +40,38 @@ function wolf_core_interactive_links_params() {
 				'scripts'          => array( 'wolf-core-youtube-video-bg', 'wolf-core-interactive-links' ),
 			),
 			'params'     => array(
+
+				array(
+					'type'         => 'typography',
+					'label'        => esc_html__( 'Typography', 'wolf-core' ),
+					'param_name'   => 'typography',
+					'selector'     => '{{WRAPPER}} .wolf-core-interactive-link-text',
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
+					'param_name'   => 'color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-interactive' => 'color: {{VALUE}};',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Color Active', 'wolf-core' ),
+					'param_name'   => 'color_active',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-interactive-link.link-active' => 'color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
 				array(
 					'type'       => 'repeater',
 					'param_name' => 'panels',
