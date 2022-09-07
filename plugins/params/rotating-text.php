@@ -64,6 +64,12 @@ function wolf_core_rotating_text_params() {
 				),
 
 				array(
+					'type'        => 'checkbox',
+					'label'       => esc_html__( 'Scroll link (smooth scroll to anchor)', 'wolf-core' ),
+					'param_name'  => 'scroll_link',
+				),
+
+				array(
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Animation Speed', 'wolf-core' ),
 					'param_name' => 'rotating_speed',
@@ -171,6 +177,17 @@ function wolf_core_rotating_text_params() {
 					'page_builder' => 'elementor',
 					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-rotating-text svg text' => 'fill: {{VALUE}};',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Icon Color', 'wolf-core' ),
+					'param_name'   => 'icon_color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-rotating-text i' => 'color: {{VALUE}};',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),

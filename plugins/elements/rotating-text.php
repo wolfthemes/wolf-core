@@ -26,6 +26,7 @@ function wolf_core_rotating_text( $atts ) {
 				'link'           => '',
 				'rotating_speed' => '',
 				'selected_icon'  => '',
+				'scroll_link'    => '',
 			)
 		)
 	);
@@ -42,7 +43,7 @@ function wolf_core_rotating_text( $atts ) {
 
 	$svg_inline_style = '';
 
-	//$svg_inline_style = 'margin-left: -' . absint( absint( $width ) / 4 ) . 'px; margin-top: -' . absint( absint( $width ) / 4 ) . 'px;';
+	// $svg_inline_style = 'margin-left: -' . absint( absint( $width ) / 4 ) . 'px; margin-top: -' . absint( absint( $width ) / 4 ) . 'px;';
 
 	if ( $rotating_speed ) {
 		$svg_inline_style .= ' animation-duration:' . absint( $rotating_speed ) . 's';
@@ -53,10 +54,14 @@ function wolf_core_rotating_text( $atts ) {
 
 	$output .= '>';
 
-
-
 	if ( is_array( $link ) && ! empty( $link['url'] ) ) {
-		$output .= '<a rel="' . esc_attr( $link['rel'] ) . '" class="wolf-core-rotating-text-link"';
+		$link_class = 'wolf-core-rotating-text-link';
+
+		if ( $scroll_link ) {
+			$link_class .= ' wolf-core-scroll';
+		}
+
+		$output .= '<a rel="' . esc_attr( $link['rel'] ) . '" class="' . esc_attr( $link_class ) . '"';
 		$output .= ' target="' . esc_attr( $link['target'] ) . '"';
 		$output .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '">';
 	} else {
