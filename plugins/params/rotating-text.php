@@ -41,6 +41,7 @@ function wolf_core_rotating_text_params() {
 					'label'      => esc_html__( 'Text', 'wolf-core' ),
 					'param_name' => 'text',
 				),
+
 				array(
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Width (in px)', 'wolf-core' ),
@@ -55,19 +56,40 @@ function wolf_core_rotating_text_params() {
 						'{{WRAPPER}} .wolf-core-rotating-text svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
 					),
 				),
-				/*
+
 				array(
 					'type'        => 'link',
 					'label'       => esc_html__( 'URL', 'wolf-core' ),
 					'param_name'  => 'link',
-				),*/
+				),
+
+				array(
+					'type'       => 'slider',
+					'label'      => esc_html__( 'Animation Speed', 'wolf-core' ),
+					'param_name' => 'rotating_speed',
+					'range'      => array(
+						's' => array(
+							'min' => 1,
+							'max' => 50,
+						),
+					),
+					// 'selectors'          => array(
+					// 	'{{WRAPPER}} .wolf-core-rotating-text svg' => 'animation-duration:{{VALUE}};',
+					// ),
+				),
+
+				array(
+					'type'        => 'icon',
+					'label'       => esc_html__( 'Icon', 'wolf-core' ),
+					'param_name'  => 'selected_icon',
+				),
 
 				array(
 					'label'              => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'         => 'align',
 					'type'               => 'choose',
 					'options'            => array(
-						'left'   => array(
+						'flex-start'   => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
 						),
@@ -75,16 +97,61 @@ function wolf_core_rotating_text_params() {
 							'title' => esc_html__( 'Center', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-center',
 						),
-						'right'  => array(
+						'flex-end'  => array(
 							'title' => esc_html__( 'Right', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-right',
 						),
 					),
 					'selectors'          => array(
-						'{{WRAPPER}} .wolf-core-rotating-text' => 'text-align:{{VALUE}};',
+						'{{WRAPPER}} .wolf-core-rotating-text' => 'justify-content:{{VALUE}};',
 					),
 					'responsive_control' => true,
 					'page_builder'       => 'elementor',
+				),
+
+				array(
+					'type'       => 'slider',
+					'label'      => esc_html__( 'Icon Size', 'wolf-core' ),
+					'param_name' => 'icon_size',
+					'range'      => array(
+						'px' => array(
+							'min' => 10,
+							'max' => 300,
+						),
+					),
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-rotating-text i' => 'font-size: {{SIZE}}{{UNIT}};',
+					),
+				),
+
+				array(
+					'type'       => 'slider',
+					'label'      => esc_html__( 'Icon Horizontal Adjustment', 'wolf-core' ),
+					'param_name' => 'icon_horizontal_adjust',
+					'range'      => array(
+						'px' => array(
+							'min' => -100,
+							'max' => 100,
+						),
+					),
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-rotating-text i:before' => 'margin-left: {{SIZE}}{{UNIT}};',
+					),
+				),
+
+				array(
+					'type'       => 'slider',
+					'label'      => esc_html__( 'Icon Vertical Adjustment', 'wolf-core' ),
+					'param_name' => 'icon_vertical_adjust',
+					'range'      => array(
+						'px' => array(
+							'min' => -100,
+							'max' => 100,
+						),
+					),
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-rotating-text i:before' => 'margin-top: {{SIZE}}{{UNIT}};',
+					),
 				),
 
 				/* Typography Group controls for Elementor */

@@ -14,7 +14,8 @@ var WolfCoreRotatingText = function( $ ) {
 		 */
 		init : function () {
 			$( ".wolf-core-rotating-text" ).each( function() {
-				var $svg = $( this ).find( "svg" );
+				var $this = $( this ),
+					$svg = $this.find( "svg" );
 
 				$svg.css( {
 					'margin-left' : "-" + $svg.width() / 4 + "px",

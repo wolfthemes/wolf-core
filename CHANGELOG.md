@@ -1,8 +1,10 @@
 
 # Changelog
 
-#### 6th September 2022 - Version 1.4.8
+#### 6th September 2022 - Version 1.5.0
 
+-   Tweak: Added rotating text options
+-   Tweak: Added interactive links text options
 -   Tweak: Improved marquee element (CSS only)
 -   Tweak: Added gallery html tag data attribute filter
 

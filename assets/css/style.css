@@ -5012,6 +5012,19 @@ ol.wolf-core-process-list li .wolf-core-process-number:before {
 /**
  * @# Rotating text
  **/
+.wolf-core-rotating-text {
+  display: flex;
+  justify-content: center;
+}
+.wolf-core-rotating-text i {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .wolf-core-rotating-text svg {
   position: relative;
   left: 0;
@@ -5022,6 +5035,11 @@ ol.wolf-core-process-list li .wolf-core-process-number:before {
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.wolf-core-rotating-text .wolf-core-rotating-text-link {
+  display: inline-block;
+  position: relative;
 }
 
 @keyframes rotatingTextRotate {
