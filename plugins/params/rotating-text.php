@@ -79,9 +79,6 @@ function wolf_core_rotating_text_params() {
 							'max' => 50,
 						),
 					),
-					// 'selectors'          => array(
-					// 	'{{WRAPPER}} .wolf-core-rotating-text svg' => 'animation-duration:{{VALUE}};',
-					// ),
 				),
 
 				array(
