@@ -2976,7 +2976,8 @@ li.wolf-core-album-tracklist-item {
   min-width: 128px;
 }
 
-.wolf-core-align-justify .wolf-core-button {
+.wolf-core-align-justify .wolf-core-button,
+.elementor-align-justify .wolf-core-button {
   width: 100%;
 }
 

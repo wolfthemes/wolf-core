@@ -63,6 +63,13 @@ function wolf_core_get_button_params() {
 		),
 
 		array(
+			'param_name'  => 'full_width',
+			'label'       => esc_html__( 'Full Width', 'wolf-core' ),
+			'type'        => 'checkbox',
+			'description' => esc_html__( 'The button will take the full width of its container.', 'wolf-core' ),
+		),
+
+		array(
 			'type'           => 'select',
 			'param_name'     => 'shape',
 			'label'          => esc_html__( 'Shape', 'wolf-core' ),
