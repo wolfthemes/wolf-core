@@ -40,7 +40,7 @@ function wolf_core_theme_svg_animations( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	$output .= '<div class="wolf-core-theme-svg-animation wolf-core-theme-svg-animation-align-' . esc_attr( $alignment ) . ' wolf-core-theme-svg-anim-once-' . esc_attr( $anim_once ) . '" data-width="' . absint( $width ) . '" data-stroke-width="' . absint( $stroke_width ) . '" data-path-color="' . esc_attr( $path_color ) . '" data-animation-duration="' . esc_attr( $anim_duration ) . '" data-animation-delay="' . esc_attr( $anim_delay ) . '">';
+	$output .= '<div class="wolf-core-theme-svg-animation wolf-core-theme-svg-animation-align-' . esc_attr( $alignment ) . ' wolf-core-theme-svg-anim-once-' . esc_attr( $anim_once ) . '" data-width="' . absint( $width ) . '" data-stroke-width="' . absint( $stroke_width ) . '" data-path-color="' . esc_attr( $path_color ) . '" data-animation-duration="' . absint( $anim_duration ) . '" data-animation-delay="' . absint( $anim_delay ) . '">';
 
 	$output .= apply_filters( 'wolf_core_theme_svg_animation', '', $atts );
 
