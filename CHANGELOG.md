@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 6th September 2022 - Version 1.5.0
+#### 6th September 2022 - Version 1.5.1
 
+-   Tweak: Added wolf_core_interactive_link_text_start filter
 -   Tweak: Added rotating text options
 -   Tweak: Added interactive links text options
 -   Tweak: Improved marquee element (CSS only)

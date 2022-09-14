@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.5.0\n"
+"Project-Id-Version: Wolf Core 1.5.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2022-09-13 15:09:38+00:00\n"
+"POT-Creation-Date: 2022-09-14 14:59:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -5387,16 +5387,17 @@ msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:119
 #: pack/wolf-core/plugins/params/animated-svg.php:144
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:104
 #: plugins/params/animated-svg.php:144
-#: plugins/params/theme-svg-animations.php:103
+#: plugins/params/theme-svg-animations.php:104
 msgid "Stroke Width"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:124
 #: pack/wolf-core/plugins/params/animated-svg.php:149
-#: pack/wolf-core/plugins/params/theme-svg-animations.php:104
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:117
 #: plugins/params/animated-svg.php:149
-#: plugins/params/theme-svg-animations.php:116
+#: plugins/params/theme-svg-animations.php:117
 msgid "SVG Width (in px)"
 msgstr ""
 
@@ -8407,7 +8408,9 @@ msgid "Transparent Dark"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/vc/vc-params/animation-params.php:100
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:67
 #: pack/wolf-core/plugins/vc/vc-params/animation-params.php:100
+#: plugins/params/theme-svg-animations.php:67
 #: plugins/vc/vc-params/animation-params.php:100
 msgid "Animation Delay (in ms)"
 msgstr ""
@@ -9943,12 +9946,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/theme-svg-animations.php:54
 #: plugins/params/theme-svg-animations.php:54
-msgid "Animation Duration (in s)"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/theme-svg-animations.php:67
-#: plugins/params/theme-svg-animations.php:67
-msgid "Animation Delay (in s)"
+msgid "Animation Duration (in ms)"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/wc-search-form.php:23
