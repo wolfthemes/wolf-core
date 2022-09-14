@@ -161,7 +161,7 @@ function wolf_core_google_maps( $atts ) {
 
 		if ( $custom_map_skin ) {
 			$custom_map_skin = wolf_core_clean_spaces( wp_strip_all_tags( $custom_map_skin ) );
-			$output  .= ' data-custom-map-skin="' . esc_js( $custom_map_skin ) . '"';
+			$output .= ' data-custom-map-skin="' . esc_js( $custom_map_skin ) . '"';
 		}
 
 		if ( $marker_img ) {

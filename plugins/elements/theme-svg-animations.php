@@ -28,7 +28,7 @@ function wolf_core_theme_svg_animations( $atts ) {
 				'anim_once'            => 'yes',
 				'anim_duration'        => '5',
 				'anim_delay'           => '0',
-				'stroke_width'         => '5',
+				'stroke_width'         => '10',
 				'width'                => '',
 			)
 		)

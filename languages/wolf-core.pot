@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2022-09-08 13:52:48+00:00\n"
+"POT-Creation-Date: 2022-09-13 15:09:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2570,7 +2570,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:169
 #: pack/wolf-core/plugins/params/mailchimp.php:181
 #: pack/wolf-core/plugins/params/open-table.php:78
-#: pack/wolf-core/plugins/params/rotating-text.php:103
+#: pack/wolf-core/plugins/params/rotating-text.php:100
 #: pack/wolf-core/plugins/params/social-icons-custom.php:45
 #: pack/wolf-core/plugins/params/social-icons-custom.php:65
 #: pack/wolf-core/plugins/params/social-icons.php:65
@@ -2578,6 +2578,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:82
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:101
 #: pack/wolf-core/plugins/params/textual-showcase.php:50
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:88
 #: pack/wolf-core/plugins/params/twitter.php:63
 #: pack/wolf-core/plugins/params/twitter.php:86
 #: pack/wolf-core/plugins/params/video-opener.php:62
@@ -2609,7 +2610,7 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:82
 #: plugins/params/spotify-follow-button.php:101
 #: plugins/params/textual-showcase.php:50
-#: plugins/params/theme-svg-animations.php:82 plugins/params/twitter.php:63
+#: plugins/params/theme-svg-animations.php:88 plugins/params/twitter.php:63
 #: plugins/params/twitter.php:86 plugins/params/video-opener.php:62
 #: plugins/vc/deprecated/wvc_icon.php:490
 #: plugins/vc/deprecated/wvc_icon.php:504
@@ -2682,7 +2683,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:170
 #: pack/wolf-core/plugins/params/mailchimp.php:182
 #: pack/wolf-core/plugins/params/open-table.php:74
-#: pack/wolf-core/plugins/params/rotating-text.php:99
+#: pack/wolf-core/plugins/params/rotating-text.php:96
 #: pack/wolf-core/plugins/params/social-icons-custom.php:41
 #: pack/wolf-core/plugins/params/social-icons-custom.php:66
 #: pack/wolf-core/plugins/params/social-icons.php:61
@@ -2690,6 +2691,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:78
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:102
 #: pack/wolf-core/plugins/params/textual-showcase.php:46
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:84
 #: pack/wolf-core/plugins/params/twitter.php:59
 #: pack/wolf-core/plugins/params/twitter.php:87
 #: pack/wolf-core/plugins/params/video-opener.php:58
@@ -2723,7 +2725,7 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:78
 #: plugins/params/spotify-follow-button.php:102
 #: plugins/params/textual-showcase.php:46
-#: plugins/params/theme-svg-animations.php:78 plugins/params/twitter.php:59
+#: plugins/params/theme-svg-animations.php:84 plugins/params/twitter.php:59
 #: plugins/params/twitter.php:87 plugins/params/video-opener.php:58
 #: plugins/params/video-opener.php:119 plugins/vc/deprecated/wvc_icon.php:476
 #: plugins/vc/deprecated/wvc_icon.php:489
@@ -2797,7 +2799,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:171
 #: pack/wolf-core/plugins/params/mailchimp.php:183
 #: pack/wolf-core/plugins/params/open-table.php:82
-#: pack/wolf-core/plugins/params/rotating-text.php:107
+#: pack/wolf-core/plugins/params/rotating-text.php:104
 #: pack/wolf-core/plugins/params/social-icons-custom.php:49
 #: pack/wolf-core/plugins/params/social-icons-custom.php:67
 #: pack/wolf-core/plugins/params/social-icons.php:69
@@ -2805,6 +2807,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:86
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:103
 #: pack/wolf-core/plugins/params/textual-showcase.php:54
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:92
 #: pack/wolf-core/plugins/params/twitter.php:67
 #: pack/wolf-core/plugins/params/twitter.php:88
 #: pack/wolf-core/plugins/params/video-opener.php:66
@@ -2838,7 +2841,7 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:86
 #: plugins/params/spotify-follow-button.php:103
 #: plugins/params/textual-showcase.php:54
-#: plugins/params/theme-svg-animations.php:86 plugins/params/twitter.php:67
+#: plugins/params/theme-svg-animations.php:92 plugins/params/twitter.php:67
 #: plugins/params/twitter.php:88 plugins/params/video-opener.php:66
 #: plugins/params/video-opener.php:118 plugins/vc/deprecated/wvc_icon.php:478
 #: plugins/vc/deprecated/wvc_icon.php:491
@@ -2924,6 +2927,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/process.php:70
 #: pack/wolf-core/plugins/params/spotify-player.php:43
 #: pack/wolf-core/plugins/params/textual-showcase.php:158
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:35
 #: pack/wolf-core/plugins/params/twitter.php:44
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:290
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:481
@@ -3231,7 +3235,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/icon.php:143
 #: pack/wolf-core/plugins/params/mailchimp.php:178
 #: pack/wolf-core/plugins/params/open-table.php:69
-#: pack/wolf-core/plugins/params/rotating-text.php:94
+#: pack/wolf-core/plugins/params/rotating-text.php:91
 #: pack/wolf-core/plugins/params/social-icons-custom.php:36
 #: pack/wolf-core/plugins/params/social-icons-custom.php:62
 #: pack/wolf-core/plugins/params/social-icons.php:56
@@ -3239,6 +3243,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:73
 #: pack/wolf-core/plugins/params/spotify-follow-button.php:98
 #: pack/wolf-core/plugins/params/textual-showcase.php:41
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:79
 #: pack/wolf-core/plugins/params/twitter.php:54
 #: pack/wolf-core/plugins/params/twitter.php:82
 #: pack/wolf-core/plugins/params/video-opener.php:53
@@ -3260,7 +3265,7 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:73
 #: plugins/params/spotify-follow-button.php:98
 #: plugins/params/textual-showcase.php:41
-#: plugins/params/theme-svg-animations.php:73 plugins/params/twitter.php:54
+#: plugins/params/theme-svg-animations.php:79 plugins/params/twitter.php:54
 #: plugins/params/twitter.php:82 plugins/params/video-opener.php:53
 #: plugins/params/video-opener.php:78
 #: plugins/vc/vc-params/button-params.php:164
@@ -3310,7 +3315,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/icon.php:67
 #: pack/wolf-core/plugins/params/process.php:73
 #: pack/wolf-core/plugins/params/process.php:82
-#: pack/wolf-core/plugins/params/rotating-text.php:89
+#: pack/wolf-core/plugins/params/rotating-text.php:86
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:33
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:72
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:87
@@ -3443,7 +3448,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/breadcrumb.php:74
 #: pack/wolf-core/plugins/params/interactive-links.php:46
 #: pack/wolf-core/plugins/params/marquee-text.php:50
-#: pack/wolf-core/plugins/params/rotating-text.php:166
+#: pack/wolf-core/plugins/params/rotating-text.php:163
 #: pack/wolf-core/plugins/params/textual-showcase.php:66
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:24
 #: plugins/common-params/button-params.php:229 plugins/params/bigtext.php:26
@@ -3615,9 +3620,9 @@ msgstr ""
 #: pack/wolf-core/plugins/params/marquee-text.php:54
 #: pack/wolf-core/plugins/params/marquee-text.php:65
 #: pack/wolf-core/plugins/params/marquee-text.php:76
-#: pack/wolf-core/plugins/params/rotating-text.php:170
-#: pack/wolf-core/plugins/params/rotating-text.php:181
-#: pack/wolf-core/plugins/params/rotating-text.php:192
+#: pack/wolf-core/plugins/params/rotating-text.php:167
+#: pack/wolf-core/plugins/params/rotating-text.php:178
+#: pack/wolf-core/plugins/params/rotating-text.php:189
 #: pack/wolf-core/plugins/params/social-icons-custom.php:192
 #: pack/wolf-core/plugins/params/social-icons-custom.php:203
 #: pack/wolf-core/plugins/params/social-icons-custom.php:227
@@ -3784,7 +3789,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/heading.php:191
 #: pack/wolf-core/plugins/params/interactive-links.php:55
 #: pack/wolf-core/plugins/params/marquee-text.php:59
-#: pack/wolf-core/plugins/params/rotating-text.php:175
+#: pack/wolf-core/plugins/params/rotating-text.php:172
 #: pack/wolf-core/plugins/params/social-icons-custom.php:235
 #: pack/wolf-core/plugins/params/social-icons.php:255
 #: pack/wolf-core/plugins/params/textual-showcase.php:75
@@ -4459,6 +4464,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/team-member.php:48
 #: pack/wolf-core/plugins/params/testimonial-slider.php:26
 #: pack/wolf-core/plugins/params/textual-showcase.php:26
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:26
 #: pack/wolf-core/plugins/params/wc-search-form.php:26
 #: pack/wolf-core/plugins/params/work-category-marquee.php:26
 #: plugins/elementor/elementor-core-functions.php:51
@@ -5125,6 +5131,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/shape-slider.php:24
 #: pack/wolf-core/plugins/params/testimonial-slider.php:24
 #: pack/wolf-core/plugins/params/textual-showcase.php:24
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:24
 #: pack/wolf-core/plugins/params/wc-search-form.php:24
 #: pack/wolf-core/plugins/params/work-category-marquee.php:24
 #: plugins/params/album-tracklist-item.php:24
@@ -5342,6 +5349,7 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:98
 #: pack/wolf-core/plugins/params/animated-svg.php:92
 #: pack/wolf-core/plugins/params/animated-svg.php:123
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:42
 #: plugins/params/animated-svg.php:92 plugins/params/animated-svg.php:123
 #: plugins/params/theme-svg-animations.php:42
 msgid "Stroke Color"
@@ -5371,19 +5379,24 @@ msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:103
 #: pack/wolf-core/plugins/params/animated-svg.php:128
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:47
 #: plugins/params/animated-svg.php:128
+#: plugins/params/theme-svg-animations.php:47
 msgid "Animate Once"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:119
 #: pack/wolf-core/plugins/params/animated-svg.php:144
 #: plugins/params/animated-svg.php:144
+#: plugins/params/theme-svg-animations.php:103
 msgid "Stroke Width"
 msgstr ""
 
 #: pack/dist/wolf-core/plugins/params/animated-svg.php:124
 #: pack/wolf-core/plugins/params/animated-svg.php:149
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:104
 #: plugins/params/animated-svg.php:149
+#: plugins/params/theme-svg-animations.php:116
 msgid "SVG Width (in px)"
 msgstr ""
 
@@ -7290,7 +7303,7 @@ msgstr ""
 #: pack/dist/wolf-core/plugins/params/social-icons.php:219
 #: pack/dist/wolf-core/plugins/params/social-icons.php:228
 #: pack/wolf-core/plugins/params/process.php:93
-#: pack/wolf-core/plugins/params/rotating-text.php:186
+#: pack/wolf-core/plugins/params/rotating-text.php:183
 #: pack/wolf-core/plugins/params/social-icons-custom.php:178
 #: pack/wolf-core/plugins/params/social-icons-custom.php:209
 #: pack/wolf-core/plugins/params/social-icons-custom.php:221
@@ -9841,17 +9854,17 @@ msgstr ""
 msgid "Animation Speed"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/rotating-text.php:120
+#: pack/wolf-core/plugins/params/rotating-text.php:117
 #: plugins/params/rotating-text.php:117
 msgid "Icon Size"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/rotating-text.php:135
+#: pack/wolf-core/plugins/params/rotating-text.php:132
 #: plugins/params/rotating-text.php:132
 msgid "Icon Horizontal Adjustment"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/rotating-text.php:150
+#: pack/wolf-core/plugins/params/rotating-text.php:147
 #: plugins/params/rotating-text.php:147
 msgid "Icon Vertical Adjustment"
 msgstr ""
@@ -9923,6 +9936,21 @@ msgstr ""
 msgid "Line break"
 msgstr ""
 
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:23
+#: plugins/params/theme-svg-animations.php:23
+msgid "Theme SVG Animations"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:54
+#: plugins/params/theme-svg-animations.php:54
+msgid "Animation Duration (in s)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/theme-svg-animations.php:67
+#: plugins/params/theme-svg-animations.php:67
+msgid "Animation Delay (in s)"
+msgstr ""
+
 #: pack/wolf-core/plugins/params/wc-search-form.php:23
 #: plugins/params/wc-search-form.php:23
 msgid "WooCommerce Search Form"
@@ -9932,18 +9960,6 @@ msgstr ""
 msgid ""
 "\"%1$s\" requires <a href=\"%2$s\" target=\"_blank\">%3$s</a> to be "
 "installed and activated."
-msgstr ""
-
-#: plugins/params/theme-svg-animations.php:23
-msgid "Theme SVG Animations"
-msgstr ""
-
-#: plugins/params/theme-svg-animations.php:48
-msgid "Animation Duration (in s)"
-msgstr ""
-
-#: plugins/params/theme-svg-animations.php:61
-msgid "Animation Delay (in s)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
