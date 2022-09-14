@@ -119,7 +119,13 @@ function wolf_core_interactive_links( $atts ) {
 
 		$output .= apply_filters( 'wolf_core_interactive_link_start', '', $panel_txt_atts );
 
-		$output .= '<span class="wolf-core-interactive-link-text">' . $title . '</span>';
+		$output .= '<span class="wolf-core-interactive-link-text">';
+
+		$output .= apply_filters( 'wolf_core_interactive_link_text_start', '', $panel_txt_atts );
+
+		$output .= $title;
+
+		$output .= '</span>';
 
 		if ( is_array( $link ) && isset( $link['url'] ) ) {
 			$output .= '</a>';
