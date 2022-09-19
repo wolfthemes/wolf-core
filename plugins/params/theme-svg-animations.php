@@ -123,6 +123,9 @@ function wolf_core_theme_svg_animations_params() {
 							'max'  => 1000,
 						),
 					),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-theme-svg-animation svg' => 'width:{{VALUE}};',
+					),
 				),
 			),
 		)

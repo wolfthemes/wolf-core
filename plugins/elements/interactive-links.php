@@ -106,7 +106,7 @@ function wolf_core_interactive_links( $atts ) {
 		);
 		extract( $panel_txt_atts ); // phpcs:ignore
 
-		$link = wolf_core_process_link_atts( $link );
+		$link          = wolf_core_process_link_atts( $link );
 		$current_class = ( 0 === $i ) ? 'link-active' : '';
 
 		$output .= '<li class="wolf-core-interactive-link-item" id="wolf-core-interactive-link-item-' . absint( $i ) . '">';
