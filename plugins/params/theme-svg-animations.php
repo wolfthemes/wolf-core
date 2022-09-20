@@ -41,6 +41,9 @@ function wolf_core_theme_svg_animations_params() {
 					'type'       => 'colorpicker',
 					'label'      => esc_html__( 'Stroke Color', 'wolf-core' ),
 					'param_name' => 'path_color',
+					// 'selectors'    => array(
+					// 	'{{WRAPPER}} .wolf-core-theme-svg-animation .overable-svg-anim-svg path' => 'stroke:{{VALUE}};',
+					// ),
 				),
 
 				array(
@@ -110,6 +113,9 @@ function wolf_core_theme_svg_animations_params() {
 							'max'  => 100,
 						),
 					),
+					// 'selectors'    => array(
+					// 	'{{WRAPPER}} .wolf-core-theme-svg-animation .overable-svg-anim-svg path' => 'stroke-width:{{VALUE}};',
+					// ),
 				),
 
 				array(
@@ -123,9 +129,9 @@ function wolf_core_theme_svg_animations_params() {
 							'max'  => 1000,
 						),
 					),
-					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-theme-svg-animation svg' => 'width:{{VALUE}};',
-					),
+					// 'selectors'    => array(
+					// 	'{{WRAPPER}} .wolf-core-theme-svg-animation-inner' => 'width:{{VALUE}};',
+					// ),
 				),
 			),
 		)
