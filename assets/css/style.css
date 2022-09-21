@@ -7005,3 +7005,10 @@ ol.wolf-core-process-list li .wolf-core-process-number:before {
     display: none !important;
   }
 }
+.xdebug-error {
+  color: grey;
+}
+
+.xdebug-error a {
+  color: black;
+}

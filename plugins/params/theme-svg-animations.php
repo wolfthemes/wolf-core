@@ -41,9 +41,9 @@ function wolf_core_theme_svg_animations_params() {
 					'type'       => 'colorpicker',
 					'label'      => esc_html__( 'Stroke Color', 'wolf-core' ),
 					'param_name' => 'path_color',
-					// 'selectors'    => array(
-					// 	'{{WRAPPER}} .wolf-core-theme-svg-animation .overable-svg-anim-svg path' => 'stroke:{{VALUE}};',
-					// ),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-theme-svg-animation .overable-svg-anim-svg path' => 'stroke:{{VALUE}};',
+					),
 				),
 
 				array(
@@ -110,28 +110,33 @@ function wolf_core_theme_svg_animations_params() {
 						'px' => array(
 							'step' => 1,
 							'min'  => 1,
-							'max'  => 100,
+							'max'  => 50,
 						),
 					),
-					// 'selectors'    => array(
-					// 	'{{WRAPPER}} .wolf-core-theme-svg-animation .overable-svg-anim-svg path' => 'stroke-width:{{VALUE}};',
-					// ),
+					'selectors'    => array(
+						'{{WRAPPER}} .overable-svg-anim-svg path' => 'stroke-width:{{SIZE}}{{UNIT}};',
+					),
 				),
 
 				array(
 					'type'       => 'slider',
 					'label'      => esc_html__( 'SVG Width (in px)', 'wolf-core' ),
 					'param_name' => 'width',
+					'size_units' => array( 'px', '%' ),
 					'range'      => array(
 						'px' => array(
-							'step' => 1,
 							'min'  => 0,
 							'max'  => 1000,
+							'step' => 5,
+						),
+						'%'  => array(
+							'min' => 0,
+							'max' => 100,
 						),
 					),
-					// 'selectors'    => array(
-					// 	'{{WRAPPER}} .wolf-core-theme-svg-animation-inner' => 'width:{{VALUE}};',
-					// ),
+					'selectors'  => array(
+						'{{WRAPPER}} .wolf-core-theme-svg-animation-inner' => 'width:{{SIZE}}{{UNIT}};',
+					),
 				),
 			),
 		)
