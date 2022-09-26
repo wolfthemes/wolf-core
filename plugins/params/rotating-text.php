@@ -71,7 +71,7 @@ function wolf_core_rotating_text_params() {
 
 				array(
 					'type'       => 'slider',
-					'label'      => esc_html__( 'Animation Speed', 'wolf-core' ),
+					'label'      => esc_html__( 'Animation Duration (in seconds)', 'wolf-core' ),
 					'param_name' => 'rotating_speed',
 					'range'      => array(
 						's' => array(
