@@ -138,8 +138,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 				} else {
 
-					// debug( $r_type );
-
 					$r_params = array(
 						'label'       => $r_param['label'],
 						'type'        => $r_type,

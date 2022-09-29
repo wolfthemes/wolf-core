@@ -239,7 +239,7 @@ function wolf_core_textual_showcase( $atts ) {
 
 			/* Text */
 		} else {
-			$content = '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
+			$content .= '<span class="wolf-core-tsi-text-inner">' . do_shortcode( $text ) . '</span>';
 		}
 
 		$output .= $content;

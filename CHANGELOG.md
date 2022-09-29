@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 22th September 2022 - Version 1.5.2
+#### 22th September 2022 - Version 1.5.3
 
+-   Fix: Textual showcase simple text link
 -   Tweak: Added Theme animation element scaffold
 -   Tweak: Added wolf_core_interactive_link_text_start filter
 -   Tweak: Added rotating text options
