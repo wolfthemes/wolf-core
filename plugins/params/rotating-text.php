@@ -45,6 +45,7 @@ function wolf_core_rotating_text_params() {
 				array(
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Width (in px)', 'wolf-core' ),
+					'default'    => 300,
 					'param_name' => 'width',
 					'range'      => array(
 						'px' => array(
@@ -72,6 +73,7 @@ function wolf_core_rotating_text_params() {
 				array(
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Animation Duration (in seconds)', 'wolf-core' ),
+					'default'    => 15,
 					'param_name' => 'rotating_speed',
 					'range'      => array(
 						's' => array(

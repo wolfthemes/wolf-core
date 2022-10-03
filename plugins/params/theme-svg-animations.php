@@ -56,6 +56,7 @@ function wolf_core_theme_svg_animations_params() {
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Animation Duration (in ms)', 'wolf-core' ),
 					'param_name' => 'anim_duration',
+					'default'    => 800,
 					'range'      => array(
 						'px' => array(
 							'step' => 100,
@@ -69,6 +70,7 @@ function wolf_core_theme_svg_animations_params() {
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Animation Delay (in ms)', 'wolf-core' ),
 					'param_name' => 'anim_delay',
+					'default'    => 200,
 					'range'      => array(
 						'px' => array(
 							'step' => 100,
@@ -106,6 +108,7 @@ function wolf_core_theme_svg_animations_params() {
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Stroke Width', 'wolf-core' ),
 					'param_name' => 'stroke_width',
+					'default'    => 5,
 					'range'      => array(
 						'px' => array(
 							'step' => 1,
