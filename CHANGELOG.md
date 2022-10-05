@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 22th September 2022 - Version 1.5.3
+#### 22th September 2022 - Version 1.5.4
 
+-   Tweak: Added text marquee animation speed option
 -   Fix: Textual showcase simple text link
 -   Tweak: Added Theme animation element scaffold
 -   Tweak: Added wolf_core_interactive_link_text_start filter

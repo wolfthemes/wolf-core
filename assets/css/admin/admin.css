@@ -388,15 +388,15 @@
   color: #444;
 }
 .wvc_colored-dropdown .gradient-color-105898 {
-  background: linear-gradient(to bottom right, #75d69c 0%, #3452ff 100%) !important;
+  background: linear-gradient(to bottom right, #75d69c 0, #3452ff 100%) !important;
   color: #fff;
 }
 .wvc_colored-dropdown .gradient-color-111420 {
-  background: radial-gradient(center top, circle cover, #0cb4ce 17%, #1080d0 79%) !important;
+  background: radial-gradient(circle cover at center top, #0cb4ce 17%, #1080d0 79%) !important;
   color: #fff;
 }
 .wvc_colored-dropdown .gradient-color-3452ff {
-  background: linear-gradient(to bottom right, #ff1053 0%, #3452ff 100%) !important;
+  background: linear-gradient(to bottom right, #ff1053 0, #3452ff 100%) !important;
   color: #fff;
 }
 .wvc_colored-dropdown .gradient-color-588694 {
@@ -404,11 +404,11 @@
   color: #fff;
 }
 .wvc_colored-dropdown .black {
-  background-color: black !important;
+  background-color: #000000 !important;
   color: #fff;
 }
 .wvc_colored-dropdown .white {
-  background-color: white !important;
+  background-color: #ffffff !important;
   color: #444 !important;
 }
 .wvc_colored-dropdown .lightergrey {

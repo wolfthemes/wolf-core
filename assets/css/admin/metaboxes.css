@@ -99,7 +99,7 @@ ul.wolf-core-metabox-metabox-tabs li.ui-tabs-active a {
 .wolf-core-metabox-images-set .wolf-core-metabox-image .wolf-core-metabox-remove-img:before {
   content: '\00D7';
   font-size: 24px;
-  color: white !important;
+  color: #FFF !important;
 }
 
 .wolf-core-metabox-video-bg-field .description {
