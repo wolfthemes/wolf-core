@@ -33,6 +33,7 @@ function wolf_core_marquee_text_params() {
 					'type'       => 'text',
 					'label'      => esc_html__( 'Text', 'wolf-core' ),
 					'param_name' => 'text',
+					'default'      => esc_html__( 'This is my marquee text', 'wolf-core' ),
 				),
 
 				array(
@@ -74,6 +75,22 @@ function wolf_core_marquee_text_params() {
 						'{{WRAPPER}} .elementor-widget-container' => 'background-color: {{VALUE}};',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'       => 'slider',
+					'label'      => esc_html__( 'Animation Duration (in seconds)', 'wolf-core' ),
+					'default'    => 10,
+					'param_name' => 'marquee_speed',
+					'range'      => array(
+						's' => array(
+							'min' => 1,
+							'max' => 50,
+						),
+					),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-marquee__inner' => 'animation-duration: {{SIZE}}s;',
+					),
 				),
 			),
 		)

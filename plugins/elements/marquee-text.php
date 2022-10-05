@@ -21,15 +21,14 @@ function wolf_core_marquee_text( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'text'      => '',
-				'direction' => 'left',
+				'text'          => '',
+				'direction'     => 'left',
+				'marquee_speed' => '10',
 			)
 		)
 	);
 
 	extract( $atts ); // phpcs:ignore
-
-
 
 	$output = '';
 
@@ -41,14 +40,14 @@ function wolf_core_marquee_text( $atts ) {
 
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
-	$output .= '><div class="wolf-core-marquee" aria-hidden="true"><div class="wolf-core-marquee__inner" aria-hidden="true">';
+	$output .= '><div class="wolf-core-marquee" aria-hidden="true"><div class="wolf-core-marquee__inner" style="animation-speed:' . absint( $marquee_speed ) . 's" aria-hidden="true">';
 
 	$output .= '<span class="wolf-core-marquee-text">' . esc_attr( $text ) . '</span>';
 	$output .= '<span class="wolf-core-marquee-text">' . esc_attr( $text ) . '</span>';
 	$output .= '<span class="wolf-core-marquee-text">' . esc_attr( $text ) . '</span>';
 	$output .= '<span class="wolf-core-marquee-text">' . esc_attr( $text ) . '</span>';
-	//$output .= '<span>' . esc_attr( $text ) . '</span>';
-	//$output .= '<span>' . esc_attr( $text ) . '</span>';
+	// $output .= '<span>' . esc_attr( $text ) . '</span>';
+	// $output .= '<span>' . esc_attr( $text ) . '</span>';
 
 	$output .= '</div><!--.wolf-core-marquee__inner--></div><!--.wolf-core-marquee--></div><!--.wolf-core-marquee-container-->';
 

@@ -46,7 +46,7 @@ $move-final: calc(-50% + 20vw);
 	display: flex;
 	position: relative;
 	transform: translate3d($move-initial, 0, 0);
-	animation: marquee 15s linear infinite;
+	animation: marquee 10s linear infinite;
 	animation-play-state: paused;
 }
 
