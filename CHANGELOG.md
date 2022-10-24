@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 24th October 2022 - Version 1.5.5
+
+-   Fix: "vc_value_from_safe" function error
+
 #### 22th September 2022 - Version 1.5.4
 
 -   Tweak: Added text marquee animation speed option

@@ -135,12 +135,14 @@ function wolf_core_gallery( $atts ) {
 		}
 	}
 
-	$pretty_rel_random   = ' data-rel="prettyPhoto[rel-' . get_the_ID() . '-' . rand() . ']"';
-	$swipebox_rel_random = ' data-rel="swipebox[rel-' . get_the_ID() . '-' . rand() . ']"';
-	$lightbox_rel_random = ' data-rel="lightbox[rel-' . get_the_ID() . '-' . rand() . ']"';
+	$pretty_rel_random   = ' data-rel="prettyPhoto[rel-' . get_the_ID() . '-' . wp_rand() . ']"';
+	$swipebox_rel_random = ' data-rel="swipebox[rel-' . get_the_ID() . '-' . wp_rand() . ']"';
+	$lightbox_rel_random = ' data-rel="lightbox[rel-' . get_the_ID() . '-' . wp_rand() . ']"';
 
 	if ( 'custom_link' === $onclick ) {
-		$custom_links = vc_value_from_safe( $custom_links );
+		if ( 'vc' === wolf_core_get_plugin_in_use() ) {
+			$custom_links = vc_value_from_safe( $custom_links );
+		}
 		$custom_links = explode( ',', $custom_links );
 	}
 
