@@ -780,7 +780,7 @@ var WolfCore = (function ($) {
 			https://github.com/nk-o/jarallax/#disable-on-mobile-devices
 			*/
 
-			if (!smallScreen) {
+			if (!smallScreen && typeof jarallax !== "undefined") {
 				$(".wolf-core-parallax").jarallax();
 				$( '.wolf-core-video-parallax' ).jarallax();
 
