@@ -250,6 +250,7 @@ function wolf_core_wrong_theme() {
 		'overable',
 		'ponk',
 		'decibel',
+		'morvan',
 
 	);
 
