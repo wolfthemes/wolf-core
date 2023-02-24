@@ -159,7 +159,7 @@ function wolf_core_is_activated() {
 	if ( ! get_option( 'wolf_core_activated' ) && ! get_transient( 'wolf_core_activation_notice' ) && get_option( 'wolf_core_code' ) && get_option( 'wolf_core_key' ) ) {
 
 		$remote_url = 'https://api.wolfthemes.com/envato/';
-		$response   = wp_remote_post(
+		$response   = wp_safe_remote_post(
 			$remote_url,
 			array(
 				'method' => 'POST',

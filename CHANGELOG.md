@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 24th February 2023 - Version 1.5.6
+
+-   Tweak: Replaced wp_remote_post function by wp_safe_remote_post for plugin activation
+
 #### 24th October 2022 - Version 1.5.5
 
 -   Fix: "vc_value_from_safe" function error
