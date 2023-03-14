@@ -12,9 +12,16 @@ table.variations th.label
 /* Hide social icons in menu on mobile */
 .mobile-screen #mobile-bar .wvc-socials-container,
 .mobile-screen #mobile-bar .wolf-core-socials-container {
-	display: none!important;
+	display: none !important;
 }
 
+/* Mobile bar wrapper width */
 #mobile-bar .flex-mobile-wrap {
-	width: 100%!important;
+	width: 100% !important;
+}
+
+/* Variation swatch width */
+.swatch {
+	width: 30px !important;
+	height: 30px !important;
 }

@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 14th March 2023 - Version 1.5.7
+#### 14th March 2023 - Version 1.5.8
 
 -   Fix: Hotfix for all themes to hide the social icons on mobile bar to avoid overlapping. This fix will be added in all themes in the next month theme updates.
+-   Fix: Default product variation swatch width
 
 #### 24th February 2023 - Version 1.5.6
 
