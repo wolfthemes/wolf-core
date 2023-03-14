@@ -6359,6 +6359,22 @@ ol.wolf-core-process-list li .wolf-core-process-number:before {
   -webkit-filter: grayscale(100%);
 }
 
+/* Fix date format too big */
+.we-date-format-custom {
+  width: 35px;
+}
+
+/* Fix product variation border */
+table.variations th.label {
+  border: none;
+}
+
+/* Hide social icons in menu on mobile */
+.mobile-screen #mobile-bar .wvc-socials-container,
+.mobile-screen #mobile-bar .wolf-core-socials-container {
+  display: none !important;
+}
+
 /**
  * Media Queries
  */
@@ -6467,36 +6483,36 @@ ol.wolf-core-process-list li .wolf-core-process-number:before {
   /*.wolf-core-pricing-table-inner{
   	//float: left;
   }
-  
+
   .wolf-core-pricing-tables-2-cols{
   	.wolf-core-pricing-table-inner{
   		width: 50%;
   	}
-  
+
   	.wolf-core-pricing-table-featured{
   		position: relative;
   		top: 17px;
   		margin-top: 0;
   	}
   }
-  
+
   .wolf-core-pricing-tables-3-cols{
   	.wolf-core-pricing-table-inner{
   		width: 33.2%;
   	}
-  
+
   	.wolf-core-pricing-table-featured{
   		position: relative;
   		top: 17px;
   		margin-top: 0;
   	}
   }
-  
+
   .wolf-core-pricing-tables-4-cols{
   	.wolf-core-pricing-table-inner{
   		width: 25%;
   	}
-  
+
   	.wolf-core-pricing-table-featured{
   		position: relative;
   		top: 17px;
@@ -6900,12 +6916,12 @@ ol.wolf-core-process-list li .wolf-core-process-number:before {
   	width: 60%;
   	margin: 0 auto;
   }
-  
+
   .wolf-core-pricing-tables-3-cols{
   	width: 85%;
   	margin: 0 auto;
   }
-  
+
   .wolf-core-pricing-tables-4-cols{
   	margin: 0 auto;
   }*/
@@ -6944,4 +6960,15 @@ ol.wolf-core-process-list li .wolf-core-process-number:before {
 
 .xdebug-error a {
   color: black;
+}
+
+
+/* Hide social icons in menu on mobile */
+.mobile-screen #mobile-bar .wvc-socials-container,
+.mobile-screen #mobile-bar .wolf-core-socials-container {
+	display: none !important;
+}
+
+#mobile-bar .flex-mobile-wrap {
+	width: 100% !important;
 }

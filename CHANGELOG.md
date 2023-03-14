@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 14th March 2023 - Version 1.5.7
+
+-   Fix: Hotfix for all themes to hide the social icons on mobile bar to avoid overlapping. This fix will be added in all themes in the next month theme updates.
+
 #### 24th February 2023 - Version 1.5.6
 
 -   Tweak: Replaced wp_remote_post function by wp_safe_remote_post for plugin activation

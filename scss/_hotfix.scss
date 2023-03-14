@@ -1,0 +1,20 @@
+/* Fix date format too big */
+.we-date-format-custom{
+	width: 35px;
+}
+
+/* Fix product variation border */
+table.variations th.label
+{
+	border:none;
+}
+
+/* Hide social icons in menu on mobile */
+.mobile-screen #mobile-bar .wvc-socials-container,
+.mobile-screen #mobile-bar .wolf-core-socials-container {
+	display: none!important;
+}
+
+#mobile-bar .flex-mobile-wrap {
+	width: 100%!important;
+}
