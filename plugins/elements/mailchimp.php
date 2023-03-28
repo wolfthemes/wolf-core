@@ -26,7 +26,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 			'size'                => 'normal',
 			'label'               => wolf_core_get_option( 'mailchimp', 'label' ),
 			'submit_type'         => 'text',
-			'submit_text'         => wolf_core_get_option( 'mailchimp', 'subscribe_text', esc_html__( 'Subscribe', 'wolf-visual-composer' ) ),
+			'submit_text'         => wolf_core_get_option( 'mailchimp', 'subscribe_text', esc_html__( 'Subscribe', 'wolf-core' ) ),
 			'si_type'             => '',
 			'icon'                => '',
 			'bottom_line'         => wolf_core_get_option( 'mailchimp', 'bottom_line' ),
@@ -34,9 +34,9 @@ function wolf_core_mailchimp( $atts = array() ) {
 			'show_bg'             => true,
 			'show_label'          => true,
 			'show_name'           => 'no',
-			'placeholder_f_name'  => wolf_core_get_option( 'mailchimp', 'placeholder_f_name', esc_html__( 'Your first name', 'wolf-visual-composer' ) ),
-			'placeholder_l_name'  => wolf_core_get_option( 'mailchimp', 'placeholder_l_name', esc_html__( 'Your last name', 'wolf-visual-composer' ) ),
-			'placeholder'         => wolf_core_get_option( 'mailchimp', 'placeholder', esc_html__( 'Enter your email address', 'wolf-visual-composer' ) ),
+			'placeholder_f_name'  => wolf_core_get_option( 'mailchimp', 'placeholder_f_name', esc_html__( 'Your first name', 'wolf-core' ) ),
+			'placeholder_l_name'  => wolf_core_get_option( 'mailchimp', 'placeholder_l_name', esc_html__( 'Your last name', 'wolf-core' ) ),
+			'placeholder'         => wolf_core_get_option( 'mailchimp', 'placeholder', esc_html__( 'Enter your email address', 'wolf-core' ) ),
 			'button_style'        => '',
 			'alignment'           => 'center',
 			'text_alignment'      => 'center',
@@ -68,7 +68,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 			'WolfCoreMailchimpParams',
 			array(
 				'ajaxUrl'                       => esc_url( WOLF_CORE()->ajax_url() ),
-				'subscriptionSuccessfulMessage' => wolf_core_get_option( 'mailchimp', 'thank_you_message', esc_html__( 'Thanks for subscribing', 'wolf-visual-composer' ) ),
+				'subscriptionSuccessfulMessage' => wolf_core_get_option( 'mailchimp', 'thank_you_message', esc_html__( 'Thanks for subscribing', 'wolf-core' ) ),
 			)
 		);
 	}
@@ -152,7 +152,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 		if ( ! $api_key ) {
 
 			$output .= sprintf(
-				wp_kses_post( __( '<p class="wolf-core-align-center">You must set a MailChimp API key in the <a href="%1$s" target="_blank">Wolf Core</a>. You can get your MailChimp API <a href="%2$s" target="_blank">here</a>.<p>', 'wolf-visual-composer' ) ),
+				wp_kses_post( __( '<p class="wolf-core-align-center">You must set a MailChimp API key in the <a href="%1$s" target="_blank">Wolf Core</a>. You can get your MailChimp API <a href="%2$s" target="_blank">here</a>.<p>', 'wolf-core' ) ),
 				esc_url( admin_url( 'admin.php?page=wolf-core-mailchimp' ) ),
 				esc_url( 'http://kb.mailchimp.com/integrations/api-integrations/about-api-keys' )
 			);
@@ -160,7 +160,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 		}
 
 		if ( ! $list ) {
-			$output .= esc_html__( 'You must set a list ID.', 'wolf-visual-composer' );
+			$output .= esc_html__( 'You must set a list ID.', 'wolf-core' );
 		}
 
 		$output .= '</p>';
@@ -169,7 +169,7 @@ function wolf_core_mailchimp( $atts = array() ) {
 
 		$output = '';
 
-		$output .= '<p class="wolf-core-align-center">' . esc_html__( 'Subscription to our newsletter open soon.', 'wolf-visual-composer' ) . '</p>';
+		$output .= '<p class="wolf-core-align-center">' . esc_html__( 'Subscription to our newsletter open soon.', 'wolf-core' ) . '</p>';
 
 		return $output;
 	}

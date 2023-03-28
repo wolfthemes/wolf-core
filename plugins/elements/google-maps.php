@@ -51,12 +51,23 @@ function wolf_core_google_maps( $atts ) {
 	if ( ! $google_api_key ) {
 
 		if ( is_user_logged_in() ) {
-			printf(
-				wp_kses_post( __( '<p class="wolf-core-align-center">You must set a Google Map API key in the <a style="text-decoration:underline;" href="%1$s" target="_blank">%2$s settings</a>. You can get your Google Map API <a style="text-decoration:underline;" href="%3$s" target="_blank">here</a>.<p>', 'wolf-visual-composer' ) ),
-				esc_url( admin_url( 'admin.php?page=wolf-core-google-map' ) ),
-				'Wolf Core',
-				esc_url( 'https://developers.google.com/maps/documentation/javascript/get-api-key' )
-			);
+
+			if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
+				printf(
+					wp_kses_post( __( '<p class="wolf-core-align-center">You must set a Google Map API key in the <a style="text-decoration:underline;" href="%1$s" target="_blank">%2$s settings</a>. You can get your Google Map API <a style="text-decoration:underline;" href="%3$s" target="_blank">here</a>.<p>', 'wolf-core' ) ),
+					esc_url( admin_url( 'admin.php?page=elementor#tab-integrations' ) ),
+					'Elementor',
+					esc_url( 'https://developers.google.com/maps/documentation/javascript/get-api-key' )
+				);
+
+			} else {
+				printf(
+					wp_kses_post( __( '<p class="wolf-core-align-center">You must set a Google Map API key in the <a style="text-decoration:underline;" href="%1$s" target="_blank">%2$s settings</a>. You can get your Google Map API <a style="text-decoration:underline;" href="%3$s" target="_blank">here</a>.<p>', 'wolf-core' ) ),
+					esc_url( admin_url( 'admin.php?page=wolf-core-google-map' ) ),
+					'Wolf Core',
+					esc_url( 'https://developers.google.com/maps/documentation/javascript/get-api-key' )
+				);
+			}
 		}
 
 		return;

@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.5.8\n"
+"Project-Id-Version: Wolf Core 1.5.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2023-03-14 15:04:04+00:00\n"
+"POT-Creation-Date: 2023-03-28 07:47:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3500,7 +3500,7 @@ msgid "Click Here"
 msgstr ""
 
 #: pack/wolf-core/plugins/elements/google-maps.php:55
-#: plugins/elements/google-maps.php:55
+#: plugins/elements/google-maps.php:57 plugins/elements/google-maps.php:65
 msgid ""
 "<p class=\"wolf-core-align-center\">You must set a Google Map API key in "
 "the <a style=\"text-decoration:underline;\" href=\"%1$s\" "
