@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 5th May 2023 - Version 1.6.0
+
+-   Tweak: Update MailChimp API to version 3
+
 #### 28th March 2023 - Version 1.5.9
 
 -   Fix: Link to Google Maps API setting in Google Maps info message

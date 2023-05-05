@@ -75,6 +75,14 @@ function wolf_core_mailchimp_ajax() {
 		$email    = sanitize_email( esc_attr( $_POST['email'] ) );
 		$list_id  = esc_attr( $_POST['list_id'] );
 
+		$data = array(
+			'list_id' => $list_id,
+			'email'     => $email,
+			'status'    => 'subscribed',
+			'firstname' => $f_name,
+			'lastname'  => $l_name,
+		);
+
 		if ( $has_name && ( ! $f_name || ! $l_name ) ) {
 
 			esc_html_e( 'Please insert your name', 'wolf-visual-composer' );
@@ -84,7 +92,10 @@ function wolf_core_mailchimp_ajax() {
 			esc_html_e( 'Please insert a valid email', 'wolf-visual-composer' );
 
 		} else {
-			WVCM()->subscribe( $list_id, $email, $f_name, $l_name );
+			// Subscribe
+			//debug(wolf_sync_mailchimp( $data ));
+			wolf_core_sync_mailchimp( $data );
+			//WVCM()->subscribe( $list_id, $email, $f_name, $l_name );
 			echo 'OK';
 		}
 	}
