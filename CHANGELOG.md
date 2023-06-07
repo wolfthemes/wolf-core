@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 7th June 2023 - Version 1.6.1
+
+-   Fix: PHP preg match error message
+
 #### 5th May 2023 - Version 1.6.0
 
 -   Tweak: Update MailChimp API to version 3

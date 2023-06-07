@@ -1393,5 +1393,7 @@ function wolf_core_sync_mailchimp( $data ) {
 
 	$result = curl_exec( $connection );
 
+	echo 'OK';
+
 	//var_dump( $result );
 }
