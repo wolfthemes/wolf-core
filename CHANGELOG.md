@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 13th June 2023 - Version 1.6.2
+
+-   Tweak: Improved marquee element animation
+
 #### 7th June 2023 - Version 1.6.1
 
 -   Fix: PHP preg match error message

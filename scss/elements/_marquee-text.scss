@@ -24,6 +24,7 @@ $marquee-width: 100%;
 $offset: 20vw;
 $move-initial: calc(-25% + 20vw);
 $move-final: calc(-50% + 20vw);
+$gap:1rem;
 
 .wolf-core-marquee-container{
 	position: relative;
@@ -31,23 +32,21 @@ $move-final: calc(-50% + 20vw);
 }
 
 .wolf-core-marquee {
+	--gap: 1rem;
 	position: relative;
-	top: 0;
-	left: 0;
-	width: $marquee-width;
+	display: flex;
 	overflow: hidden;
-	pointer-events: none;
-	z-index: 1;
-	//mix-blend-mode: color-burn;
+	user-select: none;
+	gap: $gap;
 }
 
 .wolf-core-marquee__inner {
-	width: fit-content;
+	flex-shrink: 0;
 	display: flex;
-	position: relative;
-	transform: translate3d($move-initial, 0, 0);
+	justify-content: space-around;
+	gap: $gap;
+	min-width: 100%;
 	animation: marquee 10s linear infinite;
-	animation-play-state: paused;
 }
 
 .wolf-core-marquee .wolf-core-marquee__inner {
@@ -61,7 +60,7 @@ $move-final: calc(-50% + 20vw);
 .wolf-core-marquee-text {
 	white-space: nowrap;
 	font-size: $item-font-size;
-	padding: 0 1vw;
+	//padding: 0 1vw;
 	font-weight: 700;
 	line-height: 1.15;
 }
@@ -73,11 +72,11 @@ $move-final: calc(-50% + 20vw);
 }
 
 @keyframes marquee {
-	0% {
-		transform: translate3d($move-initial, 0, 0);
+	from {
+		transform: translateX(0);
 	}
 
-	100% {
-		transform: translate3d($move-final, 0, 0);
+	to {
+		transform: translateX(calc(-100% - $gap));
 	}
 }
