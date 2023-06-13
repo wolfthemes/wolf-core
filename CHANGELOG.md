@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 13th June 2023 - Version 1.6.2
+#### 13th June 2023 - Version 1.6.3
 
 -   Tweak: Improved marquee element animation
+-   Fix: Countdown custom style bug
 
 #### 7th June 2023 - Version 1.6.1
 

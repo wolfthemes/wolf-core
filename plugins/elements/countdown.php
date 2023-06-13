@@ -21,7 +21,7 @@ function wolf_core_countdown( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'date'                     => '12/24/2020 12:00:00',
+				'date'                     => '12/24/2024 12:00:00',
 				'format'                   => 'dHMS',
 				'custom_format'            => '',
 				'offset'                   => -5,
@@ -135,18 +135,18 @@ function wolf_core_countdown( $atts ) {
 		$amount_style_tag .= 'text-decoration:' . esc_attr( $text_decoration ) . ';';
 	}
 
-	if ( $line_height ) {
+	if ( $line_height && preg_match( '~[0-9]+~', $line_height ) ) {
 		$amount_style_tag .= 'line-height:' . esc_attr( $line_height ) . ';';
 	}
 
-	if ( $letter_spacing ) {
+	if ( $letter_spacing && preg_match( '~[0-9]+~', $letter_spacing ) ) {
 		$amount_style_tag .= 'letter-spacing:' . esc_attr( $letter_spacing ) . ';';
 	}
 
 	/* Amount style tag */
 	if ( $amount_style_tag && ! wolf_core_is_elementor_editor() ) {
 		$output .= '<style>';
-		if ( $font_size ) {
+		if ( $font_size && preg_match( '~[0-9]+~', $font_size ) ) {
 			$font_size = wolf_core_sanitize_css_value( $font_size );
 			$output   .= "@media screen and (min-width: 1200px) { #wolf-core-countdown-$rand_id{ font-size:$font_size;} }";
 		}
