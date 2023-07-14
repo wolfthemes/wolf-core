@@ -24,6 +24,7 @@ function wolf_core_testimonial_slider( $atts ) {
 				'autoplay'            => 'yes',
 				'transition'          => 'slide',
 				'slideshow_speed'     => 4000,
+				'group_cells'         => 0,
 				'pause_on_hover'      => 'yes',
 				'nav_bullets'         => 'yes',
 				'nav_arrows'          => 'yes',
@@ -65,6 +66,12 @@ function wolf_core_testimonial_slider( $atts ) {
 		data-dots-color='$dots_color'
 		data-nav-arrows='$nav_arrows'
 		data-nav-bullets='$nav_bullets'";
+
+	if ( $group_cells && 1 < absint( $group_cells ) ) {
+		$slider_data .= " data-groupcells='$group_cells'";
+
+		$class .= ' wolf-core-testimonial-slider-groupcells';
+	}
 
 	$output .= "<div $slider_data class='wolf-core-testimonial-slider'>";
 

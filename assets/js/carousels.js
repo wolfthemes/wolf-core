@@ -102,6 +102,7 @@ var WolfCoreCarousels = function( $ ) {
 					transition,
 					dataAutoplay = $slider.data( 'autoplay' ),
 					dataSpeed = $slider.data( 'slideshow-speed' ) || dataAutoplay,
+					dataGroupcells = $slider.data( 'groupcells' ) || dataGroupcells,
 					dataPauseonHover = $slider.data( 'pause-on-hover' ),
 					dataTransition = $slider.data( 'transition' ),
 					dataNavbullets = $slider.data( 'nav-bullets' ),

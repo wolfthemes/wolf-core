@@ -49,6 +49,29 @@ function wolf_core_blockquote_params() {
 					'label'       => esc_html__( 'Avatar', 'wolf-core' ),
 					'param_name'  => 'avatar',
 				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
+					'param_name'   => 'blockquote_text_color',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-blockquote' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-blockquote blockquote' => 'color: {{VALUE}}!important;',
+					),
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Background Color', 'wolf-core' ),
+					'param_name'   => 'custom_background_color', // backward compatiblity name (WVC plugin).
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-blockquote' => 'background-color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
 			),
 		)
 	);

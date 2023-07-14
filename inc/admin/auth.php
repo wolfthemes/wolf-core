@@ -251,6 +251,7 @@ function wolf_core_wrong_theme() {
 		'ponk',
 		'decibel',
 		'morvan',
+		'clix',
 
 	);
 

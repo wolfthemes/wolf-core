@@ -124,6 +124,43 @@ function wolf_core_pricing_table_params() {
 					'param_name'  => 'services',
 					'description' => esc_html__( 'Enter one service per line.', 'wolf-core' ),
 				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Title Color', 'wolf-core' ),
+					'param_name'   => 'pricing_table_title_color',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-pricing-table-title h1' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-pricing-table-title h2' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-pricing-table-title h3' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-pricing-table-title h4' => 'color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-pricing-table-title h5' => 'color: {{VALUE}}!important;',
+					),
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
+					'param_name'   => 'pricing_table_text_color',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-pricing-table-inner' => 'color: {{VALUE}};',
+					),
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Background Color', 'wolf-core' ),
+					'param_name'   => 'custom_background_color', // backward compatiblity name (WVC plugin).
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-pricing-table-inner' => 'background-color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
 			),
 		)
 	);

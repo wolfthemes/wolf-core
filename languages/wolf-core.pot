@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.6.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2023-06-13 12:35:06+00:00\n"
+"POT-Creation-Date: 2023-07-12 14:08:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -431,7 +431,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/social-icons.php:313
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:38
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:58
-#: plugins/common-params/button-params.php:271
+#: plugins/common-params/button-params.php:271 plugins/params/blockquote.php:67
 #: plugins/params/marquee-text.php:71
 #: plugins/params/social-icons-custom.php:250
 #: plugins/params/social-icons-custom.php:281
@@ -2740,7 +2740,8 @@ msgstr ""
 #: plugins/params/banner.php:328 plugins/params/banner.php:343
 #: plugins/params/banner.php:355 plugins/params/bigtext.php:60
 #: plugins/params/bigtext.php:71 plugins/params/bigtext.php:92
-#: plugins/params/bigtext.php:102 plugins/params/breadcrumb.php:78
+#: plugins/params/bigtext.php:102 plugins/params/blockquote.php:62
+#: plugins/params/blockquote.php:73 plugins/params/breadcrumb.php:78
 #: plugins/params/breadcrumb.php:89 plugins/params/countdown.php:83
 #: plugins/params/countdown.php:92 plugins/params/countdown.php:200
 #: plugins/params/countdown.php:211 plugins/params/google-maps.php:258
@@ -2832,9 +2833,10 @@ msgstr ""
 #: plugins/common-params/button-params.php:260
 #: plugins/common-params/button-params.php:294 plugins/params/bigtext.php:47
 #: plugins/params/bigtext.php:77 plugins/params/bigtext.php:86
-#: plugins/params/breadcrumb.php:83 plugins/params/heading.php:172
-#: plugins/params/heading.php:191 plugins/params/interactive-links.php:55
-#: plugins/params/marquee-text.php:60 plugins/params/rotating-text.php:174
+#: plugins/params/blockquote.php:55 plugins/params/breadcrumb.php:83
+#: plugins/params/heading.php:172 plugins/params/heading.php:191
+#: plugins/params/interactive-links.php:55 plugins/params/marquee-text.php:60
+#: plugins/params/rotating-text.php:174
 #: plugins/params/social-icons-custom.php:235
 #: plugins/params/social-icons.php:255 plugins/params/textual-showcase.php:75
 #: plugins/vc/vc-params/custom-heading-params.php:95
