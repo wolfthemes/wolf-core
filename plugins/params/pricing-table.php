@@ -142,6 +142,17 @@ function wolf_core_pricing_table_params() {
 
 				array(
 					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Price Color', 'wolf-core' ),
+					'param_name'   => 'pricing_table_price_color',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-pricing-table-price' => 'color: {{VALUE}};',
+					),
+					'page_builder' => 'elementor',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
 					'label'        => esc_html__( 'Text Color', 'wolf-core' ),
 					'param_name'   => 'pricing_table_text_color',
 					'selectors'    => array(
