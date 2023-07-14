@@ -4677,6 +4677,10 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   padding-right: 10px;
 }
 
+.wolf-core-pricing-table-footer a:last-child {
+  margin-top: 30px;
+}
+
 /**
  * @# Price list
  **/

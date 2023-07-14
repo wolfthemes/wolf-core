@@ -107,6 +107,19 @@ function wolf_core_pricing_table_params() {
 					'label'      => esc_html__( 'Button Link', 'wolf-core' ),
 					'param_name' => 'link',
 				),
+
+				array(
+					'type'       => 'text',
+					'label'      => esc_html__( 'Secondary Button Text', 'wolf-core' ),
+					'param_name' => 'secondary_button_text',
+				),
+
+				array(
+					'type'       => 'link',
+					'label'      => esc_html__( 'Secondary Button Link', 'wolf-core' ),
+					'param_name' => 'secondary_button_link',
+				),
+
 				array(
 					'type'       => 'checkbox',
 					'label'      => esc_html__( 'Featured', 'wolf-core' ),
