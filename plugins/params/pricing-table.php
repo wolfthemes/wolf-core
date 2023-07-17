@@ -185,6 +185,39 @@ function wolf_core_pricing_table_params() {
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Border Color', 'wolf-core' ),
+					'param_name'   => 'custom_border_color',
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-pricing-table-inner' => 'border-color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Featured Text Background Color', 'wolf-core' ),
+					'param_name'   => 'featured_text_background_color', // backward compatiblity name (WVC plugin).
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-pricing-table-featured-text' => 'background-color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+
+				array(
+					'type'         => 'colorpicker',
+					'label'        => esc_html__( 'Featured Text Color', 'wolf-core' ),
+					'param_name'   => 'featured_text_color', // backward compatiblity name (WVC plugin).
+					'page_builder' => 'elementor',
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-pricing-table-featured-text' => 'color: {{VALUE}}!important;',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
 			),
 		)
 	);

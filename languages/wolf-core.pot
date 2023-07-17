@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.6.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2023-07-14 14:20:46+00:00\n"
+"POT-Creation-Date: 2023-07-17 08:31:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2672,6 +2672,9 @@ msgstr ""
 #: pack/wolf-core/plugins/params/pricing-table.php:164
 #: pack/wolf-core/plugins/params/pricing-table.php:175
 #: pack/wolf-core/plugins/params/pricing-table.php:186
+#: pack/wolf-core/plugins/params/pricing-table.php:197
+#: pack/wolf-core/plugins/params/pricing-table.php:208
+#: pack/wolf-core/plugins/params/pricing-table.php:219
 #: pack/wolf-core/plugins/params/rotating-text.php:169
 #: pack/wolf-core/plugins/params/rotating-text.php:180
 #: pack/wolf-core/plugins/params/rotating-text.php:191
@@ -2771,8 +2774,9 @@ msgstr ""
 #: plugins/params/marquee-text.php:66 plugins/params/marquee-text.php:77
 #: plugins/params/pricing-table.php:153 plugins/params/pricing-table.php:164
 #: plugins/params/pricing-table.php:175 plugins/params/pricing-table.php:186
-#: plugins/params/rotating-text.php:169 plugins/params/rotating-text.php:180
-#: plugins/params/rotating-text.php:191
+#: plugins/params/pricing-table.php:197 plugins/params/pricing-table.php:208
+#: plugins/params/pricing-table.php:219 plugins/params/rotating-text.php:169
+#: plugins/params/rotating-text.php:180 plugins/params/rotating-text.php:191
 #: plugins/params/social-icons-custom.php:192
 #: plugins/params/social-icons-custom.php:203
 #: plugins/params/social-icons-custom.php:227
@@ -2870,13 +2874,15 @@ msgid "Backgorund Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/common-params/button-params.php:316
+#: pack/wolf-core/plugins/params/pricing-table.php:191
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:38
 #: pack/wolf-core/plugins/vc/vc-map/column.php:38
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:52
 #: pack/wolf-core/plugins/vc/vc-map/row.php:173
 #: plugins/common-params/button-params.php:316
-#: plugins/vc/vc-map/column-inner.php:38 plugins/vc/vc-map/column.php:38
-#: plugins/vc/vc-map/row-inner.php:52 plugins/vc/vc-map/row.php:173
+#: plugins/params/pricing-table.php:191 plugins/vc/vc-map/column-inner.php:38
+#: plugins/vc/vc-map/column.php:38 plugins/vc/vc-map/row-inner.php:52
+#: plugins/vc/vc-map/row.php:173
 msgid "Border Color"
 msgstr ""
 
@@ -5584,6 +5590,16 @@ msgstr ""
 #: pack/wolf-core/plugins/params/pricing-table.php:158
 #: plugins/params/pricing-table.php:158
 msgid "Price Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/pricing-table.php:202
+#: plugins/params/pricing-table.php:202
+msgid "Featured Text Background Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/pricing-table.php:213
+#: plugins/params/pricing-table.php:213
+msgid "Featured Text Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/process.php:23 plugins/params/process.php:23

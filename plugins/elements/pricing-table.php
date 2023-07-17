@@ -99,7 +99,7 @@ function wolf_core_pricing_table( $atts ) {
 		$output .= '<div class="wolf-core-pricing-table-price-wrapper">';
 
 		// Offer.
-	if ( 'yes' === $offer && $offer_price ) {
+	if ( $offer_price ) {
 
 		$output .= '<del class="wolf-core-pricing-table-price-strike">';
 
@@ -107,7 +107,7 @@ function wolf_core_pricing_table( $atts ) {
 			$output .= '<span class="wolf-core-pricing-table-price-currency-strike">' . esc_attr( $currency ) . '</span>';
 		}
 
-		$output .= absint( $price );
+		$output .= esc_attr( $price );
 
 		if ( $currency && 'after' === $display_currency ) {
 			$output .= '<span class="wolf-core-pricing-table-price-currency-strike">' . esc_attr( $currency ) . '</span>';
