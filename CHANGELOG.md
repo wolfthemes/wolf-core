@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 17th July 2023 - Version 1.6.4
+
+-   Tweak: Added pricing table color options
+
 #### 13th June 2023 - Version 1.6.3
 
 -   Tweak: Improved marquee element animation
