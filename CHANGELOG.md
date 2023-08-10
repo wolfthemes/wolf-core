@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 10th August 2023 - Version 1.6.5
+
+-   Tweak: Added link widget background and text color
+
 #### 17th July 2023 - Version 1.6.4
 
 -   Tweak: Added pricing table color options
