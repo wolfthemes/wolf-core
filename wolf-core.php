@@ -7,7 +7,7 @@
  * Author: WolfThemes
  * Author URI: https://wolfthemes.com
  * Requires at least: 5.0
- * Tested up to: 5.5
+ * Tested up to: 6.3
  *
  * Text Domain: wolf-core
  * Domain Path: /languages/
