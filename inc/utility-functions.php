@@ -167,7 +167,7 @@ function wolf_core_sanitize_css_field( $style ) {
  */
 function wolf_core_esc_style_attr( $style ) {
 
-	if ( '' === $style ) {
+	if ( '' === $style || empty( $style ) ) {
 		return;
 	}
 

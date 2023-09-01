@@ -45,8 +45,9 @@ function wolf_core_rotating_text_params() {
 				array(
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Width (in px)', 'wolf-core' ),
-					'default'    => 300,
-					'param_name' => 'width',
+					'default'    => 200,
+					'step' => 1,
+					'param_name' => 'svg_width',
 					'range'      => array(
 						'px' => array(
 							'min' => 100,
@@ -54,7 +55,7 @@ function wolf_core_rotating_text_params() {
 						),
 					),
 					'selectors'  => array(
-						'{{WRAPPER}} .wolf-core-rotating-text svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .wolf-core-rotating-text .wolf-core-rotating-text-link' => 'width: {{SIZE}}px;height: {{SIZE}}px;',
 					),
 				),
 
@@ -126,6 +127,7 @@ function wolf_core_rotating_text_params() {
 					),
 					'selectors'  => array(
 						'{{WRAPPER}} .wolf-core-rotating-text i' => 'font-size: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .wolf-core-rotating-text svg:not(.wolf-core-rotating-text-svg)' => 'width: {{SIZE}}{{UNIT}};',
 					),
 				),
 
@@ -175,7 +177,7 @@ function wolf_core_rotating_text_params() {
 					'param_name'   => 'color',
 					'page_builder' => 'elementor',
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-rotating-text svg text' => 'fill: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-rotating-text .wolf-core-rotating-text-svg text' => 'fill: {{VALUE}};',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),

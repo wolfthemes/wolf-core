@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: center;
 
-	i{
+	i,svg:not(.wolf-core-rotating-text-svg){
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -18,14 +18,21 @@
 
 		}
 	}
+
+	svg:not(.wolf-core-rotating-text-svg) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
-.wolf-core-rotating-text svg {
+.wolf-core-rotating-text .wolf-core-rotating-text-svg {
 	position: relative;
 	left: 0;
 	top: 0;
-	width: 100%;
-	height: 220px;
+	width: 200%;
+	height: 200%;
+	margin-left: -50%;
+	margin-top: -50%;
 	animation-name: rotatingTextRotate;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;

@@ -2864,7 +2864,10 @@ function wolf_core_render_icon( $icon, $attributes = array(), $tag = 'i' ) {
 		$output = '';
 		// handler SVG Icon
 		if ( 'svg' === $icon['library'] ) {
-			//$output = self::render_svg_icon( $icon['value'] );
+			$remote_svg_file = wp_remote_get($icon['value']['url']);
+			$svg_content = wp_remote_retrieve_body($remote_svg_file );
+
+			$output .= $svg_content;
 		} else {
 			//$icon_types = self::get_icon_manager_tabs();
 		if ( isset( $icon_types[ $icon['library'] ]['render_callback'] ) && is_callable( $icon_types[ $icon['library'] ]['render_callback'] ) ) {

@@ -252,7 +252,7 @@ function wolf_core_wrong_theme() {
 		'decibel',
 		'morvan',
 		'clix',
-
+		'gainlab',
 	);
 
 	return ( ! in_array( esc_attr( sanitize_title_with_dashes( get_template() ) ), $ok, true ) );
