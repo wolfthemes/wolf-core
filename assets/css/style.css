@@ -4409,6 +4409,10 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
   opacity: 1;
 }
 
+#wolf-core-interactive-link-bg-1 {
+  opacity: 1;
+}
+
 /**
  * @# Link
  **/

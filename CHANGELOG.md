@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 14th September 2023 - Version 1.6.6
+
+-   Fix: Default interactive link background visibility
+
 #### 10th August 2023 - Version 1.6.5
 
 -   Tweak: Added link widget background and text color

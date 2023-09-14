@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.6.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2023-09-01 07:53:07+00:00\n"
+"POT-Creation-Date: 2023-09-14 10:16:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1945,7 +1945,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:169
 #: pack/wolf-core/plugins/params/mailchimp.php:181
 #: pack/wolf-core/plugins/params/open-table.php:78
-#: pack/wolf-core/plugins/params/rotating-text.php:102
+#: pack/wolf-core/plugins/params/rotating-text.php:103
 #: pack/wolf-core/plugins/params/social-icons-custom.php:45
 #: pack/wolf-core/plugins/params/social-icons-custom.php:65
 #: pack/wolf-core/plugins/params/social-icons.php:65
@@ -1978,7 +1978,7 @@ msgstr ""
 #: plugins/params/icon.php:127 plugins/params/icon.php:147
 #: plugins/params/mailchimp.php:150 plugins/params/mailchimp.php:169
 #: plugins/params/mailchimp.php:181 plugins/params/open-table.php:78
-#: plugins/params/rotating-text.php:102
+#: plugins/params/rotating-text.php:103
 #: plugins/params/social-icons-custom.php:45
 #: plugins/params/social-icons-custom.php:65 plugins/params/social-icons.php:65
 #: plugins/params/social-icons.php:85
@@ -2021,7 +2021,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:170
 #: pack/wolf-core/plugins/params/mailchimp.php:182
 #: pack/wolf-core/plugins/params/open-table.php:74
-#: pack/wolf-core/plugins/params/rotating-text.php:98
+#: pack/wolf-core/plugins/params/rotating-text.php:99
 #: pack/wolf-core/plugins/params/social-icons-custom.php:41
 #: pack/wolf-core/plugins/params/social-icons-custom.php:66
 #: pack/wolf-core/plugins/params/social-icons.php:61
@@ -2056,7 +2056,7 @@ msgstr ""
 #: plugins/params/icon.php:123 plugins/params/icon.php:146
 #: plugins/params/mailchimp.php:146 plugins/params/mailchimp.php:170
 #: plugins/params/mailchimp.php:182 plugins/params/open-table.php:74
-#: plugins/params/rotating-text.php:98
+#: plugins/params/rotating-text.php:99
 #: plugins/params/social-icons-custom.php:41
 #: plugins/params/social-icons-custom.php:66 plugins/params/social-icons.php:61
 #: plugins/params/social-icons.php:86
@@ -2100,7 +2100,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:171
 #: pack/wolf-core/plugins/params/mailchimp.php:183
 #: pack/wolf-core/plugins/params/open-table.php:82
-#: pack/wolf-core/plugins/params/rotating-text.php:106
+#: pack/wolf-core/plugins/params/rotating-text.php:107
 #: pack/wolf-core/plugins/params/social-icons-custom.php:49
 #: pack/wolf-core/plugins/params/social-icons-custom.php:67
 #: pack/wolf-core/plugins/params/social-icons.php:69
@@ -2135,7 +2135,7 @@ msgstr ""
 #: plugins/params/icon.php:131 plugins/params/icon.php:148
 #: plugins/params/mailchimp.php:154 plugins/params/mailchimp.php:171
 #: plugins/params/mailchimp.php:183 plugins/params/open-table.php:82
-#: plugins/params/rotating-text.php:106
+#: plugins/params/rotating-text.php:107
 #: plugins/params/social-icons-custom.php:49
 #: plugins/params/social-icons-custom.php:67 plugins/params/social-icons.php:69
 #: plugins/params/social-icons.php:87
@@ -2423,7 +2423,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/icon.php:143
 #: pack/wolf-core/plugins/params/mailchimp.php:178
 #: pack/wolf-core/plugins/params/open-table.php:69
-#: pack/wolf-core/plugins/params/rotating-text.php:93
+#: pack/wolf-core/plugins/params/rotating-text.php:94
 #: pack/wolf-core/plugins/params/social-icons-custom.php:36
 #: pack/wolf-core/plugins/params/social-icons-custom.php:62
 #: pack/wolf-core/plugins/params/social-icons.php:56
@@ -2446,7 +2446,7 @@ msgstr ""
 #: plugins/params/breadcrumb.php:36 plugins/params/breadcrumb.php:62
 #: plugins/params/icon.php:118 plugins/params/icon.php:143
 #: plugins/params/mailchimp.php:178 plugins/params/open-table.php:69
-#: plugins/params/rotating-text.php:93
+#: plugins/params/rotating-text.php:94
 #: plugins/params/social-icons-custom.php:36
 #: plugins/params/social-icons-custom.php:62 plugins/params/social-icons.php:56
 #: plugins/params/social-icons.php:82
@@ -2479,7 +2479,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/icon.php:67
 #: pack/wolf-core/plugins/params/process.php:73
 #: pack/wolf-core/plugins/params/process.php:82
-#: pack/wolf-core/plugins/params/rotating-text.php:88
+#: pack/wolf-core/plugins/params/rotating-text.php:89
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:33
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:72
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:87
@@ -2499,7 +2499,7 @@ msgstr ""
 #: plugins/common-params/button-params.php:145 plugins/params/icon.php:25
 #: plugins/params/icon.php:53 plugins/params/icon.php:67
 #: plugins/params/process.php:73 plugins/params/process.php:82
-#: plugins/params/rotating-text.php:88 plugins/vc/deprecated/wvc_icon.php:33
+#: plugins/params/rotating-text.php:89 plugins/vc/deprecated/wvc_icon.php:33
 #: plugins/vc/deprecated/wvc_icon.php:72 plugins/vc/deprecated/wvc_icon.php:87
 #: plugins/vc/deprecated/wvc_icon.php:103
 #: plugins/vc/deprecated/wvc_icon.php:119
@@ -2592,13 +2592,13 @@ msgstr ""
 #: pack/wolf-core/plugins/params/breadcrumb.php:74
 #: pack/wolf-core/plugins/params/interactive-links.php:46
 #: pack/wolf-core/plugins/params/marquee-text.php:51
-#: pack/wolf-core/plugins/params/rotating-text.php:166
+#: pack/wolf-core/plugins/params/rotating-text.php:167
 #: pack/wolf-core/plugins/params/textual-showcase.php:66
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:24
 #: plugins/common-params/button-params.php:229 plugins/params/bigtext.php:26
 #: plugins/params/bigtext.php:98 plugins/params/breadcrumb.php:74
 #: plugins/params/interactive-links.php:46 plugins/params/marquee-text.php:51
-#: plugins/params/rotating-text.php:166 plugins/params/textual-showcase.php:66
+#: plugins/params/rotating-text.php:167 plugins/params/textual-showcase.php:66
 #: plugins/vc/vc-params/custom-heading-params.php:24
 msgid "Typography"
 msgstr ""
@@ -2679,9 +2679,9 @@ msgstr ""
 #: pack/wolf-core/plugins/params/pricing-table.php:197
 #: pack/wolf-core/plugins/params/pricing-table.php:208
 #: pack/wolf-core/plugins/params/pricing-table.php:219
-#: pack/wolf-core/plugins/params/rotating-text.php:170
-#: pack/wolf-core/plugins/params/rotating-text.php:181
-#: pack/wolf-core/plugins/params/rotating-text.php:192
+#: pack/wolf-core/plugins/params/rotating-text.php:171
+#: pack/wolf-core/plugins/params/rotating-text.php:182
+#: pack/wolf-core/plugins/params/rotating-text.php:193
 #: pack/wolf-core/plugins/params/social-icons-custom.php:192
 #: pack/wolf-core/plugins/params/social-icons-custom.php:203
 #: pack/wolf-core/plugins/params/social-icons-custom.php:227
@@ -2780,8 +2780,8 @@ msgstr ""
 #: plugins/params/pricing-table.php:153 plugins/params/pricing-table.php:164
 #: plugins/params/pricing-table.php:175 plugins/params/pricing-table.php:186
 #: plugins/params/pricing-table.php:197 plugins/params/pricing-table.php:208
-#: plugins/params/pricing-table.php:219 plugins/params/rotating-text.php:170
-#: plugins/params/rotating-text.php:181 plugins/params/rotating-text.php:192
+#: plugins/params/pricing-table.php:219 plugins/params/rotating-text.php:171
+#: plugins/params/rotating-text.php:182 plugins/params/rotating-text.php:193
 #: plugins/params/social-icons-custom.php:192
 #: plugins/params/social-icons-custom.php:203
 #: plugins/params/social-icons-custom.php:227
@@ -2846,7 +2846,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/link.php:50
 #: pack/wolf-core/plugins/params/marquee-text.php:60
 #: pack/wolf-core/plugins/params/pricing-table.php:169
-#: pack/wolf-core/plugins/params/rotating-text.php:175
+#: pack/wolf-core/plugins/params/rotating-text.php:176
 #: pack/wolf-core/plugins/params/social-icons-custom.php:235
 #: pack/wolf-core/plugins/params/social-icons.php:255
 #: pack/wolf-core/plugins/params/textual-showcase.php:75
@@ -2859,7 +2859,7 @@ msgstr ""
 #: plugins/params/heading.php:172 plugins/params/heading.php:191
 #: plugins/params/interactive-links.php:55 plugins/params/link.php:50
 #: plugins/params/marquee-text.php:60 plugins/params/pricing-table.php:169
-#: plugins/params/rotating-text.php:175
+#: plugins/params/rotating-text.php:176
 #: plugins/params/social-icons-custom.php:235
 #: plugins/params/social-icons.php:255 plugins/params/textual-showcase.php:75
 #: plugins/vc/vc-params/custom-heading-params.php:95
@@ -4041,9 +4041,9 @@ msgstr ""
 #: pack/wolf-core/plugins/params/animated-svg.php:97
 #: pack/wolf-core/plugins/params/animated-svg.php:134
 #: pack/wolf-core/plugins/params/marquee-text.php:82
-#: pack/wolf-core/plugins/params/rotating-text.php:75
+#: pack/wolf-core/plugins/params/rotating-text.php:76
 #: plugins/params/animated-svg.php:97 plugins/params/animated-svg.php:134
-#: plugins/params/marquee-text.php:82 plugins/params/rotating-text.php:75
+#: plugins/params/marquee-text.php:82 plugins/params/rotating-text.php:76
 msgid "Animation Duration (in seconds)"
 msgstr ""
 
@@ -5270,8 +5270,8 @@ msgid "Panels"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/link.php:44
-#: pack/wolf-core/plugins/params/rotating-text.php:63
-#: plugins/params/link.php:44 plugins/params/rotating-text.php:63
+#: pack/wolf-core/plugins/params/rotating-text.php:64
+#: plugins/params/link.php:44 plugins/params/rotating-text.php:64
 msgid "URL"
 msgstr ""
 
@@ -5640,14 +5640,14 @@ msgid "Number"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/process.php:93
-#: pack/wolf-core/plugins/params/rotating-text.php:186
+#: pack/wolf-core/plugins/params/rotating-text.php:187
 #: pack/wolf-core/plugins/params/social-icons-custom.php:178
 #: pack/wolf-core/plugins/params/social-icons-custom.php:209
 #: pack/wolf-core/plugins/params/social-icons-custom.php:221
 #: pack/wolf-core/plugins/params/social-icons.php:198
 #: pack/wolf-core/plugins/params/social-icons.php:229
 #: pack/wolf-core/plugins/params/social-icons.php:241
-#: plugins/params/process.php:93 plugins/params/rotating-text.php:186
+#: plugins/params/process.php:93 plugins/params/rotating-text.php:187
 #: plugins/params/social-icons-custom.php:178
 #: plugins/params/social-icons-custom.php:209
 #: plugins/params/social-icons-custom.php:221
@@ -5666,23 +5666,23 @@ msgstr ""
 msgid "Width (in px)"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/rotating-text.php:69
-#: plugins/params/rotating-text.php:69
+#: pack/wolf-core/plugins/params/rotating-text.php:70
+#: plugins/params/rotating-text.php:70
 msgid "Scroll link (smooth scroll to anchor)"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/rotating-text.php:119
-#: plugins/params/rotating-text.php:119
+#: pack/wolf-core/plugins/params/rotating-text.php:120
+#: plugins/params/rotating-text.php:120
 msgid "Icon Size"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/rotating-text.php:135
-#: plugins/params/rotating-text.php:135
+#: pack/wolf-core/plugins/params/rotating-text.php:136
+#: plugins/params/rotating-text.php:136
 msgid "Icon Horizontal Adjustment"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/rotating-text.php:150
-#: plugins/params/rotating-text.php:150
+#: pack/wolf-core/plugins/params/rotating-text.php:151
+#: plugins/params/rotating-text.php:151
 msgid "Icon Vertical Adjustment"
 msgstr ""
 
