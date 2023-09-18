@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 14th September 2023 - Version 1.6.7
+
+-   Fix: Pricing Table secondary button glitch
+
 #### 14th September 2023 - Version 1.6.6
 
 -   Fix: Default interactive link background visibility

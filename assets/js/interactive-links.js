@@ -25,6 +25,12 @@ var WolfCoreInteractiveLinks = (function ($) {
 				$( '#wolf-core-interactive-link-bg-' + index ).addClass( 'panel-current' );
 			} );
 
+		},
+
+		load : function() {
+			if ( $( '#wolf-core-interactive-link-bg-1' ) ) {
+				$( '.wolf-core-interactive-link' ).first().addClass( 'link-active' );
+			}
 		}
 	};
 })(jQuery);
@@ -34,5 +40,9 @@ var WolfCoreInteractiveLinks = (function ($) {
 
 	$(document).ready(function () {
 		WolfCoreInteractiveLinks.init();
+	});
+
+	$(window).load(function() {
+		WolfCoreInteractiveLinks.load();
 	});
 })(jQuery);
