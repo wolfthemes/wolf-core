@@ -13,7 +13,29 @@ defined( 'ABSPATH' ) || exit;
  * Add default typography color option
  */
 add_action(
-	'elementor/element/section/section_typo/after_section_start',
+	'elementor/element/section/section_background/before_section_end',
+	function( $element ) {
+		$element->add_control(
+			'font_color',
+			array(
+				'label'        => esc_html__( 'Default Font Color', 'wolf-core' ),
+
+				'type'         => \Elementor\Controls_Manager::SELECT,
+				'default'      => '',
+				'prefix_class' => 'wolf-core-font-',
+				// 'render_type' => 'template',
+				'options'      => array(
+					''      => esc_html__( 'Default', 'wolf-core' ),
+					'dark'  => esc_html__( 'Dark', 'wolf-core' ),
+					'light' => esc_html__( 'Light', 'wolf-core' ),
+				),
+			)
+		);
+	},
+	10
+);
+add_action(
+	'elementor/element/container/section_background/before_section_end',
 	function( $element ) {
 		$element->add_control(
 			'font_color',
@@ -61,6 +83,29 @@ add_action(
 	10,
 	2
 );
+add_action(
+	'elementor/element/container/section_layout/before_section_end',
+	function( $section, $args ) {
+		$section->add_control(
+			'name',
+			array(
+				'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
+				'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+			)
+		);
+
+		$section->add_control(
+			'el_class',
+			array(
+				'label' => esc_html__( 'Extra Class', 'wolf-core' ),
+				'type'  => \Elementor\Controls_Manager::TEXT,
+			)
+		);
+	},
+	10,
+	2
+);
 
 /**
  * Add parallax background option
@@ -84,13 +129,15 @@ function wolf_core_add_parallax_background_option( $section, $args )  {
 	);
 }
 add_action( 'elementor/element/section/section_background/before_section_end', 'wolf_core_add_parallax_background_option', 10, 2 );
+add_action( 'elementor/element/container/section_background/before_section_end', 'wolf_core_add_parallax_background_option', 10, 2 );
 
 /**
  * Render Section custom attributes
  */
 function wolf_core_render_custom_attributes( $widget ) {
-	// Make sure we are in a section element.
-	if ( 'section' !== $widget->get_name() ) {
+
+	// Make sure we are in a section/container element.
+	if ( 'container' !== $widget->get_name() && 'section' !== $widget->get_name() ) {
 		return;
 	}
 
@@ -99,8 +146,6 @@ function wolf_core_render_custom_attributes( $widget ) {
 	$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-elementor-row' );
 
 	if ( isset( $settings['parallax'] ) && 'yes' === $settings['parallax'] ) {
-
-		// debug( $settings );
 
 		if ( 'video' === $settings['background_background'] && isset( $settings['background_video_link'] ) ) {
 

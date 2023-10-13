@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 13th October 2023 - Version 1.6.8
+
+-   Tweak: Enable "section" custom settings on new "container" element
+
 #### 14th September 2023 - Version 1.6.7
 
 -   Fix: Pricing Table secondary button glitch
