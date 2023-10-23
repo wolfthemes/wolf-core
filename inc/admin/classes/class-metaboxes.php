@@ -248,7 +248,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 					// image
 			} elseif ( 'image' == $type ) {
 				$meta_img     = absint( get_post_meta( $post_id, $field_id, true ) );
-				$meta_img_url = esc_url( $this->get_url_from_attachment_id( $meta_img ) );
+				$meta_img_url = $this->get_url_from_attachment_id( $meta_img );
 				?>
 					<div>
 						<input type="hidden"  name="<?php echo esc_attr( $field_id ); ?>" id="<?php echo esc_attr( $field_id ); ?>" value="<?php echo absint( $meta_img ); ?>">
@@ -257,7 +257,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						if ( 0 == $meta_img ) {
 							echo ' display:none;';}
 						?>
-						" class="wolf-core-metabox-img-preview" src="<?php echo esc_url( $meta_img_url ); ?>" alt="<?php echo esc_attr( $field_id ); ?>">
+						" class="wolf-core-metabox-img-preview" src="<?php echo (  $meta_img ) ? esc_url( $meta_img_url ) : ''; ?>" alt="<?php echo esc_attr( $field_id ); ?>">
 						<br><a href="#" class="button wolf-core-metabox-reset-img"><?php esc_html_e( 'Clear', 'wolf-core' ); ?></a>
 						<a href="#" class="button wolf-core-metabox-set-img"><?php esc_html_e( 'Choose an image', 'wolf-core' ); ?></a>
 					</div>
