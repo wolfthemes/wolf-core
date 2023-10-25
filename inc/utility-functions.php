@@ -261,9 +261,12 @@ function wolf_core_texarea_lines_to_array( $text, $type = 'text' ) {
  * @return string $list
  */
 function wolf_core_clean_list( $list, $separator = ',' ) {
-	$list = str_replace( array( $separator . ' ', ' ' . $separator ), $separator, $list );
-	$list = ltrim( $list, $separator );
-	$list = rtrim( $list, $separator );
+	if ( ! empty( $list ) ) {
+		$list = str_replace( array( $separator . ' ', ' ' . $separator ), $separator, $list );
+		$list = ltrim( $list, $separator );
+		$list = rtrim( $list, $separator );
+	}
+
 	return $list;
 }
 

@@ -219,8 +219,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 		} elseif ( 'font_family' === $type ) {
 
-			$field_params['type']    = \Elementor\Controls_Manager::SELECT;
-			$field_params['options'] = array_merge( array( '' => esc_html__( 'Default' ) ), wolf_core_get_google_fonts_options() );
+			$field_params['type'] = \Elementor\Controls_Manager::FONT;
 
 		} elseif ( 'link' === $type ) {
 

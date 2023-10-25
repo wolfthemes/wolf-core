@@ -672,9 +672,11 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 		 * @return string $list
 		 */
 		public function clean_list( $list, $separator = ',' ) {
-			$list = str_replace( array( $separator . ' ', ' ' . $separator ), $separator, $list );
-			$list = ltrim( $list, $separator );
-			$list = rtrim( $list, $separator );
+			if ( ! empty( $list ) ) {
+				$list = str_replace( array( $separator . ' ', ' ' . $separator ), $separator, $list );
+				$list = ltrim( $list, $separator );
+				$list = rtrim( $list, $separator );
+			}
 			return $list;
 		}
 
