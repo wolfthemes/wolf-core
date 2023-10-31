@@ -211,6 +211,16 @@ function wolf_core_textual_showcase_params() {
 								'label'      => esc_html__( 'Line break', 'wolf-core' ),
 								'type'       => 'checkbox',
 							),
+
+							array(
+								'param_name' => 'font_family',
+								'type'       => 'font_family',
+								'label'      => esc_html__( 'Font Family', 'wolf-core' ),
+								'selector'   => '{{WRAPPER}} {{CURRENT_ITEM}} .wolf-core-tsi-text-inner',
+								'condition'  => array(
+									'type' => array( 'text', 'text_hover_image', 'text_hover_video' ),
+								),
+							),
 						)
 					),
 				),

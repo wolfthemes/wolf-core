@@ -72,7 +72,7 @@ function wolf_core_interactive_links_params() {
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
 
-				array(
+				'panels' => array(
 					'type'       => 'repeater',
 					'param_name' => 'panels',
 					'label'      => esc_html__( 'Panels', 'wolf-core' ),

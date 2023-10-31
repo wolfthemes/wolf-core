@@ -87,6 +87,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 	$elementor_types = array(
 		'text'        => \Elementor\Controls_Manager::TEXT,
 		'textarea'    => \Elementor\Controls_Manager::TEXTAREA,
+		'font_family' => \Elementor\Controls_Manager::FONT,
 		'select'      => \Elementor\Controls_Manager::SELECT,
 		'checkbox'    => \Elementor\Controls_Manager::SWITCHER,
 		'link'        => \Elementor\Controls_Manager::URL,
@@ -147,6 +148,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 						'condition'   => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
 						'label_block' => true,
 					);
+
+					if ( 'font_family' === $r_type ) {
+						$r_params['selector'] = ( isset( $r_param['selector'] ) ) ? $r_param['selector'] : '';
+					}
 
 					if ( 'select' === $r_type ) {
 						$r_params['default'] = ( isset( $r_param['default'] ) ) ? $r_param['default'] : '';
