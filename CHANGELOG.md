@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 6th November 2023 - Version 1.6.9
+
+-   Tweak: Add wolf_core_team_member_image_end filter
+
 #### 13th October 2023 - Version 1.6.8
 
 -   Tweak: Enable "section" custom settings on new "container" element
