@@ -110,6 +110,8 @@ function wolf_core_team_member( $atts ) {
 
 		$output .= $img;
 
+		$output .= apply_filters( 'wolf_core_team_member_image_end', '', $atts );
+
 		$output .= '</div><!--.wolf-core-team-member-image-->';
 	}
 
