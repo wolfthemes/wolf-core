@@ -69,6 +69,9 @@ add_action(
 				'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
 				'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
+				'ai'          => array(
+					'active' => false,
+				),
 			)
 		);
 
@@ -77,6 +80,9 @@ add_action(
 			array(
 				'label' => esc_html__( 'Extra Class', 'wolf-core' ),
 				'type'  => \Elementor\Controls_Manager::TEXT,
+				'ai'    => array(
+					'active' => false,
+				),
 			)
 		);
 	},
@@ -92,16 +98,22 @@ add_action(
 				'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
 				'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
+				'ai'    => array(
+					'active' => false,
+				),
 			)
 		);
 
-		$section->add_control(
-			'el_class',
-			array(
-				'label' => esc_html__( 'Extra Class', 'wolf-core' ),
-				'type'  => \Elementor\Controls_Manager::TEXT,
-			)
-		);
+		// $section->add_control(
+		// 	'el_class',
+		// 	array(
+		// 		'label' => esc_html__( 'Extra Class', 'wolf-core' ),
+		// 		'type'  => \Elementor\Controls_Manager::TEXT,
+		// 		'ai'    => array(
+		// 			'active' => false,
+		// 		),
+		// 	)
+		// );
 	},
 	10,
 	2
@@ -110,7 +122,7 @@ add_action(
 /**
  * Add parallax background option
  */
-function wolf_core_add_parallax_background_option( $section, $args )  {
+function wolf_core_add_parallax_background_option( $section, $args ) {
 	$section->add_control(
 		'parallax',
 		array(
@@ -180,8 +192,8 @@ function wolf_core_render_custom_attributes( $widget ) {
 	if ( isset( $settings['post_featured_img_bg'] ) && 'yes' === $settings['post_featured_img_bg'] ) {
 
 		if ( wolf_core_get_the_id() && get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) ) {
-			//$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-row-post-featured-img-bg' );
-			//$widget->add_render_attribute( '_wrapper', 'data-post-bg-image-url', get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) );
+			// $widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-row-post-featured-img-bg' );
+			// $widget->add_render_attribute( '_wrapper', 'data-post-bg-image-url', get_the_post_thumbnail_url( wolf_core_get_the_id(), 'wolf-core-XL' ) );
 		}
 	}
 }
