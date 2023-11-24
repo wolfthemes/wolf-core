@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 24th November 2023 - Version 1.7.0
+
+-   Fix: More Compatiblity with containers
+
 #### 6th November 2023 - Version 1.6.9
 
 -   Tweak: Add wolf_core_team_member_image_end filter

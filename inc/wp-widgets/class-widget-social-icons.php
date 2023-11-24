@@ -103,7 +103,7 @@ class Wolf_Core_Widget_Socials extends WP_Widget {
 		// Set up some default widget settings.
 		$defaults = array(
 			'title'   => '',
-			'socials' => 'facebook,twitter,instagram',
+			'socials' => 'facebook,x,instagram',
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		?>

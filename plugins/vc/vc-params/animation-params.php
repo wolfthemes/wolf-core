@@ -74,7 +74,7 @@ $animated_elements = apply_filters(
 		'wolf_core_testimonial_slider',
 		'wolf_core_testimonials',
 		'wolf_core_team_member',
-		'wolf_core_twitter',
+		//'wolf_core_twitter',
 		'wolf_core_typed',
 		// 'wolf_core_video_opener',
 		'wolf_core_video_switcher',

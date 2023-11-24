@@ -35,7 +35,7 @@ function wolf_core_social_icons_params() {
 					'type'        => 'text',
 					'label'       => esc_html__( 'Services', 'wolf-core' ),
 					'param_name'  => 'services',
-					'default'     => 'facebook,twitter,instagram',
+					'default'     => 'facebook,x,instagram',
 					'description' => sprintf(
 						wp_kses(
 							__( 'Enter the service names separated by a comma. Leave empty to display them all.<br>You can set your profiles in the <a href="%s" target="_blank">customizer</a>.', 'wolf-core' ),

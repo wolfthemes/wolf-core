@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.6.8\n"
+"Project-Id-Version: Wolf Core 1.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2023-10-31 12:21:24+00:00\n"
+"POT-Creation-Date: 2023-11-24 16:04:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,9 +88,9 @@ msgstr ""
 msgid "Newsletter form title"
 msgstr ""
 
-#: inc/admin/admin-options.php:100 inc/admin/classes/class-options.php:434
+#: inc/admin/admin-options.php:100 inc/admin/classes/class-options.php:435
 #: pack/wolf-core/inc/admin/admin-options.php:100
-#: pack/wolf-core/inc/admin/classes/class-options.php:434
+#: pack/wolf-core/inc/admin/classes/class-options.php:435
 msgid "Subscribe to our newsletter"
 msgstr ""
 
@@ -99,9 +99,9 @@ msgstr ""
 msgid "\"Subscribe\" button text"
 msgstr ""
 
-#: inc/admin/admin-options.php:107 inc/admin/classes/class-options.php:435
+#: inc/admin/admin-options.php:107 inc/admin/classes/class-options.php:436
 #: pack/wolf-core/inc/admin/admin-options.php:107
-#: pack/wolf-core/inc/admin/classes/class-options.php:435
+#: pack/wolf-core/inc/admin/classes/class-options.php:436
 #: pack/wolf-core/plugins/elementor/widgets/mailchimp.php:163
 #: pack/wolf-core/plugins/elements/mailchimp.php:29
 #: pack/wolf-core/plugins/params/mailchimp.php:131
@@ -119,9 +119,9 @@ msgstr ""
 msgid "Form first name input placeholder"
 msgstr ""
 
-#: inc/admin/admin-options.php:114 inc/admin/classes/class-options.php:436
+#: inc/admin/admin-options.php:114 inc/admin/classes/class-options.php:437
 #: pack/wolf-core/inc/admin/admin-options.php:114
-#: pack/wolf-core/inc/admin/classes/class-options.php:436
+#: pack/wolf-core/inc/admin/classes/class-options.php:437
 #: pack/wolf-core/plugins/elements/mailchimp.php:37
 #: plugins/elements/mailchimp.php:37
 msgid "Your first name"
@@ -132,9 +132,9 @@ msgstr ""
 msgid "Form last name input placeholder"
 msgstr ""
 
-#: inc/admin/admin-options.php:121 inc/admin/classes/class-options.php:437
+#: inc/admin/admin-options.php:121 inc/admin/classes/class-options.php:438
 #: pack/wolf-core/inc/admin/admin-options.php:121
-#: pack/wolf-core/inc/admin/classes/class-options.php:437
+#: pack/wolf-core/inc/admin/classes/class-options.php:438
 #: pack/wolf-core/plugins/elements/mailchimp.php:38
 #: plugins/elements/mailchimp.php:38
 msgid "Your last name"
@@ -145,9 +145,9 @@ msgstr ""
 msgid "Form email input placeholder"
 msgstr ""
 
-#: inc/admin/admin-options.php:128 inc/admin/classes/class-options.php:438
+#: inc/admin/admin-options.php:128 inc/admin/classes/class-options.php:439
 #: pack/wolf-core/inc/admin/admin-options.php:128
-#: pack/wolf-core/inc/admin/classes/class-options.php:438
+#: pack/wolf-core/inc/admin/classes/class-options.php:439
 msgid "Your email"
 msgstr ""
 
@@ -715,9 +715,9 @@ msgstr ""
 
 #: inc/admin/classes/class-metaboxes.php:397
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:397
-#: pack/wolf-core/plugins/elementor/controls/section.php:117
+#: pack/wolf-core/plugins/elementor/controls/section.php:129
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:153
-#: plugins/elementor/controls/section.php:117
+#: plugins/elementor/controls/section.php:129
 #: plugins/vc/vc-params/background-params.php:153
 msgid "Parallax"
 msgstr ""
@@ -864,9 +864,9 @@ msgstr ""
 msgid "Size"
 msgstr ""
 
-#: inc/admin/classes/class-options.php:368 inc/core-functions.php:1098
+#: inc/admin/classes/class-options.php:368 inc/core-functions.php:1114
 #: pack/wolf-core/inc/admin/classes/class-options.php:368
-#: pack/wolf-core/inc/core-functions.php:1098
+#: pack/wolf-core/inc/core-functions.php:1114
 msgid "Attachment"
 msgstr ""
 
@@ -998,7 +998,7 @@ msgid ""
 "etc."
 msgstr ""
 
-#: inc/core-functions.php:481 pack/wolf-core/inc/core-functions.php:481
+#: inc/core-functions.php:483 pack/wolf-core/inc/core-functions.php:483
 #: pack/wolf-core/plugins/params/clients.php:112
 #: pack/wolf-core/plugins/params/gallery.php:233
 #: pack/wolf-core/plugins/params/social-icons-custom.php:115
@@ -1010,7 +1010,7 @@ msgstr ""
 msgid "Fade"
 msgstr ""
 
-#: inc/core-functions.php:482 pack/wolf-core/inc/core-functions.php:482
+#: inc/core-functions.php:484 pack/wolf-core/inc/core-functions.php:484
 #: pack/wolf-core/plugins/params/clients.php:113
 #: pack/wolf-core/plugins/params/gallery.php:234
 #: pack/wolf-core/plugins/params/social-icons-custom.php:116
@@ -1022,7 +1022,7 @@ msgstr ""
 msgid "Fade Up"
 msgstr ""
 
-#: inc/core-functions.php:483 pack/wolf-core/inc/core-functions.php:483
+#: inc/core-functions.php:485 pack/wolf-core/inc/core-functions.php:485
 #: pack/wolf-core/plugins/params/clients.php:114
 #: pack/wolf-core/plugins/params/gallery.php:235
 #: pack/wolf-core/plugins/params/social-icons-custom.php:117
@@ -1034,7 +1034,7 @@ msgstr ""
 msgid "Fade Down"
 msgstr ""
 
-#: inc/core-functions.php:484 pack/wolf-core/inc/core-functions.php:484
+#: inc/core-functions.php:486 pack/wolf-core/inc/core-functions.php:486
 #: pack/wolf-core/plugins/params/clients.php:115
 #: pack/wolf-core/plugins/params/gallery.php:236
 #: pack/wolf-core/plugins/params/social-icons-custom.php:118
@@ -1046,7 +1046,7 @@ msgstr ""
 msgid "Fade Left"
 msgstr ""
 
-#: inc/core-functions.php:485 pack/wolf-core/inc/core-functions.php:485
+#: inc/core-functions.php:487 pack/wolf-core/inc/core-functions.php:487
 #: pack/wolf-core/plugins/params/clients.php:116
 #: pack/wolf-core/plugins/params/gallery.php:237
 #: pack/wolf-core/plugins/params/social-icons-custom.php:119
@@ -1058,7 +1058,7 @@ msgstr ""
 msgid "Fade Right"
 msgstr ""
 
-#: inc/core-functions.php:486 pack/wolf-core/inc/core-functions.php:486
+#: inc/core-functions.php:488 pack/wolf-core/inc/core-functions.php:488
 #: pack/wolf-core/plugins/params/clients.php:117
 #: pack/wolf-core/plugins/params/gallery.php:238
 #: pack/wolf-core/plugins/params/social-icons-custom.php:120
@@ -1070,7 +1070,7 @@ msgstr ""
 msgid "Fade Up Right"
 msgstr ""
 
-#: inc/core-functions.php:487 pack/wolf-core/inc/core-functions.php:487
+#: inc/core-functions.php:489 pack/wolf-core/inc/core-functions.php:489
 #: pack/wolf-core/plugins/params/clients.php:118
 #: pack/wolf-core/plugins/params/gallery.php:239
 #: pack/wolf-core/plugins/params/social-icons-custom.php:121
@@ -1082,7 +1082,7 @@ msgstr ""
 msgid "Fade Up Left"
 msgstr ""
 
-#: inc/core-functions.php:488 pack/wolf-core/inc/core-functions.php:488
+#: inc/core-functions.php:490 pack/wolf-core/inc/core-functions.php:490
 #: pack/wolf-core/plugins/params/clients.php:119
 #: pack/wolf-core/plugins/params/gallery.php:240
 #: pack/wolf-core/plugins/params/social-icons-custom.php:122
@@ -1094,7 +1094,7 @@ msgstr ""
 msgid "Fade Down Right"
 msgstr ""
 
-#: inc/core-functions.php:489 pack/wolf-core/inc/core-functions.php:489
+#: inc/core-functions.php:491 pack/wolf-core/inc/core-functions.php:491
 #: pack/wolf-core/plugins/params/clients.php:120
 #: pack/wolf-core/plugins/params/gallery.php:241
 #: pack/wolf-core/plugins/params/social-icons-custom.php:123
@@ -1106,7 +1106,7 @@ msgstr ""
 msgid "Fade Down Left"
 msgstr ""
 
-#: inc/core-functions.php:491 pack/wolf-core/inc/core-functions.php:491
+#: inc/core-functions.php:493 pack/wolf-core/inc/core-functions.php:493
 #: pack/wolf-core/plugins/params/clients.php:127
 #: pack/wolf-core/plugins/params/gallery.php:248
 #: pack/wolf-core/plugins/params/social-icons-custom.php:130
@@ -1118,7 +1118,7 @@ msgstr ""
 msgid "Flip Up"
 msgstr ""
 
-#: inc/core-functions.php:492 pack/wolf-core/inc/core-functions.php:492
+#: inc/core-functions.php:494 pack/wolf-core/inc/core-functions.php:494
 #: pack/wolf-core/plugins/params/clients.php:128
 #: pack/wolf-core/plugins/params/gallery.php:249
 #: pack/wolf-core/plugins/params/social-icons-custom.php:131
@@ -1130,7 +1130,7 @@ msgstr ""
 msgid "Flip Down"
 msgstr ""
 
-#: inc/core-functions.php:493 pack/wolf-core/inc/core-functions.php:493
+#: inc/core-functions.php:495 pack/wolf-core/inc/core-functions.php:495
 #: pack/wolf-core/plugins/params/clients.php:129
 #: pack/wolf-core/plugins/params/gallery.php:250
 #: pack/wolf-core/plugins/params/social-icons-custom.php:132
@@ -1142,7 +1142,7 @@ msgstr ""
 msgid "Flip Left"
 msgstr ""
 
-#: inc/core-functions.php:494 pack/wolf-core/inc/core-functions.php:494
+#: inc/core-functions.php:496 pack/wolf-core/inc/core-functions.php:496
 #: pack/wolf-core/plugins/params/clients.php:130
 #: pack/wolf-core/plugins/params/gallery.php:251
 #: pack/wolf-core/plugins/params/social-icons-custom.php:133
@@ -1154,7 +1154,7 @@ msgstr ""
 msgid "Flip Right"
 msgstr ""
 
-#: inc/core-functions.php:496 pack/wolf-core/inc/core-functions.php:496
+#: inc/core-functions.php:498 pack/wolf-core/inc/core-functions.php:498
 #: pack/wolf-core/plugins/params/clients.php:132
 #: pack/wolf-core/plugins/params/gallery.php:253
 #: pack/wolf-core/plugins/params/social-icons-custom.php:135
@@ -1166,7 +1166,7 @@ msgstr ""
 msgid "Slide Up"
 msgstr ""
 
-#: inc/core-functions.php:497 pack/wolf-core/inc/core-functions.php:497
+#: inc/core-functions.php:499 pack/wolf-core/inc/core-functions.php:499
 #: pack/wolf-core/plugins/params/clients.php:133
 #: pack/wolf-core/plugins/params/gallery.php:254
 #: pack/wolf-core/plugins/params/social-icons-custom.php:136
@@ -1178,7 +1178,7 @@ msgstr ""
 msgid "Slide Down"
 msgstr ""
 
-#: inc/core-functions.php:498 pack/wolf-core/inc/core-functions.php:498
+#: inc/core-functions.php:500 pack/wolf-core/inc/core-functions.php:500
 #: pack/wolf-core/plugins/params/clients.php:134
 #: pack/wolf-core/plugins/params/gallery.php:255
 #: pack/wolf-core/plugins/params/social-icons-custom.php:137
@@ -1190,7 +1190,7 @@ msgstr ""
 msgid "Slide Left"
 msgstr ""
 
-#: inc/core-functions.php:499 pack/wolf-core/inc/core-functions.php:499
+#: inc/core-functions.php:501 pack/wolf-core/inc/core-functions.php:501
 #: pack/wolf-core/plugins/params/clients.php:135
 #: pack/wolf-core/plugins/params/gallery.php:256
 #: pack/wolf-core/plugins/params/social-icons-custom.php:138
@@ -1202,9 +1202,9 @@ msgstr ""
 msgid "Slide Right"
 msgstr ""
 
-#: inc/core-functions.php:501 inc/core-functions.php:879
-#: pack/wolf-core/inc/core-functions.php:501
-#: pack/wolf-core/inc/core-functions.php:879
+#: inc/core-functions.php:503 inc/core-functions.php:895
+#: pack/wolf-core/inc/core-functions.php:503
+#: pack/wolf-core/inc/core-functions.php:895
 #: pack/wolf-core/plugins/params/clients.php:137
 #: pack/wolf-core/plugins/params/gallery.php:258
 #: pack/wolf-core/plugins/params/social-icons-custom.php:140
@@ -1216,7 +1216,7 @@ msgstr ""
 msgid "Zoom In"
 msgstr ""
 
-#: inc/core-functions.php:502 pack/wolf-core/inc/core-functions.php:502
+#: inc/core-functions.php:504 pack/wolf-core/inc/core-functions.php:504
 #: pack/wolf-core/plugins/params/clients.php:138
 #: pack/wolf-core/plugins/params/gallery.php:259
 #: pack/wolf-core/plugins/params/social-icons-custom.php:141
@@ -1228,7 +1228,7 @@ msgstr ""
 msgid "Zoom In Up"
 msgstr ""
 
-#: inc/core-functions.php:503 pack/wolf-core/inc/core-functions.php:503
+#: inc/core-functions.php:505 pack/wolf-core/inc/core-functions.php:505
 #: pack/wolf-core/plugins/params/clients.php:139
 #: pack/wolf-core/plugins/params/gallery.php:260
 #: pack/wolf-core/plugins/params/social-icons-custom.php:142
@@ -1240,7 +1240,7 @@ msgstr ""
 msgid "Zoom In Down"
 msgstr ""
 
-#: inc/core-functions.php:504 pack/wolf-core/inc/core-functions.php:504
+#: inc/core-functions.php:506 pack/wolf-core/inc/core-functions.php:506
 #: pack/wolf-core/plugins/params/clients.php:140
 #: pack/wolf-core/plugins/params/gallery.php:261
 #: pack/wolf-core/plugins/params/social-icons-custom.php:143
@@ -1252,7 +1252,7 @@ msgstr ""
 msgid "Zoom In Left"
 msgstr ""
 
-#: inc/core-functions.php:505 pack/wolf-core/inc/core-functions.php:505
+#: inc/core-functions.php:507 pack/wolf-core/inc/core-functions.php:507
 #: pack/wolf-core/plugins/params/clients.php:141
 #: pack/wolf-core/plugins/params/gallery.php:262
 #: pack/wolf-core/plugins/params/social-icons-custom.php:144
@@ -1264,9 +1264,9 @@ msgstr ""
 msgid "Zoom In Right"
 msgstr ""
 
-#: inc/core-functions.php:506 inc/core-functions.php:880
-#: pack/wolf-core/inc/core-functions.php:506
-#: pack/wolf-core/inc/core-functions.php:880
+#: inc/core-functions.php:508 inc/core-functions.php:896
+#: pack/wolf-core/inc/core-functions.php:508
+#: pack/wolf-core/inc/core-functions.php:896
 #: pack/wolf-core/plugins/params/clients.php:142
 #: pack/wolf-core/plugins/params/gallery.php:263
 #: pack/wolf-core/plugins/params/social-icons-custom.php:145
@@ -1278,7 +1278,7 @@ msgstr ""
 msgid "Zoom Out"
 msgstr ""
 
-#: inc/core-functions.php:507 pack/wolf-core/inc/core-functions.php:507
+#: inc/core-functions.php:509 pack/wolf-core/inc/core-functions.php:509
 #: pack/wolf-core/plugins/params/clients.php:143
 #: pack/wolf-core/plugins/params/gallery.php:264
 #: pack/wolf-core/plugins/params/social-icons-custom.php:146
@@ -1290,7 +1290,7 @@ msgstr ""
 msgid "Zoom Out Up"
 msgstr ""
 
-#: inc/core-functions.php:508 pack/wolf-core/inc/core-functions.php:508
+#: inc/core-functions.php:510 pack/wolf-core/inc/core-functions.php:510
 #: pack/wolf-core/plugins/params/clients.php:144
 #: pack/wolf-core/plugins/params/gallery.php:265
 #: pack/wolf-core/plugins/params/social-icons-custom.php:147
@@ -1302,7 +1302,7 @@ msgstr ""
 msgid "Zoom Out Down"
 msgstr ""
 
-#: inc/core-functions.php:509 pack/wolf-core/inc/core-functions.php:509
+#: inc/core-functions.php:511 pack/wolf-core/inc/core-functions.php:511
 #: pack/wolf-core/plugins/params/clients.php:145
 #: pack/wolf-core/plugins/params/gallery.php:266
 #: pack/wolf-core/plugins/params/social-icons-custom.php:148
@@ -1314,7 +1314,7 @@ msgstr ""
 msgid "Zoom Out Left"
 msgstr ""
 
-#: inc/core-functions.php:510 pack/wolf-core/inc/core-functions.php:510
+#: inc/core-functions.php:512 pack/wolf-core/inc/core-functions.php:512
 #: pack/wolf-core/plugins/params/clients.php:146
 #: pack/wolf-core/plugins/params/gallery.php:267
 #: pack/wolf-core/plugins/params/social-icons-custom.php:149
@@ -1326,11 +1326,11 @@ msgstr ""
 msgid "Zoom Out Right"
 msgstr ""
 
-#: inc/core-functions.php:602 pack/wolf-core/inc/core-functions.php:602
+#: inc/core-functions.php:604 pack/wolf-core/inc/core-functions.php:604
 msgid "Landscape"
 msgstr ""
 
-#: inc/core-functions.php:603 pack/wolf-core/inc/core-functions.php:603
+#: inc/core-functions.php:605 pack/wolf-core/inc/core-functions.php:605
 #: pack/wolf-core/plugins/common-params/button-params.php:79
 #: pack/wolf-core/plugins/params/icon.php:97
 #: pack/wolf-core/plugins/params/social-icons-custom.php:162
@@ -1344,16 +1344,16 @@ msgstr ""
 msgid "Square"
 msgstr ""
 
-#: inc/core-functions.php:604 pack/wolf-core/inc/core-functions.php:604
+#: inc/core-functions.php:606 pack/wolf-core/inc/core-functions.php:606
 msgid "Portrait"
 msgstr ""
 
-#: inc/core-functions.php:605 pack/wolf-core/inc/core-functions.php:605
+#: inc/core-functions.php:607 pack/wolf-core/inc/core-functions.php:607
 msgid "Extra large"
 msgstr ""
 
-#: inc/core-functions.php:606 inc/wp-widgets/class-widget-mailchimp.php:175
-#: pack/wolf-core/inc/core-functions.php:606
+#: inc/core-functions.php:608 inc/wp-widgets/class-widget-mailchimp.php:175
+#: pack/wolf-core/inc/core-functions.php:608
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:175
 #: pack/wolf-core/plugins/common-params/button-params.php:59
 #: pack/wolf-core/plugins/params/bandsintown-tracking-button.php:45
@@ -1372,7 +1372,7 @@ msgstr ""
 msgid "Large"
 msgstr ""
 
-#: inc/core-functions.php:607 pack/wolf-core/inc/core-functions.php:607
+#: inc/core-functions.php:609 pack/wolf-core/inc/core-functions.php:609
 #: pack/wolf-core/plugins/common-params/button-params.php:58
 #: pack/wolf-core/plugins/params/process.php:46
 #: pack/wolf-core/plugins/params/social-icons-custom.php:312
@@ -1384,15 +1384,15 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: inc/core-functions.php:608 pack/wolf-core/inc/core-functions.php:608
+#: inc/core-functions.php:610 pack/wolf-core/inc/core-functions.php:610
 msgid "Thumbnail"
 msgstr ""
 
-#: inc/core-functions.php:609 pack/wolf-core/inc/core-functions.php:609
+#: inc/core-functions.php:611 pack/wolf-core/inc/core-functions.php:611
 msgid "Full"
 msgstr ""
 
-#: inc/core-functions.php:610 pack/wolf-core/inc/core-functions.php:610
+#: inc/core-functions.php:612 pack/wolf-core/inc/core-functions.php:612
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:518
 #: pack/wolf-core/plugins/params/countdown.php:61
 #: pack/wolf-core/plugins/params/google-maps.php:134
@@ -1427,79 +1427,79 @@ msgstr ""
 msgid "Custom"
 msgstr ""
 
-#: inc/core-functions.php:660 pack/wolf-core/inc/core-functions.php:660
+#: inc/core-functions.php:662 pack/wolf-core/inc/core-functions.php:662
 msgid "Image is missing"
 msgstr ""
 
-#: inc/core-functions.php:690 inc/core-functions.php:702
-#: pack/wolf-core/inc/core-functions.php:690
-#: pack/wolf-core/inc/core-functions.php:702
+#: inc/core-functions.php:706 inc/core-functions.php:718
+#: pack/wolf-core/inc/core-functions.php:706
+#: pack/wolf-core/inc/core-functions.php:718
 #: pack/wolf-core/plugins/params/banner.php:311 plugins/params/banner.php:311
 msgid "Black"
 msgstr ""
 
-#: inc/core-functions.php:691 inc/core-functions.php:703
-#: pack/wolf-core/inc/core-functions.php:691
-#: pack/wolf-core/inc/core-functions.php:703
+#: inc/core-functions.php:707 inc/core-functions.php:719
+#: pack/wolf-core/inc/core-functions.php:707
+#: pack/wolf-core/inc/core-functions.php:719
 msgid "Light Grey"
 msgstr ""
 
-#: inc/core-functions.php:692 inc/core-functions.php:704
-#: pack/wolf-core/inc/core-functions.php:692
-#: pack/wolf-core/inc/core-functions.php:704
+#: inc/core-functions.php:708 inc/core-functions.php:720
+#: pack/wolf-core/inc/core-functions.php:708
+#: pack/wolf-core/inc/core-functions.php:720
 msgid "Dark Grey"
 msgstr ""
 
-#: inc/core-functions.php:693 inc/core-functions.php:705
-#: pack/wolf-core/inc/core-functions.php:693
-#: pack/wolf-core/inc/core-functions.php:705
+#: inc/core-functions.php:709 inc/core-functions.php:721
+#: pack/wolf-core/inc/core-functions.php:709
+#: pack/wolf-core/inc/core-functions.php:721
 #: pack/wolf-core/plugins/params/banner.php:312 plugins/params/banner.php:312
 msgid "White"
 msgstr ""
 
-#: inc/core-functions.php:706 pack/wolf-core/inc/core-functions.php:706
+#: inc/core-functions.php:722 pack/wolf-core/inc/core-functions.php:722
 msgid "Orange"
 msgstr ""
 
-#: inc/core-functions.php:707 pack/wolf-core/inc/core-functions.php:707
+#: inc/core-functions.php:723 pack/wolf-core/inc/core-functions.php:723
 #: pack/wolf-core/plugins/params/open-table.php:100
 #: plugins/params/open-table.php:100
 msgid "Green"
 msgstr ""
 
-#: inc/core-functions.php:708 pack/wolf-core/inc/core-functions.php:708
+#: inc/core-functions.php:724 pack/wolf-core/inc/core-functions.php:724
 msgid "Turquoise"
 msgstr ""
 
-#: inc/core-functions.php:709 pack/wolf-core/inc/core-functions.php:709
+#: inc/core-functions.php:725 pack/wolf-core/inc/core-functions.php:725
 msgid "Violet"
 msgstr ""
 
-#: inc/core-functions.php:710 pack/wolf-core/inc/core-functions.php:710
+#: inc/core-functions.php:726 pack/wolf-core/inc/core-functions.php:726
 msgid "Pink"
 msgstr ""
 
-#: inc/core-functions.php:711 pack/wolf-core/inc/core-functions.php:711
+#: inc/core-functions.php:727 pack/wolf-core/inc/core-functions.php:727
 msgid "Grey blue"
 msgstr ""
 
-#: inc/core-functions.php:712 pack/wolf-core/inc/core-functions.php:712
+#: inc/core-functions.php:728 pack/wolf-core/inc/core-functions.php:728
 #: pack/wolf-core/plugins/params/open-table.php:102
 #: plugins/params/open-table.php:102
 msgid "Red"
 msgstr ""
 
-#: inc/core-functions.php:713 pack/wolf-core/inc/core-functions.php:713
+#: inc/core-functions.php:729 pack/wolf-core/inc/core-functions.php:729
 msgid "Yellow"
 msgstr ""
 
-#: inc/core-functions.php:714 pack/wolf-core/inc/core-functions.php:714
+#: inc/core-functions.php:730 pack/wolf-core/inc/core-functions.php:730
 #: pack/wolf-core/plugins/params/open-table.php:101
 #: plugins/params/open-table.php:101
 msgid "Blue"
 msgstr ""
 
-#: inc/core-functions.php:775 pack/wolf-core/inc/core-functions.php:775
+#: inc/core-functions.php:791 pack/wolf-core/inc/core-functions.php:791
 #: pack/wolf-core/plugins/params/banner.php:281
 #: pack/wolf-core/plugins/params/bigtext.php:53
 #: pack/wolf-core/plugins/params/heading.php:178
@@ -1516,11 +1516,11 @@ msgstr ""
 msgid "Gradient Red"
 msgstr ""
 
-#: inc/core-functions.php:776 pack/wolf-core/inc/core-functions.php:776
+#: inc/core-functions.php:792 pack/wolf-core/inc/core-functions.php:792
 msgid "Gradient Red 2"
 msgstr ""
 
-#: inc/core-functions.php:777 pack/wolf-core/inc/core-functions.php:777
+#: inc/core-functions.php:793 pack/wolf-core/inc/core-functions.php:793
 #: pack/wolf-core/plugins/params/banner.php:282
 #: pack/wolf-core/plugins/params/bigtext.php:54
 #: pack/wolf-core/plugins/params/heading.php:179
@@ -1537,19 +1537,19 @@ msgstr ""
 msgid "Gradient Green"
 msgstr ""
 
-#: inc/core-functions.php:778 pack/wolf-core/inc/core-functions.php:778
+#: inc/core-functions.php:794 pack/wolf-core/inc/core-functions.php:794
 msgid "Gradient Green Circle"
 msgstr ""
 
-#: inc/core-functions.php:779 pack/wolf-core/inc/core-functions.php:779
+#: inc/core-functions.php:795 pack/wolf-core/inc/core-functions.php:795
 msgid "Gradient Orange"
 msgstr ""
 
-#: inc/core-functions.php:780 pack/wolf-core/inc/core-functions.php:780
+#: inc/core-functions.php:796 pack/wolf-core/inc/core-functions.php:796
 msgid "Gradient Violet"
 msgstr ""
 
-#: inc/core-functions.php:797 pack/wolf-core/inc/core-functions.php:797
+#: inc/core-functions.php:813 pack/wolf-core/inc/core-functions.php:813
 #: pack/wolf-core/plugins/params/banner.php:310
 #: pack/wolf-core/plugins/params/clients.php:73
 #: pack/wolf-core/plugins/params/gallery.php:127
@@ -1560,24 +1560,24 @@ msgstr ""
 msgid "Auto"
 msgstr ""
 
-#: inc/core-functions.php:798 inc/core-functions.php:799
-#: inc/core-functions.php:800 inc/core-functions.php:801
-#: inc/core-functions.php:802 inc/core-functions.php:803
-#: inc/core-functions.php:804 pack/wolf-core/inc/core-functions.php:798
-#: pack/wolf-core/inc/core-functions.php:799
-#: pack/wolf-core/inc/core-functions.php:800
-#: pack/wolf-core/inc/core-functions.php:801
-#: pack/wolf-core/inc/core-functions.php:802
-#: pack/wolf-core/inc/core-functions.php:803
-#: pack/wolf-core/inc/core-functions.php:804
+#: inc/core-functions.php:814 inc/core-functions.php:815
+#: inc/core-functions.php:816 inc/core-functions.php:817
+#: inc/core-functions.php:818 inc/core-functions.php:819
+#: inc/core-functions.php:820 pack/wolf-core/inc/core-functions.php:814
+#: pack/wolf-core/inc/core-functions.php:815
+#: pack/wolf-core/inc/core-functions.php:816
+#: pack/wolf-core/inc/core-functions.php:817
+#: pack/wolf-core/inc/core-functions.php:818
+#: pack/wolf-core/inc/core-functions.php:819
+#: pack/wolf-core/inc/core-functions.php:820
 msgid "Pattern %1$d (loop of %2$d)"
 msgstr ""
 
-#: inc/core-functions.php:876 pack/wolf-core/inc/core-functions.php:876
+#: inc/core-functions.php:892 pack/wolf-core/inc/core-functions.php:892
 msgid "Theme Default"
 msgstr ""
 
-#: inc/core-functions.php:877 pack/wolf-core/inc/core-functions.php:877
+#: inc/core-functions.php:893 pack/wolf-core/inc/core-functions.php:893
 #: pack/wolf-core/plugins/params/social-icons-custom.php:325
 #: pack/wolf-core/plugins/params/social-icons.php:345
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:455
@@ -1588,57 +1588,57 @@ msgstr ""
 msgid "Opacity"
 msgstr ""
 
-#: inc/core-functions.php:878 pack/wolf-core/inc/core-functions.php:878
+#: inc/core-functions.php:894 pack/wolf-core/inc/core-functions.php:894
 msgid "Opacity Reversed"
 msgstr ""
 
-#: inc/core-functions.php:881 pack/wolf-core/inc/core-functions.php:881
+#: inc/core-functions.php:897 pack/wolf-core/inc/core-functions.php:897
 msgid "Move Left"
 msgstr ""
 
-#: inc/core-functions.php:882 pack/wolf-core/inc/core-functions.php:882
+#: inc/core-functions.php:898 pack/wolf-core/inc/core-functions.php:898
 msgid "Move Right"
 msgstr ""
 
-#: inc/core-functions.php:883 pack/wolf-core/inc/core-functions.php:883
+#: inc/core-functions.php:899 pack/wolf-core/inc/core-functions.php:899
 msgid "Move Up"
 msgstr ""
 
-#: inc/core-functions.php:884 pack/wolf-core/inc/core-functions.php:884
+#: inc/core-functions.php:900 pack/wolf-core/inc/core-functions.php:900
 msgid "Move Down"
 msgstr ""
 
-#: inc/core-functions.php:885 pack/wolf-core/inc/core-functions.php:885
+#: inc/core-functions.php:901 pack/wolf-core/inc/core-functions.php:901
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:194
 #: plugins/vc/vc-params/button-params.php:194
 msgid "Up"
 msgstr ""
 
-#: inc/core-functions.php:886 pack/wolf-core/inc/core-functions.php:886
+#: inc/core-functions.php:902 pack/wolf-core/inc/core-functions.php:902
 msgid "Black and white to colored"
 msgstr ""
 
-#: inc/core-functions.php:887 pack/wolf-core/inc/core-functions.php:887
+#: inc/core-functions.php:903 pack/wolf-core/inc/core-functions.php:903
 msgid "Colored to Black and white"
 msgstr ""
 
-#: inc/core-functions.php:920 pack/wolf-core/inc/core-functions.php:920
+#: inc/core-functions.php:936 pack/wolf-core/inc/core-functions.php:936
 msgid "Home"
 msgstr ""
 
-#: inc/core-functions.php:967 pack/wolf-core/inc/core-functions.php:967
+#: inc/core-functions.php:983 pack/wolf-core/inc/core-functions.php:983
 msgid "Products tagged &ldquo;"
 msgstr ""
 
-#: inc/core-functions.php:1093 pack/wolf-core/inc/core-functions.php:1093
+#: inc/core-functions.php:1109 pack/wolf-core/inc/core-functions.php:1109
 msgid "Search"
 msgstr ""
 
-#: inc/core-functions.php:1121 pack/wolf-core/inc/core-functions.php:1121
+#: inc/core-functions.php:1137 pack/wolf-core/inc/core-functions.php:1137
 msgid "Search results"
 msgstr ""
 
-#: inc/core-functions.php:1250 pack/wolf-core/inc/core-functions.php:1250
+#: inc/core-functions.php:1266 pack/wolf-core/inc/core-functions.php:1266
 #: pack/wolf-core/plugins/content-blocks/register-post-type.php:16
 #: pack/wolf-core/plugins/content-blocks/register-post-type.php:27
 #: pack/wolf-core/plugins/params/content-block.php:34
@@ -1649,7 +1649,7 @@ msgstr ""
 msgid "Content Block"
 msgstr ""
 
-#: inc/core-functions.php:1257 pack/wolf-core/inc/core-functions.php:1257
+#: inc/core-functions.php:1273 pack/wolf-core/inc/core-functions.php:1273
 msgid "Playlists"
 msgstr ""
 
@@ -1773,7 +1773,7 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:158
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:166
 #: pack/wolf-core/plugins/elementor/controls/image.php:23
-#: pack/wolf-core/plugins/elementor/controls/section.php:123
+#: pack/wolf-core/plugins/elementor/controls/section.php:135
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:221
 #: pack/wolf-core/plugins/params/album-disc.php:103
 #: pack/wolf-core/plugins/params/bandsintown-events.php:55
@@ -1809,7 +1809,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:544
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:623
 #: plugins/elementor/controls/image.php:23
-#: plugins/elementor/controls/section.php:123
+#: plugins/elementor/controls/section.php:135
 #: plugins/elementor/elementor-core-functions.php:221
 #: plugins/params/album-disc.php:103 plugins/params/bandsintown-events.php:55
 #: plugins/params/bandsintown-events.php:65 plugins/params/clients.php:92
@@ -1844,7 +1844,7 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:159
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:167
 #: pack/wolf-core/plugins/elementor/controls/image.php:24
-#: pack/wolf-core/plugins/elementor/controls/section.php:124
+#: pack/wolf-core/plugins/elementor/controls/section.php:136
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:222
 #: pack/wolf-core/plugins/params/album-disc.php:104
 #: pack/wolf-core/plugins/params/bandsintown-events.php:54
@@ -1874,7 +1874,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:543
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:624
 #: plugins/elementor/controls/image.php:24
-#: plugins/elementor/controls/section.php:124
+#: plugins/elementor/controls/section.php:136
 #: plugins/elementor/elementor-core-functions.php:222
 #: plugins/params/album-disc.php:104 plugins/params/bandsintown-events.php:54
 #: plugins/params/bandsintown-events.php:66 plugins/params/clients.php:93
@@ -3062,13 +3062,11 @@ msgid "Categories"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/image-carousel.php:22
-#: pack/wolf-core/plugins/elementor/controls/section.php:78
-#: pack/wolf-core/plugins/elementor/controls/section.php:101
+#: pack/wolf-core/plugins/elementor/controls/section.php:81
 #: pack/wolf-core/plugins/elementor/controls/text-editor.php:22
 #: pack/wolf-core/plugins/params/heading.php:83
 #: plugins/elementor/controls/image-carousel.php:22
-#: plugins/elementor/controls/section.php:78
-#: plugins/elementor/controls/section.php:101
+#: plugins/elementor/controls/section.php:81
 #: plugins/elementor/controls/text-editor.php:22 plugins/params/heading.php:83
 msgid "Extra Class"
 msgstr ""
@@ -3298,21 +3296,21 @@ msgid "Default Font Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/section.php:69
-#: pack/wolf-core/plugins/elementor/controls/section.php:92
+#: pack/wolf-core/plugins/elementor/controls/section.php:98
 #: plugins/elementor/controls/section.php:69
-#: plugins/elementor/controls/section.php:92
+#: plugins/elementor/controls/section.php:98
 msgid "Name (Optional)"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/section.php:70
-#: pack/wolf-core/plugins/elementor/controls/section.php:93
+#: pack/wolf-core/plugins/elementor/controls/section.php:99
 #: plugins/elementor/controls/section.php:70
-#: plugins/elementor/controls/section.php:93
+#: plugins/elementor/controls/section.php:99
 msgid "Required for the \"one-page\" scroll, this gives the name to the section."
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/controls/section.php:118
-#: plugins/elementor/controls/section.php:118
+#: pack/wolf-core/plugins/elementor/controls/section.php:130
+#: plugins/elementor/controls/section.php:130
 msgid "Not visible in editor preview yet."
 msgstr ""
 
@@ -5280,6 +5278,11 @@ msgstr ""
 msgid "Panels"
 msgstr ""
 
+#: pack/wolf-core/plugins/params/interactive-links.php:101
+#: plugins/params/interactive-links.php:101
+msgid "Font Family"
+msgstr ""
+
 #: pack/wolf-core/plugins/params/link.php:44
 #: pack/wolf-core/plugins/params/rotating-text.php:64
 #: plugins/params/link.php:44 plugins/params/rotating-text.php:64
@@ -6085,11 +6088,6 @@ msgstr ""
 #: pack/wolf-core/plugins/params/textual-showcase.php:211
 #: plugins/params/textual-showcase.php:211
 msgid "Line break"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/textual-showcase.php:218
-#: plugins/params/textual-showcase.php:218
-msgid "Font Family"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/theme-svg-animations.php:23

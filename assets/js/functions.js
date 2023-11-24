@@ -1550,7 +1550,7 @@ var WolfCore = (function ($) {
 		 */
 		setVisibleRowClass: function () {
 
-			$(".elementor-section").on("inview", function (event, isInView) {
+			$(".wolf-core-elementor-row").on("inview", function (event, isInView) {
 				if (isInView && !$(this).parent().hasClass("wolf-core-modal-window") && ! $( this ).find( ".elementor-inner-section" ).length ) {
 
 					$(this).addClass("wolf-core-row-visible");

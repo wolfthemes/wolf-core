@@ -6398,6 +6398,14 @@ table.variations th.label {
   height: 30px !important;
 }
 
+i.fab.fa-twitter,
+i.fab.fa-x {
+  cursor: pointer;
+  content: url(../img/x.svg);
+  color: inherit;
+  margin: 0 auto;
+}
+
 /**
  * Media Queries
  */

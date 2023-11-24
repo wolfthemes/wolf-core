@@ -94,6 +94,13 @@ function wolf_core_interactive_links_params() {
 							'label'      => esc_html__( 'Background', 'wolf-core' ),
 							'selectors'   => '{{WRAPPER}} .wolf-core-interactive-links-bg-holder',
 						),
+
+						array(
+							'param_name' => 'font_family',
+							'type'       => 'font_family',
+							'label'      => esc_html__( 'Font Family', 'wolf-core' ),
+							'selector'   => '{{WRAPPER}} {{CURRENT_ITEM}} .wolf-core-interactive-link-text',
+						),
 					),
 				),
 			),

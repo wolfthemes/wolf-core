@@ -260,6 +260,7 @@ function wolf_core_social_icons( $atts ) {
 		'spotify',
 		'tiktok',
 		'twitter',
+		'x',
 		'vimeo',
 		'vk',
 		'youtube',
@@ -270,7 +271,8 @@ function wolf_core_social_icons( $atts ) {
 		array(
 			'apple'       => 'ap',
 			'facebook'    => 'fb',
-			'twitter'     => 'tw',
+			'twitter'     => 'x',
+			'x'     => 'x',
 			'instagram'   => 'in',
 			'tiktok'      => 'tk',
 			'linkedin'    => 'li',
@@ -381,6 +383,7 @@ function wolf_core_social_icons( $atts ) {
 					$output .= '</a>';
 
 				} else {
+
 					if ( 'none' === $background_style ) {
 
 						$output .= '<i style="' . wolf_core_esc_style_attr( $icon_style ) . '" class="wolf-core-icon-color-' . $color . ' wolf-core-icon ' . $fa . ' ' . esc_attr( $icon ) . '"><a title="' . esc_attr( $service ) . '" class="wolf-core-social-icon-link" target="' . esc_attr( $target ) . '"';
@@ -407,6 +410,7 @@ function wolf_core_social_icons( $atts ) {
 				$output .= '</div>'; // end icon box.
 			}
 		}
+
 	} else {
 		foreach ( $services as $service => $link ) {
 

@@ -330,6 +330,7 @@ function wolf_core_get_socials() {
 		'github',
 		// 'google',
 		'twitter',
+		'x',
 		'instagram',
 		'linkedin',
 		'youtube',
@@ -390,7 +391,7 @@ function wolf_core_get_socials() {
 	sort( $wolf_core_socials );
 
 	// Insert most used at the beggining.
-	array_unshift( $wolf_core_socials, 'facebook', 'twitter', 'instagram', 'messenger', 'flickr', 'behance', 'dribbble', 'linkedin', 'youtube', 'vimeo', 'bandcamp', 'spotify', 'soundcloud', 'bandsintown' );
+	array_unshift( $wolf_core_socials, 'facebook', 'twitter', 'x', 'instagram', 'messenger', 'flickr', 'behance', 'dribbble', 'linkedin', 'youtube', 'vimeo', 'bandcamp', 'spotify', 'soundcloud', 'bandsintown' );
 
 	$wolf_core_socials[] = 'rss'; // push rss at the end.
 	$wolf_core_socials[] = 'email'; // push email at the end.
@@ -412,6 +413,7 @@ function wolf_core_get_team_member_socials() {
 	$wolf_core_team_member_socials = array(
 		'facebook',
 		'twitter',
+		'x',
 		'instagram',
 		'pinterest',
 		'google',
@@ -671,6 +673,20 @@ function wolf_core_get_twitter_usename() {
 		if ( preg_match( '/twitter.com\/[a-zA-Z0-9_]+/', $default_twitter_username, $match ) ) {
 			$default_twitter_username = str_replace( 'twitter.com/', '', $match[0] );
 			return $default_twitter_username;
+		}
+	}
+}
+
+/**
+ * Get x username from plugin options
+ */
+function wolf_core_get_x_usename() {
+	$default_x_username = wolf_core_get_option( 'socials', 'x' );
+
+	if ( $default_x_username ) {
+		if ( preg_match( '/x.com\/[a-zA-Z0-9_]+/', $default_x_username, $match ) ) {
+			$default_x_username = str_replace( 'x.com/', '', $match[0] );
+			return $default_x_username;
 		}
 	}
 }

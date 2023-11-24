@@ -198,3 +198,4 @@ function wolf_core_render_custom_attributes( $widget ) {
 	}
 }
 add_action( 'elementor/frontend/section/before_render', 'wolf_core_render_custom_attributes', 10 );
+add_action( 'elementor/frontend/container/before_render', 'wolf_core_render_custom_attributes', 10 );

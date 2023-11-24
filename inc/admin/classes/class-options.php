@@ -418,6 +418,7 @@ class Wolf_Core_Options {
 		if ( ! get_option( 'wolf_core_settings' ) ) {
 
 			$default_twitter_url  = ( get_user_meta( get_current_user_id(), 'twitter', true ) ) ? 'https://twitter.com/' . esc_attr( get_user_meta( get_current_user_id(), 'twitter', true ) ) : '#';
+			$default_x_url  = ( get_user_meta( get_current_user_id(), 'x', true ) ) ? 'https://x.com/' . esc_attr( get_user_meta( get_current_user_id(), 'x', true ) ) : '#';
 			$default_facebook_url = ( get_user_meta( get_current_user_id(), 'facebook', true ) ) ? get_user_meta( get_current_user_id(), 'facebook', true ) : '#';
 
 			$default = apply_filters(
@@ -440,7 +441,7 @@ class Wolf_Core_Options {
 					'fonts'                  => array(),
 
 					'socials'                => array(
-						'twitter'  => $default_twitter_url,
+						'x'  => $default_x_url,
 						'facebook' => $default_facebook_url,
 					),
 					'privacy_policy_message' => array(
