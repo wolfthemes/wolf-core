@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 24th November 2023 - Version 1.7.0
+#### 27th November 2023 - Version 1.7.1
 
 -   Fix: More Compatiblity with containers
+-   Fix: JS issue (since Swipebox disabled by themes to avoid enqueing unused files)
 
 #### 6th November 2023 - Version 1.6.9
 

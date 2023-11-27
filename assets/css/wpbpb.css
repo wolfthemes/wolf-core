@@ -1908,4 +1908,6 @@ i.fab.fa-x {
   content: url(../img/x.svg);
   color: inherit;
   margin: 0 auto;
+  width: 50%;
+  vertical-align: middle;
 }

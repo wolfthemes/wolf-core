@@ -800,7 +800,10 @@ var WolfCore = (function ($) {
 		 *  Lightbox
 		 */
 		lightbox: function () {
-			$(".wolf-core-lightbox:not(.wolf-core-disabled)").swipebox();
+
+			if ( typeof swipebox !== "undefined") {
+				$(".wolf-core-lightbox:not(.wolf-core-disabled)").swipebox();
+			}
 
 			// add rel attribute for galleries
 			$(".wolf-core-gallery .wolf-core-lightbox").each(function () {
