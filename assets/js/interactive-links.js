@@ -28,8 +28,10 @@ var WolfCoreInteractiveLinks = (function ($) {
 		},
 
 		load : function() {
-			if ( $( '#wolf-core-interactive-link-bg-1' ) ) {
-				$( '.wolf-core-interactive-link' ).first().addClass( 'link-active' );
+			if ( $( '#wolf-core-interactive-link-bg-1' ).length ) {
+				$( '#wolf-core-interactive-link-bg-1' ).addClass( 'panel-current' );
+
+				$( '.wolf-core-interactive-link-item .wolf-core-interactive-link' ).first().addClass( 'link-active' );
 			}
 		}
 	};

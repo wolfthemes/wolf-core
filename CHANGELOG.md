@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 29th November 2023 - Version 1.7.2
+
+-   Tweak: Set default active class on first slide background in interactive links module
+
 #### 27th November 2023 - Version 1.7.1
 
 -   Fix: More Compatiblity with containers
