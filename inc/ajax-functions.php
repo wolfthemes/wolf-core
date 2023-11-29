@@ -93,10 +93,9 @@ function wolf_core_mailchimp_ajax() {
 
 		} else {
 			// Subscribe
-			//debug(wolf_sync_mailchimp( $data ));
 			wolf_core_sync_mailchimp( $data );
 			//WVCM()->subscribe( $list_id, $email, $f_name, $l_name );
-			echo 'OK';
+			//echo 'OK';
 		}
 	}
 	exit;

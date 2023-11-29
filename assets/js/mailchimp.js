@@ -58,6 +58,8 @@ var WolfCoreMailchimp = function( $ ) {
 
 						message = response;
 
+						console.log( message );
+
 						if ( "OK" === response ) {
 
 							message = WolfCoreMailchimpParams.subscriptionSuccessfulMessage;

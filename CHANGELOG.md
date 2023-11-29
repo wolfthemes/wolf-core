@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 29th November 2023 - Version 1.7.2
+#### 29th November 2023 - Version 1.7.3
 
 -   Tweak: Set default active class on first slide background in interactive links module
+-   Fix: MailChimp Subscription issue due to new API
 
 #### 27th November 2023 - Version 1.7.1
 

@@ -1376,12 +1376,15 @@ add_action( 'admin_init', 'wolf_core_set_default_kit_values' );
  */
 function wolf_core_sync_mailchimp( $data ) {
 
-	$api_key = apply_filters( 'wolf_core_mailchimp_api_key', wolf_vc_get_option( 'mailchimp', 'mailchimp_api_key' ) );
-	$list_id = esc_attr($data['list_id']);
-	$email = $data['email'];
+	$api_key = apply_filters( 'wolf_core_mailchimp_api_key', wolf_core_get_option( 'mailchimp', 'mailchimp_api_key' ) );
+	$list_id = esc_attr( $data['list_id'] );
+	$email   = $data['email'];
+	$status       = 'subscribed';
 
-	$status = 'subscribed'; // we are going to talk about it in just a little bit
-	$merge_fields = array( 'FNAME' => $data['firstname'], 'LNAME' => $data['lastname'] ); // FNAME, LNAME or something else
+	$merge_fields = array(
+		'FNAME' => $data['firstname'],
+		'LNAME' => $data['lastname'],
+	); // FNAME, LNAME or something else
 
 	// start our Mailchimp connection
 	$connection = curl_init();
@@ -1390,7 +1393,7 @@ function wolf_core_sync_mailchimp( $data ) {
 		CURLOPT_URL,
 		'https://' . substr( $api_key, strpos( $api_key, '-' ) + 1 ) . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/' . md5( strtolower( $email ) )
 	);
-	curl_setopt( $connection, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Authorization: Basic '. base64_encode( 'user:'.$api_key ) ) );
+	curl_setopt( $connection, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Authorization: Basic ' . base64_encode( 'user:' . $api_key ) ) );
 	curl_setopt( $connection, CURLOPT_RETURNTRANSFER, true );
 	curl_setopt( $connection, CURLOPT_CUSTOMREQUEST, 'PUT' );
 	curl_setopt( $connection, CURLOPT_POST, true );
@@ -1398,18 +1401,17 @@ function wolf_core_sync_mailchimp( $data ) {
 	curl_setopt(
 		$connection,
 		CURLOPT_POSTFIELDS,
-		json_encode( array(
-			'apikey'        => $api_key,
-			'email_address' => $email,
-			'status'        => $status,
-			'merge_fields'  => $merge_fields,
-			//'tags' => array( 'Coffee', 'Snowboard' ) // you can specify some tags here as well
-		) )
+		json_encode(
+			array(
+				'apikey'        => $api_key,
+				'email_address' => $email,
+				'status'        => $status,
+				'merge_fields'  => $merge_fields,
+			)
+		)
 	);
 
 	$result = curl_exec( $connection );
 
 	echo 'OK';
-
-	//var_dump( $result );
 }
