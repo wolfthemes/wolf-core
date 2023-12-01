@@ -178,7 +178,7 @@ function wolf_core_pricing_table( $atts ) {
 			$rel = ( isset( $link['rel'] ) ) ? esc_attr( $link['rel'] ) : '';
 			$target = ( isset( $link['target'] ) ) ? esc_attr( $link['target'] ) : '';
 			$title = ( isset( $link['title'] ) ) ? esc_attr( $link['title'] ) : '';
-			$output .= '<a rel="' . esc_attr( $rel ) .'" class="' . apply_filters( 'wolf_core_pricing_table_secondary_button_class', 'wolf-core-button wolf-core-pricing-table-secondary-button' ) . '"';
+			$output .= '<a rel="' . esc_attr( $rel ) .'" class="' . apply_filters( 'wolf_core_pricing_table_button_class', 'wolf-core-button wolf-core-pricing-table-secondary-button' ) . '"';
 			$output .= ' target="' . esc_attr( $target ) . '"';
 			$output .= ' href="' . esc_url( $url ) . '" title="' . esc_attr( $title ) . '">';
 

@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 1st December 2023 - Version 1.7.4
+#### 1st December 2023 - Version 1.7.5
 
 -   Tweak: Added Help Metabox field type
+-   Fix: Price table primary button class filter
 
 #### 29th November 2023 - Version 1.7.3
 
