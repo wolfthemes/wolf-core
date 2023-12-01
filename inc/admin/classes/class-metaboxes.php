@@ -187,10 +187,9 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				echo '<input placeholder="' . esc_attr( $placeholder ) . '" type="text" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_attr( $meta ) . '" size="30" />
 						<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
-			// } elseif ( 'url' == $type ) {
+			} elseif ( 'help' == $type ) {
 
-			// 	echo '<input placeholder="' . esc_attr( $placeholder ) . '" type="text" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" value="' . esc_url( $meta ) . '" size="30" />
-			// 			<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
+			echo '<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 				// textarea
 			} elseif ( 'textarea' == $type ) {
