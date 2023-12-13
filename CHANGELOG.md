@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 11th December 2023 - Version 1.7.6
+
+-   Tweak: Added Date field option
+
 #### 1st December 2023 - Version 1.7.5
 
 -   Tweak: Added Help Metabox field type

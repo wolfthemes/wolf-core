@@ -97,6 +97,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 		'icon'        => \Elementor\Controls_Manager::ICON,
 		'colorpicker' => \Elementor\Controls_Manager::COLOR,
 		'number'      => \Elementor\Controls_Manager::NUMBER,
+		'date'        => \Elementor\Controls_Manager::DATE_TIME,
 		'background'  => '',
 	);
 
@@ -197,6 +198,9 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::TEXT;
 
+			if ( isset( $p['ai'] ) ) {
+				$field_params['ai'] = $p['ai'];
+			}
 		} elseif ( 'textarea' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::TEXTAREA;
@@ -221,6 +225,10 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			$field_params['label_on']     = ( isset( $p['label_on'] ) ) ? $p['label_on'] : esc_html__( 'Yes', 'wolf-core' );
 			$field_params['label_off']    = ( isset( $p['label_off'] ) ) ? $p['label_off'] : esc_html__( 'No', 'wolf-core' );
 			$field_params['return_value'] = ( isset( $p['return_value'] ) ) ? $p['return_value'] : 'yes';
+
+		} elseif ( 'date' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::DATE_TIME;
 
 		} elseif ( 'font_family' === $type ) {
 

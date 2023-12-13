@@ -1905,9 +1905,35 @@ table.variations th.label {
 i.fab.fa-twitter,
 i.fab.fa-x {
   cursor: pointer;
-  content: url(../img/x.svg);
   color: inherit;
   margin: 0 auto;
-  width: 50%;
-  vertical-align: middle;
+}
+
+.fa-twitter:before {
+  display: none;
+}
+
+.fa-twitter svg {
+  position: relative;
+  cursor: pointer;
+}
+
+.fa-1x .fa-twitter svg {
+  top: 2px;
+}
+
+.fa-2x .fa-twitter svg {
+  top: 2px;
+}
+
+.fa-3x .fa-twitter svg {
+  top: 5px;
+}
+
+.fa-4x .fa-twitter svg {
+  top: 6px;
+}
+
+.fa-5x .fa-twitter svg {
+  top: 6px;
 }
