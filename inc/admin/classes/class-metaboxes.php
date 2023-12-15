@@ -202,8 +202,9 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						<span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 			// datepicker
-			} elseif ( $field['type'] == 'datepicker' ) {
-						echo '<input type="text" class="wd-metabox-datepicker" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" size="30">
+			} elseif ( $field['type'] === 'datepicker' ) {
+
+				echo '<input type="text" class="wolf-core-metabox-datepicker" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" size="30">
 						<br><span class="description">' . $desc . '</span>';
 
 				// select

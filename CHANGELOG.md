@@ -1,9 +1,14 @@
 
 # Changelog
 
-#### 11th December 2023 - Version 1.7.6
+#### 15th December 2023 - Version 1.7.8
+
+-   Tweak: Added datepicker to date metabox field
+
+#### 12th December 2023 - Version 1.7.7
 
 -   Tweak: Added Date field option
+-   Tweak: Added Number field option
 
 #### 1st December 2023 - Version 1.7.5
 

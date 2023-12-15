@@ -257,6 +257,8 @@
 				$( this ).parent().find( "span" ).empty();
 				return false;
 			} );
+
+			$( '.wolf-core-metabox-datepicker' ).datepicker( { dateFormat: 'dd-mm-yy' } );
 	} );
 
 } )( jQuery );

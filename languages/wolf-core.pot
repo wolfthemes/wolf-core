@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.7.6\n"
+"Project-Id-Version: Wolf Core 1.7.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2023-12-11 13:35:46+00:00\n"
+"POT-Creation-Date: 2023-12-15 10:46:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -454,27 +454,27 @@ msgstr ""
 msgid "Font Color"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:44 inc/admin/classes/class-metaboxes.php:727
+#: inc/admin/admin-scripts.php:44 inc/admin/classes/class-metaboxes.php:728
 #: pack/wolf-core/inc/admin/admin-scripts.php:44
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:727
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:728
 msgid "Select an image"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:45 inc/admin/classes/class-metaboxes.php:728
+#: inc/admin/admin-scripts.php:45 inc/admin/classes/class-metaboxes.php:729
 #: pack/wolf-core/inc/admin/admin-scripts.php:45
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:728
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:729
 msgid "Select a set of images"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:46 inc/admin/classes/class-metaboxes.php:729
+#: inc/admin/admin-scripts.php:46 inc/admin/classes/class-metaboxes.php:730
 #: pack/wolf-core/inc/admin/admin-scripts.php:46
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:729
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:730
 msgid "Select a file"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:47 inc/admin/classes/class-metaboxes.php:730
+#: inc/admin/admin-scripts.php:47 inc/admin/classes/class-metaboxes.php:731
 #: pack/wolf-core/inc/admin/admin-scripts.php:47
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:730
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:731
 msgid "This will remove the entire image set"
 msgstr ""
 
@@ -622,53 +622,53 @@ msgstr ""
 msgid "Label"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:237
-#: inc/admin/classes/class-metaboxes.php:260
-#: inc/admin/classes/class-metaboxes.php:312
-#: inc/admin/classes/class-metaboxes.php:464
+#: inc/admin/classes/class-metaboxes.php:238
+#: inc/admin/classes/class-metaboxes.php:261
+#: inc/admin/classes/class-metaboxes.php:313
+#: inc/admin/classes/class-metaboxes.php:465
 #: inc/admin/classes/class-options.php:254
 #: inc/admin/classes/class-options.php:289
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:237
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:260
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:312
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:464
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:238
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:261
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:313
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:465
 #: pack/wolf-core/inc/admin/classes/class-options.php:254
 #: pack/wolf-core/inc/admin/classes/class-options.php:289
 msgid "Clear"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:238
-#: inc/admin/classes/class-metaboxes.php:465
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:238
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:465
+#: inc/admin/classes/class-metaboxes.php:239
+#: inc/admin/classes/class-metaboxes.php:466
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:239
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:466
 msgid "Choose a file"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:261
-#: inc/admin/classes/class-metaboxes.php:313
+#: inc/admin/classes/class-metaboxes.php:262
+#: inc/admin/classes/class-metaboxes.php:314
 #: inc/admin/classes/class-options.php:255
 #: inc/admin/classes/class-options.php:290
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:261
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:313
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:262
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:314
 #: pack/wolf-core/inc/admin/classes/class-options.php:255
 #: pack/wolf-core/inc/admin/classes/class-options.php:290
 msgid "Choose an image"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:295
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:295
+#: inc/admin/classes/class-metaboxes.php:296
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:296
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:423
 #: plugins/vc/deprecated/wvc_icon.php:423
 msgid "Background color"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:303
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:303
+#: inc/admin/classes/class-metaboxes.php:304
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:304
 msgid "Background image"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:325
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:325
+#: inc/admin/classes/class-metaboxes.php:326
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:326
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:111
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:230
 #: plugins/vc/vc-params/background-params.php:111
@@ -676,8 +676,8 @@ msgstr ""
 msgid "Background repeat"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:354
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:354
+#: inc/admin/classes/class-metaboxes.php:355
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:355
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:87
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:207
 #: plugins/vc/vc-params/background-params.php:87
@@ -685,36 +685,36 @@ msgstr ""
 msgid "Background position"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:373
+#: inc/admin/classes/class-metaboxes.php:374
 #: inc/admin/classes/class-options.php:341
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:373
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:374
 #: pack/wolf-core/inc/admin/classes/class-options.php:341
 msgid "cover (resize)"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:374
+#: inc/admin/classes/class-metaboxes.php:375
 #: inc/admin/classes/class-options.php:342
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:374
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:375
 #: pack/wolf-core/inc/admin/classes/class-options.php:342
 msgid "normal"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:375
+#: inc/admin/classes/class-metaboxes.php:376
 #: inc/admin/classes/class-options.php:343
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:375
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:376
 #: pack/wolf-core/inc/admin/classes/class-options.php:343
 msgid "responsive (hard resize)"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:380
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:380
+#: inc/admin/classes/class-metaboxes.php:381
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:381
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:248
 #: plugins/vc/vc-params/custom-heading-params.php:248
 msgid "Background size"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:396
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:396
+#: inc/admin/classes/class-metaboxes.php:397
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:397
 #: pack/wolf-core/plugins/elementor/controls/section.php:129
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:153
 #: plugins/elementor/controls/section.php:129
@@ -722,23 +722,23 @@ msgstr ""
 msgid "Parallax"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:419
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:419
+#: inc/admin/classes/class-metaboxes.php:420
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:420
 msgid "Are you sure to want to reset all images ?"
-msgstr ""
-
-#: inc/admin/classes/class-metaboxes.php:449
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:449
-msgid "Clear All"
 msgstr ""
 
 #: inc/admin/classes/class-metaboxes.php:450
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:450
+msgid "Clear All"
+msgstr ""
+
+#: inc/admin/classes/class-metaboxes.php:451
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:451
 msgid "Select Images"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:483
-#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:483
+#: inc/admin/classes/class-metaboxes.php:484
+#: pack/wolf-core/inc/admin/classes/class-metaboxes.php:484
 #: pack/wolf-core/plugins/common-params/button-params.php:25
 #: pack/wolf-core/plugins/elementor/controls/page.php:24
 #: pack/wolf-core/plugins/elementor/controls/page.php:47
@@ -1393,7 +1393,7 @@ msgid "Full"
 msgstr ""
 
 #: inc/core-functions.php:612 pack/wolf-core/inc/core-functions.php:612
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:526
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:536
 #: pack/wolf-core/plugins/params/countdown.php:61
 #: pack/wolf-core/plugins/params/google-maps.php:134
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:47
@@ -1413,7 +1413,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row.php:213
 #: pack/wolf-core/plugins/vc/vc-map/row.php:221
 #: pack/wolf-core/plugins/vc/vc-params/style-params.php:21
-#: plugins/elementor/elementor-core-functions.php:526
+#: plugins/elementor/elementor-core-functions.php:536
 #: plugins/params/countdown.php:61 plugins/params/google-maps.php:134
 #: plugins/vc/vc-map/column-inner.php:47 plugins/vc/vc-map/column-inner.php:59
 #: plugins/vc/vc-map/column-inner.php:78 plugins/vc/vc-map/column-inner.php:86
@@ -1722,7 +1722,7 @@ msgstr ""
 #: inc/wp-widgets/class-widget-social-icons.php:111
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:142
 #: pack/wolf-core/inc/wp-widgets/class-widget-social-icons.php:111
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:512
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:522
 #: pack/wolf-core/plugins/params/album-tracklist.php:58
 #: pack/wolf-core/plugins/params/clients.php:158
 #: pack/wolf-core/plugins/params/interactive-links.php:82
@@ -1734,7 +1734,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/wc-search-form.php:34
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:529
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:24
-#: plugins/elementor/elementor-core-functions.php:512
+#: plugins/elementor/elementor-core-functions.php:522
 #: plugins/params/album-tracklist.php:58 plugins/params/clients.php:158
 #: plugins/params/interactive-links.php:82 plugins/params/price-list.php:55
 #: plugins/params/pricing-table.php:34 plugins/params/process.php:64
@@ -3402,7 +3402,7 @@ msgid "Social"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:135
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:389
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:399
 #: pack/wolf-core/plugins/params/interactive-links.php:94
 #: pack/wolf-core/plugins/params/process.php:102
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:193
@@ -3411,7 +3411,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:242
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:259
 #: plugins/elementor/elementor-core-functions.php:135
-#: plugins/elementor/elementor-core-functions.php:389
+#: plugins/elementor/elementor-core-functions.php:399
 #: plugins/params/interactive-links.php:94 plugins/params/process.php:102
 #: plugins/vc/vc-params/button-params.php:193
 #: plugins/vc/vc-params/custom-heading-params.php:201
@@ -3421,24 +3421,24 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:485
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:495
 #: pack/wolf-core/plugins/params/content-block.php:37
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:25
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:18
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:68
-#: plugins/elementor/elementor-core-functions.php:485
+#: plugins/elementor/elementor-core-functions.php:495
 #: plugins/params/content-block.php:37 plugins/vc/deprecated/wvc_icon.php:25
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:18
 #: plugins/vc/vc-params/button-params.php:68
 msgid "Content"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:498
-#: plugins/elementor/elementor-core-functions.php:498
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:508
+#: plugins/elementor/elementor-core-functions.php:508
 msgid "Query"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:540
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:550
 #: pack/wolf-core/plugins/helpers/helpers.php:93
 #: pack/wolf-core/plugins/helpers/helpers.php:109
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:96
@@ -3447,7 +3447,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/column.php:114
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:242
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:251
-#: plugins/elementor/elementor-core-functions.php:540
+#: plugins/elementor/elementor-core-functions.php:550
 #: plugins/helpers/helpers.php:93 plugins/helpers/helpers.php:109
 #: plugins/vc/vc-map/column-inner.php:96 plugins/vc/vc-map/column.php:97
 #: plugins/vc/vc-map/column.php:105 plugins/vc/vc-map/column.php:114
@@ -3456,23 +3456,23 @@ msgstr ""
 msgid "Extra"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:554
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:564
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:113
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:267
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:277
-#: plugins/elementor/elementor-core-functions.php:554
+#: plugins/elementor/elementor-core-functions.php:564
 #: plugins/vc/vc-map/row-inner.php:113 plugins/vc/vc-params/row-params.php:267
 #: plugins/vc/vc-params/row-params.php:277
 msgid "Advanced"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:568
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:578
 #: pack/wolf-core/plugins/helpers/helpers.php:34
 #: pack/wolf-core/plugins/helpers/helpers.php:41
 #: pack/wolf-core/plugins/helpers/helpers.php:47
 #: pack/wolf-core/plugins/helpers/helpers.php:55
 #: pack/wolf-core/plugins/helpers/helpers.php:63
-#: plugins/elementor/elementor-core-functions.php:568
+#: plugins/elementor/elementor-core-functions.php:578
 #: plugins/helpers/helpers.php:34 plugins/helpers/helpers.php:41
 #: plugins/helpers/helpers.php:47 plugins/helpers/helpers.php:55
 #: plugins/helpers/helpers.php:63

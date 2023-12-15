@@ -230,6 +230,16 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::DATE_TIME;
 
+			if ( ! isset( $p['picker_options'] ) ) {
+				$field_params['picker_options'] = array(
+					'enableTime' => false,
+				);
+			}
+
+		} elseif ( 'number' === $type ) {
+
+			$field_params['type'] = \Elementor\Controls_Manager::NUMBER;
+
 		} elseif ( 'font_family' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::FONT;
