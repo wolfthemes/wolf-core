@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.7.8\n"
+"Project-Id-Version: Wolf Core 1.7.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2023-12-15 10:46:59+00:00\n"
+"POT-Creation-Date: 2023-12-22 10:36:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1393,7 +1393,7 @@ msgid "Full"
 msgstr ""
 
 #: inc/core-functions.php:612 pack/wolf-core/inc/core-functions.php:612
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:536
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:539
 #: pack/wolf-core/plugins/params/countdown.php:61
 #: pack/wolf-core/plugins/params/google-maps.php:134
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:47
@@ -1413,7 +1413,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row.php:213
 #: pack/wolf-core/plugins/vc/vc-map/row.php:221
 #: pack/wolf-core/plugins/vc/vc-params/style-params.php:21
-#: plugins/elementor/elementor-core-functions.php:536
+#: plugins/elementor/elementor-core-functions.php:539
 #: plugins/params/countdown.php:61 plugins/params/google-maps.php:134
 #: plugins/vc/vc-map/column-inner.php:47 plugins/vc/vc-map/column-inner.php:59
 #: plugins/vc/vc-map/column-inner.php:78 plugins/vc/vc-map/column-inner.php:86
@@ -1722,7 +1722,7 @@ msgstr ""
 #: inc/wp-widgets/class-widget-social-icons.php:111
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:142
 #: pack/wolf-core/inc/wp-widgets/class-widget-social-icons.php:111
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:522
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:525
 #: pack/wolf-core/plugins/params/album-tracklist.php:58
 #: pack/wolf-core/plugins/params/clients.php:158
 #: pack/wolf-core/plugins/params/interactive-links.php:82
@@ -1734,7 +1734,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/wc-search-form.php:34
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:529
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:24
-#: plugins/elementor/elementor-core-functions.php:522
+#: plugins/elementor/elementor-core-functions.php:525
 #: plugins/params/album-tracklist.php:58 plugins/params/clients.php:158
 #: plugins/params/interactive-links.php:82 plugins/params/price-list.php:55
 #: plugins/params/pricing-table.php:34 plugins/params/process.php:64
@@ -1774,7 +1774,7 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:166
 #: pack/wolf-core/plugins/elementor/controls/image.php:23
 #: pack/wolf-core/plugins/elementor/controls/section.php:135
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:225
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:228
 #: pack/wolf-core/plugins/params/album-disc.php:103
 #: pack/wolf-core/plugins/params/bandsintown-events.php:55
 #: pack/wolf-core/plugins/params/bandsintown-events.php:65
@@ -1810,7 +1810,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:623
 #: plugins/elementor/controls/image.php:23
 #: plugins/elementor/controls/section.php:135
-#: plugins/elementor/elementor-core-functions.php:225
+#: plugins/elementor/elementor-core-functions.php:228
 #: plugins/params/album-disc.php:103 plugins/params/bandsintown-events.php:55
 #: plugins/params/bandsintown-events.php:65 plugins/params/clients.php:92
 #: plugins/params/gallery.php:146 plugins/params/gallery.php:278
@@ -1845,7 +1845,7 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:167
 #: pack/wolf-core/plugins/elementor/controls/image.php:24
 #: pack/wolf-core/plugins/elementor/controls/section.php:136
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:226
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:229
 #: pack/wolf-core/plugins/params/album-disc.php:104
 #: pack/wolf-core/plugins/params/bandsintown-events.php:54
 #: pack/wolf-core/plugins/params/bandsintown-events.php:66
@@ -1875,7 +1875,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:624
 #: plugins/elementor/controls/image.php:24
 #: plugins/elementor/controls/section.php:136
-#: plugins/elementor/elementor-core-functions.php:226
+#: plugins/elementor/elementor-core-functions.php:229
 #: plugins/params/album-disc.php:104 plugins/params/bandsintown-events.php:54
 #: plugins/params/bandsintown-events.php:66 plugins/params/clients.php:93
 #: plugins/params/gallery.php:147 plugins/params/gallery.php:279
@@ -3401,8 +3401,8 @@ msgstr ""
 msgid "Social"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:135
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:399
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:137
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:402
 #: pack/wolf-core/plugins/params/interactive-links.php:94
 #: pack/wolf-core/plugins/params/process.php:102
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:193
@@ -3410,8 +3410,8 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:224
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:242
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:259
-#: plugins/elementor/elementor-core-functions.php:135
-#: plugins/elementor/elementor-core-functions.php:399
+#: plugins/elementor/elementor-core-functions.php:137
+#: plugins/elementor/elementor-core-functions.php:402
 #: plugins/params/interactive-links.php:94 plugins/params/process.php:102
 #: plugins/vc/vc-params/button-params.php:193
 #: plugins/vc/vc-params/custom-heading-params.php:201
@@ -3421,24 +3421,24 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:495
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:498
 #: pack/wolf-core/plugins/params/content-block.php:37
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:25
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:18
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:68
-#: plugins/elementor/elementor-core-functions.php:495
+#: plugins/elementor/elementor-core-functions.php:498
 #: plugins/params/content-block.php:37 plugins/vc/deprecated/wvc_icon.php:25
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:18
 #: plugins/vc/vc-params/button-params.php:68
 msgid "Content"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:508
-#: plugins/elementor/elementor-core-functions.php:508
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:511
+#: plugins/elementor/elementor-core-functions.php:511
 msgid "Query"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:550
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:553
 #: pack/wolf-core/plugins/helpers/helpers.php:93
 #: pack/wolf-core/plugins/helpers/helpers.php:109
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:96
@@ -3447,7 +3447,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/column.php:114
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:242
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:251
-#: plugins/elementor/elementor-core-functions.php:550
+#: plugins/elementor/elementor-core-functions.php:553
 #: plugins/helpers/helpers.php:93 plugins/helpers/helpers.php:109
 #: plugins/vc/vc-map/column-inner.php:96 plugins/vc/vc-map/column.php:97
 #: plugins/vc/vc-map/column.php:105 plugins/vc/vc-map/column.php:114
@@ -3456,23 +3456,23 @@ msgstr ""
 msgid "Extra"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:564
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:567
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:113
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:267
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:277
-#: plugins/elementor/elementor-core-functions.php:564
+#: plugins/elementor/elementor-core-functions.php:567
 #: plugins/vc/vc-map/row-inner.php:113 plugins/vc/vc-params/row-params.php:267
 #: plugins/vc/vc-params/row-params.php:277
 msgid "Advanced"
 msgstr ""
 
-#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:578
+#: pack/wolf-core/plugins/elementor/elementor-core-functions.php:581
 #: pack/wolf-core/plugins/helpers/helpers.php:34
 #: pack/wolf-core/plugins/helpers/helpers.php:41
 #: pack/wolf-core/plugins/helpers/helpers.php:47
 #: pack/wolf-core/plugins/helpers/helpers.php:55
 #: pack/wolf-core/plugins/helpers/helpers.php:63
-#: plugins/elementor/elementor-core-functions.php:578
+#: plugins/elementor/elementor-core-functions.php:581
 #: plugins/helpers/helpers.php:34 plugins/helpers/helpers.php:41
 #: plugins/helpers/helpers.php:47 plugins/helpers/helpers.php:55
 #: plugins/helpers/helpers.php:63

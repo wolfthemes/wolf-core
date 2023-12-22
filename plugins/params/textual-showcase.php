@@ -213,10 +213,12 @@ function wolf_core_textual_showcase_params() {
 							),
 
 							// array(
-							// 	'param_name' => 'font_family',
+							// 	'param_name' => 'item_font_family',
 							// 	'type'       => 'font_family',
 							// 	'label'      => esc_html__( 'Font Family', 'wolf-core' ),
-							// 	'selector'   => '{{WRAPPER}} {{CURRENT_ITEM}} .wolf-core-tsi-text-inner',
+							// 	'selectors'   => array(
+							// 		'{{WRAPPER}} {{CURRENT_ITEM}} .wolf-core-tsi-text-inner' => 'font-family: {{VALUE}}!important;',
+							// 	),
 							// 	'condition'  => array(
 							// 		'type' => array( 'text', 'text_hover_image', 'text_hover_video' ),
 							// 	),

@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 22th December 2023 - Version 1.7.9
+
+-   Fix: Full width button
+
 #### 15th December 2023 - Version 1.7.8
 
 -   Tweak: Added datepicker to date metabox field

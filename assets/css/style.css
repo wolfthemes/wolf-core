@@ -2984,6 +2984,10 @@ li.wolf-core-album-tracklist-item {
     padding: 25px 75px;
   }
 }
+.wolf-core-button-full-width {
+  display: flex !important;
+}
+
 /**
  * @# Clients
  **/

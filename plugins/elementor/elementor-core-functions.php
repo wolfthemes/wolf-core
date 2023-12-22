@@ -126,6 +126,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 				$r_type = ( isset( $r_param['type'] ) ) ? $elementor_types[ $r_param['type'] ] : 'text';
 
+				//debug(  $r_param['type'] );
+
 				if ( isset( $r_param['type'] ) && 'background' === $r_param['type'] ) {
 
 					$repeater->add_group_control(
@@ -150,8 +152,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 						'label_block' => true,
 					);
 
-					if ( 'font_family' === $r_type ) {
-						$r_params['selector'] = ( isset( $r_param['selector'] ) ) ? $r_param['selector'] : '';
+					if ( 'font' === $r_type ) {
+						$r_params['selectors'] = ( isset( $r_param['selectors'] ) ) ? $r_param['selectors'] : '';
 					}
 
 					if ( 'select' === $r_type ) {
@@ -171,7 +173,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 						}
 					}
 
-					// debug( $r_params );
+					//debug( $r_params );
 
 					$repeater->add_control(
 						$r_param['param_name'],
@@ -180,7 +182,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				}
 			}
 
-			// die();
+			//die();
 
 			$widget->add_control(
 				$p['param_name'],
@@ -201,6 +203,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			if ( isset( $p['ai'] ) ) {
 				$field_params['ai'] = $p['ai'];
 			}
+
 		} elseif ( 'textarea' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::TEXTAREA;

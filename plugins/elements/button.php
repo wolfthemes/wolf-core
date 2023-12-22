@@ -31,6 +31,7 @@ function wolf_core_button( $atts ) {
 				'icon_type'                     => '', // VC.
 				'selected_icon'                 => '', // Elementor.
 				'icon_align'                    => 'before',
+				'full_width'                    => '',
 				'icon_indent'                   => '',
 				'button_css_id'                 => '',
 				'text_shadow'                   => '',
@@ -67,6 +68,10 @@ function wolf_core_button( $atts ) {
 
 	if ( $size ) {
 		$class .= " wolf-core-button-size-$size";
+	}
+
+	if ( $full_width ) {
+		$class .= " wolf-core-button-full-width";
 	}
 
 	if ( $button_type ) {
