@@ -497,6 +497,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 
 			$core_files = array(
 				'core-functions',
+				'theme-functions',
 				'background-functions',
 				'image-functions',
 				'filters',
