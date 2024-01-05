@@ -254,6 +254,7 @@ function wolf_core_wrong_theme() {
 		'clix',
 		'gainlab',
 		'unimate',
+		'notescape',
 	);
 
 	return ( ! in_array( esc_attr( sanitize_title_with_dashes( get_template() ) ), $ok, true ) );

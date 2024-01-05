@@ -22,22 +22,22 @@ function unimate_add_event_type_taxonomy() {
 	}
 
 	$labels = array(
-		'name'                       => esc_html__( 'Types', '%TEXTDOMAIN%' ),
-		'singular_name'              => esc_html__( 'Type', '%TEXTDOMAIN%' ),
-		'search_items'               => esc_html__( 'Search Types', '%TEXTDOMAIN%' ),
-		'popular_items'              => esc_html__( 'Popular Types', '%TEXTDOMAIN%' ),
-		'all_items'                  => esc_html__( 'All Types', '%TEXTDOMAIN%' ),
-		'parent_item'                => esc_html__( 'Parent Type', '%TEXTDOMAIN%' ),
-		'parent_item_colon'          => esc_html__( 'Parent Type:', '%TEXTDOMAIN%' ),
-		'edit_item'                  => esc_html__( 'Edit Type', '%TEXTDOMAIN%' ),
-		'update_item'                => esc_html__( 'Update Type', '%TEXTDOMAIN%' ),
-		'add_new_item'               => esc_html__( 'Add New Type', '%TEXTDOMAIN%' ),
-		'new_item_name'              => esc_html__( 'New Type', '%TEXTDOMAIN%' ),
-		'separate_items_with_commas' => esc_html__( 'Separate types with commas', '%TEXTDOMAIN%' ),
-		'add_or_remove_items'        => esc_html__( 'Add or remove types', '%TEXTDOMAIN%' ),
-		'choose_from_most_used'      => esc_html__( 'Choose from the most used types', '%TEXTDOMAIN%' ),
-		'not_found'                  => esc_html__( 'No types found', '%TEXTDOMAIN%' ),
-		'menu_name'                  => esc_html__( 'Types', '%TEXTDOMAIN%' ),
+		'name'                       => esc_html__( 'Types', 'wolf-core' ),
+		'singular_name'              => esc_html__( 'Type', 'wolf-core' ),
+		'search_items'               => esc_html__( 'Search Types', 'wolf-core' ),
+		'popular_items'              => esc_html__( 'Popular Types', 'wolf-core' ),
+		'all_items'                  => esc_html__( 'All Types', 'wolf-core' ),
+		'parent_item'                => esc_html__( 'Parent Type', 'wolf-core' ),
+		'parent_item_colon'          => esc_html__( 'Parent Type:', 'wolf-core' ),
+		'edit_item'                  => esc_html__( 'Edit Type', 'wolf-core' ),
+		'update_item'                => esc_html__( 'Update Type', 'wolf-core' ),
+		'add_new_item'               => esc_html__( 'Add New Type', 'wolf-core' ),
+		'new_item_name'              => esc_html__( 'New Type', 'wolf-core' ),
+		'separate_items_with_commas' => esc_html__( 'Separate types with commas', 'wolf-core' ),
+		'add_or_remove_items'        => esc_html__( 'Add or remove types', 'wolf-core' ),
+		'choose_from_most_used'      => esc_html__( 'Choose from the most used types', 'wolf-core' ),
+		'not_found'                  => esc_html__( 'No types found', 'wolf-core' ),
+		'menu_name'                  => esc_html__( 'Types', 'wolf-core' ),
 	);
 
 	$args = array(

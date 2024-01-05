@@ -556,6 +556,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'classes/class-admin',
 				//'classes/class-video-thumbnail-generator',
 				'classes/class-metaboxes',
+				//'classes/class-plugin-installer',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */

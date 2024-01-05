@@ -719,6 +719,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 			/* Admins scripts */
 			wp_enqueue_media();
 			wp_enqueue_script( 'jquery-ui-tabs' );
+			wp_enqueue_script( 'jquery-ui-datepicker' );
 			wp_enqueue_script( 'wolf-core-metaboxes', WOLF_CORE_URI . '/assets/js/admin/metaboxes.js', array( 'jquery', 'jquery-ui-sortable', 'wp-color-picker' ), $version, true );
 
 			wp_localize_script(
@@ -731,7 +732,6 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 					'confirmRemoveAllImages' => esc_html__( 'This will remove the entire image set', 'wolf-core' ),
 				)
 			);
-
 		}
 	}
 }
