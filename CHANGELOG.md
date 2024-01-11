@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 11th January 2024 - Version 1.8.0
+
+-   Fix: Debug message with PHP 8.2+
+
 #### 22th December 2023 - Version 1.7.9
 
 -   Fix: Full width button

@@ -376,7 +376,7 @@ function wolf_core_social_icons( $atts ) {
 						$output .= ' rel="noreferrer, noopener"';
 					}
 
-					$output .= ' href="' . esc_url( $link ) . '">';
+					$output .= ' href="' . esc_url( (string) $link ) . '">';
 
 					$output .= $social_services_acronym[ $service ];
 
@@ -392,7 +392,7 @@ function wolf_core_social_icons( $atts ) {
 							$output .= ' rel="noreferrer, noopener"';
 						}
 
-						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+						$output .= ' href="' . esc_url( (string) $link ) . '"></a></i>';
 
 					} else {
 
@@ -402,7 +402,7 @@ function wolf_core_social_icons( $atts ) {
 							$output .= ' rel="noreferrer, noopener"';
 						}
 
-						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+						$output .= ' href="' . esc_url( (string) $link ) . '"></a></i>';
 					}
 				}
 
@@ -454,7 +454,7 @@ function wolf_core_social_icons( $atts ) {
 						$output .= ' rel="noreferrer, noopener"';
 					}
 
-					$output .= ' href="' . esc_url( $link ) . '">';
+					$output .= ' href="' . esc_url( (string) $link ) . '">';
 
 					$output .= $social_services_acronym[ $service ];
 
@@ -469,7 +469,7 @@ function wolf_core_social_icons( $atts ) {
 							$output .= ' rel="noreferrer, noopener"';
 						}
 
-						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+						$output .= ' href="' . esc_url( (string) $link ) . '"></a></i>';
 
 					} else {
 
@@ -479,7 +479,7 @@ function wolf_core_social_icons( $atts ) {
 							$output .= ' rel="noreferrer, noopener"';
 						}
 
-						$output .= ' href="' . esc_url( $link ) . '"></a></i>';
+						$output .= ' href="' . esc_url( (string) $link ) . '"></a></i>';
 					}
 				}
 
