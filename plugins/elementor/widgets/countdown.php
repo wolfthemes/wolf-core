@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignore
+class Elementor_Theme_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 	/**
 	 * Element parameters
@@ -158,7 +158,7 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 				'format'                   => 'dHMS',
 				'custom_format'            => '',
 				'offset'                   => -5,
-				'message'                  => esc_html__( 'Done!', 'wolf-visual-composer' ),
+				'message'                  => esc_html__( 'Ready!', 'wolf-core' ),
 				'font_family'              => '',
 				'font_size'                => '',
 				'font_weight'              => '',
@@ -175,5 +175,5 @@ class Elementor_Countdown_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 		echo wolf_core_countdown( $atts ); // WCS XSS ok.
 	}
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Countdown_Widget() );
+\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Theme_Countdown_Widget() );
 

@@ -1,6 +1,14 @@
 
 # Changelog
 
+#### 16th January 2024 - Version 1.8.2
+
+-   Fix: Missing Countdown widget due to name conflict with Elementor Pro
+
+#### 12th January 2024 - Version 1.8.1
+
+-   Tweak: Added section/container font color option data attribute to its markup
+
 #### 11th January 2024 - Version 1.8.0
 
 -   Fix: Debug message with PHP 8.2+

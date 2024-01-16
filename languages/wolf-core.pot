@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.8.0\n"
+"Project-Id-Version: Wolf Core 1.8.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-01-11 09:17:18+00:00\n"
+"POT-Creation-Date: 2024-01-16 11:53:31+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -745,7 +745,7 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/controls/page.php:63
 #: pack/wolf-core/plugins/elementor/controls/page.php:82
 #: pack/wolf-core/plugins/elementor/controls/page.php:100
-#: pack/wolf-core/plugins/elementor/controls/section.php:28
+#: pack/wolf-core/plugins/elementor/controls/section.php:27
 #: pack/wolf-core/plugins/elementor/controls/section.php:50
 #: pack/wolf-core/plugins/params/bigtext.php:121
 #: pack/wolf-core/plugins/params/bigtext.php:137
@@ -776,7 +776,7 @@ msgstr ""
 #: plugins/elementor/controls/page.php:63
 #: plugins/elementor/controls/page.php:82
 #: plugins/elementor/controls/page.php:100
-#: plugins/elementor/controls/section.php:28
+#: plugins/elementor/controls/section.php:27
 #: plugins/elementor/controls/section.php:50 plugins/params/bigtext.php:121
 #: plugins/params/bigtext.php:137 plugins/params/google-maps.php:42
 #: plugins/params/heading.php:125 plugins/params/heading.php:140
@@ -1593,7 +1593,7 @@ msgstr ""
 
 #: inc/core-functions.php:612 pack/wolf-core/inc/core-functions.php:612
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:539
-#: pack/wolf-core/plugins/params/countdown.php:61
+#: pack/wolf-core/plugins/params/countdown.php:63
 #: pack/wolf-core/plugins/params/google-maps.php:134
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:47
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:59
@@ -1613,7 +1613,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row.php:221
 #: pack/wolf-core/plugins/vc/vc-params/style-params.php:21
 #: plugins/elementor/elementor-core-functions.php:539
-#: plugins/params/countdown.php:61 plugins/params/google-maps.php:134
+#: plugins/params/countdown.php:63 plugins/params/google-maps.php:134
 #: plugins/vc/vc-map/column-inner.php:47 plugins/vc/vc-map/column-inner.php:59
 #: plugins/vc/vc-map/column-inner.php:78 plugins/vc/vc-map/column-inner.php:86
 #: plugins/vc/vc-map/column.php:48 plugins/vc/vc-map/column.php:60
@@ -2887,10 +2887,10 @@ msgstr ""
 #: pack/wolf-core/plugins/params/blockquote.php:73
 #: pack/wolf-core/plugins/params/breadcrumb.php:78
 #: pack/wolf-core/plugins/params/breadcrumb.php:89
-#: pack/wolf-core/plugins/params/countdown.php:83
-#: pack/wolf-core/plugins/params/countdown.php:92
-#: pack/wolf-core/plugins/params/countdown.php:200
-#: pack/wolf-core/plugins/params/countdown.php:211
+#: pack/wolf-core/plugins/params/countdown.php:85
+#: pack/wolf-core/plugins/params/countdown.php:94
+#: pack/wolf-core/plugins/params/countdown.php:202
+#: pack/wolf-core/plugins/params/countdown.php:213
 #: pack/wolf-core/plugins/params/google-maps.php:258
 #: pack/wolf-core/plugins/params/google-maps.php:265
 #: pack/wolf-core/plugins/params/google-maps.php:272
@@ -3009,9 +3009,9 @@ msgstr ""
 #: plugins/params/bigtext.php:71 plugins/params/bigtext.php:92
 #: plugins/params/bigtext.php:102 plugins/params/blockquote.php:62
 #: plugins/params/blockquote.php:73 plugins/params/breadcrumb.php:78
-#: plugins/params/breadcrumb.php:89 plugins/params/countdown.php:83
-#: plugins/params/countdown.php:92 plugins/params/countdown.php:200
-#: plugins/params/countdown.php:211 plugins/params/google-maps.php:258
+#: plugins/params/breadcrumb.php:89 plugins/params/countdown.php:85
+#: plugins/params/countdown.php:94 plugins/params/countdown.php:202
+#: plugins/params/countdown.php:213 plugins/params/google-maps.php:258
 #: plugins/params/google-maps.php:265 plugins/params/google-maps.php:272
 #: plugins/params/google-maps.php:277 plugins/params/google-maps.php:284
 #: plugins/params/google-maps.php:291 plugins/params/google-maps.php:307
@@ -3482,7 +3482,7 @@ msgid "Menu Font Tone"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:101
-#: pack/wolf-core/plugins/elementor/controls/section.php:30
+#: pack/wolf-core/plugins/elementor/controls/section.php:29
 #: pack/wolf-core/plugins/elementor/controls/section.php:52
 #: pack/wolf-core/plugins/params/gallery.php:359
 #: pack/wolf-core/plugins/params/gallery.php:373
@@ -3496,7 +3496,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row.php:86
 #: pack/wolf-core/plugins/vc/vc-map/row.php:264
 #: plugins/elementor/controls/page.php:101
-#: plugins/elementor/controls/section.php:30
+#: plugins/elementor/controls/section.php:29
 #: plugins/elementor/controls/section.php:52 plugins/params/gallery.php:359
 #: plugins/params/gallery.php:373 plugins/params/google-maps.php:124
 #: plugins/params/open-table.php:113 plugins/params/playlist.php:98
@@ -3507,7 +3507,7 @@ msgid "Light"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:102
-#: pack/wolf-core/plugins/elementor/controls/section.php:29
+#: pack/wolf-core/plugins/elementor/controls/section.php:28
 #: pack/wolf-core/plugins/elementor/controls/section.php:51
 #: pack/wolf-core/plugins/params/gallery.php:360
 #: pack/wolf-core/plugins/params/gallery.php:374
@@ -3521,7 +3521,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-map/row.php:87
 #: pack/wolf-core/plugins/vc/vc-map/row.php:263
 #: plugins/elementor/controls/page.php:102
-#: plugins/elementor/controls/section.php:29
+#: plugins/elementor/controls/section.php:28
 #: plugins/elementor/controls/section.php:51 plugins/params/gallery.php:360
 #: plugins/params/gallery.php:374 plugins/params/google-maps.php:126
 #: plugins/params/open-table.php:114 plugins/params/playlist.php:97
@@ -3733,12 +3733,8 @@ msgid "Options"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/widgets/countdown.php:161
-#: pack/wolf-core/plugins/elements/countdown.php:28
-#: pack/wolf-core/plugins/vc/templates/wolf_core_countdown.php:21
 #: plugins/elementor/widgets/countdown.php:161
-#: plugins/elements/countdown.php:28
-#: plugins/vc/templates/wolf_core_countdown.php:21
-msgid "Done!"
+msgid "Ready!"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/widgets/mailchimp.php:171
@@ -3786,6 +3782,13 @@ msgstr ""
 
 #: pack/wolf-core/plugins/elements/banner.php:49 plugins/elements/banner.php:49
 msgid "Click Here"
+msgstr ""
+
+#: pack/wolf-core/plugins/elements/countdown.php:28
+#: pack/wolf-core/plugins/vc/templates/wolf_core_countdown.php:21
+#: plugins/elements/countdown.php:28
+#: plugins/vc/templates/wolf_core_countdown.php:21
+msgid "Done!"
 msgstr ""
 
 #: pack/wolf-core/plugins/elements/google-maps.php:57
@@ -4552,8 +4555,8 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/banner.php:280
 #: pack/wolf-core/plugins/params/bigtext.php:52
-#: pack/wolf-core/plugins/params/countdown.php:130
-#: pack/wolf-core/plugins/params/countdown.php:155
+#: pack/wolf-core/plugins/params/countdown.php:132
+#: pack/wolf-core/plugins/params/countdown.php:157
 #: pack/wolf-core/plugins/params/google-maps.php:207
 #: pack/wolf-core/plugins/params/google-maps.php:236
 #: pack/wolf-core/plugins/params/heading.php:177
@@ -4565,7 +4568,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:395
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:100
 #: plugins/params/banner.php:280 plugins/params/bigtext.php:52
-#: plugins/params/countdown.php:130 plugins/params/countdown.php:155
+#: plugins/params/countdown.php:132 plugins/params/countdown.php:157
 #: plugins/params/google-maps.php:207 plugins/params/google-maps.php:236
 #: plugins/params/heading.php:177 plugins/params/social-icons-custom.php:183
 #: plugins/params/social-icons-custom.php:255
@@ -4579,8 +4582,8 @@ msgstr ""
 #: pack/wolf-core/plugins/params/banner.php:283
 #: pack/wolf-core/plugins/params/banner.php:313
 #: pack/wolf-core/plugins/params/bigtext.php:55
-#: pack/wolf-core/plugins/params/countdown.php:132
-#: pack/wolf-core/plugins/params/countdown.php:157
+#: pack/wolf-core/plugins/params/countdown.php:134
+#: pack/wolf-core/plugins/params/countdown.php:159
 #: pack/wolf-core/plugins/params/google-maps.php:209
 #: pack/wolf-core/plugins/params/google-maps.php:238
 #: pack/wolf-core/plugins/params/heading.php:180
@@ -4605,8 +4608,8 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:384
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:575
 #: plugins/params/banner.php:283 plugins/params/banner.php:313
-#: plugins/params/bigtext.php:55 plugins/params/countdown.php:132
-#: plugins/params/countdown.php:157 plugins/params/google-maps.php:209
+#: plugins/params/bigtext.php:55 plugins/params/countdown.php:134
+#: plugins/params/countdown.php:159 plugins/params/google-maps.php:209
 #: plugins/params/google-maps.php:238 plugins/params/heading.php:180
 #: plugins/params/social-icons-custom.php:186
 #: plugins/params/social-icons-custom.php:258
@@ -4684,11 +4687,11 @@ msgid "Text Custom Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:108
-#: pack/wolf-core/plugins/params/countdown.php:116
+#: pack/wolf-core/plugins/params/countdown.php:118
 #: pack/wolf-core/plugins/params/heading.php:110
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:237
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:123
-#: plugins/params/bigtext.php:108 plugins/params/countdown.php:116
+#: plugins/params/bigtext.php:108 plugins/params/countdown.php:118
 #: plugins/params/heading.php:110 plugins/vc/vc-params/button-params.php:237
 #: plugins/vc/vc-params/custom-heading-params.php:123
 msgid "Font Weight"
@@ -4737,10 +4740,10 @@ msgid "Italic"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/bigtext.php:148
-#: pack/wolf-core/plugins/params/countdown.php:98
+#: pack/wolf-core/plugins/params/countdown.php:100
 #: pack/wolf-core/plugins/params/heading.php:98
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:67
-#: plugins/params/bigtext.php:148 plugins/params/countdown.php:98
+#: plugins/params/bigtext.php:148 plugins/params/countdown.php:100
 #: plugins/params/heading.php:98
 #: plugins/vc/vc-params/custom-heading-params.php:67
 msgid "Font"
@@ -4990,133 +4993,133 @@ msgstr ""
 msgid "See the seconds tick down"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:36
-#: plugins/params/countdown.php:36
+#: pack/wolf-core/plugins/params/countdown.php:35
+#: plugins/params/countdown.php:35
 msgid "Date"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:38
-#: plugins/params/countdown.php:38
-msgid "formatted like %s"
+#: pack/wolf-core/plugins/params/countdown.php:37
+#: plugins/params/countdown.php:37
+msgid "formatted as %s"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:44
-#: plugins/params/countdown.php:44
+#: pack/wolf-core/plugins/params/countdown.php:43
+#: plugins/params/countdown.php:43
 msgid "UTC Timezone offset"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:47
-#: plugins/params/countdown.php:47
+#: pack/wolf-core/plugins/params/countdown.php:46
+#: plugins/params/countdown.php:46
 msgid "e.g : -5 for NY. <a href=\"%s\" target=\"_blank\">More info</a>."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:52
-#: plugins/params/countdown.php:52
+#: pack/wolf-core/plugins/params/countdown.php:54
+#: plugins/params/countdown.php:54
 msgid "Format"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/countdown.php:57
-#: plugins/params/countdown.php:57
-msgid "Auto (show all values as needed)"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/countdown.php:58
-#: plugins/params/countdown.php:58
-msgid "By Days"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/countdown.php:59
 #: plugins/params/countdown.php:59
-msgid "By Weeks"
+msgid "Auto (show all values as needed)"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/countdown.php:60
 #: plugins/params/countdown.php:60
+msgid "By Days"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/countdown.php:61
+#: plugins/params/countdown.php:61
+msgid "By Weeks"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/countdown.php:62
+#: plugins/params/countdown.php:62
 msgid "By Month"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:67
-#: plugins/params/countdown.php:67
+#: pack/wolf-core/plugins/params/countdown.php:69
+#: plugins/params/countdown.php:69
 msgid "Custom Format"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:70
-#: plugins/params/countdown.php:70
+#: pack/wolf-core/plugins/params/countdown.php:72
+#: plugins/params/countdown.php:72
 msgid ""
 "You can check all avalable format codes <a href=\"%s\" "
 "target=\"_blank\">here</a>."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:79
-#: plugins/params/countdown.php:79
+#: pack/wolf-core/plugins/params/countdown.php:81
+#: plugins/params/countdown.php:81
 msgid "Amount Typography"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:88
-#: plugins/params/countdown.php:88
+#: pack/wolf-core/plugins/params/countdown.php:90
+#: plugins/params/countdown.php:90
 msgid "Period Typography"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:101
-#: pack/wolf-core/plugins/params/countdown.php:110
-#: pack/wolf-core/plugins/params/countdown.php:119
-#: plugins/params/countdown.php:101 plugins/params/countdown.php:110
-#: plugins/params/countdown.php:119
+#: pack/wolf-core/plugins/params/countdown.php:103
+#: pack/wolf-core/plugins/params/countdown.php:112
+#: pack/wolf-core/plugins/params/countdown.php:121
+#: plugins/params/countdown.php:103 plugins/params/countdown.php:112
+#: plugins/params/countdown.php:121
 msgid "Amount Font"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:107
+#: pack/wolf-core/plugins/params/countdown.php:109
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:39
-#: plugins/params/countdown.php:107
+#: plugins/params/countdown.php:109
 #: plugins/vc/vc-params/custom-heading-params.php:39
 msgid "Font Size"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:127
-#: pack/wolf-core/plugins/params/countdown.php:177
-#: pack/wolf-core/plugins/params/countdown.php:194
-#: plugins/params/countdown.php:127 plugins/params/countdown.php:177
-#: plugins/params/countdown.php:194
+#: pack/wolf-core/plugins/params/countdown.php:129
+#: pack/wolf-core/plugins/params/countdown.php:179
+#: pack/wolf-core/plugins/params/countdown.php:196
+#: plugins/params/countdown.php:129 plugins/params/countdown.php:179
+#: plugins/params/countdown.php:196
 msgid "Amount Font Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:134
-#: pack/wolf-core/plugins/params/countdown.php:146
-#: pack/wolf-core/plugins/params/countdown.php:159
-#: pack/wolf-core/plugins/params/countdown.php:171
-#: plugins/params/countdown.php:134 plugins/params/countdown.php:146
-#: plugins/params/countdown.php:159 plugins/params/countdown.php:171
+#: pack/wolf-core/plugins/params/countdown.php:136
+#: pack/wolf-core/plugins/params/countdown.php:148
+#: pack/wolf-core/plugins/params/countdown.php:161
+#: pack/wolf-core/plugins/params/countdown.php:173
+#: plugins/params/countdown.php:136 plugins/params/countdown.php:148
+#: plugins/params/countdown.php:161 plugins/params/countdown.php:173
 msgid "Colors"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/countdown.php:140
-#: plugins/params/countdown.php:140
-msgid "Amount Font Custom Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/countdown.php:142
 #: plugins/params/countdown.php:142
+msgid "Amount Font Custom Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/countdown.php:144
+#: plugins/params/countdown.php:144
 msgid "Select custom single pie chart track color."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:152
-#: plugins/params/countdown.php:152
+#: pack/wolf-core/plugins/params/countdown.php:154
+#: plugins/params/countdown.php:154
 msgid "Text Font Color"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/countdown.php:165
-#: plugins/params/countdown.php:165
-msgid "Text Font Custom Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/countdown.php:167
 #: plugins/params/countdown.php:167
+msgid "Text Font Custom Color"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/countdown.php:169
+#: plugins/params/countdown.php:169
 msgid "Select custom text color."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/countdown.php:185
-#: pack/wolf-core/plugins/params/countdown.php:205
-#: plugins/params/countdown.php:185 plugins/params/countdown.php:205
+#: pack/wolf-core/plugins/params/countdown.php:187
+#: pack/wolf-core/plugins/params/countdown.php:207
+#: plugins/params/countdown.php:187 plugins/params/countdown.php:207
 msgid "Period Font Color"
 msgstr ""
 

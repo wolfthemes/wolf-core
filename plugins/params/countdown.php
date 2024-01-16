@@ -25,17 +25,16 @@ function wolf_core_countdown_params() {
 				'vc_base'       => 'wolf_core_countdown',
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
-				'el_base'       => 'countdown',
+				'el_base'       => 'theme_countdown',
 				'icon'          => 'linea-basic linea-basic-anticlockwise',
 				'scripts'       => array( 'jquery', 'countdown', 'wolf-core-countdown' ),
 			),
 			'params'     => array(
-
 				array(
 					'type'        => 'text',
 					'label'       => esc_html__( 'Date', 'wolf-core' ),
 					'param_name'  => 'date',
-					'description' => sprintf( __( 'formatted like %s', 'wolf-core' ), '12/24/' . date( 'Y' ) . ' 12:00:00' ),
+					'description' => sprintf( __( 'formatted as %s', 'wolf-core' ), '12/24/' . date( 'Y' ) . ' 12:00:00' ),
 					'admin_label' => true,
 				),
 
@@ -45,7 +44,10 @@ function wolf_core_countdown_params() {
 					'param_name'  => 'offset',
 					'placeholder' => '-5',
 					'description' => sprintf( __( 'e.g : -5 for NY. <a href="%s" target="_blank">More info</a>.', 'wolf-core' ), esc_url( 'https://en.wikipedia.org/wiki/List_of_UTC_time_offsets' ) ),
-				),
+					'ai' => array(
+						'active' => false,
+					),
+					),
 
 				array(
 					'type'        => 'select',

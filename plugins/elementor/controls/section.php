@@ -19,7 +19,6 @@ add_action(
 			'font_color',
 			array(
 				'label'        => esc_html__( 'Default Font Color', 'wolf-core' ),
-
 				'type'         => \Elementor\Controls_Manager::SELECT,
 				'default'      => '',
 				'prefix_class' => 'wolf-core-font-',
@@ -34,6 +33,7 @@ add_action(
 	},
 	10
 );
+
 add_action(
 	'elementor/element/container/section_background/before_section_end',
 	function( $element ) {
@@ -173,6 +173,7 @@ function wolf_core_render_custom_attributes( $widget ) {
 	/* Default font color */
 	if ( isset( $settings['font_color'] ) ) {
 		$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-font-' . esc_attr( $settings['font_color'] ) );
+		$widget->add_render_attribute( '_wrapper', 'data-font-skin', esc_attr( $settings['font_color'] ) );
 	}
 
 	/* Section ID and name data for one-page feature */
