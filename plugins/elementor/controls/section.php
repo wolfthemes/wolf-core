@@ -126,7 +126,7 @@ function wolf_core_add_parallax_background_option( $section, $args ) {
 	$section->add_control(
 		'parallax',
 		array(
-			'label'        => esc_html__( 'Parallax', 'wolf-core' ),
+			'label'        => esc_html__( 'Parallax Background', 'wolf-core' ),
 			'description'  => esc_html__( 'Not visible in editor preview yet.', 'wolf-core' ),
 			'type'         => \Elementor\Controls_Manager::SWITCHER,
 			'default'      => 'no',
