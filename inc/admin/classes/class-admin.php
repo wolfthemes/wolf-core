@@ -25,7 +25,6 @@ class Wolf_Core_Admin {
 
 		// Includes necessary files.
 		add_action( 'init', array( $this, 'includes' ), 0 );
-
 	}
 
 	/**
@@ -33,14 +32,28 @@ class Wolf_Core_Admin {
 	 */
 	public function update() {
 
-		if ( ! defined( 'IFRAME_REQUEST' ) && ! defined( 'DOING_AJAX' ) && ( get_option( 'wolf_core_version' ) != WOLF_CORE_VERSION ) ) {
+		if ( ! defined( 'IFRAME_REQUEST' ) && ! defined( 'DOING_AJAX' ) && ( get_option( 'wolf_core_version' ) !== WOLF_CORE_VERSION ) ) {
 
 			// Update hook.
 			do_action( 'wolf_core_do_update' );
 
-			// Update version.
-			delete_option( 'wolf_core_version' );
-			add_option( 'wolf_core_version', WOLF_CORE_VERSION );
+			$installs_history                      = get_option( 'wolf_core_install_history', array() );
+			$time                                  = time();
+			$installs_history[ WOLF_CORE_VERSION ] = $time;
+
+			$old_version = get_option( 'wolf_core_version' );
+
+			// If there was an old version of Wolf Core, and there's no record for that install yet
+			if ( $old_version && empty( $installs_history[ $old_version ] ) ) {
+				$installs_history[ $old_version ] = $installs_history[ WOLF_CORE_VERSION ] - 1;
+			}
+
+			uksort( $installs_history, 'version_compare' );
+
+			update_option( 'wolf_core_install_history', $installs_history );
+
+			// Update new version.
+			update_option( 'wolf_core_version', WOLF_CORE_VERSION );
 
 			// After update hook.
 			do_action( 'wolf_core_updated' );
@@ -55,6 +68,7 @@ class Wolf_Core_Admin {
 		$admin_files = array(
 			'admin-scripts',
 			'admin-options',
+			'admin-update-db',
 		);
 
 		/* Includes files from theme inc/admin dir in backend */

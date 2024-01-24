@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 24th January 2024 - Version 1.8.3
+
+-   Tweak: Set database updater to fix missing widget due to Elementor update
+
 #### 16th January 2024 - Version 1.8.2
 
 -   Fix: Missing Countdown widget due to name conflict with Elementor Pro
