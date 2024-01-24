@@ -5,13 +5,16 @@
  */
 function wolf_core_check_updatable_version() {
 
+	//delete_option( 'wolf_core_db_state' );
+	//debug( get_option( 'wolf_core_install_history' ) );
+	//debug( get_option( 'wolf_core_db_state' ) );
+
 	$db_state         = get_option( 'wolf_core_db_state' );
 	$installs_history = get_option( 'wolf_core_install_history', array() );
 	$is_first_install = 1 === count( $installs_history );
 	$need_update      = false;
 
 	if ( $is_first_install ) {
-		update_option( 'wolf_core_db_state', 'OK' );
 		return false;
 	}
 
@@ -36,7 +39,7 @@ add_action( 'admin_init', 'wolf_core_check_updatable_version' );
  * Is update needed?
  */
 function wolf_core_is_update_needed() {
-	return 'OK' !== get_option( 'wolf_core_db_state' );
+	return 'need_update' === get_option( 'wolf_core_db_state' );
 }
 
 /**
@@ -81,7 +84,7 @@ add_action( 'admin_notices', 'wolf_core_output_update_successful_db_notice' );
  */
 function wolf_core_update_db() {
 
-	$post_types = array( 'page', 'post', 'event', 'release', 'video', 'gallery' );
+	$post_types = array( 'page', 'post', 'event', 'release', 'video', 'gallery', 'work', );
 
 	if ( isset( $_GET['wolf_core_db_update'] ) && isset( $_GET['wolf_core_update_db_version'] ) ) {
 
@@ -103,7 +106,7 @@ function wolf_core_update_db() {
 
 						$version = esc_attr( $_GET['wolf_core_update_db_version'] );
 
-						wolf_core_update_db_from_version( $version, $elementor_data );
+						wolf_core_update_db_from_version( $version, $p->ID );
 					}
 				}
 			}
@@ -123,22 +126,24 @@ add_action( 'admin_init', 'wolf_core_update_db' );
 /**
  * Update leta depending on version
  *
- * @param [type] $version
- * @param [type] $elementor_data
+ * @param string $version
+ * @param int $post_id
  * @return void
  */
-function wolf_core_update_db_from_version( $version, $elementor_data ) {
-	$elementor_data = get_post_meta( $p->ID, '_elementor_data', true );
+function wolf_core_update_db_from_version( $version, $post_id ) {
+	$elementor_data = get_post_meta( $post_id, '_elementor_data', true );
 
 	if ( '1.8.3' === $version ) {
 
 		$search = array(
 			'"widgetType":"gallery"',
+			//'"widgetType":"wolf_core_gallery"',
 			'"widgetType":"countdown"',
 			'"widgetType":"theme_countdown"',
 		);
 
 		$replace = array(
+			//'"widgetType":"gallery"',
 			'"widgetType":"wolf_core_gallery"',
 			'"widgetType":"wolf_core_countdown"',
 			'"widgetType":"wolf_core_countdown"',
@@ -147,5 +152,5 @@ function wolf_core_update_db_from_version( $version, $elementor_data ) {
 		$elementor_data = str_replace( $search, $replace, $elementor_data );
 	}
 
-	update_post_meta( $p->ID, '_elementor_data', $elementor_data );
+	update_post_meta( $post_id, '_elementor_data', $elementor_data );
 }

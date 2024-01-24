@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Add event type tax
+ * Unimate Add event type tax
  */
 function unimate_add_event_type_taxonomy() {
 
