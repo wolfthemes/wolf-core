@@ -1,9 +1,13 @@
 
 # Changelog
 
+#### 26th January 2024 - Version 1.8.5
+
+-   Fix: Implement Database updater to update missing widgets due to latest Elementor update
+
 #### 24th January 2024 - Version 1.8.4
 
--   Fix: Rollback admin updater
+-   Fix: Rollback admin updater to debug issues
 -   Tweak: Set database updater to fix missing widget due to Elementor update
 
 #### 16th January 2024 - Version 1.8.2

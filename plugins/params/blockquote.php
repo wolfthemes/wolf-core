@@ -25,7 +25,7 @@ function wolf_core_blockquote_params() {
 				'vc_base'       => 'wolf_core_blockquote',
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
-				'el_base'       => 'blockquote',
+				'el_base'       => 'wolf_core_blockquote',
 				'icon'          => 'linea-basic-elaboration linea-basic-elaboration-message-dots',
 			),
 			'params'     => array(

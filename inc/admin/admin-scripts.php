@@ -46,6 +46,12 @@ function wolf_core_enqueue_admin_scripts() {
 			'chooseFile'             => esc_html__( 'Select a file', 'wolf-core' ),
 			'confirmRemoveAllImages' => esc_html__( 'This will remove the entire image set', 'wolf-core' ),
 			'VCPurchaseUrl'          => wolf_core_vc_purchase_url(),
+			'updatingDBNonce'        => wp_create_nonce( 'wolf_core_update_db_nonce' ), // Install nonce.
+			'updatingDBDismissNonce' => wp_create_nonce( 'wolf_core_update_db_dismiss_nonce' ), // Install nonce.
+			'updatingDBMessage'      => esc_html__( 'Updating Database...', 'wolf-core' ),
+			'updatingDBRedirectingMessage'  => esc_html__( 'Redirecting...', 'wolf-core' ),
+			'updatingDBFinalizingMessage'  => esc_html__( 'Finalizing...', 'wolf-core' ),
+			'updatingDBRedirectURL'  => esc_url( admin_url( '/index.php?wolf_core_db_updated=true' ) ),
 		)
 	);
 }
