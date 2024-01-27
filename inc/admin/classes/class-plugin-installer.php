@@ -279,15 +279,15 @@ if ( ! class_exists( 'Wolf_Core_Plugin_Installer' ) ) {
 		public function set_pages_after_import() {
 
 			/* Assign front page and posts page (blog page). */
-			$front_page = get_page_by_title( 'Home' );
-			$blog_page  = get_page_by_title( 'Blog' );
+			$front_page = wolf_core_get_page_by_title( 'Home' );
+			$blog_page  = wolf_core_get_page_by_title( 'Blog' );
 
 			update_option( 'show_on_front', 'page' );
 
 			if ( $front_page ) {
 				update_option( 'page_on_front', $front_page->ID );
 			} else {
-				$front_page = get_page_by_title( 'Main Home' );
+				$front_page = wolf_core_get_page_by_title( 'Main Home' );
 
 				if ( $front_page ) {
 					update_option( 'page_on_front', $front_page->ID );
@@ -312,7 +312,7 @@ if ( ! class_exists( 'Wolf_Core_Plugin_Installer' ) ) {
 
 			foreach ( $wolf_pages as $page_title ) {
 
-				$page = get_page_by_title( $page_title );
+				$page = wolf_core_get_page_by_title( $page_title );
 
 				if ( $page ) {
 					update_option( '_wolf_' . strtolower( $page_title ) . '_page_id', $page->ID );
@@ -330,7 +330,7 @@ if ( ! class_exists( 'Wolf_Core_Plugin_Installer' ) ) {
 
 			foreach ( $woocommerce_pages as $page_title ) {
 
-				$page = get_page_by_title( $page_title );
+				$page = wolf_core_get_page_by_title( $page_title );
 
 				if ( 'My Account' === $page_title ) {
 
