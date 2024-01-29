@@ -1425,8 +1425,8 @@ function wolf_core_sync_mailchimp( $data ) {
 function wolf_core_get_page_by_title( $page_title, $output = OBJECT, $post_type = 'page'  ) {
 	$query = new WP_Query(
 		array(
-			'title'                  => $post_type,
-			'post_type'              => 'page',
+			'title'                  => $page_title,
+			'post_type'              => $post_type,
 			'post_status'            => 'all',
 			'posts_per_page'         => 1,
 			'no_found_rows'          => true,
