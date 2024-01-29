@@ -6,7 +6,7 @@ if ( ! class_exists( 'Wolf_Core_Background_Process' ) ) {
 
 class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
 
-	protected $action = 'wdv3_update_shortcodes';
+	protected $action = 'wolf_core_db_update';
 
 	/**
 	 * Is queue empty.
@@ -208,6 +208,10 @@ class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
 	 * @return mixed
 	 */
 	protected function task( $post_id ) {
+
+		if ( ! $post_id ) {
+			return false;
+		}
 
 		wolf_core_log( "Processing => " .  $post_id );
 
