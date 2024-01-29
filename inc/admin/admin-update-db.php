@@ -23,8 +23,6 @@ if ( ! class_exists( 'Wolf_Core_DB_Updater_Processor' ) ) {
  */
 class Wolf_Core_DB_Updater {
 
-	protected $action = 'wolf_core_update_widget_names';
-
 	/**
 	 * DB version update
 	 *
