@@ -24,6 +24,14 @@ if ( ! class_exists( 'Wolf_Core_DB_Updater_Processor' ) ) {
 class Wolf_Core_DB_Updater {
 
 	/**
+	 * Last needed Elementor version
+	 *
+	 * @var mixed
+	 * @access private
+	 */
+	private $last_elementor_version = '3.8.13';
+
+	/**
 	 * Last DB version update
 	 *
 	 * @var mixed
@@ -142,7 +150,7 @@ class Wolf_Core_DB_Updater {
 		if (
 			isset( $installs_history[ $this->last_db_version ] )
 			&& get_option( 'wolf_core_db_state' ) !== $this->new_db_version
-			&& version_compare( ELEMENTOR_VERSION, '3.8.13', '>=' ) ) {
+			&& version_compare( ELEMENTOR_VERSION, $this->last_elementor_version, '>=' ) ) {
 			return true;
 		}
 	}
