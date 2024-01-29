@@ -113,7 +113,7 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function should_upgrade() {
 
-		//return true; // debug
+		return true; // debug
 		if (
 			isset( $installs_history['1.8.2'] )
 			&& ! isset( $installs_history[ $this->last_db_version ] )
