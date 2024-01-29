@@ -56,7 +56,7 @@ class Wolf_Core_DB_Updater {
 		// Enqueue AJAX script.
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_script' ) );
 
-		//  Update DB AJAX task.
+		// Update DB AJAX task.
 		add_action( 'wp_ajax_wolf_core_update_db',  array( $this, 'update_db' ) );
 
 	}
@@ -112,6 +112,8 @@ class Wolf_Core_DB_Updater {
 	 * @return boolean
 	 */
 	public function should_upgrade() {
+
+		//return true; // debug
 		if (
 			isset( $installs_history['1.8.2'] )
 			&& ! isset( $installs_history[ $this->last_db_version ] )
@@ -151,7 +153,7 @@ class Wolf_Core_DB_Updater {
 			'theme_countdown' => 'wolf_core_countdown',
 		);
 
-		//$widgets = array_flip( $widgets );
+		$widgets = array_flip( $widgets );
 
 		// Get Ids where widget type need to be updated
 		$query_string  = 'SELECT `post_id` FROM `' . $wpdb->postmeta . '` WHERE `meta_key` = "_elementor_data" AND (';
@@ -191,22 +193,13 @@ class Wolf_Core_DB_Updater {
 			$wpdb->query(
 				$wpdb->prepare(
 					"UPDATE $wpdb->postmeta SET meta_value = REPLACE(meta_value, %s, %s )
-					WHERE meta_key = '_elementor_data' && post_id in ( %s ) LIMIT 50;",
+					WHERE meta_key = '_elementor_data' && post_id IN ( %s ) LIMIT 50;",
 					'"widgetType":"' . esc_attr( $old ) . '"',
 					'"widgetType":"' . esc_attr( $new ) . '"',
 					esc_attr( $sql_post_ids )
 				)
 			);
 		}
-
-		// $wpdb->query(
-		// 	$wpdb->prepare(
-		// 		"UPDATE $wpdb->postmeta SET meta_value = %s
-		// 		WHERE meta_key = '_elementor_data' && post_id in ( %s ) LIMIT 50;",
-		// 		$replace,
-		// 		esc_attr( $sql_post_ids )
-		// 	)
-		// );
 
 		wp_send_json( $sql_post_ids );
 	}
