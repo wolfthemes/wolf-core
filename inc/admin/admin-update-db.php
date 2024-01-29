@@ -14,10 +14,16 @@ if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
 	return;
 }
 
+if ( ! class_exists( 'Wolf_Core_DB_Updater_Processor' ) ) {
+	include_once( 'classes/class-db-updater-processor.php' );
+}
+
 /**
  * DB Updater
  */
 class Wolf_Core_DB_Updater {
+
+	protected $action = 'wolf_core_update_widget_names';
 
 	/**
 	 * DB version update
@@ -48,14 +54,19 @@ class Wolf_Core_DB_Updater {
 		add_action( 'admin_init', array( $this, 'set_db_state' ) );
 
 		// Update notice.
-		add_action( 'admin_notices', array( $this, 'admin_notice_upgrade_is_completed' ) );
+
 		add_action( 'admin_notices', array( $this, 'admin_notice_start_upgrade' ) );
+		add_action( 'admin_notices', array( $this, 'admin_notice_upgrade_is_running' ) );
+		add_action( 'admin_notices', array( $this, 'admin_notice_upgrade_is_completed' ) );
 
 		// Enqueue AJAX script.
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_script' ) );
+		//add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_script' ) );
 
 		// Update DB AJAX task.
-		add_action( 'wp_ajax_wolf_core_update_db',  array( $this, 'update_db' ) );
+		add_action( 'wp_ajax_wolf_core_update_db',  array( $this, 'update_db_ajax' ) );
+
+
+		add_action( 'admin_init',  array( $this, 'update_db' ) );
 
 	}
 
@@ -65,7 +76,7 @@ class Wolf_Core_DB_Updater {
 	 * @return void
 	 */
 	public function enqueue_script() {
-		wp_enqueue_script( 'wolf-core-update-db', WOLF_CORE_URI . '/assets/js/admin/db-updater.js', array( 'jquery' ), '1.0.0', true );
+		//wp_enqueue_script( 'wolf-core-update-db', WOLF_CORE_URI . '/assets/js/admin/db-updater.js', array( 'jquery' ), '1.0.0', true );
 	}
 
 	/**
@@ -74,9 +85,11 @@ class Wolf_Core_DB_Updater {
 	public function set_db_state() {
 
 		//update_option( 'wolf_core_db_state', 'need_update' );
+		//delete_option( 'wolf_core_db_update_status' );
 
 		$debug_array = array(
 			'DB State: '        => get_option( 'wolf_core_db_state' ),
+			'DB Update status: '        => get_option( 'wolf_core_db_update_status' ),
 			'Last DB version: ' => $this->last_db_version,
 			'Version history: ' => get_option( 'wolf_core_install_history', array() ),
 		);
@@ -128,6 +141,36 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function update_db() {
 
+		//wolf_core_log( 'test' );
+
+		//delete_option( 'wolf_core_db_update_status' );
+		//debug( get_option( 'wolf_core_db_update_status' ) );
+
+		if ( isset( $_GET[ 'wolf-core-db-process-update' ] ) ) {
+			update_option( 'wolf_core_db_update_status', 'launching' );
+			wp_redirect( admin_url() );
+			exit;
+		}
+
+		$background_process = new Wolf_Core_DB_Updater_Processor();
+
+		if ( 'launching' === get_option( 'wolf_core_db_update_status' ) ) {
+
+			$background_process->kill_process(); // reset
+
+			$this->_v_1_8_5_widget_name_updates( $background_process );
+
+			// Start the queue.
+			$background_process->save()->dispatch();
+			update_option( 'wolf_core_db_update_status', 'launched' );
+		}
+	}
+
+	/**
+	 * UPdate DB with AJAX
+	 */
+	public function update_db_ajax() {
+
 		check_ajax_referer( 'wolf_core_update_db_nonce', 'security' );
 
 		if ( 'done' === $this->_v_1_8_5_widget_name_updates() ) {
@@ -142,7 +185,7 @@ class Wolf_Core_DB_Updater {
 	 *
 	 * More may be needed later
 	 */
-	public function _v_1_8_5_widget_name_updates( $debug = false ) {
+	public function _v_1_8_5_widget_name_updates( $background_process ) {
 
 		global $wpdb;
 
@@ -169,39 +212,41 @@ class Wolf_Core_DB_Updater {
 
 		if ( empty( $post_ids ) ) {
 			// Return done when finished
-			return 'done';
+			//return false;
 		}
 
 		//wp_send_json( $wpdb->last_query );
 
 		$sql_post_ids = implode( ',', $post_ids );
 
-		if ( $debug ) {
-			return $sql_post_ids;
+		foreach( $post_ids as $post_id ) {
+			//wolf_core_log( 'puching => ' . $post_id  );
+			$background_process->push_to_queue( $post_id );
 		}
 
-		foreach ( $widgets as $old => $new ) {
-			$wpdb->query(
-				$wpdb->prepare(
-					"UPDATE $wpdb->postmeta SET meta_value = REPLACE(meta_value, %s, %s )
-					WHERE meta_key = '_elementor_data' && post_id IN ( %s ) LIMIT 50;",
-					'"widgetType":"' . esc_attr( $old ) . '"',
-					'"widgetType":"' . esc_attr( $new ) . '"',
-					esc_attr( $sql_post_ids )
-				)
-			);
-		}
+		// foreach ( $widgets as $old => $new ) {
+		// 	$wpdb->query(
+		// 		$wpdb->prepare(
+		// 			"UPDATE $wpdb->postmeta SET meta_value = REPLACE(meta_value, %s, %s )
+		// 			WHERE meta_key = '_elementor_data' && post_id IN ( %s ) LIMIT 50;",
+		// 			'"widgetType":"' . esc_attr( $old ) . '"',
+		// 			'"widgetType":"' . esc_attr( $new ) . '"',
+		// 			esc_attr( $sql_post_ids )
+		// 		)
+		// 	);
+		// }
 
 		//wp_send_json( $wpdb->last_query );
-		wp_send_json( $sql_post_ids );
+		//wp_send_json( $sql_post_ids );
 	}
+
 
 	/**
 	 * Output update notice
 	 */
 	public function admin_notice_start_upgrade() {
 
-		if ( 'need_update' === get_option( 'wolf_core_db_state' ) ) {
+		if ( 'need_update' === get_option( 'wolf_core_db_state' ) && ! get_option( 'wolf_core_db_update_status' ) ) {
 
 			/**
 			 * @var Admin_Notices $admin_notices
@@ -215,8 +260,9 @@ class Wolf_Core_DB_Updater {
 				'icon'        => false,
 				'button'      => array(
 					'text'  => esc_html__( 'Update Now', 'wolf-core' ),
-					//'url'   => '#',
-					'classes' => array( 'button', 'button-primary', 'e-button', 'wolf-core-update-db-btn' ),
+					'url'   => esc_url( admin_url( 'index.php?wolf-core-db-process-update' ) ),
+					//'classes' => array( 'button', 'button-primary', 'e-button', 'wolf-core-update-db-btn' ),
+					'classes' => array( 'button', 'button-primary', 'e-button' ),
 				),
 			);
 
@@ -224,10 +270,33 @@ class Wolf_Core_DB_Updater {
 		}
 	}
 
-	public function admin_notice_upgrade_is_completed() {
-		if ( isset( $_GET['wolf_core_db_updated'] ) ) {
+	/**
+	 * Output update notice
+	 */
+	public function admin_notice_upgrade_is_running() {
 
-			update_option( 'wolf_core_db_state', 'OK' );
+		if ( 'launched' === get_option( 'wolf_core_db_update_status' ) ) {
+
+			/**
+			 * @var Admin_Notices $admin_notices
+			 */
+			$admin_notices = \Elementor\Plugin::$instance->admin->get_component( 'admin-notices' );
+
+			$options = array(
+				'title'       => $this->updater_label,
+				'description' => esc_html__( 'Database update process is running in the background.  You will be notified when it is done.', 'wolf-core' ),
+				'type'        => 'info',
+				'icon'        => false,
+
+			);
+
+			$admin_notices->print_admin_notice( $options );
+		}
+	}
+
+	public function admin_notice_upgrade_is_completed() {
+
+		if ( 'completed' === get_option( 'wolf_core_db_update_status' ) ) {
 
 			/**
 			 * @var Admin_Notices $admin_notices
@@ -237,7 +306,7 @@ class Wolf_Core_DB_Updater {
 			$options = array(
 				'title'       => $this->updater_label,
 				'description' => esc_html__( 'The database update process is now complete. Thank you for updating to the latest version!', 'wolf-core' ),
-				'type'        => 'info',
+				'type'        => 'success',
 				'icon'        => false,
 				// 'button'      => array(
 				// 	'text'  => esc_html__( 'Update Now', 'wolf-core' ),
@@ -247,6 +316,9 @@ class Wolf_Core_DB_Updater {
 			);
 
 			$admin_notices->print_admin_notice( $options );
+
+			update_option( 'wolf_core_db_state', 'OK' );
+			delete_option( 'wolf_core_db_update_status' );
 		}
 	}
 }
