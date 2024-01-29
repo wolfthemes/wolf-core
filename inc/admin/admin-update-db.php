@@ -48,9 +48,7 @@ class Wolf_Core_DB_Updater {
 		add_action( 'admin_init', array( $this, 'set_db_state' ) );
 
 		// Update notice.
-
 		add_action( 'admin_notices', array( $this, 'admin_notice_upgrade_is_completed' ) );
-
 		add_action( 'admin_notices', array( $this, 'admin_notice_start_upgrade' ) );
 
 		// Enqueue AJAX script.
@@ -74,6 +72,8 @@ class Wolf_Core_DB_Updater {
 	 * Set flags if update is needed
 	 */
 	public function set_db_state() {
+
+		//update_option( 'wolf_core_db_state', 'need_update' );
 
 		$debug_array = array(
 			'DB State: '        => get_option( 'wolf_core_db_state' ),
@@ -113,7 +113,7 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function should_upgrade() {
 
-		return true; // debug
+		//return true; // debug
 		if (
 			isset( $installs_history['1.8.2'] )
 			&& ! isset( $installs_history[ $this->last_db_version ] )
@@ -153,7 +153,7 @@ class Wolf_Core_DB_Updater {
 			'theme_countdown' => 'wolf_core_countdown',
 		);
 
-		$widgets = array_flip( $widgets );
+		//$widgets = array_flip( $widgets );
 
 		// Get Ids where widget type need to be updated
 		$query_string  = 'SELECT `post_id` FROM `' . $wpdb->postmeta . '` WHERE `meta_key` = "_elementor_data" AND (';
@@ -172,22 +172,13 @@ class Wolf_Core_DB_Updater {
 			return 'done';
 		}
 
+		//wp_send_json( $wpdb->last_query );
+
 		$sql_post_ids = implode( ',', $post_ids );
 
 		if ( $debug ) {
 			return $sql_post_ids;
 		}
-
-		$replace = 'REPLACE(meta_value, dummy1, dummy2)';
-
-		foreach ( $widgets as $old => $new ) {
-			$replace = 'REPLACE(' . $replace . ', "widgetType":"'. $old . '", "widgetType":"'. $new . '" )';
-
-		}
-
-		$replace .= ')';
-
-		// wp_send_json( $replace );
 
 		foreach ( $widgets as $old => $new ) {
 			$wpdb->query(
@@ -201,6 +192,7 @@ class Wolf_Core_DB_Updater {
 			);
 		}
 
+		//wp_send_json( $wpdb->last_query );
 		wp_send_json( $sql_post_ids );
 	}
 
