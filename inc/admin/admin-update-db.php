@@ -85,6 +85,8 @@ class Wolf_Core_DB_Updater {
 		// update_option( 'wolf_core_db_state', 'need_update' );
 		// delete_option( 'wolf_core_db_update_status' );
 
+		global $pagenow;
+
 		$debug_array = array(
 			'DB State: '         => get_option( 'wolf_core_db_state' ),
 			'DB Update status: ' => get_option( 'wolf_core_db_update_status' ),
@@ -95,7 +97,9 @@ class Wolf_Core_DB_Updater {
 			'Is First Install'   => $this->is_first_install(),
 		);
 
-		//debug( $debug_array );
+		if ( 'index.php' === $pagenow ) {
+			//debug( $debug_array );
+		}
 
 		$need_update = false; // by default set to false.
 
@@ -204,10 +208,10 @@ class Wolf_Core_DB_Updater {
 		$post_ids = $wpdb->get_col( $wpdb->prepare( $query_string ) );
 
 		if ( empty( $post_ids ) ) {
-			$background_process->push_to_queue( null );
+			update_option( 'wolf_core_db_update_status', 'completed' );
+			$background_process->kill_process(); // reset.
+			return false;
 		}
-
-		$sql_post_ids = implode( ',', $post_ids );
 
 		foreach ( $post_ids as $post_id ) {
 			// wolf_core_log( 'puching => ' . $post_id  );
@@ -219,6 +223,12 @@ class Wolf_Core_DB_Updater {
 	 * Output update notice
 	 */
 	public function admin_notice_start_upgrade() {
+
+		global $pagenow;
+
+		if ( 'index.php' !== $pagenow ) {
+			return;
+		}
 
 		if ( 'need_update' === get_option( 'wolf_core_db_state' ) && ! get_option( 'wolf_core_db_update_status' ) ) {
 
@@ -249,6 +259,12 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function admin_notice_upgrade_is_running() {
 
+		global $pagenow;
+
+		if ( 'index.php' !== $pagenow ) {
+			return;
+		}
+
 		if ( 'launched' === get_option( 'wolf_core_db_update_status' ) ) {
 
 			/**
@@ -272,6 +288,12 @@ class Wolf_Core_DB_Updater {
 	 * Output update complete notice
 	 */
 	public function admin_notice_upgrade_is_completed() {
+
+		global $pagenow;
+
+		if ( 'index.php' !== $pagenow ) {
+			return;
+		}
 
 		if ( 'completed' === get_option( 'wolf_core_db_update_status' ) ) {
 

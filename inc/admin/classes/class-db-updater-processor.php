@@ -207,7 +207,7 @@ class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
 	 *
 	 * @return mixed
 	 */
-	protected function task( $post_id ) {
+	protected function task( $post_id = null ) {
 
 		if ( ! $post_id ) {
 			return false;
