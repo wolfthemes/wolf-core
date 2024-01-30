@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 26th January 2024 - Version 1.8.5
+#### 26th January 2024 - Version 1.8.6
 
 -   Fix: Implement Database updater to update missing widgets due to latest Elementor update (gallery, countdow, blockquote)
+-   Tweak: Run updater in the background
 
 #### 24th January 2024 - Version 1.8.4
 

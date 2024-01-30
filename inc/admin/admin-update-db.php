@@ -45,7 +45,7 @@ class Wolf_Core_DB_Updater {
 	 * @var mixed
 	 * @access private
 	 */
-	private $newest_db_version = '1.8.5';
+	private $newest_db_version = '1.8.6';
 
 	/**
 	 * Admin notice title label
@@ -191,6 +191,7 @@ class Wolf_Core_DB_Updater {
 			'blockquote'      => 'wolf_core_blockquote',
 			'countdown'       => 'wolf_core_countdown',
 			'theme_countdown' => 'wolf_core_countdown',
+			'link'            => 'wolf_core_link',
 		);
 
 		// $widgets = array_flip( $widgets );
