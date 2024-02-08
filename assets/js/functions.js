@@ -69,6 +69,7 @@ var WolfCore = (function ($) {
 			(window.DocumentTouch && document instanceof DocumentTouch),
 		fireAnimation: true,
 		videBgResizedOnLoad: false,
+		allowScrollEvent: true,
 
 		/**
 		 * Init functions
@@ -124,12 +125,14 @@ var WolfCore = (function ($) {
 			this.addResizedEvent();
 			this.twitterToX();
 
-			// Scroll event
-			$(window).scroll(function () {
-				var scrollTop = $(window).scrollTop();
-				_this.setActiveOnePagerBullet(scrollTop);
-				//_this.setOnePagerBulletSkin();
-			});
+			if ( this.allowScrollEvent ) {
+				// Scroll event
+				$(window).scroll(function () {
+					var scrollTop = $(window).scrollTop();
+					_this.setActiveOnePagerBullet(scrollTop);
+					//_this.setOnePagerBulletSkin();
+				});
+			}
 
 			/**
 			 * Resize event
