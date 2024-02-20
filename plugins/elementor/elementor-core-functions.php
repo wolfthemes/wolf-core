@@ -592,7 +592,7 @@ function wolf_core_register_elementor_controls( $widget ) {
 add_filter(
 	'wolf_core_fp_container',
 	function() {
-		return '.elementor-section-wrap';
+		return '[data-elementor-type="wp-page"]';
 	}
 );
 

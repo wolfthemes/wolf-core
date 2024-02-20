@@ -30,7 +30,9 @@ var WolfCoreFullPage = function( $ ) {
 				return;
 			}
 
-			this.$container = $( WolfCoreJSParams.fullPageContainer || '.page-entry-content' );
+			//console.log( WolfCoreJSParams.fullPageContainer );
+
+			this.$container = $( WolfCoreJSParams.fullPageContainer || '[data-elementor-type="wp-page"]' );
 			this.rowSelector = $( WolfCoreJSParams.fullPageSelector || '.wolf-core-parent-row' );
 			this.fpAnimTime = WolfCoreJSParams.fpAnimTime;
 			this.fpEasing = WolfCoreJSParams.fpEasing;
@@ -64,8 +66,12 @@ var WolfCoreFullPage = function( $ ) {
 				var sectionName = $( this ).data( 'row-name' ) || 'Section ' + ( index + 1 );
 				_this.sectionNames.push( sectionName );
 
+				//console.log( sectionName );
+
 				$( this ).attr( 'data-section', index + 1 );
 				$( this ).addClass( 'wolf-core-scroll-lock fp-auto-height' );
+
+				$( this ).find( '> .e-con-inner > .wolf-core-elementor-row' ).unwrap();
 
 				/* RevSlider is there */
 				if ( $( this ).find( '.wolf-core-revslider-container-fullscreen' ).length ) {

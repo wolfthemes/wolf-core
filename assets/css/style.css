@@ -3164,11 +3164,6 @@ html.fp-enabled,
   /*Avoid flicker on slides transitions for mobile phones #336 */
   -webkit-tap-highlight-color: transparent;
 }
-html.fp-enabled .elementor,
-.fp-enabled body .elementor {
-  height: 200vh;
-  background: #333;
-}
 
 .fp-section {
   position: relative;
@@ -3205,10 +3200,25 @@ html.fp-enabled .elementor,
 }
 
 .fp-tableCell {
-  width: 100%;
   height: 100%;
   height: 100vh !important;
   position: relative;
+  flex-direction: var(--flex-direction);
+  flex-wrap: var(--flex-wrap);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  align-content: var(--align-content);
+  flex-basis: initial;
+  flex-grow: 1;
+  flex-shrink: initial;
+  align-self: initial;
+  gap: var(--gap);
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  height: 100%;
 }
 .fp-tableCell .wolf-core-img-bg > img {
   opacity: 1 !important;
@@ -3258,6 +3268,9 @@ html:not(.wolf-core-touch) body.wolf-core-fullpage .site-infos {
 
 .wolf-core-fullpage {
   background: #333;
+}
+.wolf-core-fullpage .content-inner {
+  min-height: 100vh;
 }
 
 .fullpage-wrapper {

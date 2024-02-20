@@ -76,8 +76,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public $version = '1.8.6';
 
-
-
 		/**
 		 * @var the support forum URL
 		 */

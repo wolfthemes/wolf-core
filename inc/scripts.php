@@ -40,7 +40,7 @@ function wolf_core_get_js_params() {
 			'fpTransitionEffect'        => apply_filters( 'wolf_core_fp_transition_effect', 'mix' ),
 			'fpAnimTime'                => apply_filters( 'wolf_core_fp_animtime', 900 ),
 			'fpEasing'                  => apply_filters( 'wolf_core_fp_easing', 'swing' ),
-			'fullPageContainer'         => apply_filters( 'wolf_core_fp_container', '.page-entry-content' ),
+			'fullPageContainer'         => apply_filters( 'wolf_core_fp_container', '[data-elementor-type="wp-page"]' ),
 			'fullPageSelector'          => apply_filters( 'wolf_core_fp_selector', '.wolf-core-parent-row' ),
 			'audioButtonPlayText'       => esc_html__( 'Play', 'wolf-visual-composer' ),
 			'audioButtonPauseText'      => esc_html__( 'Pause', 'wolf-visual-composer' ),
@@ -369,7 +369,7 @@ function wolf_core_force_enqueue_scripts() {
 		wp_enqueue_script( 'sticky-kit' );
 		wp_enqueue_script( 'wolf-core-lib-min' ); // all lib files.
 
-		// 3rd party
+		// 3rd party.
 		wp_enqueue_script( 'bandsintown', 'https://widget.bandsintown.com/main.min.js', array(), WOLF_CORE_VERSION, true );
 
 		$google_api_key = wolf_core_get_google_maps_api_key();
@@ -380,7 +380,7 @@ function wolf_core_force_enqueue_scripts() {
 
 		wp_enqueue_script( 'wolf-facebook-page-box' );
 
-		// WVC scripts.
+		// Wolf core scripts.
 		wp_enqueue_script( 'wolf-core-scripts' );
 
 		// add JS global variables.
