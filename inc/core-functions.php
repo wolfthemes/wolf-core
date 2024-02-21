@@ -60,6 +60,7 @@ function wolf_core_get_elements() {
 		// 'events',
 		// 'facebook-page-box',
 		'gallery',
+		'gallery-banner',
 		// 'gmaps',
 		'google-maps',
 		// 'highlight',

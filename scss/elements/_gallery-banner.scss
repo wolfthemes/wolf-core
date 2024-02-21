@@ -1,0 +1,36 @@
+.wolf-core-gallery-banner-container{
+	position: relative;
+}
+
+.wolf-core-gallery-banner-image{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.wolf-core-banner-link-mask{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+
+.wolf-core-gallery-banner-image-caption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	padding: 35px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
