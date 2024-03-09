@@ -90,35 +90,23 @@ add_action(
 	2
 );
 
-add_action(
-	'elementor/element/container/section_layout/before_section_end',
-	function( $section, $args ) {
-		$section->add_control(
-			'name',
-			array(
-				'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
-				'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'ai'    => array(
-					'active' => false,
-				),
-			)
-		);
+function wolf_core_add_section_name_option( $section, $args ) {
 
-		// $section->add_control(
-		// 	'el_class',
-		// 	array(
-		// 		'label' => esc_html__( 'Extra Class', 'wolf-core' ),
-		// 		'type'  => \Elementor\Controls_Manager::TEXT,
-		// 		'ai'    => array(
-		// 			'active' => false,
-		// 		),
-		// 	)
-		// );
-	},
-	10,
-	2
-);
+	debug( 'plugin' );
+
+	$section->add_control(
+		'name',
+		array(
+			'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
+			'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
+			'type'        => \Elementor\Controls_Manager::TEXT,
+			'ai'    => array(
+				'active' => false,
+			),
+		)
+	);
+}
+add_action( 'elementor/element/container/section_layout/before_section_end', 'wolf_core_add_section_name_option', 10, 2 );
 
 /**
  * Add parallax background option

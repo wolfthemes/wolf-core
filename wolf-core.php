@@ -413,6 +413,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			// Disable Elementor Default Colors and fonts to inherit everything from the theme.
 			update_option( 'elementor_disable_color_schemes', 'yes' );
 			update_option( 'elementor_disable_typography_schemes', 'yes' );
+			update_option( 'elementor_load_fa4_shim', 'yes' );
 		}
 
 		/**
