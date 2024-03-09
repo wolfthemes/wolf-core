@@ -64,7 +64,7 @@ function wolf_core_is_elementor_page() {
 function wolf_core_is_elementor_editor() {
 
 	if ( defined( 'ELEMENTOR_VERSION' ) ) {
-		return \Elementor\Plugin::$instance->editor->is_edit_mode();
+		return \Elementor\Plugin::$instance->preview->is_preview_mode();
 	}
 }
 

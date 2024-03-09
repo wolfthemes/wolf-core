@@ -89,6 +89,7 @@ add_action(
 	10,
 	2
 );
+
 add_action(
 	'elementor/element/container/section_layout/before_section_end',
 	function( $section, $args ) {

@@ -67,6 +67,10 @@ function wolf_core_body_class( $classes ) {
 		}
 	}
 
+	if ( wolf_core_is_elementor_editor() ) {
+		$classes[] = 'wolf-core-elementor-editor-active';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'wolf_core_body_class' );

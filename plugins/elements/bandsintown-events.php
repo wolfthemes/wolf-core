@@ -36,7 +36,9 @@ function wolf_core_bandsintown_events( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	wp_enqueue_script( 'bandsintown', 'https://widget.bandsintown.com/main.min.js', array(), false, true ); // phpcs:ignore
+	if ( ! is_admin() ) {
+		wp_enqueue_script( 'bandsintown', 'https://widget.bandsintown.com/main.min.js', array(), false, true ); // phpcs:ignore
+	}
 
 	$output = '';
 

@@ -36,6 +36,7 @@ function wolf_core_album_disc( $atts ) {
 				'el_id'               => '',
 				'css'                 => '',
 				'inline_style'        => '',
+				'data_attrs'           => apply_filters( 'wolf_core_album_disc_data_attrs', array() ),
 			)
 		)
 	);
@@ -65,7 +66,13 @@ function wolf_core_album_disc( $atts ) {
 
 	$class .= " wolf-core-album-disc wolf-core-album-disc-align-$alignment wolf-core-album-disc-$type wolf-core-album-disc-worn-border-$worn_border wolf-core-album-disc-rotate-$rotate wolf-core-element";
 
-	$output = '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+	$data_attr = '';
+
+	foreach( $data_attrs as $k => $v ) {
+		$data_attr .= 'data-' . $k . '="' . $v . '"';
+	}
+
+	$output = '<div ' . $data_attr . ' class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';

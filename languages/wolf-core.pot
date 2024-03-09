@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 1.8.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-02-21 11:10:17+00:00\n"
+"POT-Creation-Date: 2024-03-01 13:38:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -794,6 +794,7 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/controls/page.php:100
 #: pack/wolf-core/plugins/elementor/controls/section.php:27
 #: pack/wolf-core/plugins/elementor/controls/section.php:50
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:278
 #: pack/wolf-core/plugins/params/bigtext.php:121
 #: pack/wolf-core/plugins/params/bigtext.php:137
 #: pack/wolf-core/plugins/params/google-maps.php:42
@@ -857,6 +858,7 @@ msgstr ""
 
 #: inc/admin/classes/class-options.php:279
 #: pack/wolf-core/inc/admin/classes/class-options.php:279
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:147
 #: pack/wolf-core/plugins/params/banner.php:70
 #: pack/wolf-core/plugins/params/clients.php:162
 #: pack/wolf-core/plugins/params/google-maps.php:193
@@ -2261,6 +2263,7 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:182
 #: pack/wolf-core/plugins/common-params/button-params.php:103
 #: pack/wolf-core/plugins/common-params/button-params.php:129
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:163
 #: pack/wolf-core/plugins/params/album-disc.php:45
 #: pack/wolf-core/plugins/params/album-disc.php:64
 #: pack/wolf-core/plugins/params/animated-svg.php:61
@@ -2339,6 +2342,7 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:183
 #: pack/wolf-core/plugins/common-params/button-params.php:99
 #: pack/wolf-core/plugins/common-params/button-params.php:128
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:159
 #: pack/wolf-core/plugins/params/album-disc.php:41
 #: pack/wolf-core/plugins/params/album-disc.php:65
 #: pack/wolf-core/plugins/params/animated-svg.php:57
@@ -2420,6 +2424,7 @@ msgstr ""
 #: pack/wolf-core/inc/wp-widgets/class-widget-mailchimp.php:184
 #: pack/wolf-core/plugins/common-params/button-params.php:107
 #: pack/wolf-core/plugins/common-params/button-params.php:130
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:167
 #: pack/wolf-core/plugins/params/album-disc.php:49
 #: pack/wolf-core/plugins/params/album-disc.php:66
 #: pack/wolf-core/plugins/params/animated-svg.php:65
@@ -2720,6 +2725,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/common-params/button-params.php:93
 #: pack/wolf-core/plugins/common-params/button-params.php:125
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:155
 #: pack/wolf-core/plugins/params/album-disc.php:36
 #: pack/wolf-core/plugins/params/album-disc.php:61
 #: pack/wolf-core/plugins/params/animated-svg.php:52
@@ -3469,6 +3475,7 @@ msgid "Menu Layout"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:64
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:301
 #: plugins/elementor/controls/page.php:64
 #: plugins/elementor/widgets/gallery-banner.php:301
 msgid "Top Right"
@@ -3490,6 +3497,7 @@ msgid "Centered"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/page.php:68
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:300
 #: plugins/elementor/controls/page.php:68
 #: plugins/elementor/widgets/gallery-banner.php:300
 msgid "Top Left"
@@ -3630,7 +3638,6 @@ msgid "Parallax Background"
 msgstr ""
 
 #: pack/wolf-core/plugins/elementor/controls/section.php:130
-#: plugins/elementor/controls/section.php:130
 msgid "Not visible in editor preview yet."
 msgstr ""
 
@@ -3806,6 +3813,97 @@ msgstr ""
 msgid "Ready!"
 msgstr ""
 
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:180
+#: pack/wolf-core/plugins/params/spotify-player.php:55
+#: pack/wolf-core/plugins/vc/vc-params/column-inner-params.php:84
+#: pack/wolf-core/plugins/vc/vc-params/column-params.php:95
+#: plugins/elementor/widgets/gallery-banner.php:180
+#: plugins/params/spotify-player.php:55
+#: plugins/vc/vc-params/column-inner-params.php:84
+#: plugins/vc/vc-params/column-params.php:95
+msgid "Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:215
+#: plugins/elementor/widgets/gallery-banner.php:215
+msgid "Max Width"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:250
+#: pack/wolf-core/plugins/params/spotify-player.php:64
+#: plugins/elementor/widgets/gallery-banner.php:250
+#: plugins/params/spotify-player.php:64
+msgid "Height"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:272
+#: plugins/elementor/widgets/gallery-banner.php:272
+msgid "Object Fit"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:279
+#: pack/wolf-core/plugins/params/social-icons-custom.php:328
+#: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:458
+#: plugins/elementor/widgets/gallery-banner.php:279
+#: plugins/params/social-icons-custom.php:328
+#: plugins/vc/deprecated/wvc_icon.php:458
+msgid "Fill"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:280
+#: pack/wolf-core/plugins/params/gallery.php:89
+#: plugins/elementor/widgets/gallery-banner.php:280
+#: plugins/params/gallery.php:89
+msgid "Cover"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:281
+#: pack/wolf-core/plugins/params/gallery.php:90
+#: plugins/elementor/widgets/gallery-banner.php:281
+#: plugins/params/gallery.php:90
+msgid "Contain"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:293
+#: plugins/elementor/widgets/gallery-banner.php:293
+msgid "Object Position"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:296
+#: plugins/elementor/widgets/gallery-banner.php:296
+msgid "Center Center"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:297
+#: plugins/elementor/widgets/gallery-banner.php:297
+msgid "Center Left"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:298
+#: plugins/elementor/widgets/gallery-banner.php:298
+msgid "Center Right"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:299
+#: plugins/elementor/widgets/gallery-banner.php:299
+msgid "Top Center"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:302
+#: plugins/elementor/widgets/gallery-banner.php:302
+msgid "Bottom Center"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:303
+#: plugins/elementor/widgets/gallery-banner.php:303
+msgid "Bottom Left"
+msgstr ""
+
+#: pack/wolf-core/plugins/elementor/widgets/gallery-banner.php:304
+#: plugins/elementor/widgets/gallery-banner.php:304
+msgid "Bottom Right"
+msgstr ""
+
 #: pack/wolf-core/plugins/elementor/widgets/mailchimp.php:171
 #: pack/wolf-core/plugins/vc/templates/wolf_core_mailchimp.php:31
 #: plugins/elementor/widgets/mailchimp.php:171
@@ -3839,13 +3937,13 @@ msgstr ""
 
 #: pack/wolf-core/plugins/elements/bandsintown-events.php:85
 #: pack/wolf-core/plugins/elements/bandsintown-tracking-button.php:91
-#: plugins/elements/bandsintown-events.php:85
+#: plugins/elements/bandsintown-events.php:87
 #: plugins/elements/bandsintown-tracking-button.php:91
 msgid "Please set an artist."
 msgstr ""
 
 #: pack/wolf-core/plugins/elements/bandsintown-events.php:87
-#: plugins/elements/bandsintown-events.php:87
+#: plugins/elements/bandsintown-events.php:89
 msgid "No event scheduled."
 msgstr ""
 
@@ -5250,18 +5348,6 @@ msgstr ""
 msgid "Metro Background Size"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/gallery.php:89
-#: plugins/elementor/widgets/gallery-banner.php:280
-#: plugins/params/gallery.php:89
-msgid "Cover"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/gallery.php:90
-#: plugins/elementor/widgets/gallery-banner.php:281
-#: plugins/params/gallery.php:90
-msgid "Contain"
-msgstr ""
-
 #: pack/wolf-core/plugins/params/gallery.php:154 plugins/params/gallery.php:154
 msgid "Hover Effect"
 msgstr ""
@@ -6253,14 +6339,6 @@ msgstr ""
 msgid "Sonar"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/social-icons-custom.php:328
-#: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:458
-#: plugins/elementor/widgets/gallery-banner.php:279
-#: plugins/params/social-icons-custom.php:328
-#: plugins/vc/deprecated/wvc_icon.php:458
-msgid "Fill"
-msgstr ""
-
 #: pack/wolf-core/plugins/params/social-icons-custom.php:329
 #: pack/wolf-core/plugins/params/social-icons.php:349
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:459
@@ -6344,22 +6422,6 @@ msgstr ""
 msgid ""
 "A Spotify link URL containing the word \"album\", \"track, \"artist\", or "
 "\"playlist\"."
-msgstr ""
-
-#: pack/wolf-core/plugins/params/spotify-player.php:55
-#: pack/wolf-core/plugins/vc/vc-params/column-inner-params.php:84
-#: pack/wolf-core/plugins/vc/vc-params/column-params.php:95
-#: plugins/elementor/widgets/gallery-banner.php:180
-#: plugins/params/spotify-player.php:55
-#: plugins/vc/vc-params/column-inner-params.php:84
-#: plugins/vc/vc-params/column-params.php:95
-msgid "Width"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/spotify-player.php:64
-#: plugins/elementor/widgets/gallery-banner.php:250
-#: plugins/params/spotify-player.php:64
-msgid "Height"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/team-member.php:24
@@ -8095,44 +8157,8 @@ msgstr ""
 msgid "PHP"
 msgstr ""
 
-#: plugins/elementor/widgets/gallery-banner.php:215
-msgid "Max Width"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:272
-msgid "Object Fit"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:293
-msgid "Object Position"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:296
-msgid "Center Center"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:297
-msgid "Center Left"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:298
-msgid "Center Right"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:299
-msgid "Top Center"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:302
-msgid "Bottom Center"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:303
-msgid "Bottom Left"
-msgstr ""
-
-#: plugins/elementor/widgets/gallery-banner.php:304
-msgid "Bottom Right"
+#: plugins/elementor/controls/section.php:130
+msgid "Will overwrite position settings (Not visible in editor preview yet)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

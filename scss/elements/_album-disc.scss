@@ -226,6 +226,7 @@
 
 .wolf-core-no-animations {
 	.wolf-core-album-disc-reveal {
+		visibility: visible;
 		transform: translate3d(40%, 0, 0) rotate(-42deg);
 	}
 
@@ -235,7 +236,7 @@
 	}
 }
 
-.elementor-editor-active {
+.wolf-core-elementor-editor-active {
 	.wolf-core-album-disc-disc-container {
 		visibility: visible;
 		transform: translate3d(40%, 0, 0) rotate(-42deg);
