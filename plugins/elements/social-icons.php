@@ -42,6 +42,7 @@ function wolf_core_social_icons( $atts ) {
 				'css'                       => '',
 				'inline_style'              => '',
 				'add_spotify_follow_button' => '',
+				'data_attrs'           => apply_filters( 'wolf_core_social_icons_data_attrs', array() ),
 			)
 		)
 	);
@@ -86,7 +87,13 @@ function wolf_core_social_icons( $atts ) {
 		$icon_container_class .= ' fa-stack';
 	}
 
-	$output = '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+	$data_attr = '';
+
+	foreach( $data_attrs as $k => $v ) {
+		$data_attr .= 'data-' . $k . '="' . $v . '"';
+	}
+
+	$output = '<div ' . $data_attr . '  class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	if ( ! $css_animation_each ) {
 		$output .= wolf_core_element_aos_animation_data_attr( $atts );

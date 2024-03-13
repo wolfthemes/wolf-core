@@ -540,6 +540,7 @@ function wolf_core_element_aos_animation_data_attr( $atts, $force = false ) {
 
 	return $data;
 }
+//add_filter( 'wolf_core_social_icons_data_attrs', 'wolf_core_element_aos_animation_data_attr' );
 
 /**
  * @param $css_animation

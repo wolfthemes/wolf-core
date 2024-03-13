@@ -149,6 +149,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 						'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
 						'description' => ( isset( $r_param['description'] ) ) ? $r_param['description'] : '',
 						'condition'   => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
+						'conditions'   => ( isset( $r_param['conditions'] ) ) ? $r_param['conditions'] : array(),
 						'label_block' => true,
 					);
 
@@ -192,6 +193,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					'fields'      => $repeater->get_controls(),
 					'default'     => ( isset( $p['defaults'] ) ) ? $p['defaults'] : array(),
 					'condition'   => ( isset( $p['condition'] ) ) ? $p['condition'] : array(),
+					'conditions'   => ( isset( $p['conditions'] ) ) ? $p['conditions'] : array(),
 					'title_field' => '{{{ ' . $p['params'][0]['param_name'] . ' }}}',
 				)
 			);
@@ -335,6 +337,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 		$elementor_params = array(
 			'condition',
+			'conditions',
 			'description',
 			'label_block',
 			'separator',

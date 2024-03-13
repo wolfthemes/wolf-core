@@ -92,7 +92,7 @@ add_action(
 
 function wolf_core_add_section_name_option( $section, $args ) {
 
-	debug( 'plugin' );
+	//debug( 'plugin' );
 
 	$section->add_control(
 		'name',
