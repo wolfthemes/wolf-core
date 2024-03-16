@@ -109,7 +109,7 @@ function wolf_core_social_icons_params() {
 					'param_name' => 'acronym',
 				),
 
-				array(
+				'css_animation_each' => array(
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
 					'param_name'   => 'css_animation_each',
@@ -118,7 +118,7 @@ function wolf_core_social_icons_params() {
 					'page_builder' => 'vc',
 				),
 
-				array(
+				'css_animation_each' => array(
 					'type'         => 'hidden',
 					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
 					'param_name'   => 'css_animation_each',
@@ -126,7 +126,7 @@ function wolf_core_social_icons_params() {
 					'page_builder' => 'elementor',
 				),
 
-				array(
+				'css_animation' => array(
 					'type'         => 'select',
 					'label'        => esc_html__( 'Animation', 'wolf-core' ),
 					'param_name'   => 'css_animation',
@@ -376,7 +376,7 @@ function wolf_core_social_icons_params() {
 				),
 				*/
 
-				array(
+				'css_animation_each' => array(
 					'type'       => 'checkbox',
 					'label'      => esc_html__( 'Animate Icons One By One', 'wolf-core' ),
 					'param_name' => 'css_animation_each',

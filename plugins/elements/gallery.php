@@ -50,6 +50,8 @@ function wolf_core_gallery( $atts ) {
 				'el_class'            => '',
 				'css'                 => '',
 				'inline_style'        => '',
+				'data_attrs'           => apply_filters( 'wolf_core_gallery_data_attrs', array() ),
+				'img_data_attrs'           => apply_filters( 'wolf_core_gallery_img_data_attrs', array() ),
 			)
 		)
 	);
@@ -204,6 +206,13 @@ function wolf_core_gallery( $atts ) {
 	}
 
 	$output .= '<div ' . apply_filters( 'wolf_core_gallery_data_atts', '', $atts ) . ' ' . $carousel_data . ' class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
+
+
+	$data_attr = '';
+
+	foreach( $data_attrs as $k => $v ) {
+		$output .= ' data-' . $k . '="' . $v . '"';
+	}
 
 	if ( ! $css_animation_each ) {
 		$output .= wolf_core_element_aos_animation_data_attr( $atts );
@@ -379,6 +388,12 @@ function wolf_core_gallery( $atts ) {
 			}
 
 			$output .= "<figure class='$figure_class $metro_class wolf-core-img-$type' style='$figure_style'";
+
+			$img_data_attr = '';
+
+			foreach( $img_data_attrs as $k => $v ) {
+				$output .= 'data-' . $k . '="' . $v . '"';
+			}
 
 			if ( $css_animation_each ) {
 				$force                       = ( 'elementor' === wolf_core_get_plugin_in_use() ) ? true : false;

@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 16th March 2024 - Version 1.8.8
+
+-   Tweak: Added filters for theme compatibility
+
 #### 21th February 2024 - Version 1.8.7
 
 -   Tweak: Added Gallery Banner widget
