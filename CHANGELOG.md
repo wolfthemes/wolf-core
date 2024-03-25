@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 25th March 2024 - Version 1.8.9
+
+-   Tweak: Added filters for theme compatibility
+
 #### 16th March 2024 - Version 1.8.8
 
 -   Tweak: Added filters for theme compatibility
