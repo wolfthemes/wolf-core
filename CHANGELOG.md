@@ -3,7 +3,7 @@
 
 #### 25th March 2024 - Version 1.8.9
 
--   Tweak: Added filters for theme compatibility
+-   Tweak: Edit Bandsintown field title
 
 #### 16th March 2024 - Version 1.8.8
 

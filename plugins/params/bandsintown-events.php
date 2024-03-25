@@ -33,9 +33,13 @@ function wolf_core_bandsintown_events_params() {
 			'params'     => array(
 				array(
 					'type'        => 'text',
-					'label'       => esc_html__( 'Artist Name', 'wolf-core' ),
+					'label'       => esc_html__( 'Artist slug', 'wolf-core' ),
 					'param_name'  => 'artist',
 					'admin_label' => true,
+					'description' => esc_html__( 'e.g: the-band', 'wolf-core' ),
+					'ai' => array(
+						'active' => false,
+					),
 				),
 
 				array(
@@ -44,6 +48,9 @@ function wolf_core_bandsintown_events_params() {
 					'param_name'  => 'display_limit',
 					'admin_label' => true,
 					'description' => esc_html__( 'Leave empty to display all shows', 'wolf-core' ),
+					'ai' => array(
+						'active' => false,
+					),
 				),
 
 				array(
