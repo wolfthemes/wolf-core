@@ -253,6 +253,7 @@ function wolf_core_wrong_theme() {
 		'morvan',
 		'clix',
 		'gainlab',
+		'gaintab',
 		'unimate',
 		'notescape',
 	);
