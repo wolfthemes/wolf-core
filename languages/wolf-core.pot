@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 1.8.9\n"
+"Project-Id-Version: Wolf Core 1.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-03-25 05:46:35+00:00\n"
+"POT-Creation-Date: 2024-04-18 09:12:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2112,8 +2112,8 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/controls/section.php:124
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:230
 #: pack/wolf-core/plugins/params/album-disc.php:103
-#: pack/wolf-core/plugins/params/bandsintown-events.php:55
-#: pack/wolf-core/plugins/params/bandsintown-events.php:65
+#: pack/wolf-core/plugins/params/bandsintown-events.php:62
+#: pack/wolf-core/plugins/params/bandsintown-events.php:72
 #: pack/wolf-core/plugins/params/clients.php:92
 #: pack/wolf-core/plugins/params/gallery.php:146
 #: pack/wolf-core/plugins/params/gallery.php:278
@@ -2183,8 +2183,8 @@ msgstr ""
 #: pack/wolf-core/plugins/elementor/controls/section.php:125
 #: pack/wolf-core/plugins/elementor/elementor-core-functions.php:231
 #: pack/wolf-core/plugins/params/album-disc.php:104
-#: pack/wolf-core/plugins/params/bandsintown-events.php:54
-#: pack/wolf-core/plugins/params/bandsintown-events.php:66
+#: pack/wolf-core/plugins/params/bandsintown-events.php:61
+#: pack/wolf-core/plugins/params/bandsintown-events.php:73
 #: pack/wolf-core/plugins/params/clients.php:93
 #: pack/wolf-core/plugins/params/gallery.php:147
 #: pack/wolf-core/plugins/params/gallery.php:279
@@ -4533,27 +4533,31 @@ msgid "Bandsintown Events"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/bandsintown-events.php:36
-#: pack/wolf-core/plugins/params/bandsintown-tracking-button.php:35
-#: plugins/params/bandsintown-tracking-button.php:35
-msgid "Artist Name"
+#: plugins/params/bandsintown-events.php:36
+msgid "Artist slug"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/bandsintown-events.php:43
+#: pack/wolf-core/plugins/params/bandsintown-events.php:39
+#: plugins/params/bandsintown-events.php:39
+msgid "e.g: the-band"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-events.php:47
 #: plugins/params/bandsintown-events.php:47
 msgid "Display Limit"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/bandsintown-events.php:46
+#: pack/wolf-core/plugins/params/bandsintown-events.php:50
 #: plugins/params/bandsintown-events.php:50
 msgid "Leave empty to display all shows"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/bandsintown-events.php:51
+#: pack/wolf-core/plugins/params/bandsintown-events.php:58
 #: plugins/params/bandsintown-events.php:58
 msgid "Display Local Dates"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/bandsintown-events.php:62
+#: pack/wolf-core/plugins/params/bandsintown-events.php:69
 #: plugins/params/bandsintown-events.php:69
 msgid "Display Past Dates"
 msgstr ""
@@ -4566,6 +4570,11 @@ msgstr ""
 #: pack/wolf-core/plugins/params/bandsintown-tracking-button.php:24
 #: plugins/params/bandsintown-tracking-button.php:24
 msgid "Display your Bandsintown Tracking Button"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/bandsintown-tracking-button.php:35
+#: plugins/params/bandsintown-tracking-button.php:35
+msgid "Artist Name"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/banner.php:57 plugins/params/banner.php:57
@@ -8155,14 +8164,6 @@ msgstr ""
 
 #: pack/wolf-core/wolf-core.php:361 wolf-core.php:361
 msgid "PHP"
-msgstr ""
-
-#: plugins/params/bandsintown-events.php:36
-msgid "Artist slug"
-msgstr ""
-
-#: plugins/params/bandsintown-events.php:39
-msgid "e.g: the-band"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

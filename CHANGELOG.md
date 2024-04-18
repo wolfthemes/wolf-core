@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 18th Avril 2024 - Version 1.9.0
+
+-   Fix: Button SVG icon position and color
+
 #### 25th March 2024 - Version 1.8.9
 
 -   Tweak: Edit Bandsintown field title

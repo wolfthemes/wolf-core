@@ -2862,12 +2862,15 @@ function wolf_core_render_icon( $icon, $attributes = array(), $tag = 'i' ) {
 			return false;
 		}
 		$output = '';
+
+		//debug($icon  );
 		// handler SVG Icon
 		if ( 'svg' === $icon['library'] ) {
 			$remote_svg_file = wp_remote_get($icon['value']['url']);
 			$svg_content = wp_remote_retrieve_body($remote_svg_file );
 
-			$output .= $svg_content;
+			return $svg_content;
+
 		} else {
 			//$icon_types = self::get_icon_manager_tabs();
 		if ( isset( $icon_types[ $icon['library'] ]['render_callback'] ) && is_callable( $icon_types[ $icon['library'] ]['render_callback'] ) ) {
@@ -2883,8 +2886,8 @@ function wolf_core_render_icon( $icon, $attributes = array(), $tag = 'i' ) {
 				$attributes['class'] .= ' ' . $icon['value'];
 			}
 		}
-		return '<' . $tag . ' ' . wolf_core_render_html_attributes( $attributes ) . '></' . $tag . '>';
+			return '<' . $tag . ' ' . wolf_core_render_html_attributes( $attributes ) . '></' . $tag . '>';
 		}
 
-		echo $output;
+		//echo $output;
 }

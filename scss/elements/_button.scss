@@ -49,6 +49,10 @@
 		top: 1px;
 		font-size: inherit;
 	}
+
+	svg path{
+		fill: currentColor;
+	}
 }
 
 /* Shape */
@@ -98,13 +102,15 @@
 
 /* Default Icon position */
 .wolf-core-button-icon-align-left {
-	.wolf-core-icon {
+	.wolf-core-icon,
+	svg {
 		padding-right: 8px;
 	}
 }
 
 .wolf-core-button-icon-align-right {
-	.wolf-core-icon {
+	.wolf-core-icon,
+	svg {
 		padding-left: 8px;
 	}
 }

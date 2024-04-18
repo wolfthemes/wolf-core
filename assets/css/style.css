@@ -2783,6 +2783,9 @@ li.wolf-core-album-tracklist-item {
   top: 1px;
   font-size: inherit;
 }
+.wolf-core-button svg path {
+  fill: currentColor;
+}
 
 /* Shape */
 .wolf-core-button-shape-standard,
@@ -2828,11 +2831,13 @@ li.wolf-core-album-tracklist-item {
 }
 
 /* Default Icon position */
-.wolf-core-button-icon-align-left .wolf-core-icon {
+.wolf-core-button-icon-align-left .wolf-core-icon,
+.wolf-core-button-icon-align-left svg {
   padding-right: 8px;
 }
 
-.wolf-core-button-icon-align-right .wolf-core-icon {
+.wolf-core-button-icon-align-right .wolf-core-icon,
+.wolf-core-button-icon-align-right svg {
   padding-left: 8px;
 }
 
