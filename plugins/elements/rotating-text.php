@@ -75,14 +75,14 @@ function wolf_core_rotating_text( $atts ) {
 	}
 
 	if ( $selected_icon ) {
-		if ( 'svg' === $selected_icon['library'] ) {
-			ob_start();
-			wolf_core_render_icon( $selected_icon, array( 'aria-hidden' => 'true' ) );
-			$output .= ob_get_clean();
+		//if ( 'svg' === $selected_icon['library'] ) {
+		//	ob_start();
+		//	echo wolf_core_render_icon( $selected_icon, array( 'aria-hidden' => 'true' ) );
+		//	$output .= ob_get_clean();
 
-		} else {
+		//} else {
 			$output .= wolf_core_render_icon( $selected_icon, array( 'aria-hidden' => 'true' ) );
-		}
+		//}
 
 	}
 

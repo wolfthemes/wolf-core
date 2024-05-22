@@ -1,9 +1,14 @@
 
 # Changelog
 
-#### 18th Avril 2024 - Version 1.9.0
+#### 22th May 2024 - Version 1.9.2
+
+-   Other: New theme compatiblity
+
+#### 18th Avril 2024 - Version 1.9.1
 
 -   Fix: Button SVG icon position and color
+-   Fix: Rotating text SVG output
 
 #### 25th March 2024 - Version 1.8.9
 
