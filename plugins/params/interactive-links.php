@@ -56,7 +56,7 @@ function wolf_core_interactive_links_params() {
 					'param_name'   => 'color',
 					'page_builder' => 'elementor',
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-interactive' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-interactive-link-text' => 'color: {{VALUE}};',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
