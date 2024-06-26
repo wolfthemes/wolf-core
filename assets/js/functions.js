@@ -1283,7 +1283,7 @@ var WolfCore = (function ($) {
 		videoLightbox: function () {
 
 			if ("undefined" !== typeof lity) {
-				$(document).on("click", ".wolf-core-video-opener", lity);
+				$(document).on("click", ".wolf-core-video-opener, .wolf-core-video-opener-container a", lity);
 			}
 		},
 

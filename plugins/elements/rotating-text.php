@@ -27,6 +27,7 @@ function wolf_core_rotating_text( $atts ) {
 				'rotating_speed' => '',
 				'selected_icon'  => '',
 				'scroll_link'    => '',
+				'el_class'       => '',
 			)
 		)
 	);

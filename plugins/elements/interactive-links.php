@@ -51,7 +51,7 @@ function wolf_core_interactive_links( $atts ) {
 				array(
 					'background_background' => '',
 				)
-			)
+				), $atts
 		);
 
 		extract( $panel_bg_atts ); // phpcs:ignore
