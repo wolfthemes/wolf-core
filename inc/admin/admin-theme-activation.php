@@ -148,10 +148,10 @@ function wolf_core_activate_theme() {
 	$is_error      = false;
 	$error_message = esc_html__( 'Something went wrong. It way be due to a temporary Envato API outage. Please try again in a few minutes.', 'wolf-core' );
 
-	if ( ! $activated && isset( $_POST['theme_purchase_code'] ) ) {
+	if ( ! $activated ) {
 
 		/* Verifiy purchase */
-		if ( isset( $_POST['theme_purchase_code'] ) && ! empty( $_POST['theme_purchase_code'] ) ) {
+		if ( ! empty( $_POST['theme_purchase_code'] ) ) {
 
 			$code       = esc_attr( $_POST['theme_purchase_code'] );
 			$remote_url = 'https://api.wolfthemes.com/envato/';
@@ -160,13 +160,13 @@ function wolf_core_activate_theme() {
 			$url = $remote_url . '?code=' . $code;
 
 			// send request
-			$response = wp_remote_post(
+			$response = wp_safe_remote_post(
 				$url,
 				array(
 					'method' => 'POST',
 					'body'   => array(
 						'action'        => 'activation',
-						'purchase_code' => $_POST['theme_purchase_code'],
+						'purchase_code' => $code,
 					),
 				)
 			);

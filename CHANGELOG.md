@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 2nd July 2024 - Version 1.9.3
+
+-   Other: Uses wp_safe_remote_post for theme activation code authentification
+
 #### 22th May 2024 - Version 1.9.2
 
 -   Other: New theme compatiblity
