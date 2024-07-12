@@ -1165,7 +1165,7 @@ function wolf_core_get_breadcrumb() {
 			} elseif ( is_singular( 'gallery' ) ) {
 
 				$output .= '<li itemprop="itemListElement" itemscope
-      				itemtype="https://schema.org/ListItem"><a itemprop="item" href="' . get_permalink( wolf_albums_get_page_id() ) . '"><span itemprop="name"' . get_the_title( wolf_albums_get_page_id() ) . '</span></a><meta itemprop="position" content="' . $position++ . '" /></li>';
+      				itemtype="https://schema.org/ListItem"><a itemprop="item" href="' . get_permalink( wolf_albums_get_page_id() ) . '"><span itemprop="name">' . get_the_title( wolf_albums_get_page_id() ) . '</span></a><meta itemprop="position" content="' . $position++ . '" /></li>';
 
 				$output .= $delimiter;
 

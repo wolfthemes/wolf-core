@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 12th July 2024 - Version 1.9.4
+
+-   Fix: Breadcrump on single gallery post
+
 #### 2nd July 2024 - Version 1.9.3
 
 -   Other: Uses wp_safe_remote_post for theme activation code authentification
