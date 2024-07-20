@@ -44,6 +44,7 @@ function wolf_core_gallery( $atts ) {
 				'custom_links'        => '',
 				'onclick'             => '',
 				'custom_links_target' => '',
+				'css_animation_enabled' => false,
 				'css_animation'       => '',
 				'css_animation_delay' => '',
 				'css_animation_each'  => '',
@@ -75,17 +76,20 @@ function wolf_core_gallery( $atts ) {
 	$link_start   = '';
 	$link_end     = '';
 
-	/* Animate one by one */
-	if ( $css_animation_each ) {
 
-		if ( ! wolf_core_is_new_animation( $css_animation ) ) {
-			$figure_class .= wolf_core_get_css_animation( $css_animation );
-		}
-	} else {
+	if ( $css_animation_enabled ) {
+		/* Animate one by one */
+		if ( $css_animation_each ) {
 
-		if ( ! wolf_core_is_new_animation( $css_animation ) ) {
-			$class        .= wolf_core_get_css_animation( $css_animation );
-			$inline_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
+			if ( ! wolf_core_is_new_animation( $css_animation ) ) {
+				$figure_class .= wolf_core_get_css_animation( $css_animation );
+			}
+		} else {
+
+			if ( ! wolf_core_is_new_animation( $css_animation ) ) {
+				$class        .= wolf_core_get_css_animation( $css_animation );
+				$inline_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
+			}
 		}
 	}
 

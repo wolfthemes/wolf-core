@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 20th July 2024 - Version 1.9.5
+
+-   Tweak: Added css_animation_enabled gallery hidden attribute
+
 #### 12th July 2024 - Version 1.9.4
 
 -   Fix: Breadcrump on single gallery post
