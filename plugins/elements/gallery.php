@@ -218,7 +218,7 @@ function wolf_core_gallery( $atts ) {
 		$output .= ' data-' . $k . '="' . $v . '"';
 	}
 
-	if ( ! $css_animation_each ) {
+	if ( ! $css_animation_each && $css_animation_enabled ) {
 		$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	}
 
@@ -399,7 +399,7 @@ function wolf_core_gallery( $atts ) {
 				$output .= 'data-' . $k . '="' . $v . '"';
 			}
 
-			if ( $css_animation_each ) {
+			if ( $css_animation_each && $css_animation_enabled ) {
 				$force                       = ( 'elementor' === wolf_core_get_plugin_in_use() ) ? true : false;
 				$atts['css_animation_delay'] = $single_animation_delay;
 				$output                     .= wolf_core_element_aos_animation_data_attr( $atts, $force );

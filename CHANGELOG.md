@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 20th July 2024 - Version 1.9.6
+
+-   Fix: Filter in the last release not applied
+
 #### 20th July 2024 - Version 1.9.5
 
 -   Tweak: Added css_animation_enabled gallery hidden attribute
