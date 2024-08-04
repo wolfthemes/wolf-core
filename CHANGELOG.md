@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 20th July 2024 - Version 1.9.7
+
+-   Fix: Animated panel isScroll var causing issue with slide nav
+
 #### 20th July 2024 - Version 1.9.6
 
 -   Fix: Filter in the last release not applied

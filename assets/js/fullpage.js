@@ -154,11 +154,11 @@ var WolfCoreFullPage = function( $ ) {
 
 				onLeave: function( index, nextIndex, direction ) {
 
-					if ( WolfCoreFullPage.isScrolling ) {
+					if ( this.isScrolling ) {
 						return false;
 					}
 
-					WolfCoreFullPage.isScrolling = true;
+					this.isScrolling = true;
 
 					//var event = new CustomEvent( 'fp-slide-leave' );
 					//window.dispatchEvent( event );
