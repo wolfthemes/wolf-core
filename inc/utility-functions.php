@@ -801,6 +801,17 @@ function wolf_core_kses( $output ) {
 				'class' => array(),
 				'id'    => array(),
 			),
+			'iframe'        => array(
+				'class' => array(),
+				'id'    => array(),
+				'src'    => array(),
+				'width'    => array(),
+				'height'   => array(),
+				'style'   => array(),
+				'allowfullscreen'   => array(),
+				'loading'   => array(),
+				'referrerpolicy'   => array(),
+			),
 		)
 	);
 }

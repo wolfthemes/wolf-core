@@ -31,6 +31,8 @@ class Elementor_Interactive_Links_Widget extends \Elementor\Widget_Base { // php
 
 		$this->params = wolf_core_interactive_links_params();
 
+		//dd( $this->params );
+
 		if ( isset( $this->params['properties']['register_scripts'] ) ) {
 
 			wolf_core_register_scripts( $this->params['properties']['register_scripts'] );

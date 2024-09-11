@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 11th September 2024 - Version 1.9.8
+
+-   Tweak: Added textare html metabox field type
+
 #### 20th July 2024 - Version 1.9.7
 
 -   Fix: Animated panel isScroll var causing issue with slide nav

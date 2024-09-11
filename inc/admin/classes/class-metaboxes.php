@@ -192,7 +192,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 			echo '<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 				// textarea
-			} elseif ( 'textarea' == $type ) {
+			} elseif ( 'textarea' == $type || 'textarea_html' == $type ) {
 				echo '<textarea name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" cols="60" rows="4">' . wolf_core_kses( $meta ) . '</textarea>
 						<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
@@ -619,9 +619,9 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 										$new = absint( $_POST[ $field_id ] );
 
-									} elseif ( 'editor' == $type || 'textarea' == $type ) {
+									} elseif ( 'editor' == $type || 'textarea' == $type || 'textarea_html' == $type ) {
 										//die( debug( $_POST[ $field_id ] ) );
-										$new = $_POST[ $field_id ];
+										$new = wolf_core_kses( $_POST[ $field_id ] );
 
 									} else {
 
