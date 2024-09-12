@@ -18,7 +18,7 @@ if ( ! function_exists( 'wolf_core_shortcode_bit_artist' ) ) {
 	 */
 	function wolf_core_shortcode_bit_artist() {
 
-		return 'Rammstein';
+		return 'korn';
 	}
 	add_shortcode( 'wolf_core_bit_artist', 'wolf_core_shortcode_bit_artist' );
 }
