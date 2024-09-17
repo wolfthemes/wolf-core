@@ -126,7 +126,7 @@ function wolf_core_admin_notice( $message = null, $type = null, $cookie_id = nul
 	if ( $cookie_id ) {
 
 		if ( ! $dismiss_text ) {
-			$dismiss_text = esc_html__( 'Hide permanently', '%TEXTDOMAIN%' );
+			$dismiss_text = esc_html__( 'Hide permanently', 'wolf-core' );
 		}
 
 		if ( $cookie_id ) {

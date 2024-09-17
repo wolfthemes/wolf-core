@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 17th September 2024 - Version 1.9.9
+
+-   Tweak: Added rating invite notification message
+
 #### 11th September 2024 - Version 1.9.8
 
 -   Tweak: Added textare html metabox field type
