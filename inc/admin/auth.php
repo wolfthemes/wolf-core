@@ -182,7 +182,7 @@ function wolf_core_is_activated() {
 				update_option( 'wolf_core_activation_notice_set', true );
 				return false;
 			} else {
-				// set_transient( 'wolf_core_activated', true, 365 * DAY_IN_SECONDS );
+				update_option( 'wolf_core_activation_time', time() );
 				update_option( 'wolf_core_activated', true );
 				return true;
 			}

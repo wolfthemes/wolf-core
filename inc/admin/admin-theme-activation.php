@@ -51,6 +51,7 @@ function wolf_core_output_license_tab_content() {
 	if ( isset( $_POST['wolf_core_reset_purchase_code'] ) ) :
 		delete_option( 'wolf_core_activation_notice_set' );
 		delete_transient( 'wolf_core_activation_notice' );
+		delete_option( 'wolf_core_activation_time' );
 		delete_option( 'wolf_core_activated' );
 		delete_option( 'wolf_core_code' );
 		delete_option( 'wolf_core_key' );
@@ -140,7 +141,7 @@ function wolf_core_output_license_tab_content() {
 add_action( 'wolf_core_license_tab_content', 'wolf_core_output_license_tab_content' );
 
 /**
- * Output the last new feature if set in the changelog XML
+ * Activate the theme
  */
 function wolf_core_activate_theme() {
 
@@ -184,6 +185,7 @@ function wolf_core_activate_theme() {
 
 						// set_transient( 'wolf_core_activated', true, 365 * DAY_IN_SECONDS );
 						update_option( 'wolf_core_activated', true );
+						update_option( 'wolf_core_activation_time', time() );
 						add_option( 'wolf_core_code', $data->code );
 						add_option( 'wolf_core_key', $data->key );
 						delete_transient( 'wolf_core_activation_notice' );

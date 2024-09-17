@@ -1,0 +1,73 @@
+.wolf-core-admin-notice-title{
+	font-size: 1.5em;
+}
+
+.wolf-core-hide-update-notice {
+	margin-left: 8px !important;
+}
+
+.wolf-core-admin-notice-cite{
+	font-size: 0.9em;
+}
+
+.wolf-core-admin-notice-button {
+	margin-right: 8px;
+}
+
+#wolf-core-notifications {
+	margin-top: 35px;
+}
+
+.wolf-core-changelog-notice {
+	padding: 15px;
+	background: #fff;
+	margin-bottom: 15px;
+	border-left: 4px solid #fff;
+	line-height: 1.5;
+	font-size: 14px;
+
+	ul {
+		li {
+			list-style-type: disc;
+			margin-left: 24px;
+			margin-bottom: 8px;
+			line-height: 1;
+		}
+	}
+}
+
+.wolf-core-notice-success {
+	border-left-color: #46b450;
+}
+
+.wolf-core-notice-info {
+	border-left-color: #00a0d2;
+}
+
+.wolf-core-notice-warning {
+	border-left-color: #ffb900;
+}
+
+.wolf-core-notice-news {
+	border: none;
+	background: none;
+	padding: 0;
+	font-size: 1.1em;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.wolf-core-admin-notice-img{
+	max-width: 150px;
+	float: right;
+	padding-left: 20px !important;
+
+	img{
+		width: 100%;
+	}
+}
+
+.wolf-core-admin-notice-flex-wrap{
+	display: flex;
+	flex-direction: column;
+}
