@@ -38,7 +38,7 @@ function wolf_core_rating_request_admin_notice() {
 	$theme_name = $wp_theme->Name;
 	$review_link = 'https://themeforest.net/downloads';
 
-	$message = wp_sprintf( '<p class="wolf-core-admin-notice-img"><img src="%1$s"></p>
+	$message = wp_sprintf( '<p class="wolf-core-admin-notice-img"><img src="%1$s" alt="WolfThemes avatar"></p>
 	<p class="wolf-core-admin-notice-title"><strong>Enjoying %2$s? I’d Love Your Feedback!</strong></p>
         <p>Thank you for using %2$s. If it’s been helpful for your project, I’d really appreciate it if you could take a moment to leave a review.
 		It will help me a ton!</p>

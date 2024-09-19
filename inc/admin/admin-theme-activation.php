@@ -33,19 +33,73 @@ if ( ! function_exists( 'wolf_core_get_theme_slug' ) ) {
 }
 
 /**
- * Theme license tab
+ * About Me tab
  */
-function wolf_core_output_license_tab() {
+function wolf_core_output_about_me_tab() {
 	?>
-	<a href="#license" class="nav-tab"><?php esc_html_e( 'License', 'wolf-core' ); ?></a>
+	<a href="#about-me" class="nav-tab"><?php esc_html_e( 'About me', 'wolf-core' ); ?></a>
 	<?php
 }
-add_action( 'wolf_core_license_tab', 'wolf_core_output_license_tab' );
+add_action( 'wolf_core_about_me_tab', 'wolf_core_output_about_me_tab' );
 
 /**
- * Theme license tab
+ * Theme about_me tab content
  */
-function wolf_core_output_license_tab_content() {
+function wolf_core_output_about_me_tab_content() {
+	?>
+	<div id="about-me" class="wolf-core-options-panel">
+		<div class="about-me-text wolftheme-about-me-text">
+			<div class="row wolftheme-about-columns">
+				<div class="col col-12">
+					<h3>About Me</h3>
+
+<img style="float:right; padding-left:40px;" src="https://assets.wolfthemes.com/me.jpg" alt="WolfThemes avatar">
+
+<p>Hi there! I’m Constantin, the creator behind WolfThemes. With over 12 years of experience in designing WordPress themes, I’m passionate about crafting stunning, modern websites that help creative professionals, musicians, and artists showcase their work.</p>
+
+<p>At WolfThemes, we’re all about helping you build beautiful, functional websites with ease. From drag-and-drop customization to seamless performance, my goal is to ensure every theme meets your needs while delivering a smooth user experience.</p>
+
+<p>I’m truly grateful to have over 34,000 customers who trust my themes for their projects. Whether you’re a band, musician, or part of a creative agency, it’s an honor to be part of your journey.</p>
+
+<p><img style="max-width:150px" src="https://assets.wolfthemes.com/logo-dark.png" alt="WolfThemes logo"></p>
+
+<h3>Want to Help?</h3>
+
+<p>If you love the theme and it’s working well for you, I’d really appreciate a quick rating on <a href="https://themeforest.net/downloads" target="_blank">ThemeForest</a>. It would be greatly appreciated! 😉</p>
+
+<p>Thank you for being part of the WolfThemes family!</p>
+
+<p><em>— Constantin</em></p>
+
+<p>
+	<a href="https://themeforest.net/downloads"  target="_blank">
+	<img style="max-width:150px" src="https://assets.wolfthemes.com/5-stars.png" alt="5-stars">
+	</a>
+</p>
+<p><a class="button-primary" href="https://themeforest.net/downloads"  target="_blank">Leave a rating</a></p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php
+}
+add_action( 'wolf_core_about_me_tab_content', 'wolf_core_output_about_me_tab_content' );
+
+/**
+ * Theme  tab
+ */
+function wolf_core_output__tab() {
+	?>
+	<a href="#" class="nav-tab"><?php esc_html_e( '', 'wolf-core' ); ?></a>
+	<?php
+}
+add_action( 'wolf_core__tab', 'wolf_core_output__tab' );
+
+/**
+ * Theme  tab
+ */
+function wolf_core_output__tab_content() {
 	?>
 	<?php
 	if ( isset( $_POST['wolf_core_reset_purchase_code'] ) ) :
@@ -57,13 +111,13 @@ function wolf_core_output_license_tab_content() {
 		delete_option( 'wolf_core_key' );
 		endif;
 	?>
-	<div id="license" class="wolf-core-options-panel">
+	<div id="" class="wolf-core-options-panel">
 	<?php
 		$activated  = wolf_core_activate_theme();
 		$theme_name = wolf_core_get_theme_name();
 		$theme_slug = wolf_core_get_theme_slug();
 	?>
-		<ul class="wolf-core-license-info">
+		<ul class="wolf-core--info">
 			<li>
 			<?php
 				echo sprintf(
@@ -106,16 +160,16 @@ function wolf_core_output_license_tab_content() {
 			<!-- </li> -->
 		</ul>
 		<?php if ( ! $activated ) : ?>
-		<p class="wolf-core-license-cta-text">
+		<p class="wolf-core--cta-text">
 			<?php
 				echo sprintf(
-					wp_kses_post( __( 'Please enter your <strong>theme purchase code</strong> below to activate your theme license and be able to use all features.', 'wolf-core' ) ),
+					wp_kses_post( __( 'Please enter your <strong>theme purchase code</strong> below to activate your theme  and be able to use all features.', 'wolf-core' ) ),
 					'WolfThemes'
 				);
 			?>
 		</p>
 		<form method="post" action="<?php echo esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about' ) ); ?>">
-		<input name="theme_purchase_code" placeholder="693e0017-48d3-4bd5-be47-1c5c14e7ab9c" type="text" class="regular-text wolf-core-license-input"><input value="<?php esc_html_e( 'Activate', 'wolf-core' ); ?>" type="submit" class="button button-primary wolf-core-license-button">
+		<input name="theme_purchase_code" placeholder="693e0017-48d3-4bd5-be47-1c5c14e7ab9c" type="text" class="regular-text wolf-core--input"><input value="<?php esc_html_e( 'Activate', 'wolf-core' ); ?>" type="submit" class="button button-primary wolf-core--button">
 		</form>
 		<p>
 			<a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Can-I-Find-my-Purchase-Code-"><?php esc_html_e( 'How to find your purchase code', 'wolf-core' ); ?></a>
@@ -135,10 +189,10 @@ function wolf_core_output_license_tab_content() {
 		endif;
 
 		?>
-	</div><!-- #license -->
+	</div><!-- # -->
 	<?php
 }
-add_action( 'wolf_core_license_tab_content', 'wolf_core_output_license_tab_content' );
+add_action( 'wolf_core__tab_content', 'wolf_core_output__tab_content' );
 
 /**
  * Activate the theme
