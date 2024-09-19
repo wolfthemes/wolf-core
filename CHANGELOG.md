@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 17th September 2024 - Version 1.9.9
+#### 17th September 2024 - Version 2.0.0
 
 -   Tweak: Added rating invite notification message
+-   Tweak: Added about me tab
 
 #### 11th September 2024 - Version 1.9.8
 

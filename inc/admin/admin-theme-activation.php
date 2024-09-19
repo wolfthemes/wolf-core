@@ -59,7 +59,9 @@ function wolf_core_output_about_me_tab_content() {
 
 <p>At WolfThemes, we’re all about helping you build beautiful, functional websites with ease. From drag-and-drop customization to seamless performance, my goal is to ensure every theme meets your needs while delivering a smooth user experience.</p>
 
-<p>I’m truly grateful to have over 34,000 customers who trust my themes for their projects. Whether you’re a band, musician, or part of a creative agency, it’s an honor to be part of your journey.</p>
+<p>I'm truly grateful to have over 34,000 customers who trust my themes for their websites. Whether you're a band, musician, or part of a creative agency, it’s an honor to be part of your journey.</p>
+
+<p><strong>I wish you all the best with your project!</strong></p>
 
 <p><img style="max-width:150px" src="https://assets.wolfthemes.com/logo-dark.png" alt="WolfThemes logo"></p>
 
@@ -73,7 +75,7 @@ function wolf_core_output_about_me_tab_content() {
 
 <p>
 	<a href="https://themeforest.net/downloads"  target="_blank">
-	<img style="max-width:150px" src="https://assets.wolfthemes.com/5-stars.png" alt="5-stars">
+		<img style="max-width:150px; margin:15px 0;" src="https://assets.wolfthemes.com/5-stars.png" alt="5-stars">
 	</a>
 </p>
 <p><a class="button-primary" href="https://themeforest.net/downloads"  target="_blank">Leave a rating</a></p>
