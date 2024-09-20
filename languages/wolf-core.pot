@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 2.0.0\n"
+"Project-Id-Version: Wolf Core 2.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-09-19 12:05:29+00:00\n"
+"POT-Creation-Date: 2024-09-20 12:31:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -504,70 +504,70 @@ msgid "About me"
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:126
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:124
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:126
 msgid ""
 "%1$s theme works with <strong>%2$s</strong> plugin to offer all its "
 "features."
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:136
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:134
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:136
 msgid "It extends of <a href=\"%1$s\" target=\"_blank\">%2$s</a> plugin."
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:143
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:141
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:143
 msgid "It includes plugin territory features that boost the theme functionalities."
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:148
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:146
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:148
 msgid ""
 "This extension is available only to users who purchased their theme from <a "
 "href=\"%1$s\" target=\"_blank\">%2$s</a>."
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:168
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:166
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:168
 msgid ""
 "Please enter your <strong>theme purchase code</strong> below to activate "
 "your theme  and be able to use all features."
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:174
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:172
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:174
 msgid "Activate"
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:177
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:175
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:177
 msgid "How to find your purchase code"
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:183
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:181
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:183
 msgid "The %s is activated."
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:188
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:186
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:188
 msgid "Reset purchase code"
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:206
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:204
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:206
 msgid ""
 "Something went wrong. It way be due to a temporary Envato API outage. "
 "Please try again in a few minutes."
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:252
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:250
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:252
 msgid "Extension activated"
 msgstr ""
 
 #: inc/admin/admin-theme-activation.php:270
-#: pack/wolf-core/inc/admin/admin-theme-activation.php:268
+#: pack/wolf-core/inc/admin/admin-theme-activation.php:270
 msgid "Purchase code can not be empty"
 msgstr ""
 
@@ -806,6 +806,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/heading.php:125
 #: pack/wolf-core/plugins/params/heading.php:140
 #: pack/wolf-core/plugins/params/icon.php:82
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:35
 #: pack/wolf-core/plugins/params/twitter.php:85
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:556
 #: pack/wolf-core/plugins/vc/vc-custom-fields.php:61
@@ -835,8 +836,8 @@ msgstr ""
 #: plugins/params/bigtext.php:121 plugins/params/bigtext.php:137
 #: plugins/params/google-maps.php:42 plugins/params/heading.php:125
 #: plugins/params/heading.php:140 plugins/params/icon.php:82
-#: plugins/params/twitter.php:85 plugins/vc/deprecated/wvc_icon.php:556
-#: plugins/vc/vc-custom-fields.php:61
+#: plugins/params/sb-instagram-feed.php:35 plugins/params/twitter.php:85
+#: plugins/vc/deprecated/wvc_icon.php:556 plugins/vc/vc-custom-fields.php:61
 #: plugins/vc/vc-params/background-params.php:23
 #: plugins/vc/vc-params/background-params.php:41
 #: plugins/vc/vc-params/column-inner-params.php:23
@@ -2130,7 +2131,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:62
 #: pack/wolf-core/plugins/params/mailchimp.php:75
 #: pack/wolf-core/plugins/params/open-table.php:125
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:120
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:146
 #: pack/wolf-core/plugins/params/video-opener.php:39
 #: pack/wolf-core/plugins/vc/vc-core-functions.php:90
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:190
@@ -2159,7 +2160,7 @@ msgstr ""
 #: plugins/params/gallery.php:331 plugins/params/gallery.php:345
 #: plugins/params/mailchimp.php:49 plugins/params/mailchimp.php:62
 #: plugins/params/mailchimp.php:75 plugins/params/open-table.php:125
-#: plugins/params/sb-instagram-feed.php:120 plugins/params/video-opener.php:39
+#: plugins/params/sb-instagram-feed.php:146 plugins/params/video-opener.php:39
 #: plugins/vc/vc-core-functions.php:90
 #: plugins/vc/vc-params/background-params.php:190
 #: plugins/vc/vc-params/background-params.php:261
@@ -2201,7 +2202,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:61
 #: pack/wolf-core/plugins/params/mailchimp.php:74
 #: pack/wolf-core/plugins/params/open-table.php:124
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:121
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:147
 #: pack/wolf-core/plugins/params/video-opener.php:38
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:262
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:336
@@ -2224,7 +2225,7 @@ msgstr ""
 #: plugins/params/gallery.php:332 plugins/params/gallery.php:346
 #: plugins/params/mailchimp.php:48 plugins/params/mailchimp.php:61
 #: plugins/params/mailchimp.php:74 plugins/params/open-table.php:124
-#: plugins/params/sb-instagram-feed.php:121 plugins/params/video-opener.php:38
+#: plugins/params/sb-instagram-feed.php:147 plugins/params/video-opener.php:38
 #: plugins/vc/vc-params/background-params.php:262
 #: plugins/vc/vc-params/background-params.php:336
 #: plugins/vc/vc-params/background-params.php:397
@@ -3248,10 +3249,8 @@ msgstr ""
 #: pack/wolf-core/plugins/params/clients.php:89
 #: pack/wolf-core/plugins/params/gallery.php:143
 #: pack/wolf-core/plugins/params/icon.php:278
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:92
 #: plugins/common-params/button-params.php:380 plugins/params/clients.php:89
 #: plugins/params/gallery.php:143 plugins/params/icon.php:278
-#: plugins/params/sb-instagram-feed.php:92
 msgid "Padding"
 msgstr ""
 
@@ -3693,7 +3692,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/pricing-table.php:26
 #: pack/wolf-core/plugins/params/process.php:26
 #: pack/wolf-core/plugins/params/rotating-text.php:26
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:29
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:46
 #: pack/wolf-core/plugins/params/shape-slider.php:26
 #: pack/wolf-core/plugins/params/team-member.php:48
 #: pack/wolf-core/plugins/params/testimonial-slider.php:26
@@ -3713,7 +3712,7 @@ msgstr ""
 #: plugins/params/mailchimp.php:26 plugins/params/marquee-text.php:26
 #: plugins/params/open-table.php:26 plugins/params/price-list.php:26
 #: plugins/params/pricing-table.php:26 plugins/params/process.php:26
-#: plugins/params/rotating-text.php:26 plugins/params/sb-instagram-feed.php:29
+#: plugins/params/rotating-text.php:26 plugins/params/sb-instagram-feed.php:46
 #: plugins/params/shape-slider.php:26 plugins/params/team-member.php:48
 #: plugins/params/testimonial-slider.php:26
 #: plugins/params/textual-showcase.php:26
@@ -5011,10 +5010,8 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/clients.php:70
 #: pack/wolf-core/plugins/params/gallery.php:124
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:46
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:23
 #: plugins/params/clients.php:70 plugins/params/gallery.php:124
-#: plugins/params/sb-instagram-feed.php:46
 #: plugins/vc/vc-params/row-params.php:23
 msgid "Columns"
 msgstr ""
@@ -6149,85 +6146,38 @@ msgstr ""
 msgid "Icon Vertical Adjustment"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:25
-#: plugins/params/sb-instagram-feed.php:25
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:42
+#: plugins/params/sb-instagram-feed.php:42
 msgid "Instagram Feed"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:26
-#: plugins/params/sb-instagram-feed.php:26
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:43
+#: plugins/params/sb-instagram-feed.php:43
 msgid "Your last instagram photos"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:37
-#: plugins/params/sb-instagram-feed.php:37
-msgid "Image Count"
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:55
+#: plugins/params/sb-instagram-feed.php:55
+msgid "Feed"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:38
-#: plugins/params/sb-instagram-feed.php:38
-msgid "Note that the instagram API may limit the number of image to display."
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:61
-#: plugins/params/sb-instagram-feed.php:61
-msgid "User"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:62
-#: plugins/params/sb-instagram-feed.php:62
-msgid ""
-"Your Instagram User Name. This must be from a connected account on the "
-"\"Configure\" tab."
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:69
-#: plugins/params/sb-instagram-feed.php:69
-msgid "API key (optional)"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:70
-#: plugins/params/sb-instagram-feed.php:70
-msgid "Leave empty to use the default API key set in the plugin settings."
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:77
-#: plugins/params/sb-instagram-feed.php:77
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:103
+#: plugins/params/sb-instagram-feed.php:103
 msgid "Display follow button (theme style)"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:83
-#: plugins/params/sb-instagram-feed.php:83
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:109
+#: plugins/params/sb-instagram-feed.php:109
 msgid "Button Text (theme style)"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:98
-#: plugins/params/sb-instagram-feed.php:98
-msgid "Show Header"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:100
-#: plugins/params/sb-instagram-feed.php:100
-msgid "Whether to show the feed Header."
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:105
-#: plugins/params/sb-instagram-feed.php:105
-msgid "Show \"Follow\" button"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:111
-#: plugins/params/sb-instagram-feed.php:111
-msgid "Show \"Load More\" button"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:117
-#: plugins/params/sb-instagram-feed.php:117
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:143
+#: plugins/params/sb-instagram-feed.php:143
 msgid "Disable Default Hover Effect"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:118
-#: plugins/params/sb-instagram-feed.php:118
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:144
+#: plugins/params/sb-instagram-feed.php:144
 msgid ""
 "Check this option to set your own hover effect if you have the pro version "
 "of the Instagram Feed plugin."
