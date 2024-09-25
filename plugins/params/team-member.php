@@ -121,6 +121,45 @@ function wolf_core_team_member_params() {
 						'label'      => esc_html__( 'Link', 'wolf-core' ),
 						'param_name' => 'link',
 					),
+
+					array(
+						'type'         => 'typography',
+						'param_name'   => 'name_typography',
+						'label'        => esc_html__( 'Name Typography', '%TEXTDOMAIN%' ),
+						'selector'     => '{{WRAPPER}} .wolf-core-team-member-name',
+						'group'        => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+					),
+					array(
+						'type'         => 'typography',
+						'param_name'   => 'role_typography',
+						'label'        => esc_html__( 'Role Typography', '%TEXTDOMAIN%' ),
+						'selector'     => '{{WRAPPER}} .wolf-core-team-member-role',
+						'group'        => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+					),
+
+					array(
+						'type'         => 'typography',
+						'param_name'   => 'bio_typography',
+						'label'        => esc_html__( 'Bio Typography', '%TEXTDOMAIN%' ),
+						'selector'     => '{{WRAPPER}} .wolf-core-team-member-tagline',
+						'group'        => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+					),
+
+					array(
+						'type'         => 'colorpicker',
+						'param_name'   => 'role_color',
+						'label'        => esc_html__( 'Role Color', '%TEXTDOMAIN%' ),
+						'selector'     => '{{WRAPPER}} .wolf-core-team-member-tagline',
+						'group'        => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+					),
+
+					// array(
+					// 	'type'         => 'colorpicker',
+					// 	'param_name'   => 'bio_color',
+					// 	'label'        => esc_html__( 'Bio Color', '%TEXTDOMAIN%' ),
+					// 	'selector'     => '{{WRAPPER}} .wolf-core-team-member-tagline',
+					// 	'group'        => esc_html__( 'Style', '%TEXTDOMAIN%' ),
+					// ),
 				),
 				$social_params,
 			),

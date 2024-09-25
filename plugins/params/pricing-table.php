@@ -33,6 +33,9 @@ function wolf_core_pricing_table_params() {
 					'type'       => 'text',
 					'label'      => esc_html__( 'Title', 'wolf-core' ),
 					'param_name' => 'title',
+					'ai' => array(
+						'active' => false,
+					),
 				),
 				array(
 					'type'       => 'select',
@@ -60,6 +63,9 @@ function wolf_core_pricing_table_params() {
 					'label'       => esc_html__( 'Price', 'wolf-core' ),
 					'param_name'  => 'price',
 					'placeholder' => 20,
+					'ai' => array(
+						'active' => false,
+					),
 				),
 				array(
 					'type'        => 'text',
@@ -67,6 +73,9 @@ function wolf_core_pricing_table_params() {
 					'param_name'  => 'currency',
 					'placeholder' => '$',
 					'description' => esc_html__( 'e.g: $ or €', 'wolf-core' ),
+					'ai' => array(
+						'active' => false,
+					),
 				),
 				array(
 					'type'       => 'select',
@@ -88,12 +97,18 @@ function wolf_core_pricing_table_params() {
 					'label'       => esc_html__( 'Offer Price', 'wolf-core' ),
 					'param_name'  => 'offer_price',
 					'placeholder' => 15,
+					'ai' => array(
+						'active' => false,
+					),
 				),
 				array(
 					'type'        => 'text',
 					'label'       => esc_html__( 'Price Period', 'wolf-core' ),
 					'param_name'  => 'price_period',
 					'description' => esc_html__( 'e.g "monthly" or "per month"', 'wolf-core' ),
+					'ai' => array(
+						'active' => false,
+					),
 				),
 
 				array(
@@ -192,7 +207,7 @@ function wolf_core_pricing_table_params() {
 					'param_name'   => 'custom_border_color',
 					'page_builder' => 'elementor',
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-pricing-table-inner' => 'border-color: {{VALUE}}!important;',
+						'{{WRAPPER}} .wolf-core-pricing-table-inner' => 'border:1px solid; border-color: {{VALUE}}!important;',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
