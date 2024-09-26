@@ -67,7 +67,7 @@ function wolf_core_output_about_me_tab_content() {
 
 <h3>Want to Help?</h3>
 
-<p>If you love the theme and it’s working well for you, I’d really appreciate a quick rating on <a href="https://themeforest.net/downloads" target="_blank">ThemeForest</a>. It would be greatly appreciated! 😉</p>
+<p>If you love the theme and it’s working well for you, please take a minute to leave a rating on <a href="https://themeforest.net/downloads" target="_blank">ThemeForest</a>. It would be greatly appreciated! 😉</p>
 
 <p>Thank you for being part of the WolfThemes family!</p>
 
