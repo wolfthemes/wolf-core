@@ -70,6 +70,7 @@ class Wolf_Core_Admin {
 			'admin-options',
 			'admin-update-db',
 			'admin-notices',
+			'admin-functions',
 		);
 
 		/* Includes files from theme inc/admin dir in backend */

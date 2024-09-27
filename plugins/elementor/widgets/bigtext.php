@@ -31,14 +31,14 @@ class Elementor_Bigtext_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		$this->params = wolf_core_bigtext_params();
 
-		// if ( isset( $this->params['properties']['scripts'] ) ) {
+		if ( isset( $this->params['properties']['register_scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+			wolf_core_register_scripts( $this->params['properties']['register_scripts'] );
+		}
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
-		// }
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+			$this->scripts = $this->params['properties']['scripts'];
+		}
 	}
 
 	/**

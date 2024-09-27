@@ -42,8 +42,8 @@ function wolf_core_bigtext( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	wp_enqueue_script( 'bigtext' );
-	wp_enqueue_script( 'wolf-core-bigtext' );
+	//wp_enqueue_script( 'bigtext' );
+	//wp_enqueue_script( 'wolf-core-bigtext' );
 
 	$output               = '';
 	$text_container_class = '';
@@ -106,6 +106,11 @@ function wolf_core_bigtext( $atts ) {
 			}
 
 			$output .= wolf_core_sanitize_heading( $line );
+
+// 			$output .= '<svg viewBox="0 0 56 18">
+//   <text x="0" y="15">' . wolf_core_sanitize_heading( $line ) . '</text>
+// </svg>';
+
 
 			if ( is_array( $link ) ) {
 				$output .= '</a>';

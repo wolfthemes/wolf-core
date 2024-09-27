@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 2.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-09-25 14:46:12+00:00\n"
+"POT-Creation-Date: 2024-09-27 12:24:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -430,7 +430,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/blockquote.php:67
 #: pack/wolf-core/plugins/params/link.php:62
 #: pack/wolf-core/plugins/params/marquee-text.php:71
-#: pack/wolf-core/plugins/params/pricing-table.php:180
+#: pack/wolf-core/plugins/params/pricing-table.php:195
 #: pack/wolf-core/plugins/params/social-icons-custom.php:250
 #: pack/wolf-core/plugins/params/social-icons-custom.php:281
 #: pack/wolf-core/plugins/params/social-icons-custom.php:293
@@ -459,42 +459,42 @@ msgstr ""
 msgid "Font Color"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:44 inc/admin/classes/class-metaboxes.php:729
+#: inc/admin/admin-scripts.php:46 inc/admin/classes/class-metaboxes.php:729
 #: pack/wolf-core/inc/admin/admin-scripts.php:44
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:729
 msgid "Select an image"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:45 inc/admin/classes/class-metaboxes.php:730
+#: inc/admin/admin-scripts.php:47 inc/admin/classes/class-metaboxes.php:730
 #: pack/wolf-core/inc/admin/admin-scripts.php:45
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:730
 msgid "Select a set of images"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:46 inc/admin/classes/class-metaboxes.php:731
+#: inc/admin/admin-scripts.php:48 inc/admin/classes/class-metaboxes.php:731
 #: pack/wolf-core/inc/admin/admin-scripts.php:46
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:731
 msgid "Select a file"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:47 inc/admin/classes/class-metaboxes.php:732
+#: inc/admin/admin-scripts.php:49 inc/admin/classes/class-metaboxes.php:732
 #: pack/wolf-core/inc/admin/admin-scripts.php:47
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:732
 msgid "This will remove the entire image set"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:51 pack/wolf-core/inc/admin/admin-scripts.php:51
+#: inc/admin/admin-scripts.php:53 pack/wolf-core/inc/admin/admin-scripts.php:51
 msgid "Updating Database..."
 msgstr ""
 
-#: inc/admin/admin-scripts.php:52
+#: inc/admin/admin-scripts.php:54
 #: inc/admin/classes/class-plugin-installer.php:270
 #: pack/wolf-core/inc/admin/admin-scripts.php:52
 #: pack/wolf-core/inc/admin/classes/class-plugin-installer.php:270
 msgid "Redirecting..."
 msgstr ""
 
-#: inc/admin/admin-scripts.php:53 pack/wolf-core/inc/admin/admin-scripts.php:53
+#: inc/admin/admin-scripts.php:55 pack/wolf-core/inc/admin/admin-scripts.php:53
 msgid "Finalizing..."
 msgstr ""
 
@@ -640,7 +640,7 @@ msgid ""
 "<a target=\"_blank\" href=\"%5$s\">child theme</a>."
 msgstr ""
 
-#: inc/admin/classes/class-admin.php:83
+#: inc/admin/classes/class-admin.php:84
 #: pack/wolf-core/inc/admin/classes/class-admin.php:83
 #: pack/wolf-core/plugins/vc/vc.php:69 pack/wolf-core/plugins/vc/vc.php:103
 #: pack/wolf-core/plugins/vc/vc.php:156 pack/wolf-core/wolf-core.php:519
@@ -2847,14 +2847,14 @@ msgid "Icon Position"
 msgstr ""
 
 #: pack/wolf-core/plugins/common-params/button-params.php:158
-#: pack/wolf-core/plugins/params/pricing-table.php:76
+#: pack/wolf-core/plugins/params/pricing-table.php:85
 #: plugins/common-params/button-params.php:158
 #: plugins/params/pricing-table.php:85
 msgid "Before"
 msgstr ""
 
 #: pack/wolf-core/plugins/common-params/button-params.php:159
-#: pack/wolf-core/plugins/params/pricing-table.php:77
+#: pack/wolf-core/plugins/params/pricing-table.php:86
 #: plugins/common-params/button-params.php:159
 #: plugins/params/pricing-table.php:86
 msgid "After"
@@ -2996,13 +2996,13 @@ msgstr ""
 #: pack/wolf-core/plugins/params/marquee-text.php:55
 #: pack/wolf-core/plugins/params/marquee-text.php:66
 #: pack/wolf-core/plugins/params/marquee-text.php:77
-#: pack/wolf-core/plugins/params/pricing-table.php:153
-#: pack/wolf-core/plugins/params/pricing-table.php:164
-#: pack/wolf-core/plugins/params/pricing-table.php:175
-#: pack/wolf-core/plugins/params/pricing-table.php:186
-#: pack/wolf-core/plugins/params/pricing-table.php:197
-#: pack/wolf-core/plugins/params/pricing-table.php:208
-#: pack/wolf-core/plugins/params/pricing-table.php:219
+#: pack/wolf-core/plugins/params/pricing-table.php:168
+#: pack/wolf-core/plugins/params/pricing-table.php:179
+#: pack/wolf-core/plugins/params/pricing-table.php:190
+#: pack/wolf-core/plugins/params/pricing-table.php:201
+#: pack/wolf-core/plugins/params/pricing-table.php:212
+#: pack/wolf-core/plugins/params/pricing-table.php:223
+#: pack/wolf-core/plugins/params/pricing-table.php:234
 #: pack/wolf-core/plugins/params/rotating-text.php:171
 #: pack/wolf-core/plugins/params/rotating-text.php:182
 #: pack/wolf-core/plugins/params/rotating-text.php:193
@@ -3020,6 +3020,10 @@ msgstr ""
 #: pack/wolf-core/plugins/params/social-icons.php:284
 #: pack/wolf-core/plugins/params/social-icons.php:295
 #: pack/wolf-core/plugins/params/social-icons.php:319
+#: pack/wolf-core/plugins/params/team-member.php:130
+#: pack/wolf-core/plugins/params/team-member.php:137
+#: pack/wolf-core/plugins/params/team-member.php:145
+#: pack/wolf-core/plugins/params/team-member.php:153
 #: pack/wolf-core/plugins/params/testimonial-slider.php:47
 #: pack/wolf-core/plugins/params/testimonial-slider.php:56
 #: pack/wolf-core/plugins/params/textual-showcase.php:70
@@ -3171,7 +3175,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/interactive-links.php:55
 #: pack/wolf-core/plugins/params/link.php:50
 #: pack/wolf-core/plugins/params/marquee-text.php:60
-#: pack/wolf-core/plugins/params/pricing-table.php:169
+#: pack/wolf-core/plugins/params/pricing-table.php:184
 #: pack/wolf-core/plugins/params/rotating-text.php:176
 #: pack/wolf-core/plugins/params/social-icons-custom.php:235
 #: pack/wolf-core/plugins/params/social-icons.php:255
@@ -3207,7 +3211,7 @@ msgid "Backgorund Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/common-params/button-params.php:316
-#: pack/wolf-core/plugins/params/pricing-table.php:191
+#: pack/wolf-core/plugins/params/pricing-table.php:206
 #: pack/wolf-core/plugins/vc/vc-map/column-inner.php:38
 #: pack/wolf-core/plugins/vc/vc-map/column.php:38
 #: pack/wolf-core/plugins/vc/vc-map/row-inner.php:52
@@ -4398,7 +4402,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/album-tracklist.php:89
 #: pack/wolf-core/plugins/params/price-list.php:60
-#: pack/wolf-core/plugins/params/pricing-table.php:60
+#: pack/wolf-core/plugins/params/pricing-table.php:63
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:66
 #: plugins/params/album-tracklist.php:89 plugins/params/price-list.php:60
 #: plugins/params/pricing-table.php:63
@@ -4636,7 +4640,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/banner.php:104
 #: pack/wolf-core/plugins/params/bigtext.php:160
-#: pack/wolf-core/plugins/params/pricing-table.php:39
+#: pack/wolf-core/plugins/params/pricing-table.php:42
 #: pack/wolf-core/plugins/params/team-member.php:90
 #: plugins/params/banner.php:104 plugins/params/bigtext.php:160
 #: plugins/params/pricing-table.php:42 plugins/params/team-member.php:90
@@ -4950,7 +4954,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/blockquote.php:39
 #: pack/wolf-core/plugins/params/link.php:39
-#: pack/wolf-core/plugins/params/pricing-table.php:55
+#: pack/wolf-core/plugins/params/pricing-table.php:58
 #: pack/wolf-core/plugins/params/testimonial-slider.php:73
 #: plugins/params/blockquote.php:39 plugins/params/link.php:39
 #: plugins/params/pricing-table.php:58 plugins/params/testimonial-slider.php:73
@@ -5980,93 +5984,93 @@ msgstr ""
 msgid "Pricing Table"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:66
+#: pack/wolf-core/plugins/params/pricing-table.php:72
 #: plugins/params/pricing-table.php:72
 msgid "Currency"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:69
+#: pack/wolf-core/plugins/params/pricing-table.php:75
 #: plugins/params/pricing-table.php:75
 msgid "e.g: $ or €"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:73
+#: pack/wolf-core/plugins/params/pricing-table.php:82
 #: plugins/params/pricing-table.php:82
 msgid "Display Currency"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:88
+#: pack/wolf-core/plugins/params/pricing-table.php:97
 #: plugins/params/pricing-table.php:97
 msgid "Offer Price"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:94
+#: pack/wolf-core/plugins/params/pricing-table.php:106
 #: plugins/params/pricing-table.php:106
 msgid "Price Period"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:96
+#: pack/wolf-core/plugins/params/pricing-table.php:108
 #: plugins/params/pricing-table.php:108
 msgid "e.g \"monthly\" or \"per month\""
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:101
+#: pack/wolf-core/plugins/params/pricing-table.php:116
 #: plugins/params/pricing-table.php:116
 msgid "Button Text"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:107
+#: pack/wolf-core/plugins/params/pricing-table.php:122
 #: plugins/params/pricing-table.php:122
 msgid "Button Link"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:113
+#: pack/wolf-core/plugins/params/pricing-table.php:128
 #: plugins/params/pricing-table.php:128
 msgid "Secondary Button Text"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:119
+#: pack/wolf-core/plugins/params/pricing-table.php:134
 #: plugins/params/pricing-table.php:134
 msgid "Secondary Button Link"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:125
+#: pack/wolf-core/plugins/params/pricing-table.php:140
 #: plugins/params/pricing-table.php:140
 msgid "Featured"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:131
+#: pack/wolf-core/plugins/params/pricing-table.php:146
 #: plugins/params/pricing-table.php:146
 msgid "Featured Text"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:136
+#: pack/wolf-core/plugins/params/pricing-table.php:151
 #: pack/wolf-core/plugins/params/social-icons.php:36
 #: plugins/params/pricing-table.php:151 plugins/params/social-icons.php:36
 msgid "Services"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:138
+#: pack/wolf-core/plugins/params/pricing-table.php:153
 #: plugins/params/pricing-table.php:153
 msgid "Enter one service per line."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:143
+#: pack/wolf-core/plugins/params/pricing-table.php:158
 #: plugins/params/pricing-table.php:158
 msgid "Title Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:158
+#: pack/wolf-core/plugins/params/pricing-table.php:173
 #: plugins/params/pricing-table.php:173
 msgid "Price Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:202
+#: pack/wolf-core/plugins/params/pricing-table.php:217
 #: plugins/params/pricing-table.php:217
 msgid "Featured Text Background Color"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/pricing-table.php:213
+#: pack/wolf-core/plugins/params/pricing-table.php:228
 #: plugins/params/pricing-table.php:228
 msgid "Featured Text Color"
 msgstr ""
@@ -6413,6 +6417,26 @@ msgstr ""
 #: pack/wolf-core/plugins/params/team-member.php:107
 #: plugins/params/team-member.php:107
 msgid "Role"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/team-member.php:128
+#: plugins/params/team-member.php:128
+msgid "Name Typography"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/team-member.php:135
+#: plugins/params/team-member.php:135
+msgid "Role Typography"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/team-member.php:143
+#: plugins/params/team-member.php:143
+msgid "Bio Typography"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/team-member.php:151
+#: plugins/params/team-member.php:151
+msgid "Role Color"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/testimonial-slider.php:23
@@ -8121,22 +8145,6 @@ msgstr ""
 
 #: pack/wolf-core/wolf-core.php:361 wolf-core.php:361
 msgid "PHP"
-msgstr ""
-
-#: plugins/params/team-member.php:128
-msgid "Name Typography"
-msgstr ""
-
-#: plugins/params/team-member.php:135
-msgid "Role Typography"
-msgstr ""
-
-#: plugins/params/team-member.php:143
-msgid "Bio Typography"
-msgstr ""
-
-#: plugins/params/team-member.php:151
-msgid "Role Color"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

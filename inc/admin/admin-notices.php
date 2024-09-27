@@ -1,6 +1,6 @@
 <?php
 /**
- * Wolf Core Admin scripts
+ * Wolf Core Admin notices
  *
  * @author wolf_cores
  * @category Admin
