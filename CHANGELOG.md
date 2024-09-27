@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 20th September 2024 - Version 2.0.1
+#### 27th September 2024 - Version 2.0.2
 
 -   Tweak: Updated Instagram feed parameters
+-   Tweak: Optimized big text script enqueue
 
 #### 17th September 2024 - Version 2.0.0
 
