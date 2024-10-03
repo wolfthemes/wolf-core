@@ -416,6 +416,7 @@ function wolf_core_get_team_member_socials() {
 		'twitter',
 		'x',
 		'instagram',
+		'tiktok',
 		'pinterest',
 		'google',
 		'dribbble',
