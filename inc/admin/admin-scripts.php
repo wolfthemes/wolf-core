@@ -35,8 +35,7 @@ function wolf_core_enqueue_admin_scripts() {
 	wp_enqueue_media();
 	wp_enqueue_script( 'wolf-core-media', WOLF_CORE_JS . '/admin/media.js', array( 'jquery', 'wp-color-picker' ), $version, true );
 	wp_enqueue_script( 'wolf-core-admin', WOLF_CORE_JS . '/admin/admin.js', array( 'jquery', 'wp-color-picker' ), $version, true );
-
-	wp_enqueue_script( 'wolf-core-referral', WOLF_CORE_JS . '/admin/referral.js', array(), $version, true );
+	wp_enqueue_script( 'wolf-core-smash-id', WOLF_CORE_JS . '/admin/smash-id.js', array(), $version, true );
 
 	wp_localize_script(
 		'wolf-core-admin',
