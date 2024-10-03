@@ -279,7 +279,7 @@ function wolf_core_social_icons( $atts ) {
 			'apple'       => 'ap',
 			'facebook'    => 'fb',
 			'twitter'     => 'x',
-			'x'     => 'x',
+			'x'     	  => 'x',
 			'instagram'   => 'in',
 			'tiktok'      => 'tk',
 			'linkedin'    => 'li',

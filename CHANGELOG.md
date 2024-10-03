@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 3rd October 2024 - Version 2.0.3
+
+-   Fix: Added wp_kses allowed HTML tags (for Elementor heading widget sanitize function)
+
 #### 27th September 2024 - Version 2.0.2
 
 -   Tweak: Updated Instagram feed parameters
