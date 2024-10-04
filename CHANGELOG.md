@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 4th October 2024 - Version 2.0.4
+
+-   Fix: License tab styling issue
+
 #### 3rd October 2024 - Version 2.0.3
 
 -   Fix: Added wp_kses allowed HTML tags (for Elementor heading widget sanitize function)

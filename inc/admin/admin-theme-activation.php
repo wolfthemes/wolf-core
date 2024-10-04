@@ -89,19 +89,19 @@ function wolf_core_output_about_me_tab_content() {
 add_action( 'wolf_core_about_me_tab_content', 'wolf_core_output_about_me_tab_content' );
 
 /**
- * Theme  tab
+ * License Me tab
  */
-function wolf_core_output__tab() {
+function wolf_core_output_license_tab() {
 	?>
-	<a href="#" class="nav-tab"><?php esc_html_e( '', 'wolf-core' ); ?></a>
+	<a href="#license" class="nav-tab"><?php esc_html_e( 'License', 'wolf-core' ); ?></a>
 	<?php
 }
-add_action( 'wolf_core__tab', 'wolf_core_output__tab' );
+add_action( 'wolf_core_license_tab', 'wolf_core_output_license_tab' );
 
 /**
  * Theme  tab
  */
-function wolf_core_output__tab_content() {
+function wolf_core_output_license_tab_content() {
 	?>
 	<?php
 	if ( isset( $_POST['wolf_core_reset_purchase_code'] ) ) :
@@ -113,13 +113,13 @@ function wolf_core_output__tab_content() {
 		delete_option( 'wolf_core_key' );
 		endif;
 	?>
-	<div id="" class="wolf-core-options-panel">
+	<div id="license" class="wolf-core-options-panel">
 	<?php
 		$activated  = wolf_core_activate_theme();
 		$theme_name = wolf_core_get_theme_name();
 		$theme_slug = wolf_core_get_theme_slug();
 	?>
-		<ul class="wolf-core--info">
+		<ul class="wolf-core-license-info">
 			<li>
 			<?php
 				echo sprintf(
@@ -162,7 +162,7 @@ function wolf_core_output__tab_content() {
 			<!-- </li> -->
 		</ul>
 		<?php if ( ! $activated ) : ?>
-		<p class="wolf-core--cta-text">
+		<p class="wolf-core-license-cta-text">
 			<?php
 				echo sprintf(
 					wp_kses_post( __( 'Please enter your <strong>theme purchase code</strong> below to activate your theme  and be able to use all features.', 'wolf-core' ) ),
@@ -171,7 +171,7 @@ function wolf_core_output__tab_content() {
 			?>
 		</p>
 		<form method="post" action="<?php echo esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about' ) ); ?>">
-		<input name="theme_purchase_code" placeholder="693e0017-48d3-4bd5-be47-1c5c14e7ab9c" type="text" class="regular-text wolf-core--input"><input value="<?php esc_html_e( 'Activate', 'wolf-core' ); ?>" type="submit" class="button button-primary wolf-core--button">
+		<input name="theme_purchase_code" placeholder="693e0017-48d3-4bd5-be47-1c5c14e7ab9c" type="text" class="regular-text wolf-core-license-input"><input value="<?php esc_html_e( 'Activate', 'wolf-core' ); ?>" type="submit" class="button button-primary wolf-core-license-button">
 		</form>
 		<p>
 			<a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Can-I-Find-my-Purchase-Code-"><?php esc_html_e( 'How to find your purchase code', 'wolf-core' ); ?></a>
@@ -194,7 +194,7 @@ function wolf_core_output__tab_content() {
 	</div><!-- # -->
 	<?php
 }
-add_action( 'wolf_core__tab_content', 'wolf_core_output__tab_content' );
+add_action( 'wolf_core_license_tab_content', 'wolf_core_output_license_tab_content' );
 
 /**
  * Activate the theme
@@ -252,6 +252,9 @@ function wolf_core_activate_theme() {
 						esc_html_e( 'Extension activated', 'wolf-core' );
 						echo '</p>';
 						echo '</div>';
+
+						wp_safe_redirect( admin_url( 'themes.php?page=' . wolf_core_get_theme_slug() . '-about' ) );
+						exit;
 
 					} else {
 						$is_error = true;
