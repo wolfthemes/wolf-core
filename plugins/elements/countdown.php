@@ -57,8 +57,8 @@ function wolf_core_countdown( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	wp_enqueue_script( 'countdown' );
-	wp_enqueue_script( 'wolf-core-countdown' );
+	//wp_enqueue_script( 'countdown' );
+	//wp_enqueue_script( 'wolf-core-countdown' );
 
 	$output = '';
 

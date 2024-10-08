@@ -47,7 +47,7 @@ function wolf_core_countdown_params() {
 					'ai' => array(
 						'active' => false,
 					),
-					),
+				),
 
 				array(
 					'type'        => 'select',
@@ -80,7 +80,7 @@ function wolf_core_countdown_params() {
 					'type'         => 'typography',
 					'label'        => esc_html__( 'Amount Typography', 'wolf-core' ),
 					'param_name'   => 'typography',
-					'selector'     => '{{WRAPPER}} .wolf-core-countdown .countdown-amount',
+					'selector'     => '{{WRAPPER}} .wolf-core-countdown .countdown-row .countdown-section .countdown-amount',
 					'page_builder' => 'elementor',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
@@ -89,7 +89,7 @@ function wolf_core_countdown_params() {
 					'type'         => 'typography',
 					'label'        => esc_html__( 'Period Typography', 'wolf-core' ),
 					'param_name'   => 'typography_period',
-					'selector'     => '{{WRAPPER}} .wolf-core-countdown .countdown-period',
+					'selector'     => '{{WRAPPER}} .wolf-core-countdown .countdown-row .countdown-section .countdown-period',
 					'page_builder' => 'elementor',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),

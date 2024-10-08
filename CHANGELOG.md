@@ -1,6 +1,11 @@
 
 # Changelog
 
+#### 8th October 2024 - Version 2.0.6
+
+-   Fix: Countdown not visible in Elementor editor
+-   Tweak: Countdown typography flexibility
+
 #### 4th October 2024 - Version 2.0.4
 
 -   Fix: License tab styling issue

@@ -31,14 +31,14 @@ class Elementor_Theme_Countdown_Widget extends \Elementor\Widget_Base { // phpcs
 
 		$this->params = wolf_core_countdown_params();
 
-		// if ( isset( $this->params['properties']['scripts'] ) ) {
+		if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+			$this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
-		// }
+			foreach ( $this->scripts as $script ) {
+				wp_enqueue_script( $script );
+			}
+		}
 	}
 
 	/**

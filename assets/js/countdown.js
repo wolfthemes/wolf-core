@@ -261,7 +261,7 @@ var WolfCoreCountdown = function( $ ) {
 	} );
 
 	$( window ).on( 'elementor/frontend/init', function() {
-		elementorFrontend.hooks.addAction( "frontend/element_ready/countdown.default", function() {
+		elementorFrontend.hooks.addAction( "frontend/element_ready/wolf_core_countdown.default", function() {
 			WolfCoreCountdown.destroy();
 			WolfCoreCountdown.init();
 		} );
