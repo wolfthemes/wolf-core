@@ -145,13 +145,13 @@ function wolf_core_countdown( $atts ) {
 
 	/* Amount style tag */
 	if ( $amount_style_tag && ! wolf_core_is_elementor_editor() ) {
-		$output .= '<style>';
+		//$output .= '<style>';
 		if ( $font_size && preg_match( '~[0-9]+~', $font_size ) ) {
-			$font_size = wolf_core_sanitize_css_value( $font_size );
-			$output   .= "@media screen and (min-width: 1200px) { #wolf-core-countdown-$rand_id{ font-size:$font_size;} }";
+			//$font_size = wolf_core_sanitize_css_value( $font_size );
+			//$output   .= "@media screen and (min-width: 1200px) { #wolf-core-countdown-$rand_id{ font-size:$font_size;} }";
 		}
-		$output .= '#wolf-core-countdown-' . absint( $rand_id ) . ' .countdown-amount{ ' . $amount_style_tag . '}';
-		$output .= '</style>';
+		//$output .= '#wolf-core-countdown-' . absint( $rand_id ) . ' .countdown-amount{ ' . $amount_style_tag . '}';
+		//$output .= '</style>';
 	}
 
 	/* Period color */
@@ -198,9 +198,9 @@ function wolf_core_countdown( $atts ) {
 
 	/* Period style tag */
 	if ( $period_style_tag && ! wolf_core_is_elementor_editor() ) {
-		$output .= '<style>';
-		$output .= '#wolf-core-countdown-' . absint( $rand_id ) . ' .countdown-period{ ' . $period_style_tag . '}';
-		$output .= '</style>';
+		//$output .= '<style>';
+		//$output .= '#wolf-core-countdown-' . absint( $rand_id ) . ' .countdown-period{ ' . $period_style_tag . '}';
+		//$output .= '</style>';
 	}
 
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
