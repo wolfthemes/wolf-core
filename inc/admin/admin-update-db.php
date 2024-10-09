@@ -29,7 +29,7 @@ class Wolf_Core_DB_Updater {
 	 * @var mixed
 	 * @access private
 	 */
-	private $last_elementor_version = '3.8.13';
+	private $last_elementor_version = '3.24.5';
 
 	/**
 	 * Last DB version update
@@ -37,7 +37,7 @@ class Wolf_Core_DB_Updater {
 	 * @var mixed
 	 * @access private
 	 */
-	private $last_db_version = '1.8.2';
+	private $last_db_version = '1.8.5';
 
 	/**
 	 * New DB version update
@@ -45,7 +45,7 @@ class Wolf_Core_DB_Updater {
 	 * @var mixed
 	 * @access private
 	 */
-	private $newest_db_version = '1.8.6';
+	private $newest_db_version = '2.0.7';
 
 	/**
 	 * Admin notice title label
@@ -68,7 +68,6 @@ class Wolf_Core_DB_Updater {
 		add_action( 'admin_init', array( $this, 'set_db_state' ) );
 
 		// Update notice.
-
 		add_action( 'admin_notices', array( $this, 'admin_notice_start_upgrade' ) );
 		add_action( 'admin_notices', array( $this, 'admin_notice_upgrade_is_running' ) );
 		add_action( 'admin_notices', array( $this, 'admin_notice_upgrade_is_completed' ) );
@@ -82,8 +81,8 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function set_db_state() {
 
-		// update_option( 'wolf_core_db_state', 'need_update' );
-		// delete_option( 'wolf_core_db_update_status' );
+		//update_option( 'wolf_core_db_state', 'need_update' );
+		//delete_option( 'wolf_core_db_update_status' );
 
 		global $pagenow;
 
@@ -95,6 +94,8 @@ class Wolf_Core_DB_Updater {
 			'Version history: '  => get_option( 'wolf_core_install_history', array() ),
 			'Should Upgrade: '   => $this->should_upgrade(),
 			'Is First Install'   => $this->is_first_install(),
+			'Previous WCore Version'   => $this->get_previous_installed_version(),
+			'Compare Version'    => version_compare( $this->get_previous_installed_version(), $this->newest_db_version, '<' )
 		);
 
 		if ( 'index.php' === $pagenow ) {
@@ -128,6 +129,23 @@ class Wolf_Core_DB_Updater {
 	}
 
 	/**
+	 * Get previous version installed
+	 */
+	public function get_previous_installed_version() {
+		$installs_history = get_option( 'wolf_core_install_history', array() );
+		$second_last_version = '99999'; // if no previous version installed set high number so the version compare returns false
+
+		if ( array() !== $installs_history ) {
+			$versions = array_keys( $installs_history );
+			natsort( $versions );
+			$versions = array_values($versions);
+			$second_last_version = $versions[count($versions) - 2];
+		}
+
+		return $second_last_version;
+	}
+
+	/**
 	 * Should upgrade condition
 	 *
 	 * Check previous and current and current version
@@ -136,12 +154,11 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function should_upgrade() {
 
-		$installs_history = get_option( 'wolf_core_install_history', array() );
-
 		if (
-			isset( $installs_history[ $this->last_db_version ] )
-			&& get_option( 'wolf_core_db_state' ) !== $this->newest_db_version // need to be adressed.
-			&& version_compare( ELEMENTOR_VERSION, $this->last_elementor_version, '>=' ) ) {
+			version_compare( $this->get_previous_installed_version(), $this->newest_db_version, '<' )
+			&& get_option( 'wolf_core_db_state' ) !== $this->newest_db_version
+			&& version_compare( ELEMENTOR_VERSION, $this->last_elementor_version, '>=' )
+		) {
 			return true;
 		}
 	}
@@ -151,10 +168,10 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function update_db() {
 
-		// wolf_core_log( 'test' );
+		//wolf_core_log( 'test' );
 
-		// delete_option( 'wolf_core_db_update_status' );
-		// debug( get_option( 'wolf_core_db_update_status' ) );
+		//delete_option( 'wolf_core_db_update_status' );
+		//debug( get_option( 'wolf_core_db_update_status' ) );
 
 		if ( isset( $_GET['wolf-core-db-process-update'] ) ) {
 			update_option( 'wolf_core_db_update_status', 'launching' );
@@ -170,7 +187,7 @@ class Wolf_Core_DB_Updater {
 
 			update_option( 'wolf_core_db_update_status', 'launched' );
 
-			$this->_v_1_8_5_widget_name_updates( $background_process );
+			$this->_v_2_0_7_widget_name_updates( $background_process );
 
 			// Start the queue.
 			$background_process->save()->dispatch();
@@ -182,11 +199,12 @@ class Wolf_Core_DB_Updater {
 	 *
 	 * More may be needed later
 	 */
-	public function _v_1_8_5_widget_name_updates( $background_process ) {
+	public function _v_2_0_7_widget_name_updates( $background_process ) {
 
 		global $wpdb;
 
 		$widgets = array(
+			'price-list'      => 'wolf_core_price_list',
 			'gallery'         => 'wolf_core_gallery',
 			'blockquote'      => 'wolf_core_blockquote',
 			'countdown'       => 'wolf_core_countdown',
@@ -208,6 +226,11 @@ class Wolf_Core_DB_Updater {
 
 		$post_ids = $wpdb->get_col( $wpdb->prepare( $query_string ) );
 
+		//debug( $query_string );
+		//debug( $post_ids );
+
+		//return;
+
 		if ( empty( $post_ids ) ) {
 			update_option( 'wolf_core_db_update_status', 'completed' );
 			$background_process->kill_process(); // reset.
@@ -215,7 +238,7 @@ class Wolf_Core_DB_Updater {
 		}
 
 		foreach ( $post_ids as $post_id ) {
-			// wolf_core_log( 'puching => ' . $post_id  );
+			wolf_core_log( 'pushing => ' . $post_id  );
 			$background_process->push_to_queue( $post_id );
 		}
 	}

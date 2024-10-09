@@ -25,7 +25,7 @@ function wolf_core_price_list_params() {
 				'vc_base'       => 'wolf_core_price_list',
 				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
-				'el_base'       => 'price-list',
+				'el_base'       => 'wolf_core_price_list',
 				'icon'          => 'far fa-list-alt',
 			),
 			'params'     => array(

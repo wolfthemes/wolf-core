@@ -28,7 +28,7 @@ class Wolf_Core_Admin {
 	}
 
 	/**
-	 * Perform actions on updating the theme id needed
+	 * Perform actions on updating the theme if needed
 	 */
 	public function update() {
 

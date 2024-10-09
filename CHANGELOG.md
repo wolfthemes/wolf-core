@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 8th October 2024 - Version 2.0.6
+#### 8th October 2024 - Version 2.0.7
 
+-   Fix: Update price list widget name (use updater)
 -   Fix: Countdown not visible in Elementor editor
 -   Tweak: Countdown typography flexibility
 

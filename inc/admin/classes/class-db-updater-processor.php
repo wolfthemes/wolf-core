@@ -218,6 +218,7 @@ class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
 		global $wpdb;
 
 		$widgets = array(
+			'price-list'      => 'wolf_core_price_list',
 			'gallery'         => 'wolf_core_gallery',
 			'blockquote'      => 'wolf_core_blockquote',
 			'countdown'       => 'wolf_core_countdown',

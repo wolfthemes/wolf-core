@@ -1458,6 +1458,10 @@ function wolf_core_get_page_by_title( $page_title, $output = OBJECT, $post_type 
 if ( ! function_exists( 'wolf_core_log' ) ) {
 
 	function wolf_core_log( $v ) {
-		error_log( $v . PHP_EOL , 3, WOLF_CORE_DIR .  '/debug.log' );
+		$log_file = WOLF_CORE_DIR . '/debug.log';
+
+		if ( ( file_exists( $log_file ) && is_writable( $log_file ) ) || ( ! file_exists( $log_file ) && is_writable( dirname( $log_file ) ) ) ) {
+			error_log( $v . PHP_EOL , 3, $log_file );
+		}
 	}
 }
