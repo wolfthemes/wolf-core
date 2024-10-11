@@ -163,6 +163,10 @@ function wolf_core_render_custom_attributes( $widget ) {
 	if ( isset( $settings['font_color'] ) ) {
 		$widget->add_render_attribute( '_wrapper', 'class', 'wolf-core-font-' . esc_attr( $settings['font_color'] ) );
 		$widget->add_render_attribute( '_wrapper', 'data-font-skin', esc_attr( $settings['font_color'] ) );
+
+		$skin = ( 'light' === $settings['font_color'] ) ? 'dark' : '';
+
+		$widget->add_render_attribute( '_wrapper', 'data-color-tone', esc_attr( $skin ) );
 	}
 
 	/* Section ID and name data for one-page feature */
