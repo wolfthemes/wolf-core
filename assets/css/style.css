@@ -3118,11 +3118,13 @@ li.wolf-core-album-tracklist-item {
   flex: 1;
 }
 .wolf-core-countdown-container .countdown-amount {
+  font-size: 48px;
   font-weight: 700;
   position: relative;
 }
 .wolf-core-countdown-container .countdown-period {
   display: block;
+  font-size: 18px;
 }
 .wolf-core-countdown-container .countdown-descr {
   display: block;
@@ -6217,10 +6219,6 @@ i.fab.fa-x {
   }
 
   /* Countdown */
-  .wolf-core-countdown-container {
-    font-size: 32px;
-  }
-
   .wolf-core-slide-caption {
     padding: 80px;
   }
@@ -6709,10 +6707,6 @@ i.fab.fa-x {
   }
 
   /* Countdown */
-  .wolf-core-countdown-container {
-    font-size: 54px;
-  }
-
   .wolf-core-slide-text-type-big-text {
     font-size: 24px;
     padding: 0;
