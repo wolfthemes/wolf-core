@@ -163,6 +163,7 @@ function wolf_core_is_activated() {
 			$remote_url,
 			array(
 				'method' => 'POST',
+				'timeout'     => 30,
 				'body'   => array(
 					'action' => 'verification',
 					'code'   => get_option( 'wolf_core_code' ),
