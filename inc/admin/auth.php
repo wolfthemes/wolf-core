@@ -163,7 +163,6 @@ function wolf_core_is_activated() {
 			$remote_url,
 			array(
 				'method' => 'POST',
-				'timeout'     => 30,
 				'body'   => array(
 					'action' => 'verification',
 					'code'   => get_option( 'wolf_core_code' ),
@@ -178,6 +177,7 @@ function wolf_core_is_activated() {
 			// $body = '';
 
 			if ( '' === $body ) {
+				delete_option( 'wolf_core_supported_until' );
 				delete_option( 'wolf_core_code' );
 				delete_option( 'wolf_core_key' );
 				update_option( 'wolf_core_activation_notice_set', true );
@@ -188,6 +188,7 @@ function wolf_core_is_activated() {
 				return true;
 			}
 		} else {
+			delete_option( 'wolf_core_supported_until' );
 			delete_option( 'wolf_core_code' );
 			delete_option( 'wolf_core_key' );
 			update_option( 'wolf_core_activation_notice_set', true );

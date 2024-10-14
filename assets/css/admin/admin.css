@@ -652,6 +652,12 @@ i.wvc_shortcodes_tiny_mce_button.mce-ico {
   flex-direction: column;
 }
 
+.wolf-core-activation-error {
+  padding: 20px;
+  background: antiquewhite;
+  border: 1px solid #dbc011;
+}
+
 /*!
  * jQuery UI Slider 1.8.21
  *

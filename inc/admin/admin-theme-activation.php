@@ -107,6 +107,7 @@ function wolf_core_output_license_tab_content() {
 	if ( isset( $_POST['wolf_core_reset_purchase_code'] ) ) :
 		delete_option( 'wolf_core_activation_notice_set' );
 		delete_transient( 'wolf_core_activation_notice' );
+		delete_option( 'wolf_core_supported_until' );
 		delete_option( 'wolf_core_activation_time' );
 		delete_option( 'wolf_core_activated' );
 		delete_option( 'wolf_core_code' );
@@ -178,11 +179,42 @@ function wolf_core_output_license_tab_content() {
 		</p>
 		<?php else : ?>
 		<p>
+
 			<?php
 			echo sprintf(
-				wp_kses_post( __( 'The %s is activated.', 'wolf-core' ) ),
+				wp_kses_post( __( 'The %s Extension is activated.', 'wolf-core' ) ),
 				'Wolf Core'
 			);
+
+			$support_end_date = get_option( 'wolf_core_supported_until' );
+
+			if ( $support_end_date ) {
+				echo '<br>';
+				echo '<strong>';
+
+				if ( wolf_core_support_expired() ) {
+					// If support has expired, show the renewal message
+					echo wp_sprintf(
+						wp_kses_post( __( 'Your support for %s has expired. You can renew it <a target="_blank" href="%s">HERE</a>.', 'wolf-core' ) ),
+						esc_html( wolf_core_get_theme_name() ),
+						esc_url( 'https://themeforest.net/downloads' )
+					);
+				} else {
+					// Convert the ISO 8601 formatted date to a timestamp
+					$support_end_timestamp = strtotime( $support_end_date );
+					// Format the timestamp into a more readable date
+					$formatted_date = date( 'F j, Y', $support_end_timestamp ); // E.g., December 8, 2024
+
+					// Show the valid support message with the expiration date
+					echo wp_sprintf(
+						wp_kses_post( __( 'Your support for %s is valid until <span style="color: #28a745;">%s</span>.', 'wolf-core' ) ),
+						esc_html( wolf_core_get_theme_name() ),
+						esc_html( $formatted_date )
+					);
+				}
+
+				echo '</strong>';
+			}
 			?>
 		</p>
 		<form method="post" action="<?php echo esc_url( admin_url( 'themes.php?page=' . $theme_slug . '-about' ) ); ?>"><input name="wolf_core_reset_purchase_code" value="<?php esc_html_e( 'Reset purchase code', 'wolf-core' ); ?>" type="submit" class="button button-secondary">
@@ -203,86 +235,106 @@ function wolf_core_activate_theme() {
 
 	$activated     = get_option( 'wolf_core_key' );
 	$is_error      = false;
-	$error_message = esc_html__( 'Something went wrong. It way be due to a temporary Envato API outage. Please try again in a few minutes.', 'wolf-core' );
+	$error_message = esc_html__( 'Something went wrong. It may be due to a temporary Envato API outage. Please try again in a few minutes.', 'wolf-core' );
+	$error         = '';
 
-	if ( ! $activated ) {
+	// Check if cURL is enabled on the server
+	if ( ! function_exists( 'curl_init' ) ) {
+		$is_error = true;
+		$error = esc_html__( 'The server does not support cURL, which is required for theme activation. Please contact your hosting provider.', 'wolf-core' );
+	}
 
-		/* Verifiy purchase */
+	// Check if the theme is not already activated
+	if ( ! $activated && ! $is_error ) {
+
+		/* Verify purchase */
 		if ( ! empty( $_POST['theme_purchase_code'] ) ) {
 
 			$code       = esc_attr( $_POST['theme_purchase_code'] );
 			$remote_url = 'https://api.wolfthemes.com/envato/';
-			// $remote_url = 'http://localhost/api/envato/';
+			$url        = $remote_url . '?code=' . $code;
 
-			$url = $remote_url . '?code=' . $code;
-
-			// send request
+			// Send request
 			$response = wp_safe_remote_post(
 				$url,
 				array(
 					'method' => 'POST',
 					'body'   => array(
-						'action'        => 'activation',
-						'purchase_code' => $code,
+						'timeout'        => 30,
+						'action'         => 'activation',
+						'purchase_code'  => $code,
 					),
 				)
 			);
 
-			// get result if no error
-			if ( ! is_wp_error( $response ) && is_array( $response ) ) {
+			// Check for WP errors first
+			if ( is_wp_error( $response ) ) {
+				$is_error = true;
+				$error    = $response->get_error_message();
 
-				$body = wp_remote_retrieve_body( $response ); // use the content
+				// Handle specific cURL errors
+				if ( strpos( $error, 'cURL' ) !== false ) {
+					$error = esc_html__( 'The request failed due to a cURL error. This may be caused by firewall or DNS blocking. Please check with your hosting provider to ensure that outgoing requests to api.wolfthemes.com are allowed.', 'wolf-core' );
+				}
 
-				if ( $body ) {
+			} elseif ( is_array( $response ) ) {
 
+				// Retrieve the response body
+				$body = wp_remote_retrieve_body( $response );
+
+				// Check if the body is empty
+				if ( ! $body ) {
+					$is_error = true;
+					$error    = esc_html__( 'No response body received from the server. Please try again later.', 'wolf-core' );
+				} else {
+					// Decode the JSON response
 					$data = json_decode( $body );
 
+					// Validate the response data
 					if ( $data && is_object( $data ) && isset( $data->code ) && isset( $data->key ) ) {
 
-						// set_transient( 'wolf_core_activated', true, 365 * DAY_IN_SECONDS );
+						// Save activation details
 						update_option( 'wolf_core_activated', true );
 						update_option( 'wolf_core_activation_time', time() );
+						update_option( 'wolf_core_supported_until', $data->supported_until );
 						add_option( 'wolf_core_code', $data->code );
 						add_option( 'wolf_core_key', $data->key );
 						delete_transient( 'wolf_core_activation_notice' );
 						$activated = true;
 
-						echo '<div class="notice-success notice">';
-						echo '<p>';
-						esc_html_e( 'Extension activated', 'wolf-core' );
-						echo '</p>';
+						// Display success message
+						echo '<div class="wolf-core-activation-success wolf-core-notice-warning wolf-core-admin-notice">';
+						echo '<p>' . esc_html__( 'Extension activated', 'wolf-core' ) . '</p>';
 						echo '</div>';
 
+						// Redirect after activation
 						wp_safe_redirect( admin_url( 'themes.php?page=' . wolf_core_get_theme_slug() . '-about' ) );
 						exit;
 
+					} elseif ( isset( $data->error ) ) {
+						$is_error = true;
+						$error    = esc_html__( 'Error: ' . $data->error, 'wolf-core' );
 					} else {
 						$is_error = true;
-						$error    = $error_message;
+						$error    = esc_html__( 'Invalid or incomplete data received from the server. Please try again.', 'wolf-core' );
 					}
-				} else {
-					$is_error = true;
-					$error    = $error_message;
 				}
 			} else {
 				$is_error = true;
-				$error    = $error_message;
+				$error    = esc_html__( 'Unexpected error during the request. Please try again later.', 'wolf-core' );
 			}
 		} else {
 			$is_error = true;
-			$error    = esc_html__( 'Purchase code can not be empty', 'wolf-core' );
+			$error    = esc_html__( 'Purchase code cannot be empty', 'wolf-core' );
 		}
 	} elseif ( $activated ) {
-
 		return true;
 	}
 
-	if ( $is_error && $error ) {
-
-		echo '<div class="notice-error notice">';
-		echo '<p>';
-		echo esc_attr( $error );
-		echo '</p>';
+	// Display error message if there was an error
+	if ( $is_error && $error && isset( $_POST['theme_purchase_code'] ) ) {
+		echo '<div class="wolf-core-activation-error wolf-core-notice-warning wolf-core-admin-notice">';
+		echo '<p>' . esc_attr( $error ) . '</p>';
 		echo '</div>';
 	}
 

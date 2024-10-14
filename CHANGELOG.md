@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 14th October 2024 - Version 2.0.8
+
+-   Tweak: Added more info message for activation error
+
 #### 8th October 2024 - Version 2.0.7
 
 -   Fix: Update price list widget name (use updater)
