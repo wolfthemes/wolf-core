@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 14th October 2024 - Version 2.0.9
+#### 16th October 2024 - Version 2.0.10
 
+-   Tweak: Added more allowed tags in heading text
 -   Tweak: Minimize count down default font setting
 
 #### 14th October 2024 - Version 2.0.8

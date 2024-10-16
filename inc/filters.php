@@ -17,9 +17,22 @@ defined( 'ABSPATH' ) || exit;
  */
 add_filter( 'wp_kses_allowed_html', function( $array ) {
 
-	$array['distorted'] = array();
-	$array['elipse'] = array();
-	$array['underline'] = array();
+	$array['distorted'] = array(
+		'class' => array(),
+		'id'    => array(),
+	);
+	$array['elipse'] = array(
+		'class' => array(),
+		'id'    => array(),
+	);
+	$array['underline'] = array(
+		'class' => array(),
+		'id'    => array(),
+	);
+	$array['accent'] = array(
+		'class' => array(),
+		'id'    => array(),
+	);
 
 	return $array;
 }, 44 );
