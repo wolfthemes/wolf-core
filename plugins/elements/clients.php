@@ -51,6 +51,8 @@ function wolf_core_clients( $atts ) {
 	$link_start   = '';
 	$link_end     = '';
 
+	$class = $el_class; // init container CSS class.
+
 	/* Animate one by one */
 	if ( $css_animation_each ) {
 
@@ -72,7 +74,7 @@ function wolf_core_clients( $atts ) {
 
 	$output = '';
 
-	$class = $el_class; // init container CSS class.
+
 
 	$class .= " wolf-clients wolf-core-clearfix wolf-core-clients-$type wolf-core-clients-padding-$padding wolf-core-element";
 

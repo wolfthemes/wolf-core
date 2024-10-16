@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 14th October 2024 - Version 2.0.9
+
+-   Tweak: Minimize count down default font setting
+
 #### 14th October 2024 - Version 2.0.8
 
 -   Tweak: Added more info message for activation error

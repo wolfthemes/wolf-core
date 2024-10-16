@@ -95,7 +95,7 @@ function wolf_core_clients_params() {
 					'default'    => 'yes',
 				),
 
-				array(
+				'css_animation_each' => array(
 					'type'         => 'hidden',
 					'label'        => esc_html__( 'Animate Image One By One', 'wolf-core' ),
 					'param_name'   => 'css_animation_each',
@@ -103,7 +103,7 @@ function wolf_core_clients_params() {
 					'page_builder' => 'elementor',
 				),
 
-				array(
+				'css_animation' => array(
 					'type'         => 'select',
 					'label'        => esc_html__( 'Animation', 'wolf-core' ),
 					'param_name'   => 'css_animation',
