@@ -27,12 +27,11 @@ function wolf_core_sb_instagram_feed_params() {
 	);
 
 	$feeds = array();
+	$feeds[1] = esc_html__( 'Default', 'wolf-core' );
 	if ( $feed_posts ) {
 		foreach ( $feed_posts as $feed ) {
 			$feeds[ $feed->id ] = $feed->feed_name;
 		}
-	} else {
-		$feeds[0] = esc_html__( 'Default', 'wolf-core' );
 	}
 
 	return apply_filters(

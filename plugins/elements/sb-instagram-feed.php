@@ -22,6 +22,7 @@ function wolf_core_sb_instagram_feed( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
+				//'feed'                  => 1,
 				'num'                   => 18,
 				'cols'                  => 6,
 				'username'              => '',

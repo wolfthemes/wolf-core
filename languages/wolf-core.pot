@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 2.0.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-10-16 08:33:32+00:00\n"
+"POT-Creation-Date: 2024-10-16 09:57:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -873,7 +873,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/heading.php:125
 #: pack/wolf-core/plugins/params/heading.php:140
 #: pack/wolf-core/plugins/params/icon.php:82
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:35
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:30
 #: pack/wolf-core/plugins/params/twitter.php:85
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:556
 #: pack/wolf-core/plugins/vc/vc-custom-fields.php:61
@@ -903,7 +903,7 @@ msgstr ""
 #: plugins/params/bigtext.php:121 plugins/params/bigtext.php:137
 #: plugins/params/google-maps.php:42 plugins/params/heading.php:125
 #: plugins/params/heading.php:140 plugins/params/icon.php:82
-#: plugins/params/sb-instagram-feed.php:35 plugins/params/twitter.php:85
+#: plugins/params/sb-instagram-feed.php:30 plugins/params/twitter.php:85
 #: plugins/vc/deprecated/wvc_icon.php:556 plugins/vc/vc-custom-fields.php:61
 #: plugins/vc/vc-params/background-params.php:23
 #: plugins/vc/vc-params/background-params.php:41
@@ -2198,7 +2198,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:62
 #: pack/wolf-core/plugins/params/mailchimp.php:75
 #: pack/wolf-core/plugins/params/open-table.php:125
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:146
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:145
 #: pack/wolf-core/plugins/params/video-opener.php:39
 #: pack/wolf-core/plugins/vc/vc-core-functions.php:90
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:190
@@ -2227,7 +2227,7 @@ msgstr ""
 #: plugins/params/gallery.php:331 plugins/params/gallery.php:345
 #: plugins/params/mailchimp.php:49 plugins/params/mailchimp.php:62
 #: plugins/params/mailchimp.php:75 plugins/params/open-table.php:125
-#: plugins/params/sb-instagram-feed.php:146 plugins/params/video-opener.php:39
+#: plugins/params/sb-instagram-feed.php:145 plugins/params/video-opener.php:39
 #: plugins/vc/vc-core-functions.php:90
 #: plugins/vc/vc-params/background-params.php:190
 #: plugins/vc/vc-params/background-params.php:261
@@ -2269,7 +2269,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:61
 #: pack/wolf-core/plugins/params/mailchimp.php:74
 #: pack/wolf-core/plugins/params/open-table.php:124
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:147
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:146
 #: pack/wolf-core/plugins/params/video-opener.php:38
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:262
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:336
@@ -2292,7 +2292,7 @@ msgstr ""
 #: plugins/params/gallery.php:332 plugins/params/gallery.php:346
 #: plugins/params/mailchimp.php:48 plugins/params/mailchimp.php:61
 #: plugins/params/mailchimp.php:74 plugins/params/open-table.php:124
-#: plugins/params/sb-instagram-feed.php:147 plugins/params/video-opener.php:38
+#: plugins/params/sb-instagram-feed.php:146 plugins/params/video-opener.php:38
 #: plugins/vc/vc-params/background-params.php:262
 #: plugins/vc/vc-params/background-params.php:336
 #: plugins/vc/vc-params/background-params.php:397
@@ -3765,7 +3765,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/pricing-table.php:26
 #: pack/wolf-core/plugins/params/process.php:26
 #: pack/wolf-core/plugins/params/rotating-text.php:26
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:46
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:45
 #: pack/wolf-core/plugins/params/shape-slider.php:26
 #: pack/wolf-core/plugins/params/team-member.php:48
 #: pack/wolf-core/plugins/params/testimonial-slider.php:26
@@ -3785,7 +3785,7 @@ msgstr ""
 #: plugins/params/mailchimp.php:26 plugins/params/marquee-text.php:26
 #: plugins/params/open-table.php:26 plugins/params/price-list.php:26
 #: plugins/params/pricing-table.php:26 plugins/params/process.php:26
-#: plugins/params/rotating-text.php:26 plugins/params/sb-instagram-feed.php:46
+#: plugins/params/rotating-text.php:26 plugins/params/sb-instagram-feed.php:45
 #: plugins/params/shape-slider.php:26 plugins/params/team-member.php:48
 #: plugins/params/testimonial-slider.php:26
 #: plugins/params/textual-showcase.php:26
@@ -4070,8 +4070,8 @@ msgstr ""
 msgid "Subscription to our newsletter open soon."
 msgstr ""
 
-#: pack/wolf-core/plugins/elements/sb-instagram-feed.php:61
-#: plugins/elements/sb-instagram-feed.php:61
+#: pack/wolf-core/plugins/elements/sb-instagram-feed.php:62
+#: plugins/elements/sb-instagram-feed.php:62
 msgid "Instagram @%s"
 msgstr ""
 
@@ -6219,38 +6219,38 @@ msgstr ""
 msgid "Icon Vertical Adjustment"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:42
-#: plugins/params/sb-instagram-feed.php:42
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:41
+#: plugins/params/sb-instagram-feed.php:41
 msgid "Instagram Feed"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:43
-#: plugins/params/sb-instagram-feed.php:43
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:42
+#: plugins/params/sb-instagram-feed.php:42
 msgid "Your last instagram photos"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:55
-#: plugins/params/sb-instagram-feed.php:55
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:54
+#: plugins/params/sb-instagram-feed.php:54
 msgid "Feed"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:103
-#: plugins/params/sb-instagram-feed.php:103
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:102
+#: plugins/params/sb-instagram-feed.php:102
 msgid "Display follow button (theme style)"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:109
-#: plugins/params/sb-instagram-feed.php:109
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:108
+#: plugins/params/sb-instagram-feed.php:108
 msgid "Button Text (theme style)"
+msgstr ""
+
+#: pack/wolf-core/plugins/params/sb-instagram-feed.php:142
+#: plugins/params/sb-instagram-feed.php:142
+msgid "Disable Default Hover Effect"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/sb-instagram-feed.php:143
 #: plugins/params/sb-instagram-feed.php:143
-msgid "Disable Default Hover Effect"
-msgstr ""
-
-#: pack/wolf-core/plugins/params/sb-instagram-feed.php:144
-#: plugins/params/sb-instagram-feed.php:144
 msgid ""
 "Check this option to set your own hover effect if you have the pro version "
 "of the Instagram Feed plugin."
