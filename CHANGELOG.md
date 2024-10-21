@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 21th October 2024 - Version 2.0.11
+
+-   Improvement: Switch video opener lightbox to fancybox. Prevent issue with video opening directly instead of inside a lightbox, when JS files are minifed
+
 #### 16th October 2024 - Version 2.0.10
 
 -   Tweak: Added more allowed tags in heading text

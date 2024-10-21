@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 2.0.10\n"
+"Project-Id-Version: Wolf Core 2.0.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-10-16 09:57:32+00:00\n"
+"POT-Creation-Date: 2024-10-21 09:22:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2199,7 +2199,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:75
 #: pack/wolf-core/plugins/params/open-table.php:125
 #: pack/wolf-core/plugins/params/sb-instagram-feed.php:145
-#: pack/wolf-core/plugins/params/video-opener.php:39
+#: pack/wolf-core/plugins/params/video-opener.php:46
 #: pack/wolf-core/plugins/vc/vc-core-functions.php:90
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:190
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:261
@@ -2227,7 +2227,7 @@ msgstr ""
 #: plugins/params/gallery.php:331 plugins/params/gallery.php:345
 #: plugins/params/mailchimp.php:49 plugins/params/mailchimp.php:62
 #: plugins/params/mailchimp.php:75 plugins/params/open-table.php:125
-#: plugins/params/sb-instagram-feed.php:145 plugins/params/video-opener.php:39
+#: plugins/params/sb-instagram-feed.php:145 plugins/params/video-opener.php:46
 #: plugins/vc/vc-core-functions.php:90
 #: plugins/vc/vc-params/background-params.php:190
 #: plugins/vc/vc-params/background-params.php:261
@@ -2270,7 +2270,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/mailchimp.php:74
 #: pack/wolf-core/plugins/params/open-table.php:124
 #: pack/wolf-core/plugins/params/sb-instagram-feed.php:146
-#: pack/wolf-core/plugins/params/video-opener.php:38
+#: pack/wolf-core/plugins/params/video-opener.php:45
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:262
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:336
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:397
@@ -2292,7 +2292,7 @@ msgstr ""
 #: plugins/params/gallery.php:332 plugins/params/gallery.php:346
 #: plugins/params/mailchimp.php:48 plugins/params/mailchimp.php:61
 #: plugins/params/mailchimp.php:74 plugins/params/open-table.php:124
-#: plugins/params/sb-instagram-feed.php:146 plugins/params/video-opener.php:38
+#: plugins/params/sb-instagram-feed.php:146 plugins/params/video-opener.php:45
 #: plugins/vc/vc-params/background-params.php:262
 #: plugins/vc/vc-params/background-params.php:336
 #: plugins/vc/vc-params/background-params.php:397
@@ -2365,7 +2365,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/theme-svg-animations.php:93
 #: pack/wolf-core/plugins/params/twitter.php:63
 #: pack/wolf-core/plugins/params/twitter.php:86
-#: pack/wolf-core/plugins/params/video-opener.php:62
+#: pack/wolf-core/plugins/params/video-opener.php:69
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:490
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:504
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:168
@@ -2397,7 +2397,7 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:101
 #: plugins/params/textual-showcase.php:50
 #: plugins/params/theme-svg-animations.php:93 plugins/params/twitter.php:63
-#: plugins/params/twitter.php:86 plugins/params/video-opener.php:62
+#: plugins/params/twitter.php:86 plugins/params/video-opener.php:69
 #: plugins/vc/deprecated/wvc_icon.php:490
 #: plugins/vc/deprecated/wvc_icon.php:504
 #: plugins/vc/vc-params/button-params.php:168
@@ -2444,8 +2444,8 @@ msgstr ""
 #: pack/wolf-core/plugins/params/theme-svg-animations.php:89
 #: pack/wolf-core/plugins/params/twitter.php:59
 #: pack/wolf-core/plugins/params/twitter.php:87
-#: pack/wolf-core/plugins/params/video-opener.php:58
-#: pack/wolf-core/plugins/params/video-opener.php:119
+#: pack/wolf-core/plugins/params/video-opener.php:65
+#: pack/wolf-core/plugins/params/video-opener.php:126
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:476
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:489
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:505
@@ -2478,8 +2478,8 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:102
 #: plugins/params/textual-showcase.php:46
 #: plugins/params/theme-svg-animations.php:89 plugins/params/twitter.php:59
-#: plugins/params/twitter.php:87 plugins/params/video-opener.php:58
-#: plugins/params/video-opener.php:119 plugins/vc/deprecated/wvc_icon.php:476
+#: plugins/params/twitter.php:87 plugins/params/video-opener.php:65
+#: plugins/params/video-opener.php:126 plugins/vc/deprecated/wvc_icon.php:476
 #: plugins/vc/deprecated/wvc_icon.php:489
 #: plugins/vc/deprecated/wvc_icon.php:505
 #: plugins/vc/vc-params/button-params.php:170
@@ -2526,8 +2526,8 @@ msgstr ""
 #: pack/wolf-core/plugins/params/theme-svg-animations.php:97
 #: pack/wolf-core/plugins/params/twitter.php:67
 #: pack/wolf-core/plugins/params/twitter.php:88
-#: pack/wolf-core/plugins/params/video-opener.php:66
-#: pack/wolf-core/plugins/params/video-opener.php:118
+#: pack/wolf-core/plugins/params/video-opener.php:73
+#: pack/wolf-core/plugins/params/video-opener.php:125
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:478
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:491
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:506
@@ -2560,8 +2560,8 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:103
 #: plugins/params/textual-showcase.php:54
 #: plugins/params/theme-svg-animations.php:97 plugins/params/twitter.php:67
-#: plugins/params/twitter.php:88 plugins/params/video-opener.php:66
-#: plugins/params/video-opener.php:118 plugins/vc/deprecated/wvc_icon.php:478
+#: plugins/params/twitter.php:88 plugins/params/video-opener.php:73
+#: plugins/params/video-opener.php:125 plugins/vc/deprecated/wvc_icon.php:478
 #: plugins/vc/deprecated/wvc_icon.php:491
 #: plugins/vc/deprecated/wvc_icon.php:506
 #: plugins/vc/vc-params/button-params.php:171
@@ -2823,8 +2823,8 @@ msgstr ""
 #: pack/wolf-core/plugins/params/theme-svg-animations.php:84
 #: pack/wolf-core/plugins/params/twitter.php:54
 #: pack/wolf-core/plugins/params/twitter.php:82
-#: pack/wolf-core/plugins/params/video-opener.php:53
-#: pack/wolf-core/plugins/params/video-opener.php:78
+#: pack/wolf-core/plugins/params/video-opener.php:60
+#: pack/wolf-core/plugins/params/video-opener.php:85
 #: pack/wolf-core/plugins/vc/vc-params/button-params.php:164
 #: plugins/common-params/button-params.php:93
 #: plugins/common-params/button-params.php:125
@@ -2845,8 +2845,8 @@ msgstr ""
 #: plugins/params/spotify-follow-button.php:98
 #: plugins/params/textual-showcase.php:41
 #: plugins/params/theme-svg-animations.php:84 plugins/params/twitter.php:54
-#: plugins/params/twitter.php:82 plugins/params/video-opener.php:53
-#: plugins/params/video-opener.php:78
+#: plugins/params/twitter.php:82 plugins/params/video-opener.php:60
+#: plugins/params/video-opener.php:85
 #: plugins/vc/vc-params/button-params.php:164
 msgid "Alignment"
 msgstr ""
@@ -3489,7 +3489,7 @@ msgstr ""
 #: pack/wolf-core/plugins/params/social-icons.php:180
 #: pack/wolf-core/plugins/params/social-icons.php:344
 #: pack/wolf-core/plugins/params/textual-showcase.php:97
-#: pack/wolf-core/plugins/params/video-opener.php:116
+#: pack/wolf-core/plugins/params/video-opener.php:123
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:373
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:454
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:557
@@ -3519,7 +3519,7 @@ msgstr ""
 #: plugins/params/social-icons-custom.php:324
 #: plugins/params/social-icons.php:134 plugins/params/social-icons.php:180
 #: plugins/params/social-icons.php:344 plugins/params/textual-showcase.php:97
-#: plugins/params/video-opener.php:116 plugins/vc/deprecated/wvc_icon.php:373
+#: plugins/params/video-opener.php:123 plugins/vc/deprecated/wvc_icon.php:373
 #: plugins/vc/deprecated/wvc_icon.php:454
 #: plugins/vc/deprecated/wvc_icon.php:557
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:77
@@ -4428,9 +4428,9 @@ msgid "Tracks"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/album-tracklist.php:62
-#: pack/wolf-core/plugins/params/video-opener.php:136
+#: pack/wolf-core/plugins/params/video-opener.php:143
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:32
-#: plugins/params/album-tracklist.php:62 plugins/params/video-opener.php:136
+#: plugins/params/album-tracklist.php:62 plugins/params/video-opener.php:143
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:32
 msgid "Duration"
 msgstr ""
@@ -4441,13 +4441,13 @@ msgid "MP3 File"
 msgstr ""
 
 #: pack/wolf-core/plugins/params/album-tracklist.php:71
-#: pack/wolf-core/plugins/params/video-opener.php:90
-#: pack/wolf-core/plugins/params/video-opener.php:104
+#: pack/wolf-core/plugins/params/video-opener.php:97
+#: pack/wolf-core/plugins/params/video-opener.php:111
 #: pack/wolf-core/plugins/params/video-preview.php:36
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:54
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:203
-#: plugins/params/album-tracklist.php:71 plugins/params/video-opener.php:90
-#: plugins/params/video-opener.php:104 plugins/params/video-preview.php:36
+#: plugins/params/album-tracklist.php:71 plugins/params/video-opener.php:97
+#: plugins/params/video-opener.php:111 plugins/params/video-preview.php:36
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:54
 #: plugins/vc/vc-params/background-params.php:203
 msgid "Video URL"
@@ -4749,14 +4749,14 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/banner.php:214
 #: pack/wolf-core/plugins/params/banner.php:234
-#: pack/wolf-core/plugins/params/video-opener.php:117
+#: pack/wolf-core/plugins/params/video-opener.php:124
 #: pack/wolf-core/plugins/vc/vc-map/row.php:137
 #: pack/wolf-core/plugins/vc/vc-params/column-inner-params.php:26
 #: pack/wolf-core/plugins/vc/vc-params/column-params.php:37
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:105
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:124
 #: plugins/params/banner.php:214 plugins/params/banner.php:234
-#: plugins/params/video-opener.php:117 plugins/vc/vc-map/row.php:137
+#: plugins/params/video-opener.php:124 plugins/vc/vc-map/row.php:137
 #: plugins/vc/vc-params/column-inner-params.php:26
 #: plugins/vc/vc-params/column-params.php:37
 #: plugins/vc/vc-params/row-params.php:105
@@ -4766,7 +4766,7 @@ msgstr ""
 
 #: pack/wolf-core/plugins/params/banner.php:218
 #: pack/wolf-core/plugins/params/banner.php:235
-#: pack/wolf-core/plugins/params/video-opener.php:120
+#: pack/wolf-core/plugins/params/video-opener.php:127
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:475
 #: pack/wolf-core/plugins/vc/vc-map/row.php:136
 #: pack/wolf-core/plugins/vc/vc-params/column-inner-params.php:24
@@ -4774,7 +4774,7 @@ msgstr ""
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:104
 #: pack/wolf-core/plugins/vc/vc-params/row-params.php:122
 #: plugins/params/banner.php:218 plugins/params/banner.php:235
-#: plugins/params/video-opener.php:120 plugins/vc/deprecated/wvc_icon.php:475
+#: plugins/params/video-opener.php:127 plugins/vc/deprecated/wvc_icon.php:475
 #: plugins/vc/vc-map/row.php:136
 #: plugins/vc/vc-params/column-inner-params.php:24
 #: plugins/vc/vc-params/column-params.php:35
@@ -6609,57 +6609,57 @@ msgstr ""
 msgid "Video Opener"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:35
-#: plugins/params/video-opener.php:35
+#: pack/wolf-core/plugins/params/video-opener.php:42
+#: plugins/params/video-opener.php:42
 msgid "Custom Play Button"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:45
-#: plugins/params/video-opener.php:45
+#: pack/wolf-core/plugins/params/video-opener.php:52
+#: plugins/params/video-opener.php:52
 msgid "Button Image"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:81
-#: plugins/params/video-opener.php:81
+#: pack/wolf-core/plugins/params/video-opener.php:88
+#: plugins/params/video-opener.php:88
 msgid "center"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:82
-#: plugins/params/video-opener.php:82
+#: pack/wolf-core/plugins/params/video-opener.php:89
+#: plugins/params/video-opener.php:89
 msgid "left"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:83
-#: plugins/params/video-opener.php:83
+#: pack/wolf-core/plugins/params/video-opener.php:90
+#: plugins/params/video-opener.php:90
 msgid "right"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:94
+#: pack/wolf-core/plugins/params/video-opener.php:101
 #: pack/wolf-core/plugins/vc/templates/wolf_core_album_tracklist_item.php:58
-#: plugins/params/video-opener.php:94
+#: plugins/params/video-opener.php:101
 #: plugins/vc/templates/wolf_core_album_tracklist_item.php:58
 msgid "Support %1$s and %2$s"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:106
+#: pack/wolf-core/plugins/params/video-opener.php:113
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:206
-#: plugins/params/video-opener.php:106
+#: plugins/params/video-opener.php:113
 #: plugins/vc/vc-params/background-params.php:206
 msgid "A YouTube, Vimeo, or mp4 URL."
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:113
-#: plugins/params/video-opener.php:113
+#: pack/wolf-core/plugins/params/video-opener.php:120
+#: plugins/params/video-opener.php:120
 msgid "Caption Position"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:126
-#: plugins/params/video-opener.php:126
+#: pack/wolf-core/plugins/params/video-opener.php:133
+#: plugins/params/video-opener.php:133
 msgid "Caption"
 msgstr ""
 
-#: pack/wolf-core/plugins/params/video-opener.php:128
-#: plugins/params/video-opener.php:128
+#: pack/wolf-core/plugins/params/video-opener.php:135
+#: plugins/params/video-opener.php:135
 msgid "My Video Title"
 msgstr ""
 

@@ -27,6 +27,13 @@ function wolf_core_video_opener_params() {
 				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
 				'el_categories' => array( 'extension' ),
 				'icon'          => 'linea-music linea-music-play-button',
+				'register_scripts' => array(
+					'wolf-core-video-opener' => array(
+						'src'     => WOLF_CORE_JS . '/video-opener.js',
+						'version' => WOLF_CORE_VERSION,
+					),
+				),
+				'scripts'          => array( 'wolf-core-video-opener' ),
 			),
 
 			'params'     => array(

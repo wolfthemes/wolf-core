@@ -30,6 +30,29 @@ class Elementor_Video_Opener_Widget extends \Elementor\Widget_Base {
 		parent::__construct( $data, $args );
 
 		$this->params = wolf_core_video_opener_params();
+
+		if ( isset( $this->params['properties']['register_scripts'] ) ) {
+
+			wolf_core_register_scripts( $this->params['properties']['register_scripts'] );
+		}
+
+		if ( isset( $this->params['properties']['scripts'] ) ) {
+			$this->scripts = $this->params['properties']['scripts'];
+		}
+	}
+
+	/**
+	 * Retrieve the list of scripts the counter widget depended on.
+	 *
+	 * Used to set scripts dependencies required to run the widget.
+	 *
+	 * @version 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget scripts dependencies.
+	 */
+	public function get_script_depends() {
+		return $this->scripts;
 	}
 
 	/**

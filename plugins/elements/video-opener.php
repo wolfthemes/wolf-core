@@ -98,7 +98,7 @@ function wolf_core_video_opener( $atts ) {
 		$output .= $caption_html;
 	}
 
-	$output .= '<a href="' . esc_url( $video_url ) . '" class="wolf-core-video-opener">';
+	$output .= '<a href="#" data-video-url="' . esc_url( $video_url ) . '" class="wolf-core-video-opener">';
 
 	if ( $custom_play_button && $button_image ) {
 
