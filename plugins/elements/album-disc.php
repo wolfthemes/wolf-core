@@ -54,8 +54,8 @@ function wolf_core_album_disc( $atts ) {
 	$output = '';
 
 	// Disc animation.
-	wp_enqueue_script( 'wow' );
-	wp_enqueue_script( 'waypoints' );
+	//wp_enqueue_script( 'wow' );
+	//wp_enqueue_script( 'waypoints' );
 	wp_enqueue_style( 'animate-css' );
 
 	$class = $el_class; // init container CSS class.
@@ -80,10 +80,10 @@ function wolf_core_album_disc( $atts ) {
 	if ( is_array( $link ) && isset( $link['url'] ) && '' !== $link['url'] ) {
 		$output .= '<a rel="' . esc_attr( $link['rel'] ) . '" class="wolf-core-album-disc-link-mask"';
 		$output .= ' target="' . esc_attr( $link['target'] ) . '"';
-		$output .= ' href="' . esc_url( $link['url'] ) . '" title="' . esc_attr( $link['title'] ) . '"></a>';
+		$output .= ' href="' . esc_url( $link['url'] ) . '"></a>';
 	} else {
 		$output .= '<a class="wolf-core-album-disc-link-mask"';
-		$output .= ' href="' . get_the_permalink() . '" title="' . get_the_title() . '"></a>';
+		$output .= ' href="' . get_the_permalink() . '"></a>';
 	}
 
 	$output .= '<div class="wolf-core-album-disc-cover-container">';

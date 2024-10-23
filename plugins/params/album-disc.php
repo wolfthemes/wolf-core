@@ -28,6 +28,7 @@ function wolf_core_album_disc_params() {
 				'el_categories' => array( 'extension' ),
 				'keywords'      => array( 'music' ),
 				'icon'          => 'dashicons-before dashicons-album',
+				'scripts'       => array( 'wow', 'waypoints' )
 			),
 
 			'params'     => array(
