@@ -36,12 +36,14 @@ function wolf_core_album_disc( $atts ) {
 				'el_id'               => '',
 				'css'                 => '',
 				'inline_style'        => '',
-				'data_attrs'           => apply_filters( 'wolf_core_album_disc_data_attrs', array() ),
+				'data_attrs'          => array(),
 			)
 		)
 	);
 
 	extract( $atts ); // phpcs:ignore
+
+	$data_attrs = apply_filters( 'wolf_core_album_disc_data_attrs', $data_attrs, $atts );
 
 	if ( is_array( $cover_image ) && isset( $cover_image['id'] ) ) {
 		$cover_image = $cover_image['id'];

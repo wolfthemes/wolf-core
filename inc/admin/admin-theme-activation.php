@@ -308,7 +308,7 @@ function wolf_core_activate_theme() {
 						echo '</div>';
 
 						// Redirect after activation
-						wp_safe_redirect( admin_url( 'themes.php?page=' . wolf_core_get_theme_slug() . '-about' ) );
+						wp_safe_redirect( admin_url( 'themes.php?page=' . wolf_core_get_theme_slug() . '-about#license' ) );
 						exit;
 
 					} elseif ( isset( $data->error ) ) {
