@@ -1,6 +1,11 @@
 
 # Changelog
 
+#### 25th October 2024 - Version 2.0.13
+
+-   Improvement: Redirect to license tab after theme/plugin activation to show confirmation message
+-   Improvement: Improved album disc data attribute filter and scripts enqueuing condition
+
 #### 21th October 2024 - Version 2.0.11
 
 -   Improvement: Switch video opener lightbox to fancybox. Prevent issue with video opening directly instead of inside a lightbox, when JS files are minifed
