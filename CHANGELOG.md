@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 28th October 2024 - Version 2.0.14
+
+-   Fix: Improved database updater to prevent errors when only one version is available in the version history for the Elementor extension.
+
 #### 25th October 2024 - Version 2.0.13
 
 -   Improvement: Redirect to license tab after theme/plugin activation to show confirmation message

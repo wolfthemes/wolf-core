@@ -317,6 +317,7 @@ function wolf_core_activate_theme() {
 					} else {
 						$is_error = true;
 						$error    = esc_html__( 'Invalid or incomplete data received from the server. Please try again.', 'wolf-core' );
+						// Log error
 					}
 				}
 			} else {
