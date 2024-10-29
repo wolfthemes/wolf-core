@@ -56,8 +56,8 @@ function wolf_core_album_disc( $atts ) {
 	$output = '';
 
 	// Disc animation.
-	//wp_enqueue_script( 'wow' );
-	//wp_enqueue_script( 'waypoints' );
+	wp_enqueue_script( 'wow' );
+	wp_enqueue_script( 'waypoints' );
 	wp_enqueue_style( 'animate-css' );
 
 	$class = $el_class; // init container CSS class.
