@@ -317,7 +317,8 @@ function wolf_core_activate_theme() {
 					} else {
 						$is_error = true;
 						$error    = esc_html__( 'Invalid or incomplete data received from the server. Please try again.', 'wolf-core' );
-						// Log error
+						// Log error with raw response body for further debugging
+						error_log( 'Activation Error: Invalid or incomplete data. Raw response: ' . print_r( $body, true ) );
 					}
 				}
 			} else {

@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 29th October 2024 - Version 2.0.15
+#### 29th October 2024 - Version 2.0.16
 
 -   Quickfix: Reenqueued album disc JS script with wp_enqueue_script function to fix missing animation
+-   Improvement: Added error log to be able to debug issue with activation
 
 #### 28th October 2024 - Version 2.0.14
 
