@@ -125,13 +125,13 @@ function wolf_core_google_maps( $atts ) {
 	/* Single location (Elementor default) */
 	if ( $address && ( 'default' === $type || ! $type ) ) {
 		$output .= sprintf(
-			'<div class="elementor-custom-embed"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=%1$s&amp;t=m&amp;z=%2$d&amp;output=embed&amp;iwloc=near" title="%3$s" aria-label="%3$s"></iframe></div>',
+			'<div class="elementor-custom-embed"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=%1$s&amp;t=m&amp;z=%2$d&amp;output=embed&amp;iwloc=near" title="%3$s" aria-label="%3$s" height="%4$s"></iframe></div>',
 			rawurlencode( $address ),
 			absint( $zoom ),
-			esc_attr( $address )
+			esc_attr( $address ),
+			$el_height
 		);
 	}
-
 	/* Multiple locations */
 	if ( ( $locations && 'multiple' === $type ) || $name && $coordinates && 'simple' === $type ) {
 
