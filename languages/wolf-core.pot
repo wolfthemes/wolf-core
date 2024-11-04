@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wolf Core 2.0.17\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2024-11-01 07:59:12+00:00\n"
+"POT-Creation-Date: 2024-11-04 09:17:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -60,12 +60,12 @@ msgstr ""
 msgid "B"
 msgstr ""
 
-#: inc/admin/admin-notices.php:126
+#: inc/admin/admin-notices.php:132
 #: pack/wolf-core/inc/admin/admin-notices.php:126
 msgid "Hide permanently"
 msgstr ""
 
-#: inc/admin/admin-notices.php:207
+#: inc/admin/admin-notices.php:220
 #: pack/wolf-core/inc/admin/admin-notices.php:207
 msgid ""
 "<strong>Need help? Your support for %s has expired.</strong> Renew now to "
@@ -73,12 +73,12 @@ msgid ""
 "worry-free with full support—renew today."
 msgstr ""
 
-#: inc/admin/admin-notices.php:214
+#: inc/admin/admin-notices.php:227
 #: pack/wolf-core/inc/admin/admin-notices.php:214
 msgid "Renew support now for continued assistance."
 msgstr ""
 
-#: inc/admin/admin-notices.php:218
+#: inc/admin/admin-notices.php:231
 #: pack/wolf-core/inc/admin/admin-notices.php:218
 msgid "I’ll renew later. Hide this notice."
 msgstr ""

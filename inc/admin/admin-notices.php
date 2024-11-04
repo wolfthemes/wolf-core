@@ -20,6 +20,12 @@ add_action( 'admin_init', function() {
  */
 function wolf_core_rating_request_admin_notice() {
 
+	global $pagenow;
+
+	if ( 'index.php' !== $pagenow ) {
+		return;
+	}
+
 	//delete_option( 'wolf_core_theme_review_dismissed_date' );
 	//delete_option( 'wolf_core_theme_review_dismissed_permanently' );
 
@@ -199,6 +205,13 @@ function wolf_core_support_expired() {
  * Display admin notice for support renewal
  */
 function wolf_core_display_support_renewal_notice() {
+
+	global $pagenow;
+
+	if ( 'index.php' !== $pagenow ) {
+		return;
+	}
+
 	ob_start();
 	?>
 	<p>

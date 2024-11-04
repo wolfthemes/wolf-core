@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 4th November 2024 - Version 2.0.18
+
+-   Improvement: Display admin notices only on admin home page
+
 #### 29th October 2024 - Version 2.0.17
 
 -   Quickfix: Reenqueued album disc JS script with wp_enqueue_script function to fix missing animation
