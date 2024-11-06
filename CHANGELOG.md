@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 6th November 2024 - Version 2.0.19
+
+-   Fix: Error message in debug mode with database updater getting latest installed version.
+
 #### 4th November 2024 - Version 2.0.18
 
 -   Improvement: Display admin notices only on admin home page

@@ -139,7 +139,7 @@ class Wolf_Core_DB_Updater {
 			$versions = array_keys( $installs_history );
 			natsort( $versions );
 			$versions = array_values($versions);
-			$second_last_version = (count($versions) >= 2) ? $versions[count($versions) - 2] : null;
+			$second_last_version = (count($versions) >= 2) ? $versions[count($versions) - 2] : '99999';
 		}
 
 		return $second_last_version;
