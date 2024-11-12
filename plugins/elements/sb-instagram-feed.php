@@ -109,7 +109,7 @@ function wolf_core_sb_instagram_feed( $atts ) {
 		}
 	}
 
-	$output .= apply_filters( 'wolf_core_sb_instagram_feed_shortcode', do_shortcode( '[instagram-feed ' . $inline_atts . ']' ) );
+	$output .= apply_filters( 'wolf_core_sb_instagram_feed_shortcode', do_shortcode( '[instagram-feed ' . $inline_atts . ']' ), $atts );
 
 	$output .= '</div><!-- .wolf-core-sb-instagram-feed-shortcode-container -->';
 

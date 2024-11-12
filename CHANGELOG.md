@@ -1,8 +1,9 @@
 
 # Changelog
 
-#### 6th November 2024 - Version 2.0.19
+#### 12th November 2024 - Version 2.0.20
 
+-   Improvement: Added attribute parameters to wolf_core_sb_instagram_feed_shortcode filter
 -   Fix: Error message in debug mode with database updater getting latest installed version.
 
 #### 4th November 2024 - Version 2.0.18
