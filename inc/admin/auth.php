@@ -261,6 +261,7 @@ function wolf_core_wrong_theme() {
 		'eightpulse',
 		'yor',
 		'poize',
+		'mediafoundry',
 	);
 
 	return ( ! in_array( esc_attr( sanitize_title_with_dashes( get_template() ) ), $ok, true ) );
