@@ -1,6 +1,14 @@
 
 # Changelog
 
+#### 29th November 2024 - Version 2.0.22
+
+-   Improvement: Specify the content block post type in the wpml_object_id filter to retrieve WPML content block translated version
+
+#### 22th November 2024 - Version 2.0.21
+
+-   Improvement: Added revert icon position option in icon box and icon list widgets
+
 #### 12th November 2024 - Version 2.0.20
 
 -   Improvement: Added attribute parameters to wolf_core_sb_instagram_feed_shortcode filter

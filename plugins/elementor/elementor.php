@@ -83,6 +83,8 @@ class Wolf_Core_Elementor_Extension { // phpcs:ignore
 		$controls_files = array(
 			'section',
 			'heading',
+			'icon-box',
+			'icon-list',
 			'image',
 			'image-carousel',
 			'page',
