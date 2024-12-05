@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 5th December 2024 - Version 2.0.23
+
+-   Improvement: Added marquee text color settings
+
 #### 29th November 2024 - Version 2.0.22
 
 -   Improvement: Specify the content block post type in the wpml_object_id filter to retrieve WPML content block translated version
