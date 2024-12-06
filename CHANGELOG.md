@@ -1,9 +1,10 @@
 
 # Changelog
 
-#### 5th December 2024 - Version 2.0.23
+#### 5th December 2024 - Version 2.0.24
 
 -   Improvement: Added marquee text color settings
+-   Improvement: Hide notice on revslider page
 
 #### 29th November 2024 - Version 2.0.22
 

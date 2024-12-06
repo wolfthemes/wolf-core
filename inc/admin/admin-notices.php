@@ -26,6 +26,10 @@ function wolf_core_rating_request_admin_notice() {
 		return;
 	}
 
+	if ( isset( $_GET['page'] ) && 'revslider' === $_GET['page'] ) {
+		return;
+	}
+
 	//delete_option( 'wolf_core_theme_review_dismissed_date' );
 	//delete_option( 'wolf_core_theme_review_dismissed_permanently' );
 
