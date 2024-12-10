@@ -6187,6 +6187,11 @@ i.fab.fa-x {
   top: 6px;
 }
 
+/* Fix elementor scroll */
+html {
+  scroll-behavior: initial !important;
+}
+
 /**
  * Media Queries
  */

@@ -87,3 +87,8 @@ i.fab.fa-x {
 	}
 }
 
+/* Fix elementor scroll */
+html {
+	scroll-behavior: initial !important; // fix Elementor
+}
+

@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 10th December 2024 - Version 2.0.25
+
+-   Improvement: Force scroll behavior to auto to avoid conflict bewteen theme JS scroll features and Elementor
+
 #### 5th December 2024 - Version 2.0.24
 
 -   Improvement: Added marquee text color settings
