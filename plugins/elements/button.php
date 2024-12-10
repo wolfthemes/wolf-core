@@ -47,6 +47,7 @@ function wolf_core_button( $atts ) {
 				'text_padding'                  => '',
 				'scroll_to_anchor'              => '',
 				'icon_hover_reveal'             => '',
+				'style'                         => '',
 			)
 		)
 	);
@@ -126,11 +127,15 @@ function wolf_core_button( $atts ) {
 			$button_link_atts
 		);
 
-		$output .= '<a ' . wolf_core_render_html_attributes( $button_link_atts ) . ' id="' . esc_attr( $button_css_id ) . '">';
+		$output .= '<a ' . wolf_core_render_html_attributes( $button_link_atts ) . ' id="' . esc_attr( $button_css_id ) . '"
+			style="' . esc_attr( $style ) . '"
+		>';
 
 	} else {
 
-		$output .= '<span ' . wolf_core_render_html_attributes( $button_link_atts ) . ' id="' . esc_attr( $button_css_id ) . '">';
+		$output .= '<span ' . wolf_core_render_html_attributes( $button_link_atts ) . ' id="' . esc_attr( $button_css_id ) . '"
+			style="' . esc_attr( $style ) . '"
+		>';
 	}
 
 	if ( $add_icon && 'left' === $icon_align ) {
