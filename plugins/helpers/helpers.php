@@ -63,6 +63,22 @@ function wolf_core_add_carousel_params() {
 					'group'       => esc_html__( 'Options', 'wolf-core' ),
 				);
 
+				$params['params'][] = array(
+					'type'         => 'checkbox',
+					'label'        => esc_html__( 'Contain', 'wolf-core' ),
+					'param_name'   => 'contain',
+					'return_value' => 'true',
+					'default'     => 'true',
+					'group'       => esc_html__( 'Options', 'wolf-core' ),
+				);
+
+				$params['params'][] = array(
+					'type'         => 'int',
+					'label'        => esc_html__( 'Item to show', 'wolf-core' ),
+					'param_name'   => 'group_cells',
+					'group'       => esc_html__( 'Options', 'wolf-core' ),
+				);
+
 				return $params;
 			}
 		);

@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- *  * Replace custom tags
+ * Replace custom tags
  *
  * The only solution was to filter the whole content as there is no way to filter the default elementor settings output.
  *

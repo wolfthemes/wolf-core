@@ -106,9 +106,12 @@ var WolfCoreCarousels = function( $ ) {
 					dataPauseonHover = $slider.data( 'pause-on-hover' ),
 					dataTransition = $slider.data( 'transition' ),
 					dataNavbullets = $slider.data( 'nav-bullets' ),
-					dataArrows = $slider.data( 'nav-arrows' );
+					dataArrows = $slider.data( 'nav-arrows' ),
+					dataContain = $slider.data( 'contain' ) || false;
 
 				transition = ( 'auto' === dataTransition ) ? defaultTransition : dataTransition;
+
+				console.log( dataContain )
 
 				if ( dataAutoplay ) {
 					dataAutoplay = dataSpeed;
@@ -121,7 +124,9 @@ var WolfCoreCarousels = function( $ ) {
 					pageDots: dataNavbullets,
 					wrapAround: true,
 					imagesLoaded: true,
-					cellSelector: '.wolf-core-testimonal-slide'
+					cellSelector: '.wolf-core-testimonal-slide',
+					groupCells : dataGroupcells,
+					contain: dataContain, // Permet de dépasser les limites visibles
 				} );
 			} );
 		},

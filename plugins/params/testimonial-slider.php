@@ -58,6 +58,7 @@ function wolf_core_testimonial_slider_params() {
 						'{{WRAPPER}} .flickity-page-dots .dot:after' => 'background:{{VALUE}};border-color:{{VALUE}};',
 					),
 				),
+
 				array(
 					'type'       => 'repeater',
 					'param_name' => 'testimonials',
@@ -79,6 +80,13 @@ function wolf_core_testimonial_slider_params() {
 							'label'      => esc_html__( 'Author Name', 'wolf-core' ),
 							'param_name' => 'cite',
 						),
+
+						array(
+							'type'       => 'text',
+							'label'      => esc_html__( 'Author Role', 'wolf-core' ),
+							'param_name' => 'role',
+						),
+
 						array(
 							'type'       => 'image',
 							'label'      => esc_html__( 'Avatar', 'wolf-core' ),

@@ -28,6 +28,7 @@ function wolf_core_testimonial_slider( $atts ) {
 				'pause_on_hover'      => 'yes',
 				'nav_bullets'         => 'yes',
 				'nav_arrows'          => 'yes',
+				'contain'             => 'yes',
 				'arrows_color'        => '',
 				'dots_color'          => '',
 				'testimonials'        => array(),
@@ -65,6 +66,7 @@ function wolf_core_testimonial_slider( $atts ) {
 		data-arrows-color='$arrows_color'
 		data-dots-color='$dots_color'
 		data-nav-arrows='$nav_arrows'
+		data-contain='$contain'
 		data-nav-bullets='$nav_bullets'";
 
 	if ( $group_cells && 1 < absint( $group_cells ) ) {
@@ -90,6 +92,7 @@ function wolf_core_testimonial_slider( $atts ) {
 						'text'    => '',
 						'tagline' => '',
 						'cite'    => '',
+						'role'    => '',
 						'avatar'  => '',
 						'rating'  => '',
 					)
@@ -137,6 +140,12 @@ function wolf_core_testimonial_slider( $atts ) {
 			$output .= '<cite class="wolf-core-blockquote-cite">';
 			$output .= $cite;
 			$output .= '</cite><!--.wolf-core-blockquote-cite-->';
+		}
+
+		if ( $role ) {
+			$output .= '<role class="wolf-core-blockquote-role">';
+			$output .= $role;
+			$output .= '</role><!--.wolf-core-blockquote-role-->';
 		}
 
 		if ( $avatar || $cite ) {

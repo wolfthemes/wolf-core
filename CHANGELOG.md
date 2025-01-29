@@ -1,6 +1,12 @@
 
 # Changelog
 
+#### 29th January 2025 - Version 2.0.29
+
+-   Improvement: Added more allowed html tags to heading widget
+-   Improvement: Added 'contain' option to testimonial slider
+-   Fix: Marquee text hover color not applyed
+
 #### 10th December 2024 - Version 2.0.26
 
 -   Improvement: Added button style attributes

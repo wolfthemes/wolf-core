@@ -41,7 +41,6 @@ add_action(
 			'font_color',
 			array(
 				'label'        => esc_html__( 'Default Font Color', 'wolf-core' ),
-
 				'type'         => \Elementor\Controls_Manager::SELECT,
 				'default'      => '',
 				'prefix_class' => 'wolf-core-font-',

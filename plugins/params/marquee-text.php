@@ -72,7 +72,7 @@ function wolf_core_marquee_text_params() {
 					'param_name'   => 'color_hover',
 					'page_builder' => 'elementor',
 					'selectors'    => array(
-						'{{WRAPPER}} .wolf-core-marquee__inner:hover' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .wolf-core-marquee-container:hover .wolf-core-marquee-text' => 'color: {{VALUE}};',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
 				),
