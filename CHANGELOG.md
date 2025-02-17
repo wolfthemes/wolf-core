@@ -1,6 +1,10 @@
 
 # Changelog
 
+#### 7th February 2025 - Version 2.0.30
+
+-   Improvement: Added CSS classes to WooCommerce login popup links
+
 #### 29th January 2025 - Version 2.0.29
 
 -   Improvement: Added more allowed html tags to heading widget

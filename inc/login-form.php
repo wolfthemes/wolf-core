@@ -99,11 +99,11 @@ function wolf_core_login_form( $atts = array() ) {
 			</p>
 
 			<p class="wolf-core-login-form-links">
-				<a href="<?php echo esc_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>"><?php esc_html_e( 'I need to register', 'wolf-visual-composer' ); ?></a>
+				<a class="wolf-core-login-form-link-register" href="<?php echo esc_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>"><?php esc_html_e( 'I need to register', 'wolf-visual-composer' ); ?></a>
 
-				<?php echo apply_filters( 'wolf_core_login_form_bottom_link_separator', '|' ); ?>
+				<span class="wolf-core-login-form-links-separator"><?php echo apply_filters( 'wolf_core_login_form_bottom_link_separator', '|' ); ?></span>
 
-				<a href="<?php echo esc_url( wc_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'wolf-visual-composer' ); ?></a>
+				<a class="wolf-core-login-form-link-lost-password" href="<?php echo esc_url( wc_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'wolf-visual-composer' ); ?></a>
 			</p>
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
