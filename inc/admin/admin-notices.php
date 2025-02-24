@@ -242,3 +242,36 @@ function wolf_core_display_support_renewal_notice() {
 
 // Hook the support expiration check into the admin area
 add_action( 'admin_init', 'wolf_core_display_support_renewal_notice' );
+
+/**
+ * Display admin notice if Content Block is not enabled in Elementor settings with dismissal
+ */
+function wolf_core_content_block_elementor_notice() {
+    global $typenow;
+    if ( 'wolf_content_block' !== $typenow ) {
+        return;
+    }
+
+    // Check if dismissed permanently
+    if ( get_option( 'wolf_core_content_block_notice_dismissed' ) ) {
+		return;
+    }
+
+    $elementor_cpt_support = get_option( 'elementor_cpt_support', array() );
+    if ( ! in_array( 'wolf_content_block', $elementor_cpt_support ) ) {
+        $message = '<p><strong>Content Block is not enabled in Elementor!</strong></p>';
+        $message .= '<p>To use this post type with Elementor, please enable it in the Elementor settings.</p>';
+        $message .= '<p><a href="' . esc_url( admin_url( 'admin.php?page=elementor-settings' ) ) . '" class="button-primary">Go to Elementor Settings</a></p>';
+
+        wolf_core_admin_notice( $message, 'warning', 'wolf_core_content_block_notice', 'Hide permanently' );
+    }
+}
+add_action( 'admin_notices', 'wolf_core_content_block_elementor_notice' );
+
+// Handle dismissal
+function wolf_core_dismiss_content_block_notice() {
+    if ( isset( $_GET['dismiss'] ) && 'wolf_core_content_block_notice' === $_GET['dismiss'] ) {
+        update_option( 'wolf_core_content_block_notice_dismissed', true );
+    }
+}
+add_action( 'admin_init', 'wolf_core_dismiss_content_block_notice' );

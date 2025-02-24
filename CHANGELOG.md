@@ -1,5 +1,8 @@
-
 # Changelog
+
+#### 24th February 2025 - Version 2.0.31
+
+-   Improvement: Admin notification in Content Block editor when not enabled in Elementor settings, with a link to settings for quick setup
 
 #### 7th February 2025 - Version 2.0.30
 
