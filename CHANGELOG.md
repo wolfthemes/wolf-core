@@ -1,5 +1,9 @@
 # Changelog
 
+#### 20th March 2025 - Version 2.0.33
+
+-   Improvement: Allow custom HTML tag in heading widget
+
 #### 25th February 2025 - Version 2.0.32
 
 -   Improvement: Added {{post_excerpt}} shorthand

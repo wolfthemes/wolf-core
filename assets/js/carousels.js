@@ -111,7 +111,7 @@ var WolfCoreCarousels = function( $ ) {
 
 				transition = ( 'auto' === dataTransition ) ? defaultTransition : dataTransition;
 
-				console.log( dataContain )
+				//console.log( dataContain )
 
 				if ( dataAutoplay ) {
 					dataAutoplay = dataSpeed;

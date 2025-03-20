@@ -23,12 +23,14 @@ add_action(
 		$post_title = wolf_core_get_post_title();
 		$site_title = get_bloginfo( 'name' );
 		$post_excerpt = get_the_excerpt();
+		$featured_image = get_the_post_thumbnail( get_the_ID(), 'large' );
 
 		$short_tags = array(
 			'{{post_title}}' => $post_title,
 			'{{page_title}}' => $post_title,
 			'{{site_title}}' => $site_title,
 			'{{post_excerpt}}' => $post_excerpt,
+			'{{post_thumbnail}}' => $featured_image,
 		);
 
 		foreach ( $short_tags as $key => $value ) {
