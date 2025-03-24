@@ -1,5 +1,9 @@
 # Changelog
 
+#### 24th March 2025 - Version 2.0.34
+
+-   Fix: Force object fit for video background
+
 #### 20th March 2025 - Version 2.0.33
 
 -   Improvement: Allow custom HTML tag in heading widget

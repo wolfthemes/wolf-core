@@ -1942,3 +1942,8 @@ i.fab.fa-x {
 html {
   scroll-behavior: initial !important;
 }
+
+/* Fixes removed rules from Elementor (!!!) */
+.elementor-background-video-hosted {
+  object-fit: cover !important;
+}

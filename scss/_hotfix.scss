@@ -92,3 +92,7 @@ html {
 	scroll-behavior: initial !important; // fix Elementor
 }
 
+/* Fixes removed rules from Elementor (!!!) */
+.elementor-background-video-hosted{
+	object-fit:cover!important;
+}

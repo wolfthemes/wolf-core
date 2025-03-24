@@ -6192,6 +6192,11 @@ html {
   scroll-behavior: initial !important;
 }
 
+/* Fixes removed rules from Elementor (!!!) */
+.elementor-background-video-hosted {
+  object-fit: cover !important;
+}
+
 /**
  * Media Queries
  */
@@ -6293,36 +6298,36 @@ html {
   /*.wolf-core-pricing-table-inner{
   	//float: left;
   }
-  
+
   .wolf-core-pricing-tables-2-cols{
   	.wolf-core-pricing-table-inner{
   		width: 50%;
   	}
-  
+
   	.wolf-core-pricing-table-featured{
   		position: relative;
   		top: 17px;
   		margin-top: 0;
   	}
   }
-  
+
   .wolf-core-pricing-tables-3-cols{
   	.wolf-core-pricing-table-inner{
   		width: 33.2%;
   	}
-  
+
   	.wolf-core-pricing-table-featured{
   		position: relative;
   		top: 17px;
   		margin-top: 0;
   	}
   }
-  
+
   .wolf-core-pricing-tables-4-cols{
   	.wolf-core-pricing-table-inner{
   		width: 25%;
   	}
-  
+
   	.wolf-core-pricing-table-featured{
   		position: relative;
   		top: 17px;
@@ -6726,12 +6731,12 @@ html {
   	width: 60%;
   	margin: 0 auto;
   }
-  
+
   .wolf-core-pricing-tables-3-cols{
   	width: 85%;
   	margin: 0 auto;
   }
-  
+
   .wolf-core-pricing-tables-4-cols{
   	margin: 0 auto;
   }*/
