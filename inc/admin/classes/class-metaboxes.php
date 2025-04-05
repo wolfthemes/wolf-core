@@ -189,7 +189,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 			} elseif ( 'help' == $type ) {
 
-			echo '<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
+				echo '<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 				// textarea
 			} elseif ( 'textarea' == $type || 'textarea_html' == $type ) {
@@ -201,7 +201,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 				echo '<input type="checkbox" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" ', ( $meta ) ? ' checked="checked"' : '','/>
 						<span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
-			// datepicker
+				// datepicker
 			} elseif ( $field['type'] === 'datepicker' ) {
 
 				echo '<input type="text" class="wolf-core-metabox-datepicker" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" size="30">
@@ -257,7 +257,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						if ( 0 == $meta_img ) {
 							echo ' display:none;';}
 						?>
-						" class="wolf-core-metabox-img-preview" src="<?php echo (  $meta_img ) ? esc_url( $meta_img_url ) : ''; ?>" alt="<?php echo esc_attr( $field_id ); ?>">
+						" class="wolf-core-metabox-img-preview" src="<?php echo ( $meta_img ) ? esc_url( $meta_img_url ) : ''; ?>" alt="<?php echo esc_attr( $field_id ); ?>">
 						<br><a href="#" class="button wolf-core-metabox-reset-img"><?php esc_html_e( 'Clear', 'wolf-core' ); ?></a>
 						<a href="#" class="button wolf-core-metabox-set-img"><?php esc_html_e( 'Choose an image', 'wolf-core' ); ?></a>
 					</div>
@@ -556,7 +556,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						foreach ( $meta_fields as $field ) {
 
 							$field_id = $field['id'];
-							$type     = $field['type'];
+							$type     = ( isset( $field['type'] ) ) ? $field['type'] : 'text';
 							$meta     = get_post_meta( $post_id, $field_id, true );
 
 							if ( 'background' == $type ) {
@@ -620,7 +620,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 										$new = absint( $_POST[ $field_id ] );
 
 									} elseif ( 'editor' == $type || 'textarea' == $type || 'textarea_html' == $type ) {
-										//die( debug( $_POST[ $field_id ] ) );
+										// die( debug( $_POST[ $field_id ] ) );
 										$new = wolf_core_kses( $_POST[ $field_id ] );
 
 									} else {

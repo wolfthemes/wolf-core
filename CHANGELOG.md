@@ -1,5 +1,9 @@
 # Changelog
 
+#### 5th April 2025 - Version 2.0.35
+
+-   Fix: Prevent undefined index error for 'type' in $field by adding default 'text'
+
 #### 24th March 2025 - Version 2.0.34
 
 -   Fix: Force object fit for video background
