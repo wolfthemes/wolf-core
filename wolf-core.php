@@ -3,11 +3,11 @@
  * Plugin Name: Wolf Core
  * Plugin URI: https://wlfthm.es/wolf-core
  * Description: Core functions for Wolf Themes.
- * Version: 2.0.35
+ * Version: 2.0.36
  * Author: WolfThemes
  * Author URI: https://wolfthemes.com
  * Requires at least: 6.0
- * Tested up to: 6.7
+ * Tested up to: 6.8
  *
  * Text Domain: wolf-core
  * Domain Path: /languages/
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 	 * Contains the main functions for Wolf_Core
 	 *
 	 * @class Wolf_Core
-	 * @version 2.0.35
+	 * @version 2.0.36
 	 * @since 1.0.0
 	 */
 	final class Wolf_Core {
@@ -74,7 +74,7 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		/**
 		 * @var string
 		 */
-		public $version = '2.0.35';
+		public $version = '2.0.36';
 
 		/**
 		 * @var the support forum URL

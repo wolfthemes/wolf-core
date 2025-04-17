@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Wolf Core package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wolf Core 2.0.35\n"
+"Project-Id-Version: Wolf Core 2.0.36\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wolf-core\n"
-"POT-Creation-Date: 2025-04-05 12:15:03+00:00\n"
+"POT-Creation-Date: 2025-04-17 08:21:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -477,25 +477,25 @@ msgstr ""
 msgid "Font Color"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:45 inc/admin/classes/class-metaboxes.php:729
+#: inc/admin/admin-scripts.php:45 inc/admin/classes/class-metaboxes.php:728
 #: pack/wolf-core/inc/admin/admin-scripts.php:45
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:729
 msgid "Select an image"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:46 inc/admin/classes/class-metaboxes.php:730
+#: inc/admin/admin-scripts.php:46 inc/admin/classes/class-metaboxes.php:729
 #: pack/wolf-core/inc/admin/admin-scripts.php:46
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:730
 msgid "Select a set of images"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:47 inc/admin/classes/class-metaboxes.php:731
+#: inc/admin/admin-scripts.php:47 inc/admin/classes/class-metaboxes.php:730
 #: pack/wolf-core/inc/admin/admin-scripts.php:47
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:731
 msgid "Select a file"
 msgstr ""
 
-#: inc/admin/admin-scripts.php:48 inc/admin/classes/class-metaboxes.php:732
+#: inc/admin/admin-scripts.php:48 inc/admin/classes/class-metaboxes.php:731
 #: pack/wolf-core/inc/admin/admin-scripts.php:48
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:732
 msgid "This will remove the entire image set"
@@ -684,8 +684,8 @@ msgstr ""
 
 #: inc/admin/auth.php:68 pack/wolf-core/inc/admin/auth.php:68
 #: pack/wolf-core/wolf-core.php:255 pack/wolf-core/wolf-core.php:280
-#: pack/wolf-core/wolf-core.php:307 wolf-core.php:255 wolf-core.php:280
-#: wolf-core.php:307
+#: pack/wolf-core/wolf-core.php:305 pack/wolf-core/wolf-core.php:332
+#: wolf-core.php:260 wolf-core.php:285 wolf-core.php:310 wolf-core.php:337
 msgid "Elementor"
 msgstr ""
 
@@ -710,12 +710,12 @@ msgstr ""
 #: inc/admin/classes/class-admin.php:84
 #: pack/wolf-core/inc/admin/classes/class-admin.php:84
 #: pack/wolf-core/plugins/vc/vc.php:69 pack/wolf-core/plugins/vc/vc.php:103
-#: pack/wolf-core/plugins/vc/vc.php:156 pack/wolf-core/wolf-core.php:519
-#: pack/wolf-core/wolf-core.php:569 pack/wolf-core/wolf-core.php:625
-#: pack/wolf-core/wolf-core.php:655 pack/wolf-core/wolf-core.php:698
-#: pack/wolf-core/wolf-core.php:727 plugins/vc/vc.php:69 plugins/vc/vc.php:103
-#: plugins/vc/vc.php:156 wolf-core.php:519 wolf-core.php:569 wolf-core.php:625
-#: wolf-core.php:655 wolf-core.php:698 wolf-core.php:727
+#: pack/wolf-core/plugins/vc/vc.php:156 pack/wolf-core/wolf-core.php:544
+#: pack/wolf-core/wolf-core.php:594 pack/wolf-core/wolf-core.php:650
+#: pack/wolf-core/wolf-core.php:680 pack/wolf-core/wolf-core.php:723
+#: pack/wolf-core/wolf-core.php:752 plugins/vc/vc.php:69 plugins/vc/vc.php:103
+#: plugins/vc/vc.php:156 wolf-core.php:549 wolf-core.php:599 wolf-core.php:655
+#: wolf-core.php:685 wolf-core.php:728 wolf-core.php:757
 #. translators: the code to output
 #. translators: the code to output
 #. translators: %s: the code to display
@@ -733,20 +733,20 @@ msgstr ""
 msgid "Every %d minutes"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:61
+#: inc/admin/classes/class-metaboxes.php:60
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:61
 msgid "%s Options"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:145
+#: inc/admin/classes/class-metaboxes.php:144
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:145
 msgid "Label"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:238
-#: inc/admin/classes/class-metaboxes.php:261
-#: inc/admin/classes/class-metaboxes.php:313
-#: inc/admin/classes/class-metaboxes.php:465
+#: inc/admin/classes/class-metaboxes.php:237
+#: inc/admin/classes/class-metaboxes.php:260
+#: inc/admin/classes/class-metaboxes.php:312
+#: inc/admin/classes/class-metaboxes.php:464
 #: inc/admin/classes/class-options.php:254
 #: inc/admin/classes/class-options.php:289
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:238
@@ -758,15 +758,15 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:239
-#: inc/admin/classes/class-metaboxes.php:466
+#: inc/admin/classes/class-metaboxes.php:238
+#: inc/admin/classes/class-metaboxes.php:465
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:239
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:466
 msgid "Choose a file"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:262
-#: inc/admin/classes/class-metaboxes.php:314
+#: inc/admin/classes/class-metaboxes.php:261
+#: inc/admin/classes/class-metaboxes.php:313
 #: inc/admin/classes/class-options.php:255
 #: inc/admin/classes/class-options.php:290
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:262
@@ -776,19 +776,19 @@ msgstr ""
 msgid "Choose an image"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:296
+#: inc/admin/classes/class-metaboxes.php:295
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:296
 #: pack/wolf-core/plugins/vc/deprecated/wvc_icon.php:423
 #: plugins/vc/deprecated/wvc_icon.php:423
 msgid "Background color"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:304
+#: inc/admin/classes/class-metaboxes.php:303
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:304
 msgid "Background image"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:326
+#: inc/admin/classes/class-metaboxes.php:325
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:326
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:111
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:230
@@ -797,7 +797,7 @@ msgstr ""
 msgid "Background repeat"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:355
+#: inc/admin/classes/class-metaboxes.php:354
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:355
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:87
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:207
@@ -806,57 +806,57 @@ msgstr ""
 msgid "Background position"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:374
+#: inc/admin/classes/class-metaboxes.php:373
 #: inc/admin/classes/class-options.php:341
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:374
 #: pack/wolf-core/inc/admin/classes/class-options.php:341
 msgid "cover (resize)"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:375
+#: inc/admin/classes/class-metaboxes.php:374
 #: inc/admin/classes/class-options.php:342
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:375
 #: pack/wolf-core/inc/admin/classes/class-options.php:342
 msgid "normal"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:376
+#: inc/admin/classes/class-metaboxes.php:375
 #: inc/admin/classes/class-options.php:343
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:376
 #: pack/wolf-core/inc/admin/classes/class-options.php:343
 msgid "responsive (hard resize)"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:381
+#: inc/admin/classes/class-metaboxes.php:380
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:381
 #: pack/wolf-core/plugins/vc/vc-params/custom-heading-params.php:248
 #: plugins/vc/vc-params/custom-heading-params.php:248
 msgid "Background size"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:397
+#: inc/admin/classes/class-metaboxes.php:396
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:397
 #: pack/wolf-core/plugins/vc/vc-params/background-params.php:153
 #: plugins/vc/vc-params/background-params.php:153
 msgid "Parallax"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:420
+#: inc/admin/classes/class-metaboxes.php:419
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:420
 msgid "Are you sure to want to reset all images ?"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:450
+#: inc/admin/classes/class-metaboxes.php:449
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:450
 msgid "Clear All"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:451
+#: inc/admin/classes/class-metaboxes.php:450
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:451
 msgid "Select Images"
 msgstr ""
 
-#: inc/admin/classes/class-metaboxes.php:484
+#: inc/admin/classes/class-metaboxes.php:483
 #: pack/wolf-core/inc/admin/classes/class-metaboxes.php:484
 #: pack/wolf-core/plugins/common-params/button-params.php:25
 #: pack/wolf-core/plugins/elementor/controls/page.php:24
@@ -8299,7 +8299,8 @@ msgstr ""
 msgid "CSS box"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:252 wolf-core.php:252
+#: pack/wolf-core/wolf-core.php:252 pack/wolf-core/wolf-core.php:277
+#: wolf-core.php:257 wolf-core.php:282
 msgid ""
 "\"%1$s\" requires <a href=\"%2$s\" target=\"_blank\">%3$s</a> to be "
 "installed and activated."
@@ -8309,7 +8310,7 @@ msgstr ""
 msgid "Wolf Core"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:277 wolf-core.php:277
+#: pack/wolf-core/wolf-core.php:302 wolf-core.php:307
 msgid ""
 "\"%1$s\" requires to choose between \"<a href=\"%2$s\" "
 "target=\"_blank\">%3$s</a>\" or \"<a href=\"%4$s\" "
@@ -8317,24 +8318,24 @@ msgid ""
 "same time."
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:282 pack/wolf-core/wolf-core.php:334
-#: wolf-core.php:282 wolf-core.php:334
+#: pack/wolf-core/wolf-core.php:307 pack/wolf-core/wolf-core.php:359
+#: wolf-core.php:312 wolf-core.php:364
 msgid "WPBakery Page Builder"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:305 pack/wolf-core/wolf-core.php:332
-#: pack/wolf-core/wolf-core.php:359 wolf-core.php:305 wolf-core.php:332
-#: wolf-core.php:359
+#: pack/wolf-core/wolf-core.php:330 pack/wolf-core/wolf-core.php:357
+#: pack/wolf-core/wolf-core.php:384 wolf-core.php:335 wolf-core.php:362
+#: wolf-core.php:389
 #. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:360 wolf-core.php:360
+#: pack/wolf-core/wolf-core.php:385 wolf-core.php:390
 msgid "Wolf Elementor Extension"
 msgstr ""
 
-#: pack/wolf-core/wolf-core.php:361 wolf-core.php:361
+#: pack/wolf-core/wolf-core.php:386 wolf-core.php:391
 msgid "PHP"
 msgstr ""
 
