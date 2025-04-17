@@ -145,8 +145,13 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		public function verifications() {
 
 			/* Check if Elementor or WPBakery Page Builder is activated */
-			if ( ! did_action( 'elementor/loaded' ) && ! defined( 'WPB_VC_VERSION' ) ) {
-				add_action( 'admin_notices', array( $this, 'admin_notice_missing_page_builder_plugin' ) );
+			// if ( ! did_action( 'elementor/loaded' ) && ! defined( 'WPB_VC_VERSION' ) ) {
+			// 	add_action( 'admin_notices', array( $this, 'admin_notice_missing_page_builder_plugin' ) );
+			// 	return;
+			// }
+
+			if ( ! did_action( 'elementor/loaded' ) || defined( 'WPB_VC_VERSION' ) ) {
+				add_action( 'admin_notices', array( $this, 'admin_notice_missing_elementor' ) );
 				return;
 			}
 
@@ -231,6 +236,31 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			}
 
 			do_action( 'wolf_core_init' );
+		}
+
+		/**
+		 * Admin notice
+		 *
+		 * Warning when the site doesn't have Elementor or WPBakery Page Builder installed or activated.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @access public
+		 */
+		public function admin_notice_missing_elementor() {
+
+			if ( isset( $_GET['activate'] ) ) {
+				unset( $_GET['activate'] );
+			}
+
+			$message = sprintf(
+				wp_kses_post( __( '"%1$s" requires <a href="%2$s" target="_blank">%3$s</a> to be installed and activated.', 'wolf-core' ) ),
+				'<strong>' . esc_html__( 'Wolf Core', 'wolf-core' ) . '</strong>',
+				'https://wlfthm.es/elementor',
+				'<strong>' . esc_html__( 'Elementor', 'wolf-core' ) . '</strong>',
+			);
+
+			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
 		}
 
 		/**

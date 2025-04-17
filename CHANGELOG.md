@@ -1,5 +1,9 @@
 # Changelog
 
+#### 17th April 2025 - Version 2.0.36
+
+-   Fix: Info message if Elementor is not activated and WPBakery is - Prevent error later with file including
+
 #### 5th April 2025 - Version 2.0.35
 
 -   Fix: Prevent undefined index error for 'type' in $field by adding default 'text'

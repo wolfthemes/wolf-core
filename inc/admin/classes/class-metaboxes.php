@@ -44,7 +44,6 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 			add_action( 'add_meta_boxes', array( $this, 'add_meta' ) );
 			add_action( 'save_post', array( $this, 'save' ) );
-
 			add_action( 'admin_enqueue_scripts', array( $this, 'scripts' ) );
 		}
 
