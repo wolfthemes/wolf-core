@@ -1,5 +1,9 @@
 # Changelog
 
+#### 21th April 2025 - Version 2.0.37
+
+-   Fix: Add resize event trigger for Elementor accordion panels
+
 #### 17th April 2025 - Version 2.0.36
 
 -   Fix: Info message if Elementor is not activated and WPBakery is - Prevent error later with file including

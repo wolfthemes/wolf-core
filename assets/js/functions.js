@@ -125,6 +125,11 @@ var WolfCore = (function ($) {
 			this.addResizedEvent();
 			this.twitterToX();
 
+			/**
+			 * Trigger resize event when an accordion or toggle elementi is open
+			 */
+			this.smoothScrollAccordionQuickFix();
+
 			if ( this.allowScrollEvent ) {
 				// Scroll event
 				$(window).scroll(function () {
@@ -1585,6 +1590,25 @@ var WolfCore = (function ($) {
 				} else {
 					$(this).removeClass("wolf-core-row-visible");
 				}
+			});
+		},
+
+		smoothScrollAccordionQuickFix : function () {
+			// Target all Elementor accordion items
+			var $accordionItems = $('.e-n-accordion-item-title, .wcs-timetable__agenda-nav-item');
+
+			// Listen for click events on accordion titles
+			$accordionItems.on('click', function() {
+				// Small delay to ensure panel is fully opened
+				setTimeout(function() {
+					// Trigger window resize event
+
+					console.log( "resize" );
+					$(window).trigger('resize');
+					window.dispatchEvent(new Event('resize'));
+					// If you have any specific components that need resizing
+					// you can also trigger custom events for them here
+				}, 1000); // Adjust timeout as needed
 			});
 		},
 
