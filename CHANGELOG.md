@@ -1,5 +1,9 @@
 # Changelog
 
+#### 1st May 2025 - Version 2.0.38
+
+-   Improvement: Changed WolfThemes API remote URL to .cloud domain
+
 #### 21th April 2025 - Version 2.0.37
 
 -   Fix: Add resize event trigger for Elementor accordion panels
