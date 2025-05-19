@@ -1,5 +1,9 @@
 # Changelog
 
+#### 19th May 2025 - Version 2.0.39
+
+-   Improvement: Added subheading shorthand support
+
 #### 1st May 2025 - Version 2.0.38
 
 -   Improvement: Changed WolfThemes API remote URL to .cloud domain
