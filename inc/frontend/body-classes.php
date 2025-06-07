@@ -18,6 +18,8 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_body_class( $classes ) {
 
+
+	$classes[] = 'wolf-core';
 	$classes[] = 'wolf-core-body';
 
 	if ( wolf_core_is_page_builder_page() ) {
