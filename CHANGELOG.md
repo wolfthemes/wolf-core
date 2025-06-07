@@ -1,5 +1,10 @@
 # Changelog
 
+
+#### 7th June 2025 - Version 2.0.40
+
+-   Improvement: removed fluid video JS feature for repsonsive videos (deprecated)
+
 #### 19th May 2025 - Version 2.0.39
 
 -   Improvement: Added subheading shorthand support

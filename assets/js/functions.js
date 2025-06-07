@@ -97,7 +97,7 @@ var WolfCore = (function ($) {
 
 			this.parallax();
 
-			this.fluidVideos();
+			// this.fluidVideos();
 
 			this.lightbox();
 
