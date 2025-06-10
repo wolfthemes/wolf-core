@@ -97,7 +97,7 @@ var WolfCore = (function ($) {
 
 			this.parallax();
 
-			// this.fluidVideos();
+			this.fluidVideos();
 
 			this.lightbox();
 
@@ -525,6 +525,7 @@ var WolfCore = (function ($) {
 				.find($(videoSelectors.join(",")).not(".wolf-core-vimeo-bg, .vimeo-bg"))
 				.wrap('<span class="wolf-core-fluid-video" />');
 			$(".rev_slider_wrapper").find(videoSelectors.join(",")).unwrap(); // disabled for revslider videos
+			$(".elementor-wrapper").find(videoSelectors.join(",")).unwrap(); // disabled for revslider videos
 			$(".wolf-core-fluid-video").parent().addClass("wolf-core-fluid-video-container");
 		},
 
