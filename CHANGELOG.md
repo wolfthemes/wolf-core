@@ -2,7 +2,7 @@
 
 #### 12th June 2025 - Version 2.0.42
 
--   Feat: added text_html Elementor controls type
+-   Feat: added text_html Elementor control type
 
 #### 10th June 2025 - Version 2.0.41
 
