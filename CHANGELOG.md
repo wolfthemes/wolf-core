@@ -1,5 +1,9 @@
 # Changelog
 
+#### 12th June 2025 - Version 2.0.42
+
+-   Feat: added text_html Elementor controls type
+
 #### 10th June 2025 - Version 2.0.41
 
 -   Fix: re-enabled fluid video in non-Elementor context (fix video not responsive outide of Elementor widget)
