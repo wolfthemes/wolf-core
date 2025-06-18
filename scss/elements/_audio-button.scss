@@ -1,0 +1,17 @@
+// Wolf Core Audio Button SCSS
+.wolf-core-audio-button-icon{
+	&:before {
+		font-size: 24px;
+		font-family: dripicons-v2;
+		content: '\e01a';
+		position: relative;
+		top: 6px;
+	}
+}
+
+.wolf-core-audio-button-player-playing {
+	.wolf-core-audio-button-icon:before{
+		content: '\e019';
+	}
+}
+

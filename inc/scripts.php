@@ -55,6 +55,8 @@ function wolf_core_get_js_params() {
 				'unknownError'          => esc_html__( 'Something went wrong while submuitting the form, please try again later.', 'wolf-visual-composer' ),
 				'processingMessage'     => esc_html__( 'Loading', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
 				'BMICProcessingMessage' => esc_html__( 'Calculating', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
+				'playText' 				=> esc_html( 'Play', 'wolf-core' ),
+				'pauseText' 			=> esc_html( 'Pause', 'wolf-core' ),
 			),
 		)
 	);
@@ -239,7 +241,7 @@ function wolf_core_enqueue_scripts() {
 	wp_register_script( 'wolf-core-accordion', WOLF_CORE_JS . $folder . '/accordion' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-advanced-slider', WOLF_CORE_JS . $folder . '/advanced-slider' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-anything-slider', WOLF_CORE_JS . $folder . '/anything-slider' . $suffix . '.js', array( 'jquery' ), $version, true );
-	wp_register_script( 'wolf-core-audio-button', WOLF_CORE_JS . $folder . '/audio-button' . $suffix . '.js', array( 'jquery' ), $version, true );
+	/* wp_register_script( 'wolf-core-audio-button', WOLF_CORE_JS . $folder . '/audio-button' . $suffix . '.js', array( 'jquery' ), $version, true ); */
 	wp_register_script( 'wolf-core-carousels', WOLF_CORE_JS . $folder . '/carousels' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-bigtext', WOLF_CORE_JS . $folder . '/bigtext' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-fittext', WOLF_CORE_JS . $folder . '/fittext' . $suffix . '.js', array( 'jquery' ), $version, true );

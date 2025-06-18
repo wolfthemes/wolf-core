@@ -33,6 +33,7 @@ function wolf_core_get_elements() {
 		// 'anything-slider',
 		// 'anything-slide',
 		// 'audio',
+		// 'audio-button',
 		// 'audio-embed',
 		// 'bandsintown-events', // added in themes
 		// 'bandsintown-tracking-button', // added in themes

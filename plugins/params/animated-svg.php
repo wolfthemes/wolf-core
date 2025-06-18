@@ -26,7 +26,7 @@ function wolf_core_animated_svg_params() {
 				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
 				'el_categories'    => array( 'extension' ),
 				'el_base'          => 'animated-svg',
-				'icon'             => 'linea-software linea-software-transform-bezier',
+				'icon'             => 'eicon-headphones',
 				'register_scripts' => array(
 					'wolf-core-animated-svg' => array(
 						'src'     => WOLF_CORE_JS . '/animated-svg.js',

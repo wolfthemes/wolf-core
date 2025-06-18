@@ -1,5 +1,5 @@
 /*!
- * BigText
+ * Animated SVG
  */
 /* jshint -W062 */
 
