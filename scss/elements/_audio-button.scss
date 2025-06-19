@@ -1,17 +1,51 @@
 // Wolf Core Audio Button SCSS
+.wolf-core-audio-button-container{
+    margin-left: auto;
+	margin-right: auto;
+
+}
+
+
 .wolf-core-audio-button-icon{
+	cursor:pointer;
+	display: block;
+	outline: none;
+	width: 66px;
+	transition: transform 0.2s ease-out;
+	text-align: center;
+	margin: 0 auto;
+	//top: 50%;
+	position: relative;
+    transition: all 0.3s;
+    font-size: 50px;
+    text-align: center;
 	&:before {
 		font-size: 24px;
-		font-family: dripicons-v2;
-		content: '\e01a';
+        font: normal normal normal 24px/1 iconmonstr-iconic-font;
 		position: relative;
-		top: 6px;
+        content: '\e03d';
+		top: 0;
 	}
 }
 
-.wolf-core-audio-button-player-playing {
+.wolf-core-audio-button-playing {
 	.wolf-core-audio-button-icon:before{
-		content: '\e019';
+		content: '\e03e';
 	}
 }
 
+// .wolf-core-audio-button-align-left {
+// 	margin-left: 0;
+//
+// 	.wolf-core-video-opener {
+// 		margin-left: 0;
+// 	}
+// }
+//
+// .wolf-core-audio-button-align-right {
+// 	margin-right: 0;
+//
+// 	.wolf-core-video-opener {
+// 		margin-right: 0;
+// 	}
+// }

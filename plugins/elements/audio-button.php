@@ -21,6 +21,7 @@ function wolf_core_audio_button( $atts ) {
 			$atts,
 			array(
 				'file'                      => '',
+				'alignment'          		=> 'center',
 				'css_animation'             => '',
 				'css_animation_delay'       => '',
 				'el_class'                  => '',
@@ -42,19 +43,23 @@ function wolf_core_audio_button( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	$class .= ' wolf-core-audio-button wolf-core-element';
+	$class .= ' wolf-core-audio-button-container wolf-core-element';
 
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';
-	$output .= '<span class="wolf-core-audio-button-icon">▶️</spa>';
+
+	$output .= '<div class="wolf-core-audio-button">';
+
+	$output .= '<span class="wolf-core-audio-button-icon"></spa>';
 	$output .= '<audio id="wolf-core-audio-button-player-' . $rand_id . '" class="wolf-core-audio-button-player" preload="metadata">';
 	$output .= '<source src="' . $file . '" type="audio/mpeg">';
 	$output .= esc_html__( 'Your browser does not support the audio element.', 'wolf-core' );
 	$output .= '</audio>';
 
 	$output .= '</div><!--.wolf-core-audio-button-->';
+	$output .= '</div><!--.wolf-core-audio-button-container-->';
 
 	return $output;
 }

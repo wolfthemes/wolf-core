@@ -43,7 +43,30 @@ function wolf_core_audio_button_params() {
 					'param_name'  => 'file',
 					'description' => esc_html__( 'Select audio file from media library.', 'wolf-core' ),
 					'admin_label' => true,
-				)
+				),
+				array(
+					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
+					'param_name'   => 'alignment',
+					'type'         => 'choose',
+					'options'      => array(
+						'left'   => array(
+							'title' => esc_html__( 'Left', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-left',
+						),
+						'center' => array(
+							'title' => esc_html__( 'Center', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-center',
+						),
+						'right'  => array(
+							'title' => esc_html__( 'Right', 'wolf-core' ),
+							'icon'  => 'eicon-text-align-right',
+						),
+					),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-audio-button-icon' => 'margin-{{VALUE}}:0;',
+					),
+					'page_builder' => 'elementor',
+				),
 			),
 		)
 	);
