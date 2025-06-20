@@ -9,6 +9,32 @@ var WolfCoreAudioButton = function( $ ) {
 		 * Init UI
 		 */
 		init : function ( $scope ) {
+
+			// this.autoPlay();
+			this.btnClick();
+
+		},
+
+		autoPlay : function() {
+			$(".wolf-core-audio-button").each(function() {
+			   var $btn = $(this),
+				   $container = $btn.parent(),
+				   $audio = $btn.find(".wolf-core-audio-button-player"),
+				   audioId = $audio.attr("id"),
+				   audio = document.getElementById(audioId);
+
+			   if (audio) {
+				   setTimeout(() => {
+					   audio.play().catch(e => console.log('Autoplay blocked:', e));
+					   $container.addClass("wolf-core-audio-button-playing");
+					   $btn.attr("title", WolfCoreJSParams.l10n.pauseText || 'Pause');
+				   }, 1000);
+			   }
+			});
+		},
+
+		btnClick : function() {
+
 			$(document).on("click", ".wolf-core-audio-button", function () {
 				event.preventDefault();
 

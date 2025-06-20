@@ -2528,13 +2528,19 @@ li.wolf-core-album-tracklist-item {
 .wolf-core-audio-button-container {
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+.wolf-core-audio-button {
+  display: inline-block;
 }
 
 .wolf-core-audio-button-icon {
   cursor: pointer;
   display: block;
   outline: none;
-  width: 66px;
+  width: 60px;
+  height: 60px;
   transition: transform 0.2s ease-out;
   text-align: center;
   margin: 0 auto;
@@ -2542,31 +2548,24 @@ li.wolf-core-album-tracklist-item {
   transition: all 0.3s;
   font-size: 50px;
   text-align: center;
+  border-radius: var(--theme-border-radius);
 }
 .wolf-core-audio-button-icon:before {
   font-size: 24px;
   font: normal normal normal 24px/1 iconmonstr-iconic-font;
   position: relative;
   content: "\e03d";
-  top: 0;
+  top: -11px;
+  left: 2px;
 }
 
 .wolf-core-audio-button-playing .wolf-core-audio-button-icon:before {
   content: "\e03e";
+  left: -1px;
 }
 
-.wolf-core-audio-button-align-left {
-  margin-left: 0;
-}
-.wolf-core-audio-button-align-left .wolf-core-video-opener {
-  margin-left: 0;
-}
-
-.wolf-core-audio-button-align-right {
-  margin-right: 0;
-}
-.wolf-core-audio-button-align-right .wolf-core-video-opener {
-  margin-right: 0;
+.wolf-core-audio-button-shape-round .wolf-core-audio-button-icon {
+  border-radius: 999em;
 }
 
 /**

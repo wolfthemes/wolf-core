@@ -67,6 +67,33 @@ function wolf_core_audio_button_params() {
 					),
 					'page_builder' => 'elementor',
 				),
+				array(
+					'param_name' => 'background',
+					'type'       => 'background',
+					'label'      => esc_html__( 'Background', 'wolf-core' ),
+					'selector'   => '{{WRAPPER}} .wolf-core-audio-button-icon',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+				array(
+					'param_name' => 'icon_color',
+					'type'       => 'colorpicker',
+					'label'      => esc_html__( 'Icon Color', 'wolf-core' ),
+					'selectors'    => array(
+						'{{WRAPPER}} .wolf-core-audio-button-icon' => 'color:{{VALUE}};',
+					),
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
+				array(
+					'type'       => 'select',
+					'label' => esc_html__( 'Shape', 'wolf-core' ),
+					'param_name' => 'shape',
+					'options'    => array(
+						'square' =>  esc_html__( 'Square', 'wolf-core' ),
+						'round' =>  esc_html__( 'Round', 'wolf-core' ),
+					),
+					'prefix_class' => 'wolf-core-audio-button-shape-',
+					'group'        => esc_html__( 'Style', 'wolf-core' ),
+				),
 			),
 		)
 	);

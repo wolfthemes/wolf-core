@@ -1,5 +1,10 @@
 # Changelog
 
+
+#### 20th June 2025 - Version 2.0.43
+
+-   Feat: added audio button widget
+
 #### 12th June 2025 - Version 2.0.42
 
 -   Feat: added text_html Elementor control type
