@@ -45,6 +45,15 @@ function wolf_core_audio_button_params() {
 					'admin_label' => true,
 				),
 				array(
+					'label' => esc_html__( 'Button Type', 'wolf-core' ),
+					'param_name' => 'btn_type',
+					'type' => 'select',
+					'options' => array(
+						'icon' => esc_html__( 'Icon', 'wolf-core' ),
+						'equalizer' => esc_html__( 'Equalizer', 'wolf-core' ),
+					),
+				),
+				array(
 					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'   => 'alignment',
 					'type'         => 'choose',
@@ -67,12 +76,21 @@ function wolf_core_audio_button_params() {
 					),
 					'page_builder' => 'elementor',
 				),
+				/* array( */
+				/* 	'label'      => esc_html__( 'Autoplay', 'wolf-core' ), */
+				/* 	'description'      => esc_html__( 'May not work on all devices', 'wolf-core' ), */
+				/* 	'type' => 'checkbox', */
+				/* 	'param_name' => 'autoplay', */
+				/* ), */
 				array(
 					'param_name' => 'background',
 					'type'       => 'background',
 					'label'      => esc_html__( 'Background', 'wolf-core' ),
 					'selector'   => '{{WRAPPER}} .wolf-core-audio-button-icon',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
+					'condition'        => array(
+						'btn_type' => 'icon',
+					),
 				),
 				array(
 					'param_name' => 'icon_color',
@@ -82,6 +100,9 @@ function wolf_core_audio_button_params() {
 						'{{WRAPPER}} .wolf-core-audio-button-icon' => 'color:{{VALUE}};',
 					),
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
+					'condition'        => array(
+						'btn_type' => 'icon',
+					),
 				),
 				array(
 					'type'       => 'select',
@@ -93,6 +114,9 @@ function wolf_core_audio_button_params() {
 					),
 					'prefix_class' => 'wolf-core-audio-button-shape-',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
+					'condition'        => array(
+						'btn_type' => 'icon',
+					),
 				),
 			),
 		)

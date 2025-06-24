@@ -22,6 +22,8 @@ function wolf_core_audio_button( $atts ) {
 			array(
 				'file'                      => '',
 				'alignment'          		=> 'center',
+				'autoplay'          		=> '',
+				'btn_type'                 	=> 'icon',
 				'css_animation'             => '',
 				'css_animation_delay'       => '',
 				'el_class'                  => '',
@@ -31,7 +33,11 @@ function wolf_core_audio_button( $atts ) {
 		)
 	);
 
+	/* debug( $atts ); */
+
 	extract( $atts ); // phpcs:ignore
+
+	wp_enqueue_style( 'elementor-icons-iconmonstr-iconic-font' );
 
 	// If elementor get file ID.
 	if ( is_array( $file ) && isset( $file['url'] ) ) {
@@ -45,15 +51,37 @@ function wolf_core_audio_button( $atts ) {
 
 	$class .= ' wolf-core-audio-button-container wolf-core-element';
 
+	$class .= ' wolf-core-audio-button-align-' . $alignment;
+
 	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';
 
-	$output .= '<div class="wolf-core-audio-button">';
+	$output .= '<div class="wolf-core-audio-button"';
 
-	$output .= '<span class="wolf-core-audio-button-icon"></spa>';
-	$output .= '<audio id="wolf-core-audio-button-player-' . $rand_id . '" class="wolf-core-audio-button-player" preload="metadata">';
+	if ( $autoplay ) {
+		$output .= ' data-autoplay="true" ';
+	}
+
+	$output .='>';
+
+	if ( 'equalizer' === $btn_type ) {
+
+		$output .= '<span class="wolf-core-audio-button-equalizer">';
+
+		$output .= '<span class="wolf-core-audio-button-equalizer-bar"></span>';
+		$output .= '<span class="wolf-core-audio-button-equalizer-bar"></span>';
+		$output .= '<span class="wolf-core-audio-button-equalizer-bar"></span>';
+		$output .= '<span class="wolf-core-audio-button-equalizer-bar"></span>';
+
+		$output .= '</span>';
+	} else {
+
+		$output .= '<span class="wolf-core-audio-button-icon"></span>';
+	}
+
+	$output .= '<audio controls="controls" id="wolf-core-audio-button-player-' . $rand_id . '" class="wolf-core-audio-button-player" preload="metadata">';
 	$output .= '<source src="' . $file . '" type="audio/mpeg">';
 	$output .= esc_html__( 'Your browser does not support the audio element.', 'wolf-core' );
 	$output .= '</audio>';

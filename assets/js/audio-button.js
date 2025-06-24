@@ -10,7 +10,7 @@ var WolfCoreAudioButton = function( $ ) {
 		 */
 		init : function ( $scope ) {
 
-			// this.autoPlay();
+			this.autoPlay();
 			this.btnClick();
 
 		},
@@ -21,15 +21,23 @@ var WolfCoreAudioButton = function( $ ) {
 				   $container = $btn.parent(),
 				   $audio = $btn.find(".wolf-core-audio-button-player"),
 				   audioId = $audio.attr("id"),
+				   autoPlay = $btn.data( "autoplay" ) || false,
 				   audio = document.getElementById(audioId);
 
-			   if (audio) {
-				   setTimeout(() => {
-					   audio.play().catch(e => console.log('Autoplay blocked:', e));
-					   $container.addClass("wolf-core-audio-button-playing");
-					   $btn.attr("title", WolfCoreJSParams.l10n.pauseText || 'Pause');
-				   }, 1000);
-			   }
+				// console.log( autoPlay );
+
+				if ( audio && autoPlay ) {
+					// audio.muted = false;
+					// audio.play().catch(e => console.log('Autoplay blocked:', e));
+				}
+
+			   // if (audio) {
+			   //  setTimeout(() => {
+			   //   audio.play().catch(e => console.log('Autoplay blocked:', e));
+			   //   $container.addClass("wolf-core-audio-button-playing");
+			   //   $btn.attr("title", WolfCoreJSParams.l10n.pauseText || 'Pause');
+			   //  }, 1000);
+			   // }
 			});
 		},
 

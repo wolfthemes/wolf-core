@@ -1,13 +1,25 @@
 // Wolf Core Audio Button SCSS
 .wolf-core-audio-button-container{
-    margin-left: auto;
-	margin-right: auto;
+	display: flex;
+	justify-content: center;
 	text-align: center;
 }
 
 .wolf-core-audio-button{
 	display: inline-block;
 	min-width:60px;
+
+	audio{
+		display: none;
+	}
+}
+
+.wolf-core-audio-button-align-left {
+	justify-content: flex-start;
+}
+
+.wolf-core-audio-button-align-right {
+	justify-content: flex-end;
 }
 
 .wolf-core-audio-button-icon{
@@ -35,29 +47,105 @@
 	}
 }
 
-.wolf-core-audio-button-playing {
-	.wolf-core-audio-button-icon:before{
-		content: '\e03e';
-		left:-1px;
-	}
-}
 .wolf-core-audio-button-shape-round{
 	.wolf-core-audio-button-icon{
 		border-radius: 999em;
 	}
 }
-// .wolf-core-audio-button-align-left {
-// 	margin-left: 0;
-//
-// 	.wolf-core-video-opener {
-// 		margin-left: 0;
-// 	}
-// }
-//
-// .wolf-core-audio-button-align-right {
-// 	margin-right: 0;
-//
-// 	.wolf-core-video-opener {
-// 		margin-right: 0;
-// 	}
-// }
+
+.wolf-core-audio-button-equalizer{
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 9999em;
+    transition: all .2s ease;
+}
+
+.wolf-core-audio-button-equalizer-bar {
+	height: 6px;
+    width: 3px;
+    display: inline-block;
+    background-color: #fff;
+    bottom: 0;
+    bottom: 13px;
+    top: auto;
+    position: absolute;
+    animation-duration: .44s;
+    animation-play-state: running;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+	&:nth-child(1) {
+		left: 12px;
+		animation-name: moveHeight1;
+		animation-delay: .1s;
+	}
+	&:nth-child(2) {
+		left: 19px;
+		animation-name: moveHeight3;
+		animation-delay: .2s;
+	}
+	&:nth-child(3) {
+		left: 26px;
+		animation-name: moveHeight4;
+		animation-delay: .3s;
+	}
+	&:nth-child(4) {
+		left: 33px;
+		animation-name: moveHeight2;
+		animation-delay: .4s;
+	}
+}
+
+
+@keyframes moveHeight1{
+    from{
+        height:1px
+    }
+    to{
+        height:22px
+    }
+}
+@keyframes moveHeight2{
+    from{
+        height:1px
+    }
+    to{
+        height:15px
+    }
+}
+@keyframes moveHeight3{
+    from{
+        height:1px
+    }
+    to{
+        height:17px
+    }
+}
+@keyframes moveHeight4{
+    from{
+        height:1px
+    }
+    to{
+        height:24px
+    }
+}
+
+// Playing state
+.wolf-core-audio-button-playing {
+	.wolf-core-audio-button-icon:before{
+		content: '\e03e';
+		left:-1px;
+	}
+
+
+	.wolf-core-audio-button-equalizer{
+		border-color: rgba(255, 255, 255, .8);
+	}
+}

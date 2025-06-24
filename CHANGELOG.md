@@ -1,6 +1,12 @@
 # Changelog
 
 
+#### 24th June 2025 - Version 2.0.45
+
+-   Improvement: added audio button equalizer type option
+-   Fix: audio button missing icon
+
+
 #### 20th June 2025 - Version 2.0.43
 
 -   Feat: added audio button widget
