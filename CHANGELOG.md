@@ -1,6 +1,10 @@
 # Changelog
 
 
+#### 7th June 2025 - Version 2.0.46
+
+-   Improvement: added padding and margin core params
+
 #### 24th June 2025 - Version 2.0.45
 
 -   Improvement: added audio button equalizer type option
