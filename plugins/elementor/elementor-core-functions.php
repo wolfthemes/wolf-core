@@ -339,39 +339,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::HOVER_ANIMATION;
 
-		} elseif ( 'padding' === $type ) {
-
-			$widget->add_responsive_control(
-				$p['param_name'],
-				array(
-					'label'      => $field_params['label'],
-					'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-					'size_units' => array( 'px', 'em', '%', 'rem' ),
-					'selectors'  => array(
-						$p['selector'] => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-					),
-					'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
-					'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
-					'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
-				)
-			);
-
-		} elseif ( 'margin' === $type ) {
-
-			$widget->add_responsive_control(
-				$p['param_name'],
-				array(
-					'label'      => $field_params['label'],
-					'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-					'size_units' => array( 'px', 'em', '%', 'rem' ),
-					'selectors'  => array(
-						$p['selector'] => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-					),
-					'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
-					'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
-					'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
-				)
-			);
 		}
 
 			$elementor_params = array(
@@ -415,6 +382,39 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					$field_params
 				);
 
+			} elseif ( 'padding' === $type ) {
+
+				$widget->add_responsive_control(
+						$p['param_name'],
+						array(
+							'label'      => $field_params['label'],
+							'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+							'size_units' => array( 'px', 'em', '%', 'rem' ),
+							'selectors'  => array(
+								$p['selector'] => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+							),
+							'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
+							'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
+							'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
+						)
+					);
+
+			} elseif ( 'margin' === $type ) {
+
+				$widget->add_responsive_control(
+						$p['param_name'],
+						array(
+							'label'      => $field_params['label'],
+							'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+							'size_units' => array( 'px', 'em', '%', 'rem' ),
+							'selectors'  => array(
+								$p['selector'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+							),
+							'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
+							'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
+							'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
+						)
+					);
 			} elseif ( 'css_filters' === $type ) {
 
 				$widget->add_group_control(

@@ -1,9 +1,10 @@
 # Changelog
 
 
-#### 7th June 2025 - Version 2.0.46
+#### 7th June 2025 - Version 2.0.47
 
 -   Improvement: added padding and margin core params
+-   Fix: better handling of repsonsive controls for padding and margin params
 
 #### 24th June 2025 - Version 2.0.45
 
