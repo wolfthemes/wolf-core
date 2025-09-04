@@ -1,5 +1,8 @@
 # Changelog
 
+#### 9th September 2025 - Version 2.0.48
+
+-   Fix: Link to Goole Maps API key Elementor Settings in Google Maps widget helper message
 
 #### 7th June 2025 - Version 2.0.47
 
