@@ -1,5 +1,9 @@
 # Changelog
 
+#### 18th September 2025 - Version 2.0.49
+
+-   Improvement: Added typography options to each testimonial slider fields
+
 #### 9th September 2025 - Version 2.0.48
 
 -   Fix: Link to Goole Maps API key Elementor Settings in Google Maps widget helper message
