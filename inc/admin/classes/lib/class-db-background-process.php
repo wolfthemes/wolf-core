@@ -7,11 +7,11 @@
 defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'WP_Async_Request', false ) ) {
-	include_once( 'wp-async-request.php' );
+	include_once 'wp-async-request.php';
 }
 
 if ( ! class_exists( 'WP_Background_Process', false ) ) {
-	include_once( 'wp-background-process.php' );
+	include_once 'wp-background-process.php';
 }
 
 class Wolf_Core_Background_Process extends WP_Background_Process {
@@ -94,7 +94,7 @@ class Wolf_Core_Background_Process extends WP_Background_Process {
 
 		wolf_core_log( $item );
 
-		//sleep( 2 );
+		// sleep( 2 );
 
 		$result = false;
 

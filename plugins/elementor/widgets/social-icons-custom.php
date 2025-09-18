@@ -33,11 +33,11 @@ class Elementor_Social_Icons_Custom_Widget extends \Elementor\Widget_Base { // p
 
 		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+		// $this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
+		// foreach ( $this->scripts as $script ) {
+		// wp_enqueue_script( $script );
+		// }
 		// }
 	}
 

@@ -33,7 +33,7 @@ function wolf_core_pricing_table_params() {
 					'type'       => 'text',
 					'label'      => esc_html__( 'Title', 'wolf-core' ),
 					'param_name' => 'title',
-					'ai' => array(
+					'ai'         => array(
 						'active' => false,
 					),
 				),
@@ -63,7 +63,7 @@ function wolf_core_pricing_table_params() {
 					'label'       => esc_html__( 'Price', 'wolf-core' ),
 					'param_name'  => 'price',
 					'placeholder' => 20,
-					'ai' => array(
+					'ai'          => array(
 						'active' => false,
 					),
 				),
@@ -73,7 +73,7 @@ function wolf_core_pricing_table_params() {
 					'param_name'  => 'currency',
 					'placeholder' => '$',
 					'description' => esc_html__( 'e.g: $ or €', 'wolf-core' ),
-					'ai' => array(
+					'ai'          => array(
 						'active' => false,
 					),
 				),
@@ -88,16 +88,16 @@ function wolf_core_pricing_table_params() {
 					),
 				),
 				// array(
-				// 	'type'       => 'checkbox',
-				// 	'label'      => esc_html__( 'Offer', 'wolf-core' ),
-				// 	'param_name' => 'offer',
+				// 'type'       => 'checkbox',
+				// 'label'      => esc_html__( 'Offer', 'wolf-core' ),
+				// 'param_name' => 'offer',
 				// ),
 				array(
 					'type'        => 'text',
 					'label'       => esc_html__( 'Offer Price', 'wolf-core' ),
 					'param_name'  => 'offer_price',
 					'placeholder' => 15,
-					'ai' => array(
+					'ai'          => array(
 						'active' => false,
 					),
 				),
@@ -106,7 +106,7 @@ function wolf_core_pricing_table_params() {
 					'label'       => esc_html__( 'Price Period', 'wolf-core' ),
 					'param_name'  => 'price_period',
 					'description' => esc_html__( 'e.g "monthly" or "per month"', 'wolf-core' ),
-					'ai' => array(
+					'ai'          => array(
 						'active' => false,
 					),
 				),

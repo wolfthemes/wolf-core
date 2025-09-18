@@ -57,15 +57,15 @@ function wolf_core_social_icons_params() {
 					'param_name'         => 'alignment',
 					'type'               => 'choose',
 					'options'            => array(
-						'flex-start'   => array(
+						'flex-start' => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
 						),
-						'center' => array(
+						'center'     => array(
 							'title' => esc_html__( 'Center', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-center',
 						),
-						'flex-end'  => array(
+						'flex-end'   => array(
 							'title' => esc_html__( 'Right', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-right',
 						),
@@ -126,7 +126,7 @@ function wolf_core_social_icons_params() {
 					'page_builder' => 'elementor',
 				),
 
-				'css_animation' => array(
+				'css_animation'      => array(
 					'type'         => 'select',
 					'label'        => esc_html__( 'Animation', 'wolf-core' ),
 					'param_name'   => 'css_animation',
@@ -341,13 +341,13 @@ function wolf_core_social_icons_params() {
 					'label'       => esc_html__( 'Hover Transition', 'wolf-core' ),
 					'param_name'  => 'hover_effect',
 					'options'     => array(
-						'none'         => esc_html__( 'None', 'wolf-core' ),
-						'opacity'      => esc_html__( 'Opacity', 'wolf-core' ),
-						//'border-inset' => esc_html__( 'Inset border', 'wolf-core' ),
-						'sonar'        => esc_html__( 'Shrink', 'wolf-core' ),
-						//'fill'         => esc_html__( 'Fill', 'wolf-core' ),
-						'pop'          => esc_html__( 'Pop', 'wolf-core' ),
-						//'rotate'       => esc_html__( 'Rotate', 'wolf-core' ),
+						'none'    => esc_html__( 'None', 'wolf-core' ),
+						'opacity' => esc_html__( 'Opacity', 'wolf-core' ),
+						// 'border-inset' => esc_html__( 'Inset border', 'wolf-core' ),
+						'sonar'   => esc_html__( 'Shrink', 'wolf-core' ),
+						// 'fill'         => esc_html__( 'Fill', 'wolf-core' ),
+						'pop'     => esc_html__( 'Pop', 'wolf-core' ),
+						// 'rotate'       => esc_html__( 'Rotate', 'wolf-core' ),
 					),
 					// 'description' => esc_html__( 'Custom hover effects won\'t apply to icon with custom colors settings', 'wolf-core' ),
 					'condition'   => array(

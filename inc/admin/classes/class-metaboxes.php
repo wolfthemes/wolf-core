@@ -82,10 +82,8 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 					if ( in_array( $current_post_type, $v['page'] ) ) {
 						$meta_fields = $v['metafields'];
 					}
-				} else {
-					if ( $v['page'] == $current_post_type ) {
+				} elseif ( $v['page'] == $current_post_type ) {
 						$meta_fields = $v['metafields'];
-					}
 				}
 			}
 
@@ -115,7 +113,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 					continue;
 				}
 
-				$i++
+				++$i
 				?>
 				<div id="<?php echo esc_attr( $key ); ?>" class="wolf-core-metabox-metabox-panel">
 					<?php
@@ -197,7 +195,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 
 				// checkbox
 			} elseif ( 'checkbox' == $type ) {
-				echo '<input type="checkbox" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" ', ( $meta ) ? ' checked="checked"' : '','/>
+				echo '<input type="checkbox" name="' . esc_attr( $field_id ) . '" id="' . esc_attr( $field_id ) . '" ', ( $meta ) ? ' checked="checked"' : '', '/>
 						<span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 				// datepicker
@@ -266,7 +264,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 					echo '<br><span class="description">' . wolf_core_kses( $desc ) . '</span>';
 
 					/*
-					  Background
+						Background
 					-------------------------------------------*/
 			} elseif ( 'background' == $type ) {
 
@@ -326,7 +324,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						<select name="<?php echo esc_attr( $field_id ) . '_repeat'; ?>" id="<?php echo esc_attr( $field_id ) . '_repeat'; ?>">
 					<?php foreach ( $options as $o ) : ?>
 								<option value="<?php echo esc_attr( $o ); ?>"
-														  <?php
+															<?php
 															if ( $o == $bg_meta_repeat ) {
 																echo 'selected="selected"';}
 															?>
@@ -355,7 +353,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						<select name="<?php echo esc_attr( $field_id ) . '_position'; ?>" id="<?php echo esc_attr( $field_id ) . '_position'; ?>">
 					<?php foreach ( $options as $o ) : ?>
 								<option value="<?php echo esc_attr( $o ); ?>"
-														  <?php
+															<?php
 															if ( $o == $bg_meta_position ) {
 																echo 'selected="selected"';}
 															?>
@@ -381,7 +379,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						<select name="<?php echo esc_attr( $field_id ) . '_size'; ?>" id="<?php echo esc_attr( $field_id ) . '_size'; ?>">
 					<?php foreach ( $options as $k => $v ) : ?>
 								<option value="<?php echo esc_attr( $k ); ?>"
-														  <?php
+															<?php
 															if ( $k == $bg_meta_size ) {
 																echo 'selected="selected"';}
 															?>
@@ -399,7 +397,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 							if ( $bg_meta_parallax ) {
 								echo 'checked="checked"';}
 							?>
-							 type="checkbox" name="<?php echo esc_attr( $field_id ) . '_parallax'; ?>" id="<?php echo esc_attr( $field_id ) . '_parallax'; ?>">
+							type="checkbox" name="<?php echo esc_attr( $field_id ) . '_parallax'; ?>" id="<?php echo esc_attr( $field_id ) . '_parallax'; ?>">
 							<?php
 				}
 			} elseif ( 'multiple_images' == $type ) {
@@ -454,7 +452,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 								<?php
 
 								/*
-								  Video
+									Video
 								-------------------------------------------*/
 			} elseif ( 'video' === $type ) {
 				$meta_url = get_post_meta( $post_id, $field_id, true );
@@ -471,7 +469,7 @@ if ( ! class_exists( 'Wolf_Metaboxes' ) ) {
 						<?php
 
 						/*
-						  Video
+							Video
 						-------------------------------------------*/
 			} elseif ( 'font_family' === $type ) {
 				/**

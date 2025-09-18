@@ -20,13 +20,13 @@ function wolf_core_audio_button_params() {
 		'wolf_core_audio_button_params',
 		array(
 			'properties' => array(
-				'name'          => esc_html__( 'Audio Button', 'wolf-core' ),
-				'description'   => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
-				'vc_base'       => 'wolf_core_audio_button',
-				'el_base'       => 'audio-button',
-				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'extension' ),
-				'icon'          => 'dashicons-before dashicons-album',
+				'name'             => esc_html__( 'Audio Button', 'wolf-core' ),
+				'description'      => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
+				'vc_base'          => 'wolf_core_audio_button',
+				'el_base'          => 'audio-button',
+				'vc_category'      => esc_html__( 'Music', 'wolf-core' ),
+				'el_categories'    => array( 'extension' ),
+				'icon'             => 'dashicons-before dashicons-album',
 				'register_scripts' => array(
 					'wolf-core-audio-button' => array(
 						'src'     => WOLF_CORE_JS . '/audio-button.js',
@@ -38,18 +38,18 @@ function wolf_core_audio_button_params() {
 
 			'params'     => array(
 				'file' => array(
-					'type' => 'audio',
-					'label' => esc_html__( 'Audio File', 'wolf-core' ),
+					'type'        => 'audio',
+					'label'       => esc_html__( 'Audio File', 'wolf-core' ),
 					'param_name'  => 'file',
 					'description' => esc_html__( 'Select audio file from media library.', 'wolf-core' ),
 					'admin_label' => true,
 				),
 				array(
-					'label' => esc_html__( 'Button Type', 'wolf-core' ),
+					'label'      => esc_html__( 'Button Type', 'wolf-core' ),
 					'param_name' => 'btn_type',
-					'type' => 'select',
-					'options' => array(
-						'icon' => esc_html__( 'Icon', 'wolf-core' ),
+					'type'       => 'select',
+					'options'    => array(
+						'icon'      => esc_html__( 'Icon', 'wolf-core' ),
 						'equalizer' => esc_html__( 'Equalizer', 'wolf-core' ),
 					),
 				),
@@ -76,19 +76,24 @@ function wolf_core_audio_button_params() {
 					),
 					'page_builder' => 'elementor',
 				),
-				/* array( */
-				/* 	'label'      => esc_html__( 'Autoplay', 'wolf-core' ), */
-				/* 	'description'      => esc_html__( 'May not work on all devices', 'wolf-core' ), */
-				/* 	'type' => 'checkbox', */
-				/* 	'param_name' => 'autoplay', */
+				/*
+				array( */
+				/*
+					'label'      => esc_html__( 'Autoplay', 'wolf-core' ), */
+				/*
+					'description'      => esc_html__( 'May not work on all devices', 'wolf-core' ), */
+				/*
+					'type' => 'checkbox', */
+				/*
+					'param_name' => 'autoplay', */
 				/* ), */
 				array(
 					'param_name' => 'background',
 					'type'       => 'background',
 					'label'      => esc_html__( 'Background', 'wolf-core' ),
 					'selector'   => '{{WRAPPER}} .wolf-core-audio-button-icon',
-					'group'        => esc_html__( 'Style', 'wolf-core' ),
-					'condition'        => array(
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'condition'  => array(
 						'btn_type' => 'icon',
 					),
 				),
@@ -96,25 +101,25 @@ function wolf_core_audio_button_params() {
 					'param_name' => 'icon_color',
 					'type'       => 'colorpicker',
 					'label'      => esc_html__( 'Icon Color', 'wolf-core' ),
-					'selectors'    => array(
+					'selectors'  => array(
 						'{{WRAPPER}} .wolf-core-audio-button-icon' => 'color:{{VALUE}};',
 					),
-					'group'        => esc_html__( 'Style', 'wolf-core' ),
-					'condition'        => array(
+					'group'      => esc_html__( 'Style', 'wolf-core' ),
+					'condition'  => array(
 						'btn_type' => 'icon',
 					),
 				),
 				array(
-					'type'       => 'select',
-					'label' => esc_html__( 'Shape', 'wolf-core' ),
-					'param_name' => 'shape',
-					'options'    => array(
-						'square' =>  esc_html__( 'Square', 'wolf-core' ),
-						'round' =>  esc_html__( 'Round', 'wolf-core' ),
+					'type'         => 'select',
+					'label'        => esc_html__( 'Shape', 'wolf-core' ),
+					'param_name'   => 'shape',
+					'options'      => array(
+						'square' => esc_html__( 'Square', 'wolf-core' ),
+						'round'  => esc_html__( 'Round', 'wolf-core' ),
 					),
 					'prefix_class' => 'wolf-core-audio-button-shape-',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),
-					'condition'        => array(
+					'condition'    => array(
 						'btn_type' => 'icon',
 					),
 				),

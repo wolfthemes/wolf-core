@@ -62,11 +62,11 @@ function wolf_core_spotify_follow_button_params() {
 				),
 
 				array(
-					'type'         => 'checkbox',
-					'label'        => esc_html__( 'Show follower count', 'wolf-core' ),
-					'param_name'   => 'show_count',
-					'default'      => 'yes',
-					'admin_label'  => true,
+					'type'        => 'checkbox',
+					'label'       => esc_html__( 'Show follower count', 'wolf-core' ),
+					'param_name'  => 'show_count',
+					'default'     => 'yes',
+					'admin_label' => true,
 				),
 
 				array(

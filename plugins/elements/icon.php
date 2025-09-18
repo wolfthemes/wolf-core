@@ -26,7 +26,7 @@ function wolf_core_icon( $atts ) {
 				'view'          => '',
 				'shape'         => '',
 				'link'          => '',
-				'align'     => 'align',
+				'align'         => 'align',
 			)
 		)
 	);

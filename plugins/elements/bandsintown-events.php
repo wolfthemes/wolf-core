@@ -82,12 +82,10 @@ function wolf_core_bandsintown_events( $atts ) {
 
 		$output .= '</div><!-- .wolf-core-bandwintown -->';
 
-	} else {
-		if ( is_user_logged_in() ) {
+	} elseif ( is_user_logged_in() ) {
 			$output = esc_html__( 'Please set an artist.', 'wolf-visual-composer' );
-		} else {
-			$output = esc_html__( 'No event scheduled.', 'wolf-visual-composer' );
-		}
+	} else {
+		$output = esc_html__( 'No event scheduled.', 'wolf-visual-composer' );
 	}
 
 	return $output; // WCS XSS ok.

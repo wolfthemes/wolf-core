@@ -167,4 +167,3 @@ class Elementor_Animated_SVG_Widget extends \Elementor\Widget_Base { // phpcs:ig
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Animated_SVG_Widget() );
-

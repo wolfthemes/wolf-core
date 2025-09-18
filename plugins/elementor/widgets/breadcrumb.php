@@ -115,11 +115,11 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'align'               => '',
-				'text_align_mobile'   => '',
-				'font_size'           => '',
-				'font_weight'         => '',
-				'text_transform'      => '',
+				'align'             => '',
+				'text_align_mobile' => '',
+				'font_size'         => '',
+				'font_weight'       => '',
+				'text_transform'    => '',
 			)
 		);
 
@@ -127,4 +127,3 @@ class Elementor_Breadcrumb_Widget extends \Elementor\Widget_Base { // phpcs:igno
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Breadcrumb_Widget() );
-

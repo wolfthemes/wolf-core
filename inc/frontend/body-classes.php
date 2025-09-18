@@ -18,7 +18,6 @@ defined( 'ABSPATH' ) || exit;
  */
 function wolf_core_body_class( $classes ) {
 
-
 	$classes[] = 'wolf-core';
 	$classes[] = 'wolf-core-body';
 

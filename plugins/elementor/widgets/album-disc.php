@@ -169,4 +169,3 @@ class Elementor_Album_Disc_Widget extends \Elementor\Widget_Base { // phpcs:igno
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Album_Disc_Widget() );
-

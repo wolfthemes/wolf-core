@@ -29,12 +29,14 @@ function wolf_core_enqueue_styles() {
 
 	/**
 	 * animate.css
+	 *
 	 * @link https://daneden.github.io/animate.css/
 	 */
 	wp_register_style( 'animate-css', WOLF_CORE_CSS . '/lib/animate.min.css', array(), '3.3.0' );
 
 	/**
 	 * AOS
+	 *
 	 * @link https://github.com/michalsnik/aos
 	 */
 	wp_register_style( 'aos', WOLF_CORE_CSS . '/lib/aos.css', array(), '2.3.0' );
@@ -59,7 +61,7 @@ function wolf_core_enqueue_styles() {
 	wp_enqueue_style( 'flexslider' ); // be sure that flexslider CSS file is enqueue BEFORE our plugin styles.
 	wp_enqueue_style( 'flickity', WOLF_CORE_CSS . '/lib/flickity.min.css', array(), '2.2.1' );
 	wp_enqueue_style( 'lity', WOLF_CORE_CSS . '/lib/lity.min.css', array(), '2.2.2' );
-	//wp_enqueue_style( 'fancybox', WOLF_CORE_CSS . '/lib/jquery.fancybox.min.css', array(), '3.5.2' );
+	// wp_enqueue_style( 'fancybox', WOLF_CORE_CSS . '/lib/jquery.fancybox.min.css', array(), '3.5.2' );
 
 	// Plugin scripts.
 	wp_enqueue_style( 'wolf-core-styles', WOLF_CORE_CSS . '/style' . $suffix . '.css', array(), $version );
@@ -71,6 +73,6 @@ add_action( 'wp_enqueue_scripts', 'wolf_core_enqueue_styles' );
  * Admin styles
  */
 // function wolf_core_enqueue_el_adm_styles() {
-// 	wp_enqueue_style( 'wolficons', WOLF_CORE_CSS . '/lib/fonts/wolficons/wolficons.min.css', array(), WOLF_CORE_VERSION );
+// wp_enqueue_style( 'wolficons', WOLF_CORE_CSS . '/lib/fonts/wolficons/wolficons.min.css', array(), WOLF_CORE_VERSION );
 // }
 // add_action( 'wp_enqueue_scripts', 'wolf_core_enqueue_el_adm_styles' );

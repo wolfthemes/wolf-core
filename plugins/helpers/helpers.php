@@ -24,27 +24,27 @@ function wolf_core_add_carousel_params() {
 
 		add_filter(
 			'wolf_core_' . $element_slug . '_params',
-			function( $params ) {
+			function ( $params ) {
 
 				$params['params'][] = array(
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Autoplay', 'wolf-core' ),
 					'param_name'   => 'autoplay',
 					'return_value' => 'true',
-					'group'       => esc_html__( 'Options', 'wolf-core' ),
+					'group'        => esc_html__( 'Options', 'wolf-core' ),
 				);
 
 				$params['params'][] = array(
 					'type'       => 'checkbox',
 					'label'      => esc_html__( 'Pause on Hover (if autoplay)', 'wolf-core' ),
 					'param_name' => 'pause_on_hover',
-					'group'       => esc_html__( 'Options', 'wolf-core' ),
+					'group'      => esc_html__( 'Options', 'wolf-core' ),
 				);
 
 				$params['params'][] = array(
 					'label'      => esc_html__( 'Slideshow Speed in ms', 'wolf-core' ),
 					'param_name' => 'slideshow_speed',
-					'group'       => esc_html__( 'Options', 'wolf-core' ),
+					'group'      => esc_html__( 'Options', 'wolf-core' ),
 				);
 
 				$params['params'][] = array(
@@ -52,7 +52,7 @@ function wolf_core_add_carousel_params() {
 					'label'        => esc_html__( 'Show Navigation Bullets', 'wolf-core' ),
 					'param_name'   => 'nav_bullets',
 					'return_value' => 'true',
-					'group'       => esc_html__( 'Options', 'wolf-core' ),
+					'group'        => esc_html__( 'Options', 'wolf-core' ),
 				);
 
 				$params['params'][] = array(
@@ -60,7 +60,7 @@ function wolf_core_add_carousel_params() {
 					'label'        => esc_html__( 'Show Navigation Arrows', 'wolf-core' ),
 					'param_name'   => 'nav_arrows',
 					'return_value' => 'true',
-					'group'       => esc_html__( 'Options', 'wolf-core' ),
+					'group'        => esc_html__( 'Options', 'wolf-core' ),
 				);
 
 				$params['params'][] = array(
@@ -68,15 +68,15 @@ function wolf_core_add_carousel_params() {
 					'label'        => esc_html__( 'Contain', 'wolf-core' ),
 					'param_name'   => 'contain',
 					'return_value' => 'true',
-					'default'     => 'true',
-					'group'       => esc_html__( 'Options', 'wolf-core' ),
+					'default'      => 'true',
+					'group'        => esc_html__( 'Options', 'wolf-core' ),
 				);
 
 				$params['params'][] = array(
-					'type'         => 'int',
-					'label'        => esc_html__( 'Item to show', 'wolf-core' ),
-					'param_name'   => 'group_cells',
-					'group'       => esc_html__( 'Options', 'wolf-core' ),
+					'type'       => 'int',
+					'label'      => esc_html__( 'Item to show', 'wolf-core' ),
+					'param_name' => 'group_cells',
+					'group'      => esc_html__( 'Options', 'wolf-core' ),
 				);
 
 				return $params;
@@ -98,7 +98,7 @@ function wolf_core_add_extra_params() {
 
 		add_filter(
 			'wolf_core_' . $element_slug . '_params',
-			function( $params ) {
+			function ( $params ) {
 
 				if ( 'vc' === wolf_core_get_plugin_in_use() ) {
 
@@ -126,7 +126,8 @@ function wolf_core_add_extra_params() {
 					);
 				}
 
-				/*$params['params'][] = array(
+				/*
+				$params['params'][] = array(
 					'label'       => esc_html__( 'Quick CSS', 'wolf-core' ),
 					'description' => esc_html__( 'CSS inline style', 'wolf-core' ),
 					'param_name'  => 'inline_style',
@@ -156,7 +157,7 @@ function wolf_core_animation_markup_filter() {
 
 		add_filter(
 			'wolf_core_' . $element_slug . '_atts',
-			function( $atts ) {
+			function ( $atts ) {
 
 				$atts['el_class']     = ( isset( $atts['el_class'] ) ) ? $atts['el_class'] : '';
 				$atts['inline_style'] = ( isset( $atts['inline_style'] ) ) ? $atts['inline_style'] : '';
@@ -222,7 +223,7 @@ function wolf_core_filter_typography_atts() {
 
 		add_filter(
 			'wolf_core_' . $element_slug . '_atts',
-			function( $atts ) {
+			function ( $atts ) {
 
 				if ( 'elementor' === wolf_core_get_plugin_in_use() ) {
 
@@ -360,7 +361,7 @@ function wolf_core_sync_atts() {
 
 				add_filter(
 					'wolf_core_' . $element_slug . '_vc_atts',
-					function( $atts, $vc_atts ) use ( $element_slug, $params ) {
+					function ( $atts, $vc_atts ) use ( $element_slug, $params ) {
 
 						foreach ( $params as $old => $new ) {
 

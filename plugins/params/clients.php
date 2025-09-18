@@ -103,7 +103,7 @@ function wolf_core_clients_params() {
 					'page_builder' => 'elementor',
 				),
 
-				'css_animation' => array(
+				'css_animation'      => array(
 					'type'         => 'select',
 					'label'        => esc_html__( 'Animation', 'wolf-core' ),
 					'param_name'   => 'css_animation',

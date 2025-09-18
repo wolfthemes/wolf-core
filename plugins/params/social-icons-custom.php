@@ -37,15 +37,15 @@ function wolf_core_social_icons_custom_params() {
 					'param_name'         => 'alignment',
 					'type'               => 'choose',
 					'options'            => array(
-						'flex-start'   => array(
+						'flex-start' => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
 						),
-						'center' => array(
+						'center'     => array(
 							'title' => esc_html__( 'Center', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-center',
 						),
-						'flex-end'  => array(
+						'flex-end'   => array(
 							'title' => esc_html__( 'Right', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-right',
 						),

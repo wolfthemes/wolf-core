@@ -56,8 +56,8 @@ function wolf_core_hour_list( $atts ) {
 				wp_parse_args(
 					$hour_item,
 					array(
-						'day'    => '',
-						'hours_text'  => '',
+						'day'        => '',
+						'hours_text' => '',
 					)
 				)
 			)

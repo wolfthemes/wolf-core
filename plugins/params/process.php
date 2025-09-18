@@ -77,14 +77,14 @@ function wolf_core_process_params() {
 						),
 
 						array(
-							'param_name'  => 'selected_icon',
-							'type'        => 'icon',
-							'label'       => esc_html__( 'Icon', 'wolf-core' ),
-							'default'     => array(
+							'param_name' => 'selected_icon',
+							'type'       => 'icon',
+							'label'      => esc_html__( 'Icon', 'wolf-core' ),
+							'default'    => array(
 								'value'   => apply_filters( 'wolf_core_default_icon', 'fa fa-rocket' ),
 								'library' => apply_filters( 'wolf_core_default_icon_font', 'fontawesome' ),
 							),
-							'condition'   => array(
+							'condition'  => array(
 								'type' => 'icon',
 							),
 						),
@@ -93,7 +93,7 @@ function wolf_core_process_params() {
 							'label'      => esc_html__( 'Icon Color', 'wolf-core' ),
 							'type'       => 'colorpicker',
 							'param_name' => 'icon_color',
-							'condition'   => array(
+							'condition'  => array(
 								'type' => 'icon',
 							),
 						),

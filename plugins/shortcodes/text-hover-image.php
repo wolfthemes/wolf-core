@@ -30,13 +30,13 @@ if ( ! function_exists( 'wolf_core_shortcode_text_hover_image' ) ) {
 
 		wp_enqueue_script( 'wolf-core-text-hover-image' );
 
-		$output = '<span class="wolf-core-text-hover-image"><span class="wolf-core-text-hover-image-text">' . do_shortcode( $content ) . '</span>';
+		$output  = '<span class="wolf-core-text-hover-image"><span class="wolf-core-text-hover-image-text">' . do_shortcode( $content ) . '</span>';
 		$output .= '<span class="hover-reveal"><span class="hover-reveal__inner">';
 
 		if ( wp_attachment_is_image( $img_id ) ) {
 
 			$image_src = wp_get_attachment_url( absint( $img_id ) );
-			//$output .= '<span class="hover-reveal__img" style="background-image: url(' . esc_url( $image_src ) . ');"></span>';
+			// $output .= '<span class="hover-reveal__img" style="background-image: url(' . esc_url( $image_src ) . ');"></span>';
 			$output .= wp_get_attachment_image( $img_id, 'medium', '', array( 'class' => 'hover-reveal__img' ) );
 		}
 

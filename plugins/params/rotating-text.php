@@ -46,7 +46,7 @@ function wolf_core_rotating_text_params() {
 					'type'       => 'slider',
 					'label'      => esc_html__( 'Width (in px)', 'wolf-core' ),
 					'default'    => 200,
-					'step' => 1,
+					'step'       => 1,
 					'param_name' => 'svg_width',
 					'range'      => array(
 						'px' => array(
@@ -60,15 +60,15 @@ function wolf_core_rotating_text_params() {
 				),
 
 				array(
-					'type'        => 'link',
-					'label'       => esc_html__( 'URL', 'wolf-core' ),
-					'param_name'  => 'link',
+					'type'       => 'link',
+					'label'      => esc_html__( 'URL', 'wolf-core' ),
+					'param_name' => 'link',
 				),
 
 				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__( 'Scroll link (smooth scroll to anchor)', 'wolf-core' ),
-					'param_name'  => 'scroll_link',
+					'type'       => 'checkbox',
+					'label'      => esc_html__( 'Scroll link (smooth scroll to anchor)', 'wolf-core' ),
+					'param_name' => 'scroll_link',
 				),
 
 				array(
@@ -85,9 +85,9 @@ function wolf_core_rotating_text_params() {
 				),
 
 				array(
-					'type'        => 'icon',
-					'label'       => esc_html__( 'Icon', 'wolf-core' ),
-					'param_name'  => 'selected_icon',
+					'type'       => 'icon',
+					'label'      => esc_html__( 'Icon', 'wolf-core' ),
+					'param_name' => 'selected_icon',
 				),
 
 				array(
@@ -95,15 +95,15 @@ function wolf_core_rotating_text_params() {
 					'param_name'         => 'align',
 					'type'               => 'choose',
 					'options'            => array(
-						'flex-start'   => array(
+						'flex-start' => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
 						),
-						'center' => array(
+						'center'     => array(
 							'title' => esc_html__( 'Center', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-center',
 						),
-						'flex-end'  => array(
+						'flex-end'   => array(
 							'title' => esc_html__( 'Right', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-right',
 						),

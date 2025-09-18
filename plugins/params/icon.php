@@ -119,15 +119,15 @@ function wolf_core_icon_params() {
 					'param_name'   => 'align',
 					'type'         => 'choose',
 					'options'      => array(
-						'left'    => array(
+						'left'   => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
 						),
-						'center'  => array(
+						'center' => array(
 							'title' => esc_html__( 'Center', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-center',
 						),
-						'right'   => array(
+						'right'  => array(
 							'title' => esc_html__( 'Right', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-right',
 						),
@@ -143,9 +143,9 @@ function wolf_core_icon_params() {
 					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
 					'param_name'   => 'align',
 					'options'      => array(
-						'left'    => esc_html__( 'Left', 'wolf-core' ),
-						'center'  => esc_html__( 'Center', 'wolf-core' ),
-						'right'   => esc_html__( 'Right', 'wolf-core' ),
+						'left'   => esc_html__( 'Left', 'wolf-core' ),
+						'center' => esc_html__( 'Center', 'wolf-core' ),
+						'right'  => esc_html__( 'Right', 'wolf-core' ),
 					),
 					'page_builder' => 'vc',
 				),

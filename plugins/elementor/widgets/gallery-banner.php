@@ -139,178 +139,178 @@ class Elementor_Gallery_Banner_Widget extends \Elementor\Widget_Base { // phpcs:
 
 		wolf_core_register_elementor_controls( $this );
 
-		//$this->end_controls_section();
+		// $this->end_controls_section();
 
 		$this->start_controls_section(
 			'section_style_image',
-			[
+			array(
 				'label' => esc_html__( 'Image', 'elementor' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
-			]
+			)
 		);
 
 		$this->add_responsive_control(
 			'align',
-			[
-				'label' => esc_html__( 'Alignment', 'elementor' ),
-				'type' => \Elementor\Controls_Manager::CHOOSE,
-				'options' => [
-					'left' => [
+			array(
+				'label'     => esc_html__( 'Alignment', 'elementor' ),
+				'type'      => \Elementor\Controls_Manager::CHOOSE,
+				'options'   => array(
+					'left'   => array(
 						'title' => esc_html__( 'Left', 'elementor' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
+						'icon'  => 'eicon-text-align-left',
+					),
+					'center' => array(
 						'title' => esc_html__( 'Center', 'elementor' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
+						'icon'  => 'eicon-text-align-center',
+					),
+					'right'  => array(
 						'title' => esc_html__( 'Right', 'elementor' ),
-						'icon' => 'eicon-text-align-right',
-					],
-				],
-				'selectors' => [
+						'icon'  => 'eicon-text-align-right',
+					),
+				),
+				'selectors' => array(
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
-				],
-			]
+				),
+			)
 		);
 
 		$this->add_responsive_control(
 			'width',
-			[
-				'label' => esc_html__( 'Width', 'elementor' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+			array(
+				'label'          => esc_html__( 'Width', 'elementor' ),
+				'type'           => \Elementor\Controls_Manager::SLIDER,
+				'default'        => array(
 					'unit' => '%',
-				],
-				'tablet_default' => [
+				),
+				'tablet_default' => array(
 					'unit' => '%',
-				],
-				'mobile_default' => [
+				),
+				'mobile_default' => array(
 					'unit' => '%',
-				],
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
-				'range' => [
-					'%' => [
+				),
+				'size_units'     => array( 'px', '%', 'em', 'rem', 'vw', 'custom' ),
+				'range'          => array(
+					'%'  => array(
 						'min' => 1,
 						'max' => 100,
-					],
-					'px' => [
+					),
+					'px' => array(
 						'min' => 1,
 						'max' => 1000,
-					],
-					'vw' => [
+					),
+					'vw' => array(
 						'min' => 1,
 						'max' => 100,
-					],
-				],
-				'selectors' => [
+					),
+				),
+				'selectors'      => array(
 					'{{WRAPPER}} img' => 'width: {{SIZE}}{{UNIT}};',
-				],
-			]
+				),
+			)
 		);
 
 		$this->add_responsive_control(
 			'space',
-			[
-				'label' => esc_html__( 'Max Width', 'elementor' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+			array(
+				'label'          => esc_html__( 'Max Width', 'elementor' ),
+				'type'           => \Elementor\Controls_Manager::SLIDER,
+				'default'        => array(
 					'unit' => '%',
-				],
-				'tablet_default' => [
+				),
+				'tablet_default' => array(
 					'unit' => '%',
-				],
-				'mobile_default' => [
+				),
+				'mobile_default' => array(
 					'unit' => '%',
-				],
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
-				'range' => [
-					'%' => [
+				),
+				'size_units'     => array( 'px', '%', 'em', 'rem', 'vw', 'custom' ),
+				'range'          => array(
+					'%'  => array(
 						'min' => 1,
 						'max' => 100,
-					],
-					'px' => [
+					),
+					'px' => array(
 						'min' => 1,
 						'max' => 1000,
-					],
-					'vw' => [
+					),
+					'vw' => array(
 						'min' => 1,
 						'max' => 100,
-					],
-				],
-				'selectors' => [
+					),
+				),
+				'selectors'      => array(
 					'{{WRAPPER}} img' => 'max-width: {{SIZE}}{{UNIT}};',
-				],
-			]
+				),
+			)
 		);
 
 		$this->add_responsive_control(
 			'height',
-			[
-				'label' => esc_html__( 'Height', 'elementor' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vh', 'custom' ],
-				'range' => [
-					'px' => [
+			array(
+				'label'      => esc_html__( 'Height', 'elementor' ),
+				'type'       => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => array( 'px', '%', 'em', 'rem', 'vh', 'custom' ),
+				'range'      => array(
+					'px' => array(
 						'min' => 1,
 						'max' => 500,
-					],
-					'vh' => [
+					),
+					'vh' => array(
 						'min' => 1,
 						'max' => 100,
-					],
-				],
-				'selectors' => [
+					),
+				),
+				'selectors'  => array(
 					'{{WRAPPER}} img' => 'height: {{SIZE}}{{UNIT}};',
-				],
-			]
+				),
+			)
 		);
 
 		$this->add_responsive_control(
 			'object-fit',
-			[
-				'label' => esc_html__( 'Object Fit', 'elementor' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'condition' => [
+			array(
+				'label'     => esc_html__( 'Object Fit', 'elementor' ),
+				'type'      => \Elementor\Controls_Manager::SELECT,
+				'condition' => array(
 					'height[size]!' => '',
-				],
-				'options' => [
-					'' => esc_html__( 'Default', 'elementor' ),
-					'fill' => esc_html__( 'Fill', 'elementor' ),
-					'cover' => esc_html__( 'Cover', 'elementor' ),
+				),
+				'options'   => array(
+					''        => esc_html__( 'Default', 'elementor' ),
+					'fill'    => esc_html__( 'Fill', 'elementor' ),
+					'cover'   => esc_html__( 'Cover', 'elementor' ),
 					'contain' => esc_html__( 'Contain', 'elementor' ),
-				],
-				'default' => '',
-				'selectors' => [
+				),
+				'default'   => '',
+				'selectors' => array(
 					'{{WRAPPER}} img' => 'object-fit: {{VALUE}};',
-				],
-			]
+				),
+			)
 		);
 
 		$this->add_responsive_control(
 			'object-position',
-			[
-				'label' => esc_html__( 'Object Position', 'elementor' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'options' => [
+			array(
+				'label'     => esc_html__( 'Object Position', 'elementor' ),
+				'type'      => \Elementor\Controls_Manager::SELECT,
+				'options'   => array(
 					'center center' => esc_html__( 'Center Center', 'elementor' ),
-					'center left' => esc_html__( 'Center Left', 'elementor' ),
-					'center right' => esc_html__( 'Center Right', 'elementor' ),
-					'top center' => esc_html__( 'Top Center', 'elementor' ),
-					'top left' => esc_html__( 'Top Left', 'elementor' ),
-					'top right' => esc_html__( 'Top Right', 'elementor' ),
+					'center left'   => esc_html__( 'Center Left', 'elementor' ),
+					'center right'  => esc_html__( 'Center Right', 'elementor' ),
+					'top center'    => esc_html__( 'Top Center', 'elementor' ),
+					'top left'      => esc_html__( 'Top Left', 'elementor' ),
+					'top right'     => esc_html__( 'Top Right', 'elementor' ),
 					'bottom center' => esc_html__( 'Bottom Center', 'elementor' ),
-					'bottom left' => esc_html__( 'Bottom Left', 'elementor' ),
-					'bottom right' => esc_html__( 'Bottom Right', 'elementor' ),
-				],
-				'default' => 'center center',
-				'selectors' => [
+					'bottom left'   => esc_html__( 'Bottom Left', 'elementor' ),
+					'bottom right'  => esc_html__( 'Bottom Right', 'elementor' ),
+				),
+				'default'   => 'center center',
+				'selectors' => array(
 					'{{WRAPPER}} img' => 'object-position: {{VALUE}};',
-				],
-				'condition' => [
+				),
+				'condition' => array(
 					'object-fit' => 'cover',
-				],
-			]
+				),
+			)
 		);
 	}
 
@@ -326,13 +326,10 @@ class Elementor_Gallery_Banner_Widget extends \Elementor\Widget_Base { // phpcs:
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_gallery_banner( $atts ); // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Gallery_Banner_Widget() );
-

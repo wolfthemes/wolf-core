@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  */
 add_action(
 	'elementor/element/section/section_background/before_section_end',
-	function( $element ) {
+	function ( $element ) {
 		$element->add_control(
 			'font_color',
 			array(
@@ -36,7 +36,7 @@ add_action(
 
 add_action(
 	'elementor/element/container/section_background/before_section_end',
-	function( $element ) {
+	function ( $element ) {
 		$element->add_control(
 			'font_color',
 			array(
@@ -61,7 +61,7 @@ add_action(
  */
 add_action(
 	'elementor/element/section/section_layout/before_section_end',
-	function( $section, $args ) {
+	function ( $section, $args ) {
 		$section->add_control(
 			'name',
 			array(
@@ -91,7 +91,7 @@ add_action(
 
 function wolf_core_add_section_name_option( $section, $args ) {
 
-	//debug( 'plugin' );
+	// debug( 'plugin' );
 
 	$section->add_control(
 		'name',
@@ -99,7 +99,7 @@ function wolf_core_add_section_name_option( $section, $args ) {
 			'label'       => esc_html__( 'Name (Optional)', 'wolf-core' ),
 			'description' => esc_html__( 'Required for the "one-page" scroll, this gives the name to the section.', 'wolf-core' ),
 			'type'        => \Elementor\Controls_Manager::TEXT,
-			'ai'    => array(
+			'ai'          => array(
 				'active' => false,
 			),
 		)

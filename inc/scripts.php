@@ -49,14 +49,14 @@ function wolf_core_get_js_params() {
 			'fullHeightRowDoWPMOffsset' => apply_filters( 'wolf_core_fullheight_row_do_wpm_offset', true ),
 			'isRTL'                     => apply_filters( 'wolf_core_is_rtl', true ),
 			'printStylesheet'           => WOLF_CORE_CSS . '/print.min.css',
-			'isElementorEditor'			=> wolf_core_is_elementor_editor(),
+			'isElementorEditor'         => wolf_core_is_elementor_editor(),
 			'l10n'                      => array(
 				'emptyFields'           => esc_html__( 'Please fill all fields.', 'wolf-visual-composer' ),
 				'unknownError'          => esc_html__( 'Something went wrong while submuitting the form, please try again later.', 'wolf-visual-composer' ),
 				'processingMessage'     => esc_html__( 'Loading', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
 				'BMICProcessingMessage' => esc_html__( 'Calculating', 'wolf-visual-composer' ) . '<span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span><span class="wolf-core-hellip">.</span>',
-				'playText' 				=> esc_html( 'Play', 'wolf-core' ),
-				'pauseText' 			=> esc_html( 'Pause', 'wolf-core' ),
+				'playText'              => esc_html( 'Play', 'wolf-core' ),
+				'pauseText'             => esc_html( 'Pause', 'wolf-core' ),
 			),
 		)
 	);
@@ -103,33 +103,32 @@ function wolf_core_get_register_scripts() {
 	return apply_filters(
 		'wolf_core_register_scripts',
 		array(
-			'jarallax'        => array(
+			'jarallax'                   => array(
 				'src'          => WOLF_CORE_JS . '/lib/jarallax/jarallax.min.js',
 				'version'      => '1.10.6',
 				'dependencies' => array(),
 				'in_footer'    => false,
 			),
 
-			'jarallax-video'  => array(
+			'jarallax-video'             => array(
 				'src'          => WOLF_CORE_JS . '/lib/jarallax/jarallax-video.min.js',
 				'version'      => '1.0.1',
 				'dependencies' => array(),
 				'in_footer'    => false,
 			),
 
-			'parallax-scroll' => array(
+			'parallax-scroll'            => array(
 				'src'     => WOLF_CORE_JS . '/lib/jquery.parallax-scroll.min.js',
 				'version' => '1.0.0b',
 			),
 
-			'lazyloadxt'      => array(
+			'lazyloadxt'                 => array(
 				'src'     => WOLF_CORE_JS . '/lib/jquery.lazyloadxt.min.js',
 				'version' => '1.1.0',
 			),
 
-
-			'wolf-core-text-hover-image'      => array(
-				'src'     => WOLF_CORE_JS . $folder . '/text-hover-image' . $suffix . '.js',
+			'wolf-core-text-hover-image' => array(
+				'src' => WOLF_CORE_JS . $folder . '/text-hover-image' . $suffix . '.js',
 			),
 		)
 	);
@@ -264,7 +263,7 @@ function wolf_core_enqueue_scripts() {
 	wp_register_script( 'wolf-core-google-maps', WOLF_CORE_JS . $folder . '/google-maps' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-progress-bar', WOLF_CORE_JS . $folder . '/progress-bar' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-process', WOLF_CORE_JS . $folder . '/process' . $suffix . '.js', array( 'jquery' ), $version, true );
-	//wp_register_script( 'wolf-core-galleries', WOLF_CORE_JS . $folder . '/galleries' . $suffix . '.js', array( 'jquery' ), $version, true );
+	// wp_register_script( 'wolf-core-galleries', WOLF_CORE_JS . $folder . '/galleries' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-album-tracklist', WOLF_CORE_JS . $folder . '/album-tracklist' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-loginform', WOLF_CORE_JS . $folder . '/loginform' . $suffix . '.js', array( 'jquery' ), $version, true );
 	wp_register_script( 'wolf-core-bmic', WOLF_CORE_JS . $folder . '/bmic' . $suffix . '.js', array( 'jquery' ), $version, true );
@@ -439,4 +438,4 @@ function wolf_core_add_type_attribute( $tag, $handle, $src ) {
 	$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
 	return $tag;
 }
-//add_filter( 'script_loader_tag', 'wolf_core_add_type_attribute', 10, 3 );
+// add_filter( 'script_loader_tag', 'wolf_core_add_type_attribute', 10, 3 );

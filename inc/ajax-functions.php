@@ -76,7 +76,7 @@ function wolf_core_mailchimp_ajax() {
 		$list_id  = esc_attr( $_POST['list_id'] );
 
 		$data = array(
-			'list_id' => $list_id,
+			'list_id'   => $list_id,
 			'email'     => $email,
 			'status'    => 'subscribed',
 			'firstname' => $f_name,
@@ -94,8 +94,8 @@ function wolf_core_mailchimp_ajax() {
 		} else {
 			// Subscribe
 			wolf_core_sync_mailchimp( $data );
-			//WVCM()->subscribe( $list_id, $email, $f_name, $l_name );
-			//echo 'OK';
+			// WVCM()->subscribe( $list_id, $email, $f_name, $l_name );
+			// echo 'OK';
 		}
 	}
 	exit;

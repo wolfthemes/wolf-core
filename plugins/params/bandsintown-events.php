@@ -37,7 +37,7 @@ function wolf_core_bandsintown_events_params() {
 					'param_name'  => 'artist',
 					'admin_label' => true,
 					'description' => esc_html__( 'e.g: the-band', 'wolf-core' ),
-					'ai' => array(
+					'ai'          => array(
 						'active' => false,
 					),
 				),
@@ -48,7 +48,7 @@ function wolf_core_bandsintown_events_params() {
 					'param_name'  => 'display_limit',
 					'admin_label' => true,
 					'description' => esc_html__( 'Leave empty to display all shows', 'wolf-core' ),
-					'ai' => array(
+					'ai'          => array(
 						'active' => false,
 					),
 				),
@@ -61,7 +61,7 @@ function wolf_core_bandsintown_events_params() {
 						'false' => esc_html__( 'No', 'wolf-core' ),
 						'true'  => esc_html__( 'Yes', 'wolf-core' ),
 					),
-					'default' => 'true',
+					'default'    => 'true',
 				),
 
 				array(
@@ -72,7 +72,7 @@ function wolf_core_bandsintown_events_params() {
 						'true'  => esc_html__( 'Yes', 'wolf-core' ),
 						'false' => esc_html__( 'No', 'wolf-core' ),
 					),
-					'default' => 'false',
+					'default'    => 'false',
 				),
 			),
 		)

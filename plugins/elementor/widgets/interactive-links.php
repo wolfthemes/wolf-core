@@ -31,7 +31,7 @@ class Elementor_Interactive_Links_Widget extends \Elementor\Widget_Base { // php
 
 		$this->params = wolf_core_interactive_links_params();
 
-		//dd( $this->params );
+		// dd( $this->params );
 
 		if ( isset( $this->params['properties']['register_scripts'] ) ) {
 
@@ -155,9 +155,7 @@ class Elementor_Interactive_Links_Widget extends \Elementor\Widget_Base { // php
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_interactive_links( $atts ); // phpcs:ignore

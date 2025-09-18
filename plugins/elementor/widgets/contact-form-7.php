@@ -33,11 +33,11 @@ class Elementor_Contact_Form_7_Widget extends \Elementor\Widget_Base { // phpcs:
 
 		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+		// $this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
+		// foreach ( $this->scripts as $script ) {
+		// wp_enqueue_script( $script );
+		// }
 		// }
 	}
 
@@ -134,7 +134,7 @@ class Elementor_Contact_Form_7_Widget extends \Elementor\Widget_Base { // phpcs:
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'contact_form_id'   => '',
+				'contact_form_id' => '',
 			)
 		);
 
@@ -142,4 +142,3 @@ class Elementor_Contact_Form_7_Widget extends \Elementor\Widget_Base { // phpcs:
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Contact_Form_7_Widget() );
-

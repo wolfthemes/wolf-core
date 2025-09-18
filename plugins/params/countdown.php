@@ -44,7 +44,7 @@ function wolf_core_countdown_params() {
 					'param_name'  => 'offset',
 					'placeholder' => '-5',
 					'description' => sprintf( __( 'e.g : -5 for NY. <a href="%s" target="_blank">More info</a>.', 'wolf-core' ), esc_url( 'https://en.wikipedia.org/wiki/List_of_UTC_time_offsets' ) ),
-					'ai' => array(
+					'ai'          => array(
 						'active' => false,
 					),
 				),

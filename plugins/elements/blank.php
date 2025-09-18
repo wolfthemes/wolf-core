@@ -20,9 +20,7 @@ function wolf_core_blank( $atts ) {
 		'wolf_core_blank_atts',
 		wp_parse_args(
 			$atts,
-			array(
-
-			)
+			array()
 		)
 	);
 

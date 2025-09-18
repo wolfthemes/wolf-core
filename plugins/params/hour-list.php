@@ -20,13 +20,13 @@ function wolf_core_hour_list_params() {
 		'wolf_core_hour_list_params',
 		array(
 			'properties' => array(
-				'name'             => esc_html__( 'Hour List', 'wolf-core' ),
-				'description'      => esc_html__( 'Description.', 'wolf-core' ),
-				'vc_base'          => 'wolf_core_hour_list',
-				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
-				'el_categories'    => array( 'extension' ),
-				'el_base'          => 'hour-list',
-				'icon'             => 'far fa-clock',
+				'name'          => esc_html__( 'Hour List', 'wolf-core' ),
+				'description'   => esc_html__( 'Description.', 'wolf-core' ),
+				'vc_base'       => 'wolf_core_hour_list',
+				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
+				'el_categories' => array( 'extension' ),
+				'el_base'       => 'hour-list',
+				'icon'          => 'far fa-clock',
 			),
 			'params'     => array(
 				array(

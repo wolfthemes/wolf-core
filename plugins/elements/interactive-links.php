@@ -26,8 +26,8 @@ function wolf_core_interactive_links( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	//wp_enqueue_script( 'wolf-core-youtube-video-bg' );
-	//wp_enqueue_script( 'wolf-core-interactive-links' );
+	// wp_enqueue_script( 'wolf-core-youtube-video-bg' );
+	// wp_enqueue_script( 'wolf-core-interactive-links' );
 
 	$output = '';
 
@@ -51,7 +51,8 @@ function wolf_core_interactive_links( $atts ) {
 				array(
 					'background_background' => '',
 				)
-				), $atts
+			),
+			$atts
 		);
 
 		extract( $panel_bg_atts ); // phpcs:ignore
@@ -62,9 +63,9 @@ function wolf_core_interactive_links( $atts ) {
 
 		if ( 'classic' === $background_background ) {
 
-			$background_repeat = ( isset( $panel_bg_atts['background_repeat'] ) ) ? $panel_bg_atts['background_repeat']: '';
-			$background_position = ( isset( $panel_bg_atts['background_position'] ) ) ? $panel_bg_atts['background_position']: '';
-			$background_size = ( isset( $panel_bg_atts['background_size'] ) ) ? $panel_bg_atts['background_size']: '';
+			$background_repeat   = ( isset( $panel_bg_atts['background_repeat'] ) ) ? $panel_bg_atts['background_repeat'] : '';
+			$background_position = ( isset( $panel_bg_atts['background_position'] ) ) ? $panel_bg_atts['background_position'] : '';
+			$background_size     = ( isset( $panel_bg_atts['background_size'] ) ) ? $panel_bg_atts['background_size'] : '';
 
 			$output .= wolf_core_background_img(
 				array(
@@ -89,7 +90,7 @@ function wolf_core_interactive_links( $atts ) {
 
 		$output .= '</div>';
 
-		$i++;
+		++$i;
 	}
 
 	$output .= '</div>';
@@ -138,7 +139,7 @@ function wolf_core_interactive_links( $atts ) {
 
 		$output .= '</li>';
 
-		$i++;
+		++$i;
 	}
 
 	$output .= '</ul><!-- .wolf-core-interactive-links-text -->';

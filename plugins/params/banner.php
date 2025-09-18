@@ -30,7 +30,6 @@ function wolf_core_banner_params() {
 
 	foreach ( wolf_core_get_button_params() as $key => $params ) {
 
-
 		if ( ! isset( $params['param_name'] ) || in_array( $params['param_name'], $params_to_unset, true ) ) {
 
 			continue;

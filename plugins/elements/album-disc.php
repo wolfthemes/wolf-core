@@ -70,7 +70,7 @@ function wolf_core_album_disc( $atts ) {
 
 	$data_attr = '';
 
-	foreach( $data_attrs as $k => $v ) {
+	foreach ( $data_attrs as $k => $v ) {
 		$data_attr .= 'data-' . $k . '="' . $v . '"';
 	}
 
@@ -166,4 +166,3 @@ function wolf_core_album_disc( $atts ) {
 
 	return $output;
 }
-

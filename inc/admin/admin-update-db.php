@@ -81,25 +81,25 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function set_db_state() {
 
-		//update_option( 'wolf_core_db_state', 'need_update' );
-		//delete_option( 'wolf_core_db_update_status' );
+		// update_option( 'wolf_core_db_state', 'need_update' );
+		// delete_option( 'wolf_core_db_update_status' );
 
 		global $pagenow;
 
 		$debug_array = array(
-			'DB State: '         => get_option( 'wolf_core_db_state' ),
-			'DB Update status: ' => get_option( 'wolf_core_db_update_status' ),
-			'Last DB version: '  => $this->last_db_version,
-			'New DB version: '   => $this->newest_db_version,
-			'Version history: '  => get_option( 'wolf_core_install_history', array() ),
-			'Should Upgrade: '   => $this->should_upgrade(),
-			'Is First Install'   => $this->is_first_install(),
-			'Previous WCore Version'   => $this->get_previous_installed_version(),
-			'Compare Version'    => version_compare( $this->get_previous_installed_version(), $this->newest_db_version, '<' )
+			'DB State: '             => get_option( 'wolf_core_db_state' ),
+			'DB Update status: '     => get_option( 'wolf_core_db_update_status' ),
+			'Last DB version: '      => $this->last_db_version,
+			'New DB version: '       => $this->newest_db_version,
+			'Version history: '      => get_option( 'wolf_core_install_history', array() ),
+			'Should Upgrade: '       => $this->should_upgrade(),
+			'Is First Install'       => $this->is_first_install(),
+			'Previous WCore Version' => $this->get_previous_installed_version(),
+			'Compare Version'        => version_compare( $this->get_previous_installed_version(), $this->newest_db_version, '<' ),
 		);
 
 		if ( 'index.php' === $pagenow ) {
-			//debug( $debug_array );
+			// debug( $debug_array );
 		}
 
 		$need_update = false; // by default set to false.
@@ -132,14 +132,14 @@ class Wolf_Core_DB_Updater {
 	 * Get previous version installed
 	 */
 	public function get_previous_installed_version() {
-		$installs_history = get_option( 'wolf_core_install_history', array() );
+		$installs_history    = get_option( 'wolf_core_install_history', array() );
 		$second_last_version = '99999'; // if no previous version installed set high number so the version compare returns false
 
 		if ( array() !== $installs_history ) {
 			$versions = array_keys( $installs_history );
 			natsort( $versions );
-			$versions = array_values($versions);
-			$second_last_version = (count($versions) >= 2) ? $versions[count($versions) - 2] : '99999';
+			$versions            = array_values( $versions );
+			$second_last_version = ( count( $versions ) >= 2 ) ? $versions[ count( $versions ) - 2 ] : '99999';
 		}
 
 		return $second_last_version;
@@ -168,10 +168,10 @@ class Wolf_Core_DB_Updater {
 	 */
 	public function update_db() {
 
-		//wolf_core_log( 'test' );
+		// wolf_core_log( 'test' );
 
-		//delete_option( 'wolf_core_db_update_status' );
-		//debug( get_option( 'wolf_core_db_update_status' ) );
+		// delete_option( 'wolf_core_db_update_status' );
+		// debug( get_option( 'wolf_core_db_update_status' ) );
 
 		if ( isset( $_GET['wolf-core-db-process-update'] ) ) {
 			update_option( 'wolf_core_db_update_status', 'launching' );
@@ -226,10 +226,10 @@ class Wolf_Core_DB_Updater {
 
 		$post_ids = $wpdb->get_col( $wpdb->prepare( $query_string ) );
 
-		//debug( $query_string );
-		//debug( $post_ids );
+		// debug( $query_string );
+		// debug( $post_ids );
 
-		//return;
+		// return;
 
 		if ( empty( $post_ids ) ) {
 			update_option( 'wolf_core_db_update_status', 'completed' );
@@ -238,7 +238,7 @@ class Wolf_Core_DB_Updater {
 		}
 
 		foreach ( $post_ids as $post_id ) {
-			wolf_core_log( 'pushing => ' . $post_id  );
+			wolf_core_log( 'pushing => ' . $post_id );
 			$background_process->push_to_queue( $post_id );
 		}
 	}
@@ -327,7 +327,7 @@ class Wolf_Core_DB_Updater {
 			$admin_notices = \Elementor\Plugin::$instance->admin->get_component( 'admin-notices' );
 
 			$options = array(
-				//'title'       => $this->updater_label,
+				// 'title'       => $this->updater_label,
 				'description' => '<b>' . $this->updater_label . '</b> - ' . esc_html__( 'The database update process is now complete. Thank you for updating to the latest version!', 'wolf-core' ),
 				'type'        => 'success',
 				'icon'        => false,

@@ -33,11 +33,11 @@ class Elementor_Icon_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+		// $this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
+		// foreach ( $this->scripts as $script ) {
+		// wp_enqueue_script( $script );
+		// }
 		// }
 	}
 
@@ -166,4 +166,3 @@ class Elementor_Icon_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Icon_Widget() );
-

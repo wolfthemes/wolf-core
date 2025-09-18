@@ -184,7 +184,6 @@ class WP_GitHub_Updater {
 		if ( ! isset( $this->config['readme'] ) ) {
 			$this->config['readme'] = 'README.md';
 		}
-
 	}
 
 
@@ -459,6 +458,5 @@ class WP_GitHub_Updater {
 		$success = __( 'Plugin reactivated successfully.', 'github_plugin_updater' );
 		echo is_wp_error( $activate ) ? $fail : $success;
 		return $result;
-
 	}
 }

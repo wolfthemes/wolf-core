@@ -153,13 +153,10 @@ class Elementor_Testimonial_Slider_Widget extends \Elementor\Widget_Base { // ph
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_testimonial_slider( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Testimonial_Slider_Widget() );
-

@@ -117,12 +117,12 @@ function wolf_core_row_inner_general_params() {
 			'heading'    => esc_html__( 'Visibility', 'wolf-core' ),
 			'param_name' => 'hide_class',
 			'value'      => array(
-				esc_html__( 'Always visible', 'wolf-core' ) => '',
-				esc_html__( 'Hide on tablet and mobile', 'wolf-core' ) => 'wvc-hide-tablet',
-				esc_html__( 'Hide on mobile', 'wolf-core' ) => 'wvc-hide-mobile',
+				esc_html__( 'Always visible', 'wolf-core' )                 => '',
+				esc_html__( 'Hide on tablet and mobile', 'wolf-core' )      => 'wvc-hide-tablet',
+				esc_html__( 'Hide on mobile', 'wolf-core' )                 => 'wvc-hide-mobile',
 				esc_html__( 'Show on tablet and mobile only', 'wolf-core' ) => 'wvc-show-tablet',
-				esc_html__( 'Show on mobile only', 'wolf-core' ) => 'wvc-show-mobile',
-				esc_html__( 'Always hidden', 'wolf-core' ) => 'wvc-hide',
+				esc_html__( 'Show on mobile only', 'wolf-core' )            => 'wvc-show-mobile',
+				esc_html__( 'Always hidden', 'wolf-core' )                  => 'wvc-hide',
 			),
 		),
 

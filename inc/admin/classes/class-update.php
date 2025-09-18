@@ -1,6 +1,7 @@
 <?php
 /**
  * Class by Omar Abid
+ *
  * @link https://github.com/omarabid/Self-Hosted-WordPress-Plugin-repository
  *
  * Renamed Wolf_Core_Update to avoid conflict with other plugins
@@ -8,30 +9,35 @@
 class Wolf_Core_Update {
 	/**
 	 * The plugin current version
+	 *
 	 * @var string
 	 */
 	public $current_version;
 
 	/**
 	 * The plugin remote update path
+	 *
 	 * @var string
 	 */
 	public $update_path;
 
 	/**
 	 * Plugin Slug (plugin_directory/plugin_file.php)
+	 *
 	 * @var string
 	 */
 	public $plugin_slug;
 
 	/**
 	 * Plugin name (plugin_file)
+	 *
 	 * @var string
 	 */
 	public $slug;
 
 	/**
 	 * Initialize a new instance of the WordPress Auto-Update class
+	 *
 	 * @param string $current_version
 	 * @param string $update_path
 	 * @param string $plugin_slug
@@ -41,13 +47,13 @@ class Wolf_Core_Update {
 		if ( ! get_option( 'wvc_activated' ) && ! get_transient( 'wvc_activation_notice' ) ) {
 			return;
 		}
-		
+
 		// Set the class public variables
 		$this->current_version = $current_version;
-		$this->update_path = $update_path;
-		$this->plugin_slug = $plugin_slug;
-		list( $t1, $t2 ) = explode( '/', $plugin_slug );
-		$this->slug = str_replace( '.php', '', $t2 );
+		$this->update_path     = $update_path;
+		$this->plugin_slug     = $plugin_slug;
+		list( $t1, $t2 )       = explode( '/', $plugin_slug );
+		$this->slug            = str_replace( '.php', '', $t2 );
 
 		// define the alternative API for updating checking
 		add_filter( 'pre_set_site_transient_update_plugins', array( &$this, 'check_update' ) );
@@ -71,12 +77,12 @@ class Wolf_Core_Update {
 		$remote_version = $this->getRemote_version();
 
 		// If a newer version is available, add the update
-		if (version_compare( $this->current_version, $remote_version, '<' ) ) {
-			$obj = new stdClass();
-			$obj->slug = $this->slug;
-			$obj->new_version = $remote_version;
-			$obj->url = $this->update_path;
-			$obj->package = $this->update_path;
+		if ( version_compare( $this->current_version, $remote_version, '<' ) ) {
+			$obj                                       = new stdClass();
+			$obj->slug                                 = $this->slug;
+			$obj->new_version                          = $remote_version;
+			$obj->url                                  = $this->update_path;
+			$obj->package                              = $this->update_path;
 			$transient->response[ $this->plugin_slug ] = $obj;
 		}
 		return $transient;
@@ -86,8 +92,8 @@ class Wolf_Core_Update {
 	 * Add our self-hosted description to the filter
 	 *
 	 * @param boolean $false
-	 * @param array $action
-	 * @param object $arg
+	 * @param array   $action
+	 * @param object  $arg
 	 * @return bool|object
 	 */
 	public function check_info( $false, $action, $arg ) {
@@ -101,6 +107,7 @@ class Wolf_Core_Update {
 
 	/**
 	 * Return the remote version
+	 *
 	 * @return string $remote_version
 	 */
 	public function getRemote_version() {
@@ -114,6 +121,7 @@ class Wolf_Core_Update {
 
 	/**
 	 * Get information about the remote version
+	 *
 	 * @return bool|object
 	 */
 	public function getRemote_information() {
@@ -128,6 +136,7 @@ class Wolf_Core_Update {
 
 	/**
 	 * Return the status of the plugin licensing
+	 *
 	 * @return boolean $remote_license
 	 */
 	public function getRemote_license() {

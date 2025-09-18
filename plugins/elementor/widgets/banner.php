@@ -33,11 +33,11 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+		// $this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
+		// foreach ( $this->scripts as $script ) {
+		// wp_enqueue_script( $script );
+		// }
 		// }
 	}
 
@@ -148,11 +148,11 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'align'               => '',
-				'text_align_mobile'   => '',
-				'font_size'           => '',
-				'font_weight'         => '',
-				'text_transform'      => '',
+				'align'             => '',
+				'text_align_mobile' => '',
+				'font_size'         => '',
+				'font_weight'       => '',
+				'text_transform'    => '',
 			)
 		);
 
@@ -160,4 +160,3 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Banner_Widget() );
-

@@ -61,7 +61,6 @@ function wolf_core_link( $atts ) {
 		$output .= '</div><!--.wolf-core-link-text-->';
 	}
 
-
 	$output .= '</div><!--.wolf-core-link-inner-->';
 	$output .= '</div><!--.wolf-core-link--></wolf-core-link>';
 

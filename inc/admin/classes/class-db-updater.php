@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'WP_Background_Process' ) ) {
-	include_once( 'lib/class-db-background-process.php' );
+	include_once 'lib/class-db-background-process.php';
 }
 
 class Wolf_Core_DB_Updater_Process extends WP_Background_Process {
@@ -217,7 +217,7 @@ class Wolf_Core_DB_Updater_Process extends WP_Background_Process {
 	 */
 	protected function task( $item ) {
 
-		//d3_log( $item );
+		// d3_log( $item );
 		wdv3u_update_content( $item );
 
 		return false;
@@ -239,7 +239,7 @@ class Wolf_Core_DB_Updater_Process extends WP_Background_Process {
 }
 
 // var_dump( get_option( 'wolf_core_db_update_status' ) );
-//delete_option( 'wolf_core_db_update_status' );
+// delete_option( 'wolf_core_db_update_status' );
 
 /**
  * Get post to update
@@ -248,11 +248,13 @@ function wdv3_get_posts_to_update() {
 
 	return;
 
-	return get_posts( array(
-		'fields'          => 'ids', // Only get post IDs
-		'post_type' => array( 'post', 'page' ),
-		'posts_per_page'  => -1
-	) );
+	return get_posts(
+		array(
+			'fields'         => 'ids', // Only get post IDs
+			'post_type'      => array( 'post', 'page' ),
+			'posts_per_page' => -1,
+		)
+	);
 }
 
 /**

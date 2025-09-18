@@ -115,10 +115,10 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base { // ph
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'artist'              => '',
-				'local_dates'         => 'true',
-				'past_dates'          => 'true',
-				'display_limit'       => '',
+				'artist'        => '',
+				'local_dates'   => 'true',
+				'past_dates'    => 'true',
+				'display_limit' => '',
 			)
 		);
 
@@ -126,4 +126,3 @@ class Elementor_Bandsintown_Events_Widget extends \Elementor\Widget_Base { // ph
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Bandsintown_Events_Widget() );
-

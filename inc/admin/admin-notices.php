@@ -11,9 +11,12 @@
 defined( 'ABSPATH' ) || exit;
 
 
-add_action( 'admin_init', function() {
-	wolf_core_dismiss_review_notification();
-} );
+add_action(
+	'admin_init',
+	function () {
+		wolf_core_dismiss_review_notification();
+	}
+);
 
 /**
  * Output inviting message to rate the theme
@@ -30,11 +33,11 @@ function wolf_core_rating_request_admin_notice() {
 		return;
 	}
 
-	//delete_option( 'wolf_core_theme_review_dismissed_date' );
-	//delete_option( 'wolf_core_theme_review_dismissed_permanently' );
+	// delete_option( 'wolf_core_theme_review_dismissed_date' );
+	// delete_option( 'wolf_core_theme_review_dismissed_permanently' );
 
-	//debug( get_option( 'wolf_core_activation_time' ) );
-	//debug( 'wolf_core_theme_review_dismissed_permanently ' . get_option( "wolf_core_theme_review_dismissed_permanently" ) );
+	// debug( get_option( 'wolf_core_activation_time' ) );
+	// debug( 'wolf_core_theme_review_dismissed_permanently ' . get_option( "wolf_core_theme_review_dismissed_permanently" ) );
 
 	if ( ! wolf_core_rating_notif_needed() ) {
 		return;
@@ -44,10 +47,11 @@ function wolf_core_rating_request_admin_notice() {
 		return;
 	}
 
-	$theme_name = wolf_core_get_theme_name();
+	$theme_name  = wolf_core_get_theme_name();
 	$review_link = 'https://themeforest.net/downloads';
 
-	$message = wp_sprintf( '<p class="wolf-core-admin-notice-img"><img src="%1$s" alt="WolfThemes avatar"></p>
+	$message = wp_sprintf(
+		'<p class="wolf-core-admin-notice-img"><img src="%1$s" alt="WolfThemes avatar"></p>
 	<p class="wolf-core-admin-notice-title"><strong>Enjoying %2$s? I’d Love Your Feedback!</strong></p>
         <p>Thank you for using %2$s. If it’s been helpful for your project, I’d really appreciate it if you could take a moment to leave a review.
 		It will help me a ton!</p>
@@ -58,7 +62,7 @@ function wolf_core_rating_request_admin_notice() {
 		',
 		esc_html( 'https://assets.wolfthemes.com/me.jpg' ),
 		esc_html( $theme_name ), // %2$s - Theme name
-    	esc_url( $review_link ),   // %3$s - Review link
+		esc_url( $review_link ),   // %3$s - Review link
 		esc_url( add_query_arg( 'wolf_core_dismiss_review_notification', '1' ) ), // %4$s - Dismiss link
 		esc_url( add_query_arg( 'wolf_core_dismiss_review_notification', '2' ) ) // %5$s - Dismiss link
 	);
@@ -73,17 +77,17 @@ add_action( 'admin_init', 'wolf_core_rating_request_admin_notice' );
  * @return void
  */
 function wolf_core_dismiss_review_notification() {
-    if ( isset( $_GET['wolf_core_dismiss_review_notification'] ) ) {
-        $dismiss_type = absint( $_GET['wolf_core_dismiss_review_notification'] );
+	if ( isset( $_GET['wolf_core_dismiss_review_notification'] ) ) {
+		$dismiss_type = absint( $_GET['wolf_core_dismiss_review_notification'] );
 
-        if ( $dismiss_type === 1 ) {
-            // Temporarily dismiss for 30 days
-            update_option( 'wolf_core_theme_review_dismissed_date', time() );
-        } elseif ( $dismiss_type === 2 ) {
-            // Permanently dismiss
-            update_option( 'wolf_core_theme_review_dismissed_permanently', true );
-        }
-    }
+		if ( $dismiss_type === 1 ) {
+			// Temporarily dismiss for 30 days
+			update_option( 'wolf_core_theme_review_dismissed_date', time() );
+		} elseif ( $dismiss_type === 2 ) {
+			// Permanently dismiss
+			update_option( 'wolf_core_theme_review_dismissed_permanently', true );
+		}
+	}
 }
 
 
@@ -93,25 +97,25 @@ function wolf_core_dismiss_review_notification() {
  * @return void
  */
 function wolf_core_should_show_review_notification() {
-    // Check if the user permanently dismissed the notification
-    $dismissed_permanently = get_option( 'wolf_core_theme_review_dismissed_permanently' );
+	// Check if the user permanently dismissed the notification
+	$dismissed_permanently = get_option( 'wolf_core_theme_review_dismissed_permanently' );
 
-    if ( $dismissed_permanently ) {
-        return false; // Don't show the notification again
-    }
+	if ( $dismissed_permanently ) {
+		return false; // Don't show the notification again
+	}
 
-    // Check if the notification has been dismissed temporarily and when
-    $dismissed_date = get_option( 'wolf_core_theme_review_dismissed_date' );
+	// Check if the notification has been dismissed temporarily and when
+	$dismissed_date = get_option( 'wolf_core_theme_review_dismissed_date' );
 
-    // If it was dismissed, check if 15 days have passed since
-    if ( $dismissed_date ) {
-        $thirty_days_in_seconds = 15 * 24 * 60 * 60;
-        if ( ( time() - $dismissed_date ) < $thirty_days_in_seconds ) {
-            return false; // Less than 15 days have passed
-        }
-    }
+	// If it was dismissed, check if 15 days have passed since
+	if ( $dismissed_date ) {
+		$thirty_days_in_seconds = 15 * 24 * 60 * 60;
+		if ( ( time() - $dismissed_date ) < $thirty_days_in_seconds ) {
+			return false; // Less than 15 days have passed
+		}
+	}
 
-    return true; // Show the notification
+	return true; // Show the notification
 }
 
 /**
@@ -160,20 +164,20 @@ function wolf_core_rating_notif_needed() {
 function wolf_core_is_35_days_after_activation() {
 	$activation_date = get_option( 'wolf_core_activation_time' );
 
-    if ( $activation_date ) {
-        // Get the current timestamp
-        $current_time = time();
+	if ( $activation_date ) {
+		// Get the current timestamp
+		$current_time = time();
 
-        // Calculate the difference (35 days in seconds = 30 * 24 * 60 * 60)
-        $thirty_days_in_seconds = 35 * DAY_IN_SECONDS;
+		// Calculate the difference (35 days in seconds = 30 * 24 * 60 * 60)
+		$thirty_days_in_seconds = 35 * DAY_IN_SECONDS;
 
-        // Check if 30 days have passed
-        if ( ( $current_time - $activation_date ) >= $thirty_days_in_seconds ) {
-            return true; // 35 days have passed
-        }
-    }
-	//return true; // debug
-    return false; // Not yet 35 days
+		// Check if 30 days have passed
+		if ( ( $current_time - $activation_date ) >= $thirty_days_in_seconds ) {
+			return true; // 35 days have passed
+		}
+	}
+	// return true; // debug
+	return false; // Not yet 35 days
 }
 
 /**
@@ -183,24 +187,24 @@ function wolf_core_is_35_days_after_activation() {
  */
 function wolf_core_support_expired() {
 
-	//return true;
+	// return true;
 
-	 // Retrieve the support end date from the options table
-    $support_end_date = get_option( 'wolf_core_supported_until' );
+	// Retrieve the support end date from the options table
+	$support_end_date = get_option( 'wolf_core_supported_until' );
 
-    // If there's no support end date saved, return early
-    if ( ! $support_end_date ) {
-        return;
-    }
+	// If there's no support end date saved, return early
+	if ( ! $support_end_date ) {
+		return;
+	}
 
-    // Convert the ISO 8601 formatted date to a timestamp
-    $support_end_timestamp = strtotime( $support_end_date );
+	// Convert the ISO 8601 formatted date to a timestamp
+	$support_end_timestamp = strtotime( $support_end_date );
 
-    // Get the current timestamp
-    $current_timestamp = time();
+	// Get the current timestamp
+	$current_timestamp = time();
 
-    // Check if the support period has expired
-    if ( $support_end_timestamp < $current_timestamp ) {
+	// Check if the support period has expired
+	if ( $support_end_timestamp < $current_timestamp ) {
 		return true;
 	}
 }
@@ -231,9 +235,9 @@ function wolf_core_display_support_renewal_notice() {
 		<?php esc_html_e( 'Renew support now for continued assistance.', 'wolf-core' ); ?>
 	</a>
 	</p>
-    <?php
+	<?php
 	$hide_message = esc_html__( 'I’ll renew later. Hide this notice.', 'wolf-core' );
-	$message = ob_get_clean();
+	$message      = ob_get_clean();
 
 	if ( wolf_core_support_expired() ) {
 		wolf_core_admin_notice( $message, 'warning', '_wolf_support_expired', $hide_message );
@@ -247,31 +251,31 @@ add_action( 'admin_init', 'wolf_core_display_support_renewal_notice' );
  * Display admin notice if Content Block is not enabled in Elementor settings with dismissal
  */
 function wolf_core_content_block_elementor_notice() {
-    global $typenow;
-    if ( 'wolf_content_block' !== $typenow ) {
-        return;
-    }
-
-    // Check if dismissed permanently
-    if ( get_option( 'wolf_core_content_block_notice_dismissed' ) ) {
+	global $typenow;
+	if ( 'wolf_content_block' !== $typenow ) {
 		return;
-    }
+	}
 
-    $elementor_cpt_support = get_option( 'elementor_cpt_support', array() );
-    if ( ! in_array( 'wolf_content_block', $elementor_cpt_support ) ) {
-        $message = '<p><strong>Content Block is not enabled in Elementor!</strong></p>';
-        $message .= '<p>To use this post type with Elementor, please enable it in the Elementor settings.</p>';
-        $message .= '<p><a href="' . esc_url( admin_url( 'admin.php?page=elementor-settings' ) ) . '" class="button-primary">Go to Elementor Settings</a></p>';
+	// Check if dismissed permanently
+	if ( get_option( 'wolf_core_content_block_notice_dismissed' ) ) {
+		return;
+	}
 
-        wolf_core_admin_notice( $message, 'warning', 'wolf_core_content_block_notice', 'Hide permanently' );
-    }
+	$elementor_cpt_support = get_option( 'elementor_cpt_support', array() );
+	if ( ! in_array( 'wolf_content_block', $elementor_cpt_support ) ) {
+		$message  = '<p><strong>Content Block is not enabled in Elementor!</strong></p>';
+		$message .= '<p>To use this post type with Elementor, please enable it in the Elementor settings.</p>';
+		$message .= '<p><a href="' . esc_url( admin_url( 'admin.php?page=elementor-settings' ) ) . '" class="button-primary">Go to Elementor Settings</a></p>';
+
+		wolf_core_admin_notice( $message, 'warning', 'wolf_core_content_block_notice', 'Hide permanently' );
+	}
 }
 add_action( 'admin_notices', 'wolf_core_content_block_elementor_notice' );
 
 // Handle dismissal
 function wolf_core_dismiss_content_block_notice() {
-    if ( isset( $_GET['dismiss'] ) && 'wolf_core_content_block_notice' === $_GET['dismiss'] ) {
-        update_option( 'wolf_core_content_block_notice_dismissed', true );
-    }
+	if ( isset( $_GET['dismiss'] ) && 'wolf_core_content_block_notice' === $_GET['dismiss'] ) {
+		update_option( 'wolf_core_content_block_notice_dismissed', true );
+	}
 }
 add_action( 'admin_init', 'wolf_core_dismiss_content_block_notice' );

@@ -20,21 +20,21 @@ function wolf_core_gallery_banner_params() {
 		'wolf_core_gallery_banner_params',
 		array(
 			'properties' => array(
-				'name'             => esc_html__( 'Gallery Banner', 'wolf-core' ),
-				'description'      => esc_html__( 'Description.', 'wolf-core' ),
-				'vc_base'          => 'wolf_core_gallery_banner',
-				'vc_category'      => esc_html__( 'Extension', 'wolf-core' ),
-				'el_categories'    => array( 'extension' ),
-				'el_base'          => 'wolf_core_gallery_banner',
-				'keywords'         => array( 'image', 'photo', 'visual', 'gallery' ),
-				'icon'             => 'linea-basic linea-basic-picture-multiple',
+				'name'          => esc_html__( 'Gallery Banner', 'wolf-core' ),
+				'description'   => esc_html__( 'Description.', 'wolf-core' ),
+				'vc_base'       => 'wolf_core_gallery_banner',
+				'vc_category'   => esc_html__( 'Extension', 'wolf-core' ),
+				'el_categories' => array( 'extension' ),
+				'el_base'       => 'wolf_core_gallery_banner',
+				'keywords'      => array( 'image', 'photo', 'visual', 'gallery' ),
+				'icon'          => 'linea-basic linea-basic-picture-multiple',
 				// 'register_scripts' => array(
-				// 	'wolf-core-galleries' => array(
-				// 		'src'     => WOLF_CORE_JS . '/galleries.js',
-				// 		'version' => WOLF_CORE_VERSION,
-				// 	),
+				// 'wolf-core-galleries' => array(
+				// 'src'     => WOLF_CORE_JS . '/galleries.js',
+				// 'version' => WOLF_CORE_VERSION,
 				// ),
-				//'scripts'          => array( 'jquery', 'wolf-core' ),
+				// ),
+				// 'scripts'          => array( 'jquery', 'wolf-core' ),
 			),
 			'params'     => array(
 
@@ -66,16 +66,16 @@ function wolf_core_gallery_banner_params() {
 				),
 
 				array(
-					'type'        => 'images',
-					'label'       => esc_html__( 'Images', 'wolf-core' ),
-					'param_name'  => 'images',
-					//'description' => esc_html__( 'You can set the "large", "medium" and "thumbnail" sizes in the WP media settings.', 'wolf-core' ),
+					'type'       => 'images',
+					'label'      => esc_html__( 'Images', 'wolf-core' ),
+					'param_name' => 'images',
+					// 'description' => esc_html__( 'You can set the "large", "medium" and "thumbnail" sizes in the WP media settings.', 'wolf-core' ),
 				),
 
 				array(
-					'type'        => 'text',
-					'label'       => esc_html__( 'Title', 'wolf-core' ),
-					'param_name'  => 'banner_title',
+					'type'       => 'text',
+					'label'      => esc_html__( 'Title', 'wolf-core' ),
+					'param_name' => 'banner_title',
 				),
 			),
 		)

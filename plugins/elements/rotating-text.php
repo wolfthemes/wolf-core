@@ -34,7 +34,7 @@ function wolf_core_rotating_text( $atts ) {
 
 	extract( $atts ); // phpcs:ignore
 
-	//debug( $atts );
+	// debug( $atts );
 
 	$link = wolf_core_process_link_atts( $link );
 
@@ -46,7 +46,7 @@ function wolf_core_rotating_text( $atts ) {
 
 	$svg_inline_style = '';
 
-	//$svg_inline_style = 'margin-left: -' . absint( absint( $width ) / 4 ) . 'px; margin-top: -' . absint( absint( $width ) / 4 ) . 'px;';
+	// $svg_inline_style = 'margin-left: -' . absint( absint( $width ) / 4 ) . 'px; margin-top: -' . absint( absint( $width ) / 4 ) . 'px;';
 
 	if ( $rotating_speed ) {
 		$svg_inline_style .= ' animation-duration:' . absint( $rotating_speed ) . 's';
@@ -76,14 +76,14 @@ function wolf_core_rotating_text( $atts ) {
 	}
 
 	if ( $selected_icon ) {
-		//if ( 'svg' === $selected_icon['library'] ) {
-		//	ob_start();
-		//	echo wolf_core_render_icon( $selected_icon, array( 'aria-hidden' => 'true' ) );
-		//	$output .= ob_get_clean();
+		// if ( 'svg' === $selected_icon['library'] ) {
+		// ob_start();
+		// echo wolf_core_render_icon( $selected_icon, array( 'aria-hidden' => 'true' ) );
+		// $output .= ob_get_clean();
 
-		//} else {
+		// } else {
 			$output .= wolf_core_render_icon( $selected_icon, array( 'aria-hidden' => 'true' ) );
-		//}
+		// }
 
 	}
 

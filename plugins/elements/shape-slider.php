@@ -20,9 +20,7 @@ function wolf_core_shape_slider( $atts ) {
 		'wolf_core_shape_slider_atts',
 		wp_parse_args(
 			$atts,
-			array(
-
-			)
+			array()
 		)
 	);
 

@@ -138,14 +138,14 @@ class Elementor_Video_Opener_Widget extends \Elementor\Widget_Base {
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'custom_play_button'  => '',
-				'button_image'        => '',
-				'alignment'           => 'center',
-				'video_url'           => '',
-				'attention_seeker'    => '',
-				'caption_position'    => '',
-				'caption'             => '',
-				'duration'            => '',
+				'custom_play_button' => '',
+				'button_image'       => '',
+				'alignment'          => 'center',
+				'video_url'          => '',
+				'attention_seeker'   => '',
+				'caption_position'   => '',
+				'caption'            => '',
+				'duration'           => '',
 			)
 		);
 
@@ -153,4 +153,3 @@ class Elementor_Video_Opener_Widget extends \Elementor\Widget_Base {
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Video_Opener_Widget() );
-

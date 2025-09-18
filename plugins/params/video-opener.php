@@ -20,13 +20,13 @@ function wolf_core_video_opener_params() {
 		'wolf_core_video_opener_params',
 		array(
 			'properties' => array(
-				'name'          => esc_html__( 'Video Opener', 'wolf-core' ),
-				'description'   => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
-				'vc_base'       => 'wolf_core_video_opener',
-				'el_base'       => 'video-opener',
-				'vc_category'   => esc_html__( 'Music', 'wolf-core' ),
-				'el_categories' => array( 'extension' ),
-				'icon'          => 'linea-music linea-music-play-button',
+				'name'             => esc_html__( 'Video Opener', 'wolf-core' ),
+				'description'      => esc_html__( 'A stylish presentation for your release', 'wolf-core' ),
+				'vc_base'          => 'wolf_core_video_opener',
+				'el_base'          => 'video-opener',
+				'vc_category'      => esc_html__( 'Music', 'wolf-core' ),
+				'el_categories'    => array( 'extension' ),
+				'icon'             => 'linea-music linea-music-play-button',
 				'register_scripts' => array(
 					'wolf-core-video-opener' => array(
 						'src'     => WOLF_CORE_JS . '/video-opener.js',

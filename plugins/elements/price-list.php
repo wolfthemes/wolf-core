@@ -67,17 +67,17 @@ function wolf_core_price_list( $atts ) {
 
 		$output .= '<span class="wolf-core-price-item-title-container">';
 
-			if ( $title ) {
-				$output .= '<span class="wolf-core-price-item-title">' . wolf_core_kses( $title ) . '</span>';
-			}
+		if ( $title ) {
+			$output .= '<span class="wolf-core-price-item-title">' . wolf_core_kses( $title ) . '</span>';
+		}
 
-			if ( $title && $price ) {
-				$output .= '<span class="wolf-core-price-item-line"></span>';
-			}
+		if ( $title && $price ) {
+			$output .= '<span class="wolf-core-price-item-line"></span>';
+		}
 
-			if ( $price ) {
-				$output .= '<span class="wolf-core-price-item-price">' . wolf_core_kses( $price ) . '</span>';
-			}
+		if ( $price ) {
+			$output .= '<span class="wolf-core-price-item-price">' . wolf_core_kses( $price ) . '</span>';
+		}
 
 		$output .= '</span><!--.wolf-core-price-item-title-container-->';
 

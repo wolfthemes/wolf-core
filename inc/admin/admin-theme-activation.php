@@ -123,7 +123,7 @@ function wolf_core_output_license_tab_content() {
 		<ul class="wolf-core-license-info">
 			<li>
 			<?php
-				echo sprintf(
+				printf(
 					wp_kses_post( __( '%1$s theme works with <strong>%2$s</strong> plugin to offer all its features.', 'wolf-core' ) ),
 					$theme_name,
 					// 'https://wolfthemes.com/wolf-wpbakery-page-builder-extension/',
@@ -133,7 +133,7 @@ function wolf_core_output_license_tab_content() {
 			</li>
 			<li>
 				<?php
-					echo sprintf(
+					printf(
 						wp_kses_post( __( 'It extends of <a href="%1$s" target="_blank">%2$s</a> plugin.', 'wolf-core' ) ),
 						'https://elementor.com/',
 						'Elementor'
@@ -145,7 +145,7 @@ function wolf_core_output_license_tab_content() {
 			</li>
 			<li>
 				<?php
-				echo sprintf(
+				printf(
 					wp_kses_post( __( 'This extension is available only to users who purchased their theme from <a href="%1$s" target="_blank">%2$s</a>.', 'wolf-core' ) ),
 					'https://wolfthemes.com',
 					'WolfThemes'
@@ -165,7 +165,7 @@ function wolf_core_output_license_tab_content() {
 		<?php if ( ! $activated ) : ?>
 		<p class="wolf-core-license-cta-text">
 			<?php
-				echo sprintf(
+				printf(
 					wp_kses_post( __( 'Please enter your <strong>theme purchase code</strong> below to activate your theme  and be able to use all features.', 'wolf-core' ) ),
 					'WolfThemes'
 				);
@@ -181,7 +181,7 @@ function wolf_core_output_license_tab_content() {
 		<p>
 
 			<?php
-			echo sprintf(
+			printf(
 				wp_kses_post( __( 'The %s Extension is activated.', 'wolf-core' ) ),
 				'Wolf Core'
 			);
@@ -195,7 +195,7 @@ function wolf_core_output_license_tab_content() {
 				if ( wolf_core_support_expired() ) {
 					// If support has expired, show the renewal message
 					echo wp_sprintf(
-						wp_kses_post( __( 'Your support for %s has expired. You can renew it <a target="_blank" href="%s">HERE</a>.', 'wolf-core' ) ),
+						wp_kses_post( __( 'Your support for %1$s has expired. You can renew it <a target="_blank" href="%2$s">HERE</a>.', 'wolf-core' ) ),
 						esc_html( wolf_core_get_theme_name() ),
 						esc_url( 'https://themeforest.net/downloads' )
 					);
@@ -207,7 +207,7 @@ function wolf_core_output_license_tab_content() {
 
 					// Show the valid support message with the expiration date
 					echo wp_sprintf(
-						wp_kses_post( __( 'Your support for %s is valid until <span style="color: #28a745;">%s</span>.', 'wolf-core' ) ),
+						wp_kses_post( __( 'Your support for %1$s is valid until <span style="color: #28a745;">%2$s</span>.', 'wolf-core' ) ),
 						esc_html( wolf_core_get_theme_name() ),
 						esc_html( $formatted_date )
 					);
@@ -241,7 +241,7 @@ function wolf_core_activate_theme() {
 	// Check if cURL is enabled on the server
 	if ( ! function_exists( 'curl_init' ) ) {
 		$is_error = true;
-		$error = esc_html__( 'The server does not support cURL, which is required for theme activation. Please contact your hosting provider.', 'wolf-core' );
+		$error    = esc_html__( 'The server does not support cURL, which is required for theme activation. Please contact your hosting provider.', 'wolf-core' );
 	}
 
 	// Check if the theme is not already activated
@@ -260,9 +260,9 @@ function wolf_core_activate_theme() {
 				array(
 					'method' => 'POST',
 					'body'   => array(
-						'timeout'        => 30,
-						'action'         => 'activation',
-						'purchase_code'  => $code,
+						'timeout'       => 30,
+						'action'        => 'activation',
+						'purchase_code' => $code,
 					),
 				)
 			);
@@ -276,7 +276,6 @@ function wolf_core_activate_theme() {
 				if ( strpos( $error, 'cURL' ) !== false ) {
 					$error = esc_html__( 'The request failed due to a cURL error. This may be caused by firewall or DNS blocking. Please check with your hosting provider to ensure that outgoing requests to api.wolfthemes.cloud are allowed.', 'wolf-core' );
 				}
-
 			} elseif ( is_array( $response ) ) {
 
 				// Retrieve the response body

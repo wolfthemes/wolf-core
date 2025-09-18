@@ -18,7 +18,7 @@ if ( ! function_exists( 'wolf_core_shortcode_next_month' ) ) {
 	 */
 	function wolf_core_shortcode_next_month() {
 
-		$month = ( 12 === date( 'm'  ) ) ? '01' : date( 'm' ) + 1;
+		$month = ( 12 === date( 'm' ) ) ? '01' : date( 'm' ) + 1;
 
 		return '<span class="wvc-next-month">' . $month . '</span>';
 	}

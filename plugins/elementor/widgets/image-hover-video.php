@@ -153,13 +153,10 @@ class Elementor_Image_Hover_Video_Widget extends \Elementor\Widget_Base { // php
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_image_hover_video( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Image_Hover_Video_Widget() );
-

@@ -114,7 +114,7 @@ function wolf_core_get_button_params() {
 			),
 			'prefix_class'       => 'elementor%s-align-',
 			// 'selectors'    => array(
-			// 	'{{WRAPPER}} .wolf-core-button' => 'text-align:{{VALUE}};',
+			// '{{WRAPPER}} .wolf-core-button' => 'text-align:{{VALUE}};',
 			// ),
 			'default'            => '',
 			'page_builder'       => 'elementor',
@@ -270,7 +270,7 @@ function wolf_core_get_button_params() {
 			'param_name' => 'background_color',
 			'label'      => esc_html__( 'Background Color', 'wolf-core' ),
 			'type'       => 'colorpicker',
-			//'default'    => wolf_core_get_theme_accent_color_value(),
+			// 'default'    => wolf_core_get_theme_accent_color_value(),
 			'selectors'  => array(
 				'{{WRAPPER}} .wolf-core-button' => 'background-color: {{VALUE}};',
 			),

@@ -25,12 +25,12 @@ function wolf_core_numeric_slider_settings_field( $settings, $value ) {
 	?>
 	<div class="wolf_core_numeric_slider">
 		<input name="<?php echo esc_attr( $settings['param_name'] ); ?>" class="wpb_vc_param_value wpb-textinput <?php echo esc_attr( $settings['param_name'] ); ?> <?php echo esc_attr( $settings['type'] ); ?>" type="hidden" value="<?php echo $value; ?>"/>
-			   <span class="numeric-slider-helper-input"><?php echo esc_attr( $value ); ?></span>
-			   <div class="wolf-core-numeric-slider <?php echo esc_attr( $settings['param_name'] ); ?>"
-			   data-value="<?php echo esc_attr( $value ); ?>"
-			   data-min="<?php echo esc_attr( $settings['min'] ); ?>"
-			   data-max="<?php echo esc_attr( $settings['max'] ); ?>"
-			   data-step="<?php echo esc_attr( $settings['step'] ); ?>"></div>
+				<span class="numeric-slider-helper-input"><?php echo esc_attr( $value ); ?></span>
+				<div class="wolf-core-numeric-slider <?php echo esc_attr( $settings['param_name'] ); ?>"
+				data-value="<?php echo esc_attr( $value ); ?>"
+				data-min="<?php echo esc_attr( $settings['min'] ); ?>"
+				data-max="<?php echo esc_attr( $settings['max'] ); ?>"
+				data-step="<?php echo esc_attr( $settings['step'] ); ?>"></div>
 	</div><!-- .wolf_core_numeric_slider -->
 	<?php
 	return ob_get_clean();

@@ -14,13 +14,13 @@ defined( 'ABSPATH' ) || exit;
  */
 add_action(
 	'elementor/element/text-editor/section_editor/before_section_end',
-	function( $section, $args ) {
+	function ( $section, $args ) {
 
 		$section->add_control(
 			'el_class',
 			array(
-				'label'        => esc_html__( 'Extra Class', 'wolf-core' ),
-				'type'         => \Elementor\Controls_Manager::TEXT,
+				'label' => esc_html__( 'Extra Class', 'wolf-core' ),
+				'type'  => \Elementor\Controls_Manager::TEXT,
 			)
 		);
 	},
@@ -33,7 +33,7 @@ add_action(
  */
 add_action(
 	'elementor/frontend/widget/before_render',
-	function( $widget ) {
+	function ( $widget ) {
 
 		if ( 'text-editor' !== $widget->get_name() ) {
 			return;

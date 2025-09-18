@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  */
 add_action(
 	'elementor/element/image-carousel/section_additional_options/before_section_end',
-	function( $section, $args ) {
+	function ( $section, $args ) {
 
 		$section->add_control(
 			'el_class',
@@ -33,7 +33,7 @@ add_action(
  */
 add_action(
 	'elementor/frontend/widget/before_render',
-	function( $widget ) {
+	function ( $widget ) {
 
 		if ( 'image-carousel' !== $widget->get_name() ) {
 			return;

@@ -20,15 +20,15 @@ function wolf_core_audio_button( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'file'                      => '',
-				'alignment'          		=> 'center',
-				'autoplay'          		=> '',
-				'btn_type'                 	=> 'icon',
-				'css_animation'             => '',
-				'css_animation_delay'       => '',
-				'el_class'                  => '',
-				'css'                       => '',
-				'inline_style'              => '',
+				'file'                => '',
+				'alignment'           => 'center',
+				'autoplay'            => '',
+				'btn_type'            => 'icon',
+				'css_animation'       => '',
+				'css_animation_delay' => '',
+				'el_class'            => '',
+				'css'                 => '',
+				'inline_style'        => '',
 			)
 		)
 	);
@@ -44,8 +44,8 @@ function wolf_core_audio_button( $atts ) {
 		$file = $file['url'];
 	}
 
-	$output      = '';
-	$rand_id = wp_rand(0, 9999);
+	$output  = '';
+	$rand_id = wp_rand( 0, 9999 );
 
 	$class = $el_class; // init container CSS class.
 
@@ -64,7 +64,7 @@ function wolf_core_audio_button( $atts ) {
 		$output .= ' data-autoplay="true" ';
 	}
 
-	$output .='>';
+	$output .= '>';
 
 	if ( 'equalizer' === $btn_type ) {
 

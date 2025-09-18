@@ -33,11 +33,11 @@ class Elementor_Google_Maps_Widget extends \Elementor\Widget_Base { // phpcs:ign
 
 		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+		// $this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_enqueue_script( $script );
-		// 	}
+		// foreach ( $this->scripts as $script ) {
+		// wp_enqueue_script( $script );
+		// }
 		// }
 	}
 
@@ -178,4 +178,3 @@ class Elementor_Google_Maps_Widget extends \Elementor\Widget_Base { // phpcs:ign
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Google_Maps_Widget() );
-

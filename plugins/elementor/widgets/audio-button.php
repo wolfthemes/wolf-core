@@ -153,7 +153,7 @@ class Elementor_Audio_Button_Widget extends \Elementor\Widget_Base { // phpcs:ig
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
 			array(
-				'file'               => '',
+				'file' => '',
 			)
 		);
 
@@ -161,4 +161,3 @@ class Elementor_Audio_Button_Widget extends \Elementor\Widget_Base { // phpcs:ig
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Audio_Button_Widget() );
-

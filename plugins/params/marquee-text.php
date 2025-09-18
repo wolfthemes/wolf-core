@@ -33,7 +33,7 @@ function wolf_core_marquee_text_params() {
 					'type'       => 'text',
 					'label'      => esc_html__( 'Text', 'wolf-core' ),
 					'param_name' => 'text',
-					'default'      => esc_html__( 'This is my marquee text', 'wolf-core' ),
+					'default'    => esc_html__( 'This is my marquee text', 'wolf-core' ),
 				),
 
 				array(
@@ -99,11 +99,10 @@ function wolf_core_marquee_text_params() {
 							'max' => 50,
 						),
 					),
-					'selectors'    => array(
+					'selectors'  => array(
 						'{{WRAPPER}} .wolf-core-marquee__inner' => 'animation-duration: {{SIZE}}s;',
 					),
 				),
-
 
 				array(
 					'type'       => 'link',

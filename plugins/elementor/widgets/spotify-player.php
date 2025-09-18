@@ -126,4 +126,3 @@ class Elementor_Spotify_Player_Widget extends \Elementor\Widget_Base {
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Spotify_Player_Widget() );
-

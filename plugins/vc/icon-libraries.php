@@ -35,51 +35,51 @@ add_action( 'vc_enqueue_font_icon_element', 'wolf_core_enqueue_icon_fonts' );
 function wolf_core_get_vc_default_icon_libraries() {
 
 	return array(
-		'fontawesome' => array(
+		'fontawesome'         => array(
 			'properties' => array(
-				'name'          => 'fontawesome',
-				'label'         => esc_html__( 'Fontawesome', 'wolf-core' ),
-				'labelIcon'     => 'fa fa-cog',
+				'name'      => 'fontawesome',
+				'label'     => esc_html__( 'Fontawesome', 'wolf-core' ),
+				'labelIcon' => 'fa fa-cog',
 			),
 		),
 
-		'entypo' => array(
+		'entypo'              => array(
 			'properties' => array(
-				'name'          => 'entypo',
-				'label'         => esc_html__( 'Entypo', 'wolf-core' ),
-				'labelIcon'     => 'entypo-icon entypo-icon-note',
+				'name'      => 'entypo',
+				'label'     => esc_html__( 'Entypo', 'wolf-core' ),
+				'labelIcon' => 'entypo-icon entypo-icon-note',
 			),
 		),
 
-		'material' => array(
+		'material'            => array(
 			'properties' => array(
-				'name'          => 'material',
-				'label'         => esc_html__( 'Material', 'wolf-core' ),
-				'labelIcon'     => 'vc-oi vc-oi-dial',
+				'name'      => 'material',
+				'label'     => esc_html__( 'Material', 'wolf-core' ),
+				'labelIcon' => 'vc-oi vc-oi-dial',
 			),
 		),
 
 		'monosocialiconsfont' => array(
 			'properties' => array(
-				'name'          => 'monosocialiconsfont',
-				'label'         => esc_html__( 'Monosocialicons', 'wolf-core' ),
-				'labelIcon'     => 'vc-oi vc-oi-dial',
+				'name'      => 'monosocialiconsfont',
+				'label'     => esc_html__( 'Monosocialicons', 'wolf-core' ),
+				'labelIcon' => 'vc-oi vc-oi-dial',
 			),
 		),
 
-		'openiconic' => array(
+		'openiconic'          => array(
 			'properties' => array(
-				'name'          => 'openiconic',
-				'label'         => esc_html__( 'Iconic', 'wolf-core' ),
-				'labelIcon'     => 'fas fas-dial',
+				'name'      => 'openiconic',
+				'label'     => esc_html__( 'Iconic', 'wolf-core' ),
+				'labelIcon' => 'fas fas-dial',
 			),
 		),
 
-		'typicons' => array(
+		'typicons'            => array(
 			'properties' => array(
-				'name'          => 'typicons',
-				'label'         => esc_html__( 'Typicons', 'wolf-core' ),
-				'labelIcon'     => 'vc-oi vc-oi-dial',
+				'name'      => 'typicons',
+				'label'     => esc_html__( 'Typicons', 'wolf-core' ),
+				'labelIcon' => 'vc-oi vc-oi-dial',
 			),
 		),
 	);
@@ -104,7 +104,7 @@ function wolf_core_add_icon_libraries() {
 
 		add_filter(
 			'vc_iconpicker-type-' . $library['properties']['name'],
-			function( $icons ) use ( $vc_icons ) {
+			function ( $icons ) use ( $vc_icons ) {
 				return $vc_icons;
 			}
 		);

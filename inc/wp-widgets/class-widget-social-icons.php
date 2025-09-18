@@ -67,8 +67,8 @@ class Wolf_Core_Widget_Socials extends WP_Widget {
 			apply_filters(
 				'wolf_core_widget_socials_args',
 				array(
-					'services' => $socials,
-					'alignment'=> 'left',
+					'services'  => $socials,
+					'alignment' => 'left',
 				)
 			)
 		);

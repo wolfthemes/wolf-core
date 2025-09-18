@@ -27,7 +27,8 @@ function wolf_core_heading_params() {
 				'icon'        => 'fa fa-text-width',
 			),
 			'params'     => array(
-				/*array(
+				/*
+				array(
 					'type'         => 'checkbox',
 					'label'        => esc_html__( 'Center Aligned on Mobile', 'wolf-core' ),
 					'param_name'   => 'text_align_mobile',
@@ -36,20 +37,20 @@ function wolf_core_heading_params() {
 				),*/
 
 				// array(
-				// 	'type'         => 'select',
-				// 	'label'        => esc_html__( 'Size', 'wolf-core' ),
-				// 	'param_name'   => 'size',
-				// 	'options'      => array(
-				// 		'default' => esc_html__( 'Default', 'wolf-core' ),
-				// 		'small'   => esc_html__( 'Small', 'wolf-core' ),
-				// 		'medium'  => esc_html__( 'Medium', 'wolf-core' ),
-				// 		'large'   => esc_html__( 'Large', 'wolf-core' ),
-				// 		'xl'      => esc_html__( 'XL', 'wolf-core' ),
-				// 		'xxl'     => esc_html__( 'XXL', 'wolf-core' ),
-				// 		'custom'  => esc_html__( 'Custom', 'wolf-core' ),
-				// 	),
-				// 	'default'      => 'default',
-				// 	'page_builder' => 'vc',
+				// 'type'         => 'select',
+				// 'label'        => esc_html__( 'Size', 'wolf-core' ),
+				// 'param_name'   => 'size',
+				// 'options'      => array(
+				// 'default' => esc_html__( 'Default', 'wolf-core' ),
+				// 'small'   => esc_html__( 'Small', 'wolf-core' ),
+				// 'medium'  => esc_html__( 'Medium', 'wolf-core' ),
+				// 'large'   => esc_html__( 'Large', 'wolf-core' ),
+				// 'xl'      => esc_html__( 'XL', 'wolf-core' ),
+				// 'xxl'     => esc_html__( 'XXL', 'wolf-core' ),
+				// 'custom'  => esc_html__( 'Custom', 'wolf-core' ),
+				// ),
+				// 'default'      => 'default',
+				// 'page_builder' => 'vc',
 				// ),
 
 				array(
@@ -67,7 +68,8 @@ function wolf_core_heading_params() {
 					'page_builder' => 'vc',
 				),
 
-				/*array(
+				/*
+				array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Behavior', 'wolf-core' ),
 					'param_name' => 'responsive',
@@ -80,7 +82,7 @@ function wolf_core_heading_params() {
 
 				array(
 					'type'       => 'text',
-					'label'    => esc_html__( 'Extra Class', 'wolf-core' ),
+					'label'      => esc_html__( 'Extra Class', 'wolf-core' ),
 					'param_name' => 'extra_class',
 				),
 
@@ -94,12 +96,12 @@ function wolf_core_heading_params() {
 					),
 				),
 				array(
-					'type'        => 'font_family',
-					'label'       => esc_html__( 'Font', 'wolf-core' ),
-					'param_name'  => 'font_family',
-					'admin_label' => true,
-					'default'     => apply_filters( 'wolf_core_default_heading_font_family', '' ),
-					'selectors'   => array(
+					'type'         => 'font_family',
+					'label'        => esc_html__( 'Font', 'wolf-core' ),
+					'param_name'   => 'font_family',
+					'admin_label'  => true,
+					'default'      => apply_filters( 'wolf_core_default_heading_font_family', '' ),
+					'selectors'    => array(
 						'{{WRAPPER}} .elementor-heading-title' => 'font-family: {{VALUE}};',
 					),
 					'page_builder' => 'vc',

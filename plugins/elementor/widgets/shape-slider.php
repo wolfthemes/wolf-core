@@ -153,9 +153,7 @@ class Elementor_Shape_Slider_Widget extends \Elementor\Widget_Base { // phpcs:ig
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_interactive_links( $atts ); // phpcs:ignore

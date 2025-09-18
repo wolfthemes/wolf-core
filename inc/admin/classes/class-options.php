@@ -81,7 +81,7 @@ class Wolf_Core_Options {
 				$parent_slug = 'elementor';
 			}
 
-			//add_submenu_page( $parent_slug, $section['title'], $section['title'], 'activate_plugins', $section['settings_id'], array( $this, 'settings_form' ) );
+			// add_submenu_page( $parent_slug, $section['title'], $section['title'], 'activate_plugins', $section['settings_id'], array( $this, 'settings_form' ) );
 
 			add_theme_page( $section['title'], $section['title'], 'activate_plugins', $section['settings_id'], array( $this, 'settings_form' ) );
 		}
@@ -322,17 +322,17 @@ class Wolf_Core_Options {
 				'right center',
 			);
 			?>
-			 <p>
-				 <label for="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][position]' ); ?>">
+			<p>
+				<label for="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][position]' ); ?>">
 					<?php esc_html_e( 'Position', 'wolf-visual-composer' ); ?>
 				</label><br>
-				 <select name="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][position]' ); ?>">
+				<select name="<?php echo esc_attr( $settings_slug . '[' . $field_id . '][position]' ); ?>">
 					<?php foreach ( $options as $option ) : ?>
 						<option <?php selected( $position, $option ); ?>><?php echo sanitize_text_field( $option ); ?></option>
 					<?php endforeach; ?>
-				 </select>
+				</select>
 			</p>
-			 <?php
+			<?php
 
 				/**
 				 * Bg size
@@ -418,7 +418,7 @@ class Wolf_Core_Options {
 		if ( ! get_option( 'wolf_core_settings' ) ) {
 
 			$default_twitter_url  = ( get_user_meta( get_current_user_id(), 'twitter', true ) ) ? 'https://twitter.com/' . esc_attr( get_user_meta( get_current_user_id(), 'twitter', true ) ) : '#';
-			$default_x_url  = ( get_user_meta( get_current_user_id(), 'x', true ) ) ? 'https://x.com/' . esc_attr( get_user_meta( get_current_user_id(), 'x', true ) ) : '#';
+			$default_x_url        = ( get_user_meta( get_current_user_id(), 'x', true ) ) ? 'https://x.com/' . esc_attr( get_user_meta( get_current_user_id(), 'x', true ) ) : '#';
 			$default_facebook_url = ( get_user_meta( get_current_user_id(), 'facebook', true ) ) ? get_user_meta( get_current_user_id(), 'facebook', true ) : '#';
 
 			$default = apply_filters(
@@ -441,7 +441,7 @@ class Wolf_Core_Options {
 					'fonts'                  => array(),
 
 					'socials'                => array(
-						'x'  => $default_x_url,
+						'x'        => $default_x_url,
 						'facebook' => $default_facebook_url,
 					),
 					'privacy_policy_message' => array(

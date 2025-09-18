@@ -153,8 +153,7 @@ class Elementor_Marquee_Text_Widget extends \Elementor\Widget_Base { // phpcs:ig
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-			)
+			array()
 		);
 
 		echo wolf_core_marquee_text( $atts ); // phpcs:ignore

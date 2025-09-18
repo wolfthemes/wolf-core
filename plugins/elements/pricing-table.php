@@ -21,28 +21,28 @@ function wolf_core_pricing_table( $atts ) {
 		wp_parse_args(
 			$atts,
 			array(
-				'title'               => '',
-				'title_tag'           => 'h3',
-				'tagline'             => '',
-				'price'               => '',
-				'currency'            => '',
-				'display_currency'    => 'before',
-				'offer'               => '',
-				'offer_price'         => '',
-				'price_period'        => '',
-				'button_text'         => '',
-				'button_link'         => '',
+				'title'                 => '',
+				'title_tag'             => 'h3',
+				'tagline'               => '',
+				'price'                 => '',
+				'currency'              => '',
+				'display_currency'      => 'before',
+				'offer'                 => '',
+				'offer_price'           => '',
+				'price_period'          => '',
+				'button_text'           => '',
+				'button_link'           => '',
 				'secondary_button_text' => '',
 				'secondary_button_link' => '',
-				'link'                => '',
-				'featured'            => '',
-				'featured_text'       => '',
-				'services'            => '',
-				'css_animation'       => '',
-				'css_animation_delay' => '',
-				'el_class'            => '',
-				'css'                 => '',
-				'inline_style'        => '',
+				'link'                  => '',
+				'featured'              => '',
+				'featured_text'         => '',
+				'services'              => '',
+				'css_animation'         => '',
+				'css_animation_delay'   => '',
+				'el_class'              => '',
+				'css'                   => '',
+				'inline_style'          => '',
 			)
 		)
 	);
@@ -174,11 +174,11 @@ function wolf_core_pricing_table( $atts ) {
 
 	if ( $button_text ) {
 		if ( is_array( $link ) && isset( $link['url'] ) ) {
-			$url = ( isset( $link['url'] ) ) ? esc_attr( $link['url'] ) : '#';
-			$rel = ( isset( $link['rel'] ) ) ? esc_attr( $link['rel'] ) : '';
-			$target = ( isset( $link['target'] ) ) ? esc_attr( $link['target'] ) : '';
-			$title = ( isset( $link['title'] ) ) ? esc_attr( $link['title'] ) : '';
-			$output .= '<a rel="' . esc_attr( $rel ) .'" class="' . apply_filters( 'wolf_core_pricing_table_button_class', 'wolf-core-button wolf-core-pricing-table-secondary-button' ) . '"';
+			$url     = ( isset( $link['url'] ) ) ? esc_attr( $link['url'] ) : '#';
+			$rel     = ( isset( $link['rel'] ) ) ? esc_attr( $link['rel'] ) : '';
+			$target  = ( isset( $link['target'] ) ) ? esc_attr( $link['target'] ) : '';
+			$title   = ( isset( $link['title'] ) ) ? esc_attr( $link['title'] ) : '';
+			$output .= '<a rel="' . esc_attr( $rel ) . '" class="' . apply_filters( 'wolf_core_pricing_table_button_class', 'wolf-core-button wolf-core-pricing-table-secondary-button' ) . '"';
 			$output .= ' target="' . esc_attr( $target ) . '"';
 			$output .= ' href="' . esc_url( $url ) . '" title="' . esc_attr( $title ) . '">';
 
@@ -190,11 +190,11 @@ function wolf_core_pricing_table( $atts ) {
 
 	if ( $secondary_button_text ) {
 		if ( is_array( $secondary_button_link ) && isset( $secondary_button_link['url'] ) ) {
-			$url = ( isset( $secondary_button_link['url'] ) ) ? esc_attr( $secondary_button_link['url'] ) : '#';
-			$rel = ( isset( $secondary_button_link['rel'] ) ) ? esc_attr( $secondary_button_link['rel'] ) : '';
-			$target = ( isset( $secondary_button_link['target'] ) ) ? esc_attr( $secondary_button_link['target'] ) : '';
-			$title = ( isset( $secondary_button_link['title'] ) ) ? esc_attr( $secondary_button_link['title'] ) : '';
-			$output .= '<a rel="' . esc_attr( $rel ) .'" class="' . apply_filters( 'wolf_core_pricing_table_secondary_button_class', 'wolf-core-button wolf-core-pricing-table-secondary-button' ) . '"';
+			$url     = ( isset( $secondary_button_link['url'] ) ) ? esc_attr( $secondary_button_link['url'] ) : '#';
+			$rel     = ( isset( $secondary_button_link['rel'] ) ) ? esc_attr( $secondary_button_link['rel'] ) : '';
+			$target  = ( isset( $secondary_button_link['target'] ) ) ? esc_attr( $secondary_button_link['target'] ) : '';
+			$title   = ( isset( $secondary_button_link['title'] ) ) ? esc_attr( $secondary_button_link['title'] ) : '';
+			$output .= '<a rel="' . esc_attr( $rel ) . '" class="' . apply_filters( 'wolf_core_pricing_table_secondary_button_class', 'wolf-core-button wolf-core-pricing-table-secondary-button' ) . '"';
 			$output .= ' target="' . esc_attr( $target ) . '"';
 			$output .= ' href="' . esc_url( $url ) . '" title="' . esc_attr( $title ) . '">';
 

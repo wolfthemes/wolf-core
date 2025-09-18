@@ -40,20 +40,20 @@ function wolf_core_breadcrumb( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	//$class .= ' wolf-core-mobile-text-align-' . $text_align_mobile;
-	//$class .= " wolf-core-align-$align";
+	// $class .= ' wolf-core-mobile-text-align-' . $text_align_mobile;
+	// $class .= " wolf-core-align-$align";
 
 	// if ( $font_size ) {
-	// 	$font_size     = wolf_core_sanitize_css_value( $font_size );
-	// 	$inline_style .= "font-size:$font_size;";
+	// $font_size     = wolf_core_sanitize_css_value( $font_size );
+	// $inline_style .= "font-size:$font_size;";
 	// }
 
 	// if ( $text_transform ) {
-	// 	$inline_style .= 'text-transform:' . esc_attr( $text_transform ) . ';';
+	// $inline_style .= 'text-transform:' . esc_attr( $text_transform ) . ';';
 	// }
 
 	// if ( $font_weight ) {
-	// 	$inline_style .= 'font-weight:' . absint( $font_weight ) . ';';
+	// $inline_style .= 'font-weight:' . absint( $font_weight ) . ';';
 	// }
 
 	$class .= ' wolf-core-breadcrumb wolf-core-element';

@@ -152,13 +152,10 @@ class Elementor_Gallery_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_gallery( $atts ); // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Gallery_Widget() );
-

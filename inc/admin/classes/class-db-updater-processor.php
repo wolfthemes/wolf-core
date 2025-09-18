@@ -1,7 +1,7 @@
 <?php
 
 if ( ! class_exists( 'Wolf_Core_Background_Process' ) ) {
-	include_once( 'lib/class-db-background-process.php' );
+	include_once 'lib/class-db-background-process.php';
 }
 
 class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
@@ -213,7 +213,7 @@ class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
 			return false;
 		}
 
-		wolf_core_log( "Processing => " .  $post_id );
+		wolf_core_log( 'Processing => ' . $post_id );
 
 		global $wpdb;
 
@@ -226,7 +226,7 @@ class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
 			'link'            => 'wolf_core_link',
 		);
 
-		//$widgets = array_flip( $widgets );
+		// $widgets = array_flip( $widgets );
 
 		foreach ( $widgets as $old => $new ) {
 			$wpdb->query(
@@ -238,7 +238,7 @@ class Wolf_Core_DB_Updater_Processor extends Wolf_Core_Background_Process {
 					absint( $post_id )
 				)
 			);
-			wolf_core_log( "Widgets => " .  $old );
+			wolf_core_log( 'Widgets => ' . $old );
 		}
 
 		return false;

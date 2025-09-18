@@ -49,9 +49,9 @@ function wolf_core_gallery_params() {
 					'param_name'  => 'type',
 					'options'     => array(
 						'image_grid' => esc_html__( 'Grid', 'wolf-core' ),
-						//'carousel'   => esc_html__( 'Carousel', 'wolf-core' ),
+						// 'carousel'   => esc_html__( 'Carousel', 'wolf-core' ),
 						'mosaic'     => esc_html__( 'Mosaic', 'wolf-core' ),
-						//'metro'      => esc_html__( 'Metro', 'wolf-core' ),
+						// 'metro'      => esc_html__( 'Metro', 'wolf-core' ),
 						'masonry'    => esc_html__( 'Masonry', 'wolf-core' ),
 						'justified'  => esc_html__( 'Justified', 'wolf-core' ),
 					),
@@ -149,7 +149,7 @@ function wolf_core_gallery_params() {
 					'default'    => 'yes',
 				),
 
-				'hover_effect' => array(
+				'hover_effect'  => array(
 					'type'       => 'select',
 					'label'      => esc_html__( 'Hover Effect', 'wolf-core' ),
 					'param_name' => 'hover_effect',

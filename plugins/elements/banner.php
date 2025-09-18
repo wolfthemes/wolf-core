@@ -39,7 +39,7 @@ function wolf_core_banner( $atts ) {
 				'overlay_text_color'        => '',
 				'overlay_text_custom_color' => '',
 				'overlay_opacity'           => '',
-				'align'    		            => '',
+				'align'                     => '',
 				'txt_align'                 => '',
 				'txt_v_align'               => '',
 				'title'                     => '',
@@ -125,12 +125,10 @@ function wolf_core_banner( $atts ) {
 		} else {
 			$output .= wolf_core_placeholder_img( $img_size );
 		}
-	} else {
-		if ( wp_attachment_is_image( $image ) ) {
+	} elseif ( wp_attachment_is_image( $image ) ) {
 			$output .= wp_get_attachment_image( $image, $img_size, false );
-		} else {
-			$output .= wolf_core_placeholder_img( $img_size );
-		}
+	} else {
+		$output .= wolf_core_placeholder_img( $img_size );
 	}
 
 	$output .= '</div><!--.wolf-core-banner-image-->';

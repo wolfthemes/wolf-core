@@ -368,20 +368,17 @@ function wolf_core_background_video( $args ) {
 
 		$output .= wolf_core_parallax_video_bg( $args );
 
-	} else {
-
-		if ( 'selfhosted' === wolf_core_get_video_url_type( $args['video_bg_url'] ) ) {
+	} elseif ( 'selfhosted' === wolf_core_get_video_url_type( $args['video_bg_url'] ) ) {
 
 			$output .= wolf_core_video_bg( $args );
 
-		} elseif ( 'youtube' === wolf_core_get_video_url_type( $args['video_bg_url'] ) ) {
+	} elseif ( 'youtube' === wolf_core_get_video_url_type( $args['video_bg_url'] ) ) {
 
-			$output .= wolf_core_youtube_video_bg( $args );
+		$output .= wolf_core_youtube_video_bg( $args );
 
-		} elseif ( 'vimeo' === wolf_core_get_video_url_type( $args['video_bg_url'] ) ) {
+	} elseif ( 'vimeo' === wolf_core_get_video_url_type( $args['video_bg_url'] ) ) {
 
-			$output .= wolf_core_vimeo_video_bg( $args );
-		}
+		$output .= wolf_core_vimeo_video_bg( $args );
 	}
 
 	return $output;
@@ -805,8 +802,8 @@ function wolf_core_shape_divider( $args ) {
 
 <?php elseif ( 'curve_opacity' === $sd_shape ) : ?>
 		<svg version="1.2" baseProfile="tiny" id="Calque_1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="338px" height="57.665px"
-	 viewBox="0 0 338 57.665" xml:space="preserve" preserveAspectRatio="none">
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="338px" height="57.665px"
+	viewBox="0 0 338 57.665" xml:space="preserve" preserveAspectRatio="none">
 <ellipse fill="<?php echo esc_attr( $color ); ?>" cx="168.833" cy="90" rx="185.833" ry="82.666"/>
 	<ellipse fill="<?php echo esc_attr( $color ); ?>"  fill-opacity="0.33" cx="168.833" cy="86" rx="185.833" ry="82.666"/>
 		<ellipse fill="<?php echo esc_attr( $color ); ?>"  fill-opacity="0.33" cx="168.833" cy="82" rx="185.833" ry="82.666"/>

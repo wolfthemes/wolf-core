@@ -46,7 +46,7 @@ function wolf_core_custom_heading_params() {
 					'heading'    => esc_html__( 'Behavior', 'wolf-core' ),
 					'param_name' => 'responsive',
 					'value'      => array(
-						esc_html__( 'Static', 'wolf-core' ) => 'no',
+						esc_html__( 'Static', 'wolf-core' )     => 'no',
 						esc_html__( 'Responsive', 'wolf-core' ) => 'yes',
 					),
 				),
@@ -76,8 +76,8 @@ function wolf_core_custom_heading_params() {
 					'param_name' => 'text_align',
 					'value'      => array(
 						esc_html__( 'Center', 'wolf-core' ) => 'center',
-						esc_html__( 'Left', 'wolf-core' )  => 'left',
-						esc_html__( 'Right', 'wolf-core' ) => 'right',
+						esc_html__( 'Left', 'wolf-core' )   => 'left',
+						esc_html__( 'Right', 'wolf-core' )  => 'right',
 					),
 				),
 
@@ -97,10 +97,10 @@ function wolf_core_custom_heading_params() {
 					'value'              => array_merge(
 						wolf_core_get_shared_colors(),
 						array(
-							esc_html__( 'Default color', 'wolf-core' ) => 'default',
-							esc_html__( 'Gradient Red', 'wolf-core' ) => 'gradient-red',
+							esc_html__( 'Default color', 'wolf-core' )  => 'default',
+							esc_html__( 'Gradient Red', 'wolf-core' )   => 'gradient-red',
 							esc_html__( 'Gradient Green', 'wolf-core' ) => 'gradient-green',
-							esc_html__( 'Custom color', 'wolf-core' ) => 'custom',
+							esc_html__( 'Custom color', 'wolf-core' )   => 'custom',
 						)
 					),
 					'std'                => 'default',
@@ -131,8 +131,8 @@ function wolf_core_custom_heading_params() {
 					'heading'    => esc_html__( 'Text Transform', 'wolf-core' ),
 					'param_name' => 'text_transform',
 					'value'      => array(
-						esc_html__( 'Default', 'wolf-core' ) => '',
-						esc_html__( 'None', 'wolf-core' ) => 'none',
+						esc_html__( 'Default', 'wolf-core' )   => '',
+						esc_html__( 'None', 'wolf-core' )      => 'none',
 						esc_html__( 'Uppercase', 'wolf-core' ) => 'uppercase',
 					),
 					'std'        => apply_filters( 'wolf_core_default_custom_heading_text_transform', '' ),
@@ -144,7 +144,7 @@ function wolf_core_custom_heading_params() {
 					'param_name' => 'font_style',
 					'value'      => array(
 						esc_html__( 'Default', 'wolf-core' ) => '',
-						esc_html__( 'Italic', 'wolf-core' ) => 'italic',
+						esc_html__( 'Italic', 'wolf-core' )  => 'italic',
 					),
 				),
 
@@ -208,14 +208,14 @@ function wolf_core_custom_heading_params() {
 					'param_name' => 'background_position',
 					'value'      => array(
 						esc_html__( 'center center', 'wolf-core' ) => 'center center',
-						esc_html__( 'center top', 'wolf-core' )  => 'center top',
-						esc_html__( 'left top', 'wolf-core' ) => 'left top',
-						esc_html__( 'right top', 'wolf-core' )  => 'right top',
-						esc_html__( 'center bottom', 'wolf-core' )  => 'center bottom',
-						esc_html__( 'left bottom', 'wolf-core' )  => 'left bottom',
-						esc_html__( 'right bottom', 'wolf-core' ) => 'right bottom',
-						esc_html__( 'left center', 'wolf-core' ) => 'left center',
-						esc_html__( 'right center', 'wolf-core' ) => 'right center',
+						esc_html__( 'center top', 'wolf-core' )    => 'center top',
+						esc_html__( 'left top', 'wolf-core' )      => 'left top',
+						esc_html__( 'right top', 'wolf-core' )     => 'right top',
+						esc_html__( 'center bottom', 'wolf-core' ) => 'center bottom',
+						esc_html__( 'left bottom', 'wolf-core' )   => 'left bottom',
+						esc_html__( 'right bottom', 'wolf-core' )  => 'right bottom',
+						esc_html__( 'left center', 'wolf-core' )   => 'left center',
+						esc_html__( 'right center', 'wolf-core' )  => 'right center',
 					),
 					'dependency' => array(
 						'element' => 'add_background',
@@ -231,9 +231,9 @@ function wolf_core_custom_heading_params() {
 					'param_name' => 'background_repeat',
 					'value'      => array(
 						esc_html__( 'no repeat', 'wolf-core' ) => 'no-repeat',
-						esc_html__( 'repeat', 'wolf-core' ) => 'repeat',
-						esc_html__( 'repeat-x', 'wolf-core' ) => 'repeat-x',
-						esc_html__( 'repeat-y', 'wolf-core' ) => 'repeat-y',
+						esc_html__( 'repeat', 'wolf-core' )    => 'repeat',
+						esc_html__( 'repeat-x', 'wolf-core' )  => 'repeat-x',
+						esc_html__( 'repeat-y', 'wolf-core' )  => 'repeat-y',
 					),
 					'dependency' => array(
 						'element' => 'add_background',
@@ -249,7 +249,7 @@ function wolf_core_custom_heading_params() {
 					'param_name' => 'background_size',
 					'value'      => array(
 						esc_html__( 'default', 'wolf-core' ) => 'inherit',
-						esc_html__( 'cover', 'wolf-core' ) => 'cover',
+						esc_html__( 'cover', 'wolf-core' )   => 'cover',
 						esc_html__( 'contain', 'wolf-core' ) => 'contain',
 					),
 					'dependency' => array(

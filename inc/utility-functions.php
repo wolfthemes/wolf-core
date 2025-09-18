@@ -116,8 +116,8 @@ function wolf_core_sanitize_color( $color ) {
 	elseif ( 'rgb(' === substr( $color, 0, 4 ) ) {
 		sscanf( $color, 'rgb(%d,%d,%d)', $red, $green, $blue );
 		if ( ( $red >= 0 && $red <= 255 ) &&
-			 ( $green >= 0 && $green <= 255 ) &&
-			 ( $blue >= 0 && $blue <= 255 )
+			( $green >= 0 && $green <= 255 ) &&
+			( $blue >= 0 && $blue <= 255 )
 			) {
 			return "rgb({$red},{$green},{$blue})";
 		}
@@ -126,9 +126,9 @@ function wolf_core_sanitize_color( $color ) {
 	elseif ( 'rgba(' === substr( $color, 0, 5 ) ) {
 		sscanf( $color, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
 		if ( ( $red >= 0 && $red <= 255 ) &&
-			 ( $green >= 0 && $green <= 255 ) &&
-			 ( $blue >= 0 && $blue <= 255 ) &&
-			   $alpha >= 0 && $alpha <= 1
+			( $green >= 0 && $green <= 255 ) &&
+			( $blue >= 0 && $blue <= 255 ) &&
+				$alpha >= 0 && $alpha <= 1
 			) {
 			return "rgba({$red},{$green},{$blue},{$alpha})";
 		}
@@ -540,7 +540,7 @@ function wolf_core_element_aos_animation_data_attr( $atts, $force = false ) {
 
 	return $data;
 }
-//add_filter( 'wolf_core_social_icons_data_attrs', 'wolf_core_element_aos_animation_data_attr' );
+// add_filter( 'wolf_core_social_icons_data_attrs', 'wolf_core_element_aos_animation_data_attr' );
 
 /**
  * @param $css_animation
@@ -623,19 +623,19 @@ function wolf_core_color_brightness( $hex, $percent ) {
  */
 function wolf_core_sanitize_heading( $string ) {
 
-	$post_title = wolf_core_get_post_title();
-	$site_title = get_bloginfo( 'name' );
-	$post_excerpt = get_the_excerpt();
-	$subheading = wolf_core_get_post_subheading();
+	$post_title     = wolf_core_get_post_title();
+	$site_title     = get_bloginfo( 'name' );
+	$post_excerpt   = get_the_excerpt();
+	$subheading     = wolf_core_get_post_subheading();
 	$featured_image = get_the_post_thumbnail( get_the_ID(), 'large' );
 
 	$short_tags = array(
-		'{{post_title}}' => $post_title,
-		'{{page_title}}' => $post_title,
-		'{{site_title}}' => $site_title,
+		'{{post_title}}'      => $post_title,
+		'{{page_title}}'      => $post_title,
+		'{{site_title}}'      => $site_title,
 		'{{post_subheading}}' => $subheading,
-		'{{post_excerpt}}' => $post_excerpt,
-		'{{post_thumbnail}}' => $featured_image,
+		'{{post_excerpt}}'    => $post_excerpt,
+		'{{post_thumbnail}}'  => $featured_image,
 	);
 
 	foreach ( $short_tags as $key => $value ) {
@@ -655,19 +655,19 @@ function wolf_core_sanitize_heading( $string ) {
  */
 function wolf_core_sanitize_text_block( $string ) {
 
-	$post_title = wolf_core_get_post_title();
-	$site_title = get_bloginfo( 'name' );
-	$post_excerpt = get_the_excerpt();
-	$subheading = wolf_core_get_post_subheading();
+	$post_title     = wolf_core_get_post_title();
+	$site_title     = get_bloginfo( 'name' );
+	$post_excerpt   = get_the_excerpt();
+	$subheading     = wolf_core_get_post_subheading();
 	$featured_image = get_the_post_thumbnail( get_the_ID(), 'large' );
 
 	$short_tags = array(
-		'{{post_title}}' => $post_title,
-		'{{page_title}}' => $post_title,
-		'{{site_title}}' => $site_title,
+		'{{post_title}}'      => $post_title,
+		'{{page_title}}'      => $post_title,
+		'{{site_title}}'      => $site_title,
 		'{{post_subheading}}' => $subheading,
-		'{{post_excerpt}}' => $post_excerpt,
-		'{{post_thumbnail}}' => $featured_image,
+		'{{post_excerpt}}'    => $post_excerpt,
+		'{{post_thumbnail}}'  => $featured_image,
 	);
 
 	foreach ( $short_tags as $key => $value ) {
@@ -680,7 +680,7 @@ function wolf_core_sanitize_text_block( $string ) {
 /* Add text-transform to allow wp_kses style attr */
 add_filter(
 	'safe_style_css',
-	function( $styles ) {
+	function ( $styles ) {
 		$styles[] = 'text-transform';
 		return $styles;
 	}
@@ -750,7 +750,7 @@ function wolf_core_kses( $output ) {
 				'class' => array(),
 				'id'    => array(),
 			),
-			'em'     => array(
+			'em'         => array(
 				'class' => array(),
 				'id'    => array(),
 			),
@@ -814,16 +814,16 @@ function wolf_core_kses( $output ) {
 				'class' => array(),
 				'id'    => array(),
 			),
-			'iframe'        => array(
-				'class' => array(),
-				'id'    => array(),
-				'src'    => array(),
-				'width'    => array(),
-				'height'   => array(),
-				'style'   => array(),
-				'allowfullscreen'   => array(),
-				'loading'   => array(),
-				'referrerpolicy'   => array(),
+			'iframe'     => array(
+				'class'           => array(),
+				'id'              => array(),
+				'src'             => array(),
+				'width'           => array(),
+				'height'          => array(),
+				'style'           => array(),
+				'allowfullscreen' => array(),
+				'loading'         => array(),
+				'referrerpolicy'  => array(),
 			),
 		)
 	);
@@ -876,7 +876,6 @@ function wolf_core_get_post_title() {
 
 				$title = get_the_title( get_option( 'page_for_posts' ) );
 			}
-
 		} elseif ( is_tax() ) {
 
 			$queried_object = get_queried_object();
@@ -952,26 +951,26 @@ function wolf_core_get_woocommerce_shop_page_id() {
 function wolf_core_get_color_tone( $hex, $index = 215 ) {
 
 	// Sanitize the color
-    $hex = sanitize_hex_color( $hex );
+	$hex = sanitize_hex_color( $hex );
 
-    // If sanitize_hex_color returns null, default to a fallback value (e.g., '#000000').
-    if ( is_null( $hex ) ) {
-        $hex = '#ffffff';
-    }
+	// If sanitize_hex_color returns null, default to a fallback value (e.g., '#000000').
+	if ( is_null( $hex ) ) {
+		$hex = '#ffffff';
+	}
 
-    // Remove #
-    $hex = str_replace( '#', '', $hex );
+	// Remove #
+	$hex = str_replace( '#', '', $hex );
 
-    // Convert hex to RGB
-    $c_r        = hexdec( substr( $hex, 0, 2 ) );
-    $c_g        = hexdec( substr( $hex, 2, 2 ) );
-    $c_b        = hexdec( substr( $hex, 4, 2 ) );
+	// Convert hex to RGB
+	$c_r = hexdec( substr( $hex, 0, 2 ) );
+	$c_g = hexdec( substr( $hex, 2, 2 ) );
+	$c_b = hexdec( substr( $hex, 4, 2 ) );
 
-    // Calculate brightness
-    $brightness = ( ( $c_r * 299 ) + ( $c_g * 587 ) + ( $c_b * 114 ) ) / 1000;
+	// Calculate brightness
+	$brightness = ( ( $c_r * 299 ) + ( $c_g * 587 ) + ( $c_b * 114 ) ) / 1000;
 
-    // Return light or dark
-    return ( $index < $brightness ) ? 'light' : 'dark';
+	// Return light or dark
+	return ( $index < $brightness ) ? 'light' : 'dark';
 }
 
 /**
@@ -1085,7 +1084,7 @@ if ( ! function_exists( 'wolf_core_user_country_code_is_in_eu' ) ) {
  * Straight from VC
  *
  * @param $content The output content.
- * @param bool                       $autop Whether to strip p tag or not
+ * @param bool $autop Whether to strip p tag or not
  * @return string
  */
 function wolf_core_js_remove_wpautop( $content, $autop = false ) {

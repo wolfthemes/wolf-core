@@ -605,14 +605,14 @@ function wolf_core_get_image_sizes() {
 
 	$wolf_core_image_sizes = array(
 		apply_filters( 'wolf_core_landscape_thumbnail_size', '600x360' ) => esc_html__( 'Landscape', 'wolf-core' ),
-		apply_filters( 'wolf_core_square_thumbnail_size', '600x600' ) => esc_html__( 'Square', 'wolf-core' ),
-		apply_filters( 'wolf_core_portrait_thumbnail_size', '300x537' ) => esc_html__( 'Portrait', 'wolf-core' ),
-		'wolf-core-XL' => esc_html__( 'Extra large', 'wolf-core' ),
-		'large'        => esc_html__( 'Large', 'wolf-core' ),
-		'medium'       => esc_html__( 'Medium', 'wolf-core' ),
-		'thumbnail'    => esc_html__( 'Thumbnail', 'wolf-core' ),
-		'full'         => esc_html__( 'Full', 'wolf-core' ),
-		'custom'       => esc_html__( 'Custom', 'wolf-core' ),
+		apply_filters( 'wolf_core_square_thumbnail_size', '600x600' )    => esc_html__( 'Square', 'wolf-core' ),
+		apply_filters( 'wolf_core_portrait_thumbnail_size', '300x537' )  => esc_html__( 'Portrait', 'wolf-core' ),
+		'wolf-core-XL'                                                   => esc_html__( 'Extra large', 'wolf-core' ),
+		'large'                                                          => esc_html__( 'Large', 'wolf-core' ),
+		'medium'                                                         => esc_html__( 'Medium', 'wolf-core' ),
+		'thumbnail'                                                      => esc_html__( 'Thumbnail', 'wolf-core' ),
+		'full'                                                           => esc_html__( 'Full', 'wolf-core' ),
+		'custom'                                                         => esc_html__( 'Custom', 'wolf-core' ),
 	);
 
 	return apply_filters( 'wolf_core_image_sizes', $wolf_core_image_sizes );
@@ -1382,7 +1382,7 @@ function wolf_core_sync_mailchimp( $data ) {
 	$api_key = apply_filters( 'wolf_core_mailchimp_api_key', wolf_core_get_option( 'mailchimp', 'mailchimp_api_key' ) );
 	$list_id = esc_attr( $data['list_id'] );
 	$email   = $data['email'];
-	$status       = 'subscribed';
+	$status  = 'subscribed';
 
 	$merge_fields = array(
 		'FNAME' => $data['firstname'],
@@ -1425,7 +1425,7 @@ function wolf_core_sync_mailchimp( $data ) {
  * @param [type] $page_title
  * @return void
  */
-function wolf_core_get_page_by_title( $page_title, $output = OBJECT, $post_type = 'page'  ) {
+function wolf_core_get_page_by_title( $page_title, $output = OBJECT, $post_type = 'page' ) {
 	$query = new WP_Query(
 		array(
 			'title'                  => $page_title,
@@ -1462,7 +1462,7 @@ if ( ! function_exists( 'wolf_core_log' ) ) {
 		$log_file = WOLF_CORE_DIR . '/debug.log';
 
 		if ( ( file_exists( $log_file ) && is_writable( $log_file ) ) || ( ! file_exists( $log_file ) && is_writable( dirname( $log_file ) ) ) ) {
-			error_log( $v . PHP_EOL , 3, $log_file );
+			error_log( $v . PHP_EOL, 3, $log_file );
 		}
 	}
 }

@@ -249,9 +249,9 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 			}
 
 			// check if the thumbnail has already been generated and saved in a post meta.
-			//if ( ! get_post_meta( $post_id, '_video_thumbnail_attachment_id', true ) ) {
-			//	return;
-			//}
+			// if ( ! get_post_meta( $post_id, '_video_thumbnail_attachment_id', true ) ) {
+			// return;
+			// }
 
 			// get video thumbnail.
 			$new_thumbnail = $this->get_video_thumbnail( $post_id );
@@ -409,7 +409,7 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 			$video_thumbnail    = '';
 			$video_thumbnail_id = get_post_meta( $post_id, '_video_thumbnail_attachment_id', true );
 
-			//debug( $video_thumbnail_id );
+			// debug( $video_thumbnail_id );
 
 			if ( $video_thumbnail_id ) {
 
@@ -445,21 +445,19 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 				} else {
 					echo esc_attr( $this->get_text( 'no_video' ) );
 				}
-			} else {
-				if ( $video_thumbnail ) {
+			} elseif ( $video_thumbnail ) {
 
 					echo '<p id="video-thumbnail-action">';
 					echo '<a href="#" id="video-thumbnail-reset" onClick="video_thumbnail_reset(\'' . $post_id . '\' );return false;">' . esc_html__( 'Reset', 'wolf-video-thumbnail-generator' ) . '</a>';
 					echo '<a href="#" id="video-thumbnail-delete" onClick="video_thumbnail_delete(\'' . $post_id . '\' );return false;">' . esc_html__( 'Delete', 'wolf-video-thumbnail-generator' ) . '</a>';
 					echo '</p>';
 
-				} else {
-					echo '<p>';
+			} else {
+				echo '<p>';
 
-					echo esc_attr( $this->get_text( 'not_published' ) );
+				echo esc_attr( $this->get_text( 'not_published' ) );
 
-					echo '</p>';
-				}
+				echo '</p>';
 			}
 		}
 
@@ -555,7 +553,6 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 			delete_post_meta( $post_id, '_video_thumbnail' );
 			delete_post_meta( $post_id, '_video_thumbnail_attachment_id' );
 			exit();
-
 		}
 
 		/**
@@ -618,7 +615,6 @@ if ( ! class_exists( 'Wolf_Video_Thumbnail_Generator_Processor' ) ) {
 
 			return $text[ $string ];
 		}
-
 	} // end class
 
 	new Wolf_Video_Thumbnail_Generator_Processor();

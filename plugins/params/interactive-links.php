@@ -28,7 +28,7 @@ function wolf_core_interactive_links_params() {
 				'el_base'          => 'interactive-links',
 				'icon'             => 'fas fa-hand-pointer',
 				'register_scripts' => array(
-					'wolf-core-youtube-video-bg' => array(
+					'wolf-core-youtube-video-bg'  => array(
 						'src'     => WOLF_CORE_JS . '/YT-video-bg.js',
 						'version' => WOLF_CORE_VERSION,
 					),
@@ -92,7 +92,7 @@ function wolf_core_interactive_links_params() {
 							'param_name' => 'background',
 							'type'       => 'background',
 							'label'      => esc_html__( 'Background', 'wolf-core' ),
-							'selectors'   => '{{WRAPPER}} .wolf-core-interactive-links-bg-holder',
+							'selectors'  => '{{WRAPPER}} .wolf-core-interactive-links-bg-holder',
 						),
 
 						array(

@@ -127,7 +127,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 
 				$r_type = ( isset( $r_param['type'] ) ) ? $elementor_types[ $r_param['type'] ] : 'text';
 
-				//debug(  $r_param['type'] );
+				// debug(  $r_param['type'] );
 
 				if ( isset( $r_param['type'] ) && 'background' === $r_param['type'] ) {
 
@@ -150,7 +150,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 						'placeholder' => ( isset( $r_param['placeholder'] ) ) ? $r_param['placeholder'] : '',
 						'description' => ( isset( $r_param['description'] ) ) ? $r_param['description'] : '',
 						'condition'   => ( isset( $r_param['condition'] ) ) ? $r_param['condition'] : array(),
-						'conditions'   => ( isset( $r_param['conditions'] ) ) ? $r_param['conditions'] : array(),
+						'conditions'  => ( isset( $r_param['conditions'] ) ) ? $r_param['conditions'] : array(),
 						'label_block' => true,
 					);
 
@@ -175,7 +175,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 						}
 					}
 
-					//debug( $r_params );
+					// debug( $r_params );
 
 					$repeater->add_control(
 						$r_param['param_name'],
@@ -184,7 +184,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 				}
 			}
 
-			//die();
+			// die();
 
 			$widget->add_control(
 				$p['param_name'],
@@ -194,7 +194,7 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					'fields'      => $repeater->get_controls(),
 					'default'     => ( isset( $p['defaults'] ) ) ? $p['defaults'] : array(),
 					'condition'   => ( isset( $p['condition'] ) ) ? $p['condition'] : array(),
-					'conditions'   => ( isset( $p['conditions'] ) ) ? $p['conditions'] : array(),
+					'conditions'  => ( isset( $p['conditions'] ) ) ? $p['conditions'] : array(),
 					'title_field' => '{{{ ' . $p['params'][0]['param_name'] . ' }}}',
 				)
 			);
@@ -206,7 +206,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			if ( isset( $p['ai'] ) ) {
 				$field_params['ai'] = $p['ai'];
 			}
-
 		} elseif ( 'textarea' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::TEXTAREA;
@@ -245,7 +244,6 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 					'enableTime' => false,
 				);
 			}
-
 		} elseif ( 'number' === $type ) {
 
 			$field_params['type'] = \Elementor\Controls_Manager::NUMBER;
@@ -385,36 +383,36 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			} elseif ( 'padding' === $type ) {
 
 				$widget->add_responsive_control(
-						$p['param_name'],
-						array(
-							'label'      => $field_params['label'],
-							'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-							'size_units' => array( 'px', 'em', '%', 'rem' ),
-							'selectors'  => array(
-								$p['selector'] => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-							),
-							'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
-							'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
-							'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
-						)
-					);
+					$p['param_name'],
+					array(
+						'label'      => $field_params['label'],
+						'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+						'size_units' => array( 'px', 'em', '%', 'rem' ),
+						'selectors'  => array(
+							$p['selector'] => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+						),
+						'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
+						'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
+						'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
+					)
+				);
 
 			} elseif ( 'margin' === $type ) {
 
 				$widget->add_responsive_control(
-						$p['param_name'],
-						array(
-							'label'      => $field_params['label'],
-							'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-							'size_units' => array( 'px', 'em', '%', 'rem' ),
-							'selectors'  => array(
-								$p['selector'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-							),
-							'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
-							'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
-							'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
-						)
-					);
+					$p['param_name'],
+					array(
+						'label'      => $field_params['label'],
+						'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+						'size_units' => array( 'px', 'em', '%', 'rem' ),
+						'selectors'  => array(
+							$p['selector'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+						),
+						'default'    => isset( $field_params['default'] ) ? $field_params['default'] : array(),
+						'condition'  => isset( $p['condition'] ) ? $p['condition'] : array(),
+						'conditions' => isset( $p['conditions'] ) ? $p['conditions'] : array(),
+					)
+				);
 			} elseif ( 'css_filters' === $type ) {
 
 				$widget->add_group_control(
@@ -494,8 +492,8 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 			if ( isset( $p['group_tabs'] ) && 'close' === $p['group_tabs'] ) {
 				$widget->end_controls_tabs();
 			}
-		}
 	}
+}
 
 	/**
 	 * Register Elementor controls.
@@ -505,135 +503,135 @@ function wolf_core_convert_params_to_elementor( $widget, $params = array() ) {
 	 * @param object $widget The widget object.
 	 * @return void
 	 */
-	function wolf_core_register_elementor_controls( $widget ) {
-		/* Reorder params by group */
-		$content_group_params  = array();
-		$query_group_params    = array();
-		$style_group_params    = array();
-		$custom_group_params   = array();
-		$extra_group_params    = array();
-		$advanced_group_params = array();
-		$options_group_params  = array();
+function wolf_core_register_elementor_controls( $widget ) {
+	/* Reorder params by group */
+	$content_group_params  = array();
+	$query_group_params    = array();
+	$style_group_params    = array();
+	$custom_group_params   = array();
+	$extra_group_params    = array();
+	$advanced_group_params = array();
+	$options_group_params  = array();
 
-		foreach ( $widget->params['params'] as $param ) {
+	foreach ( $widget->params['params'] as $param ) {
 
-			if ( ! isset( $param['group'] ) ) {
-				$content_group_params[] = $param;
-			} elseif ( 'Query' === $param['group'] ) {
-				$query_group_params[] = $param;
-			} elseif ( 'Style' === $param['group'] ) {
-				$style_group_params[] = $param;
-			} elseif ( 'Custom' === $param['group'] ) {
-				$custom_group_params[] = $param;
-			} elseif ( 'Extra' === $param['group'] ) {
-				$extra_group_params[] = $param;
-			} elseif ( 'Advanced' === $param['group'] ) {
-				$advanced_group_params[] = $param;
-			} elseif ( 'Options' === $param['group'] ) {
-				$options_group_params[] = $param;
-			}
+		if ( ! isset( $param['group'] ) ) {
+			$content_group_params[] = $param;
+		} elseif ( 'Query' === $param['group'] ) {
+			$query_group_params[] = $param;
+		} elseif ( 'Style' === $param['group'] ) {
+			$style_group_params[] = $param;
+		} elseif ( 'Custom' === $param['group'] ) {
+			$custom_group_params[] = $param;
+		} elseif ( 'Extra' === $param['group'] ) {
+			$extra_group_params[] = $param;
+		} elseif ( 'Advanced' === $param['group'] ) {
+			$advanced_group_params[] = $param;
+		} elseif ( 'Options' === $param['group'] ) {
+			$options_group_params[] = $param;
 		}
+	}
 
+	$widget->start_controls_section(
+		'content_section',
+		array(
+			'label' => esc_html__( 'Content', 'wolf-core' ),
+			'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+		)
+	);
+
+	wolf_core_convert_params_to_elementor( $widget, $content_group_params );
+
+	$widget->end_controls_section();
+
+	if ( array() !== $query_group_params ) {
 		$widget->start_controls_section(
-			'content_section',
+			'query_section',
 			array(
-				'label' => esc_html__( 'Content', 'wolf-core' ),
+				'label' => esc_html__( 'Query', 'wolf-core' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
 
-		wolf_core_convert_params_to_elementor( $widget, $content_group_params );
+		wolf_core_convert_params_to_elementor( $widget, $query_group_params );
 
 		$widget->end_controls_section();
-
-		if ( array() !== $query_group_params ) {
-			$widget->start_controls_section(
-				'query_section',
-				array(
-					'label' => esc_html__( 'Query', 'wolf-core' ),
-					'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
-				)
-			);
-
-			wolf_core_convert_params_to_elementor( $widget, $query_group_params );
-
-			$widget->end_controls_section();
-		}
-
-		if ( array() !== $style_group_params ) {
-			$widget->start_controls_section(
-				'style_section',
-				array(
-					'label' => esc_html__( 'Title', 'wolf-core' ),
-					'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
-				)
-			);
-
-			wolf_core_convert_params_to_elementor( $widget, $style_group_params );
-
-			$widget->end_controls_section();
-		}
-
-		if ( array() !== $custom_group_params ) {
-			$widget->start_controls_section(
-				'custom_section',
-				array(
-					'label' => esc_html__( 'Custom', 'wolf-core' ),
-					'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
-				)
-			);
-
-			wolf_core_convert_params_to_elementor( $widget, $custom_group_params );
-
-			$widget->end_controls_section();
-		}
-
-		if ( array() !== $extra_group_params ) {
-			$widget->start_controls_section(
-				'extra_section',
-				array(
-					'label' => esc_html__( 'Extra', 'wolf-core' ),
-					'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
-				)
-			);
-
-			wolf_core_convert_params_to_elementor( $widget, $extra_group_params );
-
-			$widget->end_controls_section();
-		}
-
-		if ( array() !== $advanced_group_params ) {
-			$widget->start_controls_section(
-				'advanced_section',
-				array(
-					'label' => esc_html__( 'Advanced', 'wolf-core' ),
-					'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
-				)
-			);
-
-			wolf_core_convert_params_to_elementor( $widget, $advanced_group_params );
-
-			$widget->end_controls_section();
-		}
-
-		if ( array() !== $options_group_params ) {
-			$widget->start_controls_section(
-				'options_section',
-				array(
-					'label' => esc_html__( 'Options', 'wolf-core' ),
-					'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
-				)
-			);
-
-			wolf_core_convert_params_to_elementor( $widget, $options_group_params );
-
-			$widget->end_controls_section();
-		}
 	}
+
+	if ( array() !== $style_group_params ) {
+		$widget->start_controls_section(
+			'style_section',
+			array(
+				'label' => esc_html__( 'Title', 'wolf-core' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $style_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $custom_group_params ) {
+		$widget->start_controls_section(
+			'custom_section',
+			array(
+				'label' => esc_html__( 'Custom', 'wolf-core' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $custom_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $extra_group_params ) {
+		$widget->start_controls_section(
+			'extra_section',
+			array(
+				'label' => esc_html__( 'Extra', 'wolf-core' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $extra_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $advanced_group_params ) {
+		$widget->start_controls_section(
+			'advanced_section',
+			array(
+				'label' => esc_html__( 'Advanced', 'wolf-core' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $advanced_group_params );
+
+		$widget->end_controls_section();
+	}
+
+	if ( array() !== $options_group_params ) {
+		$widget->start_controls_section(
+			'options_section',
+			array(
+				'label' => esc_html__( 'Options', 'wolf-core' ),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		wolf_core_convert_params_to_elementor( $widget, $options_group_params );
+
+		$widget->end_controls_section();
+	}
+}
 
 	add_filter(
 		'wolf_core_fp_container',
-		function() {
+		function () {
 			return '[data-elementor-type="wp-page"]';
 		}
 	);

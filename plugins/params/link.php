@@ -30,19 +30,19 @@ function wolf_core_link_params() {
 			),
 			'params'     => array(
 				array(
-					'type'        => 'textarea',
-					'label'       => esc_html__( 'Text', 'wolf-core' ),
-					'param_name'  => 'text',
+					'type'       => 'textarea',
+					'label'      => esc_html__( 'Text', 'wolf-core' ),
+					'param_name' => 'text',
 				),
 				array(
-					'type'        => 'text',
-					'label'       => esc_html__( 'Tagline', 'wolf-core' ),
-					'param_name'  => 'tagline',
+					'type'       => 'text',
+					'label'      => esc_html__( 'Tagline', 'wolf-core' ),
+					'param_name' => 'tagline',
 				),
 				array(
-					'type'        => 'link',
-					'label'       => esc_html__( 'URL', 'wolf-core' ),
-					'param_name'  => 'link',
+					'type'       => 'link',
+					'label'      => esc_html__( 'URL', 'wolf-core' ),
+					'param_name' => 'link',
 				),
 
 				array(
@@ -51,7 +51,7 @@ function wolf_core_link_params() {
 					'param_name'   => 'blockquote_text_color',
 					'selectors'    => array(
 						'{{WRAPPER}} .wolf-core-link' => 'color: {{VALUE}}!important;',
-						//'{{WRAPPER}} .wolf-core-link blockquote' => 'color: {{VALUE}}!important;',
+						// '{{WRAPPER}} .wolf-core-link blockquote' => 'color: {{VALUE}}!important;',
 					),
 					'page_builder' => 'elementor',
 					'group'        => esc_html__( 'Style', 'wolf-core' ),

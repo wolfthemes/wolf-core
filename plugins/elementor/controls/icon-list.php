@@ -14,15 +14,15 @@ defined( 'ABSPATH' ) || exit;
  */
 add_action(
 	'elementor/element/icon-list/section_icon/before_section_end',
-	function( $section, $args ) {
+	function ( $section, $args ) {
 
 		$section->add_control(
 			'icon_revert',
 			array(
-				'label' => esc_html__('Icon Revert', 'wolf-core'),
+				'label'        => esc_html__( 'Icon Revert', 'wolf-core' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
-                'prefix_class' => 'wolf-core-icon-revert-',
+				'prefix_class' => 'wolf-core-icon-revert-',
 			)
 		);
 	},

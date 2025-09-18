@@ -153,13 +153,10 @@ class Elementor_Textual_Showcase_Widget extends \Elementor\Widget_Base { // phpc
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_textual_showcase( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Textual_Showcase_Widget() );
-

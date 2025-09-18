@@ -116,7 +116,6 @@ function wolf_core_album_tracklist( $atts ) {
 
 			$mp3 = ( isset( $mp3['url'] ) ) ? $mp3['url'] : '';
 
-
 			if ( $mp3 || $ogg ) {
 
 				$output .= '<a href="#" class="wolf-core-ati-play-button">';
@@ -138,7 +137,7 @@ function wolf_core_album_tracklist( $atts ) {
 			// Video.
 
 			$video_url = ( isset( $video_url['url'] ) ) ? $video_url['url'] : '';
-			$output .= '<span class="wolf-core-ati-cell wolf-core-ati-video-cell">';
+			$output   .= '<span class="wolf-core-ati-cell wolf-core-ati-video-cell">';
 
 			if ( $video_url ) {
 				$output .= '<a class="wolf-core-video-opener wolf-core-ati-link" title="' . esc_html( 'Watch the video', 'wolf-core' ) . '" href="' . esc_url( $video_url ) . '">';

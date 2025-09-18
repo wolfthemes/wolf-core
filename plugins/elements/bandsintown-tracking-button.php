@@ -86,10 +86,8 @@ function wolf_core_bandsintown_traking_button( $atts ) {
 
 		$output .= '</div>';
 
-	} else {
-		if ( is_user_logged_in() ) {
+	} elseif ( is_user_logged_in() ) {
 			$output = esc_html__( 'Please set an artist.', 'wolf-core' );
-		}
 	}
 
 	return $output;

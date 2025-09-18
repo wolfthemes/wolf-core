@@ -133,7 +133,7 @@ vc_add_params(
 					'param_name' => 'bt_vertical_align',
 					'value'      => array(
 						esc_html__( 'Middle', 'wolf-core' ) => 'middle',
-						esc_html__( 'Top', 'wolf-core' ) => 'top',
+						esc_html__( 'Top', 'wolf-core' )    => 'top',
 						esc_html__( 'Bottom', 'wolf-core' ) => 'bottom',
 					),
 					'group'      => esc_html__( 'Big Text', 'wolf-core' ),
@@ -260,10 +260,10 @@ if ( class_exists( 'Wolf_Playlist_Manager' ) ) {
 				'heading'    => esc_html__( 'Playlist Skin', 'wolf-core' ),
 				'param_name' => 'sticky_player_playlist_skin',
 				'value'      => array(
-					esc_html__( 'Dark', 'wolf-core' )  => 'dark',
-					esc_html__( 'Light', 'wolf-core' ) => 'dark',
+					esc_html__( 'Dark', 'wolf-core' )              => 'dark',
+					esc_html__( 'Light', 'wolf-core' )             => 'dark',
 					esc_html__( 'Transparent Light', 'wolf-core' ) => 'transparent-light',
-					esc_html__( 'Transparent Dark', 'wolf-core' ) => 'transparent-dark',
+					esc_html__( 'Transparent Dark', 'wolf-core' )  => 'transparent-dark',
 				),
 				'group'      => esc_html__( 'Player Bar', 'wolf-core' ),
 				'weight'     => -1000,

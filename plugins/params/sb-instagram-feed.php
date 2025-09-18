@@ -21,12 +21,12 @@ function wolf_core_sb_instagram_feed_params() {
 	global $wpdb;
 
 	/* Get feeds */
-	$feeds_table_name   = $wpdb->prefix . 'sbi_feeds';
-	$feed_posts = $wpdb->get_results(
-		 "SELECT * FROM {$feeds_table_name}"
+	$feeds_table_name = $wpdb->prefix . 'sbi_feeds';
+	$feed_posts       = $wpdb->get_results(
+		"SELECT * FROM {$feeds_table_name}"
 	);
 
-	$feeds = array();
+	$feeds    = array();
 	$feeds[1] = esc_html__( 'Default', 'wolf-core' );
 	if ( $feed_posts ) {
 		foreach ( $feed_posts as $feed ) {
@@ -58,49 +58,49 @@ function wolf_core_sb_instagram_feed_params() {
 				),
 
 				// array(
-				// 	'type'        => 'text',
-				// 	'label'       => esc_html__( 'Image Count', 'wolf-core' ),
-				// 	'description' => esc_html__( 'Note that the instagram API may limit the number of image to display.', 'wolf-core' ),
-				// 	'param_name'  => 'num',
-				// 	'default'     => 12,
-				// 	'admin_label' => true,
+				// 'type'        => 'text',
+				// 'label'       => esc_html__( 'Image Count', 'wolf-core' ),
+				// 'description' => esc_html__( 'Note that the instagram API may limit the number of image to display.', 'wolf-core' ),
+				// 'param_name'  => 'num',
+				// 'default'     => 12,
+				// 'admin_label' => true,
 				// ),
 
 				// array(
-				// 	'type'        => 'select',
-				// 	'label'       => esc_html__( 'Columns', 'wolf-core' ),
-				// 	'param_name'  => 'cols',
-				// 	'options'     => array(
-				// 		6 => '6',
-				// 		5 => '5',
-				// 		4 => '4',
-				// 		3 => '3',
-				// 		2 => '2',
-				// 	),
-				// 	'default' => 4,
-				// 	'admin_label' => true,
+				// 'type'        => 'select',
+				// 'label'       => esc_html__( 'Columns', 'wolf-core' ),
+				// 'param_name'  => 'cols',
+				// 'options'     => array(
+				// 6 => '6',
+				// 5 => '5',
+				// 4 => '4',
+				// 3 => '3',
+				// 2 => '2',
+				// ),
+				// 'default' => 4,
+				// 'admin_label' => true,
 				// ),
 
 				// array(
-				// 	'type'        => 'text',
-				// 	'label'       => esc_html__( 'User', 'wolf-core' ),
-				// 	'description' => esc_html__( 'Your Instagram User Name. This must be from a connected account on the "Configure" tab.', 'wolf-core' ),
-				// 	'param_name'  => 'username',
-				// 	'admin_label' => true,
+				// 'type'        => 'text',
+				// 'label'       => esc_html__( 'User', 'wolf-core' ),
+				// 'description' => esc_html__( 'Your Instagram User Name. This must be from a connected account on the "Configure" tab.', 'wolf-core' ),
+				// 'param_name'  => 'username',
+				// 'admin_label' => true,
 				// ),
 
 				// array(
-				// 	'type'        => 'text',
-				// 	'label'       => esc_html__( 'API key (optional)', 'wolf-core' ),
-				// 	'description' => esc_html__( 'Leave empty to use the default API key set in the plugin settings.', 'wolf-core' ),
-				// 	'param_name'  => 'accesstoken',
-				// 	'admin_label' => true,
+				// 'type'        => 'text',
+				// 'label'       => esc_html__( 'API key (optional)', 'wolf-core' ),
+				// 'description' => esc_html__( 'Leave empty to use the default API key set in the plugin settings.', 'wolf-core' ),
+				// 'param_name'  => 'accesstoken',
+				// 'admin_label' => true,
 				// ),
 
 				array(
-					'type'         => 'checkbox',
-					'label'        => esc_html__( 'Display follow button (theme style)', 'wolf-core' ),
-					'param_name'   => 'follow_button',
+					'type'       => 'checkbox',
+					'label'      => esc_html__( 'Display follow button (theme style)', 'wolf-core' ),
+					'param_name' => 'follow_button',
 				),
 
 				array(
@@ -113,28 +113,28 @@ function wolf_core_sb_instagram_feed_params() {
 				),
 
 				// array(
-				// 	'type'       => 'text',
-				// 	'label'      => esc_html__( 'Padding', 'wolf-core' ),
-				// 	'param_name' => 'imagepadding',
+				// 'type'       => 'text',
+				// 'label'      => esc_html__( 'Padding', 'wolf-core' ),
+				// 'param_name' => 'imagepadding',
 				// ),
 
 				// array(
-				// 	'type'         => 'checkbox',
-				// 	'label'        => esc_html__( 'Show Header', 'wolf-core' ),
-				// 	'param_name'   => 'showheader',
-				// 	'description'  => esc_html__( 'Whether to show the feed Header.', 'wolf-core' ),
+				// 'type'         => 'checkbox',
+				// 'label'        => esc_html__( 'Show Header', 'wolf-core' ),
+				// 'param_name'   => 'showheader',
+				// 'description'  => esc_html__( 'Whether to show the feed Header.', 'wolf-core' ),
 				// ),
 
 				// array(
-				// 	'type'         => 'checkbox',
-				// 	'label'        => esc_html__( 'Show "Follow" button', 'wolf-core' ),
-				// 	'param_name'   => 'showfollow',
+				// 'type'         => 'checkbox',
+				// 'label'        => esc_html__( 'Show "Follow" button', 'wolf-core' ),
+				// 'param_name'   => 'showfollow',
 				// ),
 
 				// array(
-				// 	'type'         => 'checkbox',
-				// 	'label'        => esc_html__( 'Show "Load More" button', 'wolf-core' ),
-				// 	'param_name'   => 'showbutton',
+				// 'type'         => 'checkbox',
+				// 'label'        => esc_html__( 'Show "Load More" button', 'wolf-core' ),
+				// 'param_name'   => 'showbutton',
 				// ),
 
 				array(

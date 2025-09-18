@@ -153,8 +153,7 @@ class Elementor_Rotating_Text_Widget extends \Elementor\Widget_Base { // phpcs:i
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-			)
+			array()
 		);
 
 		echo wolf_core_rotating_text( $atts ); // phpcs:ignore

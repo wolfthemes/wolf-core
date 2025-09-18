@@ -149,4 +149,3 @@ class Elementor_Link_Widget extends \Elementor\Widget_Base { // phpcs:ignore
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Link_Widget() );
-

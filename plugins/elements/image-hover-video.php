@@ -41,14 +41,14 @@ function wolf_core_image_hover_video( $atts ) {
 
 	if ( is_array( $image ) && isset( $image['id'] ) ) {
 		$image_url = $image['url'];
-		$image = $image['id'];
+		$image     = $image['id'];
 	}
 
 	if ( is_array( $video ) && isset( $video['url'] ) ) {
 		$video = $video['url'];
 	}
 
-	$class .= " wolf-core-image-hover-video wolf-core-element";
+	$class .= ' wolf-core-image-hover-video wolf-core-element';
 
 	$html_atts = wolf_core_render_html_attributes(
 		array(

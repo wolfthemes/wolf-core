@@ -28,7 +28,7 @@ function wolf_core_button_params() {
 				'el_base'       => 'button',
 				'keywords'      => array( 'button' ),
 				'icon'          => 'eicon-button',
-				//'icon'          => 'fa fa-square',
+				// 'icon'          => 'fa fa-square',
 			),
 			'params'     => wolf_core_get_button_params(),
 		)

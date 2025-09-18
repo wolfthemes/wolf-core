@@ -153,13 +153,10 @@ class Elementor_Work_Category_Marquee_Widget extends \Elementor\Widget_Base { //
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_work_category_marquee( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Work_Category_Marquee_Widget() );
-

@@ -74,8 +74,8 @@ vc_map(
 				'heading'    => esc_html__( 'Link', 'wolf-core' ),
 				'param_name' => 'action',
 				'value'      => array(
-					esc_html__( 'None', 'wolf-core' ) => '',
-					esc_html__( 'Buy Link', 'wolf-core' ) => 'link',
+					esc_html__( 'None', 'wolf-core' )          => '',
+					esc_html__( 'Buy Link', 'wolf-core' )      => 'link',
 					// esc_html__( 'Add to Cart', 'wolf-core' ) => 'add_to_cart',
 					esc_html__( 'Free Download', 'wolf-core' ) => 'download',
 				),

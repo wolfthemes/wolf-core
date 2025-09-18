@@ -33,11 +33,11 @@ class Elementor_Album_Tracklist_Widget extends \Elementor\Widget_Base { // phpcs
 
 		// if ( isset( $this->params['properties']['scripts'] ) ) {
 
-		// 	$this->scripts = $this->params['properties']['scripts'];
+		// $this->scripts = $this->params['properties']['scripts'];
 
-		// 	foreach ( $this->scripts as $script ) {
-		// 		wp_register_script( $script );
-		// 	}
+		// foreach ( $this->scripts as $script ) {
+		// wp_register_script( $script );
+		// }
 		// }
 	}
 
@@ -153,9 +153,7 @@ class Elementor_Album_Tracklist_Widget extends \Elementor\Widget_Base { // phpcs
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_album_tracklist( $atts ); // phpcs:ignore

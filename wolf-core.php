@@ -144,10 +144,11 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 		 */
 		public function verifications() {
 
-			/* Check if Elementor or WPBakery Page Builder is activated */
+			/*
+			Check if Elementor or WPBakery Page Builder is activated */
 			// if ( ! did_action( 'elementor/loaded' ) && ! defined( 'WPB_VC_VERSION' ) ) {
-			// 	add_action( 'admin_notices', array( $this, 'admin_notice_missing_page_builder_plugin' ) );
-			// 	return;
+			// add_action( 'admin_notices', array( $this, 'admin_notice_missing_page_builder_plugin' ) );
+			// return;
 			// }
 
 			if ( ! did_action( 'elementor/loaded' ) || defined( 'WPB_VC_VERSION' ) ) {
@@ -339,7 +340,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			);
 
 			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
-
 		}
 
 		/**
@@ -366,7 +366,6 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 			);
 
 			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
-
 		}
 
 		/**
@@ -483,11 +482,11 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'WOLF_CORE_FONTS'          => $this->plugin_url() . '/assets/css/lib/fonts',
 				'WOLF_CORE_JS'             => $this->plugin_url() . '/assets/js',
 				'WOLF_CORE_SCRIPT_VERSION' => ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? time() : $this->version,
-				'WOLF_CORE_SLUG'           => plugin_basename( dirname( __FILE__ ) ),
+				'WOLF_CORE_SLUG'           => plugin_basename( __DIR__ ),
 				'WOLF_CORE_PATH'           => plugin_basename( __FILE__ ),
 				'WOLF_CORE_VERSION'        => $this->version,
 				'WOLF_CORE_SUPPORT_URL'    => $this->support_url,
-				'WOLF_CORE_DOC_URI'        => 'https://docs.wolfthemes.com/documentation/plugins/' . plugin_basename( dirname( __FILE__ ) ),
+				'WOLF_CORE_DOC_URI'        => 'https://docs.wolfthemes.com/documentation/plugins/' . plugin_basename( __DIR__ ),
 				'WOLF_CORE_WOLF_DOMAIN'    => 'wolfthemes.com',
 			);
 
@@ -583,9 +582,9 @@ if ( ! class_exists( 'Wolf_Core' ) ) {
 				'admin-theme-activation',
 				'classes/class-options',
 				'classes/class-admin',
-				//'classes/class-video-thumbnail-generator',
+				// 'classes/class-video-thumbnail-generator',
 				'classes/class-metaboxes',
-				//'classes/class-plugin-installer',
+				// 'classes/class-plugin-installer',
 			);
 
 			/* Includes core files from theme inc dir in both frontend and backend */

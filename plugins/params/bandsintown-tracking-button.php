@@ -85,55 +85,55 @@ function wolf_core_bandsintown_tracking_button_params() {
 				),
 
 				// array(
-				// 	'type'               => 'select',
-				// 	'label'              => esc_html__( 'Background Color', 'wolf-core' ),
-				// 	'param_name'         => 'background_color',
-				// 	'options'            => array_merge(
-				// 		wolf_core_get_shared_colors(),
-				// 		array(
-				// 			esc_html__( 'Default', 'wolf-core' ) => 'default',
-				// 			esc_html__( 'Custom color', 'wolf-core' ) => 'custom',
-				// 		)
-				// 	),
-				// 	'std'                => 'default',
-				// 	'description'        => esc_html__( 'Select a background color.', 'wolf-core' ),
-				// 	'param_holder_class' => 'wolf_core_colored-dropdown',
+				// 'type'               => 'select',
+				// 'label'              => esc_html__( 'Background Color', 'wolf-core' ),
+				// 'param_name'         => 'background_color',
+				// 'options'            => array_merge(
+				// wolf_core_get_shared_colors(),
+				// array(
+				// esc_html__( 'Default', 'wolf-core' ) => 'default',
+				// esc_html__( 'Custom color', 'wolf-core' ) => 'custom',
+				// )
+				// ),
+				// 'std'                => 'default',
+				// 'description'        => esc_html__( 'Select a background color.', 'wolf-core' ),
+				// 'param_holder_class' => 'wolf_core_colored-dropdown',
 				// ),
 
 				// array(
-				// 	'type'       => 'colorpicker',
-				// 	'label'      => esc_html__( 'Background Color', 'wolf-core' ),
-				// 	'param_name' => 'background_custom_color',
-				// 	'condition'  => array(
-				// 		'element' => 'background_color',
-				// 		'value'   => 'custom',
-				// 	),
+				// 'type'       => 'colorpicker',
+				// 'label'      => esc_html__( 'Background Color', 'wolf-core' ),
+				// 'param_name' => 'background_custom_color',
+				// 'condition'  => array(
+				// 'element' => 'background_color',
+				// 'value'   => 'custom',
+				// ),
 				// ),
 
 				// array(
-				// 	'type'               => 'select',
-				// 	'label'              => esc_html__( 'Text Color', 'wolf-core' ),
-				// 	'param_name'         => 'text_color',
-				// 	'options'            => array_merge(
-				// 		wolf_core_get_shared_colors(),
-				// 		array(
-				// 			esc_html__( 'Default', 'wolf-core' ) => 'default',
-				// 			esc_html__( 'Custom color', 'wolf-core' ) => 'custom',
-				// 		)
-				// 	),
-				// 	'std'                => 'default',
-				// 	'description'        => esc_html__( 'Select a background color.', 'wolf-core' ),
-				// 	'param_holder_class' => 'wolf_core_colored-dropdown',
+				// 'type'               => 'select',
+				// 'label'              => esc_html__( 'Text Color', 'wolf-core' ),
+				// 'param_name'         => 'text_color',
+				// 'options'            => array_merge(
+				// wolf_core_get_shared_colors(),
+				// array(
+				// esc_html__( 'Default', 'wolf-core' ) => 'default',
+				// esc_html__( 'Custom color', 'wolf-core' ) => 'custom',
+				// )
+				// ),
+				// 'std'                => 'default',
+				// 'description'        => esc_html__( 'Select a background color.', 'wolf-core' ),
+				// 'param_holder_class' => 'wolf_core_colored-dropdown',
 				// ),
 
 				// array(
-				// 	'type'       => 'colorpicker',
-				// 	'label'      => esc_html__( 'Text Color', 'wolf-core' ),
-				// 	'param_name' => 'text_custom_color',
-				// 	'condition'  => array(
-				// 		'element' => 'text_color',
-				// 		'value'   => 'custom',
-				// 	),
+				// 'type'       => 'colorpicker',
+				// 'label'      => esc_html__( 'Text Color', 'wolf-core' ),
+				// 'param_name' => 'text_custom_color',
+				// 'condition'  => array(
+				// 'element' => 'text_color',
+				// 'value'   => 'custom',
+				// ),
 				// ),
 
 			),

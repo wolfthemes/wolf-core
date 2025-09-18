@@ -41,7 +41,7 @@ function wolf_core_theme_svg_animations_params() {
 					'type'       => 'colorpicker',
 					'label'      => esc_html__( 'Stroke Color', 'wolf-core' ),
 					'param_name' => 'path_color',
-					'selectors'    => array(
+					'selectors'  => array(
 						'{{WRAPPER}} .wolf-core-theme-svg-animation .overable-svg-anim-svg path' => 'stroke:{{VALUE}};',
 					),
 				),
@@ -116,7 +116,7 @@ function wolf_core_theme_svg_animations_params() {
 							'max'  => 50,
 						),
 					),
-					'selectors'    => array(
+					'selectors'  => array(
 						'{{WRAPPER}} .overable-svg-anim-svg path' => 'stroke-width:{{SIZE}}{{UNIT}};',
 					),
 				),

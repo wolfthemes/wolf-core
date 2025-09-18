@@ -2270,106 +2270,106 @@ function wolf_core_get_icon_libraires() {
 					'version'       => '1.0.0',
 				),
 				'icons'      => array(
-					'add-vectorpoint'              ,
-					'box-oval'                     ,
-					'box-polygon'                  ,
-					'box-rectangle'                ,
-					'box-roundedrectangle'         ,
-					'character'                    ,
-					'crop'                         ,
-					'eyedropper'                   ,
-					'font-allcaps'                 ,
-					'font-baseline-shift'          ,
-					'font-horizontal-scale'        ,
-					'font-kerning'                 ,
-					'font-leading'                 ,
-					'font-size'                    ,
-					'font-smallcapital'            ,
-					'font-smallcaps'               ,
-					'font-strikethrough'           ,
-					'font-tracking'                ,
-					'font-underline'               ,
-					'font-vertical-scale'          ,
-					'horizontal-align-center'      ,
-					'horizontal-align-left'        ,
-					'horizontal-align-right'       ,
-					'horizontal-distribute-center' ,
-					'horizontal-distribute-left'   ,
-					'horizontal-distribute-right'  ,
-					'indent-firstline'             ,
-					'indent-left'                  ,
-					'indent-right'                 ,
-					'lasso'                        ,
-					'layers1'                      ,
-					'layers2'                      ,
-					'layout'                       ,
-					'layout-2columns'              ,
-					'layout-3columns'              ,
-					'layout-4boxes'                ,
-					'layout-4columns'              ,
-					'layout-4lines'                ,
-					'layout-8boxes'                ,
-					'layout-header'                ,
-					'layout-header-2columns'       ,
-					'layout-header-3columns'       ,
-					'layout-header-4boxes'         ,
-					'layout-header-4columns'       ,
-					'layout-header-complex'        ,
-					'layout-header-complex2'       ,
-					'layout-header-complex3'       ,
-					'layout-header-complex4'       ,
-					'layout-header-sideleft'       ,
-					'layout-header-sideright'      ,
-					'layout-sidebar-left'          ,
-					'layout-sidebar-right'         ,
-					'magnete'                      ,
-					'pages'                        ,
-					'paintbrush'                   ,
-					'paintbucket'                  ,
-					'paintroller'                  ,
-					'paragraph'                    ,
-					'paragraph-align-left'         ,
-					'paragraph-align-right'        ,
-					'paragraph-center'             ,
-					'paragraph-justify-all'        ,
-					'paragraph-justify-center'     ,
-					'paragraph-justify-left'       ,
-					'paragraph-justify-right'      ,
-					'paragraph-space-after'        ,
-					'paragraph-space-before'       ,
-					'pathfinder-exclude'           ,
-					'pathfinder-intersect'         ,
-					'pathfinder-subtract'          ,
-					'pathfinder-unite'             ,
-					'pen'                          ,
-					'pen-add'                      ,
-					'pen-remove'                   ,
-					'pencil'                       ,
-					'polygonallasso'               ,
-					'reflect-horizontal'           ,
-					'reflect-vertical'             ,
-					'remove-vectorpoint'           ,
-					'scale-expand'                 ,
-					'scale-reduce'                 ,
-					'selection-oval'               ,
-					'selection-polygon'            ,
-					'selection-rectangle'          ,
-					'selection-roundedrectangle'   ,
-					'shape-oval'                   ,
-					'shape-polygon'                ,
-					'shape-rectangle'              ,
-					'shape-roundedrectangle'       ,
-					'slice'                        ,
-					'transform-bezier'             ,
-					'vector-box'                   ,
-					'vector-composite'             ,
-					'vector-line'                  ,
-					'vertical-align-bottom'        ,
-					'vertical-align-center'        ,
-					'vertical-align-top'           ,
-					'vertical-distribute-bottom'   ,
-					'vertical-distribute-center'   ,
-					'vertical-distribute-top'      ,
+					'add-vectorpoint',
+					'box-oval',
+					'box-polygon',
+					'box-rectangle',
+					'box-roundedrectangle',
+					'character',
+					'crop',
+					'eyedropper',
+					'font-allcaps',
+					'font-baseline-shift',
+					'font-horizontal-scale',
+					'font-kerning',
+					'font-leading',
+					'font-size',
+					'font-smallcapital',
+					'font-smallcaps',
+					'font-strikethrough',
+					'font-tracking',
+					'font-underline',
+					'font-vertical-scale',
+					'horizontal-align-center',
+					'horizontal-align-left',
+					'horizontal-align-right',
+					'horizontal-distribute-center',
+					'horizontal-distribute-left',
+					'horizontal-distribute-right',
+					'indent-firstline',
+					'indent-left',
+					'indent-right',
+					'lasso',
+					'layers1',
+					'layers2',
+					'layout',
+					'layout-2columns',
+					'layout-3columns',
+					'layout-4boxes',
+					'layout-4columns',
+					'layout-4lines',
+					'layout-8boxes',
+					'layout-header',
+					'layout-header-2columns',
+					'layout-header-3columns',
+					'layout-header-4boxes',
+					'layout-header-4columns',
+					'layout-header-complex',
+					'layout-header-complex2',
+					'layout-header-complex3',
+					'layout-header-complex4',
+					'layout-header-sideleft',
+					'layout-header-sideright',
+					'layout-sidebar-left',
+					'layout-sidebar-right',
+					'magnete',
+					'pages',
+					'paintbrush',
+					'paintbucket',
+					'paintroller',
+					'paragraph',
+					'paragraph-align-left',
+					'paragraph-align-right',
+					'paragraph-center',
+					'paragraph-justify-all',
+					'paragraph-justify-center',
+					'paragraph-justify-left',
+					'paragraph-justify-right',
+					'paragraph-space-after',
+					'paragraph-space-before',
+					'pathfinder-exclude',
+					'pathfinder-intersect',
+					'pathfinder-subtract',
+					'pathfinder-unite',
+					'pen',
+					'pen-add',
+					'pen-remove',
+					'pencil',
+					'polygonallasso',
+					'reflect-horizontal',
+					'reflect-vertical',
+					'remove-vectorpoint',
+					'scale-expand',
+					'scale-reduce',
+					'selection-oval',
+					'selection-polygon',
+					'selection-rectangle',
+					'selection-roundedrectangle',
+					'shape-oval',
+					'shape-polygon',
+					'shape-rectangle',
+					'shape-roundedrectangle',
+					'slice',
+					'transform-bezier',
+					'vector-box',
+					'vector-composite',
+					'vector-line',
+					'vertical-align-bottom',
+					'vertical-align-center',
+					'vertical-align-top',
+					'vertical-distribute-bottom',
+					'vertical-distribute-center',
+					'vertical-distribute-top',
 				),
 			),
 			'linearicons'             => array(
@@ -2850,8 +2850,8 @@ function wolf_core_get_icon_libraires() {
 /**
  * Render icon
  *
- * @param array $icon             Icon Type, Icon value
- * @param array $attributes       Icon HTML Attributes
+ * @param array  $icon             Icon Type, Icon value
+ * @param array  $attributes       Icon HTML Attributes
  * @param string $tag             Icon HTML tag, defaults to <i>
  *
  * @return mixed|string
@@ -2860,34 +2860,32 @@ function wolf_core_render_icon( $icon, $attributes = array(), $tag = 'i' ) {
 
 	if ( empty( $icon['library'] ) ) {
 			return false;
-		}
+	}
 		$output = '';
 
-		//debug($icon  );
+		// debug($icon  );
 		// handler SVG Icon
-		if ( 'svg' === $icon['library'] ) {
-			$remote_svg_file = wp_remote_get($icon['value']['url']);
-			$svg_content = wp_remote_retrieve_body($remote_svg_file );
+	if ( 'svg' === $icon['library'] ) {
+		$remote_svg_file = wp_remote_get( $icon['value']['url'] );
+		$svg_content     = wp_remote_retrieve_body( $remote_svg_file );
 
-			return $svg_content;
+		return $svg_content;
 
-		} else {
-			//$icon_types = self::get_icon_manager_tabs();
+	} else {
+		// $icon_types = self::get_icon_manager_tabs();
 		if ( isset( $icon_types[ $icon['library'] ]['render_callback'] ) && is_callable( $icon_types[ $icon['library'] ]['render_callback'] ) ) {
-			return call_user_func_array( $icon_types[ $icon['library'] ]['render_callback'], [ $icon, $attributes, $tag ] );
+			return call_user_func_array( $icon_types[ $icon['library'] ]['render_callback'], array( $icon, $attributes, $tag ) );
 		}
 
 		if ( empty( $attributes['class'] ) ) {
 			$attributes['class'] = $icon['value'];
-		} else {
-			if ( is_array( $attributes['class'] ) ) {
+		} elseif ( is_array( $attributes['class'] ) ) {
 				$attributes['class'][] = $icon['value'];
-			} else {
-				$attributes['class'] .= ' ' . $icon['value'];
-			}
+		} else {
+			$attributes['class'] .= ' ' . $icon['value'];
 		}
-			return '<' . $tag . ' ' . wolf_core_render_html_attributes( $attributes ) . '></' . $tag . '>';
-		}
+		return '<' . $tag . ' ' . wolf_core_render_html_attributes( $attributes ) . '></' . $tag . '>';
+	}
 
-		//echo $output;
+		// echo $output;
 }

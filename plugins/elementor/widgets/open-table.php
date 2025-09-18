@@ -153,13 +153,10 @@ class Elementor_Open_Table_Widget extends \Elementor\Widget_Base { // phpcs:igno
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_open_table( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Open_Table_Widget() );
-

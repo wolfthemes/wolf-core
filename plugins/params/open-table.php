@@ -32,7 +32,7 @@ function wolf_core_open_table_params() {
 				array(
 					'label'      => esc_html__( 'Restaurant ID', 'wolf-core' ),
 					'param_name' => 'rid',
-					'default' => '412810',
+					'default'    => '412810',
 				),
 
 				array(
@@ -49,7 +49,7 @@ function wolf_core_open_table_params() {
 						'es-MX' => esc_html__( 'Nederlands-NL', 'wolf-core' ),
 						'it-IT' => esc_html__( 'Italiano-IT', 'wolf-core' ),
 					),
-					'default' => 'en-US',
+					'default'    => 'en-US',
 				),
 
 				array(
@@ -62,7 +62,7 @@ function wolf_core_open_table_params() {
 						'wide'     => esc_html__( 'Wide (840 x 350 pixels)', 'wolf-core' ),
 						'button'   => esc_html__( 'Button (210 x 113 pixels)', 'wolf-core' ),
 					),
-					'default' => 'wide',
+					'default'    => 'wide',
 				),
 
 				array(
@@ -102,7 +102,7 @@ function wolf_core_open_table_params() {
 						'6' => esc_html__( 'Red', 'wolf-core' ),
 						'7' => esc_html__( 'Teal', 'wolf-core' ),
 					),
-					'default' => '2',
+					'default'    => '2',
 				),
 
 				array(
@@ -113,7 +113,7 @@ function wolf_core_open_table_params() {
 						'false' => esc_html__( 'Light', 'wolf-core' ),
 						'true'  => esc_html__( 'Dark', 'wolf-core' ),
 					),
-					'default' => 'false',
+					'default'    => 'false',
 				),
 
 				array(
@@ -124,7 +124,7 @@ function wolf_core_open_table_params() {
 						'false' => esc_html__( 'No', 'wolf-core' ),
 						'true'  => esc_html__( 'Yes', 'wolf-core' ),
 					),
-					'default' => 'true',
+					'default'    => 'true',
 				),
 
 				array(

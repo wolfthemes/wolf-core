@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  */
 add_action(
 	'elementor/element/image/section_image/before_section_end',
-	function( $element ) {
+	function ( $element ) {
 		$element->add_control(
 			'inline_display',
 			array(
@@ -35,7 +35,7 @@ add_action(
  */
 add_action(
 	'elementor/frontend/widget/before_render',
-	function( $widget ) {
+	function ( $widget ) {
 
 		// Make sure we are in a section element.
 		if ( 'image' !== $widget->get_name() ) {

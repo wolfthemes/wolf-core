@@ -153,13 +153,10 @@ class Elementor_Hour_List_Widget extends \Elementor\Widget_Base { // phpcs:ignor
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_hour_list( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Hour_List_Widget() );
-

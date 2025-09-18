@@ -72,7 +72,7 @@ function wolf_core_button( $atts ) {
 	}
 
 	if ( $full_width ) {
-		$class .= " wolf-core-button-full-width";
+		$class .= ' wolf-core-button-full-width';
 	}
 
 	if ( $button_type ) {

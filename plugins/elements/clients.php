@@ -59,12 +59,10 @@ function wolf_core_clients( $atts ) {
 		if ( ! wolf_core_is_new_animation( $css_animation ) ) {
 			$figure_class .= wolf_core_get_css_animation( $css_animation );
 		}
-	} else {
+	} elseif ( ! wolf_core_is_new_animation( $css_animation ) ) {
 
-		if ( ! wolf_core_is_new_animation( $css_animation ) ) {
 			$class        .= wolf_core_get_css_animation( $css_animation );
 			$inline_style .= wolf_core_get_css_animation_delay( $css_animation_delay );
-		}
 	}
 
 	/* Custom Size */
@@ -73,8 +71,6 @@ function wolf_core_clients( $atts ) {
 	}
 
 	$output = '';
-
-
 
 	$class .= " wolf-clients wolf-core-clearfix wolf-core-clients-$type wolf-core-clients-padding-$padding wolf-core-element";
 
@@ -133,7 +129,6 @@ function wolf_core_clients( $atts ) {
 		if ( is_array( $image_hover ) && isset( $image_hover['id'] ) ) {
 			$image_hover = $image_hover['id'];
 		}
-
 
 		if ( $css_animation_each ) {
 			$force                       = ( 'elementor' === wolf_core_get_plugin_in_use() ) ? true : false;

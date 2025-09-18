@@ -153,13 +153,10 @@ class Elementor_WC_Search_Form extends \Elementor\Widget_Base { // phpcs:ignore
 
 		$atts = wp_parse_args(
 			$this->get_settings_for_display(),
-			array(
-
-			)
+			array()
 		);
 
 		echo wolf_core_wc_search_form( $atts ); // WCS XSS ok.
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_WC_Search_Form() );
-

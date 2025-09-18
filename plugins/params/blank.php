@@ -28,8 +28,7 @@ function wolf_core_blank_params() {
 				'el_base'       => 'blank',
 				'icon'          => 'fa fa-text-width',
 			),
-			'params'     => array(
-			),
+			'params'     => array(),
 		)
 	);
 }

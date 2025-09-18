@@ -20,9 +20,7 @@ function wolf_core_wc_search_form( $atts ) {
 		'wolf_core_wc_search_form_atts',
 		wp_parse_args(
 			$atts,
-			array(
-
-			)
+			array()
 		)
 	);
 
@@ -32,9 +30,9 @@ function wolf_core_wc_search_form( $atts ) {
 
 	$class = $el_class; // init container CSS class.
 
-	$class .= " wolf-core-wc-search-form wolf-core-element";
+	$class .= ' wolf-core-wc-search-form wolf-core-element';
 
-	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) .'"';
+	$output .= '<div class="' . wolf_core_sanitize_html_classes( $class ) . '" style="' . wolf_core_esc_style_attr( $inline_style ) . '"';
 
 	$output .= wolf_core_element_aos_animation_data_attr( $atts );
 	$output .= '>';

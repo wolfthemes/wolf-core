@@ -29,7 +29,7 @@ function wolf_core_textual_showcase( $atts ) {
 				'text_transform'      => '',
 				'font_style'          => '',
 				'type'                => '',
-				'line_break'	=> '',
+				'line_break'          => '',
 				'el_class'            => '',
 				'css'                 => '',
 				'inline_style'        => '',

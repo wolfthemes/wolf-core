@@ -167,4 +167,3 @@ class Elementor_Theme_SVG_Animations_Widget extends \Elementor\Widget_Base { // 
 	}
 }
 \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Theme_SVG_Animations_Widget() );
-

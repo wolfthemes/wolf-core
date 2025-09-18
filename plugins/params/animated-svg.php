@@ -146,13 +146,13 @@ function wolf_core_animated_svg_params() {
 				),
 
 				array(
-					'label'      => esc_html__( 'SVG Width (in px)', 'wolf-core' ),
-					'param_name' => 'width',
+					'label'              => esc_html__( 'SVG Width (in px)', 'wolf-core' ),
+					'param_name'         => 'width',
 					'responsive_control' => true,
-					//'type' => 'slider',
-					'selectors' => array(
+					// 'type' => 'slider',
+					'selectors'          => array(
 						'{{WRAPPER}} .wolf-core-animated-svg > svg' => 'width:{{SIZE}}px!important;',
-					)
+					),
 				),
 			),
 		)

@@ -1,7 +1,7 @@
 <?php
 
-//delete_option( '_wolftheme_hide_theme_plugin_notice_flag' );
-//dd( get_option( '_wolftheme_hide_theme_plugin_notice_flag' ) );
+// delete_option( '_wolftheme_hide_theme_plugin_notice_flag' );
+// dd( get_option( '_wolftheme_hide_theme_plugin_notice_flag' ) );
 
 if ( ! class_exists( 'Wolf_Core_Plugin_Installer' ) ) {
 	/**
@@ -44,16 +44,16 @@ if ( ! class_exists( 'Wolf_Core_Plugin_Installer' ) ) {
 
 			add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 
-			add_action( 'admin_notices',  array( $this, 'import_admin_notice' ) );
-			add_action( 'wp_ajax_import_external_plugin',  array( $this, 'import_external_plugin' ) );
+			add_action( 'admin_notices', array( $this, 'import_admin_notice' ) );
+			add_action( 'wp_ajax_import_external_plugin', array( $this, 'import_external_plugin' ) );
 			add_action( 'wp_ajax_activate_all_plugins', array( $this, 'activate_all_plugins' ) );
-			add_action( 'wp_ajax_plugin_install_dismiss_notice',  array( $this, 'plugin_install_dismiss_notice' ) );
-			add_action( 'admin_enqueue_scripts',  array( $this, 'import_admin_scripts' ) );
+			add_action( 'wp_ajax_plugin_install_dismiss_notice', array( $this, 'plugin_install_dismiss_notice' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'import_admin_scripts' ) );
 
 			add_action( 'pt-ocdi/before_content_import_execution', array( $this, 'flush_rewrite_rules_before_import' ) );
 
 			add_action( 'pt-ocdi/after_import', array( $this, 'set_pages_after_import' ) );
-			add_filter( 'pt-ocdi/plugin_intro_text',  array( $this, 'plugin_intro_text' ) );
+			add_filter( 'pt-ocdi/plugin_intro_text', array( $this, 'plugin_intro_text' ) );
 			add_action( 'pt-ocdi/after_import', array( $this, 'replace_content_urls_after_import' ) );
 			add_action( 'pt-ocdi/after_import', array( $this, 'replace_menu_item_custom_urls_after_import' ) );
 			add_action( 'pt-ocdi/after_import', array( $this, 'remove_mods_after_import' ) );
@@ -110,7 +110,7 @@ if ( ! class_exists( 'Wolf_Core_Plugin_Installer' ) ) {
 		public function import_external_plugin() {
 			check_ajax_referer( 'wolf_core_ocdi_install_nonce', 'security' );
 
-			//wp_send_json( 'test' );
+			// wp_send_json( 'test' );
 
 			if ( ! current_user_can( 'install_plugins' ) ) {
 				return;
@@ -628,11 +628,12 @@ if ( ! class_exists( 'Wolf_Core_Plugin_Installer' ) ) {
 
 			add_option( wolf_core_get_theme_slug() . '_demo_data_imported', true );
 
-			/* Set pretty permalinks if they're not set yet */
-			//if ( ! get_option( 'permalink_structure' ) ) {
+			/*
+			Set pretty permalinks if they're not set yet */
+			// if ( ! get_option( 'permalink_structure' ) ) {
 				update_option( 'permalink_structure', '/%year%/%monthnum%/%postname%/' );
 				flush_rewrite_rules();
-			//}
+			// }
 		}
 
 		/**

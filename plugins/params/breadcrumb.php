@@ -33,10 +33,10 @@ function wolf_core_breadcrumb_params() {
 			'params'     => array(
 
 				array(
-					'label'        => esc_html__( 'Alignment', 'wolf-core' ),
-					'param_name'   => 'align',
-					'type'         => 'choose',
-					'options'      => array(
+					'label'              => esc_html__( 'Alignment', 'wolf-core' ),
+					'param_name'         => 'align',
+					'type'               => 'choose',
+					'options'            => array(
 						'left'   => array(
 							'title' => esc_html__( 'Left', 'wolf-core' ),
 							'icon'  => 'eicon-text-align-left',
@@ -50,11 +50,11 @@ function wolf_core_breadcrumb_params() {
 							'icon'  => 'eicon-text-align-right',
 						),
 					),
-					'selectors'    => array(
+					'selectors'          => array(
 						'{{WRAPPER}} .wolf-core-breadcrumb' => 'text-align:{{VALUE}};',
 					),
 					'responsive_control' => true,
-					'page_builder' => 'elementor',
+					'page_builder'       => 'elementor',
 				),
 
 				array(

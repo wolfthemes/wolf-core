@@ -20,12 +20,12 @@ function wolf_core_background_params() {
 			'heading'    => esc_html__( 'Background type', 'wolf-core' ),
 			'param_name' => 'background_type',
 			'value'      => array(
-				esc_html__( 'Default', 'wolf-core' ) => 'default',
-				esc_html__( 'Image and Color', 'wolf-core' ) => 'image',
-				esc_html__( 'Slideshow', 'wolf-core' ) => 'slideshow',
-				esc_html__( 'Video', 'wolf-core' ) => 'video',
-				esc_html__( 'No Background', 'wolf-core' ) => 'transparent',
-				esc_html__( 'Post Featured Image', 'wolf-core' ) => 'featured_image',
+				esc_html__( 'Default', 'wolf-core' )                  => 'default',
+				esc_html__( 'Image and Color', 'wolf-core' )          => 'image',
+				esc_html__( 'Slideshow', 'wolf-core' )                => 'slideshow',
+				esc_html__( 'Video', 'wolf-core' )                    => 'video',
+				esc_html__( 'No Background', 'wolf-core' )            => 'transparent',
+				esc_html__( 'Post Featured Image', 'wolf-core' )      => 'featured_image',
 				esc_html__( 'Default WordPress Header', 'wolf-core' ) => 'default_header',
 			),
 			'std'        => apply_filters( 'wolf_core_default_background_type', 'default' ),
@@ -88,14 +88,14 @@ function wolf_core_background_params() {
 			'param_name' => 'background_position',
 			'value'      => array(
 				esc_html__( 'center center', 'wolf-core' ) => 'center center',
-				esc_html__( 'center top', 'wolf-core' )  => 'center top',
-				esc_html__( 'left top', 'wolf-core' ) => 'left top',
-				esc_html__( 'right top', 'wolf-core' )  => 'right top',
-				esc_html__( 'center bottom', 'wolf-core' )  => 'center bottom',
-				esc_html__( 'left bottom', 'wolf-core' )  => 'left bottom',
-				esc_html__( 'right bottom', 'wolf-core' ) => 'right bottom',
-				esc_html__( 'left center', 'wolf-core' ) => 'left center',
-				esc_html__( 'right center', 'wolf-core' ) => 'right center',
+				esc_html__( 'center top', 'wolf-core' )    => 'center top',
+				esc_html__( 'left top', 'wolf-core' )      => 'left top',
+				esc_html__( 'right top', 'wolf-core' )     => 'right top',
+				esc_html__( 'center bottom', 'wolf-core' ) => 'center bottom',
+				esc_html__( 'left bottom', 'wolf-core' )   => 'left bottom',
+				esc_html__( 'right bottom', 'wolf-core' )  => 'right bottom',
+				esc_html__( 'left center', 'wolf-core' )   => 'left center',
+				esc_html__( 'right center', 'wolf-core' )  => 'right center',
 			),
 			'dependency' => array(
 				'element' => 'background_type',
@@ -112,9 +112,9 @@ function wolf_core_background_params() {
 			'param_name' => 'background_repeat',
 			'value'      => array(
 				esc_html__( 'no repeat', 'wolf-core' ) => 'no-repeat',
-				esc_html__( 'repeat', 'wolf-core' ) => 'repeat',
-				esc_html__( 'repeat-x', 'wolf-core' ) => 'repeat-x',
-				esc_html__( 'repeat-y', 'wolf-core' ) => 'repeat-y',
+				esc_html__( 'repeat', 'wolf-core' )    => 'repeat',
+				esc_html__( 'repeat-x', 'wolf-core' )  => 'repeat-x',
+				esc_html__( 'repeat-y', 'wolf-core' )  => 'repeat-y',
 			),
 			'dependency' => array(
 				'element' => 'background_type',
@@ -130,7 +130,7 @@ function wolf_core_background_params() {
 			'heading'    => esc_html__( 'Background Size', 'wolf-core' ),
 			'param_name' => 'background_size',
 			'value'      => array(
-				esc_html__( 'cover', 'wolf-core' ) => 'cover',
+				esc_html__( 'cover', 'wolf-core' )   => 'cover',
 				esc_html__( 'default', 'wolf-core' ) => 'default',
 				esc_html__( 'contain', 'wolf-core' ) => 'contain',
 			),
@@ -149,12 +149,12 @@ function wolf_core_background_params() {
 			'value'      => apply_filters(
 				'wolf_core_background_effects',
 				array(
-					esc_html__( 'None', 'wolf-core' ) => 'none',
+					esc_html__( 'None', 'wolf-core' )     => 'none',
 					esc_html__( 'Parallax', 'wolf-core' ) => 'parallax',
-					esc_html__( 'Zoom', 'wolf-core' ) => 'zoomin',
-					esc_html__( 'Fixed', 'wolf-core' ) => 'fixed',
-					esc_html__( 'Marquee', 'wolf-core' ) => 'marquee',
-					esc_html__( 'Blur', 'wolf-core' ) => 'blur',
+					esc_html__( 'Zoom', 'wolf-core' )     => 'zoomin',
+					esc_html__( 'Fixed', 'wolf-core' )    => 'fixed',
+					esc_html__( 'Marquee', 'wolf-core' )  => 'marquee',
+					esc_html__( 'Blur', 'wolf-core' )     => 'blur',
 				)
 			),
 			'dependency' => array(
@@ -171,9 +171,9 @@ function wolf_core_background_params() {
 			'param_name' => 'background_marquee_position',
 			'value'      => array(
 				esc_html__( 'stretch', 'wolf-core' ) => 'stretch',
-				esc_html__( 'top', 'wolf-core' ) => 'top',
-				esc_html__( 'middle', 'wolf-core' ) => 'middle',
-				esc_html__( 'bottom', 'wolf-core' ) => 'bottom',
+				esc_html__( 'top', 'wolf-core' )     => 'top',
+				esc_html__( 'middle', 'wolf-core' )  => 'middle',
+				esc_html__( 'bottom', 'wolf-core' )  => 'bottom',
 			),
 			'dependency' => array(
 				'element' => 'background_effect',
@@ -259,7 +259,7 @@ function wolf_core_background_params() {
 			'param_name'  => 'video_bg_loop',
 			'value'       => array(
 				esc_html__( 'Yes', 'wolf-core' ) => 'yes',
-				esc_html__( 'No', 'wolf-core' ) => 'no',
+				esc_html__( 'No', 'wolf-core' )  => 'no',
 			),
 			'dependency'  => array(
 				'element' => 'background_type',
@@ -333,7 +333,7 @@ function wolf_core_background_params() {
 			'heading'    => esc_html__( 'Add Overlay', 'wolf-core' ),
 			'param_name' => 'add_overlay',
 			'value'      => array(
-				esc_html__( 'No', 'wolf-core' ) => '',
+				esc_html__( 'No', 'wolf-core' )  => '',
 				esc_html__( 'Yes', 'wolf-core' ) => 'yes',
 			),
 			'group'      => esc_html__( 'Style', 'wolf-core' ),
@@ -394,7 +394,7 @@ function wolf_core_background_params() {
 			'heading'    => esc_html__( 'Add Top Shape Divider', 'wolf-core' ),
 			'param_name' => 'add_top_shape_divider',
 			'value'      => array(
-				esc_html__( 'No', 'wolf-core' ) => '',
+				esc_html__( 'No', 'wolf-core' )  => '',
 				esc_html__( 'Yes', 'wolf-core' ) => 'yes',
 			),
 			'group'      => esc_html__( 'Style', 'wolf-core' ),
@@ -406,7 +406,7 @@ function wolf_core_background_params() {
 			'heading'    => esc_html__( 'Add Bottom Shape Divider', 'wolf-core' ),
 			'param_name' => 'add_bottom_shape_divider',
 			'value'      => array(
-				esc_html__( 'No', 'wolf-core' ) => '',
+				esc_html__( 'No', 'wolf-core' )  => '',
 				esc_html__( 'Yes', 'wolf-core' ) => 'yes',
 			),
 			'group'      => esc_html__( 'Style', 'wolf-core' ),
@@ -419,7 +419,7 @@ function wolf_core_background_params() {
 			'heading'    => esc_html__( 'Add Particles', 'wolf-core' ),
 			'param_name' => 'add_particles',
 			'value'      => array(
-				esc_html__( 'No', 'wolf-core' ) => '',
+				esc_html__( 'No', 'wolf-core' )  => '',
 				esc_html__( 'Yes', 'wolf-core' ) => 'yes',
 			),
 			'group'      => esc_html__( 'Style', 'wolf-core' ),
