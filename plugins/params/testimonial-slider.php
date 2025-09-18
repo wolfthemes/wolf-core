@@ -62,14 +62,14 @@ function wolf_core_testimonial_slider_params() {
 				array(
 					'type'       => 'typography',
 					'param_name' => 'content_typography',
-					'label'      => esc_html__( 'Content Typography', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Content Typography', 'wolf-core' ),
 					'selector'   => '{{WRAPPER}} .wolf-core-testimonal-slide blockquote',
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
 				),
 				array(
 					'type'       => 'typography',
 					'param_name' => 'tagline_typography',
-					'label'      => esc_html__( 'Tagline Typography', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Tagline Typography', 'wolf-core' ),
 					'selector'   => '{{WRAPPER}} .wolf-core-testimonal-slide .wolf-core-blockquote-tagline',
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
 				),
@@ -77,7 +77,7 @@ function wolf_core_testimonial_slider_params() {
 				array(
 					'type'       => 'typography',
 					'param_name' => 'cite_typography',
-					'label'      => esc_html__( 'Cite Typography', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Cite Typography', 'wolf-core' ),
 					'selector'   => '{{WRAPPER}} .wolf-core-testimonal-slide .wolf-core-blockquote-cite',
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
 				),
@@ -85,7 +85,7 @@ function wolf_core_testimonial_slider_params() {
 				array(
 					'type'       => 'typography',
 					'param_name' => 'role_typography',
-					'label'      => esc_html__( 'Role Typography', '%TEXTDOMAIN%' ),
+					'label'      => esc_html__( 'Role Typography', 'wolf-core' ),
 					'selector'   => '{{WRAPPER}} .wolf-core-testimonal-slide .wolf-core-blockquote-role',
 					'group'      => esc_html__( 'Style', 'wolf-core' ),
 				),
