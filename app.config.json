@@ -1,0 +1,14 @@
+{
+	"version": "2.1.6",
+	"updated": "2025-10-22",
+	"slug": "wolf-core",
+	"name": "Wolf Core",
+	"packagename": "WolfCore",
+	"created": "2021-06-04",
+	"createdNice": "4th June 2021",
+	"description": "Core functions for Wolf Themes.",
+	"link": "https://github.com/wolfthemes/wolf-core",
+	"shortlink": "https://wlfthm.es/wolf-core",
+	"author": "WolfThemes",
+	"authorURI": "https://wolfthemes.com"
+}
