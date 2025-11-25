@@ -1,0 +1,40 @@
+/**
+ * @# Icon
+ **/
+.wolf-core-icon {
+  display: inline-block;
+  line-height: 1;
+  transition: all 0.3s;
+  font-size: 50px;
+  text-align: center;
+}
+.wolf-core-icon a {
+  color: inherit;
+}
+.wolf-core-icon i,
+.wolf-core-icon .elementor-icon svg {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  display: block;
+}
+
+.wolf-core-icon-view-stacked .wolf-core-icon {
+  background-color: red;
+  padding: 0.5em;
+  color: #fff;
+  fill: #fff;
+}
+
+.wolf-core-icon-view-framed .wolf-core-icon {
+  padding: 0.5em;
+  border: 3px solid transparent;
+  background-color: transparent;
+  fill: red;
+  color: red;
+  border-color: red;
+}
+
+.wolf-core-icon-shape-circle .wolf-core-icon {
+  border-radius: 50%;
+}
